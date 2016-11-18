@@ -1,12 +1,12 @@
 import path from 'path'
 
-import {projectRootPath, projectSourcePath} from '../config'
+import {projectRootPath, projectDistPath, projectSourcePath} from '../config'
 
 export default {
   debug: true,
   noInfo: true,
   output: {
-    path: path.join(projectRootPath, 'dist')
+    path: projectDistPath
   },
   resolve: {
     extensions: ['', '.js'],
