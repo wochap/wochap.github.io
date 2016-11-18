@@ -5,5 +5,9 @@ export const CURRENT_IP = myIp()
 export const BROWSER_SYNC_PORT = 3000
 export const WEBPACK_SERVER_PORT = 8080
 export const projectRootPath = path.resolve(__dirname, '../../')
-export const projectSourcePath = path.resolve(projectRootPath, 'src')
+export const projectSourcePath = path.join(projectRootPath, 'src')
 export const templatePath = path.join(projectSourcePath, 'index.html')
+
+export const projectAssetsPath = path.join(projectRootPath, 'static')
+export const projectDistPath = path.join(projectRootPath, 'dist')
+export const projectDistAssetsPath = path.join(projectDistPath, 'static')

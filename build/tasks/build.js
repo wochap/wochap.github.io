@@ -8,21 +8,26 @@ import path from 'path'
 import shelljs from 'shelljs'
 
 import webpackConfigProd from '../webpack/config.prod.babel'
-import {projectRootPath} from '../config'
+import {projectRootPath, projectAssetsPath, projectDistPath, projectDistAssetsPath} from '../config'
 
 let spinner = ora('Building for production...')
 
 spinner.start()
 
-const distFolderPath = path.join(projectRootPath, 'dist')
-shelljs.rm('-rf', distFolderPath)
-shelljs.mkdir('-p', distFolderPath)
+// delete dist folder
+shelljs.rm('-rf', projectDistPath)
+shelljs.mkdir('-p', projectDistPath)
+shelljs.mkdir('-p', projectDistAssetsPath)
+// copy static folder to dist/static folder
+shelljs.cp('-R', `${projectAssetsPath}/*`, projectDistAssetsPath)
 
+// run webpack with prod config
 webpack(webpackConfigProd).run((err, stats) => {
   spinner.stop()
 
   if (err) throw err
 
+  // log stats
   process.stdout.write(stats.toString({
     colors: true,
     modules: false,
