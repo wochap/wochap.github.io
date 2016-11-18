@@ -19,8 +19,6 @@ export default webpackMerge(webpackConfigBase, {
       'react-hot-loader/patch',
       // allow HMR in this entry point, with correct path
       `webpack-hot-middleware/client?reload=true&path=${externalPath}__webpack_hmr`,
-      // force page reload when html-webpack-plugin template changes
-      path.resolve(__dirname, './client.js'),
 
       path.join(projectSourcePath, 'app/main.js')
     ]
