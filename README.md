@@ -1,28 +1,6 @@
-# Basic webpack boilerplate
+# wochap
 
-> Start your next project using technologies that you love
-
-A starting point for your next app
-
-![Demo](https://drive.google.com/uc?export=download&id=0BwM5_eez3JnoVkZLVmNuZUg4bXM)
-
-## What’s Inside?
-
-* [Express](http://expressjs.com/) with [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) and [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware)
-* [Webpack](https://webpack.github.io/) with:
-  - [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin)
-  - [browser-sync-webpack-plugin](https://github.com/Va1/browser-sync-webpack-plugin)
-  - [webpack-manifest-plugin](https://github.com/danethurber/webpack-manifest-plugin)
-  - [postcss-loader](https://github.com/postcss/postcss-loader) with [autoprefixer](https://github.com/postcss/autoprefixer)
-  - [sass-loader](https://github.com/jtangelder/sass-loader)
-  - [eslint-loader](https://github.com/MoOx/eslint-loader)
-  - [babel-loader](https://github.com/babel/babel-loader)
-  - [url-loader](https://github.com/webpack/url-loader)
-  - [file-loader](https://github.com/webpack/file-loader)
-* [ESLint](http://eslint.org/) with [eslint-config-standard](https://github.com/feross/eslint-config-standard), [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import) and [eslint-import-resolver-webpack](https://www.npmjs.com/package/eslint-import-resolver-webpack)
-* [Babel](http://babeljs.io/) with [preset-es2015](https://babeljs.io/docs/plugins/preset-es2015/) and [plugin-transform-runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime)
-* [Jest](https://facebook.github.io/jest/) with all stuff to test `react components`
-* [React](https://facebook.github.io/react/) with [react-hot-loader](https://github.com/gaearon/react-hot-loader/tree/next)
+Personal website powered by [react](https://facebook.github.io/react/) and [webpack](https://webpack.github.io/)
 
 ## Development
 
@@ -43,12 +21,4 @@ $ npm run test-coverage
 $ npm run build
 ```
 
-In development, if you are working with a backend like [Laravel](https://laravel.com/), you will need to add a script to your template file:
-
-```html
-...
-<script src="http:/[localhost|ip]:[port]/app.js"></script>
-...
-```
-
-Use `IP` if you run your app from external devices.
+This project is powered by [webpack-basic-boilerplate](https://github.com/wochap/webpack-basic-boilerplate/tree/react) (react branch)
