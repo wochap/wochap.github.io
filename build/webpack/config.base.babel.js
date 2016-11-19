@@ -62,6 +62,7 @@ export default {
     configFile: path.join(projectRootPath, '.eslintrc.js')
   },
   postcss: [
+    require('postcss-responsive-type')(),
     require('autoprefixer')({
       browsers: [
         '>1%',

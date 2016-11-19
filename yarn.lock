@@ -5429,6 +5429,12 @@ postcss-reduce-transforms@^1.0.3:
     postcss "^5.0.8"
     postcss-value-parser "^3.0.1"
 
+postcss-responsive-type:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/postcss-responsive-type/-/postcss-responsive-type-0.4.0.tgz#5ea43b82b5dddd702555e18dc230eec961d44d1a"
+  dependencies:
+    postcss "^5.0.0"
+
 postcss-selector-parser@^2.0.0:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-2.2.1.tgz#fdbf696103b12b0a64060e5610507f410491f7c8"
@@ -5465,7 +5471,7 @@ postcss-zindex@^2.0.1:
     postcss "^5.0.4"
     uniqs "^2.0.0"
 
-postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.19, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.4:
+postcss@^5.0.0, postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.19, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.4:
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.5.tgz#ec428c27dffc7fac65961340a9b022fa4af5f056"
   dependencies:
@@ -6040,6 +6046,10 @@ sane@~1.4.1:
     walker "~1.0.5"
     watch "~0.10.0"
 
+sass-bem-constructor@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/sass-bem-constructor/-/sass-bem-constructor-1.1.0.tgz#1a5a78283b29b96faf65d6dd74d4d1c9b893549b"
+
 sass-graph@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/sass-graph/-/sass-graph-2.1.2.tgz#965104be23e8103cb7e5f710df65935b317da57b"
@@ -6055,6 +6065,10 @@ sass-loader@^4.0.0:
     async "^2.0.1"
     loader-utils "^0.2.15"
     object-assign "^4.1.0"
+
+sass-mq@^3.2.9:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/sass-mq/-/sass-mq-3.3.1.tgz#1199f5a43b549f5cbb67bc81f5f495ebf96250ce"
 
 sax@^1.1.4, sax@~1.2.1:
   version "1.2.1"
@@ -6991,9 +7005,34 @@ wocss-generic-sanitize:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wocss-generic-sanitize/-/wocss-generic-sanitize-1.0.0.tgz#4e2dd29a8c0fb999ce8ffd904daa25c814618af0"
 
+wocss-settings-breakpoints, wocss-settings-breakpoints@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/wocss-settings-breakpoints/-/wocss-settings-breakpoints-2.0.2.tgz#e9f9f51b3f19e30cc912a45f659ee700caaf6c67"
+
 wocss-settings-colors:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/wocss-settings-colors/-/wocss-settings-colors-2.0.1.tgz#9c82d2cb721fac1c498eda945154f4c515c19079"
+
+wocss-settings-global:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/wocss-settings-global/-/wocss-settings-global-1.1.0.tgz#19f2b316e690959bbd819a48cf5e1450b38a3926"
+
+wocss-settings-typography:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/wocss-settings-typography/-/wocss-settings-typography-2.0.0.tgz#73c9e3440567ef669847099195e4c801ad3d69d9"
+
+wocss-tools-bem-constructor:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/wocss-tools-bem-constructor/-/wocss-tools-bem-constructor-1.0.4.tgz#5c1030fc5959db825020a77e67abe2fb494e1d40"
+  dependencies:
+    sass-bem-constructor "^1.1.0"
+
+wocss-tools-mq:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/wocss-tools-mq/-/wocss-tools-mq-1.1.0.tgz#46e2c10cfbb770486070e10f5ca7a62fd76c9970"
+  dependencies:
+    sass-mq "^3.2.9"
+    wocss-settings-breakpoints "^2.0.2"
 
 wordwrap@^1.0.0, wordwrap@~1.0.0:
   version "1.0.0"
