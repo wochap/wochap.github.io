@@ -7,7 +7,7 @@
     "test-coverage": "babel-node build/tasks/test.js --config=build/config/jest/index.json --coverage",
     "build": "run-s build-start start",
     "build-start": "babel-node build/tasks/build.js",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -b master"
   },
   "dependencies": {
     "express": "^4.14.0",
