@@ -1,0 +1,20 @@
+/*------------------------------------*\
+  #PAGE
+\*------------------------------------*/
+
+html {
+  background-color: #000000;
+  color: #ffffff;
+  // font-family: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+#root,
+html,
+body {
+  height: 100%;
+  width: 100%;
+}

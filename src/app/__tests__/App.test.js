@@ -13,6 +13,6 @@ describe('App', () => {
   it('print Hellow World', () => {
     const app = shallow(<App />)
 
-    expect(app.text()).toEqual('Hello World')
+    expect(app.text()).toEqual('Gean Marroquin')
   })
 })

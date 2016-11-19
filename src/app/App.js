@@ -2,7 +2,9 @@ import React from 'react'
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div className="c-hero">
+      <h1 className="c-hero__title" data-text="Gean Marroquin">Gean Marroquin</h1>
+    </div>
   )
 }
 
