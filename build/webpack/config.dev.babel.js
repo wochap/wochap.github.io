@@ -20,6 +20,8 @@ export default webpackMerge(webpackConfigBase, {
       // allow HMR in this entry point, with correct path
       `webpack-hot-middleware/client?reload=true&path=${externalPath}__webpack_hmr`,
 
+      // favicon to keep your browser from throwing a 404 during dev
+      path.join(projectSourcePath, 'favicon.ico'),
       path.join(projectSourcePath, 'app/main.js')
     ]
   },
