@@ -89,19 +89,20 @@ export default webpackMerge(webpackConfigBase, {
     // generate service worker
     new SWPrecacheWebpackPlugin({
       // each time you build, must to update the cacheId
-      cacheId: 'wochap-sw-1',
+      cacheId: 'wochap-sw-3',
 
-      filepath: `${projectDistAssetsPath}/sw.js`,
+      filepath: `${projectDistPath}/service-worker.js`,
 
       // ensure all our static, local assets will be cached in background
       staticFileGlobs: [
-        `${projectDistPath}/**/*.{js,json,css,html,png,jpg,gif,svg,eot,ttf,woff}`,
+        `${projectDistPath}/**/!(*map*)`,
       ],
 
       runtimeCaching: [
+        // cache fonts files
         {
           handler: 'networkFirst',
-          urlPattern: /.(js,json,css,html,png,jpg,gif,svg,eot,ttf,woff)$/
+          urlPattern: /.(svg, eot, ttf, woff)$/
         }
       ],
       verbose: true
