@@ -5,7 +5,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import InlineManifestWebpackPlugin from 'inline-manifest-webpack-plugin'
 import AssetsPlugin from 'assets-webpack-plugin'
-import SWPrecacheWebpackPlugin from 'sw-precache-webpack-plugin'
 
 import webpackConfigBase from './config.base.babel'
 import {projectRootPath, projectSourcePath, projectDistAssetsPath, projectDistPath, templatePath} from '../config'
@@ -67,13 +66,16 @@ export default webpackMerge(webpackConfigBase, {
     new ExtractTextPlugin('static/css/[name].[contenthash:8].css'),
     // minify and optimize the index.html
     new HtmlWebpackPlugin({
+      filename: '_static/index.html',
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency',
       inject: true,
       template: templatePath,
       minify: {
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
+        minifyJS: true,
+        removeComments: true
       }
     }),
     // inline webpack manifest
@@ -85,27 +87,6 @@ export default webpackMerge(webpackConfigBase, {
     // https://github.com/kossnocorp/assets-webpack-plugin
     new AssetsPlugin({
       path: projectDistPath
-    }),
-    // generate service worker
-    new SWPrecacheWebpackPlugin({
-      // each time you build, must to update the cacheId
-      cacheId: 'wochap-sw-3',
-
-      filepath: `${projectDistPath}/service-worker.js`,
-
-      // ensure all our static, local assets will be cached in background
-      staticFileGlobs: [
-        `${projectDistPath}/**/!(*map*)`,
-      ],
-
-      runtimeCaching: [
-        // cache fonts files
-        {
-          handler: 'networkFirst',
-          urlPattern: /.(svg, eot, ttf, woff)$/
-        }
-      ],
-      verbose: true
     })
   ]
 })
