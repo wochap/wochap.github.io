@@ -24,9 +24,11 @@ $b: rgba(0,0,255,1);
 }
 
   .c-hero__title {
-    font-size: responsive 4em 10em;
-    font-range: 25em 75em;
     animation: glitch 2s infinite;
+    font-range: 25em 75em;
+    font-size: responsive 4em 10em;
+    margin: 0;
+    will-change: text-shadow;
   }
 
 
