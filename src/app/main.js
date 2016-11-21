@@ -1,8 +1,8 @@
 import 'src/styles/main.scss'
 
 import React from 'react'
-import { render } from 'react-dom'
-import { AppContainer } from 'react-hot-loader' // eslint-disable-line
+import {render} from 'react-dom'
+import {AppContainer} from 'react-hot-loader' // eslint-disable-line
 import App from './App'
 
 const rootEl = document.getElementById('root')
