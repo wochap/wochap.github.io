@@ -22,6 +22,8 @@ module.exports = {
   rules: {
     'semi': [2,'never'],
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
+    'object-curly-spacing': [2, 'never'],
+    'space-before-function-paren': [2, 'always'],
     'no-console': DEBUG ? 0 : 2,
     'no-debugger': DEBUG ? 0 : 2
   }
