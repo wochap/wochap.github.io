@@ -1,3 +1,5 @@
+// run all tests files in __tests__ folder
+
 process.env.NODE_ENV = 'test'
 
 import jest from 'jest'
