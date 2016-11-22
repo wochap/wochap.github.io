@@ -10,7 +10,7 @@ import history from 'connect-history-api-fallback'
 import express from 'express'
 
 import webpackConfigDev from '../webpack/config.dev.babel'
-import {projectRootPath, projectAssetsPath, CURRENT_IP, WEBPACK_SERVER_PORT} from '../config'
+import {projectRootPath, projectPublicPath, CURRENT_IP, WEBPACK_SERVER_PORT} from '../config'
 
 const app = express()
 
@@ -25,8 +25,8 @@ const webpackMiddleware = webpackDevMiddleware(compiler, {
 })
 const hotMiddleware = webpackHotMiddleware(compiler)
 
-// serve static folder in static pat
-app.use('/static', express.static(projectAssetsPath))
+// serve public folder
+app.use('/', express.static(projectPublicPath))
 
 // handle fallback for HTML5 history API
 app.use(history())

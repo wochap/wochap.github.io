@@ -8,6 +8,5 @@ export const projectRootPath = path.resolve(__dirname, '../../')
 export const projectSourcePath = path.join(projectRootPath, 'src')
 export const templatePath = path.join(projectSourcePath, 'index.html')
 
-export const projectAssetsPath = path.join(projectRootPath, 'static')
+export const projectPublicPath = path.join(projectRootPath, 'public')
 export const projectDistPath = path.join(projectRootPath, 'dist')
-export const projectDistAssetsPath = path.join(projectDistPath, 'static')

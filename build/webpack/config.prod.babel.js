@@ -7,7 +7,7 @@ import InlineManifestWebpackPlugin from 'inline-manifest-webpack-plugin'
 import AssetsPlugin from 'assets-webpack-plugin'
 
 import webpackConfigBase from './config.base.babel'
-import {projectRootPath, projectSourcePath, projectDistAssetsPath, projectDistPath, templatePath} from '../config'
+import {projectSourcePath, projectDistPath, templatePath} from '../config'
 
 export default webpackMerge(webpackConfigBase, {
   devtool: 'source-map',

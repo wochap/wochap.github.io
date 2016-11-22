@@ -13,7 +13,7 @@ import swPrecache from 'sw-precache'
 import webpackConfigProd from '../webpack/config.prod.babel'
 import webpackConfigProdPreStatic from '../webpack/config.prod-pre-static.babel'
 import webpackConfigProdStatic from '../webpack/config.prod-static.babel'
-import {projectRootPath, projectAssetsPath, projectDistPath, projectDistAssetsPath} from '../config'
+import {projectRootPath, projectAssetsPath, projectDistPath, projectPublicPath} from '../config'
 
 let spinner = ora('Building for production...')
 spinner.start()
@@ -21,9 +21,8 @@ spinner.start()
 // delete dist folder
 shelljs.rm('-rf', projectDistPath)
 shelljs.mkdir('-p', projectDistPath)
-shelljs.mkdir('-p', projectDistAssetsPath)
-// copy static folder to dist/static folder
-shelljs.cp('-R', `${projectAssetsPath}/*`, projectDistAssetsPath)
+// copy public folder to dist folder
+shelljs.cp('-R', `${projectPublicPath}/*`, projectDistPath)
 
 // run webpack with prod config
 webpack(webpackConfigProd).run((err, stats) => {
@@ -40,7 +39,7 @@ webpack(webpackConfigProd).run((err, stats) => {
     chunkModules: false
   }) + '\n')
 
-  spinner = ora('Building static markup...')
+  spinner = ora('\nBuilding static markup...')
   spinner.start()
 
   // pre build static markup
@@ -72,6 +71,7 @@ webpack(webpackConfigProd).run((err, stats) => {
         chunkModules: false
       }) + '\n')
 
+      // delete temporary build folders
       shelljs.rm('-rf', path.join(projectDistPath, '_static'))
       shelljs.rm('-rf', path.join(projectDistPath, 'dist'))
 
