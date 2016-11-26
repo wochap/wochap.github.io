@@ -15,18 +15,21 @@ import webpackConfigProdPreStatic from '../webpack/config.prod-pre-static.babel'
 import webpackConfigProdStatic from '../webpack/config.prod-static.babel'
 import {projectRootPath, projectAssetsPath, projectDistPath, projectPublicPath} from '../config'
 
-let spinner = ora('Building for production...')
-spinner.start()
+let firstSpiner = ora('Building for production...')
+let secondSpiner = ora('Building static markup...')
+
+firstSpiner.start()
 
 // delete dist folder
 shelljs.rm('-rf', projectDistPath)
 shelljs.mkdir('-p', projectDistPath)
+
 // copy public folder to dist folder
 shelljs.cp('-R', `${projectPublicPath}/*`, projectDistPath)
 
 // run webpack with prod config
 webpack(webpackConfigProd).run((err, stats) => {
-  spinner.stop()
+  firstSpiner.stop()
 
   if (err) throw err
 
@@ -39,8 +42,8 @@ webpack(webpackConfigProd).run((err, stats) => {
     chunkModules: false
   }) + '\n')
 
-  spinner = ora('\nBuilding static markup...')
-  spinner.start()
+  console.log('\n')
+  secondSpiner.start()
 
   // pre build static markup
   webpack(webpackConfigProdPreStatic).run((err, stats) => {
@@ -58,7 +61,7 @@ webpack(webpackConfigProd).run((err, stats) => {
 
     // build static markup
     webpack(webpackConfigProdStatic).run((err, stats) => {
-      spinner.stop()
+      secondSpiner.stop()
 
       if (err) throw err
 
@@ -77,17 +80,15 @@ webpack(webpackConfigProd).run((err, stats) => {
 
       // generate service worker
       swPrecache.write(`${projectDistPath}/service-worker.js`, {
-        // each time you build, must to update the cacheId
-        cacheId: 'wochap-sw-3',
+        cacheId: 'wochap',
 
         // ensure all our static, local assets will be cached in background
         staticFileGlobs: [
-          `${projectDistPath}/**/!(*map*)`,
+          `${projectDistPath}/**/!(*map*|*yml*)`,
         ],
         stripPrefix: projectDistPath,
 
         runtimeCaching: [
-          // cache fonts files
           {
             handler: 'networkFirst',
             urlPattern: /.(svg, eot, ttf, woff, woff2)$/
