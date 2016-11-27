@@ -1,6 +1,6 @@
 # wochap
 
-Personal website powered by [react](https://facebook.github.io/react/) and [webpack](https://webpack.github.io/)
+Personal website powered by [React](https://facebook.github.io/react/) and [Webpack](https://webpack.github.io/)
 
 ## Development
 
@@ -21,4 +21,11 @@ $ npm run test-coverage
 $ npm run build
 ```
 
-This project is powered by [webpack-basic-boilerplate](https://github.com/wochap/webpack-basic-boilerplate/tree/react) (react branch)
+If you like this setup, check my  [webpack-basic-boilerplate](https://github.com/wochap/webpack-basic-boilerplate/tree/react) (react branch)
+
+## About this project
+
+### Structure
+
+* App: https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346
+* Styles: [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
