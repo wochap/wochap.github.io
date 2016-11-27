@@ -17,6 +17,14 @@ export default {
     },
     modulesDirectories: ['node_modules', 'shared']
   },
+  resolveLoader: {
+    // register custom loaders
+    alias: {
+      'markdown-loader': path.resolve(__dirname, './loaders/markdown'),
+      'front-matter-loader': path.resolve(__dirname, './loaders/front-matter'),
+      'lazy-loader': path.resolve(__dirname, './loaders/lazy')
+    }
+  },
   module: {
     preLoaders: [
       {
