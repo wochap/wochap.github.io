@@ -1,21 +1,37 @@
 import React from 'react'
 import ReactDOM from 'react-dom/server'
-import App from 'app/App'
-import template from './template'
+import {match, RouterContext, createMemoryHistory} from 'react-router'
+import Helmet from 'react-helmet'
 import {AppContainer} from 'react-hot-loader' // eslint-disable-line
+import routes from 'app/config/routes'
+import template from './template'
 
-export default function render () {
-  return new Promise(async (resolve, reject) => {
+export default function render (locals) {
+  return new Promise((resolve, reject) => {
     try {
-      const bodyHTML = ReactDOM.renderToString((
-        <AppContainer>
-          <App />
-        </AppContainer>
-      ))
-      const html = await template(bodyHTML)
+      const history = createMemoryHistory()
+      const location = history.createLocation(locals.path)
 
-      console.log('\nhtml: ', html, '\n') // eslint-disable-line
-      resolve(html)
+      match({routes, location}, async (error, redirectLocation, renderProps) => {
+        if (error) throw error
+
+        const bodyHTML = ReactDOM.renderToString((
+          <AppContainer>
+            <RouterContext {...renderProps} />
+          </AppContainer>
+        ))
+        const head = Helmet.rewind()
+        const headHTML = `
+          ${head.title.toString()}
+          ${head.meta.toString()}
+        `
+        const html = await template(bodyHTML, headHTML)
+
+        console.log('\nCurrent path: ', locals.path) // eslint-disable-line
+        console.log('\nhtml: ', html, '\n') // eslint-disable-line
+
+        resolve(html)
+      })
     } catch (error) {
       reject(error)
     }

@@ -1,28 +1,32 @@
 import 'src/styles/main.scss'
 
 import React from 'react'
-import {render} from 'react-dom'
+import ReactDOM from 'react-dom'
 import {AppContainer} from 'react-hot-loader' // eslint-disable-line
-import App from './App'
+import {Router, browserHistory} from 'react-router'
+import routes from 'app/config/routes'
 
 const rootEl = document.getElementById('root')
 
-render((
+ReactDOM.render((
   <AppContainer>
-    <App />
+    <Router history={browserHistory} routes={routes} />
   </AppContainer>),
-  rootEl,
+  rootEl
 )
 
 if (module.hot) {
-  module.hot.accept('./App', () => {
-    const NextApp = require('./App').default // eslint-disable-line
+  module.hot.accept('app/config/routes', () => {
+    const newRoutes = require('app/config/routes').default // eslint-disable-line
 
-    render((
+    // HMR async routes
+    ReactDOM.unmountComponentAtNode(rootEl)
+
+    ReactDOM.render((
       <AppContainer>
-        <NextApp />
+        <Router history={browserHistory} routes={newRoutes} />
       </AppContainer>),
-      rootEl,
+      rootEl
     )
   })
 }

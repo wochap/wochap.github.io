@@ -17,6 +17,8 @@
     "my-ip": "^1.1.1",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
+    "react-helmet": "^3.2.2",
+    "react-router": "^3.0.0",
     "wocss-generic-sanitize": "^1.0.0",
     "wocss-settings-breakpoints": "^2.0.2",
     "wocss-settings-colors": "^2.0.1",
