@@ -5,7 +5,8 @@ import webpackConfigProdPreStatic from './config.prod-pre-static.babel'
 
 // routes to render
 const routes = [
-  '/'
+  '/',
+  '/404'
 ]
 
 export default webpackMerge(webpackConfigProdPreStatic, {
