@@ -21,5 +21,6 @@
     "src/**/*.js",
     "!**/node_modules/**",
     "!**/vendor/**"
-  ]
+  ],
+  "testEnvironment": "node"
 }
