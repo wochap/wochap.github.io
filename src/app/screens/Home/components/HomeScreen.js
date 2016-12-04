@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 
 function HomeScreen () {
   return (
-    <div>
+    <section className="c-home-screen">
       <Helmet
         title="Gean Carlos Bonifacio Marroquin"
         meta={[
@@ -25,8 +25,21 @@ function HomeScreen () {
           }
         ]}
       />
-      <h1>Home</h1>
-    </div>
+      <div className="o-wrapper">
+        <div className="c-home-screen__wrapper">
+          <h2 className="u-caps">Hi, i am Gean Marroquin</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem.</p>
+          <a
+            className="o-btn c-btn c-btn--secondary u-mr3 u-my2"
+            href="emailto:gean.marroquin@gmail.com"
+          >Contact me</a>
+          <a
+            className="o-btn c-btn c-btn--secondary c-btn--ghost u-white u-my2"
+            href="#!"
+          >View works</a>
+        </div>
+      </div>
+    </section>
   )
 }
 
