@@ -2,16 +2,19 @@ import React from 'react'
 import SiteHeader from './SiteHeader'
 
 function App (props) {
+  const isHome = props.location.pathname === '/'
+
   return (
-    <div>
-      <SiteHeader />
+    <main className="c-app">
+      <SiteHeader isHome={isHome} />
       {props.children}
-    </div>
+    </main>
   )
 }
 
 App.propTypes = {
-  children: React.PropTypes.element
+  children: React.PropTypes.element,
+  location: React.PropTypes.object // eslint-disable-line
 }
 
 export default App
