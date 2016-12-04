@@ -7157,34 +7157,67 @@ wocss-generic-sanitize:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wocss-generic-sanitize/-/wocss-generic-sanitize-1.0.0.tgz#4e2dd29a8c0fb999ce8ffd904daa25c814618af0"
 
+wocss-objects-wrapper:
+  version "2.0.0-0"
+  resolved "https://registry.yarnpkg.com/wocss-objects-wrapper/-/wocss-objects-wrapper-2.0.0-0.tgz#66c73bb92a5fa95506b5838983bde89c87d9c572"
+  dependencies:
+    wocss-tools-bem-constructor "^1.0.1"
+    wocss-tools-layout "^2.0.0"
+
 wocss-settings-breakpoints, wocss-settings-breakpoints@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/wocss-settings-breakpoints/-/wocss-settings-breakpoints-2.0.2.tgz#e9f9f51b3f19e30cc912a45f659ee700caaf6c67"
 
-wocss-settings-colors:
+wocss-settings-colors, wocss-settings-colors@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/wocss-settings-colors/-/wocss-settings-colors-2.0.1.tgz#9c82d2cb721fac1c498eda945154f4c515c19079"
 
-wocss-settings-global:
+wocss-settings-global, wocss-settings-global@^1.0.0, wocss-settings-global@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/wocss-settings-global/-/wocss-settings-global-1.1.0.tgz#19f2b316e690959bbd819a48cf5e1450b38a3926"
 
-wocss-settings-typography:
+wocss-settings-spaces@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/wocss-settings-spaces/-/wocss-settings-spaces-2.0.0.tgz#ce501608c5eafe8a3e70ae5f8aedffba3e039b5f"
+
+wocss-settings-typography, wocss-settings-typography@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/wocss-settings-typography/-/wocss-settings-typography-2.0.0.tgz#73c9e3440567ef669847099195e4c801ad3d69d9"
 
-wocss-tools-bem-constructor:
+wocss-tools-bem-constructor, wocss-tools-bem-constructor@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/wocss-tools-bem-constructor/-/wocss-tools-bem-constructor-1.0.4.tgz#5c1030fc5959db825020a77e67abe2fb494e1d40"
   dependencies:
     sass-bem-constructor "^1.1.0"
 
-wocss-tools-mq:
+wocss-tools-layout@^2.0.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/wocss-tools-layout/-/wocss-tools-layout-2.2.0.tgz#c0750b7409d771081f2c032e615c87f340edc3fc"
+  dependencies:
+    wocss-settings-global "^1.1.0"
+
+wocss-tools-mq, wocss-tools-mq@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/wocss-tools-mq/-/wocss-tools-mq-1.1.0.tgz#46e2c10cfbb770486070e10f5ca7a62fd76c9970"
   dependencies:
     sass-mq "^3.2.9"
     wocss-settings-breakpoints "^2.0.2"
+
+wocss-tools-resets, wocss-tools-resets@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/wocss-tools-resets/-/wocss-tools-resets-2.0.1.tgz#601b791ed94097117fa01ce834281fe6a16c1927"
+
+wocss-utilities-basscss:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/wocss-utilities-basscss/-/wocss-utilities-basscss-3.0.0.tgz#b1c13a0586b5e78a7dc75f79bb613a3e0756414f"
+  dependencies:
+    wocss-settings-colors "^2.0.1"
+    wocss-settings-global "^1.0.0"
+    wocss-settings-spaces "^2.0.0"
+    wocss-settings-typography "^2.0.0"
+    wocss-tools-bem-constructor "^1.0.1"
+    wocss-tools-mq "^1.1.0"
+    wocss-tools-resets "^2.0.0"
 
 wordwrap@^1.0.0, wordwrap@~1.0.0:
   version "1.0.0"
