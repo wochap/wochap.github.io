@@ -2,6 +2,7 @@ const DEBUG = process.env.NODE_ENV !== 'production'
 
 module.exports = {
   'root': true,
+  'parser': 'babel-eslint',
   'extends': [
     'plugin:import/errors',
     'plugin:import/warnings',

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Hamburger ({isOpen}) {
+function Hamburger ({className, isOpen}) {
   return (
     <button
-      className="o-btn"
+      className={`o-btn ${className}`}
       aria-label="Mostrar/Esconder navegación"
       type="button"
     >
@@ -17,6 +17,7 @@ function Hamburger ({isOpen}) {
 }
 
 Hamburger.propTypes = {
+  className: React.PropTypes.string,
   isOpen: React.PropTypes.bool
 }
 
