@@ -1,11 +1,9 @@
 import React from 'react'
 
-function Hamburger (props) {
-  const {className, isOpen} = props
-
+function Hamburger ({className, isOpen, ...restProps}) {
   return (
     <button
-      {...props}
+      {...restProps}
       className={`o-btn ${className}`}
       aria-label="Mostrar/Esconder navegación"
       type="button"
