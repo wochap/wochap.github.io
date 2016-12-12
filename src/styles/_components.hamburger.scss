@@ -1,0 +1,153 @@
+$hb-animation-duration: 0.3s;
+
+// <em> element height
+$hb-line-height: 0.250em;
+
+
+
+
+
+.c-hamburger {
+  display: block;
+  font-size: 1rem;
+  height: 1.563em;
+  width: 1.875em;
+  position: relative;
+
+  em {
+    background-color: currentColor;
+    border-radius: 0.125em;
+    left: 0;
+    position: absolute;
+    display: block;
+    height: $hb-line-height;
+    width: 100%;
+    will-change: transform;
+
+    // effect
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        animation: hamburger-line-#{$i}-uncheck $hb-animation-duration;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+      }
+    }
+
+		&:nth-child(1) {
+      top: 0;
+      transform: rotate(0);
+    }
+
+    &:nth-child(2) {
+      top: 0.625em;
+    }
+
+    &:nth-child(3) {
+      top: 1.250em;
+    }
+	}
+
+  &.is-open {
+    em {
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation: hamburger-line-#{$i}-check $hb-animation-duration;
+          animation-fill-mode: both;
+          animation-timing-function: linear;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@keyframes hamburger-line-1-check {
+  0% {
+    top: 0;
+  }
+  35%,
+  65%{
+    top: 0.625em;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0.625em;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes hamburger-line-1-uncheck {
+  0% {
+      top: 0.625em;
+      transform: rotate(45deg);
+  }
+  35%,
+  65%{
+      top: 0.625em;
+      transform: rotate(0);
+  }
+  100% {
+      top: 0;
+      transform: rotate(0);
+  }
+}
+
+@keyframes hamburger-line-2-check {
+  0% {
+
+  }
+  35%,
+  65%{
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes hamburger-line-2-uncheck {
+  0% {
+    transform: rotate(45deg);
+  }
+  35%,
+  65%{
+    transform: rotate(0);
+  }
+  100% {
+
+  }
+}
+
+@keyframes hamburger-line-3-check {
+  0% {
+    top: 1.250em;
+  }
+  35%,
+  65%{
+    top: 0.625em;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0.625em;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes hamburger-line-3-uncheck {
+  0% {
+    top: 0.625em;
+    transform: rotate(-45deg);
+  }
+  35%,
+  65%{
+    top: 0.625em;
+    transform: rotate(0);
+  }
+  100% {
+    top: 1.250em;
+    transform: rotate(0);
+  }
+}
