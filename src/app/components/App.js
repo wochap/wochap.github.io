@@ -1,13 +1,13 @@
 import React from 'react'
 import SiteHeader from './SiteHeader'
 
-function App (props) {
-  const isHome = props.location.pathname === '/'
+function App ({location, children}) {
+  const isHome = location ? location.pathname === '/' : false
 
   return (
     <main className="c-app">
       <SiteHeader isHome={isHome} />
-      {props.children}
+      {children}
     </main>
   )
 }
