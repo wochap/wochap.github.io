@@ -29,11 +29,11 @@ $wocss-settings-global: false !default;
   }
 
   &:hover {
-    transform: scale(0.95);
+    transform: none;
   }
 
   &:active {
-    transform: scale(0.9);
+    transform: none;
   }
 }
 
@@ -49,7 +49,7 @@ $wocss-settings-global: false !default;
 
 
 /**
- * 1. hacer transparente el texto con el background  del elemento padre
+ * 1. Make letters transparent.
  */
 
 .c-btn--secondary {
@@ -63,9 +63,9 @@ $wocss-settings-global: false !default;
 }
 
 .c-btn--ghost {
-  background-color: transparent;
   border: $global-border-width solid currentColor;
 
+  &,
   &:hover {
     background-color: transparent;
   }
