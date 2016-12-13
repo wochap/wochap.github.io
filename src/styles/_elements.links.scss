@@ -1,0 +1,37 @@
+// check dependencies
+
+$wocss-settings-global: false !default;
+
+
+@if ($wocss-settings-global == false) {
+  @error "[elements-links] Have you included the wocss-settings-global module?"
+};
+
+
+
+
+
+/*------------------------------------*\
+  #LINKS
+\*------------------------------------*/
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([class]) {
+  border-bottom: 1px dotted currentColor;
+  color: $global-color-primary;
+  outline: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    border-bottom-style: solid;
+  }
+
+  &:hover {
+    color: scale-color($global-color-primary, $lightness: -10%);
+  }
+}
