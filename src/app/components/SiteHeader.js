@@ -33,21 +33,37 @@ class SiteHeader extends React.Component {
         <nav className={`c-site-nav ${isNavOpen ? 'is-open' : ''}`}>
           <ul>
             <li>
-              <Link className="o-btn" to="/about">About</Link>
+              <Link
+                className="o-btn c-site-nav__link"
+                to="/about"
+                onClick={this.toggleNav}
+              >About</Link>
             </li>
             <li>
-              <Link className="o-btn" to="/works">Works</Link>
+              <Link
+                className="o-btn c-site-nav__link"
+                to="/works"
+                onClick={this.toggleNav}
+              >Works</Link>
             </li>
             <li>
-              <Link className="o-btn" to="/blog">Blog</Link>
+              <Link
+                className="o-btn c-site-nav__link"
+                to="/blog"
+                onClick={this.toggleNav}
+              >Blog</Link>
             </li>
             <li>
-              <a className="o-btn" href="emailto:gean.marroquin@gmail.com">Contact</a>
+              <a
+                className="o-btn c-site-nav__link"
+                href="emailto:gean.marroquin@gmail.com"
+                onClick={this.toggleNav}
+              >Contact</a>
             </li>
           </ul>
         </nav>
         <Hamburger
-          className="c-site-header__btn-toggle u-hide@laptop"
+          className={`c-site-header__btn-toggle ${isNavOpen ? 'is-active' : ''} u-hide@laptop`}
           onClick={this.toggleNav}
           isOpen={isNavOpen}
         />
