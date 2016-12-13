@@ -1,0 +1,38 @@
+/**
+ * 1. Obscurecer un 25% la imagen de fondo.
+ */
+
+.c-home-screen {
+  background-image: url(https://drscdn.500px.org/photo/186180867/q%3D80_m%3D1500/b532d32e4bee4ec4109e8d94a1f5813c);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding-top: $global-header-height;
+  position: relative;
+
+  background-blend-mode: multiply; /* [1] */
+  background-color: rgba($black, .25); /* [1] */
+}
+
+  .c-home-screen__wrapper {
+    margin-left: 0;
+    max-width: 32rem;
+
+    h2 {
+      margin: 0 0 1.25em;
+      line-height: 1;
+    }
+
+    p {
+      margin: 0 0 2.5em;
+    }
+
+    @include mq($until: 'laptop') {
+      margin: 0 auto;
+    };
+  }
