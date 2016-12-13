@@ -47,14 +47,22 @@
 
   .c-site-header__btn-toggle {
     padding: .25rem;
+
+    &.is-active {
+      color: $global-color-secondary;
+    }
   }
 
 
 .c-site-header--home {
-  color: $white;
-  left: 50%;
+  color: $global-color-secondary;
+  left: 0;
   position: absolute;
   top: 0;
-  transform: translateX(-50%);
   z-index: 9;
+
+  @include mq($from: 'laptop') {
+    left: 50%;
+    transform: translateX(-50%);
+  };
 }

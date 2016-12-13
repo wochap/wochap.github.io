@@ -6,8 +6,10 @@ function App ({location, children}) {
 
   return (
     <main className="c-app">
-      <SiteHeader isHome={isHome} />
-      {children}
+      <div className="c-app__wrapper">
+        <SiteHeader isHome={isHome} />
+        {children}
+      </div>
     </main>
   )
 }
