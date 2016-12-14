@@ -91,7 +91,8 @@
 
     &:focus,
     &.active,
-    &:hover {
+    &:hover,
+    &.is-active {
 
       // link border
       &::after {
