@@ -41,6 +41,7 @@
     top: 0;
     visibility: hidden; /* [1] */
     width: 100%;
+    z-index: 9;
 
     &::after,
     &::before {
