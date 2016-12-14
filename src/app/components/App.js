@@ -1,5 +1,6 @@
 import React from 'react'
 import SiteHeader from './SiteHeader'
+import SiteFooter from './SiteFooter'
 
 function App ({location, children}) {
   const isHome = location ? location.pathname === '/' : false
@@ -9,6 +10,7 @@ function App ({location, children}) {
       <div className="c-app__wrapper">
         <SiteHeader isHome={isHome} />
         {children}
+        {isHome ? null : <SiteFooter />}
       </div>
     </main>
   )
