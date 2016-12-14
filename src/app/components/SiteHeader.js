@@ -11,11 +11,17 @@ class SiteHeader extends React.Component {
     isNavOpen: false
   }
 
-  toggleNav = () => {
+  _toggleNav = () => {
     const {isNavOpen} = this.state
 
     this.setState({
       isNavOpen: !isNavOpen
+    })
+  }
+
+  _closeNav = () => {
+    this.setState({
+      isNavOpen: false
     })
   }
 
@@ -36,35 +42,38 @@ class SiteHeader extends React.Component {
               <Link
                 className="o-btn c-site-nav__link"
                 to="/about"
-                onClick={this.toggleNav}
+                onClick={this._closeNav}
+                activeClassName="is-active"
               >About</Link>
             </li>
             <li>
               <Link
                 className="o-btn c-site-nav__link"
                 to="/works"
-                onClick={this.toggleNav}
+                onClick={this._closeNav}
+                activeClassName="is-active"
               >Works</Link>
             </li>
             <li>
               <Link
                 className="o-btn c-site-nav__link"
                 to="/blog"
-                onClick={this.toggleNav}
+                onClick={this._closeNav}
+                activeClassName="is-active"
               >Blog</Link>
             </li>
             <li>
               <a
                 className="o-btn c-site-nav__link"
                 href="emailto:gean.marroquin@gmail.com"
-                onClick={this.toggleNav}
+                onClick={this._closeNav}
               >Contact</a>
             </li>
           </ul>
         </nav>
         <Hamburger
           className={`c-site-header__btn-toggle ${isNavOpen ? 'is-active' : ''} u-hide@laptop`}
-          onClick={this.toggleNav}
+          onClick={this._toggleNav}
           isOpen={isNavOpen}
         />
       </header>

@@ -28,7 +28,7 @@ describe('SiteHeader', () => {
     expect(siteHeader.state().isNavOpen).toEqual(true)
   })
 
-  it('toggle nav on Link click', () => {
+  it('close nav on Link click', () => {
     const siteHeader = shallow(<SiteHeader />)
     const hamburger = siteHeader.find('Hamburger')
     const link = siteHeader.find('.c-site-nav Link').first()
@@ -41,6 +41,7 @@ describe('SiteHeader', () => {
     expect(siteHeader.find('.c-site-nav').hasClass('is-open')).toEqual(true)
     expect(siteHeader.state().isNavOpen).toEqual(true)
 
+    link.simulate('click')
     link.simulate('click')
 
     expect(siteHeader.find('.c-site-nav').hasClass('is-open')).toEqual(false)
