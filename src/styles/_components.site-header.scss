@@ -13,6 +13,7 @@
   flex-direction: row; /* [1] */
   height: $global-header-height;
   justify-content: space-between;
+  margin-bottom: $global-spacing-unit * 1.5;
   width: 100%;
 }
 
@@ -57,6 +58,7 @@
 .c-site-header--home {
   color: $global-color-secondary;
   left: 0;
+  margin-bottom: 0;
   position: absolute;
   top: 0;
   z-index: 9;
