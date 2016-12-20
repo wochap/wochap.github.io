@@ -4,11 +4,20 @@ import SiteFooter from './SiteFooter'
 
 function App ({location, children}) {
   const isHome = location ? location.pathname === '/' : false
+  let isFixed = false
+
+  if (location) {
+    if (location.pathname === '/' ||
+        location.pathname.toLowerCase().includes('/works/') ||
+        location.pathname.toLowerCase().includes('/blog/')) {
+      isFixed = true
+    }
+  }
 
   return (
     <main className="c-app">
       <div className="c-app__wrapper">
-        <SiteHeader isHome={isHome} />
+        <SiteHeader isFixed={isFixed} />
         {children}
         {isHome ? null : <SiteFooter />}
       </div>
