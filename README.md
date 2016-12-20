@@ -29,3 +29,9 @@ If you like this setup, check my  [webpack-basic-boilerplate](https://github.com
 
 * App: https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346
 * Styles: [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
+
+### Development
+
+#### Icon font
+
+This project uses [Icomoon](https://icomoon.io/app), to add new icons you have to import the `src/icomoon/selection.json` in the icomoon app, then download the new font from it and drop to `src/icomoon` folder.
