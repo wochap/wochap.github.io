@@ -4,7 +4,7 @@ import Hamburger from './Hamburger'
 
 class SiteHeader extends React.Component {
   static propTypes = {
-    isHome: React.PropTypes.bool
+    isFixed: React.PropTypes.bool
   }
 
   state = {
@@ -26,12 +26,12 @@ class SiteHeader extends React.Component {
   }
 
   render () {
-    const {isHome} = this.props
+    const {isFixed} = this.props
     const {isNavOpen} = this.state
 
     return (
-      <header className={`o-wrapper c-site-header ${isHome ? 'c-site-header--home' : ''}`}>
-        <h1 className="c-site-header__title" >
+      <header className={`o-wrapper c-site-header ${isFixed ? 'is-fixed' : ''}`}>
+        <h1 className="c-site-header__title">
           <Link className="" to="/">
             <span>Gean</span> <span>Marroquin</span>
           </Link>
@@ -44,7 +44,7 @@ class SiteHeader extends React.Component {
                 to="/about"
                 onClick={this._closeNav}
                 activeClassName="is-active"
-              >About</Link>
+              >Sobre mi</Link>
             </li>
             <li>
               <Link
@@ -52,7 +52,7 @@ class SiteHeader extends React.Component {
                 to="/works"
                 onClick={this._closeNav}
                 activeClassName="is-active"
-              >Works</Link>
+              >Portafolio</Link>
             </li>
             <li>
               <Link
@@ -63,11 +63,12 @@ class SiteHeader extends React.Component {
               >Blog</Link>
             </li>
             <li>
-              <a
+              <Link
                 className="o-btn c-site-nav__link"
-                href="emailto:gean.marroquin@gmail.com"
+                to="/contact"
                 onClick={this._closeNav}
-              >Contact</a>
+                activeClassName="is-active"
+              >Contacto</Link>
             </li>
           </ul>
         </nav>
