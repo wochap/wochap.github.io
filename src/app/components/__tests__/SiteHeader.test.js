@@ -3,16 +3,16 @@ import {shallow} from 'enzyme'
 import SiteHeader from '../SiteHeader'
 
 describe('SiteHeader', () => {
-  it('add home modifier', () => {
+  it('add isFixed state', () => {
     const siteHeader = shallow(<SiteHeader />)
 
-    expect(siteHeader.hasClass('c-site-header--home')).toEqual(false)
+    expect(siteHeader.hasClass('is-fixed')).toEqual(false)
 
     siteHeader.setProps({
-      isHome: true
+      isFixed: true
     })
 
-    expect(siteHeader.hasClass('c-site-header--home')).toEqual(true)
+    expect(siteHeader.hasClass('is-fixed')).toEqual(true)
   })
 
   it('toggle nav on hamburger click', () => {
