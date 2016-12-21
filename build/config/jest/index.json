@@ -12,7 +12,8 @@
     "^.+\\.(css|scss)$": "<rootDir>/build/config/jest/CSSStub.js",
     "^src(.*)$": "<rootDir>/src$1",
     "^app(.*)$": "<rootDir>/src/app$1",
-    "^styles(.*)$": "<rootDir>/src/styles$1"
+    "^styles(.*)$": "<rootDir>/src/styles$1",
+    "^data(.*)$": "<rootDir>/src/data$1"
   },
   "testPathIgnorePatterns": [
     "<rootDir>/(build|docs|node_modules)/"

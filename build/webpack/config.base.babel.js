@@ -13,7 +13,8 @@ export default {
     alias: {
       'src': projectSourcePath,
       'app': path.join(projectSourcePath, 'app'),
-      'styles': path.join(projectSourcePath, 'styles')
+      'styles': path.join(projectSourcePath, 'styles'),
+      'data': path.join(projectSourcePath, 'data')
     },
     modulesDirectories: ['node_modules', 'shared']
   },
@@ -72,7 +73,11 @@ export default {
   eslint: {
     configFile: path.join(projectRootPath, '.eslintrc.js')
   },
+  sassLoader: {
+    importer: require('node-sass-json-importer')
+  },
   postcss: [
+    require('lost'),
     require('postcss-responsive-type')(),
     require('autoprefixer')({
       browsers: [
