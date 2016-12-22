@@ -4,10 +4,12 @@ import SiteFooter from './SiteFooter'
 
 function App ({location, children}) {
   const isHome = location ? location.pathname === '/' : false
+  const isNotFound = location ? location.pathname === '/404' : false
   let isFixed = false
 
   if (location) {
     if (location.pathname === '/' ||
+        location.pathname === '/404' ||
         location.pathname.toLowerCase().includes('/works/') ||
         location.pathname.toLowerCase().includes('/blog/')) {
       isFixed = true
@@ -19,7 +21,7 @@ function App ({location, children}) {
       <div className="c-app__wrapper">
         <SiteHeader isFixed={isFixed} />
         {children}
-        {isHome ? null : <SiteFooter />}
+        {isHome || isNotFound ? null : <SiteFooter />}
       </div>
     </main>
   )
