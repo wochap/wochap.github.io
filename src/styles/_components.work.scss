@@ -1,0 +1,58 @@
+/*------------------------------------*\
+  #WORK
+\*------------------------------------*/
+
+
+/**
+ * 1. Empujar texto hacia abajo.
+ */
+
+.c-work {
+  @include layout-aspect-ratio(4, 3);
+
+  background-color: $global-color-primary;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: translateZ(0);
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    @include card(4);
+  }
+}
+
+  .c-work__link {
+    background-color: rgba($global-color-secondary, .5);
+    display: flex; /* [1] */
+    flex-direction: column; /* [1] */
+    height: 100%;
+    justify-content: flex-end; /* [1] */
+    left: 0;
+    padding: 0 $global-spacing-unit $global-spacing-unit;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s;
+    width: 100%;
+
+    &:active,
+    &:hover {
+      opacity: 1;
+    }
+
+    h3 {
+      font-size: $global-fz-h2;
+      margin-bottom: $global-space-3;
+    }
+
+    p {
+      margin: 0;
+      font-weight: $global-fw-s-bold;
+    }
+
+    @include mq($from: 'laptop') {
+      opacity: 0;
+      padding: 0 #{$global-spacing-unit * 2} #{$global-spacing-unit * 2};
+    };
+  }
