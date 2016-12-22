@@ -3,9 +3,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('#{$icomoon-font-path}/icomoon.ttf?lymovb') format('truetype'),
-    url('#{$icomoon-font-path}/icomoon.woff?lymovb') format('woff'),
-    url('#{$icomoon-font-path}/icomoon.svg?lymovb#icomoon') format('svg');
+    url('#{$icomoon-font-path}/icomoon.ttf?qvuch8') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff?qvuch8') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg?qvuch8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -58,6 +58,11 @@
 .icon-github {
   &:before {
     content: $icon-github;
+  }
+}
+.icon-codepen {
+  &:before {
+    content: $icon-codepen;
   }
 }
 
