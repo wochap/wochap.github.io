@@ -2,60 +2,32 @@
   #HERO
 \*------------------------------------*/
 
-// variables
-
-$r: rgba(255,0,0,1);
-$g: rgba(0,255,0,1);
-$b: rgba(0,0,255,1);
-
-
-
-
-
 .c-hero {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  padding: 1.5rem;
+  background-color: $global-color-primary;
+  color: $global-color-secondary;
+  margin-bottom: $global-space-5;
+  padding-bottom: $global-spacing-unit;
+  padding-top: calc(#{$global-header-height} + 2.25rem + #{$global-space-5});
   text-align: center;
-  text-transform: uppercase;
-  width: 100%;
 }
 
   .c-hero__title {
-    animation: glitch 2s infinite;
-    font-range: 25em 75em;
-    font-size: responsive 4em 10em;
-    line-height: 1;
+    font-size: $global-fz-h1;
     margin: 0;
-    will-change: text-shadow;
   }
 
+  .c-hero__date {
+    margin-bottom: $global-space-6;
+    opacity: .5;
+  }
 
+  .c-hero__footer {
+    @include reset-list();
 
-
-
-@keyframes glitch{
-  @include mini-glitch($r, $b, 1, 0, 10);
-  @include mini-glitch($r, $g, 0.5, 11, 20);
-  @include mini-glitch($b, $g, 0.7, 21, 40);
-
-  @include big-glitch($b, $g, 50, 41, 42);
-
-  @include mini-glitch($r, $g, 0.5, 43, 50);
-  @include mini-glitch($r, $b, 1, 51, 60);
-
-  @include big-glitch($r, $g, 30, 61, 62);
-
-  @include mini-glitch($r, $b, 0.5, 63, 70);
-
-  @include big-glitch($r, $b, 70, 71, 72);
-
-  @include mini-glitch($r, $b, 1, 73, 80);
-  @include mini-glitch($r, $g, 0.5, 81, 90);
-
-  @include big-glitch($g, $b, 60, 91, 92);
-
-  @include mini-glitch($b, $g, 0.7, 92, 100);
-}
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+  }
