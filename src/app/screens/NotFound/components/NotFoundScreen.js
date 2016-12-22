@@ -1,13 +1,15 @@
 import React from 'react'
+import data from 'app/config/data'
 import Helmet from 'react-helmet'
 
 function NotFoundScreen () {
   return (
-    <div>
+    <div className="c-not-found-screen">
       <Helmet
-        title="Page not found"
+        title={data.screens.notFound.title}
       />
-      <h1>404</h1>
+      <h1 className="c-not-found-screen__title" data-text="404">404</h1>
+      <p className="u-caps u-fz-h2 u-center">Pagina no encontrada</p>
     </div>
   )
 }
