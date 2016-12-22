@@ -1,42 +1,45 @@
 import React from 'react'
+import data from 'app/config/data'
+import {Link} from 'react-router'
 import Helmet from 'react-helmet'
 
 function HomeScreen () {
   return (
     <section className="c-home-screen">
       <Helmet
-        title="Gean Carlos Bonifacio Marroquin"
+        title={data.screens.home.title}
         meta={[
           {
             name: 'description',
-            content: 'Desarrollador Front-end'
+            content: data.screens.home.description
           }, {
             property: 'og:title',
-            content: 'Gean Carlos Bonifacio Marroquin'
+            content: data.screens.home.title
           }, {
             property: 'og:description',
-            content: 'Desarrollador Front-end'
+            content: data.screens.home.description
           }
         ]}
         link={[
           {
             rel: 'canonical',
-            href: 'https://geanmarroquin.com'
+            href: data.screens.home.canonicalHref
           }
         ]}
       />
+
       <div className="o-wrapper">
         <div className="c-home-screen__wrapper">
-          <h2 className="u-caps">Hi, i am Gean Marroquin</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem.</p>
+          <h2 className="u-caps">Hola!, soy Gean</h2>
+          <p>{data.about}</p>
           <a
             className="o-btn c-btn c-btn--secondary u-mr3 u-my2"
-            href="emailto:gean.marroquin@gmail.com"
-          >Contact me</a>
-          <a
+            href={`mailto:${data.email}`}
+          >Contáctame</a>
+          <Link
             className="o-btn c-btn c-btn--secondary c-btn--ghost u-white u-my2"
-            href="#!"
-          >View works</a>
+            to="/works"
+          >Ver portafolio</Link>
         </div>
       </div>
     </section>
