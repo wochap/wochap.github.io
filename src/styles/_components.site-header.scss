@@ -15,6 +15,21 @@
   justify-content: space-between;
   margin-bottom: $global-spacing-unit * 1.5;
   width: 100%;
+
+  &.is-fixed {
+    color: $global-color-secondary;
+    left: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+
+    @include mq($from: 'laptop') {
+      left: 50%;
+      transform: translateX(-50%);
+    };
+  }
+
 }
 
   .c-site-header__title {
@@ -48,23 +63,9 @@
 
   .c-site-header__btn-toggle {
     padding: .25rem;
+    z-index: 9;
 
     &.is-active {
       color: $global-color-secondary;
     }
   }
-
-
-.c-site-header--home {
-  color: $global-color-secondary;
-  left: 0;
-  margin-bottom: 0;
-  position: absolute;
-  top: 0;
-  z-index: 9;
-
-  @include mq($from: 'laptop') {
-    left: 50%;
-    transform: translateX(-50%);
-  };
-}
