@@ -59,13 +59,10 @@ function AboutScreen () {
               <h3 className="u-fz-inherit u-mb2">CSS</h3>
               <ul>
                 <li>
-                  <strong>Procesadores: </strong> <ExternalLink href="http://sass-lang.com/" title="SASS" />, <ExternalLink href="http://stylus-lang.com/" title="Stylus" />, <ExternalLink href="http://postcss.org/" title="PostCSS" />
+                  <strong>Aquitectura: </strong> <ExternalLink href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf" title="ITCSS" />
                 </li>
                 <li>
                   <strong>Frameworks: </strong> <ExternalLink href="https://github.com/wocss" title="WOCSS" />, <ExternalLink href="http://materializecss.com/" title="Materialize" />
-                </li>
-                <li>
-                  <strong>Aquitectura: </strong> <ExternalLink href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf" title="ITCSS" />
                 </li>
                 <li>
                   <strong>Naming convention: </strong> <ExternalLink href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/" title="BEMIT" />
@@ -73,19 +70,22 @@ function AboutScreen () {
                 <li>
                   <strong>Style guide: </strong> <ExternalLink href="http://cssguidelin.es/" title="Harry Roberts's CSS Guidelines" />
                 </li>
+                <li>
+                  <strong>Procesadores: </strong> <ExternalLink href="http://sass-lang.com/" title="SASS" />, <ExternalLink href="http://stylus-lang.com/" title="Stylus" />, <ExternalLink href="http://postcss.org/" title="PostCSS" />
+                </li>
               </ul>
             </li>
             <li className="o-grid__item u-12/12 u-6/12@tablet">
               <h3 className="u-fz-inherit u-mb2">JS (ES2015)</h3>
               <ul>
                 <li>
-                  <strong>Procesadores: </strong> <ExternalLink href="https://babeljs.io/" title="BABEL" />
+                  <strong>Aquitectura: </strong> <ExternalLink href="https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346" title="by Route hierarchy" />
                 </li>
                 <li>
                   <strong>Frameworks: </strong> <ExternalLink href="https://facebook.github.io/react/" title="React" />, <ExternalLink href="https://vuejs.org/" title="Vue.js" />
                 </li>
                 <li>
-                  <strong>Aquitectura: </strong> <ExternalLink href="https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346" title="by Route hierarchy" />
+                  <strong>Procesadores: </strong> <ExternalLink href="https://babeljs.io/" title="BABEL" />
                 </li>
               </ul>
             </li>
