@@ -1,0 +1,42 @@
+.c-post {
+  display: block;
+  width: 100%;
+}
+
+  .c-post__image-link {
+    @include layout-aspect-ratio(800, 250);
+
+    background-color: $global-color-primary;
+    display: block;
+    margin-bottom: $global-space-4;
+    position: relative;
+    text-align: center;
+
+    img {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    @include mq($until: 'tablet') {
+      @include layout-aspect-ratio(500, 400, 500px);
+    };
+  }
+
+  .c-post__title {
+    font-size: $global-fz-h2;
+    margin-bottom: $global-space-1;
+  }
+
+  .c-post__date {
+    font-size: $global-fz-sm;
+    margin-bottom: $global-space-3;
+    opacity: .5;
+  }
+
+  .c-post__description {
+    font-size: $global-fz-sm;
+    margin-bottom: $global-space-3;
+  }
