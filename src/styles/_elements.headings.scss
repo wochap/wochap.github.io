@@ -1,0 +1,32 @@
+// check dependencies
+
+$wocss-settings-typography: false !default;
+
+
+@if ($wocss-settings-typography == false) {
+  @error "[elements-headings] Have you included the wocss-settings-typography module?"
+};
+
+
+
+
+
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $global-fw-s-bold;
+}
+
+h1 { font-size: $global-fz-h1 };
+h2 { font-size: $global-fz-h2 };
+h3 { font-size: $global-fz-h3 };
+h4 { font-size: $global-fz-h4 };
+h5 { font-size: $global-fz-h5 };
+h6 { font-size: $global-fz-h6 };
