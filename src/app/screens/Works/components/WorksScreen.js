@@ -1,9 +1,11 @@
 import React from 'react'
 
-function WorksScreen () {
-  return (
-    <h1>WorksScreen</h1>
-  )
+function WorksScreen ({children}) {
+  return children ? React.cloneElement(children) : null
+}
+
+WorksScreen.propTypes = {
+  children: React.PropTypes.element
 }
 
 export default WorksScreen

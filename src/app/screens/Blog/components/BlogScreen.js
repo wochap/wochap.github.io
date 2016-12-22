@@ -1,9 +1,11 @@
 import React from 'react'
 
-function BlogScreen () {
-  return (
-    <h1>BlogScreen</h1>
-  )
+function BlogScreen ({children}) {
+  return children ? React.cloneElement(children) : null
+}
+
+BlogScreen.propTypes = {
+  children: React.PropTypes.element
 }
 
 export default BlogScreen
