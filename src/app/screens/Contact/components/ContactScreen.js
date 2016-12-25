@@ -28,10 +28,11 @@ function ContactScreen () {
       />
 
       <h2 className="u-mb3 u-caps">Contáctame</h2>
-      <p className="u-mb5 u-fz-sm u-muted">Envíame un mensaje para trabajar juntos.</p>
+      <p className="u-mb4 u-fz-sm u-muted">Envíame un mensaje para trabajar juntos.</p>
       <p className="u-mb5">
         <a className="o-btn c-btn c-btn--primary" href={`mailto:${data.email}`}>Enviar mensaje</a>
       </p>
+      <p className="u-m0 u-fz-sm u-muted">Y encuentrame en:</p>
       <ul className="u-list-reset u-fz-h00 u-m0">
         <li className="u-inline-block u-p3">
           <a className href="https://github.com/wochap" target="_blank" rel="noopener noreferrer">
