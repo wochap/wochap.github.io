@@ -4,10 +4,7 @@ import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
 import webpackConfigProdPreStatic from './config.prod-pre-static.babel'
 
 // routes to render
-const routes = [
-  '/',
-  '/404'
-]
+import routes from '../config/static-routes'
 
 export default webpackMerge(webpackConfigProdPreStatic, {
   output: {
