@@ -1,15 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/server'
 import {match, RouterContext, createMemoryHistory} from 'react-router'
+import {Provider} from 'react-redux'
+import {syncHistoryWithStore} from 'react-router-redux'
 import Helmet from 'react-helmet'
 import {AppContainer} from 'react-hot-loader' // eslint-disable-line
 import routes from 'app/config/routes'
+import configureStore from 'app/store/configureStore'
 import template from './template'
 
 export default function render (locals) {
   return new Promise((resolve, reject) => {
     try {
-      const history = createMemoryHistory()
+      const memoryHistory = createMemoryHistory()
+      const store = configureStore()
+      const history = syncHistoryWithStore(memoryHistory, store)
       const location = history.createLocation(locals.path)
 
       match({routes, location}, async (error, redirectLocation, renderProps) => {
@@ -17,7 +22,9 @@ export default function render (locals) {
 
         const bodyHTML = ReactDOM.renderToString((
           <AppContainer>
-            <RouterContext {...renderProps} />
+            <Provider store={store}>
+              <RouterContext {...renderProps} />
+            </Provider>
           </AppContainer>
         ))
         const head = Helmet.rewind()
@@ -25,7 +32,8 @@ export default function render (locals) {
           ${head.title.toString()}
           ${head.meta.toString()}
         `
-        const html = await template(bodyHTML, headHTML)
+        const initialState = store.getState()
+        const html = await template({bodyHTML, headHTML, initialState})
 
         console.log('\nCurrent path: ', locals.path) // eslint-disable-line
         console.log('\nhtml: ', html, '\n') // eslint-disable-line

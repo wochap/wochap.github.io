@@ -4,13 +4,21 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {AppContainer} from 'react-hot-loader' // eslint-disable-line
 import {Router, browserHistory} from 'react-router'
+import {Provider} from 'react-redux'
+import {syncHistoryWithStore} from 'react-router-redux'
 import routes from 'app/config/routes'
+import configureStore from './store/configureStore'
 
 const rootEl = document.getElementById('root')
+const initialState = window.__INITIAL_STATE__ || undefined
+const store = configureStore(initialState)
+const history = syncHistoryWithStore(browserHistory, store)
 
 ReactDOM.render((
   <AppContainer>
-    <Router history={browserHistory} routes={routes} />
+    <Provider store={store}>
+      <Router history={history} routes={routes} />
+    </Provider>
   </AppContainer>),
   rootEl
 )
@@ -24,7 +32,9 @@ if (module.hot) {
 
     ReactDOM.render((
       <AppContainer>
-        <Router history={browserHistory} routes={newRoutes} />
+        <Provider store={store}>
+          <Router history={browserHistory} routes={newRoutes} />
+        </Provider>
       </AppContainer>),
       rootEl
     )
