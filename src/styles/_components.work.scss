@@ -5,6 +5,7 @@
 
 /**
  * 1. Empujar texto hacia abajo.
+ * 2. Create a new context, for performance.
  */
 
 .c-work {
@@ -15,12 +16,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  transform: translateZ(0);
-  transition: box-shadow 0.3s;
-
-  &:hover {
-    @include card(4);
-  }
 }
 
   .c-work__link {
@@ -33,12 +28,17 @@
     padding: 0 $global-spacing-unit $global-spacing-unit;
     position: absolute;
     top: 0;
-    transition: opacity 0.3s;
+    transform: translateZ(0); /* [2] */
+    transition: opacity 0.3s, box-shadow 0.3s;
     width: 100%;
 
     &:active,
-    &:hover {
+    &:hover,
+    &:focus {
+      @include card(4);
+
       opacity: 1;
+      outline: none;
     }
 
     h3 {
