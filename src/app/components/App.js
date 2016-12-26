@@ -4,15 +4,21 @@ import SiteFooter from './SiteFooter'
 
 function App ({location, children}) {
   const isHome = location ? location.pathname === '/' : false
-  const isNotFound = location ? location.pathname === '/404' : false
+  const isNotFound = location ? location.pathname === '/404' || location.pathname === '/404.html' : false
   let isFixed = false
 
   if (location) {
     if (location.pathname === '/' ||
         location.pathname === '/404' ||
+        location.pathname === '/404.html' ||
         location.pathname.toLowerCase().includes('/works/') ||
         location.pathname.toLowerCase().includes('/blog/')) {
       isFixed = true
+    }
+
+    if (location.pathname.toLowerCase() === '/works/' ||
+        location.pathname.toLowerCase() === '/blog/') {
+      isFixed = false
     }
   }
 
