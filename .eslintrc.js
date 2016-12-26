@@ -27,6 +27,7 @@ module.exports = {
     'space-before-function-paren': [2, 'always'],
     'comma-dangle': [2, 'never'],
     'no-underscore-dangle': [0],
+    'arrow-body-style': [0],
     'max-len': [0],
     'no-console': DEBUG ? 0 : 2,
     'no-debugger': DEBUG ? 0 : 2
