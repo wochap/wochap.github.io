@@ -5,6 +5,6 @@ hr,
 table,
 fieldset, figure, img,
 pre {
-  margin-bottom: 1em * ($global-spacing-unit / 1rem);
+  margin-bottom: 1em * strip-units($global-spacing-unit);
   margin-top: 0;
 }
