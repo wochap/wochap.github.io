@@ -38,7 +38,7 @@ export function getWork (fileName) {
     try {
       const module = require(`lazy-loader!markdown-loader!data/works/${fileName}.md`) // eslint-disable-line
 
-      module((result) => {
+      module().then((result) => {
         resolve({
           ...result,
           frontMatter: {

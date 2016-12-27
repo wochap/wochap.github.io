@@ -38,7 +38,7 @@ export function getPost (fileName) {
     try {
       const module = require(`lazy-loader!markdown-loader!data/posts/${fileName}.md`) // eslint-disable-line
 
-      module((result) => {
+      module().then((result) => {
         resolve({
           ...result,
           frontMatter: {

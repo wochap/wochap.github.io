@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from 'components/Hero'
 
-function PostScreen () {
+function Post () {
   const data = {
     title: 'Lorem ipsum dolor sit ame sed do eiusmod tempor incididunt ut labore et dolore',
     date: '10 de diciembre 2012',
@@ -19,4 +19,4 @@ function PostScreen () {
   )
 }
 
-export default PostScreen
+export default Post
