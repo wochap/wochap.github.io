@@ -1,11 +1,47 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import PostsScreen from '../PostsScreen'
+import Posts from '../Posts'
 
-describe('PostsScreen', () => {
+describe('Posts', () => {
+  const props = {
+    posts: [
+      {
+        frontMatter: {
+          slug: 'titulo',
+          date: '21-12-2016',
+          imageUrl: 'imagen',
+          title: 'titulo',
+          description: 'descripcion'
+        }
+      }
+    ],
+    postsIsLoading: false,
+    postsIsFulfilled: true
+  }
+  const wrapper = shallow(<Posts {...props} />)
+
   it('render component', () => {
-    const wrapper = shallow(<PostsScreen />)
+    expect(wrapper.length).toBeTruthy()
+  })
 
-    expect(typeof wrapper).toEqual('object')
+  it('render post', () => {
+    expect(wrapper.find('Post').length).toBeTruthy()
+  })
+
+  it('show empty list message', () => {
+    wrapper.setProps({
+      posts: []
+    })
+
+    expect(wrapper.find('.u-8/12@laptop').text()).toEqual('No hay artículos.')
+  })
+
+  it('show loading message', () => {
+    wrapper.setProps({
+      postsIsLoading: true,
+      postsIsFulfilled: false
+    })
+
+    expect(wrapper.find('.u-8/12@laptop').text()).toEqual('Cargando artículos.')
   })
 })
