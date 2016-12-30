@@ -7,7 +7,7 @@ import Posts from '../components/Posts'
 export class PostsScreen extends React.Component {
   static propTypes = {
     fetchPosts: React.PropTypes.func.isRequired,
-    ...{Posts}.propTypes
+    ...Posts.propTypes
   }
 
   componentDidMount () {
