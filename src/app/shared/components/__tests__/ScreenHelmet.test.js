@@ -3,12 +3,18 @@ import {shallow} from 'enzyme'
 import ScreenHelmet from '../ScreenHelmet'
 
 describe('ScreenHelmet', () => {
+  const props = {
+    title: 'title',
+    description: 'description',
+    canonicalHref: 'canonicalHref'
+  }
+  const wrapper = shallow(<ScreenHelmet {...props} />)
+
+  it('render component', () => {
+    expect(wrapper.length).toBeTruthy()
+  })
+
   it('render Helmet with the correct props', () => {
-    const props = {
-      title: 'title',
-      description: 'description',
-      canonicalHref: 'canonicalHref'
-    }
     const expectedProps = {
       title: props.title,
       meta: [
@@ -30,7 +36,6 @@ describe('ScreenHelmet', () => {
         }
       ]
     }
-    const wrapper = shallow(<ScreenHelmet {...props} />)
 
     expect(wrapper.props()).toEqual(expectedProps)
   })
