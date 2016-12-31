@@ -1,38 +1,44 @@
-/**
- * 1. Obscurecer un 25% la imagen de fondo.
- */
+/*------------------------------------*\
+  #HOME-SCREEN
+\*------------------------------------*/
 
 .c-home-screen {
-  background-image: url(https://drscdn.500px.org/photo/186180867/q%3D80_m%3D1500/b532d32e4bee4ec4109e8d94a1f5813c);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100%;
-  padding-top: $global-header-height;
-  position: relative;
-
-  background-blend-mode: multiply; /* [1] */
-  background-color: rgba($black, .25); /* [1] */
+  height: 100%;
 }
 
-  .c-home-screen__wrapper {
-    margin-left: 0;
-    max-width: 32rem;
-
-    h2 {
-      margin: 0 0 1.25em;
-      line-height: 1;
-    }
-
-    p {
-      margin: 0 0 2.5em;
-    }
-
-    @include mq($until: 'laptop') {
-      margin: 0 auto;
-    };
+  .c-home-screen__hero {
+    background-color: $global-color-primary;
+    background-image: url(https://drscdn.500px.org/photo/186180867/q%3D80_m%3D1500/b532d32e4bee4ec4109e8d94a1f5813c);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    padding-top: $global-header-height;
+    position: relative;
   }
+
+    .c-home-screen__hero-wrapper {
+      margin-left: 0;
+      max-width: 32rem;
+      color: $global-color-secondary;
+      padding: ($global-spacing-unit * 2) 0;
+
+      h1 {
+        font-size: $global-fz-h00;
+        line-height: 1;
+        margin: 0 0 1.25rem;
+        text-shadow: 0 0 1em rgba($global-color-primary, .5);
+      }
+
+      p {
+        margin: 0 0 2.5em;
+        text-shadow: 0 0 1em rgba($global-color-primary, .5);
+      }
+
+      @include mq($until: 'laptop') {
+        margin: 0 auto;
+      };
+    }
