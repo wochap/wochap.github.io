@@ -16,9 +16,9 @@ function HomeScreen () {
         <div className="o-wrapper">
           <div className="c-home-screen__hero-wrapper">
             <h1 className="u-caps">Hola!, soy Gean</h1>
-            <p>{data.about}</p>
-            <a className="o-btn c-btn c-btn--secondary u-mr3 u-my2" href={`mailto:${data.email}`}>Contáctame</a>
-            <Link className="o-btn c-btn c-btn--secondary c-btn--ghost u-white u-my2" to="/works">Ver portafolio</Link>
+            <p className="u-fade-in-up">{data.about}</p>
+            <a className="o-btn c-btn c-btn--secondary u-mr3 u-my2 u-fade-in-up u-delay-2" href={`mailto:${data.email}`}>Contáctame</a>
+            <Link className="o-btn c-btn c-btn--secondary c-btn--ghost u-white u-my2 u-fade-in-up u-delay-3" to="/works">Ver portafolio</Link>
           </div>
         </div>
       </div>

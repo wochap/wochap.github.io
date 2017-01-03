@@ -6,6 +6,6 @@ describe('ContactScreen', () => {
   it('render component', () => {
     const wrapper = shallow(<ContactScreen />)
 
-    expect(typeof wrapper).toEqual('object')
+    expect(wrapper.length).toBeTruthy()
   })
 })
