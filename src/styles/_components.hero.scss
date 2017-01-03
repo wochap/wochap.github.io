@@ -4,7 +4,11 @@
 
 .c-hero {
   background-color: $global-color-primary;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $global-color-secondary;
+  font-family: 'Merriweather', Georgia, serif;
   margin-bottom: $global-space-5;
   padding-bottom: $global-spacing-unit;
   padding-top: calc(#{$global-header-height} + 2.25rem + #{$global-space-5});
@@ -14,11 +18,15 @@
   .c-hero__title {
     font-size: $global-fz-h1;
     margin: 0;
+
+    @include mq($from: 'laptop') {
+      font-size: 3.998rem;
+    };
   }
 
   .c-hero__date {
     margin-bottom: $global-space-6;
-    opacity: .5;
+    color: rgba($global-color-secondary, .5);
   }
 
   .c-hero__footer {
