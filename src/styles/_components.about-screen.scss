@@ -12,6 +12,7 @@
 }
 
   .c-about-screen__profile {
+    margin-bottom: $global-space-5;
     width: 100%;
 
     @include mq($from: 'tablet', $until: 'laptop') {
@@ -27,8 +28,9 @@
       $img-width: 350;
 
       @include layout-aspect-ratio($img-width, 400);
+
       background-color: $global-color-primary;
-      margin: 0 auto;
+      margin: 0 auto $global-space-4;
       max-width: $img-width * 1px;
       position: relative;
 
@@ -42,6 +44,7 @@
     }
 
   .c-about-screen__info {
+    font-size: $global-fz-sm;
     overflow: hidden; /* [1] */
 
     @include mq($from: 'laptop') {
