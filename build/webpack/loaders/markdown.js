@@ -14,7 +14,7 @@ module.exports = function(source) {
     tables: true,
     breaks: false,
     pedantic: false,
-    sanitize: true,
+    sanitize: false,
     smartLists: true,
     smartypants: false,
     langPrefix: 'hljs ',
