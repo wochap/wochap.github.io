@@ -3,7 +3,7 @@ import Posts from './screens/Posts'
 
 export default {
   path: 'blog',
-  getComponent (location, cb) {
+  getComponent (nextState, cb) {
     require.ensure([], (require) => {
       cb(null, require('./components/BlogScreen').default) // eslint-disable-line
     }, 'BlogScreen')

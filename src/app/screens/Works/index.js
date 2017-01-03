@@ -3,7 +3,7 @@ import Works from './screens/Works'
 
 export default {
   path: 'works',
-  getComponent (location, cb) {
+  getComponent (nextState, cb) {
     require.ensure([], (require) => {
       cb(null, require('./components/WorksScreen').default) // eslint-disable-line
     }, 'WorksScreen')
