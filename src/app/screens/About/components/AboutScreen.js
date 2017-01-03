@@ -1,42 +1,28 @@
 import React from 'react'
 import data from 'app/config/data'
-import Helmet from 'react-helmet'
 import ExternalLink from 'components/ExternalLink'
+import ScreenHelmet from 'components/ScreenHelmet'
 
 function AboutScreen () {
   return (
     <section className="o-wrapper c-about-screen">
-      <Helmet
+      <ScreenHelmet
         title={data.screens.about.title}
-        meta={[
-          {
-            name: 'description',
-            content: data.screens.about.description
-          }, {
-            property: 'og:title',
-            content: data.screens.about.title
-          }, {
-            property: 'og:description',
-            content: data.screens.about.description
-          }
-        ]}
-        link={[
-          {
-            rel: 'canonical',
-            href: data.screens.about.canonicalHref
-          }
-        ]}
+        description={data.screens.about.description}
+        canonicalHref={data.screens.about.canonicalHref}
       />
 
-      <header className="c-about-screen__profile u-mb5">
-        <div className="c-about-screen__profile-image u-mb4">
+      <header className="c-about-screen__profile">
+        <div className="c-about-screen__profile-image">
           <img src="http://placehold.it/350x400" alt="Gean Carlos Bonifacio Marroquin" />
         </div>
-        <h2 className="u-caps u-mb2">Gean Marroquin</h2>
-        <p className="u-fz-sm u-fw-s-bold u-m0">Front-end developer</p>
+        <h1 className="u-fz-h4 u-m0">
+          <span className="u-caps u-fz-h2 u-mb2 u-block">Gean Marroquin, </span>
+          <span className="u-fz-sm u-fw-s-bold u-m0 u-block">Front-end developer</span>
+        </h1>
       </header>
 
-      <div className="c-about-screen__info u-fz-sm">
+      <div className="c-about-screen__info">
         <section className="u-mb5">
           <h2 className="u-caps u-mb3">Sobre mi</h2>
           <div className="o-grid o-grid--gutter-x-5 o-grid--gutter-y-3">
@@ -45,10 +31,11 @@ function AboutScreen () {
             </div>
             <div className="o-grid__item u-12/12 u-6/12@tablet">
               <p>¿Formamos equipo? .</p>
-              <p className="u-mb0 u-flex u-items-center">
+              <p className="u-mb0"><a href={`mailto:${data.email}`}>Enviame un mensaje</a></p>
+              {/* <p className="u-mb0 u-flex u-items-center">
                 <i className="u-icon u-fz-h2 u-mr2">arrow_drop_down_circle</i>
                 <a className="u-fw-s-bold" href="#!">Descarga mi CV</a>
-              </p>
+              </p> */}
             </div>
           </div>
         </section>
