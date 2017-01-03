@@ -13,7 +13,7 @@ export default webpackMerge(webpackConfigBase, {
   devtool: 'source-map',
   entry: {
     app: path.join(projectSourcePath, 'app/main.js'),
-    vendor: ['react', 'react-dom']
+    vendor: ['react', 'react-dom', 'react-redux', 'react-helmet', 'moment', 'classnames']
   },
   output: {
     publicPath: '/',
