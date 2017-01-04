@@ -5,6 +5,7 @@
     "react"
   ],
   "plugins": [
+    "transform-react-router-optimize",
     "transform-runtime"
   ],
   "env": {
