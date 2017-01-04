@@ -12,7 +12,7 @@ ExternalLink.propTypes = {
   className: React.PropTypes.string,
   href: React.PropTypes.string,
   title: React.PropTypes.string,
-  children: React.PropTypes.element
+  children: React.PropTypes.node
 }
 
 export default ExternalLink
