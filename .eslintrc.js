@@ -29,6 +29,7 @@ module.exports = {
     'no-underscore-dangle': [0],
     'arrow-body-style': [0],
     'no-nested-ternary': [0],
+    'react/no-danger': [0],
     'max-len': [0],
     'no-console': DEBUG ? 0 : 2,
     'no-debugger': DEBUG ? 0 : 2
