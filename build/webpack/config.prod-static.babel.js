@@ -1,5 +1,6 @@
 import webpackMerge from 'webpack-merge'
 import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
+import CompressionWebpackPlugin from 'compression-webpack-plugin'
 
 import webpackConfigProdPreStatic from './config.prod-pre-static.babel'
 
@@ -15,6 +16,14 @@ export default webpackMerge(webpackConfigProdPreStatic, {
     chunkFilename: 'dist/_static/js/chunk.[id].[name].js',
   },
   plugins: [
-    new StaticSiteGeneratorPlugin('static', routes)
+    new StaticSiteGeneratorPlugin('static', routes),
+    // build time gzip
+    new CompressionWebpackPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    }),
   ]
 })

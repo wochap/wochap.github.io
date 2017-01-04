@@ -5,15 +5,18 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import InlineManifestWebpackPlugin from 'inline-manifest-webpack-plugin'
 import AssetsPlugin from 'assets-webpack-plugin'
+import CompressionWebpackPlugin from 'compression-webpack-plugin'
+import Visualizer from 'webpack-visualizer-plugin'
 
 import webpackConfigBase from './config.base.babel'
 import {projectSourcePath, projectDistPath, templatePath} from '../config'
 
 export default webpackMerge(webpackConfigBase, {
-  devtool: 'source-map',
+  cache: true,
+  devtool: 'eval',
   entry: {
     app: path.join(projectSourcePath, 'app/main.js'),
-    vendor: ['react', 'react-dom', 'react-redux', 'react-helmet', 'moment', 'classnames']
+    vendor: ['react', 'react-router', 'react-dom', 'react-redux', 'react-helmet', 'moment', 'classnames']
   },
   output: {
     publicPath: '/',
@@ -39,6 +42,9 @@ export default webpackMerge(webpackConfigBase, {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
+    // decrease moment module size
+    // http://stackoverflow.com/questions/25384360/how-to-prevent-moment-js-from-loading-locales-with-webpack
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /es\.|en\./),
     // OccurrenceOrderPlugin is needed for long-term caching to work properly
     // see http://mxs.is/googmv
     new webpack.optimize.OccurrenceOrderPlugin(),
@@ -83,10 +89,21 @@ export default webpackMerge(webpackConfigBase, {
     new InlineManifestWebpackPlugin({
       name: 'webpackManifest'
     }),
+    // build time gzip
+    new CompressionWebpackPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$/,
+      threshold: 10240,
+      minRatio: 0.8
+    }),
     // generate a webpack-assets.json file that contains all assets' paths
     // https://github.com/kossnocorp/assets-webpack-plugin
     new AssetsPlugin({
       path: projectDistPath
-    })
+    }),
+    // Visualize and analyze your Webpack bundle to see which modules
+    // are taking up space and which might be duplicates.
+    new Visualizer()
   ]
 })
