@@ -92,6 +92,9 @@ webpack(webpackConfigProd).run((err, stats) => {
           {
             handler: 'networkFirst',
             urlPattern: /.(svg, eot, ttf, woff, woff2)$/
+          }, {
+            handler: 'cacheFirst',
+            urlPattern: /^http:\/\/fonts.googleapis.com/
           }
         ],
 
