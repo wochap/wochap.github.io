@@ -3,25 +3,11 @@ import path from 'path'
 
 import {projectSourcePath} from './index'
 
-// get all post markdown files
-const postsFiles = fs.readdirSync(path.join(projectSourcePath, 'data/posts'))
-// create all possible posts routes
-const postsRoutes = postsFiles.map((path) => {
-  // extract file name from path file
-  let fileName = (path.split('/').pop().split('.'))[0]
-  // create the post route
-  return `/blog/${fileName}`
-})
+// create posts routes
+const postsRoutes = getFileNamesArrayFrom(path.join(projectSourcePath, 'data/posts')).map(fileName => `/blog/${fileName}`)
 
-// get all work markdown files
-const worksFiles = fs.readdirSync(path.join(projectSourcePath, 'data/works'))
-// create all possible works routes
-const worksRoutes = worksFiles.map((path) => {
-  // extract file name from path file
-  let fileName = (path.split('/').pop().split('.'))[0]
-  // create the work route
-  return `/works/${fileName}`
-})
+// create works routes
+const worksRoutes = getFileNamesArrayFrom(path.join(projectSourcePath, 'data/works')).map(fileName => `/works/${fileName}`)
 
 // exports routes that static-site-generator-webpack-plugin will build
 export default [
@@ -34,3 +20,24 @@ export default [
   ...postsRoutes,
   ...worksRoutes
 ]
+
+/**
+ * UTILS
+ */
+
+/**
+ * Get file names array from folder.
+ * @param {String} folderPath - Absolute folder path.
+ * @return {Array}
+ */
+
+function getFileNamesArrayFrom (folderPath) {
+  // get all files in folder
+  const files = fs.readdirSync(folderPath)
+
+  // create all possible works routes
+  return files.map((path) => {
+    // extract file name from path of file
+    return (path.split('/').pop().split('.'))[0]
+  })
+}
