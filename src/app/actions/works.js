@@ -8,7 +8,7 @@ export function fetchWork (fileName) {
     return dispatch({
       type: FETCH_WORK,
       payload: api.getWork(fileName).then((work) => {
-        return normalize(work, schema.work)
+        return normalize(work, schema.item)
       })
     })
   }
@@ -20,7 +20,7 @@ export function fetchWorks () {
     return dispatch({
       type: FETCH_WORKS,
       payload: api.getWorks().then((works) => {
-        return normalize(works, schema.arrayOfWorks)
+        return normalize(works, schema.arrayOfItems)
       })
     })
   }

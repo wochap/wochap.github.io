@@ -8,7 +8,7 @@ export function fetchPost (fileName) {
     return dispatch({
       type: FETCH_POST,
       payload: api.getPost(fileName).then((post) => {
-        return normalize(post, schema.post)
+        return normalize(post, schema.item)
       })
     })
   }
@@ -20,8 +20,16 @@ export function fetchPosts () {
     return dispatch({
       type: FETCH_POSTS,
       payload: api.getPosts().then((posts) => {
-        return normalize(posts, schema.arrayOfPosts)
+        return normalize(posts, schema.arrayOfItems)
       })
     })
   }
 }
+//
+// /**
+//  * UTILS
+//  */
+//
+// function loadItemFromCollection (collectionName, ) {
+//
+// }

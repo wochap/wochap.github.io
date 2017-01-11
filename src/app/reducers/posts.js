@@ -1,4 +1,4 @@
-import merge from 'deepmerge'
+import deepMerge from 'deepmerge'
 import * as postsActions from 'app/actions/posts'
 
 const defaultState = {
@@ -19,9 +19,9 @@ export default function posts (state = defaultState, action) {
     case `${postsActions.FETCH_POST}_FULFILLED`:
     case `${postsActions.FETCH_POSTS}_FULFILLED`: {
       return {
-        data: merge(
+        data: deepMerge(
           state.data,
-          action.payload.entities.posts
+          action.payload.entities.items
         ),
         isFulfilled: true
       }
