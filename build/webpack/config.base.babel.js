@@ -23,7 +23,8 @@ export default {
     alias: {
       'markdown-loader': path.resolve(__dirname, './loaders/markdown'),
       'front-matter-loader': path.resolve(__dirname, './loaders/front-matter'),
-      'lazy-loader': path.resolve(__dirname, './loaders/lazy')
+      'lazy-loader': path.resolve(__dirname, './loaders/lazy'),
+      'lazy-dir-loader': path.resolve(__dirname, './loaders/lazy-dir')
     }
   },
   module: {
