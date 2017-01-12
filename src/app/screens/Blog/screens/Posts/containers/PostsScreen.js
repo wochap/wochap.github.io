@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {getPosts, isLoading, isFulfilled} from 'app/selectors/posts'
-import {fetchPosts} from 'app/actions/posts'
+import {getCollection, isLoadingCollection, isFulfilledCollection} from 'app/selectors/collections'
+import {loadItemsFromCollection} from 'app/actions/collections'
 import Posts from '../components/Posts'
 
 export class PostsScreen extends React.Component {
@@ -25,15 +25,15 @@ export class PostsScreen extends React.Component {
 
 function mapStateToProps (state) {
   return {
-    posts: getPosts(state),
-    postsIsLoading: isLoading(state),
-    postsIsFulfilled: isFulfilled(state)
+    posts: getCollection(state, 'posts'),
+    postsIsLoading: isLoadingCollection(state, 'posts'),
+    postsIsFulfilled: isFulfilledCollection(state, 'posts')
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    fetchPosts: () => dispatch(fetchPosts())
+    fetchPosts: () => dispatch(loadItemsFromCollection('posts'))
   }
 }
 

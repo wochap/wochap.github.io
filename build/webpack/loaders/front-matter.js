@@ -1,13 +1,23 @@
-'use strict';
+const path = require('path')
+const frontMatter = require('front-matter')
+const deepMerge = require('deepmerge')
 
-var frontMatter = require('front-matter');
+module.exports = function (source) {
+  this.cacheable && this.cacheable()
 
-module.exports = function(source) {
-  this.cacheable && this.cacheable();
+  const fileFullName = path.basename(this.resourcePath)
+  const fileName = path.basename(this.resourcePath, path.extname(fileFullName))
+  const meta = frontMatter(source)
+  const formattedResult = deepMerge({
+    frontMatter: {
+      slug: fileName,
+      fileName
+    }
+  }, {
+    frontMatter: meta.attributes
+  })
 
-  var meta = frontMatter(source);
-
-  return 'module.exports = ' + JSON.stringify(meta.attributes);
+  return `module.exports = ${JSON.stringify(formattedResult)}`
 }
 
 /*
@@ -24,8 +34,12 @@ Output format:
 
 ```js
 module.exports = {
-  title: 'Cool',
-  date: '2016-09-01'
+  frontMatter: {
+    title: 'Cool',
+    date: '2016-09-01',
+    fileName: 'cool-file',
+    slug: 'cool-file'
+  }
 }
 ```
 */

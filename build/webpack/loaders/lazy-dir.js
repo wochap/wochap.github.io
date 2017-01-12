@@ -12,15 +12,11 @@ module.exports = function (source) {
         /* lazy load group of files */
         require.ensure([], function (require) {
           var requireContext = require.context('${loaders}${options.folderPath}', true, ${options.contextFilter})
-          var array = requireContext.keys().map(function (path) {
-            /* extract file name from path file */
-            var fileName = (path.split('/').pop().split('.'))[0]
-
-            /* get module from context */
-            return requireContext('./' + fileName + '.md')
+          var modules = requireContext.keys().map(function (fileFullName) {
+            return requireContext(fileFullName)
           })
 
-          resolve(array)
+          resolve(modules)
         }, '${options.chunkName}')
       } catch (error) {
         reject(error)
@@ -55,15 +51,9 @@ module.exports = function () {
         /* lazy load group of files *//*
         require.ensure([], function (require) {
           var requireContext = require.context('!!front-matter-loader!src/data/posts', true, /\.md$/)
-          var array = requireContext.keys().map(function (path) {
-            /* extract file name from path file *//*
-            var fileName = (path.split('/').pop().split('.'))[0]
+          var modules = requireContext.keys().forEach(requireContext)
 
-            /* get module from context *//*
-            return requireContext('./' + fileName + '.md')
-          })
-
-          resolve(array)
+          resolve(modules)
         }, 'posts')
       } catch (error) {
         reject(error)

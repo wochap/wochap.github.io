@@ -1,12 +1,15 @@
 'use strict';
 
+var path = require('path');
 var loaderUtils = require('loader-utils');
 var marked = require('marked');
 var highlight = require('highlight.js');
 var frontMatter = require('front-matter');
+var deepMerge = require('deepmerge');
 
 module.exports = function(source) {
   this.cacheable && this.cacheable();
+
   var query = loaderUtils.parseQuery(this.query);
   var options = {
     renderer: new marked.Renderer(),
@@ -30,18 +33,21 @@ module.exports = function(source) {
     options[key] = query[key];
   });
 
+  var fileFullName = path.basename(this.resourcePath);
+  var fileName = path.basename(this.resourcePath, path.extname(fileFullName));
   var meta = frontMatter(source);
   var body = marked(meta.body, options);
-  var result = Object.assign({
-    frontMatter: null,
-    bodyHTML: null
+  var formattedResult = deepMerge({
+    frontMatter: {
+      slug: fileName,
+      fileName
+    }
   }, {
-    frontMatter: meta.attributes
-  }, {
-    bodyHTML: body
+    frontMatter: meta.attributes,
+    bodyHtml: body
   });
 
-  return 'module.exports = ' + JSON.stringify(result);
+  return 'module.exports = ' + JSON.stringify(formattedResult);
 };
 
 /*
@@ -62,9 +68,11 @@ Output format:
 module.exports = {
   frontMatter: {
     date: '2016-09-01',
-    title: 'Cool'
+    title: 'Cool',
+    fileName: 'cool-file',
+    slug: 'cool-file'
   },
-  bodyHTML: '<h1>I am a title</h1>'
+  bodyHtml: '<h1>I am a title</h1>'
 }
 ```
 */

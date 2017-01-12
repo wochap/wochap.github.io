@@ -1,20 +1,25 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {getPost, isLoading, isFulfilled} from 'app/selectors/posts'
-import {fetchPost} from 'app/actions/posts'
+import {getItemFromCollection, isLoadingCollectionItem, isFulfilledCollectionItem} from 'app/selectors/collections'
+import {loadItemFromCollection} from 'app/actions/collections'
 import Post from '../components/Post'
 
 export class PostScreen extends React.Component {
   static propTypes = {
+    ...Post.propTypes,
     params: React.PropTypes.shape({
       slug: React.PropTypes.string.isRequired
     }),
     fetchPost: React.PropTypes.func.isRequired,
-    ...Post.propTypes
+    post: React.PropTypes.object // eslint-disable-line
   }
 
   componentDidMount () {
-    this.props.fetchPost(this.props.params.slug)
+    const isDevelopment = process.env.NODE_ENV === 'development'
+
+    if (!this.props.postIsFulfilled || isDevelopment) {
+      this.props.fetchPost(this.props.params.slug)
+    }
   }
 
   render () {
@@ -28,15 +33,15 @@ export class PostScreen extends React.Component {
 
 function mapStateToProps (state, ownProps) {
   return {
-    post: getPost(state, ownProps.params.slug),
-    postIsLoading: isLoading(state),
-    postIsFulfilled: isFulfilled(state)
+    post: getItemFromCollection(state, 'posts', ownProps.params.slug),
+    postIsLoading: isLoadingCollectionItem(state, 'posts', ownProps.params.slug),
+    postIsFulfilled: isFulfilledCollectionItem(state, 'posts', ownProps.params.slug)
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    fetchPost: postSlug => dispatch(fetchPost(postSlug))
+    fetchPost: postSlug => dispatch(loadItemFromCollection('posts', postSlug))
   }
 }
 
