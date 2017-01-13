@@ -18,12 +18,20 @@ $wocss-settings-global: false !default;
 a {
   color: inherit;
   text-decoration: none;
+
+  &:focus {
+    @include shared-focus-styles();
+  }
+
+  &:active,
+  &:hover {
+    outline: none;
+  }
 }
 
 a:not([class]) {
   border-bottom: 1px dotted currentColor;
   color: $global-color-primary;
-  outline: none;
 
   &:active,
   &:focus,
