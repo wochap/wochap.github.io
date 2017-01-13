@@ -34,6 +34,7 @@ $wocss-settings-global: false !default;
 
   &:active {
     transform: none;
+    transform: scale(0.95);
   }
 }
 
