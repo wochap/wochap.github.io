@@ -19,5 +19,5 @@
 
 @mixin shared-focus-styles {
   outline-offset: 2px;
-  outline: 2px solid rgba(#000000, .25);
+  outline: 2px solid scale-color($global-color-primary, $lightness: 75%);
 }
