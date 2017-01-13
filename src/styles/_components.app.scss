@@ -1,9 +1,23 @@
+/*------------------------------------*\
+  #APP
+\*------------------------------------*/
+
+/**
+ * 1. Hold the absolute elements. (This element will have the [100vw - the scrollbar width] ever)
+ * 2. Fix height on old safari browsers.
+ * 3. Fix pages on print media.
+ */
+
 .c-app {
-  height: 100%;
   overflow-y: scroll;
+
+  @media print {
+    overflow-y: initial; /* [3] */
+  }
 }
 
   .c-app__wrapper {
-    height: 100%;
-    position: relative;
+    height: 100vh;
+    max-height: 700px; /* [2] */
+    position: relative; /* [1] */
   }
