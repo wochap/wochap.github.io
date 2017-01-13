@@ -9,6 +9,9 @@ $px: 0 !default;
 $px2: 0 !default;
 
 
+
+
+
 @mixin mini-glitch($c1, $c2, $coeff, $start, $end){
   $interval: $end - $start;
   @for $i from $start through $end {
