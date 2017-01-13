@@ -13,7 +13,7 @@ import {projectSourcePath, projectDistPath, templatePath} from '../config'
 
 export default webpackMerge(webpackConfigBase, {
   cache: true,
-  devtool: 'eval',
+  devtool: 'cheap-module-source-map',
   entry: {
     app: path.join(projectSourcePath, 'app/main.js'),
     vendor: ['react', 'react-router', 'react-dom', 'react-redux', 'react-helmet', 'moment', 'classnames']
