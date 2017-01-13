@@ -1,33 +1,37 @@
-$hb-animation-duration: 0.3s;
-
-// <em> element height
-$hb-line-height: 0.250em;
-
+/*------------------------------------*\
+  #HAMBURGER
+\*------------------------------------*/
 
 
-
+/**
+ * 1. Improve animation performance.
+ * 2. Line height.
+ * 3. Hamburger size.
+ */
 
 .c-hamburger {
+  $animation-duration: 0.3s;
+
   display: block;
-  font-size: 1rem;
+  font-size: 1.25rem; /* [3] */
   height: 1.563em;
-  width: 1.875em;
   position: relative;
+  width: 1.875em;
 
   em {
     background-color: currentColor;
     border-radius: 0.125em;
+    display: block;
+    height: 0.250em; /* [2] */
     left: 0;
     position: absolute;
-    display: block;
-    height: $hb-line-height;
+    transition: background-color $animation-duration;
     width: 100%;
-    will-change: transform;
+    will-change: transform, top; /* [1] */
 
-    // effect
     @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
-        animation: hamburger-line-#{$i}-uncheck $hb-animation-duration;
+        animation: hamburger-line-#{$i}-uncheck $animation-duration;
         animation-fill-mode: both;
         animation-timing-function: linear;
       }
@@ -48,10 +52,11 @@ $hb-line-height: 0.250em;
 	}
 
   &.is-open {
+
     em {
       @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
-          animation: hamburger-line-#{$i}-check $hb-animation-duration;
+          animation: hamburger-line-#{$i}-check $animation-duration;
           animation-fill-mode: both;
           animation-timing-function: linear;
         }
