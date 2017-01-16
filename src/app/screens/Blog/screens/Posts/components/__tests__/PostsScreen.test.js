@@ -17,7 +17,7 @@ describe('PostsScreen', () => {
   })
 
   it('show error state', () => {
-    expect(wrapper.find('.u-8/12@laptop').text()).toEqual(`Posts Error: ${props.collectionState.error}`)
+    expect(wrapper.find('.u-8/12@laptop p').text()).toEqual(`Posts Error: ${props.collectionState.error}`)
   })
 
   it('show loading state', () => {
