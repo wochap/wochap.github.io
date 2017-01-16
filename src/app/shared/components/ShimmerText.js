@@ -2,9 +2,9 @@ import React from 'react'
 
 function ShimmerText ({darken = false, text, children}) {
   return (
-    <span className={`c-shimmer-text ${darken ? 'c-shimmer-text--darken' : null}`}>
-      <span className="c-shimmer-text__text">{text || children}</span>
-    </span>
+    <div className={`c-shimmer-text ${darken ? 'c-shimmer-text--darken' : null}`}>
+      <div className="c-shimmer-text__text u-blokk-font">{text || children}</div>
+    </div>
   )
 }
 
