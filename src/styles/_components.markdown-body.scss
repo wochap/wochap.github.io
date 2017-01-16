@@ -3,228 +3,685 @@
 \*------------------------------------*/
 
 /**
- * source: https://github.com/markdowncss/splendor
+ * The minimal amount of CSS to replicate the GitHub Markdown style.
+ *
+ * source: https://github.com/sindresorhus/github-markdown-css
  */
 
 
-/**
- * 1. Overrite elements.links styles.
- * 2. Show image in fullscreen.
- */
+@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
 
 .c-markdown-body {
-  @import url(http://fonts.googleapis.com/css?family=Merriweather:300italic,300);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 19px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
 
-  color: #444;
-  font-family: 'Merriweather', Georgia, serif;
-  line-height: 1.85;
+.c-markdown-body .pl-c {
+  color: #969896;
+}
+
+.c-markdown-body .pl-c1,
+.c-markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.c-markdown-body .pl-e,
+.c-markdown-body .pl-en {
+  color: #795da3;
+}
+
+.c-markdown-body .pl-smi,
+.c-markdown-body .pl-s .pl-s1 {
+  color: #333;
+}
+
+.c-markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.c-markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.c-markdown-body .pl-s,
+.c-markdown-body .pl-pds,
+.c-markdown-body .pl-s .pl-pse .pl-s1,
+.c-markdown-body .pl-sr,
+.c-markdown-body .pl-sr .pl-cce,
+.c-markdown-body .pl-sr .pl-sre,
+.c-markdown-body .pl-sr .pl-sra {
+  color: #183691;
+}
+
+.c-markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.c-markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.c-markdown-body .pl-ii {
+  color: #f8f8f8;
+  background-color: #b52a1d;
+}
+
+.c-markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: #63a35c;
+}
+
+.c-markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.c-markdown-body .pl-mh,
+.c-markdown-body .pl-mh .pl-en,
+.c-markdown-body .pl-ms {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.c-markdown-body .pl-mq {
+  color: #008080;
+}
+
+.c-markdown-body .pl-mi {
+  font-style: italic;
+  color: #333;
+}
+
+.c-markdown-body .pl-mb {
+  font-weight: bold;
+  color: #333;
+}
+
+.c-markdown-body .pl-md {
+  color: #bd2c00;
+  background-color: #ffecec;
+}
+
+.c-markdown-body .pl-mi1 {
+  color: #55a532;
+  background-color: #eaffea;
+}
+
+.c-markdown-body .pl-mdr {
+  font-weight: bold;
+  color: #795da3;
+}
+
+.c-markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.c-markdown-body .octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
+.c-markdown-body a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+.c-markdown-body a:active,
+.c-markdown-body a:hover {
+  outline-width: 0;
+}
+
+.c-markdown-body strong {
+  font-weight: inherit;
+}
+
+.c-markdown-body strong {
+  font-weight: bolder;
+}
+
+.c-markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.c-markdown-body img {
+  border-style: none;
+}
+
+.c-markdown-body svg:not(:root) {
+  overflow: hidden;
+}
+
+.c-markdown-body code,
+.c-markdown-body kbd,
+.c-markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.c-markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.c-markdown-body input {
+  font: inherit;
   margin: 0;
+}
+
+.c-markdown-body input {
+  overflow: visible;
+}
+
+.c-markdown-body [type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c-markdown-body * {
+  box-sizing: border-box;
+}
+
+.c-markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c-markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.c-markdown-body strong {
+  font-weight: 600;
+}
+
+.c-markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.c-markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.c-markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.c-markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.c-markdown-body td,
+.c-markdown-body th {
+  padding: 0;
+}
+
+.c-markdown-body h1,
+.c-markdown-body h2,
+.c-markdown-body h3,
+.c-markdown-body h4,
+.c-markdown-body h5,
+.c-markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c-markdown-body h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.c-markdown-body h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.c-markdown-body h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.c-markdown-body h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.c-markdown-body h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.c-markdown-body h6 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.c-markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.c-markdown-body blockquote {
+  margin: 0;
+}
+
+.c-markdown-body ul,
+.c-markdown-body ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c-markdown-body ol ol,
+.c-markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.c-markdown-body ul ul ol,
+.c-markdown-body ul ol ol,
+.c-markdown-body ol ul ol,
+.c-markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.c-markdown-body dd {
+  margin-left: 0;
+}
+
+.c-markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.c-markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.c-markdown-body .octicon {
+  vertical-align: text-bottom;
+}
+
+.c-markdown-body input {
+  -webkit-font-feature-settings: "liga" 0;
+  font-feature-settings: "liga" 0;
+}
+
+.c-markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.c-markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.c-markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.c-markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c-markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.c-markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.c-markdown-body .anchor:focus {
+  outline: none;
+}
+
+.c-markdown-body p,
+.c-markdown-body blockquote,
+.c-markdown-body ul,
+.c-markdown-body ol,
+.c-markdown-body dl,
+.c-markdown-body table,
+.c-markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.c-markdown-body hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e7e7e7;
+  border: 0;
+}
+
+.c-markdown-body blockquote {
+  padding: 0 1em;
+  color: #777;
+  border-left: 0.25em solid #ddd;
+}
+
+.c-markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.c-markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.c-markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.c-markdown-body h1,
+.c-markdown-body h2,
+.c-markdown-body h3,
+.c-markdown-body h4,
+.c-markdown-body h5,
+.c-markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.c-markdown-body h1 .octicon-link,
+.c-markdown-body h2 .octicon-link,
+.c-markdown-body h3 .octicon-link,
+.c-markdown-body h4 .octicon-link,
+.c-markdown-body h5 .octicon-link,
+.c-markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.c-markdown-body h1:hover .anchor,
+.c-markdown-body h2:hover .anchor,
+.c-markdown-body h3:hover .anchor,
+.c-markdown-body h4:hover .anchor,
+.c-markdown-body h5:hover .anchor,
+.c-markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.c-markdown-body h1:hover .anchor .octicon-link,
+.c-markdown-body h2:hover .anchor .octicon-link,
+.c-markdown-body h3:hover .anchor .octicon-link,
+.c-markdown-body h4:hover .anchor .octicon-link,
+.c-markdown-body h5:hover .anchor .octicon-link,
+.c-markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.c-markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  border-bottom: 1px solid #eee;
+}
+
+.c-markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid #eee;
+}
+
+.c-markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.c-markdown-body h4 {
+  font-size: 1em;
+}
+
+.c-markdown-body h5 {
+  font-size: 0.875em;
+}
+
+.c-markdown-body h6 {
+  font-size: 0.85em;
+  color: #777;
+}
+
+.c-markdown-body ul,
+.c-markdown-body ol {
+  padding-left: 2em;
+}
+
+.c-markdown-body ul ul,
+.c-markdown-body ul ol,
+.c-markdown-body ol ol,
+.c-markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c-markdown-body li>p {
+  margin-top: 16px;
+}
+
+.c-markdown-body li+li {
+  margin-top: 0.25em;
+}
+
+.c-markdown-body dl {
+  padding: 0;
+}
+
+.c-markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.c-markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.c-markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.c-markdown-body table th {
+  font-weight: bold;
+}
+
+.c-markdown-body table th,
+.c-markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.c-markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.c-markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.c-markdown-body img {
   max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
 
-  @include mq($until: 'tablet') {
-    padding-left: $global-spacing-unit;
-    padding-right: $global-spacing-unit;
-  };
+.c-markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
 
-  @media screen and (min-width: 32rem) and (max-width: 48rem) {
-    font-size: 15px;
-  }
+.c-markdown-body code::before,
+.c-markdown-body code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
 
-  @media screen and (min-width: 48rem) {
-    font-size: 16px;
-  }
+.c-markdown-body pre {
+  word-wrap: normal;
+}
 
-  @media print {
-    *,
-    *:before,
-    *:after {
-      // background: transparent !important;
-      // color: #000 !important;
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
+.c-markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
 
-    a,
-    a:visited {
-      text-decoration: underline;
-    }
+.c-markdown-body .highlight {
+  margin-bottom: 16px;
+}
 
-    a[href]:after {
-      content: " (" attr(href) ")";
-    }
+.c-markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
 
-    abbr[title]:after {
-      content: " (" attr(title) ")";
-    }
+.c-markdown-body .highlight pre,
+.c-markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-      content: "";
-    }
+.c-markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
 
-    pre,
-    blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
-    }
+.c-markdown-body pre code::before,
+.c-markdown-body pre code::after {
+  content: normal;
+}
 
-    thead {
-      display: table-header-group;
-    }
+.c-markdown-body .pl-0 {
+  padding-left: 0 !important;
+}
 
-    tr,
-    img {
-      page-break-inside: avoid;
-    }
+.c-markdown-body .pl-1 {
+  padding-left: 3px !important;
+}
 
-    p,
-    h2,
-    h3 {
-      orphans: 3;
-      widows: 3;
-    }
+.c-markdown-body .pl-2 {
+  padding-left: 6px !important;
+}
 
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
-  }
+.c-markdown-body .pl-3 {
+  padding-left: 12px !important;
+}
 
-  p {
-    font-size: 1rem;
-    margin-bottom: 1.3rem;
-  }
+.c-markdown-body .pl-4 {
+  padding-left: 24px !important;
+}
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    margin: 1.414rem 0 .5rem;
-    font-weight: inherit;
-    line-height: 1.42;
-  }
+.c-markdown-body .pl-5 {
+  padding-left: 36px !important;
+}
 
-  h1 {
-    margin-top: 0;
-    font-size: 3.998rem;
-  }
+.c-markdown-body .pl-6 {
+  padding-left: 48px !important;
+}
 
-  h2 {
-    font-size: 2.827rem;
-  }
+.c-markdown-body .full-commit .btn-outline:not(:disabled):hover {
+  color: #4078c0;
+  border: 1px solid #4078c0;
+}
 
-  h3 {
-    font-size: 1.999rem;
-  }
+.c-markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
 
-  h4 {
-    font-size: 1.414rem;
-  }
+.c-markdown-body :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #4078c0;
+}
 
-  h5 {
-    font-size: 1.121rem;
-  }
+.c-markdown-body .task-list-item {
+  list-style-type: none;
+}
 
-  h6 {
-    font-size: .88rem;
-  }
+.c-markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
 
-  small {
-    font-size: .707em;
-  }
+.c-markdown-body .task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
 
-  /* https://github.com/mrmrs/fluidity */
-
-  img,
-  canvas,
-  iframe,
-  video,
-  svg,
-  select,
-  textarea {
-    max-width: 100%;
-  }
-
-  /* === A bit of a gross hack so we can have bleeding divs/blockquotes. */
-
-  p,
-  *:not(div):not(img):not(li):not(blockquote):not(p) {
-    margin: 1rem auto 1rem;
-    // max-width: 36rem;
-    max-width: 40.500rem;
-    padding: .25rem 0;
-  }
-
-  div {
-    width: 100%;
-
-    @include mq($until: 'tablet') {
-      margin-left: -$global-spacing-unit; /* [2] */
-      margin-right: -$global-spacing-unit; /* [2] */
-      width: auto; /* [2] */
-    };
-  }
-
-  div img {
-    width: 100%;
-  }
-
-  blockquote p {
-    font-size: 1.5rem;
-    font-style: italic;
-    margin: 1rem auto 1rem;
-    // max-width: 48rem;
-    max-width: 54rem;
-  }
-
-  li {
-    margin-left: 2rem;
-  }
-
-  /* Counteract the specificity of the gross *:not() chain. */
-
-  h1 {
-    padding: 4rem 0 !important;
-  }
-
-  pre {
-    padding: 1.125em !important;
-
-    code {
-      margin: 0 !important;
-    }
-  }
-
-  /*  === End gross hack */
-
-  p {
-    color: #555;
-    height: auto;
-    line-height: 1.45;
-  }
-
-  pre,
-  code {
-    font-family: Menlo, Monaco, "Courier New", monospace;
-  }
-
-  pre {
-    background-color: #fafafa;
-    font-size: .8rem;
-    overflow-x: scroll;
-  }
-
-  a,
-  a:visited {
-    border-bottom: none; /* [1] */
-    color: #3498db;
-    text-decoration: underline; /* [1] */
-  }
-
-  a:hover,
-  a:focus,
-  a:active {
-    color: #2980b9;
-    border-bottom: none; /* [1] */
-  }
+.c-markdown-body hr {
+  border-bottom-color: #eee;
 }
