@@ -47,10 +47,15 @@
   };
 
   @include mq($from: 'laptop') {
-    height: initial; /* [1] */
-    position: static; /* [1] */
-    visibility: visible; /* [1] */
-    width: initial; /* [1] */
+    height: auto; /* [2] */
+    position: static; /* [2] */
+    visibility: visible; /* [2] */
+    width: auto; /* [2] */
+
+    &::after,
+    &::before {
+      display: none;
+    }
   };
 }
 
