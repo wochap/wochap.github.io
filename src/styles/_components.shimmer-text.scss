@@ -3,8 +3,10 @@
 \*------------------------------------*/
 
 
-$block-bg-color: #f6f7f9;
-$block-bg-highlight-color: #e9ebee;
+// $block-bg-color: #f6f7f9;
+// $block-bg-highlight-color: #e9ebee;
+$block-bg-color: #C0C6C4;
+$block-bg-highlight-color: #4C4C4C;
 
 
 
@@ -39,8 +41,8 @@ $block-bg-highlight-color: #e9ebee;
   }
 
   &--darken {
-    $block-bg-color: #3A3938;
-    $block-bg-highlight-color: #323232;
+    // $block-bg-color: #3A3938;
+    // $block-bg-highlight-color: #323232;
 
     background-color: $block-bg-color;
 
