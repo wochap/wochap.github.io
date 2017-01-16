@@ -36,8 +36,8 @@ class SiteHeader extends React.Component {
             Gean <br /> Marroquin
           </Link>
         </p>
-        <nav className={`c-site-nav ${isNavOpen ? 'is-open' : ''}`}>
-          <ul>
+        <nav className={`o-dialog c-site-nav ${isNavOpen ? 'is-open' : ''}`}>
+          <ul className="o-dialog__wrapper">
             <li>
               <Link
                 className="o-btn c-site-nav__link"

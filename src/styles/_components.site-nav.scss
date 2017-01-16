@@ -5,17 +5,19 @@
 
 /**
  * 1. Fade effect.
- * 2. Perfect vertical scrollable center.
+ * 2. Disable dialog from laptop breakpoint.
  */
 
 .c-site-nav {
 
   ul {
     @include reset-list;
+
     margin: 0;
   }
 
   @include mq($from: 'laptop') {
+
     li {
       display: inline-block;
 
@@ -26,45 +28,29 @@
   };
 
   @include mq($until: 'laptop') {
-    transition: opacity 0.3s linear, visibility 0s linear 0.3s; /* [1] */
-    will-change: opacity;
-
-    align-items: center; /* [2] */
     background-color: $global-color-primary;
-    display: flex; /* [2] */
-    flex-direction: column; /* [2] */
-    height: 100%;
-    left: 0;
     opacity: 0; /* [1] */
-    overflow: auto; /* [2] */
-    position: fixed;
-    top: 0;
+    transition: opacity 0.3s linear, visibility 0s linear 0.3s; /* [1] */
     visibility: hidden; /* [1] */
-    width: 100%;
+    will-change: opacity; /* [1] */
     z-index: 9;
-
-    &::after,
-    &::before {
-      content: ''; /* [2] */
-      flex: 1 1 0; /* [2] */
-      width: 0; /* [2] */
-    }
 
     &.is-open {
       opacity: 1; /* [1] */
-      visibility: visible; /* [1] */
       transition: opacity 0.3s linear; /* [1] */
-    }
-
-    ul {
-      flex: none; /* [2] */
-      width: 100%;
+      visibility: visible; /* [1] */
     }
 
     li {
       display: block;
-      // opacity: 0;
     }
+  };
+
+  @include mq($from: 'laptop') {
+    height: initial; /* [1] */
+    position: static; /* [1] */
+    visibility: visible; /* [1] */
+    width: initial; /* [1] */
   };
 }
 
@@ -105,8 +91,8 @@
       color: $global-color-secondary;
       display: block;
       font-size: 1.5em;
-      width: 100%;
       padding: .5em 0;
+      width: 100%;
 
       // link border
       &::after {

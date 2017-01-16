@@ -17,7 +17,7 @@
   width: 100%;
 
   &.is-fixed {
-    color: $global-color-secondary;
+    color: $white;
     left: 0;
     margin-bottom: 0;
     position: absolute;
@@ -37,6 +37,7 @@
 
     display: block;
     font-size: 1.625em;
+    font-weight: $global-fw-s-bold;
     letter-spacing: $global-letter-spacing;
     line-height: 1;
     margin: 0;
@@ -44,20 +45,20 @@
     position: relative;
     text-transform: uppercase;
 
-    // left bar
     &::before {
       background-color: currentColor;
       content: "";
       display: block;
-      height: 1.9em;
+      height: 100%;
       left: 0;
       position: absolute;
       top: 0;
       width: $bar-width;
     }
 
-    span {
+    a {
       display: block;
+      outline: none
     }
   }
 

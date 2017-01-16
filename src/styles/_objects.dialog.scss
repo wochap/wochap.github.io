@@ -1,0 +1,48 @@
+/*------------------------------------*\
+  #DIALOG
+\*------------------------------------*/
+
+/**
+ * A element with full width and heigh
+ * Fixedly positione
+ * With a its content perfectly cente
+ */
+
+
+/**
+ * 1. Perfect vertical scrollable center.
+ * 2. Show/Hide component.
+ * 3. Size of the component.
+ * 4. Put it at top right corner.
+ */
+
+.o-dialog {
+  align-items: center; /* [1] */
+  display: flex; /* [1] */
+  flex-direction: column; /* [1] */
+  height: 100%; /* [3] */
+  left: 0; /* [3] */
+  overflow-y: auto;  /* [1] */
+  position: fixed; /* [3] */
+  top: 0; /* [3] */
+  visibility: hidden; /* [2] */
+  width: 100%; /* [3] */
+  z-index: 999;
+
+  &::after,
+  &::before {
+    content: ''; /* [1] */
+    flex: 1 1 0; /* [1] */
+    width: 0; /* [1] */
+  }
+
+  &.is-open {
+    visibility: visible; /* [2] */
+  }
+}
+
+  .o-dialog__wrapper {
+    display: block; /* [1] */
+    flex: none; /* [1] */
+    width: 100%; /* [1] */
+  }
