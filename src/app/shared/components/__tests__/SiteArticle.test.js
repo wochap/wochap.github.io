@@ -1,7 +1,7 @@
 import React from 'react'
 import {shallow} from 'enzyme'
 import * as mocks from 'utils/mocks'
-import {SiteArticle} from '../SiteArticle'
+import SiteArticle from '../SiteArticle'
 
 describe('SiteArticle', () => {
   const props = {

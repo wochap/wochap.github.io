@@ -1,5 +1,4 @@
 import React from 'react'
-import withCollectionItem from 'hoc/collection/withCollectionItem'
 import * as sharedPropTypes from 'hoc/collection/sharedPropTypes'
 import NotFoundScreen from 'app/screens/NotFound/components/NotFoundScreen'
 import SiteError from 'components/SiteError'
@@ -8,7 +7,7 @@ import MarkdownBody from 'components/MarkdownBody'
 import ScreenHelmet from 'components/ScreenHelmet'
 import ArticleHelmet from 'components/ArticleHelmet'
 
-export function SiteArticle ({item, itemState, collectionState, head}) {
+function SiteArticle ({item, itemState, collectionState, head}) {
   if (itemState.error) {
     return (
       <SiteError
@@ -67,4 +66,4 @@ SiteArticle.propTypes = {
   }).isRequired
 }
 
-export default withCollectionItem(SiteArticle, 'posts')
+export default SiteArticle

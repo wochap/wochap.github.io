@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import data from 'app/config/data'
 
-function ArticleHelmet ({imageUrl, publishedTime, tags}) {
+function ArticleHelmet ({imageUrl, publishedTime, tags = []}) {
   const metaTags = tags.map(tag => ({
     property: 'article:tag',
     content: tag
@@ -33,7 +33,7 @@ function ArticleHelmet ({imageUrl, publishedTime, tags}) {
 ArticleHelmet.propTypes = {
   imageUrl: React.PropTypes.string.isRequired,
   publishedTime: React.PropTypes.string.isRequired,
-  tags: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+  tags: React.PropTypes.arrayOf(React.PropTypes.string)
 }
 
 export default ArticleHelmet

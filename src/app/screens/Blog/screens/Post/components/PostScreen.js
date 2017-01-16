@@ -1,5 +1,6 @@
 import React from 'react'
 import data from 'app/config/data'
+import withCollectionItem from 'hoc/collection/withCollectionItem'
 import SiteArticle from 'components/SiteArticle' // eslint-disable-line
 
 function PostScreen (props) {
@@ -13,4 +14,4 @@ function PostScreen (props) {
   )
 }
 
-export default PostScreen
+export default withCollectionItem(PostScreen, 'posts')
