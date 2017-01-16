@@ -48,6 +48,7 @@
 
   @include mq($from: 'laptop') {
     height: auto; /* [2] */
+    overflow: visible; /* [2] */
     position: static; /* [2] */
     visibility: visible; /* [2] */
     width: auto; /* [2] */
