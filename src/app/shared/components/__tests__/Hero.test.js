@@ -4,16 +4,8 @@ import Hero from '../Hero'
 
 describe('Hero', () => {
   it('render component', () => {
-    const wrapper = shallow(
-      <Hero
-        data={{
-          title: 'yey',
-          date: '16-12-16',
-          imageUrl: 'fakeUrl'
-        }}
-      />
-    )
+    const wrapper = shallow(<Hero />)
 
-    expect(typeof wrapper).toEqual('object')
+    expect(wrapper.length).toBeTruthy()
   })
 })

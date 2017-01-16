@@ -1,7 +1,6 @@
 import React from 'react'
 import ShimmerText from 'components/ShimmerText'
 import {formatDate} from 'utils/formatter'
-import classNames from 'classnames'
 
 function Hero ({
   data = {
@@ -11,6 +10,7 @@ function Hero ({
   isLoading = false
 }) {
   const backgroundImage = data.imageUrl ? `url(${data.imageUrl})` : null
+  const formattedDate = formatDate(data.date)
   const footer = data.role || data.tasks || data.site ? (
     <ul className="c-hero__footer">
       {data.role && (
@@ -35,17 +35,17 @@ function Hero ({
   ) : null
 
   return (
-    <header
-      className={classNames('c-hero', {'u-blokk-font': isLoading})}
-      style={{backgroundImage}}
-    >
+    <header className="c-hero" style={{backgroundImage}}>
       <div className="o-wrapper">
-        <h1 className={classNames('c-hero__title', {'u-caps': !isLoading})}>
-          {isLoading ? <ShimmerText text={data.title} darken /> : data.title}
-        </h1>
-        <p className="c-hero__date">
-          {isLoading ? <ShimmerText text={formatDate(data.date)} darken /> : formatDate(data.date)}
-        </p>
+        {isLoading ? (
+          <ShimmerText darken>
+            <span className="u-block u-fz-h00 u-pb4 u-line-height-1">{data.title}</span>
+            <span className="u-block u-pb6 u-line-height-1">{formattedDate}</span>
+          </ShimmerText>
+        ) : [
+          <h1 className="c-hero__title u-caps" key="title">{data.title}</h1>,
+          <p className="c-hero__date" key="date">{formattedDate}</p>
+        ]}
         {footer}
       </div>
     </header>

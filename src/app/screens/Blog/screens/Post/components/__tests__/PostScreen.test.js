@@ -3,9 +3,9 @@ import {shallow} from 'enzyme'
 import PostScreen from '../PostScreen'
 
 describe('PostScreen', () => {
-  it('render component', () => {
-    const wrapper = shallow(<PostScreen />)
+  const wrapper = shallow(<PostScreen />)
 
-    expect(typeof wrapper).toEqual('object')
+  it('render component', () => {
+    expect(wrapper.length).toBeTruthy()
   })
 })

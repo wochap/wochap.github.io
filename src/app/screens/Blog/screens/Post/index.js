@@ -1,6 +1,14 @@
-import PostScreen from './containers/PostScreen' // eslint-disable-line
+import topBar from 'utils/topBar'
 
 export default {
-  path: ':slug',
-  component: PostScreen
+  path: ':fileName',
+  getComponent (nextState, cb) {
+    topBar.show()
+
+    require.ensure([], (require) => {
+      cb(null, require('./components/PostScreen').default) // eslint-disable-line
+
+      topBar.hide()
+    }, 'PostScreen')
+  }
 }
