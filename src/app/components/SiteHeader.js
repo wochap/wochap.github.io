@@ -32,8 +32,8 @@ class SiteHeader extends React.Component {
     return (
       <header className={`o-wrapper c-site-header ${isFixed ? 'is-fixed' : ''}`}>
         <p className="c-site-header__title">
-          <Link className="" to="/">
-            <span>Gean</span> <span>Marroquin</span>
+          <Link className to="/">
+            Gean <br /> Marroquin
           </Link>
         </p>
         <nav className={`c-site-nav ${isNavOpen ? 'is-open' : ''}`}>
