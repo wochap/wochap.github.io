@@ -1,6 +1,6 @@
 import WorkScreen from './components/WorkScreen'
 
 export default {
-  path: ':slug',
+  path: ':fileName',
   component: WorkScreen
 }
