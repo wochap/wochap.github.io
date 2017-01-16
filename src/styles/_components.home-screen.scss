@@ -2,20 +2,29 @@
   #HOME-SCREEN
 \*------------------------------------*/
 
+
+/**
+ * 1. Center background image.
+ * 2. Fix height on old safari browsers.
+ * 3. Vertical center children.
+ */
+
 .c-home-screen {
-  height: 100%;
+  height: 100vh;
+  max-height: 700px; /* [2] */
 }
 
   .c-home-screen__hero {
     background-color: $global-color-primary;
     background-image: url(https://drscdn.500px.org/photo/186180867/q%3D80_m%3D1500/b532d32e4bee4ec4109e8d94a1f5813c);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-position: center; /* [1] */
+    background-repeat: no-repeat; /* [1] */
+    background-size: cover; /* [1] */
+    display: flex; /* [3] */
+    flex-direction: column; /* [3] */
+    justify-content: center; /* [3] */
     min-height: 100%;
+    overflow: hidden;
     padding-top: $global-header-height;
     position: relative;
   }
@@ -23,7 +32,7 @@
     .c-home-screen__hero-wrapper {
       margin-left: 0;
       max-width: 32rem;
-      color: $global-color-secondary;
+      color: $white;
       padding: ($global-spacing-unit * 2) 0;
 
       h1 {
