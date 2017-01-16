@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-function ScreenHelmet ({title, description, canonicalHref}) {
+function ScreenHelmet ({title, description = '', canonicalHref}) {
   return (
     <Helmet
       title={title}
