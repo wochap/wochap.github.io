@@ -44,4 +44,15 @@
     flex-wrap: wrap; /* [2] */
     justify-content: space-between; /* [2] */
     margin: 0;
+
+    li {
+      text-shadow: 0 0 1em rgba($black, 1);
+    }
+
+    a {
+      &,
+      &:hover {
+        color: $white;
+      }
+    }
   }
