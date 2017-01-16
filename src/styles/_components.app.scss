@@ -9,6 +9,7 @@
  */
 
 .c-app {
+  overflow-x: hidden;
   overflow-y: scroll;
 
   @media print {
