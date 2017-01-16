@@ -1,11 +1,18 @@
 import React from 'react'
 import {shallow} from 'enzyme'
+import data from 'app/config/data'
 import NotFoundScreen from '../NotFoundScreen'
 
 describe('NotFoundScreen', () => {
-  it('render title', () => {
-    const notFoundScreen = shallow(<NotFoundScreen />)
+  const wrapper = shallow(<NotFoundScreen />)
 
-    expect(notFoundScreen.find('h1').text()).toEqual('404')
+  it('render component', () => {
+    expect(wrapper.length).toBeTruthy()
+  })
+
+  it('render SiteError with correct props', () => {
+    expect(wrapper.find('SiteError').props().headTitle).toEqual(data.screens.notFound.title)
+    expect(wrapper.find('SiteError').props().title).toEqual('404')
+    expect(wrapper.find('SiteError').props().message).toEqual('Pagina no encontrada')
   })
 })
