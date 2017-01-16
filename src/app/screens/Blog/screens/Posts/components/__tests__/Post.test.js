@@ -1,35 +1,28 @@
 import React from 'react'
 import {shallow} from 'enzyme'
 import {formatDate} from 'utils/formatter'
+import * as mocks from 'utils/mocks'
 import Post from '../Post'
 
 describe('Post', () => {
-  const props = {
-    post: {
-      slug: 'slug',
-      date: 'date',
-      imageUrl: 'imageUrl',
-      title: 'title',
-      description: 'description'
-    }
-  }
-  const wrapper = shallow(<Post {...props} />)
+  const postProp = mocks.itemCollection.frontMatter
+  const wrapper = shallow(<Post post={postProp} />)
 
   it('render component', () => {
     expect(wrapper.length).toBeTruthy()
   })
 
   it('render formatted date', () => {
-    const formattedDate = formatDate(props.post.date)
+    const formattedDate = formatDate(postProp.date)
 
-    expect(wrapper.find('.c-post__date').text()).toEqual(formattedDate)
+    expect(wrapper.childAt(0).text()).toEqual(formattedDate)
   })
 
   it('render title', () => {
-    expect(wrapper.find('.c-post__title').render().text()).toEqual(props.post.title)
+    expect(wrapper.find('Link').props().children).toEqual(postProp.title)
   })
 
-  it('render description', () => {
-    expect(wrapper.find('.c-post__description').text()).toEqual(props.post.description)
+  it('render link', () => {
+    expect(wrapper.find('Link').props().to).toEqual(`/blog/${postProp.fileName}`)
   })
 })
