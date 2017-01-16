@@ -15,20 +15,20 @@ function Hero ({
     <ul className="c-hero__footer">
       {data.role && (
         <li>
-          <strong>Role: </strong>
+          <strong>Rol: </strong>
           {data.role}
         </li>
       )}
       {data.tasks && (
         <li>
-          <strong>Tasks: </strong>
+          <strong>Tareas: </strong>
           {data.tasks}
         </li>
       )}
       {data.site && (
         <li>
-          <strong>Site: </strong>
-          <a href="#!">{data.link}</a>
+          <strong>Sitio: </strong>
+          <a href={data.link}>{data.link}</a>
         </li>
       )}
     </ul>
