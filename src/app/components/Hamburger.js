@@ -5,7 +5,7 @@ function Hamburger ({className, isOpen, ...restProps}) {
     <button
       {...restProps}
       className={`o-btn ${className}`}
-      aria-label="Mostrar/Esconder navegación"
+      aria-label={isOpen ? 'Esconder navegación' : 'Mostrar navegación'}
       type="button"
     >
       <div className={`c-hamburger ${isOpen ? 'is-open' : ''}`}>
