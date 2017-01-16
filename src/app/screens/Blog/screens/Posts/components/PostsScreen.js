@@ -1,10 +1,11 @@
 import React from 'react'
 import data from 'app/config/data'
-import withCollection from 'hoc/withCollection'
+import withCollection from 'hoc/collection/withCollection'
+import * as sharedPropTypes from 'hoc/collection/sharedPropTypes'
 import ScreenHelmet from 'components/ScreenHelmet'
 import PostsList from './PostsList'
 
-export function PostsScreen ({collectionState, collection}) { // eslint-disable-line
+export function PostsScreen ({collectionState, collection}) {
   const {isPending, error} = collectionState
   const body = error ? (<p>Posts Error: {error}</p>) : (
     isPending ? (<p>Cargando posts...</p>) : (<PostsList posts={collection} />)
@@ -32,6 +33,11 @@ export function PostsScreen ({collectionState, collection}) { // eslint-disable-
       </div>
     </section>
   )
+}
+
+PostsScreen.propTypes = {
+  collectionState: sharedPropTypes.collectionState,
+  collection: sharedPropTypes.collection
 }
 
 export default withCollection(PostsScreen, 'posts')
