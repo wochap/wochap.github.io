@@ -2,13 +2,18 @@
   #HERO
 \*------------------------------------*/
 
+
+/**
+ * 1. Center background image.
+ * 2. Inline footer list.
+ */
+
 .c-hero {
-  background-color: $global-color-primary;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $global-color-secondary;
-  font-family: 'Merriweather', Georgia, serif;
+  background-color: $black;
+  background-position: center; /* [1] */
+  background-repeat: no-repeat; /* [1] */
+  background-size: cover; /* [1] */
+  color: $white;
   margin-bottom: $global-space-5;
   padding-bottom: $global-spacing-unit;
   padding-top: calc(#{$global-header-height} + 2.25rem + #{$global-space-5});
@@ -18,6 +23,7 @@
   .c-hero__title {
     font-size: $global-fz-h1;
     margin: 0;
+    text-shadow: 0 0 1em rgba($black, .5);
 
     @include mq($from: 'laptop') {
       font-size: 3.998rem;
@@ -26,16 +32,16 @@
 
   .c-hero__date {
     margin-bottom: $global-space-6;
-    color: rgba($global-color-secondary, .5);
+    text-shadow: 0 0 1em rgba($black, .5);
   }
 
   .c-hero__footer {
     @include reset-list();
 
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center; /* [2] */
+    display: flex; /* [2] */
+    flex-direction: row; /* [2] */
+    flex-wrap: wrap; /* [2] */
+    justify-content: space-between; /* [2] */
     margin: 0;
   }
