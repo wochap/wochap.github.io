@@ -5,24 +5,26 @@ import * as mocks from 'utils/mocks'
 import Post from '../Post'
 
 describe('Post', () => {
-  const postProp = mocks.itemCollection.frontMatter
-  const wrapper = shallow(<Post post={postProp} />)
+  const props = {
+    post: mocks.itemCollection.frontMatter
+  }
+  const wrapper = shallow(<Post post={props.post} />)
 
   it('render component', () => {
     expect(wrapper.length).toBeTruthy()
   })
 
   it('render formatted date', () => {
-    const formattedDate = formatDate(postProp.date)
+    const formattedDate = formatDate(props.post.date)
 
     expect(wrapper.childAt(0).text()).toEqual(formattedDate)
   })
 
   it('render title', () => {
-    expect(wrapper.find('Link').props().children).toEqual(postProp.title)
+    expect(wrapper.find('Link').props().children).toEqual(props.post.title)
   })
 
   it('render link', () => {
-    expect(wrapper.find('Link').props().to).toEqual(`/blog/${postProp.fileName}`)
+    expect(wrapper.find('Link').props().to).toEqual(`/blog/${props.post.fileName}`)
   })
 })
