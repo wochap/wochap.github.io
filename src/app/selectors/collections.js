@@ -24,9 +24,17 @@ export function getItemFromCollection ({collections}, collectionName, fileName) 
   }
 }
 
-export function getCollectionItemError ({collections}, collectionName, fileName) {
+export function getCollectionItemState (state, collectionName, fileName) {
   sharedCollectionItemValidations('getCollectionItemError', collectionName, fileName)
 
+  return {
+    isPending: isPendingCollectionItem(state, collectionName, fileName), // eslint-disable-line
+    isFulfilled: isFulfilledCollectionItem(state, collectionName, fileName), // eslint-disable-line
+    error: getCollectionItemError(state, collectionName, fileName) // eslint-disable-line
+  }
+}
+
+function getCollectionItemError ({collections}, collectionName, fileName) {
   try {
     return !!collections[collectionName].data[fileName].error
   } catch (error) {
@@ -35,20 +43,16 @@ export function getCollectionItemError ({collections}, collectionName, fileName)
   }
 }
 
-export function isLoadingCollectionItem ({collections}, collectionName, fileName) {
-  sharedCollectionItemValidations('isLoadingCollectionItem', collectionName, fileName)
-
+function isPendingCollectionItem ({collections}, collectionName, fileName) {
   try {
     return !!collections[collectionName].data[fileName].isFetching
   } catch (error) {
-    console.warn(`${ERROR_NAMESPACE} isLoadingCollectionItem: ${error}`) // eslint-disable-line
+    console.warn(`${ERROR_NAMESPACE} isPendingCollectionItem: ${error}`) // eslint-disable-line
     return false
   }
 }
 
-export function isFulfilledCollectionItem ({collections}, collectionName, fileName) {
-  sharedCollectionItemValidations('isFulfilledCollectionItem', collectionName, fileName)
-
+function isFulfilledCollectionItem ({collections}, collectionName, fileName) {
   try {
     return !!collections[collectionName].data[fileName].isFulfilled
   } catch (error) {
@@ -79,9 +83,17 @@ export function getCollection ({collections}, collectionName) {
   }
 }
 
-export function getCollectionError ({collections}, collectionName) {
+export function getCollectionState (state, collectionName) {
   sharedCollectionValidations('getCollectionError', collectionName)
 
+  return {
+    isPending: isPendingCollection(state, collectionName), // eslint-disable-line
+    isFulfilled: isFulfilledCollection(state, collectionName), // eslint-disable-line
+    error: getCollectionError(state, collectionName) // eslint-disable-line
+  }
+}
+
+function getCollectionError ({collections}, collectionName) {
   try {
     return !!collections[collectionName].error
   } catch (error) {
@@ -90,20 +102,16 @@ export function getCollectionError ({collections}, collectionName) {
   }
 }
 
-export function isLoadingCollection ({collections}, collectionName) {
-  sharedCollectionValidations('isLoadingCollection', collectionName)
-
+function isPendingCollection ({collections}, collectionName) {
   try {
     return !!collections[collectionName].isFetching
   } catch (error) {
-    console.warn(`${ERROR_NAMESPACE} isLoadingCollection: ${error}`) // eslint-disable-line
+    console.warn(`${ERROR_NAMESPACE} isPendingCollection: ${error}`) // eslint-disable-line
     return false
   }
 }
 
-export function isFulfilledCollection ({collections}, collectionName) {
-  sharedCollectionValidations('isFulfilledCollection', collectionName)
-
+function isFulfilledCollection ({collections}, collectionName) {
   try {
     return !!collections[collectionName].isFulfilled
   } catch (error) {
