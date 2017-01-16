@@ -1,7 +1,7 @@
 import React from 'react'
 import Post from './Post'
 
-function Posts ({posts}) {
+function PostsList ({posts}) {
   return posts.length === 0 ? (<p>No hay posts que mostrar.</p>) : (
     <ul className="u-list-reset">
       {posts.map((post, index) => (
@@ -13,7 +13,7 @@ function Posts ({posts}) {
   )
 }
 
-Posts.propTypes = {
+PostsList.propTypes = {
   posts: React.PropTypes.arrayOf(
     React.PropTypes.shape({
       frontMatter: Post.propTypes.post
@@ -21,4 +21,4 @@ Posts.propTypes = {
   ).isRequired
 }
 
-export default Posts
+export default PostsList

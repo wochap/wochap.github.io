@@ -1,4 +1,4 @@
-import PostsScreen from './containers/PostsScreen' // eslint-disable-line
+import PostsScreen from './components/PostsScreen' // eslint-disable-line
 
 export default {
   component: PostsScreen
