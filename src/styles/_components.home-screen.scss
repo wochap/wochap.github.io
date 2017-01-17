@@ -24,6 +24,7 @@
     flex-direction: column; /* [3] */
     height: 100%;
     justify-content: center; /* [3] */
+    min-height: 600px;
     overflow: hidden;
     padding-top: $global-header-height;
     position: relative;
