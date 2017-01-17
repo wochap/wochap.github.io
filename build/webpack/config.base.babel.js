@@ -75,7 +75,7 @@ export default {
     configFile: path.join(projectRootPath, '.eslintrc.js')
   },
   sassLoader: {
-    importer: require('node-sass-json-importer')
+    // importer: require('node-sass-json-importer')
   },
   postcss: [
     require('lost'),
