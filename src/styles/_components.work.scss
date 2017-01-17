@@ -4,7 +4,7 @@
 
 
 /**
- * 1. Empujar texto hacia abajo.
+ * 1. Pull text to bottom.
  * 2. Create a new context, for performance.
  */
 
@@ -14,7 +14,9 @@
   background-color: $global-color-primary;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  margin: 0 auto;
+  max-width: 25.625rem;
   position: relative;
 }
 
