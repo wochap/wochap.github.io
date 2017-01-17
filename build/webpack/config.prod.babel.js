@@ -7,6 +7,7 @@ import InlineManifestWebpackPlugin from 'inline-manifest-webpack-plugin'
 import AssetsPlugin from 'assets-webpack-plugin'
 import CompressionWebpackPlugin from 'compression-webpack-plugin'
 import Visualizer from 'webpack-visualizer-plugin'
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 
 import webpackConfigBase from './config.base.babel'
 import {projectSourcePath, projectDistPath, templatePath} from '../config'
@@ -82,6 +83,23 @@ export default webpackMerge(webpackConfigBase, {
         collapseWhitespace: true,
         minifyJS: true,
         removeComments: true
+      }
+    }),
+    // generate favicon icons
+    new FaviconsWebpackPlugin({
+      logo: path.join(projectSourcePath, 'favicon.png'),
+      title: 'wochap',
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
       }
     }),
     // inline webpack manifest
