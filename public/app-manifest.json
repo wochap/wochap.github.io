@@ -1,8 +1,8 @@
 {
-  "name": "Gean Carlos Bonifacio Marroquin",
+  "name": "Gean Marroquin",
   "short_name": "wochap",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#ff4136",
-  "background_color": "#eeeeee"
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
