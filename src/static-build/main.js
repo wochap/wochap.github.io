@@ -7,6 +7,7 @@ import Helmet from 'react-helmet'
 import {AppContainer} from 'react-hot-loader' // eslint-disable-line
 import routes from 'app/config/routes'
 import configureStore from 'app/store/configureStore'
+import * as collectionActions from 'app/actions/collections'
 import template from './template'
 
 export default function render (locals) {
@@ -19,6 +20,22 @@ export default function render (locals) {
 
       match({routes, location}, async (error, redirectLocation, renderProps) => {
         if (error) throw error
+
+        const {fileName} = renderProps.params
+        const {pathname} = renderProps.location
+
+        if (pathname === '/blog') {
+          await store.dispatch(collectionActions.loadItemsFromCollection('posts'))
+        }
+        if (pathname === '/works') {
+          await store.dispatch(collectionActions.loadItemsFromCollection('works'))
+        }
+        if (fileName && pathname.includes('/blog/')) {
+          await store.dispatch(collectionActions.loadItemFromCollection('posts', fileName))
+        }
+        if (fileName && pathname.includes('/works/')) {
+          await store.dispatch(collectionActions.loadItemFromCollection('works', fileName))
+        }
 
         const bodyHTML = ReactDOM.renderToString((
           <AppContainer>
