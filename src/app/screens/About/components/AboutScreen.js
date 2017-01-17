@@ -13,9 +13,9 @@ function AboutScreen () {
       />
 
       <header className="c-about-screen__profile">
-        <div className="c-about-screen__profile-image">
+        {/* <div className="c-about-screen__profile-image">
           <img src="http://placehold.it/350x400" alt="Gean Carlos Bonifacio Marroquin" />
-        </div>
+        </div> */}
         <h1 className="u-fz-h4 u-m0">
           <span className="u-caps u-fz-h2 u-mb2 u-block">Gean Marroquin, </span>
           <span className="u-fz-sm u-fw-s-bold u-m0 u-block">Front-end developer</span>
@@ -96,13 +96,13 @@ function AboutScreen () {
               <h3 className="u-fz-inherit u-mb3">Udacity</h3>
               <ul>
                 <li>
-                  <h4 className="u-fz-inherit u-mb2">
+                  <h4 className="u-fz-inherit u-mb0">
                     <ExternalLink href="https://www.udacity.com/course/website-performance-optimization--ud884" title="Website Performance Optimization" />
                   </h4>
                   <p className="u-mb0">2016</p>
                 </li>
                 <li>
-                  <h4 className="u-fz-inherit u-mb2">
+                  <h4 className="u-fz-inherit u-mb0">
                     <ExternalLink href="https://www.udacity.com/course/browser-rendering-optimization--ud860" title="Browser Rendering Optimization" />
                   </h4>
                   <p className="u-mb0">2016</p>
@@ -113,13 +113,13 @@ function AboutScreen () {
               <h3 className="u-fz-inherit u-mb3">Egghead</h3>
               <ul>
                 <li>
-                  <h4 className="u-fz-inherit u-mb2">
+                  <h4 className="u-fz-inherit u-mb0">
                     <ExternalLink href="https://egghead.io/courses/building-react-applications-with-idiomatic-redux" title="Building React Applications with Idiomatic Redux" />
                   </h4>
                   <p className="u-mb0">2016</p>
                 </li>
                 <li>
-                  <h4 className="u-fz-inherit u-mb2">
+                  <h4 className="u-fz-inherit u-mb0">
                     <ExternalLink href="https://egghead.io/courses/getting-started-with-redux" title="Getting Started with Redux" />
                   </h4>
                   <p className="u-mb0">2016</p>

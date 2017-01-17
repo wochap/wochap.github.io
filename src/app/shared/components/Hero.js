@@ -1,6 +1,7 @@
 import React from 'react'
 import ShimmerText from 'components/ShimmerText'
 import {formatDate} from 'utils/formatter'
+import ExternalLink from 'components/ExternalLink'
 
 function Hero ({
   data = {
@@ -9,9 +10,9 @@ function Hero ({
   },
   isLoading = false
 }) {
-  const backgroundImage = data.imageUrl ? `url(${data.imageUrl})` : null
+  const backgroundImage = data.heroImageUrl ? `url(${data.heroImageUrl})` : null
   const formattedDate = formatDate(data.date)
-  const footer = data.role || data.tasks || data.site ? (
+  const footer = data.role || data.tasks || data.siteLink ? (
     <ul className="c-hero__footer">
       {data.role && (
         <li>
@@ -25,10 +26,10 @@ function Hero ({
           {data.tasks}
         </li>
       )}
-      {data.site && (
+      {data.siteLink && (
         <li>
           <strong>Sitio: </strong>
-          <a href={data.link}>{data.link}</a>
+          <ExternalLink href={data.siteLink} title={data.siteLink} />
         </li>
       )}
     </ul>
@@ -36,7 +37,7 @@ function Hero ({
 
   return (
     <header className="c-hero" style={{backgroundImage}}>
-      <div className="o-wrapper">
+      <div className="o-wrapper c-hero__wrapper">
         {isLoading ? (
           <ShimmerText darken>
             <span className="u-block u-fz-h00 u-pb4 u-line-height-1">{data.title}</span>
@@ -56,7 +57,7 @@ Hero.propTypes = {
   data: React.PropTypes.shape({
     title: React.PropTypes.string,
     date: React.PropTypes.string,
-    imageUrl: React.PropTypes.string
+    heroImageUrl: React.PropTypes.string
   }),
   isLoading: React.PropTypes.bool
 }
