@@ -17,6 +17,7 @@
  */
 
 .o-dialog {
+  -webkit-overflow-scrolling: touch;
   align-items: center; /* [1] */
   display: flex; /* [1] */
   flex-direction: column; /* [1] */
