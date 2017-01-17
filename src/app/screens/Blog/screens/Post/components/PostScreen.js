@@ -3,7 +3,7 @@ import data from 'app/config/data'
 import withCollectionItem from 'hoc/collection/withCollectionItem'
 import SiteArticle from 'components/SiteArticle' // eslint-disable-line
 
-function PostScreen (props) {
+export function PostScreen (props) {
   return (
     <SiteArticle
       {...props}

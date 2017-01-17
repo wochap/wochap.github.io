@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import WorkScreen from '../WorkScreen'
+import {WorkScreen} from '../WorkScreen'
 
 describe('WorkScreen', () => {
   it('render component', () => {
