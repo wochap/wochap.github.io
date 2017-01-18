@@ -70,6 +70,10 @@
       text-shadow: 0 0 1em rgba($black, 1);
     }
 
+    strong {
+      text-transform: uppercase;
+    }
+
     a {
       &,
       &:hover {
