@@ -1,0 +1,18 @@
+/*------------------------------------*\
+  #MARKDOWN-BODY
+\*------------------------------------*/
+
+.c-markdown-body div {
+  transform: translateX(calc(-1 * ((100vw - 100%) / 2))); /* HACK: full width img */
+}
+
+.c-markdown-body div img {
+  max-width: none; /* HACK: full width img */
+  width: calc(100vw); /* HACK: full width img */
+}
+
+.c-markdown-body a:hover,
+.c-markdown-body a:active {
+  color: #4078c0;
+  text-decoration: none;
+}
