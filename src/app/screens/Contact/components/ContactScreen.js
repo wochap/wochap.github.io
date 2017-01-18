@@ -13,15 +13,20 @@ function ContactScreen () {
       />
 
       <h2 className="u-mb3 u-caps">Contáctame</h2>
-      <p className="u-mb4 u-fz-sm u-muted u-fade-in-up">Envíame un mensaje para trabajar juntos.</p>
-      <p className="u-mb5 u-fade-in-up u-delay-2">
+      <p className="u-mb4 u-fz-sm u-muted">Envíame un mensaje para trabajar juntos.</p>
+      <p className="u-mb5">
         <a className="o-btn c-btn c-btn--primary" href={`mailto:${data.email}`}>Enviar mensaje</a>
       </p>
-      <p className="u-m0 u-fz-sm u-muted u-fade-in-up u-delay-3">Y encuentrame en:</p>
-      <ul className="u-list-reset u-fz-h00 u-m0 u-fade-in-up u-delay-4">
+      <p className="u-m0 u-fz-sm u-muted">Y encuentrame en:</p>
+      <ul className="u-list-reset u-fz-h00 u-m0">
         <li className="u-inline-block u-p3">
           <ExternalLink className="u-block" href="https://github.com/wochap" title="Github">
             <i className="u-icon u-block">github</i>
+          </ExternalLink>
+        </li>
+        <li className="u-inline-block u-p3">
+          <ExternalLink className="u-block" href="https://www.npmjs.com/~wochap" title="NPM">
+            <i className="u-icon u-block">npm</i>
           </ExternalLink>
         </li>
         <li className="u-inline-block u-p3">
