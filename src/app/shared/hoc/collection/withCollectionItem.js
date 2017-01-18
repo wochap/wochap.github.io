@@ -20,16 +20,18 @@ function withItem (WrappedComponent, collectionName) {
     }
 
     componentDidMount () {
+      if (module.hot) {
+        this.props.fetchItemCollection(this.props.params.fileName)
+
+        return
+      }
+
       if (!this.props.itemState.isFulfilled) {
         this.props.fetchItemCollection(this.props.params.fileName)
       }
     }
 
     componentDidUpdate (prevProps) {
-      if (module.hot) {
-        // TODO: call fetchItemCollection on markdown file change
-      }
-
       if (prevProps.params.fileName !== this.props.params.fileName) {
         if (!this.props.itemState.isFulfilled) {
           this.props.fetchItemCollection(this.props.params.fileName)
