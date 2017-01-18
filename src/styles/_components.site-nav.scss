@@ -30,14 +30,14 @@
   @include mq($until: 'laptop') {
     background-color: $global-color-primary;
     opacity: 0; /* [1] */
-    transition: opacity 0.3s linear, visibility 0s linear 0.3s; /* [1] */
+    // transition: opacity 0.3s linear, visibility 0s linear 0.3s; /* [1] */
     visibility: hidden; /* [1] */
     will-change: opacity; /* [1] */
     z-index: 9;
 
     &.is-open {
       opacity: 1; /* [1] */
-      transition: opacity 0.3s linear; /* [1] */
+      // transition: opacity 0.3s linear; /* [1] */
       visibility: visible; /* [1] */
     }
 
