@@ -39,21 +39,6 @@ $block-bg-highlight-color: #4C4C4C;
     top: 0; /* [3] */
     width: 100%; /* [3] */
   }
-
-  &--darken {
-    // $block-bg-color: #3A3938;
-    // $block-bg-highlight-color: #323232;
-
-    background-color: $block-bg-color;
-
-    &::before {
-      background-image: linear-gradient(to right,
-                      $block-bg-color 0%,
-                      $block-bg-highlight-color 20%,
-                      $block-bg-color 40%,
-                      $block-bg-color 100%);
-    }
-  }
 }
 
   .c-shimmer-text__text {
@@ -68,6 +53,27 @@ $block-bg-highlight-color: #4C4C4C;
       mix-blend-mode: darken; /* [1] */
     }
   }
+
+
+.c-shimmer-text--darken {
+  // $block-bg-color: #3A3938;
+  // $block-bg-highlight-color: #323232;
+
+  background-color: $block-bg-color;
+
+  &::before {
+    background-image: linear-gradient(to right,
+                    $block-bg-color 0%,
+                    $block-bg-highlight-color 20%,
+                    $block-bg-color 40%,
+                    $block-bg-color 100%);
+  }
+}
+
+.c-shimmer-text--block {
+  display: block;
+  width: 100%;
+}
 
 
 @keyframes shimmer {
