@@ -11,7 +11,7 @@ function Hero ({
   isLoading = false
 }) {
   const backgroundImage = data.heroImageUrl ? `url(${data.heroImageUrl})` : null
-  const formattedDate = formatDate(data.date)
+  const formattedDate = data.formattedDate || formatDate(data.date)
   const footer = data.role || data.tasks || data.siteLink ? (
     <ul className="c-hero__footer">
       {data.role && (
