@@ -10,6 +10,7 @@
 
 .c-work {
   @include layout-aspect-ratio(4, 3);
+  @include card(1);
 
   background-color: $global-color-primary;
   background-position: center;
@@ -21,6 +22,7 @@
 }
 
   .c-work__link {
+    -webkit-tap-highlight-color: transparent;
     background-color: rgba($global-color-secondary, .5);
     display: flex; /* [1] */
     flex-direction: column; /* [1] */
@@ -30,14 +32,16 @@
     padding: 0 $global-spacing-unit $global-spacing-unit;
     position: absolute;
     top: 0;
+    touch-action: manipulation;
     transform: translateZ(0); /* [2] */
     transition: opacity 0.3s, box-shadow 0.3s;
+    user-select: none;
     width: 100%;
 
     &:active,
     &:hover,
     &:focus {
-      @include card(4);
+      // @include card(4);
 
       opacity: 1;
       outline: none;
