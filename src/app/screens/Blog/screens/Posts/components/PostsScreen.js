@@ -11,10 +11,10 @@ import PostsList from './PostsList'
 export function PostsScreen ({collectionState, collection}) {
   const body = collectionState.error ? <SiteError title="Ups" message={collectionState.error} invert /> : (
     collectionState.isPending ? (
-      <ul className="u-list-reset">
+      <ul className="u-list-reset u-m0">
         <ShimmerText>
-          {[...new Array(6)].map((_, index) => (
-            <li className={index === 3 ? '' : 'u-pb4'} key={index}>
+          {[...new Array(3)].map((_, index) => (
+            <li className={index === 2 ? '' : 'u-pb4'} key={index}>
               <span className="u-block u-fz-lg u-line-height-1">Cargando</span>
               <span className="u-block u-fz-h0 u-line-height-1">Cargando</span>
             </li>
