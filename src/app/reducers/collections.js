@@ -1,72 +1,109 @@
 import deepMerge from 'deepmerge'
 import * as collectionsActions from 'app/actions/collections'
 
-export default function collections (state = {}, {type, payload, meta}) {
-  if (!meta || !meta.collectionName) return state
-
+function collection (state = {
+  items: {}
+}, type, payload) {
   switch (type) {
-    // Handle a single collection
-    case `${meta.collectionName}/${collectionsActions.FETCH_COLLECTION}_PENDING`: {
+    case 'PENDING': {
+      return {
+        ...state,
+        state: {
+          error: false,
+          isPending: true,
+          isFulfilled: false
+        }
+      }
+    }
+    case 'FULFILLED': {
       return deepMerge(state, {
-        [meta.collectionName]: {
-          data: {
-            [meta.fileName]: {
-              isFetching: true
-            }
-          }
+        items: payload,
+        state: {
+          error: false,
+          isPending: false,
+          isFulfilled: true
         }
       })
     }
-    case `${meta.collectionName}/${collectionsActions.FETCH_COLLECTION}_FULFILLED`: {
+    case 'REJECTED': {
       return deepMerge(state, {
-        [meta.collectionName]: {
-          data: {
-            [meta.fileName]: {
-              frontMatter: payload[meta.fileName].frontMatter,
-              bodyHtml: payload[meta.fileName].bodyHtml,
-              isFulfilled: true,
-              isFetching: false
-            }
-          }
+        state: {
+          error: payload,
+          isPending: false,
+          isFulfilled: true
         }
       })
     }
-    case `${meta.collectionName}/${collectionsActions.FETCH_COLLECTION}_REJECTED`: {
-      return deepMerge(state, {
-        [meta.collectionName]: {
-          data: {
-            [meta.fileName]: {
-              isFetching: false,
-              error: payload
-            }
-          }
-        }
-      })
+    default: {
+      return state
+    }
+  }
+}
+
+export default function collections (state = {}, {type, payload, meta}) {
+  switch (type) {
+    case `${collectionsActions.FETCH_COLLECTION}_PENDING`: {
+      return {
+        ...state,
+        [meta.collectionName]: collection(state[meta.collectionName], 'PENDING')
+      }
+    }
+    case `${collectionsActions.FETCH_COLLECTION}_FULFILLED`: {
+      return {
+        ...state,
+        [meta.collectionName]: collection(state[meta.collectionName], 'FULFILLED', payload)
+      }
+    }
+    case `${collectionsActions.FETCH_COLLECTION}_REJECTED`: {
+      return {
+        ...state,
+        [meta.collectionName]: collection(state[meta.collectionName], 'REJECTED', payload)
+      }
     }
 
-    // Handle all collections
-    case `${meta.collectionName}/${collectionsActions.FETCH_COLLECTIONS}_PENDING`: {
+    case `${collectionsActions.FETCH_ITEM}_PENDING`: {
       return deepMerge(state, {
         [meta.collectionName]: {
-          isFetching: true
+          items: {
+            [meta.fileName]: {
+              state: {
+                error: false,
+                isPending: true,
+                isFulfilled: false
+              }
+            }
+          }
         }
       })
     }
-    case `${meta.collectionName}/${collectionsActions.FETCH_COLLECTIONS}_FULFILLED`: {
+    case `${collectionsActions.FETCH_ITEM}_FULFILLED`: {
       return deepMerge(state, {
         [meta.collectionName]: {
-          data: payload,
-          isFulfilled: true,
-          isFetching: false
+          items: {
+            [meta.fileName]: {
+              ...payload[meta.fileName],
+              state: {
+                error: false,
+                isPending: false,
+                isFulfilled: true
+              }
+            }
+          }
         }
       })
     }
-
-    case `${meta.collectionName}/${collectionsActions.FETCH_COLLECTIONS}_REJECTED`: {
+    case `${collectionsActions.FETCH_ITEM}_REJECTED`: {
       return deepMerge(state, {
         [meta.collectionName]: {
-          isFetching: false,
-          error: payload
+          items: {
+            [meta.fileName]: {
+              state: {
+                error: payload,
+                isPending: false,
+                isFulfilled: true
+              }
+            }
+          }
         }
       })
     }

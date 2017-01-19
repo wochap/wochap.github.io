@@ -3,8 +3,8 @@ import {normalize, Schema, arrayOf} from 'normalizr'
 import {COLLECTION_DATE_FORMAT} from 'app/config/constants'
 
 const COLLECTION_SCHEMA_NAME = 'items'
-export const FETCH_COLLECTION = 'FETCH_COLLECTION'
-export const FETCH_COLLECTIONS = 'FETCH_COLLECTIONS'
+export const FETCH_ITEM = 'collections/FETCH_COLLECTION'
+export const FETCH_COLLECTION = 'collections/FETCH_COLLECTIONS'
 
 /**
  * SCHEMA
@@ -37,7 +37,7 @@ export function loadItem (collectionName, fileName) {
   }
 
   return {
-    type: `${collectionName}/${FETCH_COLLECTION}`,
+    type: FETCH_ITEM,
     meta: {
       collectionName,
       fileName
@@ -59,7 +59,7 @@ export function loadCollection (collectionName) {
   }
 
   return {
-    type: `${collectionName}/${FETCH_COLLECTIONS}`,
+    type: FETCH_COLLECTION,
     meta: {
       collectionName
     },
