@@ -2,8 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import getDisplayName from 'recompose/getDisplayName'
 import * as collectionPropTypes from 'hoc/collection/PropTypes'
-import {getItemFromCollection, getCollectionItemState, getCollectionState} from 'app/selectors/collections'
-import {loadItemFromCollection} from 'app/actions/collections'
+import {getItem, getItemState, getCollectionState} from 'app/selectors/collections'
+import {loadItem} from 'app/actions/collections'
 
 function withItem (WrappedComponent, collectionName) {
   class ItemHOC extends React.Component {
@@ -45,15 +45,15 @@ function withItem (WrappedComponent, collectionName) {
 
   function mapStateToProps (state, ownProps) {
     return {
-      item: getItemFromCollection(state, collectionName, ownProps.params.fileName),
-      itemState: getCollectionItemState(state, collectionName, ownProps.params.fileName),
+      item: getItem(state, collectionName, ownProps.params.fileName),
+      itemState: getItemState(state, collectionName, ownProps.params.fileName),
       collectionState: getCollectionState(state, collectionName)
     }
   }
 
   function mapDispatchToProps (dispatch) {
     return {
-      fetchItemCollection: fileName => dispatch(loadItemFromCollection(collectionName, fileName))
+      fetchItemCollection: fileName => dispatch(loadItem(collectionName, fileName))
     }
   }
 

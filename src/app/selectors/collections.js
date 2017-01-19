@@ -4,7 +4,7 @@ const ERROR_NAMESPACE = '(selectors)[collections]'
  * COLLECTION ITEM SELECTORS
  */
 
-function sharedCollectionItemValidations (functionName, collectionName, fileName) {
+function sharedItemValidations (functionName, collectionName, fileName) {
   if (!collectionName) {
     throw new Error(`${ERROR_NAMESPACE} ${functionName}: 'collectionName' is required.`)
   }
@@ -13,50 +13,50 @@ function sharedCollectionItemValidations (functionName, collectionName, fileName
   }
 }
 
-export function getItemFromCollection ({collections}, collectionName, fileName) {
-  sharedCollectionItemValidations('getItemFromCollection', collectionName, fileName)
+export function getItem ({collections}, collectionName, fileName) {
+  sharedItemValidations('getItem', collectionName, fileName)
 
   try {
     return collections[collectionName].data[fileName]
   } catch (error) {
-    console.warn(`${ERROR_NAMESPACE} getItemFromCollection: ${error}`) // eslint-disable-line
+    console.warn(`${ERROR_NAMESPACE} getItem: ${error}`) // eslint-disable-line
     return {}
   }
 }
 
-export function getCollectionItemState (state, collectionName, fileName) {
-  sharedCollectionItemValidations('getCollectionItemError', collectionName, fileName)
+export function getItemState (state, collectionName, fileName) {
+  sharedItemValidations('getItemState', collectionName, fileName)
 
   return {
-    isPending: isPendingCollectionItem(state, collectionName, fileName), // eslint-disable-line
-    isFulfilled: isFulfilledCollectionItem(state, collectionName, fileName), // eslint-disable-line
-    error: getCollectionItemError(state, collectionName, fileName) // eslint-disable-line
+    isPending: isPendingItem(state, collectionName, fileName), // eslint-disable-line
+    isFulfilled: isFulfilledItem(state, collectionName, fileName), // eslint-disable-line
+    error: getItemError(state, collectionName, fileName) // eslint-disable-line
   }
 }
 
-function getCollectionItemError ({collections}, collectionName, fileName) {
+function getItemError ({collections}, collectionName, fileName) {
   try {
     return !!collections[collectionName].data[fileName].error
   } catch (error) {
-    console.warn(`${ERROR_NAMESPACE} getCollectionItemError: ${error}`) // eslint-disable-line
+    console.warn(`${ERROR_NAMESPACE} getItemError: ${error}`) // eslint-disable-line
     return false
   }
 }
 
-function isPendingCollectionItem ({collections}, collectionName, fileName) {
+function isPendingItem ({collections}, collectionName, fileName) {
   try {
     return !!collections[collectionName].data[fileName].isFetching
   } catch (error) {
-    console.warn(`${ERROR_NAMESPACE} isPendingCollectionItem: ${error}`) // eslint-disable-line
+    console.warn(`${ERROR_NAMESPACE} isPendingItem: ${error}`) // eslint-disable-line
     return false
   }
 }
 
-function isFulfilledCollectionItem ({collections}, collectionName, fileName) {
+function isFulfilledItem ({collections}, collectionName, fileName) {
   try {
     return !!collections[collectionName].data[fileName].isFulfilled
   } catch (error) {
-    console.warn(`${ERROR_NAMESPACE} isFulfilledCollectionItem: ${error}`) // eslint-disable-line
+    console.warn(`${ERROR_NAMESPACE} isFulfilledItem: ${error}`) // eslint-disable-line
     return false
   }
 }

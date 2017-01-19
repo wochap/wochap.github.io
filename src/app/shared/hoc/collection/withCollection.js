@@ -3,7 +3,7 @@ import getDisplayName from 'recompose/getDisplayName'
 import {connect} from 'react-redux'
 import * as collectionPropTypes from 'hoc/collection/PropTypes'
 import {getCollection, getCollectionState} from 'app/selectors/collections'
-import {loadItemsFromCollection} from 'app/actions/collections'
+import {loadCollection} from 'app/actions/collections'
 
 function withCollection (WrappedComponent, collectionName) {
   class CollectionHOC extends React.Component {
@@ -35,7 +35,7 @@ function withCollection (WrappedComponent, collectionName) {
 
   function mapDispatchToProps (dispatch) {
     return {
-      fetchCollection: () => dispatch(loadItemsFromCollection(collectionName))
+      fetchCollection: () => dispatch(loadCollection(collectionName))
     }
   }
 

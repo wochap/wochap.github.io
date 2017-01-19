@@ -28,12 +28,12 @@ const arrayOfItemsSchema = arrayOf(itemSchema)
  * @param  {String} fileName       - The file name from the file that will be loaded.
  * @return {Object}                [description]
  */
-export function loadItemFromCollection (collectionName, fileName) {
+export function loadItem (collectionName, fileName) {
   if (!collectionName) {
-    throw new Error('(actions)[collection] loadItemFromCollection: `collectionName` is required.')
+    throw new Error('(actions)[collection] loadItem: `collectionName` is required.')
   }
   if (!fileName) {
-    throw new Error('(actions)[collection] loadItemFromCollection: `fileName` is required.')
+    throw new Error('(actions)[collection] loadItem: `fileName` is required.')
   }
 
   return {
@@ -53,9 +53,9 @@ export function loadItemFromCollection (collectionName, fileName) {
  * @param  {String} collectionName - The collection name where the item will be stored (data folder name).
  * @return {Object}                [description]
  */
-export function loadItemsFromCollection (collectionName) {
+export function loadCollection (collectionName) {
   if (!collectionName) {
-    throw new Error('[collection] `collectionName` is required.')
+    throw new Error('(actions)[collection] loadCollection: `collectionName` is required.')
   }
 
   return {
