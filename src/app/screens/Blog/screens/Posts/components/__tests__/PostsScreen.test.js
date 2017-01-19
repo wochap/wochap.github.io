@@ -6,7 +6,8 @@ describe('PostsScreen', () => {
   const props = {
     collectionState: {
       error: 'Error',
-      isPending: true
+      isPending: true,
+      isFulfilled: false
     },
     collection: []
   }
@@ -20,13 +21,14 @@ describe('PostsScreen', () => {
     expect(wrapper.find('.u-8/12@laptop p').text()).toEqual(`Posts Error: ${props.collectionState.error}`)
   })
 
-  it('show loading state', () => {
+  it('display pending state', () => {
     wrapper.setProps({
       collectionState: {
-        error: false
+        error: false,
+        isPending: true
       }
-    }, () => {
-      expect(wrapper.find('.u-8/12@laptop').text()).toEqual('Cargando posts...')
     })
+
+    expect(wrapper.find('ShimmerText').length).toBeTruthy()
   })
 })
