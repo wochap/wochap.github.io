@@ -17,8 +17,8 @@ describe('PostsScreen', () => {
     expect(wrapper.length).toBeTruthy()
   })
 
-  it('show error state', () => {
-    expect(wrapper.find('.u-8/12@laptop p').text()).toEqual(`Posts Error: ${props.collectionState.error}`)
+  it('display error state', () => {
+    expect(wrapper.find('SiteError').length).toBeTruthy()
   })
 
   it('display pending state', () => {

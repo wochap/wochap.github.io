@@ -17,6 +17,10 @@ describe('WorksScreen', () => {
     expect(wrapper.length).toBeTruthy()
   })
 
+  it('display error state', () => {
+    expect(wrapper.find('SiteError').length).toBeTruthy()
+  })
+
   it('display pending state', () => {
     wrapper.setProps({
       collectionState: {
