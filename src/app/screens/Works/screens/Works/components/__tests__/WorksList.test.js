@@ -3,9 +3,12 @@ import {shallow} from 'enzyme'
 import WorksList from '../WorksList'
 
 describe('WorksList', () => {
-  it('render component', () => {
-    const wrapper = shallow(<WorksList />)
+  const props = {
+    works: []
+  }
+  const wrapper = shallow(<WorksList {...props} />)
 
+  it('render component', () => {
     expect(wrapper.length).toBeTruthy()
   })
 })

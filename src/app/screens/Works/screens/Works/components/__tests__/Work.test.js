@@ -3,9 +3,16 @@ import {shallow} from 'enzyme'
 import Work from '../Work'
 
 describe('Work', () => {
-  it('render component', () => {
-    const wrapper = shallow(<Work />)
+  const props = {
+    work: {
+      imageUrl: '',
+      title: '',
+      fileName: ''
+    }
+  }
+  const wrapper = shallow(<Work {...props} />)
 
+  it('render component', () => {
     expect(typeof wrapper).toEqual('object')
   })
 })
