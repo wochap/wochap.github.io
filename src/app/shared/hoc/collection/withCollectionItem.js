@@ -1,9 +1,9 @@
 import React from 'react'
-import getDisplayName from 'recompose/getDisplayName'
 import {connect} from 'react-redux'
+import getDisplayName from 'recompose/getDisplayName'
+import * as collectionPropTypes from 'hoc/collection/PropTypes'
 import {getItemFromCollection, getCollectionItemState, getCollectionState} from 'app/selectors/collections'
 import {loadItemFromCollection} from 'app/actions/collections'
-import * as sharedPropTypes from './sharedPropTypes'
 
 function withItem (WrappedComponent, collectionName) {
   class ItemHOC extends React.Component {
@@ -14,15 +14,14 @@ function withItem (WrappedComponent, collectionName) {
         fileName: React.PropTypes.string.isRequired
       }).isRequired,
       fetchItemCollection: React.PropTypes.func.isRequired,
-      itemState: sharedPropTypes.itemState,
-      item: sharedPropTypes.item, // eslint-disable-line
-      collectionState: sharedPropTypes.collectionState // eslint-disable-line
+      itemState: collectionPropTypes.stateShape,
+      item: collectionPropTypes.itemShape, // eslint-disable-line
+      collectionState: collectionPropTypes.stateShape // eslint-disable-line
     }
 
     componentDidMount () {
       if (module.hot) {
         this.props.fetchItemCollection(this.props.params.fileName)
-
         return
       }
 

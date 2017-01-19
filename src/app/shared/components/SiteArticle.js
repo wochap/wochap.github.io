@@ -1,5 +1,6 @@
 import React from 'react'
-import * as sharedPropTypes from 'hoc/collection/sharedPropTypes'
+import * as collectionPropTypes from 'hoc/collection/PropTypes'
+import articleShape from 'PropTypes/articleShape'
 import NotFoundScreen from 'app/screens/NotFound/components/NotFoundScreen'
 import SiteError from 'components/SiteError'
 import Hero from 'components/Hero'
@@ -58,9 +59,9 @@ function SiteArticle ({item, itemState, collectionState, head}) {
 }
 
 SiteArticle.propTypes = {
-  item: sharedPropTypes.item,
-  itemState: sharedPropTypes.itemState,
-  collectionState: sharedPropTypes.collectionState,
+  item: articleShape,
+  itemState: collectionPropTypes.stateShape,
+  collectionState: collectionPropTypes.stateShape,
   head: React.PropTypes.shape({
     canonicalHref: React.PropTypes.string.isRequired
   }).isRequired

@@ -1,9 +1,9 @@
 import React from 'react'
 import getDisplayName from 'recompose/getDisplayName'
 import {connect} from 'react-redux'
+import * as collectionPropTypes from 'hoc/collection/PropTypes'
 import {getCollection, getCollectionState} from 'app/selectors/collections'
 import {loadItemsFromCollection} from 'app/actions/collections'
-import * as sharedPropTypes from './sharedPropTypes'
 
 function withCollection (WrappedComponent, collectionName) {
   class CollectionHOC extends React.Component {
@@ -11,8 +11,8 @@ function withCollection (WrappedComponent, collectionName) {
 
     static propTypes = {
       fetchCollection: React.PropTypes.func.isRequired,
-      collectionState: sharedPropTypes.collectionState,
-      collection: sharedPropTypes.collection // eslint-disable-line
+      collectionState: collectionPropTypes.stateShape,
+      collection: collectionPropTypes.collectionShape // eslint-disable-line
     }
 
     componentDidMount () {

@@ -1,7 +1,8 @@
 import React from 'react'
 import data from 'app/config/data'
+import * as collectionPropTypes from 'hoc/collection/PropTypes'
+import articleShape from 'PropTypes/articleShape'
 import withCollection from 'hoc/collection/withCollection'
-import * as sharedPropTypes from 'hoc/collection/sharedPropTypes'
 import ScreenHelmet from 'components/ScreenHelmet'
 import ShimmerText from 'components/ShimmerText'
 import SiteError from 'components/SiteError'
@@ -48,8 +49,8 @@ export function PostsScreen ({collectionState, collection}) {
 }
 
 PostsScreen.propTypes = {
-  collectionState: sharedPropTypes.collectionState,
-  collection: sharedPropTypes.collection
+  collectionState: collectionPropTypes.stateShape,
+  collection: React.PropTypes.arrayOf(articleShape)
 }
 
 export default withCollection(PostsScreen, 'posts')
