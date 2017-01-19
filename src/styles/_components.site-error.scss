@@ -34,6 +34,7 @@ $b: rgba(0,0,255,1);
     font-size: responsive 7em 10em; /* [2] */
     line-height: 1;
     margin: 0;
+    text-transform: uppercase;
     will-change: text-shadow;
   }
 
@@ -41,6 +42,11 @@ $b: rgba(0,0,255,1);
     font-size: $global-fz-h2;
     text-align: center;
   }
+
+.c-site-error--invert {
+  background-color: $white;
+  color: $black;
+}
 
 
 
