@@ -3,12 +3,24 @@ import data from 'app/config/data'
 import withCollection from 'hoc/collection/withCollection'
 import * as sharedPropTypes from 'hoc/collection/sharedPropTypes'
 import ScreenHelmet from 'components/ScreenHelmet'
+import ShimmerText from 'components/ShimmerText'
+import SiteError from 'components/SiteError'
 import PostsList from './PostsList'
 
 export function PostsScreen ({collectionState, collection}) {
-  const {isPending, error} = collectionState
-  const body = error ? (<p>Posts Error: {error}</p>) : (
-    isPending ? (<p>Cargando posts...</p>) : (<PostsList posts={collection} />)
+  const body = collectionState.error ? <SiteError title="Ups" message={collectionState.error} invert /> : (
+    collectionState.isPending ? (
+      <ul className="u-list-reset">
+        <ShimmerText>
+          {[...new Array(6)].map((_, index) => (
+            <li className={index === 3 ? '' : 'u-pb4'} key={index}>
+              <span className="u-block u-fz-lg u-line-height-1">Cargando</span>
+              <span className="u-block u-fz-h0 u-line-height-1">Cargando</span>
+            </li>
+          ))}
+        </ShimmerText>
+      </ul>
+    ) : (<PostsList posts={collection} />)
   )
 
   return (
