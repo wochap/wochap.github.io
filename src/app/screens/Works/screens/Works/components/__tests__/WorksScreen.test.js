@@ -6,13 +6,25 @@ describe('WorksScreen', () => {
   const props = {
     collectionState: {
       error: 'Error',
-      isPending: true
+      isPending: true,
+      isFulfilled: false
     },
     collection: []
   }
   const wrapper = shallow(<WorksScreen {...props} />)
 
   it('render component', () => {
-    expect(typeof wrapper).toEqual('object')
+    expect(wrapper.length).toBeTruthy()
+  })
+
+  it('display pending state', () => {
+    wrapper.setProps({
+      collectionState: {
+        error: false,
+        isPending: true
+      }
+    })
+
+    expect(wrapper.find('ShimmerText').length).toBeTruthy()
   })
 })
