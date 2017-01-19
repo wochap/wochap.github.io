@@ -17,11 +17,11 @@ describe('PostsList', () => {
     expect(wrapper.find('Post').length === 2).toBeTruthy()
   })
 
-  it('show empty list message', () => {
+  it('show empty pending state', () => {
     wrapper.setProps({
       posts: []
     })
 
-    expect(wrapper.text()).toEqual('No hay posts que mostrar.')
+    expect(wrapper.text()).toEqual('No hay artículos que mostrar.')
   })
 })
