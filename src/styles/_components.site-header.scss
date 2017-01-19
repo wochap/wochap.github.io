@@ -44,6 +44,7 @@
     padding-left: $bar-width * 3;
     position: relative;
     text-transform: uppercase;
+    z-index: 2;
 
     &::before {
       background-color: currentColor;
