@@ -25,16 +25,16 @@ export default function render (locals) {
         const {pathname} = renderProps.location
 
         if (pathname === '/blog') {
-          await store.dispatch(collectionActions.loadItemsFromCollection('posts'))
+          await store.dispatch(collectionActions.loadCollection('posts'))
         }
         if (pathname === '/works') {
-          await store.dispatch(collectionActions.loadItemsFromCollection('works'))
+          await store.dispatch(collectionActions.loadCollection('works'))
         }
         if (fileName && pathname.includes('/blog/')) {
-          await store.dispatch(collectionActions.loadItemFromCollection('posts', fileName))
+          await store.dispatch(collectionActions.loadItem('posts', fileName))
         }
         if (fileName && pathname.includes('/works/')) {
-          await store.dispatch(collectionActions.loadItemFromCollection('works', fileName))
+          await store.dispatch(collectionActions.loadItem('works', fileName))
         }
 
         const bodyHTML = ReactDOM.renderToString((
