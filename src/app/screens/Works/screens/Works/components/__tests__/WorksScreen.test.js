@@ -25,7 +25,8 @@ describe('WorksScreen', () => {
     wrapper.setProps({
       collectionState: {
         error: false,
-        isPending: true
+        isPending: true,
+        isFulfilled: false
       }
     })
 

@@ -5,13 +5,18 @@ import SiteArticle from '../SiteArticle'
 
 describe('SiteArticle', () => {
   const props = {
+    head: {
+      canonicalHref: ''
+    },
     item: mocks.collectionItem,
     itemState: {
       error: 'An fake error',
-      isFetching: true,
+      isPending: true,
       isFulfilled: true
     },
     collectionState: {
+      error: false,
+      isPending: false,
       isFulfilled: true
     }
   }
@@ -29,14 +34,16 @@ describe('SiteArticle', () => {
     wrapper.setProps({
       itemState: {
         error: false,
-        isFetching: false,
+        isPending: false,
         isFulfilled: false
       },
       collectionState: {
+        error: false,
+        isPending: false,
         isFulfilled: false
       }
-    }, () => {
-      expect(wrapper.find('NotFoundScreen')).toBeTruthy()
     })
+
+    expect(wrapper.find('NotFoundScreen')).toBeTruthy()
   })
 })
