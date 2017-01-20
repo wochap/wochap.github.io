@@ -1,6 +1,6 @@
 import 'src/styles/main.scss'
+import 'src/app/bootstrap'
 
-import moment from 'moment'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {AppContainer} from 'react-hot-loader' // eslint-disable-line
@@ -9,8 +9,6 @@ import {Provider} from 'react-redux'
 import {syncHistoryWithStore} from 'react-router-redux'
 import routes from 'app/config/routes'
 import configureStore from './store/configureStore'
-
-moment.locale('es')
 
 const rootEl = document.getElementById('root')
 const initialState = window.__INITIAL_STATE__ || undefined
