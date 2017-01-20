@@ -12,7 +12,7 @@ function SiteError ({headTitle, title, message, invert}) {
 }
 
 SiteError.propTypes = {
-  headTitle: React.PropTypes.string.isRequired,
+  headTitle: React.PropTypes.string,
   title: React.PropTypes.string.isRequired,
   message: React.PropTypes.string.isRequired,
   invert: React.PropTypes.bool
