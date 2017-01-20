@@ -25,7 +25,7 @@ function ContactScreen () {
           </ExternalLink>
         </li>
         <li className="u-inline-block u-p3">
-          <ExternalLink className="u-block" href="https://www.npmjs.com/~wochap" title="NPM">
+          <ExternalLink className="u-block u-color-npm" href="https://www.npmjs.com/~wochap" title="NPM">
             <i className="u-icon u-block">npm</i>
           </ExternalLink>
         </li>
@@ -35,7 +35,7 @@ function ContactScreen () {
           </ExternalLink>
         </li>
         <li className="u-inline-block u-p3">
-          <ExternalLink className="u-block" href="https://twitter.com/nwochap" title="Twitter">
+          <ExternalLink className="u-block u-color-twitter" href="https://twitter.com/nwochap" title="Twitter">
             <i className="u-icon u-block">twitter</i>
           </ExternalLink>
         </li>
