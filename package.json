@@ -7,7 +7,7 @@
     "test": "jest --config=build/config/jest/index.json",
     "test:watch": "jest --config=build/config/jest/index.json --watch",
     "test:cover": "jest --config=build/config/jest/index.json --coverage",
-    "test:cover:travis": "cat ./coverage/lcov.info | coveralls",
+    "test:cover:travis": "jest --config=build/config/jest/index.json --coverage && cat ./coverage/lcov.info | coveralls",
     "build": "run-s build:start start",
     "build:start": "babel-node build/tasks/build.js",
     "deploy": "gh-pages -d dist -b master"
