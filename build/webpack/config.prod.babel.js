@@ -4,8 +4,6 @@ import webpackMerge from 'webpack-merge'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import InlineManifestWebpackPlugin from 'inline-manifest-webpack-plugin'
-import AssetsPlugin from 'assets-webpack-plugin'
-import CompressionWebpackPlugin from 'compression-webpack-plugin'
 import Visualizer from 'webpack-visualizer-plugin'
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 
@@ -106,19 +104,6 @@ export default webpackMerge(webpackConfigBase, {
     // https://www.npmjs.com/package/inline-manifest-webpack-plugin
     new InlineManifestWebpackPlugin({
       name: 'webpackManifest'
-    }),
-    // build time gzip
-    new CompressionWebpackPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.js$|\.css$/,
-      threshold: 10240,
-      minRatio: 0.8
-    }),
-    // generate a webpack-assets.json file that contains all assets' paths
-    // https://github.com/kossnocorp/assets-webpack-plugin
-    new AssetsPlugin({
-      path: projectDistPath
     }),
     // Visualize and analyze your Webpack bundle to see which modules
     // are taking up space and which might be duplicates.
