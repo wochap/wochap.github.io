@@ -20,7 +20,7 @@ function SiteArticle ({item, itemState, collectionState, head}) {
 
   if (itemState.isFulfilled) {
     return (
-      <article className="u-mb5">
+      <article className="u-mb5 u-overflow-hidden">
         <ScreenHelmet
           title={item.frontMatter.title}
           description={item.frontMatter.description}
