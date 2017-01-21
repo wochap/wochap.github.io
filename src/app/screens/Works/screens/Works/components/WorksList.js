@@ -1,7 +1,7 @@
 import React from 'react'
 import Work from './Work'
 
-function WorksList ({works}) { // eslint-disable-line
+function WorksList ({works}) {
   if (works.length === 0) {
     return <p>No hay trabajos que mostrar.</p>
   }
@@ -17,11 +17,12 @@ function WorksList ({works}) { // eslint-disable-line
   )
 }
 
-// TODO: complete propTypes
-// WorkList.propTypes = {
-//   works: React.PropTypes.arrayOf(
-//     React.PropTypes.
-//   )
-// }
+WorksList.propTypes = {
+  works: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      frontMatter: Work.propTypes.work
+    })
+  ).isRequired
+}
 
 export default WorksList

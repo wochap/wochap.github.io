@@ -43,7 +43,7 @@ export function WorksScreen ({collectionState, collection}) {
 
 WorksScreen.propTypes = {
   collectionState: collectionPropTypes.stateShape,
-  collection: React.PropTypes.arrayOf(articleShape)
+  collection: React.PropTypes.arrayOf(articleShape).isRequired
 }
 
 export default withCollection(WorksScreen, 'works')

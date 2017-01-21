@@ -1,13 +1,13 @@
+import {frontMatterShape} from 'PropTypes/articleShape'
 import React from 'react'
 import {Link} from 'react-router'
 
-function Work ({work}) { // eslint-disable-line
+function Work ({work}) {
   return (
     <article
       className="c-work"
       style={{
         backgroundImage: `url(${work.imageUrl})`
-        // backgroundImage: 'url(http://placehold.it/350x410)'
       }}
     >
       <Link className="c-work__link" to={`/works/${work.fileName}`}>
@@ -18,6 +18,8 @@ function Work ({work}) { // eslint-disable-line
   )
 }
 
-// TODO: add propTypes
+Work.propTypes = {
+  work: frontMatterShape.isRequired
+}
 
 export default Work
