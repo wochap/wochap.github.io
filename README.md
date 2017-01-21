@@ -1,5 +1,8 @@
 # wochap
 
+[![Build Status](https://travis-ci.org/wochap/wochap.github.io.svg?branch=dev)](https://travis-ci.org/wochap/wochap.github.io)
+[![Coverage Status](https://coveralls.io/repos/github/wochap/wochap.github.io/badge.svg?branch=dev)](https://coveralls.io/github/wochap/wochap.github.io?branch=dev)
+
 Personal website powered by [React](https://facebook.github.io/react/) and [Webpack](https://webpack.github.io/)
 
 ## Development
@@ -12,12 +15,12 @@ $ npm install
 $ npm run dev
 
 # run all tests and watch
-$ npm run test
+$ npm run test:watch
 
 # run all tests, watch and create a coverage report
-$ npm run test-coverage
+$ npm run test:coverage
 
-# build for production with minification and serve dist files at localhost:8080
+# build for production with minification and serve dist folder
 $ npm run build
 ```
 
@@ -62,4 +65,5 @@ To add a new `collection` dispatch the actions from `src/app/actions/collections
 
 #### To learn
 
-* [share propTypes between components](http://stackoverflow.com/questions/30265327/react-js-and-proptypes-repetition-across-shared-components)
+* [Share propTypes between components](http://stackoverflow.com/questions/30265327/react-js-and-proptypes-repetition-across-shared-components)
+* [Complete intro to react](https://btholt.github.io/complete-intro-to-react/)
