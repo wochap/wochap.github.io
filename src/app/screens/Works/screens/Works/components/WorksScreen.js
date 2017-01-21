@@ -34,8 +34,8 @@ export function WorksScreen ({collectionState, collection}) {
         description={data.screens.works.description}
         canonicalHref={data.screens.works.canonicalHref}
       />
-      <h2 className="u-mb3 u-caps u-center">Mis ultimos proyectos</h2>
-      <p className="u-mb5 u-fz-sm u-center u-muted">Proyectos en los que trabajé.</p>
+      <h2 className="u-mb3 u-caps u-center">Portafolio</h2>
+      <p className="u-mb5 u-fz-sm u-center u-muted">Proyectos personales, freelance y como colaborador Front-End</p>
       {body}
     </section>
   )
