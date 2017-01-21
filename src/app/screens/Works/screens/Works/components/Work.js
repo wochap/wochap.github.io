@@ -1,4 +1,4 @@
-import {frontMatterShape} from 'PropTypes/articleShape'
+import {frontMatterShape} from 'PropTypes/article'
 import React from 'react'
 import {Link} from 'react-router'
 

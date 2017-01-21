@@ -1,7 +1,7 @@
 import React from 'react'
 import data from 'app/config/data'
 import * as collectionPropTypes from 'hoc/collection/PropTypes'
-import articleShape from 'PropTypes/articleShape'
+import {articleShape} from 'PropTypes/article'
 import withCollection from 'hoc/collection/withCollection'
 import ScreenHelmet from 'components/ScreenHelmet'
 import ShimmerText from 'components/ShimmerText'

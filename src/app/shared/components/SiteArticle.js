@@ -1,6 +1,6 @@
 import React from 'react'
 import * as collectionPropTypes from 'hoc/collection/PropTypes'
-import articleShape from 'PropTypes/articleShape'
+import {articleShape} from 'PropTypes/article'
 import NotFoundScreen from 'app/screens/NotFound/components/NotFoundScreen'
 import SiteError from 'components/SiteError'
 import Hero from 'components/Hero'
