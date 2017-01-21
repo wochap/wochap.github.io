@@ -46,15 +46,15 @@ export default {
         test: /\.json$/,
         loader: 'json-loader'
       }, {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif)(\?.*)?$/,
         loader: 'url-loader',
         include: projectSourcePath,
         query: {
           limit: 10000,
-          name: 'static/img/[name].[ext]'
+          name: 'static/images/[name].[ext]'
         }
       }, {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /\.(svg|woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
         include: projectSourcePath,
         query: {
