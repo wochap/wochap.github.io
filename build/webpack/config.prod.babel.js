@@ -86,6 +86,7 @@ export default webpackMerge(webpackConfigBase, {
     // generate favicon icons
     new FaviconsWebpackPlugin({
       logo: path.join(projectSourcePath, 'favicon.png'),
+      prefix: 'static/icons-[hash]/',
       title: 'wochap',
       icons: {
         android: true,
