@@ -29,9 +29,14 @@
   font-weight: 400; /* [1] */
   letter-spacing: -0.1em; /* [2] */
   line-height: 1.5;
+  word-break: break-all;
 }
 
 
 .u-color-npm {
   color: #CB3837;
+}
+
+.u-color-freecodecamp {
+  color: #006400;
 }

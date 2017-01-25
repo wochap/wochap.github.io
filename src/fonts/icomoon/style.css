@@ -1,11 +1,9 @@
-@import "variables";
-
 @font-face {
   font-family: 'icomoon';
   src:
-    url('#{$icomoon-font-path}/icomoon.ttf?bpv4hj') format('truetype'),
-    url('#{$icomoon-font-path}/icomoon.woff?bpv4hj') format('woff'),
-    url('#{$icomoon-font-path}/icomoon.svg?bpv4hj#icomoon') format('svg');
+    url('fonts/icomoon.ttf?bpv4hj') format('truetype'),
+    url('fonts/icomoon.woff?bpv4hj') format('woff'),
+    url('fonts/icomoon.svg?bpv4hj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,44 +33,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-free_code_camp {
-  &:before {
-    content: $icon-free_code_camp;
-  }
+.icon-free_code_camp:before {
+  content: "\e901";
 }
-.icon-arrow_drop_down_circle {
-  &:before {
-    content: $icon-arrow_drop_down_circle;
-  }
+.icon-arrow_drop_down_circle:before {
+  content: "\e900";
 }
-.icon-facebook {
-  &:before {
-    content: $icon-facebook;
-  }
+.icon-facebook:before {
+  content: "\ea91";
 }
-.icon-twitter {
-  &:before {
-    content: $icon-twitter;
-  }
+.icon-twitter:before {
+  content: "\ea96";
 }
-.icon-rss {
-  &:before {
-    content: $icon-rss;
-  }
+.icon-rss:before {
+  content: "\ea9b";
 }
-.icon-github {
-  &:before {
-    content: $icon-github;
-  }
+.icon-github:before {
+  content: "\eab0";
 }
-.icon-codepen {
-  &:before {
-    content: $icon-codepen;
-  }
+.icon-codepen:before {
+  content: "\eae8";
 }
-.icon-npm {
-  &:before {
-    content: $icon-npm;
-  }
+.icon-npm:before {
+  content: "\eab1";
 }
 

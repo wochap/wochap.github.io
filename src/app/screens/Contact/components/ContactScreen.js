@@ -30,6 +30,11 @@ function ContactScreen () {
           </ExternalLink>
         </li>
         <li className="u-inline-block u-p3">
+          <ExternalLink className="u-block u-color-freecodecamp" href="https://www.freecodecamp.com/wochap" title="Free code camp">
+            <i className="u-icon u-block">freecodecamp</i>
+          </ExternalLink>
+        </li>
+        <li className="u-inline-block u-p3">
           <ExternalLink className="u-block" href="http://codepen.io/wochap" title="Codepen">
             <i className="u-icon u-block">codepen</i>
           </ExternalLink>
