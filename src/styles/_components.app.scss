@@ -6,12 +6,17 @@
  * 1. Hold the absolute elements. (This element will have the [100vw - the scrollbar width] ever)
  * 2. Fix height on old safari browsers.
  * 3. Fix pages on print media.
+ * 4. Fix android browser scrollbar.
  */
 
 .c-app {
   -webkit-overflow-scrolling: touch;
+  display: block;
+  height: 100vh;
+  max-height: 700px; /* [2] */
   overflow-x: hidden;
   overflow-y: scroll;
+  width: 100%;
 
   @media print {
     overflow-y: initial; /* [3] */
@@ -19,7 +24,8 @@
 }
 
   .c-app__wrapper {
-    height: 100vh;
-    max-height: 700px; /* [2] */
+    display: block;
+    overflow: hidden; /* [4] */
     position: relative; /* [1] */
+    width: 100%;
   }
