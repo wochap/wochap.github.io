@@ -7,6 +7,12 @@ if (!window.Promise) {
   }, 'promise-polyfill')
 }
 
+if (!String.prototype.includes) {
+  require.ensure([], (require) => {
+    require('string.prototype.includes')
+  }, 'string-prototype-includes')
+}
+
 require.ensure([], (require) => {
   const platform = require('platform')
   window._platform = platform
