@@ -1,6 +1,10 @@
 import topBar from 'topbar'
 import moment from 'moment'
 
+/**
+ * POLYFILLS
+ */
+
 if (!window.Promise) {
   require.ensure([], (require) => {
     window.Promise = require('promise-polyfill')
@@ -19,7 +23,12 @@ require.ensure([], (require) => {
   document.querySelector('html').classList.add(platform.layout)
 }, 'platform')
 
+/**
+ * MODULES GLOBAL CONFIG
+ */
+
 moment.locale('es')
+
 topBar.config({
   barThickness: 12,
   barColors: [
