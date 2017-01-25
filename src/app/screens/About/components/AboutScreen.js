@@ -58,16 +58,13 @@ function AboutScreen () {
               </ul>
             </li>
             <li className="o-grid__item u-12/12 u-6/12@tablet">
-              <h3 className="u-fz-inherit u-mb2">JS (ES2015)</h3>
+              <h3 className="u-fz-inherit u-mb2">JS (ES2017)</h3>
               <ul>
                 <li>
                   <strong>Frameworks: </strong> <ExternalLink href="https://facebook.github.io/react/" title="React" />, <ExternalLink href="https://vuejs.org/" title="Vue.js" />
                 </li>
                 <li>
                   <strong>Coding conventions/Guidelines: </strong> <ExternalLink href="http://standardjs.com/rules.html" title="JavaScript Standard Style" />, <ExternalLink href="https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346" title="by Route hierarchy" />
-                </li>
-                <li>
-                  <strong>Procesadores: </strong> <ExternalLink href="https://babeljs.io/" title="BABEL" />
                 </li>
               </ul>
             </li>
