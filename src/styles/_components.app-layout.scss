@@ -9,7 +9,7 @@
  * 4. Fix android browser scrollbar.
  */
 
-.c-app {
+.c-app-layout {
   -webkit-overflow-scrolling: touch;
   display: block;
   height: 100vh;
@@ -23,8 +23,9 @@
   }
 }
 
-  .c-app__wrapper {
+  .c-app-layout__wrapper {
     display: block;
+    min-height: 100%;
     overflow: hidden; /* [4] */
     position: relative; /* [1] */
     width: 100%;

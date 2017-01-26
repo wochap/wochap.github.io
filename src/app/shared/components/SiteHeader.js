@@ -11,6 +11,13 @@ class SiteHeader extends React.Component {
     isNavOpen: false
   }
 
+  shouldComponentUpdate ({isFixed}, {isNavOpen}) { // eslint-disable-line
+    if (this.props.isFixed !== isFixed || this.state.isNavOpen !== isNavOpen) {
+      return true
+    }
+    return false
+  }
+
   _toggleNav = () => {
     const {isNavOpen} = this.state
 

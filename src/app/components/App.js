@@ -1,41 +1,18 @@
 import React from 'react'
-import SiteHeader from './SiteHeader'
-import SiteFooter from './SiteFooter'
+import AppLayout from 'components/AppLayout'
 
-function App ({location, children}) {
-  const isHome = location ? location.pathname === '/' : false
-  const isNotFound = location ? location.pathname === '/404' || location.pathname === '/404.html' : false
-  let isFixed = false
-
-  if (location) {
-    if (location.pathname === '/' ||
-        location.pathname === '/404' ||
-        location.pathname === '/404.html' ||
-        location.pathname.toLowerCase().includes('/works/') ||
-        location.pathname.toLowerCase().includes('/blog/')) {
-      isFixed = true
-    }
-
-    if (location.pathname.toLowerCase() === '/works/' ||
-        location.pathname.toLowerCase() === '/blog/') {
-      isFixed = false
-    }
-  }
+function App ({children, routes}) { // eslint-disable-line
+  const {layoutProps} = routes[routes.length - 1]
 
   return (
-    <main className="c-app">
-      <div className="c-app__wrapper">
-        <SiteHeader isFixed={isFixed} />
-        {children}
-        {isHome || isNotFound ? null : <SiteFooter />}
-      </div>
-    </main>
+    <AppLayout {...layoutProps}>
+      {children}
+    </AppLayout>
   )
 }
 
 App.propTypes = {
-  children: React.PropTypes.element,
-  location: React.PropTypes.object // eslint-disable-line
+  children: React.PropTypes.element
 }
 
 export default App

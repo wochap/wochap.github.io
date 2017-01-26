@@ -10,7 +10,7 @@ export default {
   path: '/',
   component: App,
   onChange () {
-    document.getElementsByClassName('c-app__wrapper')[0].scrollIntoView()
+    document.getElementsByClassName('c-app-layout__wrapper')[0].scrollIntoView()
   },
   indexRoute: Home,
   childRoutes: [
