@@ -31,6 +31,7 @@ module.exports = {
     'no-nested-ternary': [0],
     'react/no-danger': [0],
     'import/prefer-default-export': [0],
+    'import/no-named-as-default': [0],
     'max-len': [0],
     'no-console': DEBUG ? 0 : 2,
     'no-debugger': DEBUG ? 0 : 2
