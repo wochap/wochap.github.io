@@ -1,4 +1,4 @@
-import WorksScreen from './components/WorksScreen' // eslint-disable-line
+import WorksScreen from './components/WorksScreen'
 
 export default {
   path: '',
