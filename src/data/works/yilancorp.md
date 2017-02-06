@@ -6,7 +6,7 @@ heroImageUrl: /static/images/works/hero/yilancorp.jpg
 title: Yilancorp
 tasks: Desarrollo de landing page.
 role: Front-end developer
-siteLink: https://yilancorp.firebaseapp.com/
+siteLink: http://yilancorp.com/
 description: "Yilancorp es una empresa que ofrece productos y servicios: inpeccion de mercaderías, contizaciones y verificacion de fabricas."
 tags:
   - Front-end
