@@ -9,10 +9,7 @@
  * 3. Vertical center children.
  */
 
-.c-home-screen {
-  height: 100vh;
-  max-height: 700px; /* [2] */
-}
+.c-home-screen {}
 
   .c-home-screen__hero {
     background-color: #956977;
@@ -22,9 +19,10 @@
     background-size: cover; /* [1] */
     display: flex; /* [3] */
     flex-direction: column; /* [3] */
-    height: 100%;
+    height: 100vh;
     justify-content: center; /* [3] */
-    min-height: 600px;
+    max-height: 700px; /* [2] */
+    min-height: 600px; /* [2] */
     overflow: hidden;
     padding-top: $global-header-height;
     position: relative;
