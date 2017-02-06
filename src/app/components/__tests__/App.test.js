@@ -5,7 +5,11 @@ import App from '../App'
 describe('App', () => {
   it('render children', () => {
     const app = shallow((
-      <App>
+      <App
+        routes={[
+          {layoutProps: {}}
+        ]}
+      >
         <h1>children</h1>
       </App>
     ))
