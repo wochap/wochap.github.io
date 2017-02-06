@@ -84,17 +84,33 @@ webpack(webpackConfigProd).run((err, stats) => {
 
         // ensure all our static, local assets will be cached in background
         staticFileGlobs: [
-          `${projectDistPath}/**/!(*map*|*yml*)`,
+          // `${projectDistPath}/**/!(*map*)`,
+          `${projectDistPath}/about/**/*`,
+          `${projectDistPath}/blog/**/*`,
+          `${projectDistPath}/contact/**/*`,
+          `${projectDistPath}/static/css/**/!(*map*)`,
+          `${projectDistPath}/static/fonts/**/*`,
+          // `${projectDistPath}/static/images/tacna.jpg`,
+          // `${projectDistPath}/static/images/works/*`,
+          `${projectDistPath}/static/js/**/!(*map*)`,
+          // `${projectDistPath}/static/cv_es.pdf`,
+          `${projectDistPath}/works/**/*`,
+          `${projectDistPath}/404.html`,
+          `${projectDistPath}/app-manifest.json`,
+          `${projectDistPath}/index.html`
         ],
         stripPrefix: projectDistPath,
 
         runtimeCaching: [
           {
-            handler: 'networkFirst',
-            urlPattern: /.(svg, eot, ttf, woff, woff2)$/
-          }, {
             handler: 'cacheFirst',
-            urlPattern: /^http:\/\/fonts.googleapis.com/
+            urlPattern: /.(svg|eot|ttf|woff|woff2)$/
+          }, {
+            handler: 'fastest',
+            urlPattern: /.(png|jpg|jpeg|gif)$/
+          }, {
+            handler: 'networkFirst',
+            urlPattern: /.pdf$/
           }
         ],
 
