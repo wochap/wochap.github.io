@@ -30,9 +30,6 @@ require.ensure([], (require) => {
 moment.locale('es')
 
 topBar.config({
-  barThickness: 12,
-  barColors: [
-    '#000000'
-  ],
+  barThickness: 4,
   shadowColor: 'rgba(255, 255, 255, .5)'
 })
