@@ -1,31 +1,11 @@
 import React from 'react'
 import data from 'app/config/data'
-import * as collectionPropTypes from 'hoc/collection/PropTypes'
-import {articleShape} from 'PropTypes/article'
-import withCollection from 'hoc/collection/withCollection'
 import ScreenHelmet from 'components/ScreenHelmet'
-import ShimmerText from 'components/ShimmerText'
-import SiteError from 'components/SiteError'
-import PostsList from './PostsList'
+import Posts from 'components/Posts'
 
-export function PostsScreen ({collectionState, collection}) {
-  const body = collectionState.error ? <SiteError title="Ups" message={collectionState.error} invert /> : (
-    collectionState.isPending ? (
-      <ul className="u-list-reset u-m0">
-        <ShimmerText>
-          {[...new Array(3)].map((_, index) => (
-            <li className={index === 2 ? '' : 'u-pb4'} key={index}>
-              <span className="u-block u-fz-lg u-line-height-1">Cargando</span>
-              <span className="u-block u-fz-h0 u-line-height-1">Cargando</span>
-            </li>
-          ))}
-        </ShimmerText>
-      </ul>
-    ) : (<PostsList posts={collection} />)
-  )
-
+function PostsScreen () {
   return (
-    <section className="o-wrapper u-overflow-hidden u-mb5">
+    <main className="o-wrapper u-overflow-hidden u-mb5">
       <ScreenHelmet
         title={data.screens.blog.title}
         description={data.screens.blog.description}
@@ -39,18 +19,12 @@ export function PostsScreen ({collectionState, collection}) {
           <p className="u-fw-s-bold u-mb3">Sígueme @{data.twitterUser}</p>
           <p className="u-fz-sm">{data.about}</p>
         </div>
-        <section className="o-grid__item u-12/12 u-8/12@laptop">
-          <h2 className="u-center u-mb4 u-caps">Artículos</h2>
-          {body}
-        </section>
+        <div className="o-grid__item u-12/12 u-8/12@laptop">
+          <Posts />
+        </div>
       </div>
-    </section>
+    </main>
   )
 }
 
-PostsScreen.propTypes = {
-  collectionState: collectionPropTypes.stateShape,
-  collection: React.PropTypes.arrayOf(articleShape).isRequired
-}
-
-export default withCollection(PostsScreen, 'posts')
+export default PostsScreen
