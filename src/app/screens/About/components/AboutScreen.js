@@ -44,16 +44,16 @@ function AboutScreen () {
         <section className="u-mb5">
           <h2 className="u-caps u-mb3">Skills</h2>
           <ul className="o-grid o-grid--gutter-x-5 o-grid--gutter-y-3 u-list-reset">
-            {aboutData.skills.map(skill => (
-              <li className="o-grid__item u-12/12 u-6/12@tablet">
+            {aboutData.skills.map((skill, index) => (
+              <li className="o-grid__item u-12/12 u-6/12@tablet" key={index}>
                 <h3 className="u-fz-inherit u-mb2">{skill.title}</h3>
                 <ul className="u-mb0">
-                  {skill.rows.map(row => (
-                    <li>
-                      <strong>{row.title}: </strong> {row.items.map((item, index) => (
+                  {skill.rows.map((row, _index) => (
+                    <li key={_index}>
+                      <strong>{row.title}: </strong> {row.items.map((item, __index) => (
                         [
                           <ExternalLink href={item.link} title={item.title} />,
-                          index === row.items.length - 1 ? null : ', '
+                          __index === row.items.length - 1 ? null : ', '
                         ]
                       ))}
                     </li>
@@ -66,12 +66,12 @@ function AboutScreen () {
         <section>
           <h2 className="u-caps u-mb3">Cursos que realize</h2>
           <ul className="o-grid o-grid--gutter-x-5 o-grid--gutter-y-3 u-list-reset">
-            {aboutData.moocs.map(mooc => (
-              <li className="o-grid__item u-12/12 u-6/12@tablet">
+            {aboutData.moocs.map((mooc, index) => (
+              <li className="o-grid__item u-12/12 u-6/12@tablet" key={index}>
                 <h3 className="u-fz-inherit u-mb3">{mooc.title}</h3>
                 <ul className="u-mb0">
-                  {mooc.courses.map(course => (
-                    <li>
+                  {mooc.courses.map((course, _index) => (
+                    <li key={_index}>
                       <h4 className="u-fz-inherit u-mb0">
                         <ExternalLink href={course.link} title={course.title} />
                       </h4>

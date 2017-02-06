@@ -107,6 +107,9 @@ export default {
             {
               title: 'Jest',
               link: 'https://facebook.github.io/jest/'
+            }, {
+              title: 'BrowserSync',
+              link: 'https://browsersync.io/'
             }
           ]
         }
