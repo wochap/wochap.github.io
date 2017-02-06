@@ -3,6 +3,7 @@ date: 12-01-2017
 formattedDate: Enero 2017
 imageUrl: /static/images/works/gean-marroquin.png
 title: Gean Marroquin
+source: https://github.com/wochap/wochap.github.io
 role: Front-end developer
 siteLink: https://geanmarroquin.com/
 description: "Mi sitio personal."

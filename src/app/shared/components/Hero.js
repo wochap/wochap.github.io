@@ -12,7 +12,7 @@ function Hero ({
 }) {
   const backgroundImage = data.heroImageUrl ? `url(${data.heroImageUrl})` : null
   const formattedDate = data.formattedDate || formatDate(data.date)
-  const footer = data.role || data.tasks || data.siteLink || data.repo ? (
+  const footer = data.role || data.tasks || data.siteLink || data.source ? (
     <ul className="c-hero__footer">
       {data.role && (
         <li>
@@ -26,10 +26,10 @@ function Hero ({
           {data.tasks}
         </li>
       )}
-      {data.repo && (
+      {data.source && (
         <li>
-          <strong>Repositorio: </strong>
-          <ExternalLink href={data.repo} title={data.repo} />
+          <strong>Source: </strong>
+          <ExternalLink href={data.source} title={data.source} />
         </li>
       )}
       {data.siteLink && (
