@@ -24,10 +24,10 @@ export default function render (locals) {
         const {fileName} = renderProps.params
         const {pathname} = renderProps.location
 
-        if (pathname === '/blog') {
+        if (pathname === '/blog' || pathname === '/') {
           await store.dispatch(collectionActions.loadCollection('posts'))
         }
-        if (pathname === '/works') {
+        if (pathname === '/works' || pathname === '/') {
           await store.dispatch(collectionActions.loadCollection('works'))
         }
         if (fileName && pathname.includes('/blog/')) {
