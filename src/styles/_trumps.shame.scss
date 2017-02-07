@@ -12,6 +12,12 @@
   transform: translateX(calc(-1 * ((100vw - 100%) / 2))); /* HACK: full width img */
 }
 
+.c-markdown-body img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .c-markdown-body div img {
   max-width: none; /* HACK: full width img */
   width: calc(100vw); /* HACK: full width img */
@@ -19,11 +25,14 @@
 
 
 /**
- * Fix IE, Edge transform bugs.
+ * Fix IE calc in transform bug.
  */
 
-.Trident .c-markdown-body div img,
-.EdgeHTML .c-markdown-body div img {
+.Trident .c-markdown-body div {
+  transform: none;
+}
+
+.Trident .c-markdown-body div img {
   max-width: 100%;
   width: 100%;
 }
