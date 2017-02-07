@@ -1,0 +1,2 @@
+webpackJsonp([9,17],{254:function(e,t,a){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}function u(e){return f.default.createElement(_.default,(0,r.default)({},e,{head:{canonicalHref:d.default.screens.blog.canonicalHref}}))}Object.defineProperty(t,"__esModule",{value:!0});var l=a(30),r=n(l);t.PostScreen=u;var c=a(1),f=n(c),o=a(10),d=n(o),s=a(143),i=n(s),p=a(140),_=n(p);t.default=(0,i.default)(u,"posts")}});
+//# sourceMappingURL=PostScreen.55403e8a.chunk.js.map
