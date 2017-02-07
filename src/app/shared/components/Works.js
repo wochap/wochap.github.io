@@ -6,7 +6,7 @@ import ShimmerText from 'components/ShimmerText'
 import SiteError from 'components/SiteError'
 import WorksList from './WorksList'
 
-export function Works ({collectionState, collection, className}) {
+export function Works ({collectionState, collection, className, id}) {
   const body = collectionState.error ? <SiteError title="Ups" message={collectionState.error} /> : (
     collectionState.isPending ? (
       <ShimmerText block>
@@ -24,7 +24,7 @@ export function Works ({collectionState, collection, className}) {
   )
 
   return (
-    <section className={`o-wrapper ${className}`}>
+    <section className={`o-wrapper ${className}`} id={id}>
       <h2 className="u-mb3 u-caps u-center">Portafolio</h2>
       <p className="u-mb5 u-fz-sm u-center u-muted">Proyectos personales, freelance y como colaborador Front-End</p>
       {body}
@@ -35,7 +35,8 @@ export function Works ({collectionState, collection, className}) {
 Works.propTypes = {
   collectionState: collectionPropTypes.stateShape,
   collection: React.PropTypes.arrayOf(articleShape).isRequired,
-  className: React.PropTypes.string
+  className: React.PropTypes.string,
+  id: React.PropTypes.string
 }
 
 export default withCollection(Works, 'works')

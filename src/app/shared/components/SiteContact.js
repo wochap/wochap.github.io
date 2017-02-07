@@ -2,9 +2,9 @@ import React from 'react'
 import data from 'app/config/data'
 import ExternalLink from 'components/ExternalLink'
 
-function SiteContact ({className}) {
+function SiteContact ({className, id}) {
   return (
-    <section className={`o-wrapper u-center ${className}`}>
+    <section className={`o-wrapper u-center ${className}`} id={id}>
       <h2 className="u-mb3 u-caps">Contáctame</h2>
       <p className="u-mb4 u-fz-sm u-muted">Envíame un mensaje para trabajar juntos.</p>
       <p className="u-mb5">
@@ -43,7 +43,8 @@ function SiteContact ({className}) {
 }
 
 SiteContact.propTypes = {
-  className: React.PropTypes.string
+  className: React.PropTypes.string,
+  id: React.PropTypes.string
 }
 
 export default SiteContact

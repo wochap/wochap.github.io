@@ -1,11 +1,13 @@
 import React from 'react'
 import data from 'app/config/data'
-import {Link} from 'react-router'
 import ScreenHelmet from 'components/ScreenHelmet'
+import SiteContact from 'components/SiteContact'
+import Works from 'components/Works'
+import Posts from 'components/Posts'
 
 function HomeScreen () {
   return (
-    <section className="c-home-screen">
+    <main className="c-home-screen">
       <ScreenHelmet
         title={data.screens.home.title}
         description={data.screens.home.description}
@@ -16,13 +18,16 @@ function HomeScreen () {
         <div className="o-wrapper">
           <div className="c-home-screen__hero-wrapper">
             <h1 className="u-caps">Hola!, soy Gean</h1>
-            <p className="u-fade-in-up">{data.about}</p>
-            <a className="o-btn c-btn c-btn--secondary u-mr3 u-my2 u-fade-in-up u-delay-2" href={`mailto:${data.email}`}>Contáctame</a>
-            <Link className="o-btn c-btn c-btn--secondary c-btn--ghost u-white u-my2 u-fade-in-up u-delay-3" to="/works">Ver portafolio</Link>
+            <p>{data.about}</p>
+            <a className="o-btn c-btn c-btn--secondary u-mr3 u-my2" href="#contact">Contáctame</a>
+            <a className="o-btn c-btn c-btn--secondary c-btn--ghost u-white u-my2" href="#works">Ver portafolio</a>
           </div>
         </div>
       </div>
-    </section>
+      <Works className="u-py5" id="works" />
+      <Posts className="o-wrapper u-py5 u-center" id="blog" />
+      <SiteContact className="u-py5" id="contact" />
+    </main>
   )
 }
 

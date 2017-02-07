@@ -1,18 +1,26 @@
 import React from 'react'
 import {Link} from 'react-router'
+import SiteHeaderLink from 'components/SiteHeaderLink'
 import Hamburger from './Hamburger'
 
 class SiteHeader extends React.Component {
   static propTypes = {
-    isFixed: React.PropTypes.bool
+    isFixed: React.PropTypes.bool,
+    isHome: React.PropTypes.bool
+  }
+
+  static defaultProps = {
+    isHome: false
   }
 
   state = {
     isNavOpen: false
   }
 
-  shouldComponentUpdate ({isFixed}, {isNavOpen}) { // eslint-disable-line
-    if (this.props.isFixed !== isFixed || this.state.isNavOpen !== isNavOpen) {
+  shouldComponentUpdate ({isFixed, isHome}, {isNavOpen}) { // eslint-disable-line
+    if (this.props.isFixed !== isFixed
+        || this.state.isNavOpen !== isNavOpen
+        || this.props.isHome !== isHome) {
       return true
     }
     return false
@@ -33,7 +41,7 @@ class SiteHeader extends React.Component {
   }
 
   render () {
-    const {isFixed} = this.props
+    const {isFixed, isHome} = this.props
     const {isNavOpen} = this.state
 
     return (
@@ -54,28 +62,43 @@ class SiteHeader extends React.Component {
               >Sobre mi</Link>
             </li>
             <li>
-              <Link
-                className="o-btn c-site-nav__link"
-                to="/works"
-                onClick={this._closeNav}
-                activeClassName="is-active"
-              >Portafolio</Link>
+              <SiteHeaderLink
+                title="Portafolio"
+                isHome={isHome}
+                props={isHome ? {
+                  href: '#works'
+                } : {
+                  to: '/works',
+                  onClick: this._closeNav,
+                  activeClassName: 'is-active'
+                }}
+              />
             </li>
             <li>
-              <Link
-                className="o-btn c-site-nav__link"
-                to="/blog"
-                onClick={this._closeNav}
-                activeClassName="is-active"
-              >Blog</Link>
+              <SiteHeaderLink
+                title="Blog"
+                isHome={isHome}
+                props={isHome ? {
+                  href: '#blog'
+                } : {
+                  to: '/blog',
+                  onClick: this._closeNav,
+                  activeClassName: 'is-active'
+                }}
+              />
             </li>
             <li>
-              <Link
-                className="o-btn c-site-nav__link"
-                to="/contact"
-                onClick={this._closeNav}
-                activeClassName="is-active"
-              >Contacto</Link>
+              <SiteHeaderLink
+                title="Contacto"
+                isHome={isHome}
+                props={isHome ? {
+                  href: '#contact'
+                } : {
+                  to: '/contact',
+                  onClick: this._closeNav,
+                  activeClassName: 'is-active'
+                }}
+              />
             </li>
           </ul>
         </nav>

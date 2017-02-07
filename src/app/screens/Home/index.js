@@ -12,7 +12,8 @@ export default {
   },
   layoutProps: {
     headerProps: {
-      isFixed: true
+      isFixed: true,
+      isHome: true
     }
   }
 }

@@ -6,7 +6,7 @@ import ShimmerText from 'components/ShimmerText'
 import SiteError from 'components/SiteError'
 import PostsList from './PostsList'
 
-export function Posts ({collectionState, collection, className}) {
+export function Posts ({collectionState, collection, className, id}) {
   const body = collectionState.error ? <SiteError title="Ups" message={collectionState.error} invert /> : (
     collectionState.isPending ? (
       <ul className="u-list-reset u-m0">
@@ -23,7 +23,7 @@ export function Posts ({collectionState, collection, className}) {
   )
 
   return (
-    <section className={className}>
+    <section className={className} id={id}>
       <h2 className="u-center u-mb4 u-caps">Artículos</h2>
       {body}
     </section>
@@ -33,7 +33,8 @@ export function Posts ({collectionState, collection, className}) {
 Posts.propTypes = {
   collectionState: collectionPropTypes.stateShape,
   collection: React.PropTypes.arrayOf(articleShape).isRequired,
-  className: React.PropTypes.string
+  className: React.PropTypes.string,
+  id: React.PropTypes.string
 }
 
 export default withCollection(Posts, 'posts')
