@@ -7,6 +7,7 @@
  * 2. Fix height on old safari browsers.
  * 3. Fix pages on print media.
  * 4. Fix android browser scrollbar.
+ * 5. Stick footer to bottom.
  */
 
 .c-app-layout {
@@ -24,7 +25,8 @@
 }
 
   .c-app-layout__wrapper {
-    display: block;
+    display: flex; /* [5] */
+    flex-direction: column; /* [5] */
     min-height: 100%;
     overflow: hidden; /* [4] */
     position: relative; /* [1] */
