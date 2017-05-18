@@ -1,31 +1,16 @@
 {
   "presets": [
-    "es2015",
-    "stage-1",
-    "react"
+    "flow",
+    ["es2015", {"modules": false}],
+    "stage-1"
   ],
-  "plugins": [
-    "transform-react-router-optimize",
-    "transform-runtime"
-  ],
+  "plugins": ["transform-runtime"],
   "env": {
-    "development": {
-      "plugins": [
-        "transform-runtime",
-        "react-hot-loader/babel"
-      ]
-    },
     "test": {
-      "presets": [
-        [
-          "es2015",
-          {"modules": false}
-        ],
-        "stage-1",
-        "react"
-      ],
+      "presets": [],
       "plugins": [
-        "transform-es2015-modules-commonjs"
+        "transform-es2015-modules-commonjs",
+        "dynamic-import-node"
       ]
     }
   }
