@@ -1,8 +1,8 @@
 {
   "presets": [
     "flow",
-    ["es2015", {"modules": false}],
-    "stage-1"
+    "stage-1",
+    "react"
   ],
   "plugins": ["transform-runtime"],
   "env": {
@@ -12,6 +12,20 @@
         "transform-es2015-modules-commonjs",
         "dynamic-import-node"
       ]
+    },
+    "ssr": {
+      "presets": [],
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "dynamic-import-node"
+      ]
+    },
+    "development": {
+      "presets": [["es2015", {"modules": false}]],
+      "plugins": "react-hot-loader/babel"
+    },
+    "production": {
+      "presets": [["es2015", {"modules": false}]]
     }
   }
 }

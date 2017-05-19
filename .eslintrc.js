@@ -5,7 +5,7 @@ module.exports = {
   extends: [
     'plugin:import/errors',
     'plugin:import/warnings',
-    'standard'
+    'eslint-config-airbnb'
   ],
   settings: {
     'import/resolver': 'eslint-import-resolver-webpack'
@@ -17,6 +17,20 @@ module.exports = {
   },
   rules: {
     'no-console': isProduction ? 2 : 0,
-    'no-debugger': isProduction ? 2 : 0
+    'no-debugger': isProduction ? 2 : 0,
+
+    // backwards compatibility
+    'semi': [2, 'never'],
+    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
+    'object-curly-spacing': [2, 'never'],
+    'space-before-function-paren': [2, 'always'],
+    'comma-dangle': [2, 'never'],
+    'no-underscore-dangle': [0],
+    'arrow-body-style': [0],
+    'no-nested-ternary': [0],
+    'react/no-danger': [0],
+    'import/prefer-default-export': [0],
+    'import/no-named-as-default': [0],
+    'max-len': [0]
   }
 }

@@ -14,7 +14,8 @@
     "^src(.*)$": "<rootDir>/src$1",
     "^app(.*)$": "<rootDir>/src/app$1",
     "^styles(.*)$": "<rootDir>/src/styles$1",
-    "^lib(.*)$": "<rootDir>/src/lib$1"
+    "^lib(.*)$": "<rootDir>/lib$1",
+    "^data(.*)$": "<rootDir>/data$1"
   },
   "testPathIgnorePatterns": [
     "<rootDir>/node_modules/"

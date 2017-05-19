@@ -8,15 +8,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 const {getIfUtils, removeEmpty} = require('webpack-config-utils')
+const myLocalIp = require('my-local-ip')
 
-const CURRENT_IP = require('my-local-ip')()
+const CURRENT_IP = myLocalIp()
 const externalPath = `http://${CURRENT_IP}:${process.env.WEBPACK_SERVER_PORT}/`
-const {ifProduction, ifNotProduction} = getIfUtils(process.env.NODE_ENV)
+const {ifProduction, ifNotProduction, ifDevelopment, ifSsr, ifNotSsr} = getIfUtils(process.env.NODE_ENV, ['development', 'test', 'production', 'ssr'])
 const rootNodeModulesPath = resolve(__dirname, 'node_modules')
+const libPath = resolve(__dirname, 'lib')
+const distPath = resolve(__dirname, 'dist')
+const srcPath = resolve(__dirname, 'src')
+const routes = require('./static-routes')
 
 module.exports = {
-  context: resolve(__dirname, 'src'),
+  target: ifSsr('node', 'web'),
+  context: srcPath,
   devtool: ifProduction(!!process.env.SOURCE_MAP && 'source-map', 'eval'),
   stats: {
     colors: true,
@@ -58,30 +67,41 @@ module.exports = {
   entry: {
     app: removeEmpty([
       // fix HMR in IE
-      ifNotProduction('eventsource-polyfill'),
+      ifDevelopment('eventsource-polyfill'),
+
+      ifDevelopment('react-hot-loader/patch'),
 
       // bundle the client for webpack-dev-server
       // and connect to the provided endpoint
-      ifNotProduction(`webpack-dev-server/client?${externalPath}`),
+      ifDevelopment(`webpack-dev-server/client?${externalPath}`),
 
-      './app/main.js'
+      ifSsr('static-build/main.js', './app/main.js')
     ])
   },
   resolve: {
     alias: {
-      'src': resolve(__dirname, 'src'),
-      'app': resolve(__dirname, 'src/app'),
-      'styles': resolve(__dirname, 'src/styles'),
-      'lib': resolve(__dirname, 'lib')
+      src: srcPath,
+      app: resolve(__dirname, 'src/app'),
+      styles: resolve(__dirname, 'src/styles'),
+      lib: libPath
     },
     modules: ['node_modules', 'shared']
   },
+  resolveLoader: {
+    alias: {
+      'markdown-loader': `${libPath}/loaders/markdown.js`,
+      'front-matter-loader': `${libPath}/loaders/front-matter.js`,
+      'lazy-loader': `${libPath}/loaders/lazy.js`,
+      'lazy-dir-loader': `${libPath}/loaders/lazy-dir.js`
+    }
+  },
   output: {
-    publicPath: ifProduction('/', externalPath),
+    publicPath: ifDevelopment(externalPath, '/'),
     filename: ifProduction('static/js/bundle.[name].[chunkhash:8].js', 'bundle.[name].js'),
     chunkFilename: ifProduction('static/js/chunk.[name].[chunkhash:8].js', 'chunk.[name].js'),
     path: resolve(__dirname, 'dist'),
-    pathinfo: ifNotProduction()
+    pathinfo: ifNotProduction(),
+    libraryTarget: ifSsr('commonjs2', 'var')
   },
   module: {
     rules: [
@@ -91,7 +111,7 @@ module.exports = {
         loader: 'eslint-loader',
         exclude: /node_modules/,
         options: {
-          formatter: require('eslint-friendly-formatter')
+          formatter: require('eslint-friendly-formatter') // eslint-disable-line
         }
       }, {
         test: /\.js$/,
@@ -179,7 +199,7 @@ module.exports = {
     // define globals
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: ifProduction('"production"', '"development"')
+        NODE_ENV: ifDevelopment('"development"', '"production"')
       }
     }),
 
@@ -194,7 +214,7 @@ module.exports = {
     // any required modules inside node_modules are extracted to vendor
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks ({resource}, count) {
+      minChunks ({resource}) {
         // TODO: ignore webpack modules (e.g.: buffer, style-loader, etc)
         return resource &&
           /\.js$/.test(resource) &&
@@ -236,7 +256,7 @@ module.exports = {
     ),
 
     // enable HMR globally
-    ifNotProduction(new webpack.HotModuleReplacementPlugin()),
+    ifDevelopment(new webpack.HotModuleReplacementPlugin()),
 
     // prints more readable module names in the browser console on HMR updates
     ifNotProduction(new webpack.NamedModulesPlugin()),
@@ -263,21 +283,71 @@ module.exports = {
 
     ifProduction(new ExtractTextPlugin('static/css/[name].[contenthash:8].css')),
 
-    new HtmlWebpackPlugin({
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency',
-      template: './index.html',
-      inject: true,
-      minify: ifProduction({
-        removeComments: true,
-        collapseWhitespace: true,
-        removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: true,
-        minifyJS: true,
-        minifyCSS: true,
-        minifyURLs: true
+    ifNotSsr(
+      new HtmlWebpackPlugin({
+        // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+        chunksSortMode: 'dependency',
+        template: './index.html',
+        inject: true,
+        minify: ifProduction({
+          removeComments: true,
+          collapseWhitespace: true,
+          removeStyleLinkTypeAttributes: true,
+          keepClosingSlash: true,
+          minifyJS: true,
+          minifyCSS: true,
+          minifyURLs: true
+        })
       })
-    }),
+    ),
+
+    ifSsr(new StaticSiteGeneratorPlugin('static', routes)),
+
+    ifProduction(
+      new FaviconsWebpackPlugin({
+        logo: `${srcPath}/favicon.png`,
+        prefix: 'static/icons-[hash]/',
+        title: 'wochap',
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          opengraph: false,
+          twitter: false,
+          yandex: false,
+          windows: false
+        }
+      })
+    ),
+
+    ifProduction(
+      new SWPrecacheWebpackPlugin({
+        cacheId: 'wochap',
+        filepath: `${distPath}/sw.js`,
+        maximumFileSizeToCacheInBytes: 4194304,
+        minify: true,
+        verbose: true,
+        staticFileGlobs: [
+          `${distPath}/static/css/**/!(*map*)`,
+          `${distPath}/static/js/**/!(*map*)`
+        ],
+        runtimeCaching: [
+          {
+            handler: 'networkOnly',
+            urlPattern: /\.(png|jpg|jpeg|gif)$/
+          }, {
+            handler: 'networkFirst',
+            urlPattern: /.pdf$/
+          }, {
+            // use a network first strategy for everything else.
+            default: 'networkFirst'
+          }
+        ]
+      })
+    ),
 
     process.env.BROWSER_SYNC && ifNotProduction(
       new BrowserSyncPlugin({
