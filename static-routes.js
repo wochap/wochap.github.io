@@ -1,11 +1,11 @@
 const fs = require('fs')
 const {resolve} = require('path')
 
-const sourcePath = resolve(__dirname, 'src')
+const dataPath = resolve(__dirname, 'data')
 // create posts routes
-const postsRoutes = getFileNamesArrayFrom(resolve(sourcePath, 'data/posts')).map(fileName => `/blog/${fileName}`)
+const postsRoutes = getFileNamesArrayFrom(resolve(dataPath, 'posts')).map(fileName => `/blog/${fileName}`) // eslint-disable-line
 // create works routes
-const worksRoutes = getFileNamesArrayFrom(resolve(sourcePath, 'data/works')).map(fileName => `/works/${fileName}`)
+const worksRoutes = getFileNamesArrayFrom(resolve(dataPath, 'works')).map(fileName => `/works/${fileName}`) // eslint-disable-line
 
 // exports routes that static-site-generator-webpack-plugin will build
 module.exports = [

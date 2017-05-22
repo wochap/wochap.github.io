@@ -1,5 +1,6 @@
 require('dotenv').config()
 
+const {readdirSync} = require('fs')
 const {resolve} = require('path')
 const webpack = require('webpack')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
@@ -23,10 +24,22 @@ const distPath = resolve(__dirname, 'dist')
 const srcPath = resolve(__dirname, 'src')
 const routes = require('./static-routes')
 
+let nodeModules = {} // eslint-disable-line
+readdirSync('node_modules')
+  .filter(x => {
+    return ['.bin'].indexOf(x) === -1
+  })
+  .forEach(mod => {
+    nodeModules[mod] = `commonjs ${mod}`
+  })
+
+
 module.exports = {
+  // http://jlongster.com/Backend-Apps-with-Webpack--Part-I#p14
+  externals: ifSsr(nodeModules, []),
   target: ifSsr('node', 'web'),
   context: srcPath,
-  devtool: ifProduction(!!process.env.SOURCE_MAP && 'source-map', 'eval'),
+  devtool: ifProduction(!!process.env.SOURCE_MAP && 'source-map', ifSsr(false, 'eval')),
   stats: {
     colors: true,
     children: false,
@@ -75,7 +88,7 @@ module.exports = {
       // and connect to the provided endpoint
       ifDevelopment(`webpack-dev-server/client?${externalPath}`),
 
-      ifSsr('static-build/main.js', './app/main.js')
+      ifSsr('./static-build/main.js', './app/main.js')
     ])
   },
   resolve: {
@@ -83,7 +96,8 @@ module.exports = {
       src: srcPath,
       app: resolve(__dirname, 'src/app'),
       styles: resolve(__dirname, 'src/styles'),
-      lib: libPath
+      lib: libPath,
+      data: resolve(__dirname, 'data')
     },
     modules: ['node_modules', 'shared']
   },
@@ -97,11 +111,11 @@ module.exports = {
   },
   output: {
     publicPath: ifDevelopment(externalPath, '/'),
-    filename: ifProduction('static/js/bundle.[name].[chunkhash:8].js', 'bundle.[name].js'),
+    filename: ifProduction('static/js/bundle.[name].[chunkhash:8].js', ifSsr('_/bundle.[name].js', 'bundle.[name].js')),
     chunkFilename: ifProduction('static/js/chunk.[name].[chunkhash:8].js', 'chunk.[name].js'),
-    path: resolve(__dirname, 'dist'),
+    path: distPath,
     pathinfo: ifNotProduction(),
-    libraryTarget: ifSsr('commonjs2', 'var')
+    libraryTarget: ifSsr('commonjs-module', 'var')
   },
   module: {
     rules: [
@@ -211,21 +225,47 @@ module.exports = {
       debug: ifNotProduction()
     }),
 
+    ifProduction(
+      // decrease moment module size
+      // http://stackoverflow.com/questions/25384360/how-to-prevent-moment-js-from-loading-locales-with-webpack
+      new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /es/) // eslint-disable-line
+    ),
+
     // any required modules inside node_modules are extracted to vendor
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks ({resource}) {
-        // TODO: ignore webpack modules (e.g.: buffer, style-loader, etc)
-        return resource &&
-          /\.js$/.test(resource) &&
-          resource.indexOf(rootNodeModulesPath) === 0
-      }
-    }),
+    ifNotSsr(
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendor',
+        minChunks ({resource}) {
+          // TODO: ignore webpack modules (e.g.: buffer, style-loader, etc)
+          return resource &&
+            /\.js$/.test(resource) &&
+            resource.indexOf(rootNodeModulesPath) === 0
+        }
+      })
+    ),
+
+    // create a specific chunk for these modules
+    // https://medium.com/@adamrackis/vendor-and-code-splitting-in-webpack-2-6376358f1923#.selnbx3gp
+    ifNotSsr(
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'react',
+        minChunks ({resource}) {
+          const targets = ['react', 'react-dom', 'react-redux', 'react-router', 'react-router-redux', 'react-helmet']
+
+          return resource &&
+            /\.js$/.test(resource) &&
+            resource.indexOf(rootNodeModulesPath) === 0 &&
+            targets.find(t => new RegExp(`${rootNodeModulesPath}/${t}/`, 'i').test(resource))
+        }
+      })
+    ),
 
     // extract manifest
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest'
-    }),
+    ifNotSsr(
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'manifest'
+      })
+    ),
 
     // catch all - anything used in more than one place
     // ifProduction(
@@ -233,18 +273,6 @@ module.exports = {
     //     async: 'common',
     //     minChunks (module, count) {
     //       return count >= 2
-    //     }
-    //   })
-    // ),
-
-    // create a specific chunk for these modules
-    // https://medium.com/@adamrackis/vendor-and-code-splitting-in-webpack-2-6376358f1923#.selnbx3gp
-    // ifProduction(
-    //   new webpack.optimize.CommonsChunkPlugin({
-    //     async: 'react-dnd',
-    //     minChunks({context}, count) {
-    //       const targets = ['react-dnd', 'react-dnd-html5-backend', 'react-dnd-touch-backend', 'dnd-core']
-    //       return context && context.indexOf('node_modules') >= 0 && targets.find(t => new RegExp('\\\\' + t + '\\\\', 'i').test(context))
     //     }
     //   })
     // ),
@@ -301,7 +329,17 @@ module.exports = {
       })
     ),
 
-    ifSsr(new StaticSiteGeneratorPlugin('static', routes)),
+    ifSsr(
+      // https://github.com/webpack/webpack/issues/3637
+      new webpack.optimize.LimitChunkCountPlugin({maxChunks: 1})
+    ),
+
+    ifSsr(
+      new StaticSiteGeneratorPlugin({
+        entry: '_/bundle.app.js',
+        paths: routes
+      })
+    ),
 
     ifProduction(
       new FaviconsWebpackPlugin({
@@ -326,7 +364,7 @@ module.exports = {
     ifProduction(
       new SWPrecacheWebpackPlugin({
         cacheId: 'wochap',
-        filepath: `${distPath}/sw.js`,
+        filepath: `${distPath}/service-worker.js`,
         maximumFileSizeToCacheInBytes: 4194304,
         minify: true,
         verbose: true,
