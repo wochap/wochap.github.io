@@ -1,31 +1,39 @@
 {
-  "presets": [
-    "flow",
-    "stage-1",
-    "react"
-  ],
-  "plugins": ["transform-runtime"],
   "env": {
     "test": {
-      "presets": [],
       "plugins": [
         "transform-es2015-modules-commonjs",
         "dynamic-import-node"
+      ],
+      "presets": [
+        "react",
+        "stage-1",
+        "flow"
       ]
     },
     "ssr": {
-      "presets": [],
-      "plugins": [
-        "transform-es2015-modules-commonjs",
-        "dynamic-import-node"
+      "presets": [
+        "react",
+        "stage-1",
+        "flow"
       ]
     },
     "development": {
-      "presets": [["es2015", {"modules": false}]],
-      "plugins": "react-hot-loader/babel"
+      "plugins": "react-hot-loader/babel",
+      "presets": [
+        "stage-1",
+        "react",
+        "flow"
+      ]
     },
     "production": {
-      "presets": [["es2015", {"modules": false}]]
+      "plugins": ["transform-runtime"],
+      "presets": [
+        ["es2015", {"modules": false}],
+        "stage-1",
+        "react",
+        "flow"
+      ]
     }
   }
 }

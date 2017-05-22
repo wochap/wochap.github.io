@@ -1,0 +1,54 @@
+// check dependencies
+
+$wocss-settings-global: false !default;
+
+
+@if ($wocss-settings-global == false) {
+  @error "[objects-buttons] Have you included the wocss-settings-global module?"
+};
+
+
+
+
+
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+/**
+ * 1. Remove highlight color on tap. (Chrome)
+ * 2. Hold height in all buttons' types.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as buttons)
+ * 4. Disable double-tap-to-zoom.
+ * 5. Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+ */
+
+.o-btn {
+  -webkit-tap-highlight-color: transparent; /* [1] */
+  appearance: none;
+  border-radius: $global-border-radius;
+  border: $global-border-width solid transparent; /* [2] */
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit; /* [3] */
+  line-height: 1;
+  padding: 0.85em 2.75em;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation; /* [4] */
+  user-select: none;
+
+  &::-moz-focus-inner {
+    border: 0; /* [5] */
+  }
+
+  &:focus {
+    @include shared-focus-styles();
+  }
+
+  &:active,
+  &:hover {
+    outline: none;
+  }
+}

@@ -1,0 +1,86 @@
+/*------------------------------------*\
+  #SHIMMER-TEXT
+\*------------------------------------*/
+
+
+// $block-bg-color: #f6f7f9;
+// $block-bg-highlight-color: #e9ebee;
+$block-bg-color: #C0C6C4;
+$block-bg-highlight-color: #4C4C4C;
+
+
+
+
+
+/**
+ * 1. Make text transparent.
+ * 2. Hide before element.
+ * 3. Match parent size.
+ */
+
+.c-shimmer-text {
+  background-color: $block-bg-color;
+  display: inline-flex; /* [2] */
+  overflow: hidden; /* [2] */
+  position: relative;
+
+  &::before {
+    background-image: linear-gradient(to right,
+                      $block-bg-color 0%,
+                      $block-bg-highlight-color 20%,
+                      $block-bg-color 40%,
+                      $block-bg-color 100%);
+    animation: shimmer 1s linear infinite;
+    content: "";
+    display: block; /* [3] */
+    height: 100%; /* [3] */
+    left: 0; /* [3] */
+    position: absolute; /* [3] */
+    top: 0; /* [3] */
+    width: 100%; /* [3] */
+  }
+}
+
+  .c-shimmer-text__text {
+    background-color: #ffffff; /* [1] */
+    color: #000000; /* [1] */
+    mix-blend-mode: lighten; /* [1] */
+    z-index: 1;
+
+    .c-shimmer-text--darken & {
+      background-color: #000000; /* [1] */
+      color: #ffffff; /* [1] */
+      mix-blend-mode: darken; /* [1] */
+    }
+  }
+
+
+.c-shimmer-text--darken {
+  // $block-bg-color: #3A3938;
+  // $block-bg-highlight-color: #323232;
+
+  background-color: $block-bg-color;
+
+  &::before {
+    background-image: linear-gradient(to right,
+                    $block-bg-color 0%,
+                    $block-bg-highlight-color 20%,
+                    $block-bg-color 40%,
+                    $block-bg-color 100%);
+  }
+}
+
+.c-shimmer-text--block {
+  display: block;
+  width: 100%;
+}
+
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

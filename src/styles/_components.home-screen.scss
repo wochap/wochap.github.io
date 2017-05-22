@@ -1,0 +1,52 @@
+/*------------------------------------*\
+  #HOME-SCREEN
+\*------------------------------------*/
+
+
+/**
+ * 1. Center background image.
+ * 2. Fix height on old safari browsers.
+ * 3. Vertical center children.
+ */
+
+.c-home-screen {}
+
+  .c-home-screen__hero {
+    background-color: #956977;
+    background-image: url(//res.cloudinary.com/wochap/image/upload/v1495421146/wochap/tacna.jpg), linear-gradient(to right, #412e35 0%, #3d2931 50%, #45333e 75%, #372d3b 100%);
+    background-position: center; /* [1] */
+    background-repeat: no-repeat; /* [1] */
+    background-size: cover; /* [1] */
+    display: flex; /* [3] */
+    flex-direction: column; /* [3] */
+    height: 100vh;
+    justify-content: center; /* [3] */
+    max-height: 700px; /* [2] */
+    min-height: 600px; /* [2] */
+    overflow: hidden;
+    padding-top: $global-header-height;
+    position: relative;
+  }
+
+    .c-home-screen__hero-wrapper {
+      margin-left: 0;
+      max-width: 32rem;
+      color: $white;
+      padding: ($global-spacing-unit * 2) 0;
+
+      h1 {
+        font-size: $global-fz-h00;
+        line-height: 1;
+        margin: 0 0 1.25rem;
+        text-shadow: 0 0 1em rgba($global-color-primary, .5);
+      }
+
+      p {
+        margin: 0 0 2.5em;
+        text-shadow: 0 0 1em rgba($global-color-primary, .5);
+      }
+
+      @include mq($until: 'laptop') {
+        margin: 0 auto;
+      };
+    }

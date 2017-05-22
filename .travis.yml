@@ -1,0 +1,10 @@
+language: node_js
+cache: yarn
+node_js:
+  - "6"
+after_success:
+  # send coverage data to coveralls.
+  - yarn run test:coverage-travis
+branches:
+  only:
+  - dev

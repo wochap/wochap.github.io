@@ -1,9 +1,43 @@
-import '../styles/main.scss'
+import 'src/styles/main.scss'
+import 'src/app/bootstrap'
 
-export const TEST = 'TEST'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {AppContainer} from 'react-hot-loader' // eslint-disable-line
+import {Router, browserHistory} from 'react-router'
+import {Provider} from 'react-redux'
+import {syncHistoryWithStore} from 'react-router-redux'
+import routes from 'app/config/routes'
+import configureStore from './store/configureStore'
 
-// This tells Webpack that this file and all of its dependencies can be replaced.
-// http://andrewhfarmer.com/webpack-hmr-tutorial/#the-simple-way
+const rootEl = document.getElementById('root')
+const initialState = window.__INITIAL_STATE__ || undefined
+const store = configureStore(initialState)
+const history = syncHistoryWithStore(browserHistory, store)
+
+ReactDOM.render((
+  <AppContainer>
+    <Provider store={store}>
+      <Router history={history} routes={routes} />
+    </Provider>
+  </AppContainer>),
+  rootEl
+)
+
 if (module.hot) {
-  module.hot.accept()
+  module.hot.accept('app/config/routes', () => {
+    const newRoutes = require('app/config/routes').default // eslint-disable-line
+
+    // HMR async routes
+    ReactDOM.unmountComponentAtNode(rootEl)
+
+    ReactDOM.render((
+      <AppContainer>
+        <Provider store={store}>
+          <Router history={browserHistory} routes={newRoutes} />
+        </Provider>
+      </AppContainer>),
+      rootEl
+    )
+  })
 }

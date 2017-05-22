@@ -1,0 +1,43 @@
+/*------------------------------------*\
+  #PAGE
+\*------------------------------------*/
+
+html {
+  background-color: $global-color-secondary;
+  color: $global-color-primary;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Lato", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 1em;
+  font-weight: $global-fw-regular;
+  line-height: 1.5;
+}
+
+@include mq($from: 'laptop') {
+
+  ::-webkit-scrollbar-track {
+    background-color: scale-color($black, $lightness: 90%);
+  }
+
+  ::-webkit-scrollbar {
+  	width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+  	background-color: $black;
+
+    &:hover {
+      background: scale-color($black, $lightness: 20%);
+    }
+
+    &:active {
+      background: scale-color($black, $lightness: -20%);
+    }
+
+    &:window-inactive {
+      background: scale-color($black, $lightness: 20%);
+    }
+  }
+};

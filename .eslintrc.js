@@ -2,6 +2,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   root: true,
+  parser: 'babel-eslint',
   extends: [
     'plugin:import/errors',
     'plugin:import/warnings',
@@ -31,6 +32,11 @@ module.exports = {
     'react/no-danger': [0],
     'import/prefer-default-export': [0],
     'import/no-named-as-default': [0],
-    'max-len': [0]
+    'max-len': [0],
+
+    'react/require-default-props': [0],
+    'react/no-array-index-key': [0],
+    'import/extensions': [0],
+    'arrow-parens': [0]
   }
 }

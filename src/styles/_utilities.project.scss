@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  #PROJECT
+\*------------------------------------*/
+
+/**
+ * Just project utilities.
+ */
+
+
+.u-caps {
+  letter-spacing: $global-letter-spacing;
+  text-transform: uppercase;
+}
+
+.u-flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+
+/**
+ * 1. Render font-family correctly.
+ * 2. Ensure letters are in group without white spaces.
+ */
+
+.u-blokk-font {
+  -moz-osx-font-smoothing: grayscale; /* [1] */
+  -webkit-font-smoothing: antialiased; /* [1] */
+  font-family: "BLOKK", sans-serif;
+  font-weight: 400; /* [1] */
+  letter-spacing: -0.1em; /* [2] */
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+
+.u-color-npm {
+  color: #CB3837;
+}
+
+.u-color-freecodecamp {
+  color: #006400;
+}
+
+
+.u-mt-auto {
+  margin-top: auto;
+}

@@ -1,0 +1,110 @@
+/*------------------------------------*\
+  #SITE-NAV
+\*------------------------------------*/
+
+
+/**
+ * 1. Fade effect.
+ * 2. Disable dialog from laptop breakpoint.
+ */
+
+.c-site-nav {
+
+  ul {
+    @include reset-list;
+
+    margin: 0;
+  }
+
+  @include mq($from: 'laptop') {
+
+    li {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 2em;
+      }
+    }
+  };
+
+  @include mq($until: 'laptop') {
+    background-color: $global-color-primary;
+    opacity: 0; /* [1] */
+    // transition: opacity 0.3s linear, visibility 0s linear 0.3s; /* [1] */
+    visibility: hidden; /* [1] */
+    will-change: opacity; /* [1] */
+    z-index: 9;
+
+    &.is-open {
+      opacity: 1; /* [1] */
+      // transition: opacity 0.3s linear; /* [1] */
+      visibility: visible; /* [1] */
+    }
+
+    li {
+      display: block;
+    }
+  };
+
+  @include mq($from: 'laptop') {
+    height: auto; /* [2] */
+    overflow: visible; /* [2] */
+    position: static; /* [2] */
+    visibility: visible; /* [2] */
+    width: auto; /* [2] */
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  };
+}
+
+  .c-site-nav__link {
+    font-weight: $global-fw-s-bold;
+    letter-spacing: $global-letter-spacing;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+
+    // link border
+    &::after {
+      background-color: currentColor;
+      content: "";
+      display: block;
+      height: 0.125em;
+      left: 0;
+      opacity: .5;
+      position: absolute;
+      top: 100%;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      width: 100%;
+    }
+
+    &:focus,
+    &.active,
+    &:hover,
+    &.is-active {
+
+      // link border
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    @include mq($until: 'laptop') {
+      color: $global-color-secondary;
+      display: block;
+      font-range: map-get($wocss-breakpoints, 'mobile') map-get($wocss-breakpoints, 'laptop');
+      font-size: responsive 1.5rem 2.25rem;
+      padding: .5em 0;
+      width: 100%;
+
+      // link border
+      &::after {
+        height: 100%;
+        top: 0;
+      }
+    };
+  }

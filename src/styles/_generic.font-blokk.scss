@@ -1,0 +1,22 @@
+$_font-blokk-path: '~src/fonts/BLOKKNeue-Regular';
+
+@font-face {
+  font-family: 'BLOKK';
+  src: url('#{$_font-blokk-path}/BLOKKNeue-Regular.eot');
+  src: url('#{$_font-blokk-path}/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'),
+    url('#{$_font-blokk-path}/BLOKKNeue-Regular.woff2') format('woff2'),
+    url('#{$_font-blokk-path}/BLOKKNeue-Regular.woff') format('woff'),
+    url('#{$_font-blokk-path}/BLOKKNeue-Regular.otf') format('opentype'),
+    url('#{$_font-blokk-path}/BLOKKNeue-Regular.ttf') format('truetype'),
+    url('#{$_font-blokk-path}/BLOKKNeue-Regular.svg#BLOKKRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'BLOKK';
+    src: url('#{$_font-blokk-path}/BLOKKNeue-Regular.svg') format('svg');
+  }
+}

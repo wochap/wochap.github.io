@@ -1,0 +1,73 @@
+/*------------------------------------*\
+  #SITE-HEADER
+\*------------------------------------*/
+
+
+/**
+ * 1. Center vertically all items.
+ */
+
+.c-site-header {
+  align-items: center; /* [1] */
+  display: flex; /* [1] */
+  flex-direction: row; /* [1] */
+  height: $global-header-height;
+  justify-content: space-between;
+  margin-bottom: $global-spacing-unit * 1.5;
+  width: 100%;
+
+  &.is-fixed {
+    color: $white;
+    left: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+
+    @include mq($from: 'laptop') {
+      left: 50%;
+      transform: translateX(-50%);
+    };
+  }
+
+}
+
+  .c-site-header__title {
+    $bar-width: 0.192em;
+
+    display: block;
+    font-size: 1.625em;
+    font-weight: $global-fw-bold;
+    letter-spacing: $global-letter-spacing;
+    line-height: 1;
+    margin: 0;
+    padding-left: $bar-width * 3;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 2;
+
+    &::before {
+      background-color: currentColor;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: $bar-width;
+    }
+
+    a {
+      display: block;
+      outline: none
+    }
+  }
+
+  .c-site-header__btn-toggle {
+    padding: .25rem;
+    z-index: 9;
+
+    &.is-active {
+      color: $global-color-secondary;
+    }
+  }

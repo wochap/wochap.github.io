@@ -1,0 +1,64 @@
+/*------------------------------------*\
+  #WORK
+\*------------------------------------*/
+
+
+/**
+ * 1. Pull text to bottom.
+ * 2. Create a new context, for performance.
+ */
+
+.c-work {
+  @include layout-aspect-ratio(4, 3);
+  @include card(1);
+
+  background-color: $global-color-primary;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  max-width: 25.625rem;
+  position: relative;
+}
+
+  .c-work__link {
+    -webkit-tap-highlight-color: transparent;
+    background-color: rgba($global-color-secondary, .5);
+    display: flex; /* [1] */
+    flex-direction: column; /* [1] */
+    height: 100%;
+    justify-content: flex-end; /* [1] */
+    left: 0;
+    opacity: 0;
+    padding: 0 $global-spacing-unit $global-spacing-unit;
+    position: absolute;
+    top: 0;
+    touch-action: manipulation;
+    transform: translateZ(0); /* [2] */
+    transition: opacity 0.3s, box-shadow 0.3s;
+    user-select: none;
+    width: 100%;
+
+    &:active,
+    &:hover,
+    &:focus {
+      // @include card(4);
+
+      opacity: 1;
+      outline: none;
+    }
+
+    h3 {
+      font-size: $global-fz-h2;
+      margin-bottom: $global-space-3;
+    }
+
+    p {
+      margin: 0;
+      font-weight: $global-fw-s-bold;
+    }
+
+    @include mq($from: 'laptop') {
+      padding: 0 #{$global-spacing-unit * 2} #{$global-spacing-unit * 2};
+    };
+  }

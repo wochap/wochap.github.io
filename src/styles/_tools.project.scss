@@ -1,0 +1,23 @@
+/*------------------------------------*\
+  #PROJECT
+\*------------------------------------*/
+
+@mixin layout-aspect-ratio ($width, $height, $max-width: false) {
+  @if $max-width != false {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-width;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: ($height / $width) * 100%;
+    width: 100%;
+  }
+}
+
+@mixin shared-focus-styles {
+  outline-offset: 2px;
+  outline: 2px solid scale-color($global-color-primary, $lightness: 75%);
+}
