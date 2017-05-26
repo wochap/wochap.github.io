@@ -4,7 +4,7 @@
   "scripts": {
     "prebuild": "shx rm -rf dist && shx mkdir -p dist && shx cp -R public/* dist || true",
     "build": "cross-env NODE_ENV=production webpack",
-    "postbuild": "cross-env NODE_ENV=ssr webpack && http-server dist",
+    "postbuild": "cross-env NODE_ENV=ssr webpack && cd dist && sitemap-static --ignore-file=ignore.json --prefix=https://geanmarroquin.com/ --pretty . > sitemap.xml && http-server",
     "build:watch": "cross-env NODE_ENV=development webpack-dev-server",
     "dev": "npm run build:watch",
     "dev:inspect": "cross-env NODE_ENV=development node --inspect node_modules/.bin/webpack-dev-server",
@@ -104,6 +104,7 @@
     "redux-immutable-state-invariant": "^2.0.0",
     "sass-loader": "^6.0.5",
     "shx": "^0.2.2",
+    "sitemap-static": "^0.4.2",
     "static-site-generator-webpack-plugin": "^3.4.1",
     "style-loader": "^0.15.0",
     "sw-precache-webpack-plugin": "^0.11.0",
