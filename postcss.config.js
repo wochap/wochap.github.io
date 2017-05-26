@@ -1,5 +1,7 @@
 module.exports = {
   plugins: [
+    require('lost'),
+    require('postcss-responsive-type')(),
     require('autoprefixer')({
       browsers: [
         '>1%',
