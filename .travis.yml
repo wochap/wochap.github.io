@@ -2,6 +2,9 @@ language: node_js
 cache: yarn
 node_js:
   - "6"
+install:
+  # install dev dependencies
+  yarn install --production=false
 after_success:
   # send coverage data to coveralls.
   - yarn run test:coverage-travis
