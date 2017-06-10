@@ -40,6 +40,11 @@ module.exports = {
   target: ifSsr('node', 'web'),
   context: srcPath,
   devtool: ifProduction(!!process.env.SOURCE_MAP && 'source-map', ifSsr(false, 'eval')),
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  },
   stats: {
     colors: true,
     children: false,
