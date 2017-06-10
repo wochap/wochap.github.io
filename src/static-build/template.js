@@ -8,7 +8,7 @@ export default function template ({bodyHTML = '', headHTML = '', initialState}) 
 
       $('#root').append(bodyHTML)
       $('head link[rel=manifest]').before(headHTML)
-      $('body').append(`<script>window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};</script>`)
+      $('#root').after(`<script>window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};</script>`)
 
       resolve($.html())
     } catch (error) {
