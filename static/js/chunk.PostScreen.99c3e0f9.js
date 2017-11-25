@@ -1,1 +1,0 @@
-webpackJsonp([8],{579:function(e,n,a){"use strict";function c(e){return s.a.createElement(u.a,r()({},e,{head:{canonicalHref:i.a.screens.blog.canonicalHref}}))}Object.defineProperty(n,"__esModule",{value:!0}),n.PostScreen=c;var t=a(45),r=a.n(t),o=a(0),s=a.n(o),i=a(44),l=a(225),u=a(223);n.default=a.i(l.a)(c,"posts")}});
