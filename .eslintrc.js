@@ -9,7 +9,9 @@ module.exports = {
     'eslint-config-airbnb'
   ],
   settings: {
-    'import/resolver': 'eslint-import-resolver-webpack'
+    'import/resolver': {
+      webpack: 'webpack.config.js'
+    }
   },
   env: {
     browser: true,
