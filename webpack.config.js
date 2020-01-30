@@ -17,7 +17,7 @@ const myLocalIp = require('my-local-ip')
 
 const CURRENT_IP = myLocalIp()
 const externalPath = `http://${CURRENT_IP}:${process.env.WEBPACK_SERVER_PORT}/`
-const {ifProduction, ifNotProduction, ifDevelopment, ifSsr, ifNotSsr} = getIfUtils(process.env.NODE_ENV, ['development', 'test', 'production', 'ssr'])
+const {ifProduction, ifNotProduction, ifDevelopment, ifSsr, ifNotSsr} = getIfUtils(process.env.NODE_ENV || {}, ['development', 'test', 'production', 'ssr'])
 const rootNodeModulesPath = resolve(__dirname, 'node_modules')
 const libPath = resolve(__dirname, 'lib')
 const distPath = resolve(__dirname, 'dist')
