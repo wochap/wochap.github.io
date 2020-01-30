@@ -74,7 +74,7 @@ class SiteHeader extends React.Component {
                 }}
               />
             </li>
-            <li>
+            {/* <li>
               <SiteHeaderLink
                 title="Blog"
                 isHome={isHome}
@@ -86,7 +86,7 @@ class SiteHeader extends React.Component {
                   activeClassName: 'is-active'
                 }}
               />
-            </li>
+            </li> */}
             <li>
               <SiteHeaderLink
                 title="Contacto"
