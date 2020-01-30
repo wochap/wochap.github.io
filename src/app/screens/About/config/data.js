@@ -118,6 +118,16 @@ export default {
   ],
   moocs: [
     {
+      title: 'Platzi',
+      courses: [
+        {
+          title: 'Carrera de Arquitectura Frontend',
+          link: 'https://platzi.com/clases/learning-path/arquitecto/',
+          year: '2020'
+        }
+      ]
+    },
+    {
       title: 'Frontend Masters',
       courses: [
         {
