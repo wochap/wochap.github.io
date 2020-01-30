@@ -15,6 +15,7 @@ function Post ({post}) {
 
 Post.propTypes = {
   post: React.PropTypes.shape({
+    fileName: React.PropTypes.string.isRequired,
     date: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
     title: React.PropTypes.string.isRequired

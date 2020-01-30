@@ -1,7 +1,7 @@
 import React from 'react'
 import AppLayout from 'components/AppLayout'
 
-function App ({children, routes}) { // eslint-disable-line
+function App ({children, routes}) {
   const {layoutProps} = routes[routes.length - 1]
 
   return (
@@ -12,7 +12,8 @@ function App ({children, routes}) { // eslint-disable-line
 }
 
 App.propTypes = {
-  children: React.PropTypes.element
+  children: React.PropTypes.element,
+  routes: React.PropTypes.array // eslint-disable-line
 }
 
 export default App
