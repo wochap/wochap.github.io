@@ -122,7 +122,12 @@ export default {
       courses: [
         {
           title: 'Carrera de Arquitectura Frontend',
-          link: 'https://platzi.com/clases/learning-path/arquitecto/',
+          link: 'https://platzi.com/@boni/carrera/42-arquitecto/diploma/detalle/',
+          year: '2020'
+        },
+        {
+          title: 'Carrera de Vue.js',
+          link: 'https://platzi.com/@boni/carrera/98-vue/diploma/detalle/',
           year: '2020'
         }
       ]
