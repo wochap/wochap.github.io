@@ -22,7 +22,9 @@ const rootNodeModulesPath = resolve(__dirname, 'node_modules')
 const libPath = resolve(__dirname, 'lib')
 const distPath = resolve(__dirname, 'dist')
 const srcPath = resolve(__dirname, 'src')
+// eslint-disable-next-line
 const routes = require('./static-routes')
+const toBoolean = bool => bool === 'true' || bool === true
 
 let nodeModules = {} // eslint-disable-line
 readdirSync('node_modules')
@@ -39,7 +41,7 @@ module.exports = {
   externals: ifSsr(nodeModules, []),
   target: ifSsr('node', 'web'),
   context: srcPath,
-  devtool: ifProduction(!!process.env.SOURCE_MAP && 'source-map', ifSsr(false, 'eval')),
+  devtool: ifProduction(toBoolean(process.env.SOURCE_MAP) && 'source-map', ifSsr(false, 'eval')),
   node: {
     fs: 'empty',
     net: 'empty',
@@ -225,7 +227,7 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       // css loader config
       minimize: ifProduction(),
-      sourceMap: ifProduction(!!process.env.SOURCE_MAP),
+      sourceMap: ifProduction(toBoolean(process.env.SOURCE_MAP)),
 
       debug: ifNotProduction()
     }),
@@ -297,7 +299,7 @@ module.exports = {
     ifProduction(
       // minify and optimize the javaScript
       new webpack.optimize.UglifyJsPlugin({
-        sourceMap: !!process.env.SOURCE_MAP,
+        sourceMap: toBoolean(process.env.SOURCE_MAP),
         compress: {
           screw_ie8: true,
           warnings: false
@@ -312,7 +314,7 @@ module.exports = {
       })
     ),
 
-    process.env.BUNDLE_ANALYZER_REPORT && ifProduction(new BundleAnalyzerPlugin()),
+    toBoolean(process.env.BUNDLE_ANALYZER_REPORT) ? ifProduction(new BundleAnalyzerPlugin()) : undefined,
 
     ifProduction(new ExtractTextPlugin('static/css/[name].[contenthash:8].css')),
 
@@ -392,7 +394,7 @@ module.exports = {
       })
     ),
 
-    process.env.BROWSER_SYNC && ifNotProduction(
+    toBoolean(process.env.BROWSER_SYNC) ? ifNotProduction(
       new BrowserSyncPlugin({
         open: false,
         port: process.env.BROWSER_SYNC_PORT,
@@ -402,7 +404,7 @@ module.exports = {
         // and let Webpack Dev Server take care of this
         reload: false
       })
-    ),
+    ) : undefined,
 
     new ProgressBarPlugin()
   ])
