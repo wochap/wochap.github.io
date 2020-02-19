@@ -12,8 +12,10 @@
 .c-home-screen {}
 
   .c-home-screen__hero {
+    $hero-default-bg: linear-gradient(to right, #412e35 0%, #3d2931 50%, #45333e 75%, #372d3b 100%);
+
     background-color: #956977;
-    background-image: url(//res.cloudinary.com/wochap/image/upload/v1495421146/wochap/tacna.jpg), linear-gradient(to right, #412e35 0%, #3d2931 50%, #45333e 75%, #372d3b 100%);
+    background-image: url(//source.unsplash.com/1380x800/daily?sunset,sky), $hero-default-bg;
     background-position: center; /* [1] */
     background-repeat: no-repeat; /* [1] */
     background-size: cover; /* [1] */
@@ -26,6 +28,20 @@
     overflow: hidden;
     padding-top: $global-header-height;
     position: relative;
+
+    &::before {
+      background-color: rgba(#000000, 0.5);
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    @media only screen and (min-device-pixel-ratio : 2) {
+      background-image: url(//source.unsplash.com/2780x1600/daily?sunset,sky), $hero-default-bg;
+    }
   }
 
     .c-home-screen__hero-wrapper {

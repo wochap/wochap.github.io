@@ -15,7 +15,7 @@ function HomeScreen () {
       />
 
       <div className="c-home-screen__hero">
-        <div className="o-wrapper">
+        <div className="o-wrapper u-relative">
           <div className="c-home-screen__hero-wrapper">
             <h1 className="u-caps">Hola!, soy Gean</h1>
             <p>{data.about}</p>
