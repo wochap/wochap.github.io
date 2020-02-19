@@ -45,7 +45,7 @@ export default {
         }
       ]
     }, {
-      title: 'JS (ES2017)',
+      title: 'JS',
       rows: [
         {
           title: 'Frameworks',
@@ -128,6 +128,11 @@ export default {
         {
           title: 'Carrera de Vue.js',
           link: 'https://platzi.com/@boni/carrera/98-vue/diploma/detalle/',
+          year: '2020'
+        },
+        {
+          title: 'Carrera de Fundamentos de Programación',
+          link: 'https://platzi.com/@boni/carrera/56-fundamentos-programacion/diploma/detalle/',
           year: '2020'
         }
       ]
