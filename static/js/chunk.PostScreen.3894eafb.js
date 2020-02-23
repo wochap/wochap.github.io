@@ -1,2 +1,1 @@
 webpackJsonp([8],{579:function(e,n,a){"use strict";function c(e){return s.a.createElement(u.a,r()({},e,{head:{canonicalHref:i.a.screens.blog.canonicalHref}}))}Object.defineProperty(n,"__esModule",{value:!0}),n.PostScreen=c;var t=a(44),r=a.n(t),o=a(0),s=a.n(o),i=a(43),l=a(230),u=a(228);n.default=a.i(l.a)(c,"posts")}});
-//# sourceMappingURL=chunk.PostScreen.3894eafb.js.map
