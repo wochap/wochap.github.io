@@ -7,7 +7,7 @@ export default {
   title: TITLE,
   email: 'gean.marroquin@gmail.com',
   about: ABOUT,
-  twitterUser: 'nwochap',
+  twitterUser: 'geanmarroquin',
   screens: {
     about: {
       title: `${TITLE} | Front-end developer`,

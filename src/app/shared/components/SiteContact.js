@@ -33,7 +33,7 @@ function SiteContact ({className, id}) {
           </ExternalLink>
         </li>
         <li className="u-inline-block u-p3">
-          <ExternalLink className="u-block u-color-twitter" href="https://twitter.com/nwochap" title="Twitter">
+          <ExternalLink className="u-block u-color-twitter" href={`https://twitter.com/${data.twitterUser}`} title="Twitter">
             <i className="u-icon u-block">twitter</i>
           </ExternalLink>
         </li>
