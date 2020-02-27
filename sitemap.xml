@@ -4,10 +4,10 @@
         <loc>https://geanmarroquin.com/</loc>
     </url>
     <url>
-        <loc>https://geanmarroquin.com/about</loc>
+        <loc>https://geanmarroquin.com/blog</loc>
     </url>
     <url>
-        <loc>https://geanmarroquin.com/blog</loc>
+        <loc>https://geanmarroquin.com/about</loc>
     </url>
     <url>
         <loc>https://geanmarroquin.com/contact</loc>
@@ -22,12 +22,12 @@
         <loc>https://geanmarroquin.com/works/gean-marroquin</loc>
     </url>
     <url>
-        <loc>https://geanmarroquin.com/works/ricarica-travel</loc>
-    </url>
-    <url>
         <loc>https://geanmarroquin.com/works/la-glorieta</loc>
     </url>
     <url>
         <loc>https://geanmarroquin.com/works/yilancorp</loc>
+    </url>
+    <url>
+        <loc>https://geanmarroquin.com/works/ricarica-travel</loc>
     </url>
 </urlset>
