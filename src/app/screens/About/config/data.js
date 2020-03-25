@@ -136,6 +136,11 @@ export default {
           year: '2020'
         },
         {
+          title: 'Carrera de React.js',
+          link: 'https://platzi.com/@boni/ruta/8-desarrollo-react/diploma/detalle/',
+          year: '2020'
+        },
+        {
           title: 'Carrera de Fundamentos de Programación',
           link: 'https://platzi.com/@boni/carrera/56-fundamentos-programacion/diploma/detalle/',
           year: '2020'
