@@ -1,1 +1,3 @@
-export collections from './collections' // eslint-disable-line
+import collections from './collections'
+
+export {collections}

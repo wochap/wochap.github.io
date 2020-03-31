@@ -4,3 +4,4 @@ dist/
 _data/
 npm-debug.log
 .env
+.DS_Store

@@ -1,14 +1,15 @@
 require('dotenv').config()
 
 const {readdirSync} = require('fs')
+// eslint-disable-next-line
 const {resolve} = require('path')
 const webpack = require('webpack')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
@@ -17,7 +18,9 @@ const myLocalIp = require('my-local-ip')
 
 const CURRENT_IP = myLocalIp()
 const externalPath = `http://${CURRENT_IP}:${process.env.WEBPACK_SERVER_PORT}/`
-const {ifProduction, ifNotProduction, ifDevelopment, ifSsr, ifNotSsr} = getIfUtils(process.env.NODE_ENV || {}, ['development', 'test', 'production', 'ssr'])
+const {
+  ifProduction, ifNotProduction, ifDevelopment, ifSsr, ifNotSsr
+} = getIfUtils(process.env.NODE_ENV || {}, ['development', 'test', 'production', 'ssr'])
 const rootNodeModulesPath = resolve(__dirname, 'node_modules')
 const libPath = resolve(__dirname, 'lib')
 const distPath = resolve(__dirname, 'dist')
@@ -42,18 +45,6 @@ module.exports = {
   target: ifSsr('node', 'web'),
   context: srcPath,
   devtool: ifProduction(toBoolean(process.env.SOURCE_MAP) && 'source-map', ifSsr(false, 'eval')),
-  node: {
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty'
-  },
-  stats: {
-    colors: true,
-    children: false,
-    chunks: false,
-    chunkModules: false,
-    modules: false
-  },
   devServer: {
     port: process.env.WEBPACK_SERVER_PORT,
     disableHostCheck: true,
@@ -76,19 +67,10 @@ module.exports = {
     hot: true,
 
     // match the output `publicPath`
-    publicPath: ifProduction('/', externalPath),
-
-    // webpack build logs config
-    stats: {
-      colors: true,
-      chunks: false
-    }
+    publicPath: ifProduction('/', externalPath)
   },
   entry: {
     app: removeEmpty([
-      // fix HMR in IE
-      ifDevelopment('eventsource-polyfill'),
-
       ifDevelopment('react-hot-loader/patch'),
 
       // bundle the client for webpack-dev-server
@@ -118,23 +100,64 @@ module.exports = {
   },
   output: {
     publicPath: ifDevelopment(externalPath, '/'),
-    filename: ifProduction('static/js/bundle.[name].[chunkhash:8].js', ifSsr('_/bundle.[name].js', 'bundle.[name].js')),
-    chunkFilename: ifProduction('static/js/chunk.[name].[chunkhash:8].js', 'chunk.[name].js'),
+    filename: ifProduction('static/js/bundle.[name].[contenthash:8].js', ifSsr('_/bundle.[name].js', 'bundle.[name].js')),
+    chunkFilename: ifProduction('static/js/chunk.[name].[contenthash:8].js', 'chunk.[name].js'),
     path: distPath,
     pathinfo: ifNotProduction(),
     libraryTarget: ifSsr('commonjs-module', 'var')
   },
+  optimization: {
+    ...(
+      ifNotSsr({
+        runtimeChunk: {
+          name: 'webpackManifest'
+        },
+        splitChunks: {
+          cacheGroups: {
+            // any required modules inside node_modules are extracted to vendor
+            vendor: {
+              test ({resource}) {
+                // TODO: ignore webpack modules (e.g.: buffer, style-loader, etc)
+                return resource
+                  && /\.js$/.test(resource)
+                  && resource.indexOf(rootNodeModulesPath) === 0
+              },
+              chunks: 'initial',
+              name: 'vendor',
+              priority: 9,
+              enforce: true
+            },
+            react: {
+              test ({resource}) {
+                const targets = ['react', 'react-dom', 'react-redux', 'react-router', 'react-router-redux', 'react-helmet']
+
+                return resource
+                  && /\.js$/.test(resource)
+                  && resource.indexOf(rootNodeModulesPath) === 0
+                  && targets.find(t => new RegExp(`${rootNodeModulesPath}/${t}/`, 'i').test(resource))
+              },
+              chunks: 'initial',
+              name: 'react',
+              priority: 10,
+              enforce: true
+            }
+          }
+        }
+      }, {})
+    )
+  },
   module: {
     rules: [
+      // {
+      //   test: /\.js$/,
+      //   enforce: 'pre',
+      //   loader: 'eslint-loader',
+      //   exclude: /node_modules/,
+      //   options: {
+      //     formatter: require('eslint-friendly-formatter') // eslint-disable-line
+      //   }
+      // }, {
       {
-        test: /\.js$/,
-        enforce: 'pre',
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-        options: {
-          formatter: require('eslint-friendly-formatter') // eslint-disable-line
-        }
-      }, {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
@@ -144,26 +167,20 @@ module.exports = {
       }, {
         test: /\.css$/,
         use: ifProduction(
-          ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: ['css-loader', 'postcss-loader']
-          }),
+          [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
           ['style-loader', 'css-loader', 'postcss-loader']
         )
       }, {
         test: /\.scss$/,
         use: ifProduction(
-          ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: ['css-loader', 'postcss-loader', 'sass-loader']
-          }),
+          [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
           ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
         )
       }, {
         test: /\.(png|jpe?g|gif)(\?.*)?$/,
         loader: 'file-loader',
         options: {
-          name: ifProduction('static/img/[name].[hash:8].[ext]', '[name].[ext]')
+          name: ifProduction('static/img/[name].[contenthash:8].[ext]', '[name].[ext]')
         }
       }, {
         test: /\.svg(\?v=\d+.\d+.\d+)?$/,
@@ -171,7 +188,7 @@ module.exports = {
         options: {
           limit: 10000,
           mimetype: 'image/svg+xml',
-          name: ifProduction('static/img/[name].[hash:8].[ext]', '[name].[ext]')
+          name: ifProduction('static/img/[name].[contenthash:8].[ext]', '[name].[ext]')
         }
       }, {
         test: /\.eot(\?.*)?$/,
@@ -179,7 +196,7 @@ module.exports = {
         options: {
           limit: 10000,
           mimetype: 'application/vnd.ms-fontobject',
-          name: ifProduction('static/fonts/[name].[hash:8].[ext]', '[name].[ext]')
+          name: ifProduction('static/fonts/[name].[contenthash:8].[ext]', '[name].[ext]')
         }
       }, {
         test: /\.otf(\?.*)?$/,
@@ -187,7 +204,7 @@ module.exports = {
         options: {
           limit: 10000,
           mimetype: 'font/opentype',
-          name: ifProduction('static/fonts/[name].[hash:8].[ext]', '[name].[ext]')
+          name: ifProduction('static/fonts/[name].[contenthash:8].[ext]', '[name].[ext]')
         }
       }, {
         test: /\.ttf(\?v=\d+.\d+.\d+)?$/,
@@ -195,7 +212,7 @@ module.exports = {
         options: {
           limit: 10000,
           mimetype: 'application/octet-stream',
-          name: ifProduction('static/fonts/[name].[hash:8].[ext]', '[name].[ext]')
+          name: ifProduction('static/fonts/[name].[contenthash:8].[ext]', '[name].[ext]')
         }
       }, {
         test: /\.woff(\?.*)?$/,
@@ -203,7 +220,7 @@ module.exports = {
         options: {
           limit: 10000,
           mimetype: 'application/font-woff',
-          name: ifProduction('static/fonts/[name].[hash:8].[ext]', '[name].[ext]')
+          name: ifProduction('static/fonts/[name].[contenthash:8].[ext]', '[name].[ext]')
         }
       }, {
         test: /\.woff2(\?.*)?$/,
@@ -211,25 +228,14 @@ module.exports = {
         options: {
           limit: 10000,
           mimetype: 'application/font-woff2',
-          name: ifProduction('static/fonts/[name].[hash:8].[ext]', '[name].[ext]')
+          name: ifProduction('static/fonts/[name].[contenthash:8].[ext]', '[name].[ext]')
         }
       }
     ]
   },
   plugins: removeEmpty([
-    // define globals
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: ifDevelopment('"development"', '"production"')
-      }
-    }),
-
-    new webpack.LoaderOptionsPlugin({
-      // css loader config
-      minimize: ifProduction(),
-      sourceMap: ifProduction(toBoolean(process.env.SOURCE_MAP)),
-
-      debug: ifNotProduction()
+      'process.env.NODE_ENV': ifDevelopment('"development"', '"production"')
     }),
 
     ifProduction(
@@ -238,92 +244,27 @@ module.exports = {
       new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /es/) // eslint-disable-line
     ),
 
-    // any required modules inside node_modules are extracted to vendor
-    ifNotSsr(
-      new webpack.optimize.CommonsChunkPlugin({
-        name: 'vendor',
-        minChunks ({resource}) {
-          // TODO: ignore webpack modules (e.g.: buffer, style-loader, etc)
-          return resource &&
-            /\.js$/.test(resource) &&
-            resource.indexOf(rootNodeModulesPath) === 0
-        }
-      })
-    ),
-
-    // create a specific chunk for these modules
-    // https://medium.com/@adamrackis/vendor-and-code-splitting-in-webpack-2-6376358f1923#.selnbx3gp
-    ifNotSsr(
-      new webpack.optimize.CommonsChunkPlugin({
-        name: 'react',
-        minChunks ({resource}) {
-          const targets = ['react', 'react-dom', 'react-redux', 'react-router', 'react-router-redux', 'react-helmet']
-
-          return resource &&
-            /\.js$/.test(resource) &&
-            resource.indexOf(rootNodeModulesPath) === 0 &&
-            targets.find(t => new RegExp(`${rootNodeModulesPath}/${t}/`, 'i').test(resource))
-        }
-      })
-    ),
-
-    // extract manifest
-    ifNotSsr(
-      new webpack.optimize.CommonsChunkPlugin({
-        name: 'manifest'
-      })
-    ),
-
-    // catch all - anything used in more than one place
-    // ifProduction(
-    //   new webpack.optimize.CommonsChunkPlugin({
-    //     async: 'common',
-    //     minChunks (module, count) {
-    //       return count >= 2
-    //     }
-    //   })
-    // ),
-
-    ifProduction(
-      new InlineManifestWebpackPlugin({
-        name: 'webpackManifest'
-      })
-    ),
-
     // enable HMR globally
     ifDevelopment(new webpack.HotModuleReplacementPlugin()),
 
-    // prints more readable module names in the browser console on HMR updates
-    ifNotProduction(new webpack.NamedModulesPlugin()),
+    toBoolean(process.env.BUNDLE_ANALYZER_REPORT) ? ifProduction(new BundleAnalyzerPlugin()) : undefined,
 
     ifProduction(
-      // minify and optimize the javaScript
-      new webpack.optimize.UglifyJsPlugin({
-        sourceMap: toBoolean(process.env.SOURCE_MAP),
-        compress: {
-          screw_ie8: true,
-          warnings: false
-        },
-        mangle: {
-          screw_ie8: true
-        },
-        output: {
-          comments: false,
-          screw_ie8: true
-        }
+      new MiniCssExtractPlugin({
+        filename: ifProduction(
+          'static/css/bundle.[name].[contenthash:8].css',
+          'bundle.[name].css'
+        ),
+        chunkFilename: ifProduction(
+          'static/css/chunk.[name].[contenthash:8].css',
+          'bundle.[name].css'
+        )
       })
     ),
 
-    toBoolean(process.env.BUNDLE_ANALYZER_REPORT) ? ifProduction(new BundleAnalyzerPlugin()) : undefined,
-
-    ifProduction(new ExtractTextPlugin('static/css/[name].[contenthash:8].css')),
-
     ifNotSsr(
       new HtmlWebpackPlugin({
-        // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-        chunksSortMode: 'dependency',
         template: './index.html',
-        inject: true,
         minify: ifProduction({
           removeComments: true,
           collapseWhitespace: true,
@@ -351,7 +292,7 @@ module.exports = {
     ifProduction(
       new FaviconsWebpackPlugin({
         logo: `${srcPath}/favicon.png`,
-        prefix: 'static/icons-[hash]/',
+        prefix: 'static/icons-[contenthash:8]/',
         title: 'wochap',
         icons: {
           android: true,
@@ -405,6 +346,10 @@ module.exports = {
         reload: false
       })
     ) : undefined,
+
+    ifNotSsr(
+      new InlineManifestWebpackPlugin('webpackManifest')
+    ),
 
     new ProgressBarPlugin()
   ])

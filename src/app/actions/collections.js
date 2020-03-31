@@ -42,7 +42,7 @@ export function loadItem (collectionName, fileName) {
       collectionName,
       fileName
     },
-    payload: require(`lazy-loader!markdown-loader!data/${collectionName}/${fileName}.md`)().then((item) => { // eslint-disable-line
+    payload: require('lazy-loader!markdown-loader!data/' + collectionName + '/' + fileName + '.md')().then((item) => { // eslint-disable-line
       return normalize(item, itemSchema).entities[COLLECTION_SCHEMA_NAME]
     })
   }
@@ -63,7 +63,7 @@ export function loadCollection (collectionName) {
     meta: {
       collectionName
     },
-    payload: require(`lazy-dir-loader!data/${collectionName}.config.js`)().then((items) => { // eslint-disable-line
+    payload: require('lazy-dir-loader!data/' + collectionName + '.config.js')().then((items) => { // eslint-disable-line
       items.sort(orderByDate) // eslint-disable-line
       return normalize(items, arrayOfItemsSchema).entities[COLLECTION_SCHEMA_NAME]
     })

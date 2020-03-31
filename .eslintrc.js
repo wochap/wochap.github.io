@@ -35,6 +35,8 @@ module.exports = {
     'import/prefer-default-export': [0],
     'import/no-named-as-default': [0],
     'max-len': [0],
+    'object-curly-newline': [0],
+    'react/no-deprecated': [0],
 
     'react/require-default-props': [0],
     'react/no-array-index-key': [0],

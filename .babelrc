@@ -1,38 +1,70 @@
 {
   "env": {
     "test": {
+      "presets": [
+        ["@babel/preset-env", {
+          "modules": false
+        }],
+        "@babel/preset-react",
+        "@babel/preset-flow"
+      ],
       "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-syntax-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from",
         "transform-es2015-modules-commonjs",
         "dynamic-import-node"
       ],
-      "presets": [
-        "react",
-        "stage-1",
-        "flow"
-      ]
     },
     "ssr": {
       "presets": [
-        "react",
-        "stage-1",
-        "flow"
+        ["@babel/preset-env", {
+          "modules": false
+        }],
+        "@babel/preset-react",
+        "@babel/preset-flow"
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties"
       ]
     },
     "development": {
-      "plugins": "react-hot-loader/babel",
       "presets": [
-        "stage-1",
-        "react",
-        "flow"
+        ["@babel/preset-env", {
+          "modules": false
+        }],
+        "@babel/preset-react",
+        "@babel/preset-flow"
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-syntax-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from",
+        [
+          "@babel/plugin-transform-runtime", {
+            "corejs": 3
+          }
+        ],
+        "react-hot-loader/babel"
       ]
     },
     "production": {
-      "plugins": ["transform-runtime"],
       "presets": [
-        ["es2015", {"modules": false}],
-        "stage-1",
-        "react",
-        "flow"
+        ["@babel/preset-env", {
+          "modules": false
+        }],
+        "@babel/preset-react",
+        "@babel/preset-flow"
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-syntax-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from",
+        [
+          "@babel/plugin-transform-runtime", {
+            "corejs": 3
+          }
+        ]
       ]
     }
   }
