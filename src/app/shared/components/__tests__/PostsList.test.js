@@ -5,7 +5,7 @@ import PostsList from '../PostsList'
 
 describe('PostsList', () => {
   const props = {
-    posts: mocks.collection
+    posts: mocks.collection,
   }
   const wrapper = shallow(<PostsList {...props} />)
 
@@ -19,7 +19,7 @@ describe('PostsList', () => {
 
   it('show empty pending state', () => {
     wrapper.setProps({
-      posts: []
+      posts: [],
     })
 
     expect(wrapper.text()).toEqual('No hay artículos que mostrar.')

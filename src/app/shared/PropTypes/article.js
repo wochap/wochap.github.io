@@ -11,10 +11,10 @@ export const frontMatterShape = React.PropTypes.shape({
   siteLink: React.PropTypes.string,
   fileName: React.PropTypes.string.isRequired,
   description: React.PropTypes.string.isRequired,
-  tags: React.PropTypes.arrayOf(React.PropTypes.string)
+  tags: React.PropTypes.arrayOf(React.PropTypes.string),
 })
 
 export const articleShape = React.PropTypes.shape({
   frontMatter: frontMatterShape,
-  bodyHtml: React.PropTypes.string
+  bodyHtml: React.PropTypes.string,
 })

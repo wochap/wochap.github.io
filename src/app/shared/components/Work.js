@@ -2,16 +2,16 @@ import {frontMatterShape} from 'PropTypes/article'
 import React from 'react'
 import {Link} from 'react-router'
 
-function Work ({work}) {
+function Work({work}) {
   return (
     <article
-      className="c-work"
+      className='c-work'
       style={{
-        backgroundImage: `url(${work.imageUrl})`
+        backgroundImage: `url(${work.imageUrl})`,
       }}
     >
-      <Link className="c-work__link" to={`/works/${work.fileName}`}>
-        <h3 className="u-caps">{work.title}</h3>
+      <Link className='c-work__link' to={`/works/${work.fileName}`}>
+        <h3 className='u-caps'>{work.title}</h3>
         <p>Ver proyecto completo</p>
       </Link>
     </article>
@@ -19,7 +19,7 @@ function Work ({work}) {
 }
 
 Work.propTypes = {
-  work: frontMatterShape.isRequired
+  work: frontMatterShape.isRequired,
 }
 
 export default Work

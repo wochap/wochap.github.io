@@ -4,7 +4,7 @@ import WorksList from '../WorksList'
 
 describe('WorksList', () => {
   const props = {
-    works: []
+    works: [],
   }
   const wrapper = shallow(<WorksList {...props} />)
 

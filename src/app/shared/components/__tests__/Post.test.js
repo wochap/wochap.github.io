@@ -6,7 +6,7 @@ import Post from '../Post'
 
 describe('Post', () => {
   const props = {
-    post: mocks.collectionItem.frontMatter
+    post: mocks.collectionItem.frontMatter,
   }
   const wrapper = shallow(<Post post={props.post} />)
 

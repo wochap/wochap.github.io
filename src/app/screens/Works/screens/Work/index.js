@@ -5,7 +5,7 @@ export default {
   component: WorkScreen,
   layoutProps: {
     headerProps: {
-      isFixed: true
-    }
-  }
+      isFixed: true,
+    },
+  },
 }

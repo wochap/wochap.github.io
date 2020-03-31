@@ -4,17 +4,19 @@ import Work from './screens/Work'
 
 export default {
   path: 'works',
-  getComponent (nextState, cb) {
+  getComponent(nextState, cb) {
     topBar.show()
 
-    require.ensure([], (require) => {
-      topBar.hide()
+    require.ensure(
+      [],
+      require => {
+        topBar.hide()
 
-      cb(null, require('./components/WorksScreen').default) // eslint-disable-line
-    }, 'WorksScreen')
+        cb(null, require('./components/WorksScreen').default) // eslint-disable-line
+      },
+      'WorksScreen',
+    )
   },
   indexRoute: Works,
-  childRoutes: [
-    Work
-  ]
+  childRoutes: [Work],
 }

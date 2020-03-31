@@ -1,9 +1,13 @@
 import deepMerge from 'deepmerge'
 import * as collectionsActions from 'app/actions/collections'
 
-function collection (state = {
-  items: {}
-}, type, payload) {
+function collection(
+  state = {
+    items: {},
+  },
+  type,
+  payload,
+) {
   switch (type) {
     case 'PENDING': {
       return {
@@ -11,8 +15,8 @@ function collection (state = {
         state: {
           error: false,
           isPending: true,
-          isFulfilled: false
-        }
+          isFulfilled: false,
+        },
       }
     }
     case 'FULFILLED': {
@@ -21,8 +25,8 @@ function collection (state = {
         state: {
           error: false,
           isPending: false,
-          isFulfilled: true
-        }
+          isFulfilled: true,
+        },
       })
     }
     case 'REJECTED': {
@@ -30,8 +34,8 @@ function collection (state = {
         state: {
           error: payload,
           isPending: false,
-          isFulfilled: true
-        }
+          isFulfilled: true,
+        },
       })
     }
     default: {
@@ -40,24 +44,24 @@ function collection (state = {
   }
 }
 
-export default function collections (state = {}, {type, payload, meta}) {
+export default function collections(state = {}, {type, payload, meta}) {
   switch (type) {
     case `${collectionsActions.FETCH_COLLECTION}_PENDING`: {
       return {
         ...state,
-        [meta.collectionName]: collection(state[meta.collectionName], 'PENDING')
+        [meta.collectionName]: collection(state[meta.collectionName], 'PENDING'),
       }
     }
     case `${collectionsActions.FETCH_COLLECTION}_FULFILLED`: {
       return {
         ...state,
-        [meta.collectionName]: collection(state[meta.collectionName], 'FULFILLED', payload)
+        [meta.collectionName]: collection(state[meta.collectionName], 'FULFILLED', payload),
       }
     }
     case `${collectionsActions.FETCH_COLLECTION}_REJECTED`: {
       return {
         ...state,
-        [meta.collectionName]: collection(state[meta.collectionName], 'REJECTED', payload)
+        [meta.collectionName]: collection(state[meta.collectionName], 'REJECTED', payload),
       }
     }
 
@@ -69,11 +73,11 @@ export default function collections (state = {}, {type, payload, meta}) {
               state: {
                 error: false,
                 isPending: true,
-                isFulfilled: false
-              }
-            }
-          }
-        }
+                isFulfilled: false,
+              },
+            },
+          },
+        },
       })
     }
     case `${collectionsActions.FETCH_ITEM}_FULFILLED`: {
@@ -85,11 +89,11 @@ export default function collections (state = {}, {type, payload, meta}) {
               state: {
                 error: false,
                 isPending: false,
-                isFulfilled: true
-              }
-            }
-          }
-        }
+                isFulfilled: true,
+              },
+            },
+          },
+        },
       })
     }
     case `${collectionsActions.FETCH_ITEM}_REJECTED`: {
@@ -100,11 +104,11 @@ export default function collections (state = {}, {type, payload, meta}) {
               state: {
                 error: payload,
                 isPending: false,
-                isFulfilled: true
-              }
-            }
-          }
-        }
+                isFulfilled: true,
+              },
+            },
+          },
+        },
       })
     }
 

@@ -6,7 +6,7 @@ import {WorkScreen} from '../WorkScreen'
 describe('WorkScreen', () => {
   const props = {
     itemState: mocks.state,
-    collectionState: mocks.state
+    collectionState: mocks.state,
   }
   const wrapper = shallow(<WorkScreen {...props} />)
 

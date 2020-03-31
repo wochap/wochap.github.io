@@ -4,7 +4,7 @@ import * as reducers from 'app/reducers'
 
 const rootReducer = combineReducers({
   ...reducers,
-  routing: routerReducer
+  routing: routerReducer,
 })
 
 export default rootReducer

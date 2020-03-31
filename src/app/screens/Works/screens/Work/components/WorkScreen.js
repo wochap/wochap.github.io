@@ -3,12 +3,12 @@ import data from 'app/config/data'
 import withCollectionItem from 'hoc/collection/withCollectionItem'
 import SiteArticle from 'components/SiteArticle' // eslint-disable-line
 
-export function WorkScreen (props) {
+export function WorkScreen(props) {
   return (
     <SiteArticle
       {...props}
       head={{
-        canonicalHref: data.screens.works.canonicalHref
+        canonicalHref: data.screens.works.canonicalHref,
       }}
     />
   )

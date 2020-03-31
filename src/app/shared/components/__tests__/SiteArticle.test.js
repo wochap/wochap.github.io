@@ -6,19 +6,19 @@ import SiteArticle from '../SiteArticle'
 describe('SiteArticle', () => {
   const props = {
     head: {
-      canonicalHref: ''
+      canonicalHref: '',
     },
     item: mocks.collectionItem,
     itemState: {
       error: 'An fake error',
       isPending: true,
-      isFulfilled: true
+      isFulfilled: true,
     },
     collectionState: {
       error: false,
       isPending: false,
-      isFulfilled: true
-    }
+      isFulfilled: true,
+    },
   }
   const wrapper = shallow(<SiteArticle {...props} />)
 
@@ -35,13 +35,13 @@ describe('SiteArticle', () => {
       itemState: {
         error: false,
         isPending: false,
-        isFulfilled: false
+        isFulfilled: false,
       },
       collectionState: {
         error: false,
         isPending: false,
-        isFulfilled: false
-      }
+        isFulfilled: false,
+      },
     })
 
     expect(wrapper.find('NotFoundScreen')).toBeTruthy()

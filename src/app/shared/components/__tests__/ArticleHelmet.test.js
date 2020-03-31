@@ -7,7 +7,7 @@ describe('ArticleHelmet', () => {
   const props = {
     imageUrl: 'imageUrl',
     publishedTime: '2016-12-25',
-    tags: []
+    tags: [],
   }
   const wrapper = shallow(<ArticleHelmet {...props} />)
 
@@ -20,18 +20,21 @@ describe('ArticleHelmet', () => {
       meta: [
         {
           property: 'og:type',
-          content: 'article'
-        }, {
+          content: 'article',
+        },
+        {
           property: 'og:image',
-          content: props.imageUrl
-        }, {
+          content: props.imageUrl,
+        },
+        {
           property: 'article:published_time',
-          content: props.publishedTime
-        }, {
+          content: props.publishedTime,
+        },
+        {
           property: 'article:author',
-          content: `https://twitter.com/${data.twitterUser}`
-        }
-      ]
+          content: `https://twitter.com/${data.twitterUser}`,
+        },
+      ],
     }
 
     expect(wrapper.props()).toEqual(expectedProps)

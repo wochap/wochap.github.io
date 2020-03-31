@@ -1,6 +1,6 @@
 import cheerio from 'cheerio' // eslint-disable-line
 
-export default function template ({bodyHTML = '', headHTML = '', initialState}) {
+export default function template({bodyHTML = '', headHTML = '', initialState}) {
   return new Promise((resolve, reject) => {
     try {
       const markup = require('!!html-loader!../../dist/index.html') // eslint-disable-line

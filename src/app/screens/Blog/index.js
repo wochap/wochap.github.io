@@ -4,17 +4,19 @@ import Posts from './screens/Posts'
 
 export default {
   path: 'blog',
-  getComponent (nextState, cb) {
+  getComponent(nextState, cb) {
     topBar.show()
 
-    require.ensure([], (require) => {
-      topBar.hide()
+    require.ensure(
+      [],
+      require => {
+        topBar.hide()
 
-      cb(null, require('./components/BlogScreen').default) // eslint-disable-line
-    }, 'BlogScreen')
+        cb(null, require('./components/BlogScreen').default) // eslint-disable-line
+      },
+      'BlogScreen',
+    )
   },
   indexRoute: Posts,
-  childRoutes: [
-    Post
-  ]
+  childRoutes: [Post],
 }

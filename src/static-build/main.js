@@ -10,7 +10,7 @@ import configureStore from 'app/store/configureStore'
 import * as collectionActions from 'app/actions/collections'
 import template from './template'
 
-export default function render (locals) {
+export default function render(locals) {
   return new Promise((resolve, reject) => {
     try {
       const memoryHistory = createMemoryHistory()
@@ -37,13 +37,13 @@ export default function render (locals) {
           await store.dispatch(collectionActions.loadItem('works', fileName))
         }
 
-        const bodyHTML = ReactDOM.renderToString((
+        const bodyHTML = ReactDOM.renderToString(
           <AppContainer>
             <Provider store={store}>
               <RouterContext {...renderProps} />
             </Provider>
-          </AppContainer>
-        ))
+          </AppContainer>,
+        )
         const head = Helmet.rewind()
         const headHTML = `
           ${head.title.toString()}

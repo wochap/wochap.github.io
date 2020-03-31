@@ -5,7 +5,7 @@ import Work from '../Work'
 
 describe('Work', () => {
   const props = {
-    work: mocks.collectionItem.frontMatter
+    work: mocks.collectionItem.frontMatter,
   }
   const wrapper = shallow(<Work {...props} />)
 

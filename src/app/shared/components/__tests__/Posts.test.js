@@ -1,17 +1,17 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {Posts} from '../Posts'
+import {PostsComponent} from '../Posts'
 
 describe('Posts', () => {
   const props = {
     collectionState: {
       error: 'Error',
       isPending: true,
-      isFulfilled: false
+      isFulfilled: false,
     },
-    collection: []
+    collection: [],
   }
-  const wrapper = shallow(<Posts {...props} />)
+  const wrapper = shallow(<PostsComponent {...props} />)
 
   it('render component', () => {
     expect(wrapper.length).toBeTruthy()
@@ -22,8 +22,8 @@ describe('Posts', () => {
       collectionState: {
         error: false,
         isPending: true,
-        isFulfilled: false
-      }
+        isFulfilled: false,
+      },
     })
 
     expect(wrapper.find('ShimmerText').length).toBeTruthy()

@@ -9,7 +9,7 @@ describe('SiteHeader', () => {
     expect(siteHeader.hasClass('is-fixed')).toEqual(false)
 
     siteHeader.setProps({
-      isFixed: true
+      isFixed: true,
     })
 
     expect(siteHeader.hasClass('is-fixed')).toEqual(true)

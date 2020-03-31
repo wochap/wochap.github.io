@@ -6,22 +6,34 @@ import moment from 'moment'
  */
 
 if (!window.Promise) {
-  require.ensure([], (require) => {
-    window.Promise = require('promise-polyfill')
-  }, 'promise-polyfill')
+  require.ensure(
+    [],
+    require => {
+      window.Promise = require('promise-polyfill')
+    },
+    'promise-polyfill',
+  )
 }
 
 if (!String.prototype.includes) {
-  require.ensure([], (require) => {
-    require('string.prototype.includes')
-  }, 'string-prototype-includes')
+  require.ensure(
+    [],
+    require => {
+      require('string.prototype.includes')
+    },
+    'string-prototype-includes',
+  )
 }
 
-require.ensure([], (require) => {
-  const platform = require('platform')
-  window._platform = platform
-  document.querySelector('html').classList.add(platform.layout)
-}, 'platform')
+require.ensure(
+  [],
+  require => {
+    const platform = require('platform')
+    window._platform = platform
+    document.querySelector('html').classList.add(platform.layout)
+  },
+  'platform',
+)
 
 /**
  * MODULES GLOBAL CONFIG
@@ -31,5 +43,5 @@ moment.locale('es')
 
 topBar.config({
   barThickness: 4,
-  shadowColor: 'rgba(255, 255, 255, .5)'
+  shadowColor: 'rgba(255, 255, 255, .5)',
 })

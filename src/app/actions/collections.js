@@ -11,9 +11,10 @@ export const FETCH_COLLECTION = 'collections/FETCH_COLLECTIONS'
  */
 
 const itemSchema = new Schema(COLLECTION_SCHEMA_NAME, {
-  idAttribute: (entity) => { // eslint-disable-line
+  idAttribute: entity => {
+    // eslint-disable-line
     return entity.frontMatter.fileName
-  }
+  },
 })
 
 const arrayOfItemsSchema = arrayOf(itemSchema)
@@ -28,7 +29,7 @@ const arrayOfItemsSchema = arrayOf(itemSchema)
  * @param  {String} fileName       - The file name from the file that will be loaded.
  * @return {Object}                [description]
  */
-export function loadItem (collectionName, fileName) {
+export function loadItem(collectionName, fileName) {
   if (!collectionName) {
     throw new Error('(actions)[collection] loadItem: `collectionName` is required.')
   }
@@ -40,11 +41,12 @@ export function loadItem (collectionName, fileName) {
     type: FETCH_ITEM,
     meta: {
       collectionName,
-      fileName
+      fileName,
     },
-    payload: require('lazy-loader!markdown-loader!data/' + collectionName + '/' + fileName + '.md')().then((item) => { // eslint-disable-line
+    payload: require('lazy-loader!markdown-loader!data/' + collectionName + '/' + fileName + '.md')().then(item => {
+      // eslint-disable-line
       return normalize(item, itemSchema).entities[COLLECTION_SCHEMA_NAME]
-    })
+    }),
   }
 }
 
@@ -53,7 +55,7 @@ export function loadItem (collectionName, fileName) {
  * @param  {String} collectionName - The collection name where the item will be stored (data folder name).
  * @return {Object}                [description]
  */
-export function loadCollection (collectionName) {
+export function loadCollection(collectionName) {
   if (!collectionName) {
     throw new Error('(actions)[collection] loadCollection: `collectionName` is required.')
   }
@@ -61,16 +63,17 @@ export function loadCollection (collectionName) {
   return {
     type: FETCH_COLLECTION,
     meta: {
-      collectionName
+      collectionName,
     },
-    payload: require('lazy-dir-loader!data/' + collectionName + '.config.js')().then((items) => { // eslint-disable-line
+    payload: require('lazy-dir-loader!data/' + collectionName + '.config.js')().then(items => {
+      // eslint-disable-line
       items.sort(orderByDate) // eslint-disable-line
       return normalize(items, arrayOfItemsSchema).entities[COLLECTION_SCHEMA_NAME]
-    })
+    }),
   }
 }
 
-function orderByDate (a, b) {
+function orderByDate(a, b) {
   const aDate = moment(a.frontMatter.date, COLLECTION_DATE_FORMAT).toDate()
   const bDate = moment(b.frontMatter.date, COLLECTION_DATE_FORMAT).toDate()
 

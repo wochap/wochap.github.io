@@ -4,15 +4,11 @@ import App from '../App'
 
 describe('App', () => {
   it('render children', () => {
-    const app = shallow((
-      <App
-        routes={[
-          {layoutProps: {}}
-        ]}
-      >
+    const app = shallow(
+      <App routes={[{layoutProps: {}}]}>
         <h1>children</h1>
-      </App>
-    ))
+      </App>,
+    )
 
     expect(app.contains(<h1>children</h1>)).toEqual(true)
   })

@@ -1,19 +1,23 @@
 import topBar from 'utils/topBar'
 
 export default {
-  getComponent (nextState, cb) {
+  getComponent(nextState, cb) {
     topBar.show()
 
-    require.ensure([], (require) => {
-      topBar.hide()
+    require.ensure(
+      [],
+      require => {
+        topBar.hide()
 
-      cb(null, require('./components/HomeScreen').default) // eslint-disable-line
-    }, 'HomeScreen')
+        cb(null, require('./components/HomeScreen').default) // eslint-disable-line
+      },
+      'HomeScreen',
+    )
   },
   layoutProps: {
     headerProps: {
       isFixed: true,
-      isHome: true
-    }
-  }
+      isHome: true,
+    },
+  },
 }

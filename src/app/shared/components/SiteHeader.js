@@ -6,21 +6,19 @@ import Hamburger from './Hamburger'
 class SiteHeader extends React.Component {
   static propTypes = {
     isFixed: React.PropTypes.bool,
-    isHome: React.PropTypes.bool
+    isHome: React.PropTypes.bool,
   }
 
   static defaultProps = {
-    isHome: false
+    isHome: false,
   }
 
   state = {
-    isNavOpen: false
+    isNavOpen: false,
   }
 
-  shouldComponentUpdate ({isFixed, isHome}, {isNavOpen}) { // eslint-disable-line
-    if (this.props.isFixed !== isFixed
-        || this.state.isNavOpen !== isNavOpen
-        || this.props.isHome !== isHome) {
+  shouldComponentUpdate({isFixed, isHome}, {isNavOpen}) {
+    if (this.props.isFixed !== isFixed || this.state.isNavOpen !== isNavOpen || this.props.isHome !== isHome) {
       return true
     }
     return false
@@ -30,48 +28,49 @@ class SiteHeader extends React.Component {
     const {isNavOpen} = this.state
 
     this.setState({
-      isNavOpen: !isNavOpen
+      isNavOpen: !isNavOpen,
     })
   }
 
   _closeNav = () => {
     this.setState({
-      isNavOpen: false
+      isNavOpen: false,
     })
   }
 
-  render () {
+  render() {
     const {isFixed, isHome} = this.props
     const {isNavOpen} = this.state
 
     return (
       <header className={`o-wrapper c-site-header ${isFixed ? 'is-fixed' : ''}`}>
-        <p className="c-site-header__title">
-          <Link className to="/">
+        <p className='c-site-header__title'>
+          <Link className to='/'>
             Gean <br /> Marroquin
           </Link>
         </p>
         <nav className={`o-dialog c-site-nav ${isNavOpen ? 'is-open' : ''}`}>
-          <ul className="o-dialog__wrapper">
+          <ul className='o-dialog__wrapper'>
             <li>
-              <Link
-                className="o-btn c-site-nav__link"
-                to="/about"
-                onClick={this._closeNav}
-                activeClassName="is-active"
-              >Sobre mi</Link>
+              <Link className='o-btn c-site-nav__link' to='/about' onClick={this._closeNav} activeClassName='is-active'>
+                Sobre mi
+              </Link>
             </li>
             <li>
               <SiteHeaderLink
-                title="Portafolio"
+                title='Portafolio'
                 isHome={isHome}
-                props={isHome ? {
-                  href: '#works'
-                } : {
-                  to: '/works',
-                  onClick: this._closeNav,
-                  activeClassName: 'is-active'
-                }}
+                props={
+                  isHome
+                    ? {
+                        href: '#works',
+                      }
+                    : {
+                        to: '/works',
+                        onClick: this._closeNav,
+                        activeClassName: 'is-active',
+                      }
+                }
               />
             </li>
             {/* <li>
@@ -89,15 +88,19 @@ class SiteHeader extends React.Component {
             </li> */}
             <li>
               <SiteHeaderLink
-                title="Contacto"
+                title='Contacto'
                 isHome={isHome}
-                props={isHome ? {
-                  href: '#contact'
-                } : {
-                  to: '/contact',
-                  onClick: this._closeNav,
-                  activeClassName: 'is-active'
-                }}
+                props={
+                  isHome
+                    ? {
+                        href: '#contact',
+                      }
+                    : {
+                        to: '/contact',
+                        onClick: this._closeNav,
+                        activeClassName: 'is-active',
+                      }
+                }
               />
             </li>
           </ul>

@@ -3,7 +3,7 @@ import data from 'app/config/data'
 import ScreenHelmet from 'components/ScreenHelmet'
 import SiteContact from 'components/SiteContact'
 
-function ContactScreen () {
+function ContactScreen() {
   return (
     <main>
       <ScreenHelmet
@@ -11,7 +11,7 @@ function ContactScreen () {
         description={data.screens.contact.description}
         canonicalHref={data.screens.contact.canonicalHref}
       />
-      <SiteContact className="u-mb5" />
+      <SiteContact className='u-mb5' />
     </main>
   )
 }

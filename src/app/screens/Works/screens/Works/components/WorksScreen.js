@@ -3,7 +3,7 @@ import data from 'app/config/data'
 import ScreenHelmet from 'components/ScreenHelmet'
 import Works from 'components/Works'
 
-function WorksScreen () {
+function WorksScreen() {
   return (
     <main>
       <ScreenHelmet
@@ -11,7 +11,7 @@ function WorksScreen () {
         description={data.screens.works.description}
         canonicalHref={data.screens.works.canonicalHref}
       />
-      <Works className="u-mb5" />
+      <Works className='u-mb5' />
     </main>
   )
 }

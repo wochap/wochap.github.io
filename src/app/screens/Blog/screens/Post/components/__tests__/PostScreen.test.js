@@ -6,7 +6,7 @@ import {PostScreen} from '../PostScreen'
 describe('PostScreen', () => {
   const props = {
     itemState: mocks.state,
-    collectionState: mocks.state
+    collectionState: mocks.state,
   }
   const wrapper = shallow(<PostScreen {...props} />)
 

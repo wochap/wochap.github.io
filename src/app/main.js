@@ -15,13 +15,13 @@ const initialState = window.__INITIAL_STATE__ || undefined
 const store = configureStore(initialState)
 const history = syncHistoryWithStore(browserHistory, store)
 
-ReactDOM.render((
+ReactDOM.render(
   <AppContainer>
     <Provider store={store}>
       <Router history={history} routes={routes} />
     </Provider>
-  </AppContainer>),
-  rootEl
+  </AppContainer>,
+  rootEl,
 )
 
 if (module.hot) {
@@ -31,13 +31,13 @@ if (module.hot) {
     // HMR async routes
     ReactDOM.unmountComponentAtNode(rootEl)
 
-    ReactDOM.render((
+    ReactDOM.render(
       <AppContainer>
         <Provider store={store}>
           <Router history={browserHistory} routes={newRoutes} />
         </Provider>
-      </AppContainer>),
-      rootEl
+      </AppContainer>,
+      rootEl,
     )
   })
 }

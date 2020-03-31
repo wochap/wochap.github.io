@@ -3,7 +3,7 @@ import {shallow} from 'enzyme'
 import SiteError from '../SiteError'
 
 describe('SiteError', () => {
-  const wrapper = shallow(<SiteError title="title" message="custom message" />)
+  const wrapper = shallow(<SiteError title='title' message='custom message' />)
 
   it('render component', () => {
     expect(wrapper.length).toBeTruthy()

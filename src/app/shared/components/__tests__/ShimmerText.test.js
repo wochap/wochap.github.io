@@ -18,7 +18,7 @@ describe('ShimmerText', () => {
 
   it('render text children', () => {
     const wrapper = shallow(<ShimmerText>fake text</ShimmerText>)
-    const wrapper2 = shallow(<ShimmerText text="fake text" />)
+    const wrapper2 = shallow(<ShimmerText text='fake text' />)
 
     expect(wrapper.length).toBeTruthy()
     expect(wrapper.text()).toEqual('fake text')

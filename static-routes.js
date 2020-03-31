@@ -8,16 +8,7 @@ const postsRoutes = getFileNamesArrayFrom(resolve(dataPath, 'posts')).map(fileNa
 const worksRoutes = getFileNamesArrayFrom(resolve(dataPath, 'works')).map(fileName => `/works/${fileName}`) // eslint-disable-line
 
 // exports routes that static-site-generator-webpack-plugin will build
-module.exports = [
-  '/',
-  '/about',
-  '/works',
-  '/blog',
-  '/contact',
-  '/404.html',
-  ...postsRoutes,
-  ...worksRoutes
-]
+module.exports = ['/', '/about', '/works', '/blog', '/contact', '/404.html', ...postsRoutes, ...worksRoutes]
 
 /**
  * UTILS
@@ -28,13 +19,13 @@ module.exports = [
  * @param {String} folderPath - Absolute folder path.
  * @return {Array}
  */
-function getFileNamesArrayFrom (folderPath) {
+function getFileNamesArrayFrom(folderPath) {
   // get all files in folder
   const files = fs.readdirSync(folderPath)
 
   // create all possible works routes
-  return files.map((path) => {
+  return files.map(path => {
     // extract file name from path of file
-    return (path.split('/').pop().split('.'))[0]
+    return path.split('/').pop().split('.')[0]
   })
 }

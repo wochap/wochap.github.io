@@ -4,7 +4,7 @@ const ERROR_NAMESPACE = '(selectors)[collections]'
  * COLLECTION ITEM SELECTORS
  */
 
-function sharedItemValidations (functionName, collectionName, fileName) {
+function sharedItemValidations(functionName, collectionName, fileName) {
   if (!collectionName) {
     throw new Error(`${ERROR_NAMESPACE} ${functionName}: 'collectionName' is required.`)
   }
@@ -13,7 +13,7 @@ function sharedItemValidations (functionName, collectionName, fileName) {
   }
 }
 
-export function getItem ({collections}, collectionName, fileName) {
+export function getItem({collections}, collectionName, fileName) {
   sharedItemValidations('getItem', collectionName, fileName)
 
   try {
@@ -26,7 +26,7 @@ export function getItem ({collections}, collectionName, fileName) {
   }
 }
 
-export function getItemState ({collections}, collectionName, fileName) {
+export function getItemState({collections}, collectionName, fileName) {
   sharedItemValidations('getItemState', collectionName, fileName)
 
   try {
@@ -43,7 +43,7 @@ export function getItemState ({collections}, collectionName, fileName) {
     return {
       isPending: false,
       isFulfilled: false,
-      error: false
+      error: false,
     }
   }
 }
@@ -52,13 +52,13 @@ export function getItemState ({collections}, collectionName, fileName) {
  * COLLECTION SELECTORS
  */
 
-function sharedCollectionValidations (functionName, collectionName) {
+function sharedCollectionValidations(functionName, collectionName) {
   if (!collectionName) {
     throw new Error(`${ERROR_NAMESPACE} ${functionName}: 'collectionName' is required.`)
   }
 }
 
-export function getCollection ({collections}, collectionName) {
+export function getCollection({collections}, collectionName) {
   sharedCollectionValidations('getCollection', collectionName)
 
   try {
@@ -72,7 +72,7 @@ export function getCollection ({collections}, collectionName) {
   }
 }
 
-export function getCollectionState ({collections}, collectionName) {
+export function getCollectionState({collections}, collectionName) {
   sharedCollectionValidations('getCollectionError', collectionName)
 
   try {
@@ -89,7 +89,7 @@ export function getCollectionState ({collections}, collectionName) {
     return {
       isPending: false,
       isFulfilled: false,
-      error: false
+      error: false,
     }
   }
 }

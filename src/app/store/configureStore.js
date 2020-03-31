@@ -2,7 +2,7 @@ import {createStore} from 'redux'
 import rootReducer from './rootReducer'
 import middlewares from './middlewares'
 
-function configureStore (initialState) {
+function configureStore(initialState) {
   const store = createStore(rootReducer, initialState, middlewares)
 
   if (module.hot) {

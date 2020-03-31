@@ -5,7 +5,7 @@ export default {
   component: NotFoundScreen,
   layoutProps: {
     headerProps: {
-      isFixed: true
-    }
-  }
+      isFixed: true,
+    },
+  },
 }
