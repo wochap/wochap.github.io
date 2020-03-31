@@ -3,44 +3,38 @@ const isProduction = process.env.NODE_ENV === 'production'
 module.exports = {
   root: true,
   parser: 'babel-eslint',
-  extends: [
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'eslint-config-airbnb'
-  ],
+  extends: ['plugin:import/errors', 'plugin:import/warnings', 'eslint-config-airbnb', 'plugin:prettier/recommended'],
   settings: {
     'import/resolver': {
-      webpack: 'webpack.config.js'
-    }
+      webpack: 'webpack.config.js',
+    },
   },
   env: {
-    browser: true,
+    amd: true,
     node: true,
-    jest: true
+    es6: true,
+    jest: true,
+    browser: true,
+    mocha: true,
   },
   rules: {
+    'prettier/prettier': 'error',
     'no-console': isProduction ? 2 : 0,
     'no-debugger': isProduction ? 2 : 0,
 
-    // backwards compatibility
-    'semi': [2, 'never'],
-    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
-    'object-curly-spacing': [2, 'never'],
-    'space-before-function-paren': [2, 'always'],
-    'comma-dangle': [2, 'never'],
     'no-underscore-dangle': [0],
-    'arrow-body-style': [0],
-    'no-nested-ternary': [0],
-    'react/no-danger': [0],
     'import/prefer-default-export': [0],
-    'import/no-named-as-default': [0],
-    'max-len': [0],
-    'object-curly-newline': [0],
-    'react/no-deprecated': [0],
+    'import/no-extraneous-dependencies': [0],
 
+    'react/static-property-placement': ['error', 'static public field'],
+    'react/state-in-constructor': ['error', 'never'],
+    'react/jsx-props-no-spreading': [0],
+    'react/no-deprecated': [0],
+    'react/jsx-filename-extension': [1, {extensions: ['.js', '.jsx']}],
     'react/require-default-props': [0],
     'react/no-array-index-key': [0],
     'import/extensions': [0],
-    'arrow-parens': [0]
-  }
+    'react/no-danger': [0],
+    'react/jsx-one-expression-per-line': [0],
+  },
 }

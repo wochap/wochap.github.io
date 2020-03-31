@@ -8,11 +8,27 @@
     "postbuild": "cross-env NODE_ENV=ssr webpack --mode none && cd dist && sitemap-static --ignore-file=ignore.json --prefix=https://geanmarroquin.com/ --pretty . > sitemap.xml && http-server",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development",
     "dev:inspect": "cross-env NODE_ENV=development node --inspect-brk node_modules/.bin/webpack-dev-server --mode development",
+    "lint:fix": "cross-env NODE_ENV=production eslint . --fix",
     "test": "cross-env NODE_ENV=test jest --config=test/jest.config.json",
     "test:watch": "npm run test -- --watch",
     "test:coverage": "npm run test -- --coverage",
     "test:coverage-travis": "npm run test -- --coverage && cat ./coverage/lcov.info | coveralls",
     "deploy": "gh-pages -d dist -b master"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add",
+      "pretty-quick --staged"
+    ],
+    "*.json": [
+      "pretty-quick --staged"
+    ]
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -81,11 +97,13 @@
     "enzyme": "^2.8.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-import-resolver-webpack": "^0.12.1",
     "eslint-loader": "^3.0.3",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.19.0",
     "favicons-webpack-plugin": "2.1.0",
@@ -94,8 +112,10 @@
     "html-loader": "^1.0.0",
     "html-webpack-plugin": "3.2.0",
     "http-server": "^0.10.0",
+    "husky": "^4.2.3",
     "inline-manifest-webpack-plugin": "^4.0.2",
     "jest": "^25.2.4",
+    "lint-staged": "^10.1.1",
     "lost": "^8.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "my-local-ip": "^1.0.0",
@@ -104,6 +124,8 @@
     "postcss-loader": "^3.0.0",
     "postcss-responsive-type": "^0.5.1",
     "postinstall-postinstall": "^2.1.0",
+    "prettier": "^2.0.2",
+    "pretty-quick": "^2.0.1",
     "progress-bar-webpack-plugin": "^2.1.0",
     "react-addons-test-utils": "^15.5.1",
     "react-hot-loader": "^4.12.20",

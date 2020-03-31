@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
-    lost: {},
+    'lost': {},
     'postcss-responsive-type': {},
-    autoprefixer: {}
-  }
+    'autoprefixer': {},
+  },
 }
