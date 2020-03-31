@@ -23,8 +23,8 @@
   "lint-staged": {
     "*.js": [
       "eslint --fix",
-      "git add",
-      "pretty-quick --staged"
+      "pretty-quick --staged",
+      "npm run test -- --bail --findRelatedTests"
     ],
     "*.json": [
       "pretty-quick --staged"
