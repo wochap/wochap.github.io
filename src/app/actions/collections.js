@@ -12,7 +12,6 @@ export const FETCH_COLLECTION = 'collections/FETCH_COLLECTIONS'
 
 const itemSchema = new Schema(COLLECTION_SCHEMA_NAME, {
   idAttribute: entity => {
-    // eslint-disable-line
     return entity.frontMatter.fileName
   },
 })
@@ -43,8 +42,8 @@ export function loadItem(collectionName, fileName) {
       collectionName,
       fileName,
     },
+    // eslint-disable-next-line
     payload: require('lazy-loader!markdown-loader!data/' + collectionName + '/' + fileName + '.md')().then(item => {
-      // eslint-disable-line
       return normalize(item, itemSchema).entities[COLLECTION_SCHEMA_NAME]
     }),
   }
@@ -65,8 +64,8 @@ export function loadCollection(collectionName) {
     meta: {
       collectionName,
     },
+    // eslint-disable-next-line
     payload: require('lazy-dir-loader!data/' + collectionName + '.config.js')().then(items => {
-      // eslint-disable-line
       items.sort(orderByDate) // eslint-disable-line
       return normalize(items, arrayOfItemsSchema).entities[COLLECTION_SCHEMA_NAME]
     }),
