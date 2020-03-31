@@ -14,7 +14,7 @@
         "@babel/plugin-proposal-export-namespace-from",
         "transform-es2015-modules-commonjs",
         "dynamic-import-node"
-      ],
+      ]
     },
     "ssr": {
       "presets": [
