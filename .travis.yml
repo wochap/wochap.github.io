@@ -5,11 +5,11 @@ cache: yarn
 install:
   # install dev dependencies
   yarn install --production=false
-script:
-  - yarn build
 after_success:
   # send coverage data to coveralls.
   - yarn run test:coverage-travis
+before_deploy:
+  - yarn build
 branches:
   only:
     - dev
