@@ -1,4 +1,6 @@
 language: node_js
+git:
+  depth: 3
 cache: yarn
 install:
   # install dev dependencies
@@ -6,6 +8,26 @@ install:
 after_success:
   # send coverage data to coveralls.
   - yarn run test:coverage-travis
+before_deploy:
+  - yarn build
 branches:
   only:
-  - dev
+    - dev
+deploy:
+  provider: pages
+  # prevent CI from resetting working directory
+  skip_cleanup: true
+  # do not use git push --force
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  target_branch: master
+  commit_message: 'feat: travis ci deploy #%{TRAVIS_BUILD_NUMBER}'
+  on:
+    branch: dev
+notifications:
+  email:
+    recipients:
+      - gean.marroquin@gmail.com
+    on_success: always
+    on_failure: always
