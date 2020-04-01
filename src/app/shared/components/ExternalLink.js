@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function ExternalLink({href, title, children, className}) {
   return (
@@ -9,10 +10,10 @@ function ExternalLink({href, title, children, className}) {
 }
 
 ExternalLink.propTypes = {
-  className: React.PropTypes.string,
-  href: React.PropTypes.string,
-  title: React.PropTypes.string,
-  children: React.PropTypes.node,
+  className: PropTypes.string,
+  href: PropTypes.string,
+  title: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default ExternalLink

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 function ShimmerText({darken = false, block = false, text, children}) {
@@ -15,10 +16,10 @@ function ShimmerText({darken = false, block = false, text, children}) {
 }
 
 ShimmerText.propTypes = {
-  darken: React.PropTypes.bool,
-  block: React.PropTypes.bool,
-  text: React.PropTypes.string,
-  children: React.PropTypes.node,
+  darken: PropTypes.bool,
+  block: PropTypes.bool,
+  text: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default ShimmerText

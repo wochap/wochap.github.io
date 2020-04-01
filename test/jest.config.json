@@ -1,14 +1,8 @@
 {
   "rootDir": "../",
   "testEnvironment": "node",
-  "moduleFileExtensions": [
-    "js",
-    "json"
-  ],
-  "moduleDirectories": [
-    "node_modules",
-    "shared"
-  ],
+  "moduleFileExtensions": ["js", "json"],
+  "moduleDirectories": ["node_modules", "shared"],
   "moduleNameMapper": {
     "^.+\\.(png|jpe?g|gif|svg|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/FileStub.js",
     "^.+\\.(css|scss)$": "<rootDir>/test/CSSStub.js",
@@ -18,11 +12,7 @@
     "^lib(.*)$": "<rootDir>/lib$1",
     "^data(.*)$": "<rootDir>/data$1"
   },
-  "testPathIgnorePatterns": [
-    "<rootDir>/node_modules/"
-  ],
-  "collectCoverageFrom": [
-    "src/**/*.js",
-    "!**/node_modules/**"
-  ]
+  "testPathIgnorePatterns": ["<rootDir>/node_modules/"],
+  "collectCoverageFrom": ["src/**/*.js", "!**/node_modules/**"],
+  "setupFilesAfterEnv": ["<rootDir>test/setupTests.js"]
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {Link} from 'react-router'
 import {formatDate} from 'utils/formatter'
 
@@ -14,11 +15,11 @@ function Post({post}) {
 }
 
 Post.propTypes = {
-  post: React.PropTypes.shape({
-    fileName: React.PropTypes.string.isRequired,
-    date: React.PropTypes.string.isRequired,
-    description: React.PropTypes.string.isRequired,
-    title: React.PropTypes.string.isRequired,
+  post: PropTypes.shape({
+    fileName: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }).isRequired,
 }
 

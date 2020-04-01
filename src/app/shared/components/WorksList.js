@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Work from './Work'
 
 function WorksList({works}) {
@@ -18,8 +19,8 @@ function WorksList({works}) {
 }
 
 WorksList.propTypes = {
-  works: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
+  works: PropTypes.arrayOf(
+    PropTypes.shape({
       frontMatter: Work.propTypes.work,
     }),
   ).isRequired,

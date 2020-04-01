@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import * as collectionPropTypes from 'hoc/collection/PropTypes'
 import {articleShape} from 'PropTypes/article'
 import NotFoundScreen from 'app/screens/NotFound/components/NotFoundScreen'
@@ -53,8 +54,8 @@ SiteArticle.propTypes = {
   item: articleShape,
   itemState: collectionPropTypes.stateShape,
   collectionState: collectionPropTypes.stateShape,
-  head: React.PropTypes.shape({
-    canonicalHref: React.PropTypes.string.isRequired,
+  head: PropTypes.shape({
+    canonicalHref: PropTypes.string.isRequired,
   }).isRequired,
 }
 

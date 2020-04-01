@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ShimmerText from 'components/ShimmerText'
 import {formatDate} from 'utils/formatter'
 import ExternalLink from 'components/ExternalLink'
@@ -67,12 +68,12 @@ function Hero({
 }
 
 Hero.propTypes = {
-  data: React.PropTypes.shape({
-    title: React.PropTypes.string,
-    date: React.PropTypes.string,
-    heroImageUrl: React.PropTypes.string,
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    date: PropTypes.string,
+    heroImageUrl: PropTypes.string,
   }),
-  isLoading: React.PropTypes.bool,
+  isLoading: PropTypes.bool,
 }
 
 export default Hero

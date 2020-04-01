@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import SiteHeader from './SiteHeader'
 import SiteFooter from './SiteFooter'
 
@@ -15,10 +16,10 @@ function AppLayout({hasHeader = true, headerProps = {}, hasFooter = true, childr
 }
 
 AppLayout.propTypes = {
-  children: React.PropTypes.node,
-  hasHeader: React.PropTypes.bool,
-  hasFooter: React.PropTypes.bool,
-  headerProps: React.PropTypes.object, // eslint-disable-line
+  children: PropTypes.node,
+  hasHeader: PropTypes.bool,
+  hasFooter: PropTypes.bool,
+  headerProps: PropTypes.object, // eslint-disable-line
 }
 
 export default AppLayout

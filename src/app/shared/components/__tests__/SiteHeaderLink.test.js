@@ -4,7 +4,7 @@ import SiteHeaderLink from '../SiteHeaderLink'
 
 describe('SiteHeaderLink', () => {
   it('render component', () => {
-    const wrapper = shallow(<SiteHeaderLink />)
+    const wrapper = shallow(<SiteHeaderLink isHome={false} title='Titulo' />)
 
     expect(wrapper.length).toBeTruthy()
   })

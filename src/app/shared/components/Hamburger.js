@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function Hamburger({className, isOpen, ...restProps}) {
   return (
@@ -18,8 +19,8 @@ function Hamburger({className, isOpen, ...restProps}) {
 }
 
 Hamburger.propTypes = {
-  className: React.PropTypes.string,
-  isOpen: React.PropTypes.bool,
+  className: PropTypes.string,
+  isOpen: PropTypes.bool,
 }
 
 export default Hamburger

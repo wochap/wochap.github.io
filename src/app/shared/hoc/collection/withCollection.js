@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import getDisplayName from 'recompose/getDisplayName'
 import {connect} from 'react-redux'
 import * as collectionPropTypes from 'hoc/collection/PropTypes'
@@ -10,7 +11,7 @@ function withCollection(WrappedComponent, collectionName) {
     static displayName = `CollectionHOC(${getDisplayName(WrappedComponent)})`
 
     static propTypes = {
-      fetchCollection: React.PropTypes.func.isRequired,
+      fetchCollection: PropTypes.func.isRequired,
       collectionState: collectionPropTypes.stateShape,
       collection: collectionPropTypes.collectionShape, // eslint-disable-line
     }

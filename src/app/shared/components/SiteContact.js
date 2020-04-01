@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import data from 'app/config/data'
 import ExternalLink from 'components/ExternalLink'
 
@@ -45,8 +46,8 @@ function SiteContact({className, id}) {
 }
 
 SiteContact.propTypes = {
-  className: React.PropTypes.string,
-  id: React.PropTypes.string,
+  className: PropTypes.string,
+  id: PropTypes.string,
 }
 
 export default SiteContact

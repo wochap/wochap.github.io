@@ -1,12 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {Link} from 'react-router'
 import SiteHeaderLink from 'components/SiteHeaderLink'
 import Hamburger from './Hamburger'
 
 class SiteHeader extends React.Component {
   static propTypes = {
-    isFixed: React.PropTypes.bool,
-    isHome: React.PropTypes.bool,
+    isFixed: PropTypes.bool,
+    isHome: PropTypes.bool,
   }
 
   static defaultProps = {
