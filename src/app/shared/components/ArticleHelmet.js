@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import data from 'app/config/data'
 
@@ -34,9 +35,9 @@ function ArticleHelmet({imageUrl, publishedTime, tags = []}) {
 }
 
 ArticleHelmet.propTypes = {
-  imageUrl: React.PropTypes.string.isRequired,
-  publishedTime: React.PropTypes.string.isRequired,
-  tags: React.PropTypes.arrayOf(React.PropTypes.string),
+  imageUrl: PropTypes.string.isRequired,
+  publishedTime: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default ArticleHelmet

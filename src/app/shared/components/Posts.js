@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import * as collectionPropTypes from 'hoc/collection/PropTypes'
 import {articleShape} from 'PropTypes/article'
 import withCollection from 'hoc/collection/withCollection'
@@ -38,9 +39,9 @@ export function PostsComponent({collectionState, collection, className, id}) {
 
 PostsComponent.propTypes = {
   collectionState: collectionPropTypes.stateShape,
-  collection: React.PropTypes.arrayOf(articleShape).isRequired,
-  className: React.PropTypes.string,
-  id: React.PropTypes.string,
+  collection: PropTypes.arrayOf(articleShape).isRequired,
+  className: PropTypes.string,
+  id: PropTypes.string,
 }
 
 const Posts = withCollection(PostsComponent, 'posts')

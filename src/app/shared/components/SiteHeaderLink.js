@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {Link} from 'react-router'
 
 function SiteHeaderLink({isHome, title, props}) {
@@ -13,9 +14,9 @@ function SiteHeaderLink({isHome, title, props}) {
 }
 
 SiteHeaderLink.propTypes = {
-  isHome: React.PropTypes.bool.isRequired,
-  title: React.PropTypes.string.isRequired,
-  props: React.PropTypes.object, // eslint-disable-line
+  isHome: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
+  props: PropTypes.object, // eslint-disable-line
 }
 
 export default SiteHeaderLink

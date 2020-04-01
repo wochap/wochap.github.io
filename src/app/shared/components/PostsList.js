@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Post from './Post'
 
 function PostsList({posts}) {
@@ -16,8 +17,8 @@ function PostsList({posts}) {
 }
 
 PostsList.propTypes = {
-  posts: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
       frontMatter: Post.propTypes.post,
     }).isRequired,
   ).isRequired,

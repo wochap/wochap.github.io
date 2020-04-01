@@ -1,22 +1,22 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
-export const itemShape = React.PropTypes.shape({
-  frontMatter: React.PropTypes.shape({
-    fileName: React.PropTypes.string.isRequired,
+export const itemShape = PropTypes.shape({
+  frontMatter: PropTypes.shape({
+    fileName: PropTypes.string.isRequired,
   }),
-  bodyHtml: React.PropTypes.string,
+  bodyHtml: PropTypes.string,
 })
 
-export const collectionShape = React.PropTypes.arrayOf(
-  React.PropTypes.shape({
-    frontMatter: React.PropTypes.shape({
-      fileName: React.PropTypes.string.isRequired,
+export const collectionShape = PropTypes.arrayOf(
+  PropTypes.shape({
+    frontMatter: PropTypes.shape({
+      fileName: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 ).isRequired
 
-export const stateShape = React.PropTypes.shape({
-  isPending: React.PropTypes.bool.isRequired,
-  isFulfilled: React.PropTypes.bool.isRequired,
-  error: React.PropTypes.oneOfType([React.PropTypes.string.isRequired, React.PropTypes.bool.isRequired]),
+export const stateShape = PropTypes.shape({
+  isPending: PropTypes.bool.isRequired,
+  isFulfilled: PropTypes.bool.isRequired,
+  error: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.bool.isRequired]),
 }).isRequired

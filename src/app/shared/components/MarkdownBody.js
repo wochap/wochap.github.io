@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ShimmerText from 'components/ShimmerText'
 
 function MarkdownBody({html, isLoading = false}) {
@@ -31,8 +32,8 @@ function MarkdownBody({html, isLoading = false}) {
 }
 
 MarkdownBody.propTypes = {
-  html: React.PropTypes.string,
-  isLoading: React.PropTypes.bool,
+  html: PropTypes.string,
+  isLoading: PropTypes.bool,
 }
 
 export default MarkdownBody

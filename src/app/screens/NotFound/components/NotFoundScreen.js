@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import data from 'app/config/data'
 import SiteError from 'components/SiteError'
 
@@ -7,7 +8,7 @@ function NotFoundScreen({message = 'Pagina no encontrada'}) {
 }
 
 NotFoundScreen.propTypes = {
-  message: React.PropTypes.string,
+  message: PropTypes.string,
 }
 
 export default NotFoundScreen

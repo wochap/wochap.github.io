@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 function SiteError({headTitle, title, message, invert}) {
@@ -14,10 +15,10 @@ function SiteError({headTitle, title, message, invert}) {
 }
 
 SiteError.propTypes = {
-  headTitle: React.PropTypes.string,
-  title: React.PropTypes.string.isRequired,
-  message: React.PropTypes.string.isRequired,
-  invert: React.PropTypes.bool,
+  headTitle: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  invert: PropTypes.bool,
 }
 
 export default SiteError

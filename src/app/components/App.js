@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import AppLayout from 'components/AppLayout'
 
 function App({children, routes}) {
@@ -8,8 +9,8 @@ function App({children, routes}) {
 }
 
 App.propTypes = {
-  children: React.PropTypes.element,
-  routes: React.PropTypes.array, // eslint-disable-line
+  children: PropTypes.element,
+  routes: PropTypes.array, // eslint-disable-line
 }
 
 export default App

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 function ScreenHelmet({title, description = '', canonicalHref}) {
@@ -30,9 +31,9 @@ function ScreenHelmet({title, description = '', canonicalHref}) {
 }
 
 ScreenHelmet.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  description: React.PropTypes.string.isRequired,
-  canonicalHref: React.PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  canonicalHref: PropTypes.string.isRequired,
 }
 
 export default ScreenHelmet

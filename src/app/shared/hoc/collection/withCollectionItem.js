@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import getDisplayName from 'recompose/getDisplayName'
 import * as collectionPropTypes from 'hoc/collection/PropTypes'
@@ -10,10 +11,10 @@ function withItem(WrappedComponent, collectionName) {
     static displayName = `ItemHOC(${getDisplayName(WrappedComponent)})`
 
     static propTypes = {
-      params: React.PropTypes.shape({
-        fileName: React.PropTypes.string.isRequired,
+      params: PropTypes.shape({
+        fileName: PropTypes.string.isRequired,
       }).isRequired,
-      fetchItemCollection: React.PropTypes.func.isRequired,
+      fetchItemCollection: PropTypes.func.isRequired,
       itemState: collectionPropTypes.stateShape,
       item: collectionPropTypes.itemShape, // eslint-disable-line
       collectionState: collectionPropTypes.stateShape, // eslint-disable-line
