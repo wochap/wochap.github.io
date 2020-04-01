@@ -148,6 +148,11 @@ export default {
           year: '2020',
         },
         {
+          title: 'Carrera de Backend con JavaScript',
+          link: 'https://platzi.com/@boni/ruta/55-backend-javascript/diploma/detalle/',
+          year: '2020',
+        },
+        {
           title: 'Carrera de Vue.js',
           link: 'https://platzi.com/@boni/carrera/98-vue/diploma/detalle/',
           year: '2020',
