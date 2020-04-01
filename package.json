@@ -5,7 +5,7 @@
     "postinstall": "patch-package",
     "prebuild": "shx rm -rf dist && shx mkdir -p dist && shx cp -R public/* dist || true",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "postbuild": "cross-env NODE_ENV=ssr webpack --mode none && cd dist && sitemap-static --ignore-file=ignore.json --prefix=https://geanmarroquin.com/ --pretty . > sitemap.xml && http-server",
+    "postbuild": "cross-env NODE_ENV=ssr webpack --mode none && cd dist && sitemap-static --ignore-file=ignore.json --prefix=https://geanmarroquin.com/ --pretty . > sitemap.xml",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development",
     "dev:inspect": "cross-env NODE_ENV=development node --inspect-brk node_modules/.bin/webpack-dev-server --mode development",
     "lint:fix": "cross-env NODE_ENV=production eslint . --fix",

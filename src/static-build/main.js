@@ -53,7 +53,7 @@ export default function render(locals) {
         const html = await template({bodyHTML, headHTML, initialState})
 
         console.log('\nCurrent path: ', locals.path) // eslint-disable-line
-        console.log('\nhtml: ', html, '\n') // eslint-disable-line
+        console.log('\nhtml: ', html.substr(-400), '\n') // eslint-disable-line
 
         resolve(html)
       })
