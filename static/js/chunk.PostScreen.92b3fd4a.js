@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{544:function(n,e,a){"use strict";a.r(e),a.d(e,"PostScreen",(function(){return f}));var c=a(102),t=a.n(c),o=a(0),r=a.n(o),s=a(11),i=a(228),u=a(229);function f(n){return r.a.createElement(u.a,t()({},n,{head:{canonicalHref:s.a.screens.blog.canonicalHref}}))}e.default=Object(i.a)(f,"posts")}}]);
