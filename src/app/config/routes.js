@@ -9,9 +9,6 @@ import NotFound from 'app/screens/NotFound'
 export default {
   path: '/',
   component: App,
-  onChange() {
-    document.getElementsByClassName('c-app-layout__wrapper')[0].scrollIntoView()
-  },
   indexRoute: Home,
   childRoutes: [About, Works, Blog, Contact, NotFound],
 }

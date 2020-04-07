@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {matchPath} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import AppLayout from 'components/AppLayout'
@@ -12,6 +12,9 @@ function matchRoute(url, urlPattern) {
 
 function App({location, children}) {
   const {pathname} = location
+  useEffect(() => {
+    document.getElementsByClassName('c-app-layout__wrapper')[0].scrollIntoView()
+  }, [pathname])
   let headerProps
   if (matchRoute(pathname, '/')) {
     headerProps = {
