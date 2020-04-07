@@ -16,6 +16,8 @@ describe('ScreenHelmet', () => {
 
   it('render Helmet with the correct props', () => {
     const expectedProps = {
+      defer: true,
+      encodeSpecialCharacters: true,
       title: props.title,
       meta: [
         {

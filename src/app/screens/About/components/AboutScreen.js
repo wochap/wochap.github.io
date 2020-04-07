@@ -54,7 +54,7 @@ function AboutScreen() {
                     <li key={_index}>
                       <strong>{row.title}: </strong>{' '}
                       {row.items.map((item, __index) => [
-                        <ExternalLink href={item.link} title={item.title} />,
+                        <ExternalLink href={item.link} title={item.title} key={__index} />,
                         __index === row.items.length - 1 ? null : ', ',
                       ])}
                     </li>

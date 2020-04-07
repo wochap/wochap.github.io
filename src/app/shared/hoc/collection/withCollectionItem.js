@@ -11,8 +11,10 @@ function withItem(WrappedComponent, collectionName) {
     static displayName = `ItemHOC(${getDisplayName(WrappedComponent)})`
 
     static propTypes = {
-      params: PropTypes.shape({
-        fileName: PropTypes.string.isRequired,
+      match: PropTypes.shape({
+        params: PropTypes.shape({
+          fileName: PropTypes.string.isRequired,
+        }),
       }).isRequired,
       fetchItemCollection: PropTypes.func.isRequired,
       itemState: collectionPropTypes.stateShape,
@@ -21,7 +23,8 @@ function withItem(WrappedComponent, collectionName) {
     }
 
     componentDidMount() {
-      const {fetchItemCollection, params, itemState} = this.props
+      const {fetchItemCollection, match, itemState} = this.props
+      const {params} = match
 
       if (module.hot) {
         fetchItemCollection(params.fileName)
@@ -34,8 +37,9 @@ function withItem(WrappedComponent, collectionName) {
     }
 
     componentDidUpdate(prevProps) {
-      const {fetchItemCollection, params, itemState} = this.props
-      if (prevProps.params.fileName !== params.fileName) {
+      const {fetchItemCollection, match, itemState} = this.props
+      const {params} = match
+      if (prevProps.match.params.fileName !== params.fileName) {
         if (!itemState.isFulfilled) {
           fetchItemCollection(params.fileName)
         }
@@ -48,9 +52,10 @@ function withItem(WrappedComponent, collectionName) {
   }
 
   function mapStateToProps(state, ownProps) {
+    const {match} = ownProps
     return {
-      item: getItem(state, collectionName, ownProps.params.fileName),
-      itemState: getItemState(state, collectionName, ownProps.params.fileName),
+      item: getItem(state, collectionName, match.params.fileName),
+      itemState: getItemState(state, collectionName, match.params.fileName),
       collectionState: getCollectionState(state, collectionName),
     }
   }

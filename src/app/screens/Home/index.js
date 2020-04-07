@@ -1,23 +1,32 @@
-import topBar from 'utils/topBar'
+// import {lazy} from 'react'
+// import topBar from 'utils/topBar'
 
 export default {
-  getComponent(nextState, cb) {
-    topBar.show()
+  component: require('./components/HomeScreen').default,
+  // component: lazy(async () => {
+  //   topBar.show()
+  //   const component = await import('./components/HomeScreen')
+  //   topBar.hide()
+  //   return component
+  // }),
+  // getComponent(nextState, cb) {
+  //   topBar.show()
 
-    require.ensure(
-      [],
-      require => {
-        topBar.hide()
+  //   require.ensure(
+  //     [],
+  //     require => {
+  //       topBar.hide()
 
-        cb(null, require('./components/HomeScreen').default) // eslint-disable-line
-      },
-      'HomeScreen',
-    )
-  },
+  //       cb(null, require('./components/HomeScreen').default) // eslint-disable-line
+  //     },
+  //     'HomeScreen',
+  //   )
+  // },
   layoutProps: {
     headerProps: {
       isFixed: true,
       isHome: true,
     },
   },
+  exact: true,
 }

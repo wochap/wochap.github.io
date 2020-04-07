@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Link} from 'react-router'
+import {Link, NavLink} from 'react-router-dom'
 import SiteHeaderLink from 'components/SiteHeaderLink'
 import Hamburger from './Hamburger'
 
@@ -46,16 +46,16 @@ class SiteHeader extends React.Component {
     return (
       <header className={`o-wrapper c-site-header ${isFixed ? 'is-fixed' : ''}`}>
         <p className='c-site-header__title'>
-          <Link className to='/'>
+          <Link className='' to='/'>
             Gean <br /> Marroquin
           </Link>
         </p>
         <nav className={`o-dialog c-site-nav ${isNavOpen ? 'is-open' : ''}`}>
           <ul className='o-dialog__wrapper'>
             <li>
-              <Link className='o-btn c-site-nav__link' to='/about' onClick={this._closeNav} activeClassName='is-active'>
+              <NavLink className='o-btn c-site-nav__link' to='/about' onClick={this._closeNav} activeClassName='is-active'>
                 Sobre mi
-              </Link>
+              </NavLink>
             </li>
             <li>
               <SiteHeaderLink

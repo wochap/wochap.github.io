@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Link} from 'react-router'
+import {NavLink} from 'react-router-dom'
 
 function SiteHeaderLink({isHome, title, props}) {
   return React.createElement(
-    isHome ? 'a' : Link,
+    isHome ? 'a' : NavLink,
     {
       className: 'o-btn c-site-nav__link',
       ...props,
