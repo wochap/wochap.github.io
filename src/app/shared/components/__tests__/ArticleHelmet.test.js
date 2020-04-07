@@ -17,6 +17,8 @@ describe('ArticleHelmet', () => {
 
   it('render Helmet with the expected props', () => {
     const expectedProps = {
+      defer: true,
+      encodeSpecialCharacters: true,
       meta: [
         {
           property: 'og:type',

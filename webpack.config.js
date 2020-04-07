@@ -14,6 +14,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 const {getIfUtils, removeEmpty} = require('webpack-config-utils')
 const myLocalIp = require('my-local-ip')
+const moduleAlias = require('module-alias')
 
 const CURRENT_IP = myLocalIp()
 const externalPath = `http://${CURRENT_IP}:${process.env.WEBPACK_SERVER_PORT}/`
@@ -39,6 +40,16 @@ readdirSync('node_modules')
   .forEach(mod => {
     nodeModules[mod] = `commonjs ${mod}`
   })
+
+if (ifSsr()) {
+  const nodeModulesResolve = path => resolve(__dirname, `./node_modules/${path}`)
+  moduleAlias.addAliases({
+    'react-dom': nodeModulesResolve('react-dom/cjs/react-dom.production.min.js'),
+    'react-dom/server': nodeModulesResolve('react-dom/cjs/react-dom-server.node.production.min.js'),
+    'react': nodeModulesResolve('react/cjs/react.production.min.js'),
+    'react-is': nodeModulesResolve('react-is/cjs/react-is.production.min.js'),
+  })
+}
 
 module.exports = {
   // http://jlongster.com/Backend-Apps-with-Webpack--Part-I#p14
@@ -72,8 +83,6 @@ module.exports = {
   },
   entry: {
     app: removeEmpty([
-      ifDevelopment('react-hot-loader/patch'),
-
       // bundle the client for webpack-dev-server
       // and connect to the provided endpoint
       ifDevelopment(`webpack-dev-server/client?${externalPath}`),
@@ -90,6 +99,7 @@ module.exports = {
       data: resolve(__dirname, 'data'),
     },
     modules: ['node_modules', 'shared'],
+    extensions: ['.wasm', '.mjs', '.js', '.jsx', '.json'],
   },
   resolveLoader: {
     alias: {
@@ -128,7 +138,7 @@ module.exports = {
             },
             react: {
               test({resource}) {
-                const targets = ['react', 'react-dom', 'react-redux', 'react-router', 'react-router-redux', 'react-helmet']
+                const targets = ['react', 'react-dom', 'react-redux', 'react-router-dom', 'react-router-redux', 'react-helmet']
 
                 return (
                   resource &&
@@ -149,8 +159,8 @@ module.exports = {
     ),
   },
   module: {
-    rules: [
-      {
+    rules: removeEmpty([
+      ifProduction({
         test: /\.js$/,
         enforce: 'pre',
         loader: 'eslint-loader',
@@ -158,9 +168,9 @@ module.exports = {
         options: {
           formatter: require('eslint-friendly-formatter'), // eslint-disable-line
         },
-      },
+      }),
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
@@ -239,7 +249,7 @@ module.exports = {
           name: ifProduction('static/fonts/[name].[contenthash:8].[ext]', '[name].[ext]'),
         },
       },
-    ],
+    ]),
   },
   plugins: removeEmpty([
     new webpack.DefinePlugin({

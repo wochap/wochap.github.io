@@ -31,7 +31,7 @@ describe('SiteHeader', () => {
   it('close nav on Link click', () => {
     const siteHeader = shallow(<SiteHeader />)
     const hamburger = siteHeader.find('Hamburger')
-    const link = siteHeader.find('.c-site-nav Link').first()
+    const link = siteHeader.find('.c-site-nav NavLink').first()
 
     expect(hamburger).toHaveLength(1)
     expect(siteHeader.find('.c-site-nav').hasClass('is-open')).toEqual(false)

@@ -1,8 +1,9 @@
 import {createStore} from 'redux'
-import rootReducer from './rootReducer'
+import createRootReducer from './rootReducer'
 import middlewares from './middlewares'
 
-function configureStore(initialState) {
+function configureStore(initialState, history) {
+  const rootReducer = createRootReducer(history)
   const store = createStore(rootReducer, initialState, middlewares)
 
   if (module.hot) {

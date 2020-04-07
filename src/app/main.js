@@ -1,42 +1,42 @@
 import 'src/styles/main.scss'
 import 'src/app/bootstrap'
-
+import {hydrate, unmountComponentAtNode, render} from 'react-dom'
 import React from 'react'
-import ReactDOM from 'react-dom'
-import {AppContainer} from 'react-hot-loader' // eslint-disable-line
-import {Router, browserHistory} from 'react-router'
-import {Provider} from 'react-redux'
-import {syncHistoryWithStore} from 'react-router-redux'
+import {Router} from 'react-router-dom'
+import {ConnectedRouter} from 'connected-react-router'
+import {createBrowserHistory} from 'history'
+import {Provider, ReactReduxContext} from 'react-redux'
+import generateRoutes from 'app/config/generateRoutes'
 import routes from 'app/config/routes'
 import configureStore from './store/configureStore'
 
 const rootEl = document.getElementById('root')
 const initialState = window.__INITIAL_STATE__ || undefined
-const store = configureStore(initialState)
-const history = syncHistoryWithStore(browserHistory, store)
+const history = createBrowserHistory()
+const store = configureStore(initialState, history)
 
-ReactDOM.render(
-  <AppContainer>
-    <Provider store={store}>
-      <Router history={history} routes={routes} />
-    </Provider>
-  </AppContainer>,
+const renderStrategy = process.env.NODE_ENV === 'production' ? hydrate : render
+
+renderStrategy(
+  <Provider store={store} context={ReactReduxContext}>
+    <ConnectedRouter history={history} context={ReactReduxContext}>
+      <Router history={history}>{generateRoutes(routes)}</Router>
+    </ConnectedRouter>
+  </Provider>,
   rootEl,
 )
 
 if (module.hot) {
   module.hot.accept('app/config/routes', () => {
-    const newRoutes = require('app/config/routes').default // eslint-disable-line
+    const newRoutes = require('app/config/routes').default
 
-    // HMR async routes
-    ReactDOM.unmountComponentAtNode(rootEl)
-
-    ReactDOM.render(
-      <AppContainer>
-        <Provider store={store}>
-          <Router history={browserHistory} routes={newRoutes} />
-        </Provider>
-      </AppContainer>,
+    unmountComponentAtNode(rootEl)
+    render(
+      <Provider store={store} context={ReactReduxContext}>
+        <ConnectedRouter history={history} context={ReactReduxContext}>
+          <Router history={history}>{generateRoutes(newRoutes)}</Router>
+        </ConnectedRouter>
+      </Provider>,
       rootEl,
     )
   })
