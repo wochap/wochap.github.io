@@ -28,6 +28,7 @@ module.exports = {
     'import/no-dynamic-require': [0],
     'global-require': [0],
     'import/no-unresolved': [0],
+    'func-names': [0],
 
     'react/static-property-placement': ['error', 'static public field'],
     'react/state-in-constructor': ['error', 'never'],
