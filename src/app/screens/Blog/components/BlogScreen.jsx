@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function BlogScreen({children}) {
-  return children ? React.cloneElement(children) : null
+  return <>{children}</>
 }
 
 BlogScreen.propTypes = {

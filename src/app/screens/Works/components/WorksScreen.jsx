@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function WorksScreen({children}) {
-  return children ? React.cloneElement(children) : null
+  return <>{children}</>
 }
 
 WorksScreen.propTypes = {
