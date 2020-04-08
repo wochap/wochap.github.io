@@ -6224,12 +6224,6 @@ __webpack_require__.r(__webpack_exports__);
   //     'HomeScreen',
   //   )
   // },
-  layoutProps: {
-    headerProps: {
-      isFixed: true,
-      isHome: true
-    }
-  },
   exact: true
 });
 
@@ -6713,6 +6707,8 @@ function withCollection(WrappedComponent, collectionName) {
         fetchCollection
       } = this.props;
 
+      if (false) {}
+
       if (!collectionState.isFulfilled) {
         fetchCollection();
       }
@@ -7058,7 +7054,10 @@ function loadItem(collectionName, fileName) {
 
   if (!fileName) {
     throw new Error('(actions)[collection] loadItem: `fileName` is required.');
-  }
+  } // eslint-disable-next-line
+
+
+  const fileRequest = __webpack_require__(241)("./" + collectionName + '/' + fileName + ".md");
 
   return {
     type: FETCH_ITEM,
@@ -7066,8 +7065,7 @@ function loadItem(collectionName, fileName) {
       collectionName,
       fileName
     },
-    // eslint-disable-next-line
-    payload: __webpack_require__(241)("./" + collectionName + '/' + fileName + ".md")().then(item => {
+    payload: fileRequest.then(item => {
       return Object(normalizr__WEBPACK_IMPORTED_MODULE_2__["normalize"])(item, itemSchema).entities[COLLECTION_SCHEMA_NAME];
     })
   };
@@ -7081,17 +7079,19 @@ function loadItem(collectionName, fileName) {
 function loadCollection(collectionName) {
   if (!collectionName) {
     throw new Error('(actions)[collection] loadCollection: `collectionName` is required.');
-  }
+  } // eslint-disable-next-line
+
+
+  const filesRequest = __webpack_require__(247)("./" + collectionName + ".config.js");
 
   return {
     type: FETCH_COLLECTION,
     meta: {
       collectionName
     },
-    // eslint-disable-next-line
-    payload: __webpack_require__(247)("./" + collectionName + ".config.js")().then(items => {
-      _babel_runtime_corejs3_core_js_stable_instance_sort__WEBPACK_IMPORTED_MODULE_0___default()(items).call(items, orderByDate); // eslint-disable-line
-
+    payload: filesRequest.then(items => {
+      // eslint-disable-next-line
+      _babel_runtime_corejs3_core_js_stable_instance_sort__WEBPACK_IMPORTED_MODULE_0___default()(items).call(items, orderByDate);
 
       return Object(normalizr__WEBPACK_IMPORTED_MODULE_2__["normalize"])(items, arrayOfItemsSchema).entities[COLLECTION_SCHEMA_NAME];
     })
@@ -7246,9 +7246,9 @@ const COLLECTION_DATE_FORMAT = 'DD-MM-YYYY'; // eslint-disable-line
 
 /***/ }),
 /* 241 */
-/*!***********************************************************************************!*\
-  !*** ../data sync ../lib/loaders/lazy.js!../lib/loaders/markdown.js ^\.\/.*\.md$ ***!
-  \***********************************************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** ../data sync ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js ^\.\/.*\.md$ ***!
+  \********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7282,89 +7282,99 @@ webpackContext.id = 241;
 
 /***/ }),
 /* 242 */
-/*!***********************************************************************************!*\
-  !*** ../lib/loaders/lazy.js!../lib/loaders/markdown.js!../data/works/fixbrand.md ***!
-  \***********************************************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/works/fixbrand.md ***!
+  \********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function () {
-  return new Promise(function (resolve) {
-    Promise.resolve(/*! require.ensure | fixbrand */).then((function (require) {
-      resolve(__webpack_require__(/*! !../lib/loaders/markdown.js!../data/works/fixbrand.md */ 300));
-    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
-  });
-}
+
+    module.exports = new Promise(function (resolve) {
+      Promise.resolve(/*! require.ensure | data.fixbrand */).then((function (require) {
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/fixbrand.md */ 300 ));
+      }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    });
+
+    if (false) {}
+  
 
 /***/ }),
 /* 243 */
-/*!*****************************************************************************************!*\
-  !*** ../lib/loaders/lazy.js!../lib/loaders/markdown.js!../data/works/gean-marroquin.md ***!
-  \*****************************************************************************************/
+/*!**************************************************************************************************************************************!*\
+  !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/works/gean-marroquin.md ***!
+  \**************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function () {
-  return new Promise(function (resolve) {
-    Promise.resolve(/*! require.ensure | gean-marroquin */).then((function (require) {
-      resolve(__webpack_require__(/*! !../lib/loaders/markdown.js!../data/works/gean-marroquin.md */ 301));
-    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
-  });
-}
+
+    module.exports = new Promise(function (resolve) {
+      Promise.resolve(/*! require.ensure | data.gean-marroquin */).then((function (require) {
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/gean-marroquin.md */ 301 ));
+      }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    });
+
+    if (false) {}
+  
 
 /***/ }),
 /* 244 */
-/*!**************************************************************************************!*\
-  !*** ../lib/loaders/lazy.js!../lib/loaders/markdown.js!../data/works/la-glorieta.md ***!
-  \**************************************************************************************/
+/*!***********************************************************************************************************************************!*\
+  !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/works/la-glorieta.md ***!
+  \***********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function () {
-  return new Promise(function (resolve) {
-    Promise.resolve(/*! require.ensure | la-glorieta */).then((function (require) {
-      resolve(__webpack_require__(/*! !../lib/loaders/markdown.js!../data/works/la-glorieta.md */ 302));
-    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
-  });
-}
+
+    module.exports = new Promise(function (resolve) {
+      Promise.resolve(/*! require.ensure | data.la-glorieta */).then((function (require) {
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/la-glorieta.md */ 302 ));
+      }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    });
+
+    if (false) {}
+  
 
 /***/ }),
 /* 245 */
-/*!******************************************************************************************!*\
-  !*** ../lib/loaders/lazy.js!../lib/loaders/markdown.js!../data/works/ricarica-travel.md ***!
-  \******************************************************************************************/
+/*!***************************************************************************************************************************************!*\
+  !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/works/ricarica-travel.md ***!
+  \***************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function () {
-  return new Promise(function (resolve) {
-    Promise.resolve(/*! require.ensure | ricarica-travel */).then((function (require) {
-      resolve(__webpack_require__(/*! !../lib/loaders/markdown.js!../data/works/ricarica-travel.md */ 303));
-    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
-  });
-}
+
+    module.exports = new Promise(function (resolve) {
+      Promise.resolve(/*! require.ensure | data.ricarica-travel */).then((function (require) {
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/ricarica-travel.md */ 303 ));
+      }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    });
+
+    if (false) {}
+  
 
 /***/ }),
 /* 246 */
-/*!************************************************************************************!*\
-  !*** ../lib/loaders/lazy.js!../lib/loaders/markdown.js!../data/works/yilancorp.md ***!
-  \************************************************************************************/
+/*!*********************************************************************************************************************************!*\
+  !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/works/yilancorp.md ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function () {
-  return new Promise(function (resolve) {
-    Promise.resolve(/*! require.ensure | yilancorp */).then((function (require) {
-      resolve(__webpack_require__(/*! !../lib/loaders/markdown.js!../data/works/yilancorp.md */ 304));
-    }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
-  });
-}
+
+    module.exports = new Promise(function (resolve) {
+      Promise.resolve(/*! require.ensure | data.yilancorp */).then((function (require) {
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/yilancorp.md */ 304 ));
+      }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    });
+
+    if (false) {}
+  
 
 /***/ }),
 /* 247 */
-/*!********************************************************************!*\
-  !*** ../data sync ../lib/loaders/lazy-dir.js ^\.\/.*\.config\.js$ ***!
-  \********************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** ../data sync ../lib/loaders/lazy-dir.js?{"documentEventName":"lazyDirLoaderFilesChange"} ^\.\/.*\.config\.js$ ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7395,55 +7405,59 @@ webpackContext.id = 247;
 
 /***/ }),
 /* 248 */
-/*!**********************************************************!*\
-  !*** ../lib/loaders/lazy-dir.js!../data/posts.config.js ***!
-  \**********************************************************/
+/*!***********************************************************************************************************!*\
+  !*** ../lib/loaders/lazy-dir.js?{"documentEventName":"lazyDirLoaderFilesChange"}!../data/posts.config.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function () {
-    return new Promise(function (resolve, reject) {
+
+    module.exports = new Promise(function (resolve, reject) {
       try {
         /* lazy load group of files */
-        Promise.resolve(/*! require.ensure | posts */).then((function (require) {
-          var requireContext = __webpack_require__(305)
+        Promise.resolve(/*! require.ensure | data.posts */).then((function (require) {
+          var requireContext = __webpack_require__(305);
           var modules = requireContext.keys().map(function (fileFullName) {
-            return requireContext(fileFullName)
-          })
+            return requireContext(fileFullName);
+          });
 
-          resolve(modules)
+          resolve(modules);
         }).bind(null, __webpack_require__)).catch(__webpack_require__.oe)
       } catch (error) {
-        reject(error)
+        reject(error);
       }
-    })
-  }
+    });
+
+    if (false) {}
+  
 
 /***/ }),
 /* 249 */
-/*!**********************************************************!*\
-  !*** ../lib/loaders/lazy-dir.js!../data/works.config.js ***!
-  \**********************************************************/
+/*!***********************************************************************************************************!*\
+  !*** ../lib/loaders/lazy-dir.js?{"documentEventName":"lazyDirLoaderFilesChange"}!../data/works.config.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function () {
-    return new Promise(function (resolve, reject) {
+
+    module.exports = new Promise(function (resolve, reject) {
       try {
         /* lazy load group of files */
-        Promise.resolve(/*! require.ensure | works */).then((function (require) {
-          var requireContext = __webpack_require__(306)
+        Promise.resolve(/*! require.ensure | data.works */).then((function (require) {
+          var requireContext = __webpack_require__(306);
           var modules = requireContext.keys().map(function (fileFullName) {
-            return requireContext(fileFullName)
-          })
+            return requireContext(fileFullName);
+          });
 
-          resolve(modules)
+          resolve(modules);
         }).bind(null, __webpack_require__)).catch(__webpack_require__.oe)
       } catch (error) {
-        reject(error)
+        reject(error);
       }
-    })
-  }
+    });
+
+    if (false) {}
+  
 
 /***/ }),
 /* 250 */
@@ -8071,12 +8085,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: ':fileName',
   component: _components_WorkScreen__WEBPACK_IMPORTED_MODULE_0__["default"],
-  exact: true,
-  layoutProps: {
-    headerProps: {
-      isFixed: true
-    }
-  }
+  exact: true
 });
 
 /***/ }),
@@ -8101,7 +8110,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // eslint-disable-line
 
 function WorkScreen(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components_SiteArticle__WEBPACK_IMPORTED_MODULE_4__["default"], _babel_runtime_corejs3_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, props, {
@@ -9052,11 +9060,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: '*',
   component: _components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_0__["default"],
-  layoutProps: {
-    headerProps: {
-      isFixed: true
-    }
-  },
   exact: true
 });
 
@@ -9564,7 +9567,7 @@ module.exports = require("cheerio");
 /***/ (function(module, exports) {
 
 // Module
-var code = "<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"es_LA\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.9da17621.css\" rel=\"stylesheet\"></head><body><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(c){function e(e){for(var r,t,n=e[0],o=e[1],a=e[2],i=0,u=[];i<n.length;i++)t=n[i],Object.prototype.hasOwnProperty.call(p,t)&&p[t]&&u.push(p[t][0]),p[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(c[r]=o[r]);for(d&&d(e);u.length;)u.shift()();return f.push.apply(f,a||[]),l()}function l(){for(var e,r=0;r<f.length;r++){for(var t=f[r],n=!0,o=1;o<t.length;o++){var a=t[o];0!==p[a]&&(n=!1)}n&&(f.splice(r--,1),e=s(s.s=t[0]))}return e}var t={},p={11:0},f=[];function s(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return c[e].call(r.exports,r,r.exports,s),r.l=!0,r.exports}s.e=function(o){var e=[],t=p[o];if(0!==t)if(t)e.push(t[2]);else{var r=new Promise(function(e,r){t=p[o]=[e,r]});e.push(t[2]=r);var n,a=document.createElement(\"script\");a.charset=\"utf-8\",a.timeout=120,s.nc&&a.setAttribute(\"nonce\",s.nc),a.src=s.p+\"static/js/chunk.\"+({1:\"fixbrand\",2:\"gean-marroquin\",3:\"la-glorieta\",4:\"posts\",5:\"promise-polyfill\",7:\"ricarica-travel\",8:\"string-prototype-includes\",10:\"vendors~platform\",12:\"works\",13:\"yilancorp\"}[o]||o)+\".\"+{1:\"123c8f7d\",2:\"d7c8ab1e\",3:\"b596c739\",4:\"86480347\",5:\"8788d1ec\",7:\"0a5ad523\",8:\"9d2b3dca\",10:\"d4d4264d\",12:\"87915051\",13:\"025cdebd\"}[o]+\".js\";var i=new Error;n=function(e){a.onerror=a.onload=null,clearTimeout(u);var r=p[o];if(0!==r){if(r){var t=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;i.message=\"Loading chunk \"+o+\" failed.\\n(\"+t+\": \"+n+\")\",i.name=\"ChunkLoadError\",i.type=t,i.request=n,r[1](i)}p[o]=void 0}};var u=setTimeout(function(){n({type:\"timeout\",target:a})},12e4);a.onerror=a.onload=n,document.head.appendChild(a)}return Promise.all(e)},s.m=c,s.c=t,s.d=function(e,r,t){s.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},s.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},s.t=function(r,e){if(1&e&&(r=s(r)),8&e)return r;if(4&e&&\"object\"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(s.r(t),Object.defineProperty(t,\"default\",{enumerable:!0,value:r}),2&e&&\"string\"!=typeof r)for(var n in r)s.d(t,n,function(e){return r[e]}.bind(null,n));return t},s.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return s.d(r,\"a\",r),r},s.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},s.p=\"/\",s.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var d=n;l()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.75dd0fb7.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.a661d8a0.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.61603406.js\"></script></body></html>";
+var code = "<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"es_LA\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.9da17621.css\" rel=\"stylesheet\"></head><body><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(c){function e(e){for(var r,t,n=e[0],o=e[1],a=e[2],i=0,u=[];i<n.length;i++)t=n[i],Object.prototype.hasOwnProperty.call(f,t)&&f[t]&&u.push(f[t][0]),f[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(c[r]=o[r]);for(d&&d(e);u.length;)u.shift()();return p.push.apply(p,a||[]),l()}function l(){for(var e,r=0;r<p.length;r++){for(var t=p[r],n=!0,o=1;o<t.length;o++){var a=t[o];0!==f[a]&&(n=!1)}n&&(p.splice(r--,1),e=s(s.s=t[0]))}return e}var t={},f={13:0},p=[];function s(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return c[e].call(r.exports,r,r.exports,s),r.l=!0,r.exports}s.e=function(o){var e=[],t=f[o];if(0!==t)if(t)e.push(t[2]);else{var r=new Promise(function(e,r){t=f[o]=[e,r]});e.push(t[2]=r);var n,a=document.createElement(\"script\");a.charset=\"utf-8\",a.timeout=120,s.nc&&a.setAttribute(\"nonce\",s.nc),a.src=s.p+\"static/js/chunk.\"+({1:\"data.fixbrand\",2:\"data.gean-marroquin\",3:\"data.la-glorieta\",4:\"data.posts\",5:\"data.ricarica-travel\",6:\"data.works\",7:\"data.yilancorp\",8:\"promise-polyfill\",10:\"string-prototype-includes\",12:\"vendors~platform\"}[o]||o)+\".\"+{1:\"123c8f7d\",2:\"d7c8ab1e\",3:\"b596c739\",4:\"86480347\",5:\"aa2a5f21\",6:\"65063c1f\",7:\"9dfc3b8e\",8:\"1ca2e4f3\",10:\"fe3b3ebb\",12:\"71ede9a1\"}[o]+\".js\";var i=new Error;n=function(e){a.onerror=a.onload=null,clearTimeout(u);var r=f[o];if(0!==r){if(r){var t=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;i.message=\"Loading chunk \"+o+\" failed.\\n(\"+t+\": \"+n+\")\",i.name=\"ChunkLoadError\",i.type=t,i.request=n,r[1](i)}f[o]=void 0}};var u=setTimeout(function(){n({type:\"timeout\",target:a})},12e4);a.onerror=a.onload=n,document.head.appendChild(a)}return Promise.all(e)},s.m=c,s.c=t,s.d=function(e,r,t){s.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},s.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},s.t=function(r,e){if(1&e&&(r=s(r)),8&e)return r;if(4&e&&\"object\"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(s.r(t),Object.defineProperty(t,\"default\",{enumerable:!0,value:r}),2&e&&\"string\"!=typeof r)for(var n in r)s.d(t,n,function(e){return r[e]}.bind(null,n));return t},s.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return s.d(r,\"a\",r),r},s.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},s.p=\"/\",s.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var d=n;l()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.1c0a1313.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.f2f92676.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.fa6af9bc.js\"></script></body></html>";
 // Exports
 module.exports = code;
 
