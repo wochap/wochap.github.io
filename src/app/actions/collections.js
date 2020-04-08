@@ -36,14 +36,20 @@ export function loadItem(collectionName, fileName) {
     throw new Error('(actions)[collection] loadItem: `fileName` is required.')
   }
 
+  // eslint-disable-next-line
+  const fileRequest = require('lazy-loader?{"documentEventName":"lazyLoaderFileChange"}!markdown-loader!data/' +
+    collectionName +
+    '/' +
+    fileName +
+    '.md')
+
   return {
     type: FETCH_ITEM,
     meta: {
       collectionName,
       fileName,
     },
-    // eslint-disable-next-line
-    payload: require('lazy-loader!markdown-loader!data/' + collectionName + '/' + fileName + '.md')().then(item => {
+    payload: fileRequest.then(item => {
       return normalize(item, itemSchema).entities[COLLECTION_SCHEMA_NAME]
     }),
   }
@@ -59,14 +65,17 @@ export function loadCollection(collectionName) {
     throw new Error('(actions)[collection] loadCollection: `collectionName` is required.')
   }
 
+  // eslint-disable-next-line
+  const filesRequest = require('lazy-dir-loader?{"documentEventName":"lazyDirLoaderFilesChange"}!data/' + collectionName + '.config.js')
+
   return {
     type: FETCH_COLLECTION,
     meta: {
       collectionName,
     },
-    // eslint-disable-next-line
-    payload: require('lazy-dir-loader!data/' + collectionName + '.config.js')().then(items => {
-      items.sort(orderByDate) // eslint-disable-line
+    payload: filesRequest.then(items => {
+      // eslint-disable-next-line
+      items.sort(orderByDate)
       return normalize(items, arrayOfItemsSchema).entities[COLLECTION_SCHEMA_NAME]
     }),
   }

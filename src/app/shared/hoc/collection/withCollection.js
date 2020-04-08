@@ -18,6 +18,14 @@ function withCollection(WrappedComponent, collectionName) {
 
     componentDidMount() {
       const {collectionState, fetchCollection} = this.props
+
+      if (module.hot) {
+        // HACK: handle markdown files HMR
+        document.addEventListener('lazyDirLoaderFilesChange', () => {
+          fetchCollection()
+        })
+      }
+
       if (!collectionState.isFulfilled) {
         fetchCollection()
       }

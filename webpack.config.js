@@ -128,7 +128,6 @@ module.exports = {
             // any required modules inside node_modules are extracted to vendor
             vendor: {
               test({resource}) {
-                // TODO: ignore webpack modules (e.g.: buffer, style-loader, etc)
                 return resource && /\.js$/.test(resource) && resource.indexOf(rootNodeModulesPath) === 0
               },
               chunks: 'initial',

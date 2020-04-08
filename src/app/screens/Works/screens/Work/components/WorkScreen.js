@@ -1,7 +1,7 @@
 import React from 'react'
 import data from 'app/config/data'
 import withCollectionItem from 'hoc/collection/withCollectionItem'
-import SiteArticle from 'components/SiteArticle' // eslint-disable-line
+import SiteArticle from 'components/SiteArticle'
 
 export function WorkScreen(props) {
   return (

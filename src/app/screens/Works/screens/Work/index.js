@@ -4,9 +4,4 @@ export default {
   path: ':fileName',
   component: WorkScreen,
   exact: true,
-  layoutProps: {
-    headerProps: {
-      isFixed: true,
-    },
-  },
 }
