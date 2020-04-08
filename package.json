@@ -21,7 +21,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,jsx}": [
       "eslint --fix",
       "pretty-quick --staged",
       "npm run test -- --bail --findRelatedTests"
