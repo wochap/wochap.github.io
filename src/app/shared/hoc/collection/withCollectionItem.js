@@ -27,8 +27,10 @@ function withItem(WrappedComponent, collectionName) {
       const {params} = match
 
       if (module.hot) {
-        fetchItemCollection(params.fileName)
-        return
+        // HACK: handle markdown files HMR
+        document.addEventListener('lazyLoaderFileChange', () => {
+          fetchItemCollection(params.fileName)
+        })
       }
 
       if (!itemState.isFulfilled) {
