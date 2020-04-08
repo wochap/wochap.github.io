@@ -22,11 +22,5 @@ export default {
   //     'HomeScreen',
   //   )
   // },
-  layoutProps: {
-    headerProps: {
-      isFixed: true,
-      isHome: true,
-    },
-  },
   exact: true,
 }
