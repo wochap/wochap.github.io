@@ -5661,9 +5661,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 203 */
-/*!*******************************!*\
-  !*** ./app/components/App.js ***!
-  \*******************************/
+/*!********************************!*\
+  !*** ./app/components/App.jsx ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5731,9 +5731,9 @@ App.propTypes = {
 
 /***/ }),
 /* 204 */
-/*!********************************************!*\
-  !*** ./app/shared/components/AppLayout.js ***!
-  \********************************************/
+/*!*********************************************!*\
+  !*** ./app/shared/components/AppLayout.jsx ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5774,9 +5774,9 @@ AppLayout.propTypes = {
 
 /***/ }),
 /* 205 */
-/*!*********************************************!*\
-  !*** ./app/shared/components/SiteHeader.js ***!
-  \*********************************************/
+/*!**********************************************!*\
+  !*** ./app/shared/components/SiteHeader.jsx ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5902,9 +5902,9 @@ _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___defau
 
 /***/ }),
 /* 206 */
-/*!*************************************************!*\
-  !*** ./app/shared/components/SiteHeaderLink.js ***!
-  \*************************************************/
+/*!**************************************************!*\
+  !*** ./app/shared/components/SiteHeaderLink.jsx ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5972,9 +5972,9 @@ SiteHeaderLink.propTypes = {
 
 /***/ }),
 /* 207 */
-/*!********************************************!*\
-  !*** ./app/shared/components/Hamburger.js ***!
-  \********************************************/
+/*!*********************************************!*\
+  !*** ./app/shared/components/Hamburger.jsx ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6165,9 +6165,9 @@ module.exports = !nativeAssign || fails(function () {
 
 /***/ }),
 /* 214 */
-/*!*********************************************!*\
-  !*** ./app/shared/components/SiteFooter.js ***!
-  \*********************************************/
+/*!**********************************************!*\
+  !*** ./app/shared/components/SiteFooter.jsx ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6229,9 +6229,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 216 */
-/*!***************************************************!*\
-  !*** ./app/screens/Home/components/HomeScreen.js ***!
-  \***************************************************/
+/*!****************************************************!*\
+  !*** ./app/screens/Home/components/HomeScreen.jsx ***!
+  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6334,9 +6334,9 @@ const ABOUT = 'Soy un apasionado Front-end developer, autodidacta, de esos que g
 
 /***/ }),
 /* 218 */
-/*!***********************************************!*\
-  !*** ./app/shared/components/ScreenHelmet.js ***!
-  \***********************************************/
+/*!************************************************!*\
+  !*** ./app/shared/components/ScreenHelmet.jsx ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6385,9 +6385,9 @@ ScreenHelmet.propTypes = {
 
 /***/ }),
 /* 219 */
-/*!**********************************************!*\
-  !*** ./app/shared/components/SiteContact.js ***!
-  \**********************************************/
+/*!***********************************************!*\
+  !*** ./app/shared/components/SiteContact.jsx ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6475,9 +6475,9 @@ SiteContact.propTypes = {
 
 /***/ }),
 /* 220 */
-/*!***********************************************!*\
-  !*** ./app/shared/components/ExternalLink.js ***!
-  \***********************************************/
+/*!************************************************!*\
+  !*** ./app/shared/components/ExternalLink.jsx ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6515,9 +6515,9 @@ ExternalLink.propTypes = {
 
 /***/ }),
 /* 221 */
-/*!****************************************!*\
-  !*** ./app/shared/components/Works.js ***!
-  \****************************************/
+/*!*****************************************!*\
+  !*** ./app/shared/components/Works.jsx ***!
+  \*****************************************/
 /*! exports provided: WorksComponent, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -7461,9 +7461,9 @@ webpackContext.id = 247;
 
 /***/ }),
 /* 250 */
-/*!**********************************************!*\
-  !*** ./app/shared/components/ShimmerText.js ***!
-  \**********************************************/
+/*!***********************************************!*\
+  !*** ./app/shared/components/ShimmerText.jsx ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -7515,9 +7515,9 @@ module.exports = require("classnames");
 
 /***/ }),
 /* 252 */
-/*!********************************************!*\
-  !*** ./app/shared/components/SiteError.js ***!
-  \********************************************/
+/*!*********************************************!*\
+  !*** ./app/shared/components/SiteError.jsx ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -7561,9 +7561,9 @@ SiteError.propTypes = {
 
 /***/ }),
 /* 253 */
-/*!********************************************!*\
-  !*** ./app/shared/components/WorksList.js ***!
-  \********************************************/
+/*!*********************************************!*\
+  !*** ./app/shared/components/WorksList.jsx ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -7607,9 +7607,9 @@ WorksList.propTypes = {
 
 /***/ }),
 /* 254 */
-/*!***************************************!*\
-  !*** ./app/shared/components/Work.js ***!
-  \***************************************/
+/*!****************************************!*\
+  !*** ./app/shared/components/Work.jsx ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -7682,9 +7682,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 256 */
-/*!*****************************************************!*\
-  !*** ./app/screens/About/components/AboutScreen.js ***!
-  \*****************************************************/
+/*!******************************************************!*\
+  !*** ./app/screens/About/components/AboutScreen.jsx ***!
+  \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8039,9 +8039,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 260 */
-/*!*******************************************************************!*\
-  !*** ./app/screens/Works/screens/Works/components/WorksScreen.js ***!
-  \*******************************************************************/
+/*!********************************************************************!*\
+  !*** ./app/screens/Works/screens/Works/components/WorksScreen.jsx ***!
+  \********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8090,9 +8090,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 262 */
-/*!*****************************************************************!*\
-  !*** ./app/screens/Works/screens/Work/components/WorkScreen.js ***!
-  \*****************************************************************/
+/*!******************************************************************!*\
+  !*** ./app/screens/Works/screens/Work/components/WorkScreen.jsx ***!
+  \******************************************************************/
 /*! exports provided: WorkScreen, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8234,9 +8234,9 @@ function withItem(WrappedComponent, collectionName) {
 
 /***/ }),
 /* 264 */
-/*!**********************************************!*\
-  !*** ./app/shared/components/SiteArticle.js ***!
-  \**********************************************/
+/*!***********************************************!*\
+  !*** ./app/shared/components/SiteArticle.jsx ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8338,9 +8338,9 @@ SiteArticle.propTypes = {
 
 /***/ }),
 /* 265 */
-/*!***********************************************************!*\
-  !*** ./app/screens/NotFound/components/NotFoundScreen.js ***!
-  \***********************************************************/
+/*!************************************************************!*\
+  !*** ./app/screens/NotFound/components/NotFoundScreen.jsx ***!
+  \************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8374,9 +8374,9 @@ NotFoundScreen.propTypes = {
 
 /***/ }),
 /* 266 */
-/*!***************************************!*\
-  !*** ./app/shared/components/Hero.js ***!
-  \***************************************/
+/*!****************************************!*\
+  !*** ./app/shared/components/Hero.jsx ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8473,9 +8473,9 @@ function formatDate(date) {
 
 /***/ }),
 /* 268 */
-/*!***********************************************!*\
-  !*** ./app/shared/components/MarkdownBody.js ***!
-  \***********************************************/
+/*!************************************************!*\
+  !*** ./app/shared/components/MarkdownBody.jsx ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8524,9 +8524,9 @@ MarkdownBody.propTypes = {
 
 /***/ }),
 /* 269 */
-/*!************************************************!*\
-  !*** ./app/shared/components/ArticleHelmet.js ***!
-  \************************************************/
+/*!*************************************************!*\
+  !*** ./app/shared/components/ArticleHelmet.jsx ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8583,9 +8583,9 @@ ArticleHelmet.propTypes = {
 
 /***/ }),
 /* 270 */
-/*!*****************************************************!*\
-  !*** ./app/screens/Works/components/WorksScreen.js ***!
-  \*****************************************************/
+/*!******************************************************!*\
+  !*** ./app/screens/Works/components/WorksScreen.jsx ***!
+  \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8601,7 +8601,7 @@ __webpack_require__.r(__webpack_exports__);
 function WorksScreen({
   children
 }) {
-  return children ? react__WEBPACK_IMPORTED_MODULE_0___default.a.cloneElement(children) : null;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, children);
 }
 
 WorksScreen.propTypes = {
@@ -8687,9 +8687,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 273 */
-/*!****************************************************************!*\
-  !*** ./app/screens/Blog/screens/Post/components/PostScreen.js ***!
-  \****************************************************************/
+/*!*****************************************************************!*\
+  !*** ./app/screens/Blog/screens/Post/components/PostScreen.jsx ***!
+  \*****************************************************************/
 /*! exports provided: PostScreen, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8739,9 +8739,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 275 */
-/*!******************************************************************!*\
-  !*** ./app/screens/Blog/screens/Posts/components/PostsScreen.js ***!
-  \******************************************************************/
+/*!*******************************************************************!*\
+  !*** ./app/screens/Blog/screens/Posts/components/PostsScreen.jsx ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8785,9 +8785,9 @@ function PostsScreen() {
 
 /***/ }),
 /* 276 */
-/*!****************************************!*\
-  !*** ./app/shared/components/Posts.js ***!
-  \****************************************/
+/*!*****************************************!*\
+  !*** ./app/shared/components/Posts.jsx ***!
+  \*****************************************/
 /*! exports provided: PostsComponent, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8866,9 +8866,9 @@ const Posts = Object(hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__[
 
 /***/ }),
 /* 277 */
-/*!********************************************!*\
-  !*** ./app/shared/components/PostsList.js ***!
-  \********************************************/
+/*!*********************************************!*\
+  !*** ./app/shared/components/PostsList.jsx ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8908,9 +8908,9 @@ PostsList.propTypes = {
 
 /***/ }),
 /* 278 */
-/*!***************************************!*\
-  !*** ./app/shared/components/Post.js ***!
-  \***************************************/
+/*!****************************************!*\
+  !*** ./app/shared/components/Post.jsx ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8952,9 +8952,9 @@ Post.propTypes = {
 
 /***/ }),
 /* 279 */
-/*!***************************************************!*\
-  !*** ./app/screens/Blog/components/BlogScreen.js ***!
-  \***************************************************/
+/*!****************************************************!*\
+  !*** ./app/screens/Blog/components/BlogScreen.jsx ***!
+  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8970,7 +8970,7 @@ __webpack_require__.r(__webpack_exports__);
 function BlogScreen({
   children
 }) {
-  return children ? react__WEBPACK_IMPORTED_MODULE_0___default.a.cloneElement(children) : null;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, children);
 }
 
 BlogScreen.propTypes = {
@@ -9015,9 +9015,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 281 */
-/*!*********************************************************!*\
-  !*** ./app/screens/Contact/components/ContactScreen.js ***!
-  \*********************************************************/
+/*!**********************************************************!*\
+  !*** ./app/screens/Contact/components/ContactScreen.jsx ***!
+  \**********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -9567,7 +9567,7 @@ module.exports = require("cheerio");
 /***/ (function(module, exports) {
 
 // Module
-var code = "<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"es_LA\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.9da17621.css\" rel=\"stylesheet\"></head><body><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(c){function e(e){for(var r,t,n=e[0],o=e[1],a=e[2],i=0,u=[];i<n.length;i++)t=n[i],Object.prototype.hasOwnProperty.call(f,t)&&f[t]&&u.push(f[t][0]),f[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(c[r]=o[r]);for(d&&d(e);u.length;)u.shift()();return p.push.apply(p,a||[]),l()}function l(){for(var e,r=0;r<p.length;r++){for(var t=p[r],n=!0,o=1;o<t.length;o++){var a=t[o];0!==f[a]&&(n=!1)}n&&(p.splice(r--,1),e=s(s.s=t[0]))}return e}var t={},f={13:0},p=[];function s(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return c[e].call(r.exports,r,r.exports,s),r.l=!0,r.exports}s.e=function(o){var e=[],t=f[o];if(0!==t)if(t)e.push(t[2]);else{var r=new Promise(function(e,r){t=f[o]=[e,r]});e.push(t[2]=r);var n,a=document.createElement(\"script\");a.charset=\"utf-8\",a.timeout=120,s.nc&&a.setAttribute(\"nonce\",s.nc),a.src=s.p+\"static/js/chunk.\"+({1:\"data.fixbrand\",2:\"data.gean-marroquin\",3:\"data.la-glorieta\",4:\"data.posts\",5:\"data.ricarica-travel\",6:\"data.works\",7:\"data.yilancorp\",8:\"promise-polyfill\",10:\"string-prototype-includes\",12:\"vendors~platform\"}[o]||o)+\".\"+{1:\"123c8f7d\",2:\"d7c8ab1e\",3:\"b596c739\",4:\"86480347\",5:\"aa2a5f21\",6:\"65063c1f\",7:\"9dfc3b8e\",8:\"1ca2e4f3\",10:\"fe3b3ebb\",12:\"71ede9a1\"}[o]+\".js\";var i=new Error;n=function(e){a.onerror=a.onload=null,clearTimeout(u);var r=f[o];if(0!==r){if(r){var t=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;i.message=\"Loading chunk \"+o+\" failed.\\n(\"+t+\": \"+n+\")\",i.name=\"ChunkLoadError\",i.type=t,i.request=n,r[1](i)}f[o]=void 0}};var u=setTimeout(function(){n({type:\"timeout\",target:a})},12e4);a.onerror=a.onload=n,document.head.appendChild(a)}return Promise.all(e)},s.m=c,s.c=t,s.d=function(e,r,t){s.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},s.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},s.t=function(r,e){if(1&e&&(r=s(r)),8&e)return r;if(4&e&&\"object\"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(s.r(t),Object.defineProperty(t,\"default\",{enumerable:!0,value:r}),2&e&&\"string\"!=typeof r)for(var n in r)s.d(t,n,function(e){return r[e]}.bind(null,n));return t},s.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return s.d(r,\"a\",r),r},s.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},s.p=\"/\",s.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var d=n;l()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.1c0a1313.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.f2f92676.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.fa6af9bc.js\"></script></body></html>";
+var code = "<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"es_LA\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.9da17621.css\" rel=\"stylesheet\"></head><body><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(c){function e(e){for(var r,t,n=e[0],o=e[1],a=e[2],i=0,u=[];i<n.length;i++)t=n[i],Object.prototype.hasOwnProperty.call(f,t)&&f[t]&&u.push(f[t][0]),f[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(c[r]=o[r]);for(d&&d(e);u.length;)u.shift()();return p.push.apply(p,a||[]),l()}function l(){for(var e,r=0;r<p.length;r++){for(var t=p[r],n=!0,o=1;o<t.length;o++){var a=t[o];0!==f[a]&&(n=!1)}n&&(p.splice(r--,1),e=s(s.s=t[0]))}return e}var t={},f={11:0},p=[];function s(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return c[e].call(r.exports,r,r.exports,s),r.l=!0,r.exports}s.e=function(o){var e=[],t=f[o];if(0!==t)if(t)e.push(t[2]);else{var r=new Promise(function(e,r){t=f[o]=[e,r]});e.push(t[2]=r);var n,a=document.createElement(\"script\");a.charset=\"utf-8\",a.timeout=120,s.nc&&a.setAttribute(\"nonce\",s.nc),a.src=s.p+\"static/js/chunk.\"+({1:\"data.fixbrand\",2:\"data.gean-marroquin\",3:\"data.la-glorieta\",4:\"data.posts\",5:\"data.ricarica-travel\",6:\"data.works\",7:\"data.yilancorp\",10:\"vendors~platform\"}[o]||o)+\".\"+{1:\"123c8f7d\",2:\"d7c8ab1e\",3:\"b596c739\",4:\"86480347\",5:\"aa2a5f21\",6:\"2c19b168\",7:\"9dfc3b8e\",10:\"e7adca9a\"}[o]+\".js\";var i=new Error;n=function(e){a.onerror=a.onload=null,clearTimeout(u);var r=f[o];if(0!==r){if(r){var t=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;i.message=\"Loading chunk \"+o+\" failed.\\n(\"+t+\": \"+n+\")\",i.name=\"ChunkLoadError\",i.type=t,i.request=n,r[1](i)}f[o]=void 0}};var u=setTimeout(function(){n({type:\"timeout\",target:a})},12e4);a.onerror=a.onload=n,document.head.appendChild(a)}return Promise.all(e)},s.m=c,s.c=t,s.d=function(e,r,t){s.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},s.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},s.t=function(r,e){if(1&e&&(r=s(r)),8&e)return r;if(4&e&&\"object\"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(s.r(t),Object.defineProperty(t,\"default\",{enumerable:!0,value:r}),2&e&&\"string\"!=typeof r)for(var n in r)s.d(t,n,function(e){return r[e]}.bind(null,n));return t},s.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return s.d(r,\"a\",r),r},s.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},s.p=\"/\",s.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var d=n;l()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.442efb10.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.187d80ca.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.da901bea.js\"></script></body></html>";
 // Exports
 module.exports = code;
 
