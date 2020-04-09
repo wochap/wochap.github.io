@@ -90,6 +90,7 @@
     "babel-jest": "^25.2.4",
     "babel-loader": "^8.1.0",
     "babel-plugin-dynamic-import-node": "^2.3.0",
+    "babel-plugin-macros": "^2.8.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "2.2.2",
