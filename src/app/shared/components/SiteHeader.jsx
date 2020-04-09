@@ -65,6 +65,7 @@ class SiteHeader extends React.Component {
                   isHome
                     ? {
                         href: '#works',
+                        onClick: this._closeNav,
                       }
                     : {
                         to: '/works',
@@ -95,6 +96,7 @@ class SiteHeader extends React.Component {
                   isHome
                     ? {
                         href: '#contact',
+                        onClick: this._closeNav,
                       }
                     : {
                         to: '/contact',
