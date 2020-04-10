@@ -34,7 +34,7 @@ export function WorksComponent({collectionState, collection, className, id}) {
   return (
     <section className={`o-wrapper ${className}`} id={id}>
       <h2 className='u-mb3 u-caps u-center'>Portafolio</h2>
-      <p className='u-mb5 u-fz-sm u-center u-muted'>Proyectos personales, freelance y como colaborador Front-End</p>
+      <p className='u-mb5 u-fz-sm u-center u-muted'>Proyectos personales, freelance y como colaborador.</p>
       {body}
     </section>
   )

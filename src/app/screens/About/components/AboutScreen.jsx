@@ -19,7 +19,7 @@ function AboutScreen() {
         </div> */}
         <h1 className='u-fz-h4 u-m0'>
           <span className='u-caps u-fz-h2 u-mb2 u-block'>Gean Marroquin, </span>
-          <span className='u-fz-sm u-fw-s-bold u-m0 u-block'>Front-end developer</span>
+          <span className='u-fz-sm u-fw-s-bold u-m0 u-block'>JS Developer</span>
         </h1>
       </header>
 
@@ -27,9 +27,7 @@ function AboutScreen() {
         <section className='u-mb5'>
           <h2 className='u-caps u-mb3'>Sobre mi</h2>
           <div className='o-grid o-grid--gutter-x-5 o-grid--gutter-y-3'>
-            <div className='o-grid__item u-12/12 u-6/12@tablet'>
-              <p className='u-mb0'>{data.about}</p>
-            </div>
+            <div className='o-grid__item u-12/12 u-6/12@tablet' dangerouslySetInnerHTML={{__html: data.about}} />
             <div className='o-grid__item u-12/12 u-6/12@tablet'>
               <p>¿Desea contratarme para trabajar en su empresa por tiempo completo o parcial?</p>
               {/* <p>¿Formamos equipo? .</p> */}

@@ -1,7 +1,10 @@
+import prevalMarkdown from '../../../lib/macros/markdown.macro'
+
 const BASE_URL = 'https://geanmarroquin.com'
 const TITLE = 'Gean Marroquin'
-const ABOUT =
-  'Soy un apasionado Front-end developer, autodidacta, de esos que gustan aprender y usar con las últimas tendencias/tecnologías web.'
+const ABOUT = prevalMarkdown`
+  Establecido en Perú, soy <i class="u-icon u-color-javascript u-fz-h2">javascript</i> Developer enfocado en la creación de componentes escalables y reusables con <i class="u-icon u-color-vue_js u-fz-h2">vue_js</i> y <i class="u-icon u-color-react u-fz-h2">react</i>, apasionado y autodidacta desde el principio.
+`
 
 export default {
   baseUrl: BASE_URL,
@@ -11,31 +14,31 @@ export default {
   twitterUser: 'geanmarroquin',
   screens: {
     about: {
-      title: `${TITLE} | Front-end developer`,
+      title: `${TITLE} - JS Developer`,
       description: ABOUT,
       canonicalHref: `${BASE_URL}/about`,
     },
     blog: {
-      title: `${TITLE} | Artículos y tutoriales`,
-      description: `Blog de ${TITLE}. Front-end developer, especialista en CSS y JavaScript.`,
+      title: `${TITLE} - Artículos y tutoriales`,
+      description: `Blog de ${TITLE}.`,
       canonicalHref: `${BASE_URL}/blog`,
     },
     contact: {
-      title: `${TITLE} | Front-end developer`,
+      title: `${TITLE} - Contacto`,
       description: ABOUT,
       canonicalHref: `${BASE_URL}/contact`,
     },
     home: {
-      title: `${TITLE} | Front-end developer`,
+      title: `${TITLE} - Inicio`,
       description: ABOUT,
       canonicalHref: BASE_URL,
     },
     notFound: {
-      title: '404',
+      title: `${TITLE} - Página no encontrada`,
     },
     works: {
-      title: `${TITLE} | Portafolio`,
-      description: `Portafolio de ${TITLE}. Front-end developer, especialista en CSS y JavaScript.`,
+      title: `${TITLE} - Portafolio`,
+      description: `Portafolio de ${TITLE}.`,
       canonicalHref: `${BASE_URL}/works`,
     },
   },
