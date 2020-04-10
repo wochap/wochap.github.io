@@ -32,7 +32,6 @@
   word-break: break-all;
 }
 
-
 .u-color-npm {
   color: #CB3837;
 }
@@ -44,4 +43,71 @@
 
 .u-mt-auto {
   margin-top: auto;
+}
+
+@include utility('color-dart') {
+  color: $global-color-dart;
+}
+@include utility('color-firebase') {
+  color: $global-color-firebase;
+}
+@include utility('color-flutter') {
+  color: $global-color-flutter;
+}
+@include utility('color-gatsby') {
+  color: $global-color-gatsby;
+}
+@include utility('color-git') {
+  color: $global-color-git;
+}
+@include utility('color-graphql') {
+  color: $global-color-graphql;
+}
+@include utility('color-html5') {
+  color: $global-color-html5;
+}
+@include utility('color-javascript') {
+  color: $global-color-javascript;
+}
+@include utility('color-jest') {
+  color: $global-color-jest;
+}
+@include utility('color-next_js') {
+  color: $global-color-next_js;
+}
+@include utility('color-node_js') {
+  color: $global-color-node_js;
+}
+@include utility('color-nuxt_js') {
+  color: $global-color-nuxt_js;
+}
+@include utility('color-prettier') {
+  color: $global-color-prettier;
+}
+@include utility('color-python') {
+  color: $global-color-python;
+}
+@include utility('color-react') {
+  color: $global-color-react;
+}
+@include utility('color-redux') {
+  color: $global-color-redux;
+}
+@include utility('color-sass') {
+  color: $global-color-sass;
+}
+@include utility('color-stylus') {
+  color: $global-color-stylus;
+}
+@include utility('color-tailwind_css') {
+  color: $global-color-tailwind_css;
+}
+@include utility('color-travis_ci') {
+  color: $global-color-travis_ci;
+}
+@include utility('color-typescript') {
+  color: $global-color-typescript;
+}
+@include utility('color-vue_js') {
+  color: $global-color-vue_js;
 }

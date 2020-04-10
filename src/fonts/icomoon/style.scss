@@ -1,32 +1,32 @@
-@import "variables";
+@import 'variables';
 
 @font-face {
-  font-family: 'icomoon';
-  src:
-    url('#{$icomoon-font-path}/icomoon.ttf?bpv4hj') format('truetype'),
-    url('#{$icomoon-font-path}/icomoon.woff?bpv4hj') format('woff'),
-    url('#{$icomoon-font-path}/icomoon.svg?bpv4hj#icomoon') format('svg');
+  font-family: '#{$icomoon-font-family}';
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?pdk98p') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?pdk98p') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?pdk98p##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 .u-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: '#{$icomoon-font-family}' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  
+
   /* Enable Ligatures ================ */
   letter-spacing: 0;
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  font-feature-settings: "liga";
+  -webkit-font-feature-settings: 'liga';
+  -moz-font-feature-settings: 'liga=1';
+  -moz-font-feature-settings: 'liga';
+  -ms-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga';
   -webkit-font-variant-ligatures: discretionary-ligatures;
   font-variant-ligatures: discretionary-ligatures;
 
@@ -75,4 +75,113 @@
     content: $icon-npm;
   }
 }
-
+.icon-dart {
+  &:before {
+    content: $icon-dart;
+  }
+}
+.icon-firebase {
+  &:before {
+    content: $icon-firebase;
+  }
+}
+.icon-flutter {
+  &:before {
+    content: $icon-flutter;
+  }
+}
+.icon-gatsby {
+  &:before {
+    content: $icon-gatsby;
+  }
+}
+.icon-git {
+  &:before {
+    content: $icon-git;
+  }
+}
+.icon-graphql {
+  &:before {
+    content: $icon-graphql;
+  }
+}
+.icon-html5 {
+  &:before {
+    content: $icon-html5;
+  }
+}
+.icon-javascript {
+  &:before {
+    content: $icon-javascript;
+  }
+}
+.icon-jest {
+  &:before {
+    content: $icon-jest;
+  }
+}
+.icon-next-dot-js {
+  &:before {
+    content: $icon-next-dot-js;
+  }
+}
+.icon-node-dot-js {
+  &:before {
+    content: $icon-node-dot-js;
+  }
+}
+.icon-nuxt-dot-js {
+  &:before {
+    content: $icon-nuxt-dot-js;
+  }
+}
+.icon-prettier {
+  &:before {
+    content: $icon-prettier;
+  }
+}
+.icon-python {
+  &:before {
+    content: $icon-python;
+  }
+}
+.icon-react {
+  &:before {
+    content: $icon-react;
+  }
+}
+.icon-redux {
+  &:before {
+    content: $icon-redux;
+  }
+}
+.icon-sass {
+  &:before {
+    content: $icon-sass;
+  }
+}
+.icon-stylus {
+  &:before {
+    content: $icon-stylus;
+  }
+}
+.icon-tailwindcss {
+  &:before {
+    content: $icon-tailwindcss;
+  }
+}
+.icon-travisci {
+  &:before {
+    content: $icon-travisci;
+  }
+}
+.icon-typescript {
+  &:before {
+    content: $icon-typescript;
+  }
+}
+.icon-vue-dot-js {
+  &:before {
+    content: $icon-vue-dot-js;
+  }
+}

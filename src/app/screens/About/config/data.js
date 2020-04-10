@@ -4,6 +4,19 @@ export default {
       title: 'CSS',
       rows: [
         {
+          title: 'CSS in JS',
+          items: [
+            {
+              title: 'Emotion',
+              link: 'https://emotion.sh/docs/introduction',
+            },
+            {
+              title: 'Styled Components',
+              link: 'https://styled-components.com/',
+            },
+          ],
+        },
+        {
           title: 'Frameworks',
           items: [
             {
@@ -91,7 +104,11 @@ export default {
           items: [
             {
               title: 'Webpack',
-              link: 'https://webpack.github.io/',
+              link: 'https://webpack.js.org/',
+            },
+            {
+              title: 'Parcel',
+              link: 'https://parceljs.org/',
             },
           ],
         },
@@ -121,12 +138,29 @@ export default {
           title: 'Testing',
           items: [
             {
+              title: 'Cypress',
+              link: 'https://www.cypress.io/',
+            },
+            {
               title: 'Jest',
-              link: 'https://facebook.github.io/jest/',
+              link: 'https://jestjs.io/en/',
             },
             {
               title: 'BrowserSync',
               link: 'https://browsersync.io/',
+            },
+          ],
+        },
+        {
+          title: 'Code Style/Linting',
+          items: [
+            {
+              title: 'Prettier',
+              link: 'https://prettier.io/',
+            },
+            {
+              title: 'Eslint',
+              link: 'https://eslint.org/',
             },
           ],
         },
