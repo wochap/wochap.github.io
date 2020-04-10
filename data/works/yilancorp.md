@@ -26,8 +26,8 @@ Gracias a la experiencia con anteriores proyectos, fue facil desarrollar el siti
 * [CSS Animations](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS)
 * [JSONP](https://es.wikipedia.org/wiki/JSONP)
 
-<div>
-  ![JSONP demo](//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/yilancorp-services.gif)
+<div class="c-markdown-image-full">
+  <img src="//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/yilancorp-services.gif" alt="JSONP demo">
 </div>
 
 * [CSS FlexBox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)

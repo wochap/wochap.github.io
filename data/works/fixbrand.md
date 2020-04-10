@@ -41,8 +41,8 @@ Realize el panel de administracion con [Bootstrap](http://getbootstrap.com/) y  
 
 * Simular un `SPA` con [Jquery](https://jquery.com/):
 
-<div>
-  ![Portafolio del sitio web Fixbrand](//res.cloudinary.com/wochap/image/upload/v1495070187/wochap/body/fixbrand-spa.gif)
+<div class="c-markdown-image-full">
+  <img src="//res.cloudinary.com/wochap/image/upload/v1495070187/wochap/body/fixbrand-spa.gif" alt="Portafolio del sitio web Fixbrand">
 </div>
 
 * Desarrollar 3 `CRUD` (portafolio, contacto, clientes), tanto en el `Back-end` como en el `Front-end`.

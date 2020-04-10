@@ -54,8 +54,8 @@ Ya que el sitio requeria de mucha manipulacion del `DOM`, trabaje con [VueJS](ht
 
 * Pasarela de pagos.
 
-<div>
-  ![RicaRica Travel pasarela de pago](//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/ricarica-travel-payment.jpg)
+<div class="c-markdown-image-full">
+  <img src="//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/ricarica-travel-payment.jpg" alt="RicaRica Travel pasarela de pago">
 </div>
 
 * Aprender [VueJS](https://vuejs.org/).

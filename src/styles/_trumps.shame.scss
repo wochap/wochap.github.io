@@ -8,7 +8,7 @@
   text-decoration: none;
 }
 
-.c-markdown-body div {
+.c-markdown-image-full {
   transform: translateX(calc(-1 * ((100vw - 100%) / 2))); /* HACK: full width img */
 }
 
@@ -18,7 +18,7 @@
   margin-right: auto;
 }
 
-.c-markdown-body div img {
+.c-markdown-image-full > img {
   max-width: none; /* HACK: full width img */
   width: calc(100vw); /* HACK: full width img */
 }
@@ -28,11 +28,11 @@
  * Fix IE calc in transform bug.
  */
 
-.Trident .c-markdown-body div {
+.Trident .c-markdown-image-full {
   transform: none;
 }
 
-.Trident .c-markdown-body div img {
+.Trident .c-markdown-image-full img {
   max-width: 100%;
   width: 100%;
 }
