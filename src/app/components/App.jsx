@@ -21,9 +21,14 @@ function App({location, children}) {
       isFixed: true,
       isHome: true,
     }
-  } else if (matchRoute(pathname, '/works/:fileName')) {
+  } else if (matchRoute(pathname, '/works/:fileName') || matchRoute(pathname, '/blog/:fileName')) {
     headerProps = {isFixed: true}
-  } else if (matchRoute(pathname, '/works') || matchRoute(pathname, '/contact') || matchRoute(pathname, '/about')) {
+  } else if (
+    matchRoute(pathname, '/blog') ||
+    matchRoute(pathname, '/works') ||
+    matchRoute(pathname, '/contact') ||
+    matchRoute(pathname, '/about')
+  ) {
     headerProps = {}
   } else if (matchRoute(location.pathname, '*')) {
     headerProps = {isFixed: true}

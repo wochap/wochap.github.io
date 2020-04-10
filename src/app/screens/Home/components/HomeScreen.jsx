@@ -3,7 +3,7 @@ import data from 'app/config/data'
 import ScreenHelmet from 'components/ScreenHelmet'
 import SiteContact from 'components/SiteContact'
 import Works from 'components/Works'
-// import Posts from 'components/Posts'
+import Posts from 'components/Posts'
 
 function HomeScreen() {
   return (
@@ -29,7 +29,7 @@ function HomeScreen() {
         </div>
       </div>
       <Works className='u-py5' id='works' />
-      {/* <Posts className="o-wrapper u-py5 u-center" id="blog" /> */}
+      <Posts className='o-wrapper u-py5 u-center' id='blog' />
       <SiteContact className='u-py5' id='contact' />
     </main>
   )

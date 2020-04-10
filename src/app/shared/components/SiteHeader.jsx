@@ -75,19 +75,24 @@ class SiteHeader extends React.Component {
                 }
               />
             </li>
-            {/* <li>
+            <li>
               <SiteHeaderLink
-                title="Blog"
+                title='Blog'
                 isHome={isHome}
-                props={isHome ? {
-                  href: '#blog'
-                } : {
-                  to: '/blog',
-                  onClick: this._closeNav,
-                  activeClassName: 'is-active'
-                }}
+                props={
+                  isHome
+                    ? {
+                        href: '#blog',
+                        onClick: this._closeNav,
+                      }
+                    : {
+                        to: '/blog',
+                        onClick: this._closeNav,
+                        activeClassName: 'is-active',
+                      }
+                }
               />
-            </li> */}
+            </li>
             <li>
               <SiteHeaderLink
                 title='Contacto'
