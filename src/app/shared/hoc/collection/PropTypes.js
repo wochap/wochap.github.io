@@ -18,5 +18,5 @@ export const collectionShape = PropTypes.arrayOf(
 export const stateShape = PropTypes.shape({
   isPending: PropTypes.bool.isRequired,
   isFulfilled: PropTypes.bool.isRequired,
-  error: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.bool.isRequired]),
+  error: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.bool.isRequired, PropTypes.instanceOf(Error)]),
 }).isRequired
