@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-function SiteError({headTitle, title, message, invert}) {
+function SiteError({headTitle, title, message: error, invert}) {
+  const message = error instanceof Error ? error.message : error
   return (
     <div className={`c-site-error ${invert ? 'c-site-error--invert' : ''}`}>
       {headTitle && <Helmet title={headTitle} />}
@@ -17,7 +18,7 @@ function SiteError({headTitle, title, message, invert}) {
 SiteError.propTypes = {
   headTitle: PropTypes.string,
   title: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired,
+  message: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Error)]).isRequired,
   invert: PropTypes.bool,
 }
 

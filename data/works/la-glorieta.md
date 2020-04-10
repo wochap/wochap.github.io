@@ -46,8 +46,8 @@ Como el sitio requeria de mucha manipulacion del `DOM`, aprendí y desarrolle el
 
 * Desarrollar un catalogo de items, con categorias, sub categorias, ademas de **paginación**, y **busqueda**. Los datos son consumidos por `AJAX`.
 
-<div>
-  ![Catalogo de item del sitio web La Glorieta](//res.cloudinary.com/wochap/image/upload/v1495070190/wochap/body/glorieta-catalogo.jpg)
+<div class="c-markdown-image-full">
+  <img src="//res.cloudinary.com/wochap/image/upload/v1495070190/wochap/body/glorieta-catalogo.jpg" alt="Catalogo de item del sitio web La Glorieta">
 </div>
 
 * Implementar calculos y actualizaciones del DOM complejas, un claro **ejemplo** es el formulario de proforma, en cada seccion la suma de cantidades debe ser igual al `numero de personas`.

@@ -17,7 +17,7 @@ function PostsScreen() {
           {/* <img className="u-bg-primary" src="http://placehold.it/150x150" alt="Gean Carlos Bonifacio Marroquin" width="150" height="150" /> */}
           <h2 className='u-mb2 u-caps'>Gean Marroquin</h2>
           <p className='u-fw-s-bold u-mb3'>Sígueme @{data.twitterUser}</p>
-          <p className='u-fz-sm'>{data.about}</p>
+          <div className='u-fz-sm' dangerouslySetInnerHTML={{__html: data.about}} />
         </div>
         <div className='o-grid__item u-12/12 u-8/12@laptop'>
           <Posts />

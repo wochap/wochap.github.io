@@ -10,7 +10,12 @@ const middlewares = debug
       applyMiddleware(reduxImmutableStateInvariant(), thunk, promiseMiddleware),
 
       // redux dev tools
-      window.devToolsExtension ? window.devToolsExtension() : f => f,
+      window.devToolsExtension
+        ? window.devToolsExtension({
+            trace: true,
+            traceLimit: 5,
+          })
+        : f => f,
     )
   : compose(applyMiddleware(thunk, promiseMiddleware))
 

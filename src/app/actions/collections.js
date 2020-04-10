@@ -3,8 +3,8 @@ import {normalize, Schema, arrayOf} from 'normalizr'
 import {COLLECTION_DATE_FORMAT} from 'app/config/constants'
 
 const COLLECTION_SCHEMA_NAME = 'items'
-export const FETCH_ITEM = 'collections/FETCH_COLLECTION'
-export const FETCH_COLLECTION = 'collections/FETCH_COLLECTIONS'
+export const FETCH_ITEM = 'collections/FETCH_ITEM'
+export const FETCH_COLLECTION = 'collections/FETCH_COLLECTION'
 
 /**
  * SCHEMA
@@ -36,12 +36,20 @@ export function loadItem(collectionName, fileName) {
     throw new Error('(actions)[collection] loadItem: `fileName` is required.')
   }
 
-  // eslint-disable-next-line
-  const fileRequest = require('lazy-loader?{"documentEventName":"lazyLoaderFileChange"}!markdown-loader!data/' +
-    collectionName +
-    '/' +
-    fileName +
-    '.md')
+  let fileRequest
+  try {
+    // eslint-disable-next-line
+    fileRequest = require('lazy-loader?{"documentEventName":"lazyLoaderFileChange"}!markdown-loader!data/' +
+      collectionName +
+      '/' +
+      fileName +
+      '.md')
+  } catch (error) {
+    fileRequest = Promise.reject(error)
+    if (process.env.NODE_ENV !== 'development') {
+      throw error
+    }
+  }
 
   return {
     type: FETCH_ITEM,
@@ -65,8 +73,16 @@ export function loadCollection(collectionName) {
     throw new Error('(actions)[collection] loadCollection: `collectionName` is required.')
   }
 
-  // eslint-disable-next-line
-  const filesRequest = require('lazy-dir-loader?{"documentEventName":"lazyDirLoaderFilesChange"}!data/' + collectionName + '.config.js')
+  let filesRequest
+  try {
+    // eslint-disable-next-line
+    filesRequest = require('lazy-dir-loader?{"documentEventName":"lazyDirLoaderFilesChange"}!data/' + collectionName + '.config.js')
+  } catch (error) {
+    filesRequest = Promise.reject(error)
+    if (process.env.NODE_ENV !== 'development') {
+      throw error
+    }
+  }
 
   return {
     type: FETCH_COLLECTION,
