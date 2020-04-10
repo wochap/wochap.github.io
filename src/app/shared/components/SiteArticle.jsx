@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import PropTypes from 'prop-types'
 import * as collectionPropTypes from 'hoc/collection/PropTypes'
 import {articleShape} from 'PropTypes/article'
@@ -8,8 +8,13 @@ import Hero from 'components/Hero'
 import MarkdownBody from 'components/MarkdownBody'
 import ScreenHelmet from 'components/ScreenHelmet'
 import ArticleHelmet from 'components/ArticleHelmet'
+import initTennor from 'lib/init-tennor'
 
 function SiteArticle({item, itemState, collectionState, head}) {
+  useEffect(() => {
+    initTennor()
+  })
+
   if (itemState.error) {
     return <SiteError title='Error' message={itemState.error} />
   }
