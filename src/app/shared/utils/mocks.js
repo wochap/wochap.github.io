@@ -2,20 +2,22 @@ export const collection = [
   {
     frontMatter: {
       fileName: 'fake-collection',
-      date: '2016-19-12',
+      date: '19-12-2016',
       imageUrl: 'http://placehold.it/1350x450',
       title: 'Fake collection',
       description: '',
+      readingTime: '',
     },
     bodyHtml: '<p>Lorem</p>',
   },
   {
     frontMatter: {
       fileName: 'fake-collection-2',
-      date: '2016-20-12',
+      date: '20-12-2016',
       imageUrl: 'http://placehold.it/1350x450',
       title: 'Fake collection 2',
       description: '',
+      readingTime: '',
     },
     bodyHtml: '<p>Lorem 2</p>',
   },
@@ -24,10 +26,11 @@ export const collection = [
 export const collectionItem = {
   frontMatter: {
     fileName: 'fake-collection',
-    date: '2016-19-12',
+    date: '19-12-2016',
     imageUrl: 'http://placehold.it/1350x450',
     title: 'Fake collection',
     description: '',
+    readingTime: '',
   },
   bodyHtml: '<p>Lorem</p>',
 }
