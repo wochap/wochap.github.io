@@ -59,6 +59,9 @@ function Hero({
             <p className='c-hero__date' key='date'>
               {formattedDate}
             </p>,
+            <p className='c-hero__reading-time' key='reading-time'>
+              <small>{data.readingTime}</small>
+            </p>,
           ]
         )}
         {footer}

@@ -10,7 +10,7 @@ import ScreenHelmet from 'components/ScreenHelmet'
 import ArticleHelmet from 'components/ArticleHelmet'
 import initTennor from 'lib/init-tennor'
 
-function SiteArticle({item, itemState, collectionState, head}) {
+function SiteArticle({item, itemState, collectionState, head, children}) {
   useEffect(() => {
     initTennor()
   })
@@ -30,6 +30,7 @@ function SiteArticle({item, itemState, collectionState, head}) {
         <ArticleHelmet imageUrl={item.frontMatter.imageUrl} publishedTime={item.frontMatter.date} tags={item.frontMatter.tags} />
         <Hero data={item.frontMatter} />
         <MarkdownBody html={item.bodyHtml} />
+        {children}
       </article>
     )
   }
@@ -56,6 +57,7 @@ function SiteArticle({item, itemState, collectionState, head}) {
 }
 
 SiteArticle.propTypes = {
+  children: PropTypes.element,
   item: articleShape,
   itemState: collectionPropTypes.stateShape,
   collectionState: collectionPropTypes.stateShape,
