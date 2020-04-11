@@ -1,12 +1,14 @@
 import prevalMarkdown from '../../../lib/macros/markdown.macro'
 
-const BASE_URL = 'https://geanmarroquin.com'
+const DOMAIN_NAME = 'geanmarroquin.com'
+const BASE_URL = `https://${DOMAIN_NAME}`
 const TITLE = 'Gean Marroquin'
 const ABOUT = prevalMarkdown`
   Establecido en Perú, soy <i class="u-icon u-color-javascript u-fz-h2">javascript</i> Developer enfocado en la creación de componentes escalables y reusables con <i class="u-icon u-color-vue_js u-fz-h2">vue_js</i> y <i class="u-icon u-color-react u-fz-h2">react</i>, apasionado y autodidacta desde el principio.
 `
 
 export default {
+  domainName: DOMAIN_NAME,
   baseUrl: BASE_URL,
   title: TITLE,
   email: 'gean.marroquin@gmail.com',

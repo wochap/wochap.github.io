@@ -173,7 +173,7 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          cacheDirectory: true,
+          cacheDirectory: ifDevelopment(),
         },
       },
       {
@@ -253,6 +253,7 @@ module.exports = {
   plugins: removeEmpty([
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': ifDevelopment('"development"', '"production"'),
+      'GATSBY_DISQUS_SHORTNAME': ifDevelopment('"staging-cevichan"', '"cevichan"'),
     }),
 
     ifProduction(
