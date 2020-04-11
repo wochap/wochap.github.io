@@ -2,6 +2,10 @@
   #PAGE
 \*------------------------------------*/
 
+/**
+ * 1. Prevent double scroll bar, after **disqus** inserts its ADs box
+ */
+
 html {
   background-color: $global-color-secondary;
   color: $global-color-primary;
@@ -12,6 +16,7 @@ html {
   font-size: 1em;
   font-weight: $global-fw-regular;
   line-height: 1.5;
+  overflow: hidden; /* [1] */
 }
 
 @include mq($from: 'laptop') {
