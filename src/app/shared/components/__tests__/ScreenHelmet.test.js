@@ -32,6 +32,34 @@ describe('ScreenHelmet', () => {
           property: 'og:description',
           content: props.description,
         },
+        {
+          content: 'canonicalHref',
+          property: 'og:url ',
+        },
+        {
+          content: 'summary_large_image',
+          property: 'twitter:card',
+        },
+        {
+          content: '@geanmarroquin',
+          property: 'twitter:site',
+        },
+        {
+          content: 'title',
+          property: 'twitter:title',
+        },
+        {
+          content: 'description',
+          property: 'twitter:description',
+        },
+        {
+          content: '@geanmarroquin',
+          property: 'twitter:creator',
+        },
+        {
+          content: 'canonicalHref',
+          property: 'twitter:domain ',
+        },
       ],
       link: [
         {

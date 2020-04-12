@@ -17,7 +17,7 @@ function HomeScreen() {
       <div className='c-home-screen__hero'>
         <div className='o-wrapper u-relative'>
           <div className='c-home-screen__hero-wrapper'>
-            <h1 className='u-caps'>Hola!, soy Gean</h1>
+            <h1 className='u-caps'>Hola!, soy Gean Marroquin</h1>
             <div className='c-home-screen__hero-about' dangerouslySetInnerHTML={{__html: data.about}} />
             <a className='o-btn c-btn c-btn--secondary u-mr3 u-my2' href='#contact'>
               Contáctame

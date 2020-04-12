@@ -4,7 +4,7 @@ import data from 'app/config/data'
 import {articleShape} from 'app/shared/PropTypes/article'
 
 function PostComments({item}) {
-  if (!item?.state?.isFulfilled) {
+  if (!item?.state?.isFulfilled || !!item?.state?.error) {
     return null
   }
 
