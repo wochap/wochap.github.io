@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {Route, Switch} from 'react-router-dom'
 
-function generateRoutes({prevPaths = [], key, exact, path = '', onChange, childRoutes, indexRoute = {}, ...config}) {
+function generateRoutes({prevPaths = [], key, exact, path = '', childRoutes = [], indexRoute, ...config}) {
   const paths = [...prevPaths, path]
   const currentPath = paths.reduce((result, _path) => {
     if ([result, _path].includes('') || result.endsWith('/')) {
@@ -11,10 +11,10 @@ function generateRoutes({prevPaths = [], key, exact, path = '', onChange, childR
     return `${result}/${_path}`
   }, '')
   let children
-  if (config.indexRoute || childRoutes?.length > 0) {
+  if (indexRoute || childRoutes?.length > 0) {
     children = (
       <Switch>
-        {generateRoutes({...indexRoute, prevPaths: paths})}
+        {indexRoute ? generateRoutes({...indexRoute, prevPaths: paths}) : null}
         {childRoutes.map((route, i) => generateRoutes({...route, key: i, prevPaths: paths}))}
       </Switch>
     )
@@ -36,12 +36,9 @@ generateRoutes.propTypes = {
   key: PropTypes.any,
   path: PropTypes.string,
   component: PropTypes.elementType,
-  onChange: PropTypes.func,
   // eslint-disable-next-line
   indexRoute: PropTypes.object,
   exact: PropTypes.bool.isRequired,
-  // eslint-disable-next-line
-  inheritProps: PropTypes.object,
   childRoutes: PropTypes.arrayOf(PropTypes.object),
 }
 
