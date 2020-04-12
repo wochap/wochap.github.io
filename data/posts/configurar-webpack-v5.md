@@ -1,13 +1,15 @@
 ---
 identifier: blog-1
 date: 09-04-2020
+dateModified: 12-04-2020
 formattedDate: Abril 2020
 imageUrl: //res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png
 heroImageUrl: //res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png
-title: Configurar webpack v5
-description: 'Configurar webpack v5.'
+title: Configurar webpack 5
+description: 'Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!'
 tags:
   - webpack
+  - babel
 ---
 
 Configurar webpack puede ser frustante...
@@ -15,9 +17,9 @@ Configurar webpack puede ser frustante...
 <div class="tenor-gif-embed" data-postid="5384575" data-share-method="host" data-width="100%" data-aspect-ratio="1.7785714285714287"><a href="https://tenor.com/view/fuck-work-gif-5384575">Fuckwork Angry GIF</a> from <a href="https://tenor.com/search/fuckwork-gifs">Fuckwork GIFs</a></div>
 <br>
 
-Por ello en esta guia te enseñare como configurar [webpack v5](https://webpack.js.org/concepts/), si deseas ver la configuracion final haz click [aqui](#configuracion-final) y [aqui](https://github.com/wochap/setup-webpack-5) para ir al repo.
+Por ello en esta guia te enseñare como configurar [webpack 5](https://webpack.js.org/concepts/) con babel, si deseas ver la configuracion final haz click [aqui](#configuracion-final) y [aqui](https://github.com/wochap/setup-webpack-5) para ir al repo.
 
-> al dia de hoy (9 de abril del 2020) [HMR (hot module replacement)](https://webpack.js.org/concepts/hot-module-replacement/) no funciona con **html-webpack-plugin**, y tambien hay algunos plugins que no funcionaran (por el momento) ya que la API interna cambio bastante en la v5 de webpack
+> al dia de hoy (9 de abril del 2020) [HMR (hot module replacement)](https://webpack.js.org/concepts/hot-module-replacement/) no funciona con **html-webpack-plugin**, y tambien hay algunos plugins que no funcionaran (por el momento) ya que la API interna cambio bastante en webpack 5
 
 ## Nuestra meta
 
