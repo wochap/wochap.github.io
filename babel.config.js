@@ -29,7 +29,7 @@ const clientPlugins = [
 module.exports = {
   env: {
     test: {
-      presets,
+      presets: [...presets, '@babel/preset-typescript'],
       plugins: [...commonPlugins, 'transform-es2015-modules-commonjs', 'dynamic-import-node'],
     },
     ssr: {

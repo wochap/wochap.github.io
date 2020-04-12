@@ -29,6 +29,7 @@ module.exports = {
     'global-require': [0],
     'import/no-unresolved': [0],
     'func-names': [0],
+    'consistent-return': [0],
 
     'react/static-property-placement': ['error', 'static public field'],
     'react/state-in-constructor': ['error', 'never'],

@@ -5,6 +5,7 @@ import {PostScreen} from '../PostScreen'
 
 describe('PostScreen', () => {
   const props = {
+    item: mocks.collectionItem,
     itemState: mocks.state,
     collectionState: mocks.state,
   }

@@ -99,7 +99,7 @@ module.exports = {
       data: resolve(__dirname, 'data'),
     },
     modules: ['node_modules', 'shared'],
-    extensions: ['.wasm', '.mjs', '.js', '.jsx', '.json'],
+    extensions: ['.wasm', '.ts', '.tsx', '.js', '.jsx', '.json'],
   },
   resolveLoader: {
     alias: {
@@ -168,6 +168,23 @@ module.exports = {
           formatter: require('eslint-friendly-formatter'), // eslint-disable-line
         },
       }),
+      {
+        test: /\.tsx?$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: ifDevelopment(),
+            },
+          },
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ],
+      },
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
