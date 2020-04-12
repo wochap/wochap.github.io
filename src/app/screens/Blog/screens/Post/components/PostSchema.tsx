@@ -8,7 +8,7 @@ import {articleShape} from 'app/shared/PropTypes/article'
 import {COLLECTION_DATE_FORMAT} from 'app/config/constants'
 
 function PostSchema({item}) {
-  if (!item?.state?.isFulfilled) {
+  if (!item?.state?.isFulfilled || !!item?.state?.error) {
     return null
   }
 
