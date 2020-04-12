@@ -28,6 +28,10 @@ function ArticleHelmet({imageUrl, publishedTime, tags = []}) {
           property: 'article:author',
           content: `https://twitter.com/${data.twitterUser}`,
         },
+        {
+          property: 'twitter:image',
+          content: imageUrl,
+        },
         ...metaTags,
       ]}
     />

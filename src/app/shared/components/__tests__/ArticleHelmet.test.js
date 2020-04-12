@@ -36,6 +36,10 @@ describe('ArticleHelmet', () => {
           property: 'article:author',
           content: `https://twitter.com/${data.twitterUser}`,
         },
+        {
+          content: 'imageUrl',
+          property: 'twitter:image',
+        },
       ],
     }
 
