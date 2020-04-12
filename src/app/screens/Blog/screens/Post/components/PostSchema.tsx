@@ -26,6 +26,7 @@ function PostSchema({item}) {
           '@type': 'Person',
           'name': data.title,
         },
+        'description': frontMatter.description,
         'datePublished': datePublished,
         'headline': frontMatter.title,
         'image': frontMatter.imageUrl,
