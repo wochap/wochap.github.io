@@ -148,9 +148,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var app_config_generateRoutes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/config/generateRoutes */ 127);
 /* harmony import */ var app_config_routes__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/config/routes */ 202);
-/* harmony import */ var app_store_configureStore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/store/configureStore */ 294);
+/* harmony import */ var app_store_configureStore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/store/configureStore */ 297);
 /* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/actions/collections */ 232);
-/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./template */ 304);
+/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./template */ 307);
 
 
 
@@ -3905,11 +3905,10 @@ function generateRoutes(_ref) {
     key,
     exact,
     path = '',
-    onChange,
-    childRoutes,
-    indexRoute = {}
+    childRoutes = [],
+    indexRoute
   } = _ref,
-      config = _babel_runtime_corejs3_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_14___default()(_ref, ["prevPaths", "key", "exact", "path", "onChange", "childRoutes", "indexRoute"]);
+      config = _babel_runtime_corejs3_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_14___default()(_ref, ["prevPaths", "key", "exact", "path", "childRoutes", "indexRoute"]);
 
   const paths = [...prevPaths, path];
 
@@ -3927,10 +3926,10 @@ function generateRoutes(_ref) {
 
   let children;
 
-  if (config.indexRoute || (childRoutes === null || childRoutes === void 0 ? void 0 : childRoutes.length) > 0) {
-    children = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__["Switch"], null, generateRoutes(_objectSpread({}, indexRoute, {
+  if (indexRoute || (childRoutes === null || childRoutes === void 0 ? void 0 : childRoutes.length) > 0) {
+    children = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__["Switch"], null, indexRoute ? generateRoutes(_objectSpread({}, indexRoute, {
       prevPaths: paths
-    })), _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_8___default()(childRoutes).call(childRoutes, (route, i) => generateRoutes(_objectSpread({}, route, {
+    })) : null, _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_8___default()(childRoutes).call(childRoutes, (route, i) => generateRoutes(_objectSpread({}, route, {
       key: i,
       prevPaths: paths
     }))));
@@ -3952,12 +3951,9 @@ generateRoutes.propTypes = {
   key: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.any,
   path: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.string,
   component: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.elementType,
-  onChange: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.func,
   // eslint-disable-next-line
   indexRoute: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.object,
   exact: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.bool.isRequired,
-  // eslint-disable-next-line
-  inheritProps: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.object,
   childRoutes: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.object)
 };
 /* harmony default export */ __webpack_exports__["default"] = (generateRoutes);
@@ -5643,8 +5639,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_screens_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/screens/About */ 260);
 /* harmony import */ var app_screens_Works__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/screens/Works */ 263);
 /* harmony import */ var app_screens_Blog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/screens/Blog */ 276);
-/* harmony import */ var app_screens_Contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/Contact */ 291);
-/* harmony import */ var app_screens_NotFound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/screens/NotFound */ 293);
+/* harmony import */ var app_screens_Contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/Contact */ 294);
+/* harmony import */ var app_screens_NotFound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/screens/NotFound */ 296);
 
 
 
@@ -6279,7 +6275,7 @@ function HomeScreen() {
     className: "c-home-screen__hero-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "u-caps"
-  }, "Hola!, soy Gean"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Hola!, soy Gean Marroquin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "c-home-screen__hero-about",
     dangerouslySetInnerHTML: {
       __html: app_config_data__WEBPACK_IMPORTED_MODULE_1__["default"].about
@@ -6317,41 +6313,47 @@ __webpack_require__.r(__webpack_exports__);
 const DOMAIN_NAME = 'geanmarroquin.com';
 const BASE_URL = "https://".concat(DOMAIN_NAME);
 const TITLE = 'Gean Marroquin';
-const ABOUT = "<p>  Establecido en Perú, soy <i class=\"u-icon u-color-javascript u-fz-h2\">javascript</i> Developer enfocado en la creación de componentes escalables y reusables con <i class=\"u-icon u-color-vue_js u-fz-h2\">vue_js</i> y <i class=\"u-icon u-color-react u-fz-h2\">react</i>, apasionado y autodidacta desde el principio.</p>\n";
+const ABOUT_HTML = "<p>  Establecido en Perú, soy <i class=\"u-icon u-color-javascript u-fz-h2\">javascript</i> Developer enfocado en la creación de componentes escalables y reusables con <i class=\"u-icon u-color-vue_js u-fz-h2\">vue_js</i> y <i class=\"u-icon u-color-react u-fz-h2\">react</i>, apasionado y autodidacta.</p>\n";
+const ABOUT = 'Establecido en Peru, soy Javascript Developer enfocado en la creación de componentes escalables y reusables con vue y react, apasionado y autodidacta.';
 /* harmony default export */ __webpack_exports__["default"] = ({
   domainName: DOMAIN_NAME,
   baseUrl: BASE_URL,
   title: TITLE,
   email: 'gean.marroquin@gmail.com',
-  about: ABOUT,
+  about: ABOUT_HTML,
   twitterUser: 'geanmarroquin',
   screens: {
     about: {
-      title: "".concat(TITLE, " - JS Developer"),
+      breadCrumbName: 'Sobre mi',
+      title: "JS Developer | ".concat(TITLE),
       description: ABOUT,
       canonicalHref: "".concat(BASE_URL, "/about")
     },
     blog: {
-      title: "".concat(TITLE, " - Art\xEDculos y tutoriales"),
-      description: "Blog de ".concat(TITLE, "."),
+      breadCrumbName: 'Blog',
+      title: "Art\xEDculos y tutoriales | ".concat(TITLE),
+      description: "Tutoriales sobre desarrollo de aplicaciones web y mobile.",
       canonicalHref: "".concat(BASE_URL, "/blog")
     },
     contact: {
-      title: "".concat(TITLE, " - Contacto"),
+      breadCrumbName: 'Contacto',
+      title: "Contacto | ".concat(TITLE),
       description: ABOUT,
       canonicalHref: "".concat(BASE_URL, "/contact")
     },
     home: {
-      title: "".concat(TITLE, " - Inicio"),
+      breadCrumbName: 'Inicio',
+      title: "Inicio | ".concat(TITLE),
       description: ABOUT,
       canonicalHref: BASE_URL
     },
     notFound: {
-      title: "".concat(TITLE, " - P\xE1gina no encontrada")
+      title: "P\xE1gina no encontrada"
     },
     works: {
-      title: "".concat(TITLE, " - Portafolio"),
-      description: "Portafolio de ".concat(TITLE, "."),
+      breadCrumbName: 'Portafolio',
+      title: "Portafolio | ".concat(TITLE),
+      description: "Portafolio de ".concat(TITLE, ", proyectos como freelance y experimentos personales."),
       canonicalHref: "".concat(BASE_URL, "/works")
     }
   }
@@ -6393,6 +6395,27 @@ function ScreenHelmet({
     }, {
       property: 'og:description',
       content: description
+    }, {
+      property: 'og:url ',
+      content: canonicalHref
+    }, {
+      property: 'twitter:card',
+      content: 'summary_large_image'
+    }, {
+      property: 'twitter:site',
+      content: '@geanmarroquin'
+    }, {
+      property: 'twitter:title',
+      content: title
+    }, {
+      property: 'twitter:description',
+      content: description
+    }, {
+      property: 'twitter:creator',
+      content: '@geanmarroquin'
+    }, {
+      property: 'twitter:domain ',
+      content: canonicalHref
     }],
     link: [{
       rel: 'canonical',
@@ -7301,7 +7324,7 @@ const COLLECTION_DATE_FORMAT = 'DD-MM-YYYY'; // eslint-disable-line
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./posts/configurar-webpack-v5.md": 242,
+	"./posts/configurar-webpack-5.md": 242,
 	"./works/fixbrand.md": 243,
 	"./works/gean-marroquin.md": 244,
 	"./works/la-glorieta.md": 245,
@@ -7331,16 +7354,16 @@ webpackContext.id = 241;
 
 /***/ }),
 /* 242 */
-/*!*********************************************************************************************************************************************!*\
-  !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/posts/configurar-webpack-v5.md ***!
-  \*********************************************************************************************************************************************/
+/*!********************************************************************************************************************************************!*\
+  !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/posts/configurar-webpack-5.md ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
     module.exports = new Promise(function (resolve) {
-      Promise.resolve(/*! require.ensure | data.configurar-webpack-v5 */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/posts/configurar-webpack-v5.md */ 311 ));
+      Promise.resolve(/*! require.ensure | data.configurar-webpack-5 */).then((function (require) {
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/posts/configurar-webpack-5.md */ 314 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7358,7 +7381,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.fixbrand */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/fixbrand.md */ 312 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/fixbrand.md */ 315 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7376,7 +7399,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.gean-marroquin */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/gean-marroquin.md */ 313 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/gean-marroquin.md */ 316 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7394,7 +7417,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.la-glorieta */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/la-glorieta.md */ 314 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/la-glorieta.md */ 317 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7412,7 +7435,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.ricarica-travel */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/ricarica-travel.md */ 315 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/ricarica-travel.md */ 318 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7430,7 +7453,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.yilancorp */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/yilancorp.md */ 316 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/yilancorp.md */ 319 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7483,7 +7506,7 @@ webpackContext.id = 248;
       try {
         /* lazy load group of files */
         Promise.resolve(/*! require.ensure | data.posts */).then((function (require) {
-          var requireContext = __webpack_require__(317);
+          var requireContext = __webpack_require__(320);
           var modules = requireContext.keys().map(function (fileFullName) {
             return requireContext(fileFullName);
           });
@@ -7511,7 +7534,7 @@ webpackContext.id = 248;
       try {
         /* lazy load group of files */
         Promise.resolve(/*! require.ensure | data.works */).then((function (require) {
-          var requireContext = __webpack_require__(319);
+          var requireContext = __webpack_require__(322);
           var modules = requireContext.keys().map(function (fileFullName) {
             return requireContext(fileFullName);
           });
@@ -8842,6 +8865,9 @@ function ArticleHelmet({
     }, {
       property: 'article:author',
       content: "https://twitter.com/".concat(app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].twitterUser)
+    }, {
+      property: 'twitter:image',
+      content: imageUrl
     }, ...metaTags]
   });
 }
@@ -8962,14 +8988,14 @@ WorksScreen.propTypes = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _screens_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Post */ 277);
-/* harmony import */ var _screens_Posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Posts */ 288);
+/* harmony import */ var _screens_Posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Posts */ 291);
 // import {lazy} from 'react'
 // import topBar from 'utils/topBar'
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'blog',
-  component: __webpack_require__(/*! ./components/BlogScreen */ 290).default,
+  component: __webpack_require__(/*! ./components/BlogScreen */ 293).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/BlogScreen')
@@ -9046,7 +9072,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 268);
 /* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/SiteArticle */ 269);
 /* harmony import */ var _PostSchema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PostSchema */ 279);
-/* harmony import */ var _PostComments__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PostComments */ 281);
+/* harmony import */ var _PostComments__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PostComments */ 284);
 
 
 
@@ -9076,16 +9102,31 @@ function PostScreen(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ 238);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/object/assign */ 280);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_object_assign__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-schemaorg */ 280);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-schemaorg */ 282);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/config/data */ 217);
 /* harmony import */ var app_shared_PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/PropTypes/article */ 223);
-/* harmony import */ var app_config_constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/config/constants */ 240);
-// TODO: apply i18n
+/* harmony import */ var _schema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./schema */ 283);
+
+
+var __assign = undefined && undefined.__assign || function () {
+  __assign = _babel_runtime_corejs3_core_js_stable_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+}; // TODO: apply i18n
+
 
 
 
@@ -9096,43 +9137,46 @@ __webpack_require__.r(__webpack_exports__);
 function PostSchema(_a) {
   var item = _a.item;
 
-  var _b;
+  var _b, _c;
 
-  if (!((_b = item === null || item === void 0 ? void 0 : item.state) === null || _b === void 0 ? void 0 : _b.isFulfilled)) {
+  if (!((_b = item === null || item === void 0 ? void 0 : item.state) === null || _b === void 0 ? void 0 : _b.isFulfilled) || !!((_c = item === null || item === void 0 ? void 0 : item.state) === null || _c === void 0 ? void 0 : _c.error)) {
     return null;
   }
 
   var frontMatter = item.frontMatter;
-  var datePublished = moment__WEBPACK_IMPORTED_MODULE_0___default()(frontMatter.date, app_config_constants__WEBPACK_IMPORTED_MODULE_5__["COLLECTION_DATE_FORMAT"]).format();
-  var dateModified = frontMatter.dateModified ? moment__WEBPACK_IMPORTED_MODULE_0___default()(frontMatter.dateModified, app_config_constants__WEBPACK_IMPORTED_MODULE_5__["COLLECTION_DATE_FORMAT"]).format() : datePublished; // TODO: add 'articleBody'
+  var postUrl = app_config_data__WEBPACK_IMPORTED_MODULE_3__["default"].screens.blog.canonicalHref + "/" + frontMatter.slug;
+  var blogPosting = Object(_schema__WEBPACK_IMPORTED_MODULE_5__["getCollectionItemBlogPosting"])({
+    screenKey: 'blog',
+    parentId: _schema__WEBPACK_IMPORTED_MODULE_5__["blogWebPageId"],
+    frontMatter: frontMatter
+  });
+  var itemWebPage = Object(_schema__WEBPACK_IMPORTED_MODULE_5__["getCollectionItemWebPage"])({
+    siteUrl: postUrl,
+    parentId: _schema__WEBPACK_IMPORTED_MODULE_5__["blogWebPageId"],
+    title: frontMatter.title,
+    description: frontMatter.description
+  });
+  var breadCrumbList = Object(_schema__WEBPACK_IMPORTED_MODULE_5__["getBreadCrumList"])({
+    siteUrl: postUrl,
+    items: [{
+      breadCrumbName: app_config_data__WEBPACK_IMPORTED_MODULE_3__["default"].screens.blog.breadCrumbName,
+      siteUrl: app_config_data__WEBPACK_IMPORTED_MODULE_3__["default"].screens.blog.canonicalHref
+    }, {
+      breadCrumbName: frontMatter.title,
+      siteUrl: postUrl
+    }]
+  });
+  var jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [_schema__WEBPACK_IMPORTED_MODULE_5__["logo"], _schema__WEBPACK_IMPORTED_MODULE_5__["person"], _schema__WEBPACK_IMPORTED_MODULE_5__["organization"], _schema__WEBPACK_IMPORTED_MODULE_5__["webSite"], _schema__WEBPACK_IMPORTED_MODULE_5__["blogWebPage"], breadCrumbList, __assign(__assign({}, itemWebPage), {
+      breadcrumb: {
+        '@id': breadCrumbList['@id']
+      }
+    }), blogPosting]
+  }; // TODO: add 'articleBody' schema property
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_schemaorg__WEBPACK_IMPORTED_MODULE_2__["JsonLd"], {
-    item: {
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
-      'author': {
-        '@type': 'Person',
-        'name': app_config_data__WEBPACK_IMPORTED_MODULE_3__["default"].title
-      },
-      'datePublished': datePublished,
-      'headline': frontMatter.title,
-      'image': frontMatter.imageUrl,
-      'publisher': {
-        '@type': 'Person',
-        'name': app_config_data__WEBPACK_IMPORTED_MODULE_3__["default"].title
-      },
-      'dateModified': dateModified,
-      'mainEntityOfPage': {
-        '@type': 'URL',
-        'category': app_config_data__WEBPACK_IMPORTED_MODULE_3__["default"].screens.blog.canonicalHref + "/" + (frontMatter === null || frontMatter === void 0 ? void 0 : frontMatter.slug)
-      },
-      'keywords': frontMatter.tags.join(' '),
-      'inLanguage': {
-        '@type': 'Language',
-        'name': 'Spanish',
-        'alternateName': 'es'
-      }
-    }
+    item: jsonLd
   });
 }
 
@@ -9143,6 +9187,29 @@ PostSchema.propTypes = {
 
 /***/ }),
 /* 280 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/@babel/runtime-corejs3/core-js-stable/object/assign.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js-pure/stable/object/assign */ 281);
+
+/***/ }),
+/* 281 */
+/*!************************************************************!*\
+  !*** ../node_modules/core-js-pure/stable/object/assign.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var parent = __webpack_require__(/*! ../../es/object/assign */ 211);
+
+module.exports = parent;
+
+
+/***/ }),
+/* 282 */
 /*!**********************************!*\
   !*** external "react-schemaorg" ***!
   \**********************************/
@@ -9152,7 +9219,191 @@ PostSchema.propTypes = {
 module.exports = require("react-schemaorg");
 
 /***/ }),
-/* 281 */
+/* 283 */
+/*!************************************************************!*\
+  !*** ./app/screens/Blog/screens/Post/components/schema.js ***!
+  \************************************************************/
+/*! exports provided: logoId, logo, personId, person, organizationId, organization, webSiteId, webSite, blogWebPageId, blogWebPage, getCollectionItemWebPage, getCollectionItemBlogPosting, getBreadCrumList */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logoId", function() { return logoId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logo", function() { return logo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "personId", function() { return personId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "person", function() { return person; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "organizationId", function() { return organizationId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "organization", function() { return organization; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "webSiteId", function() { return webSiteId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "webSite", function() { return webSite; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blogWebPageId", function() { return blogWebPageId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blogWebPage", function() { return blogWebPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCollectionItemWebPage", function() { return getCollectionItemWebPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCollectionItemBlogPosting", function() { return getCollectionItemBlogPosting; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBreadCrumList", function() { return getBreadCrumList; });
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/instance/map */ 171);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/instance/concat */ 2);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ 238);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var app_config_constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/config/constants */ 240);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/config/data */ 217);
+
+
+
+
+
+const logoId = "".concat(app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].baseUrl, "/#logo");
+const logo = {
+  '@type': 'ImageObject',
+  '@id': logoId,
+  'url': 'https://res.cloudinary.com/wochap/image/upload/v1586724454/wochap/android-chrome-384x384.png',
+  'width': 384,
+  'height': 384,
+  'caption': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].title
+};
+const personId = "".concat(app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.about.canonicalHref, "/#person");
+const person = {
+  '@type': 'Person',
+  '@id': personId,
+  'name': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].title
+}; // requires logo
+
+const organizationId = "".concat(app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.about.canonicalHref, "/#organization");
+const organization = {
+  '@type': 'Organization',
+  '@id': organizationId,
+  'name': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].title,
+  'url': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].baseUrl,
+  'logo': {
+    '@id': logoId
+  },
+  'image': {
+    '@id': logoId
+  }
+}; // requires organization
+
+const webSiteId = "".concat(app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.home.canonicalHref, "/#website");
+const webSite = {
+  '@type': 'WebSite',
+  '@id': webSiteId,
+  'url': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.home.canonicalHref,
+  'name': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.home.title,
+  'description': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.home.description,
+  'publisher': {
+    '@id': organizationId
+  }
+}; // requires website
+
+const blogWebPageId = "".concat(app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.blog.canonicalHref, "/#webpage");
+const blogWebPage = {
+  '@type': 'WebPage',
+  '@id': blogWebPageId,
+  'url': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.blog.canonicalHref,
+  'name': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.blog.title,
+  'description': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.blog.description,
+  'isPartOf': {
+    '@id': webSiteId
+  }
+};
+
+const getCollectionItemImage = ({
+  siteUrl,
+  url,
+  caption
+}) => ({
+  '@type': 'ImageObject',
+  '@id': "".concat(siteUrl, "/#image"),
+  'url': url,
+  'caption': caption
+});
+
+const getCollectionItemWebPage = ({
+  siteUrl,
+  parentId,
+  title,
+  description
+}) => ({
+  '@type': 'WebPage',
+  '@id': "".concat(siteUrl, "/#webpage"),
+  'url': siteUrl,
+  'name': title,
+  'description': description,
+  'isPartOf': {
+    '@id': parentId
+  }
+}); // requires person and organization
+
+const getCollectionItemBlogPosting = ({
+  screenKey,
+  parentId,
+  frontMatter
+}) => {
+  var _context;
+
+  const datePublished = moment__WEBPACK_IMPORTED_MODULE_2___default()(frontMatter.date, app_config_constants__WEBPACK_IMPORTED_MODULE_3__["COLLECTION_DATE_FORMAT"]).format();
+  const dateModified = frontMatter.dateModified ? moment__WEBPACK_IMPORTED_MODULE_2___default()(frontMatter.dateModified, app_config_constants__WEBPACK_IMPORTED_MODULE_3__["COLLECTION_DATE_FORMAT"]).format() : datePublished;
+
+  const postUrl = _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_1___default()(_context = "".concat(app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens[screenKey].canonicalHref, "/")).call(_context, frontMatter === null || frontMatter === void 0 ? void 0 : frontMatter.slug);
+
+  const collectionItemImage = getCollectionItemImage({
+    siteUrl: postUrl,
+    url: frontMatter.imageUrl,
+    caption: frontMatter.imageCaption || ''
+  });
+  return {
+    '@type': 'BlogPosting',
+    '@id': "".concat(postUrl, "/#post"),
+    'description': frontMatter.description,
+    'datePublished': datePublished,
+    'dateModified': dateModified,
+    'headline': frontMatter.title,
+    'keywords': frontMatter.tags.join(' '),
+    'author': {
+      '@id': personId
+    },
+    'publisher': {
+      '@id': organizationId
+    },
+    'image': collectionItemImage,
+    'isPartOf': {
+      '@id': parentId
+    },
+    'mainEntityOfPage': {
+      '@id': parentId
+    },
+    'inLanguage': {
+      '@type': 'Language',
+      'name': 'Spanish',
+      'alternateName': 'es'
+    }
+  };
+};
+const getBreadCrumList = ({
+  siteUrl,
+  items = []
+}) => ({
+  '@type': 'BreadcrumbList',
+  '@id': "".concat(siteUrl, "/#breadcrumb"),
+  'itemListElement': [{
+    '@type': 'ListItem',
+    'position': 1,
+    'name': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.home.breadCrumbName,
+    'item': app_config_data__WEBPACK_IMPORTED_MODULE_4__["default"].screens.home.canonicalHref
+  }, ..._babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_0___default()(items).call(items, (item, index) => ({
+    '@type': 'ListItem',
+    'position': index + 2,
+    'name': item.breadCrumbName,
+    'item': item.siteUrl
+  }))]
+}); // const jsonLd = {
+//   '@context': 'https://schema.org',
+//   '@graph': [],
+// }
+
+/***/ }),
+/* 284 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Post/components/PostComments.jsx ***!
   \*******************************************************************/
@@ -9165,7 +9416,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-disqus/components/Disqus */ 282);
+/* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-disqus/components/Disqus */ 285);
 /* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/config/data */ 217);
 /* harmony import */ var app_shared_PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/PropTypes/article */ 223);
@@ -9178,9 +9429,9 @@ __webpack_require__.r(__webpack_exports__);
 function PostComments({
   item
 }) {
-  var _item$state, _context;
+  var _item$state, _item$state2, _context;
 
-  if (!(item === null || item === void 0 ? void 0 : (_item$state = item.state) === null || _item$state === void 0 ? void 0 : _item$state.isFulfilled)) {
+  if (!(item === null || item === void 0 ? void 0 : (_item$state = item.state) === null || _item$state === void 0 ? void 0 : _item$state.isFulfilled) || !!(item === null || item === void 0 ? void 0 : (_item$state2 = item.state) === null || _item$state2 === void 0 ? void 0 : _item$state2.error)) {
     return null;
   }
 
@@ -9208,7 +9459,7 @@ PostComments.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (PostComments);
 
 /***/ }),
-/* 282 */
+/* 285 */
 /*!*****************************************************************!*\
   !*** ../node_modules/gatsby-plugin-disqus/components/Disqus.js ***!
   \*****************************************************************/
@@ -9218,22 +9469,22 @@ PostComments.propTypes = {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 283);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 286);
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ 284));
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ 287));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ 285));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ 288));
 
-var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ 286));
+var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ 289));
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ 116));
 
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ 201));
 
-var _utils = __webpack_require__(/*! ../utils */ 287);
+var _utils = __webpack_require__(/*! ../utils */ 290);
 
 var _jsxFileName = "/Users/brettstevenson/Desktop/Folder/gatsby-plugin-workspace/gatsby-plugin-disqus/src/components/Disqus.jsx";
 
@@ -9365,7 +9616,7 @@ Disqus.propTypes = {
 };
 
 /***/ }),
-/* 283 */
+/* 286 */
 /*!***********************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
   \***********************************************************************/
@@ -9381,7 +9632,7 @@ function _interopRequireDefault(obj) {
 module.exports = _interopRequireDefault;
 
 /***/ }),
-/* 284 */
+/* 287 */
 /*!*********************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/extends.js ***!
   \*********************************************************/
@@ -9409,7 +9660,7 @@ function _extends() {
 module.exports = _extends;
 
 /***/ }),
-/* 285 */
+/* 288 */
 /*!******************************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
   \******************************************************************************/
@@ -9434,7 +9685,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 module.exports = _objectWithoutPropertiesLoose;
 
 /***/ }),
-/* 286 */
+/* 289 */
 /*!***************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/inheritsLoose.js ***!
   \***************************************************************/
@@ -9450,7 +9701,7 @@ function _inheritsLoose(subClass, superClass) {
 module.exports = _inheritsLoose;
 
 /***/ }),
-/* 287 */
+/* 290 */
 /*!*****************************************************!*\
   !*** ../node_modules/gatsby-plugin-disqus/utils.js ***!
   \*****************************************************/
@@ -9460,7 +9711,7 @@ module.exports = _inheritsLoose;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 283);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 286);
 
 exports.__esModule = true;
 exports.insertScript = insertScript;
@@ -9548,7 +9799,7 @@ function shallowComparison(currentProps, nextProps) {
 }
 
 /***/ }),
-/* 288 */
+/* 291 */
 /*!*************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/index.js ***!
   \*************************************************/
@@ -9557,7 +9808,7 @@ function shallowComparison(currentProps, nextProps) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_PostsScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/PostsScreen */ 289);
+/* harmony import */ var _components_PostsScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/PostsScreen */ 292);
  // eslint-disable-line
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -9567,7 +9818,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 289 */
+/* 292 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/components/PostsScreen.jsx ***!
   \*******************************************************************/
@@ -9616,7 +9867,7 @@ function PostsScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (PostsScreen);
 
 /***/ }),
-/* 290 */
+/* 293 */
 /*!****************************************************!*\
   !*** ./app/screens/Blog/components/BlogScreen.jsx ***!
   \****************************************************/
@@ -9644,7 +9895,7 @@ BlogScreen.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (BlogScreen);
 
 /***/ }),
-/* 291 */
+/* 294 */
 /*!**************************************!*\
   !*** ./app/screens/Contact/index.js ***!
   \**************************************/
@@ -9657,7 +9908,7 @@ __webpack_require__.r(__webpack_exports__);
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'contact',
-  component: __webpack_require__(/*! ./components/ContactScreen */ 292).default,
+  component: __webpack_require__(/*! ./components/ContactScreen */ 295).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/ContactScreen')
@@ -9679,7 +9930,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 292 */
+/* 295 */
 /*!**********************************************************!*\
   !*** ./app/screens/Contact/components/ContactScreen.jsx ***!
   \**********************************************************/
@@ -9711,7 +9962,7 @@ function ContactScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (ContactScreen);
 
 /***/ }),
-/* 293 */
+/* 296 */
 /*!***************************************!*\
   !*** ./app/screens/NotFound/index.js ***!
   \***************************************/
@@ -9729,7 +9980,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 294 */
+/* 297 */
 /*!*************************************!*\
   !*** ./app/store/configureStore.js ***!
   \*************************************/
@@ -9738,10 +9989,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 295);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 298);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _rootReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rootReducer */ 296);
-/* harmony import */ var _middlewares__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middlewares */ 300);
+/* harmony import */ var _rootReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rootReducer */ 299);
+/* harmony import */ var _middlewares__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middlewares */ 303);
 
 
 
@@ -9758,7 +10009,7 @@ function configureStore(initialState, history) {
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
 
 /***/ }),
-/* 295 */
+/* 298 */
 /*!************************!*\
   !*** external "redux" ***!
   \************************/
@@ -9768,7 +10019,7 @@ function configureStore(initialState, history) {
 module.exports = require("redux");
 
 /***/ }),
-/* 296 */
+/* 299 */
 /*!**********************************!*\
   !*** ./app/store/rootReducer.js ***!
   \**********************************/
@@ -9795,11 +10046,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/defineProperty */ 176);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! redux */ 295);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! redux */ 298);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! connected-react-router */ 123);
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(connected_react_router__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var app_reducers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/reducers */ 297);
+/* harmony import */ var app_reducers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/reducers */ 300);
 
 
 
@@ -9825,7 +10076,7 @@ const createRootReducer = history => Object(redux__WEBPACK_IMPORTED_MODULE_9__["
 /* harmony default export */ __webpack_exports__["default"] = (createRootReducer);
 
 /***/ }),
-/* 297 */
+/* 300 */
 /*!*******************************!*\
   !*** ./app/reducers/index.js ***!
   \*******************************/
@@ -9834,14 +10085,14 @@ const createRootReducer = history => Object(redux__WEBPACK_IMPORTED_MODULE_9__["
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _collections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collections */ 298);
+/* harmony import */ var _collections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collections */ 301);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "collections", function() { return _collections__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 
 
 /***/ }),
-/* 298 */
+/* 301 */
 /*!*************************************!*\
   !*** ./app/reducers/collections.js ***!
   \*************************************/
@@ -9869,7 +10120,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/defineProperty */ 176);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! deepmerge */ 299);
+/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! deepmerge */ 302);
 /* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(deepmerge__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/actions/collections */ 232);
 
@@ -10020,7 +10271,7 @@ function collections(state = {}, {
 }
 
 /***/ }),
-/* 299 */
+/* 302 */
 /*!****************************!*\
   !*** external "deepmerge" ***!
   \****************************/
@@ -10030,7 +10281,7 @@ function collections(state = {}, {
 module.exports = require("deepmerge");
 
 /***/ }),
-/* 300 */
+/* 303 */
 /*!**********************************!*\
   !*** ./app/store/middlewares.js ***!
   \**********************************/
@@ -10039,13 +10290,13 @@ module.exports = require("deepmerge");
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 295);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 298);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ 301);
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ 304);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-promise-middleware */ 302);
+/* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-promise-middleware */ 305);
 /* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-immutable-state-invariant */ 303);
+/* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-immutable-state-invariant */ 306);
 /* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__);
 
 
@@ -10061,7 +10312,7 @@ window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__({
 /* harmony default export */ __webpack_exports__["default"] = (middlewares);
 
 /***/ }),
-/* 301 */
+/* 304 */
 /*!******************************!*\
   !*** external "redux-thunk" ***!
   \******************************/
@@ -10071,7 +10322,7 @@ window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__({
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 302 */
+/* 305 */
 /*!*******************************************!*\
   !*** external "redux-promise-middleware" ***!
   \*******************************************/
@@ -10081,7 +10332,7 @@ module.exports = require("redux-thunk");
 module.exports = require("redux-promise-middleware");
 
 /***/ }),
-/* 303 */
+/* 306 */
 /*!**************************************************!*\
   !*** external "redux-immutable-state-invariant" ***!
   \**************************************************/
@@ -10091,7 +10342,7 @@ module.exports = require("redux-promise-middleware");
 module.exports = require("redux-immutable-state-invariant");
 
 /***/ }),
-/* 304 */
+/* 307 */
 /*!**********************************!*\
   !*** ./static-build/template.js ***!
   \**********************************/
@@ -10101,11 +10352,11 @@ module.exports = require("redux-immutable-state-invariant");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return template; });
-/* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/json/stringify */ 305);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/json/stringify */ 308);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/promise */ 63);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cheerio */ 309);
+/* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cheerio */ 312);
 /* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cheerio__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -10118,7 +10369,7 @@ function template({
 }) {
   return new _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default.a((resolve, reject) => {
     try {
-      const markup = __webpack_require__(/*! !html-loader!../../dist/index.html */ 310); // eslint-disable-line
+      const markup = __webpack_require__(/*! !html-loader!../../dist/index.html */ 313); // eslint-disable-line
 
 
       const $ = cheerio__WEBPACK_IMPORTED_MODULE_2___default.a.load(markup);
@@ -10133,37 +10384,37 @@ function template({
 }
 
 /***/ }),
-/* 305 */
+/* 308 */
 /*!*******************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs3/core-js-stable/json/stringify.js ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! core-js-pure/stable/json/stringify */ 306);
+module.exports = __webpack_require__(/*! core-js-pure/stable/json/stringify */ 309);
 
 /***/ }),
-/* 306 */
+/* 309 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js-pure/stable/json/stringify.js ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parent = __webpack_require__(/*! ../../es/json/stringify */ 307);
+var parent = __webpack_require__(/*! ../../es/json/stringify */ 310);
 
 module.exports = parent;
 
 
 /***/ }),
-/* 307 */
+/* 310 */
 /*!*********************************************************!*\
   !*** ../node_modules/core-js-pure/es/json/stringify.js ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es.json.stringify */ 308);
+__webpack_require__(/*! ../../modules/es.json.stringify */ 311);
 var core = __webpack_require__(/*! ../../internals/path */ 24);
 
 if (!core.JSON) core.JSON = { stringify: JSON.stringify };
@@ -10175,7 +10426,7 @@ module.exports = function stringify(it, replacer, space) {
 
 
 /***/ }),
-/* 308 */
+/* 311 */
 /*!*****************************************************************!*\
   !*** ../node_modules/core-js-pure/modules/es.json.stringify.js ***!
   \*****************************************************************/
@@ -10217,7 +10468,7 @@ if ($stringify) {
 
 
 /***/ }),
-/* 309 */
+/* 312 */
 /*!**************************!*\
   !*** external "cheerio" ***!
   \**************************/
@@ -10227,7 +10478,7 @@ if ($stringify) {
 module.exports = require("cheerio");
 
 /***/ }),
-/* 310 */
+/* 313 */
 /*!******************************************************************!*\
   !*** ../node_modules/html-loader/dist/cjs.js!../dist/index.html ***!
   \******************************************************************/
@@ -10235,22 +10486,22 @@ module.exports = require("cheerio");
 /***/ (function(module, exports) {
 
 // Module
-var code = "<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"es_LA\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.27accdaf.css\" rel=\"stylesheet\"></head><body><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(c){function e(e){for(var r,t,n=e[0],o=e[1],a=e[2],i=0,u=[];i<n.length;i++)t=n[i],Object.prototype.hasOwnProperty.call(f,t)&&f[t]&&u.push(f[t][0]),f[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(c[r]=o[r]);for(d&&d(e);u.length;)u.shift()();return p.push.apply(p,a||[]),l()}function l(){for(var e,r=0;r<p.length;r++){for(var t=p[r],n=!0,o=1;o<t.length;o++){var a=t[o];0!==f[a]&&(n=!1)}n&&(p.splice(r--,1),e=s(s.s=t[0]))}return e}var t={},f={12:0},p=[];function s(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return c[e].call(r.exports,r,r.exports,s),r.l=!0,r.exports}s.e=function(o){var e=[],t=f[o];if(0!==t)if(t)e.push(t[2]);else{var r=new Promise(function(e,r){t=f[o]=[e,r]});e.push(t[2]=r);var n,a=document.createElement(\"script\");a.charset=\"utf-8\",a.timeout=120,s.nc&&a.setAttribute(\"nonce\",s.nc),a.src=s.p+\"static/js/chunk.\"+({1:\"data.configurar-webpack-v5\",2:\"data.fixbrand\",3:\"data.gean-marroquin\",4:\"data.la-glorieta\",5:\"data.posts\",6:\"data.ricarica-travel\",7:\"data.works\",8:\"data.yilancorp\",11:\"vendors~platform\"}[o]||o)+\".\"+{1:\"ca31cb80\",2:\"5e2a2c88\",3:\"75592af5\",4:\"42678a5a\",5:\"93d6d0a4\",6:\"8f23d340\",7:\"c8346524\",8:\"eb287387\",11:\"8dba668c\"}[o]+\".js\";var i=new Error;n=function(e){a.onerror=a.onload=null,clearTimeout(u);var r=f[o];if(0!==r){if(r){var t=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;i.message=\"Loading chunk \"+o+\" failed.\\n(\"+t+\": \"+n+\")\",i.name=\"ChunkLoadError\",i.type=t,i.request=n,r[1](i)}f[o]=void 0}};var u=setTimeout(function(){n({type:\"timeout\",target:a})},12e4);a.onerror=a.onload=n,document.head.appendChild(a)}return Promise.all(e)},s.m=c,s.c=t,s.d=function(e,r,t){s.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},s.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},s.t=function(r,e){if(1&e&&(r=s(r)),8&e)return r;if(4&e&&\"object\"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(s.r(t),Object.defineProperty(t,\"default\",{enumerable:!0,value:r}),2&e&&\"string\"!=typeof r)for(var n in r)s.d(t,n,function(e){return r[e]}.bind(null,n));return t},s.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return s.d(r,\"a\",r),r},s.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},s.p=\"/\",s.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var d=n;l()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.ef88d8b6.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.2013ca6c.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.790bf931.js\"></script></body></html>";
+var code = "<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"es_LA\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.27accdaf.css\" rel=\"stylesheet\"></head><body><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(c){function e(e){for(var r,t,n=e[0],o=e[1],a=e[2],i=0,u=[];i<n.length;i++)t=n[i],Object.prototype.hasOwnProperty.call(f,t)&&f[t]&&u.push(f[t][0]),f[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(c[r]=o[r]);for(d&&d(e);u.length;)u.shift()();return p.push.apply(p,a||[]),l()}function l(){for(var e,r=0;r<p.length;r++){for(var t=p[r],n=!0,o=1;o<t.length;o++){var a=t[o];0!==f[a]&&(n=!1)}n&&(p.splice(r--,1),e=s(s.s=t[0]))}return e}var t={},f={12:0},p=[];function s(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return c[e].call(r.exports,r,r.exports,s),r.l=!0,r.exports}s.e=function(o){var e=[],t=f[o];if(0!==t)if(t)e.push(t[2]);else{var r=new Promise(function(e,r){t=f[o]=[e,r]});e.push(t[2]=r);var n,a=document.createElement(\"script\");a.charset=\"utf-8\",a.timeout=120,s.nc&&a.setAttribute(\"nonce\",s.nc),a.src=s.p+\"static/js/chunk.\"+({1:\"data.configurar-webpack-5\",2:\"data.fixbrand\",3:\"data.gean-marroquin\",4:\"data.la-glorieta\",5:\"data.posts\",6:\"data.ricarica-travel\",7:\"data.works\",8:\"data.yilancorp\",11:\"vendors~platform\"}[o]||o)+\".\"+{1:\"245b974f\",2:\"fea30168\",3:\"ebda9b21\",4:\"7ae05e77\",5:\"7838bf78\",6:\"2fd48638\",7:\"edb8c0a4\",8:\"84263e68\",11:\"1c715125\"}[o]+\".js\";var i=new Error;n=function(e){a.onerror=a.onload=null,clearTimeout(u);var r=f[o];if(0!==r){if(r){var t=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;i.message=\"Loading chunk \"+o+\" failed.\\n(\"+t+\": \"+n+\")\",i.name=\"ChunkLoadError\",i.type=t,i.request=n,r[1](i)}f[o]=void 0}};var u=setTimeout(function(){n({type:\"timeout\",target:a})},12e4);a.onerror=a.onload=n,document.head.appendChild(a)}return Promise.all(e)},s.m=c,s.c=t,s.d=function(e,r,t){s.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},s.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},s.t=function(r,e){if(1&e&&(r=s(r)),8&e)return r;if(4&e&&\"object\"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(s.r(t),Object.defineProperty(t,\"default\",{enumerable:!0,value:r}),2&e&&\"string\"!=typeof r)for(var n in r)s.d(t,n,function(e){return r[e]}.bind(null,n));return t},s.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return s.d(r,\"a\",r),r},s.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},s.p=\"/\",s.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var d=n;l()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.492ab54d.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.d36c5d71.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.11304e7f.js\"></script></body></html>";
 // Exports
 module.exports = code;
 
 /***/ }),
-/* 311 */
-/*!*************************************************************************!*\
-  !*** ../lib/loaders/markdown.js!../data/posts/configurar-webpack-v5.md ***!
-  \*************************************************************************/
+/* 314 */
+/*!************************************************************************!*\
+  !*** ../lib/loaders/markdown.js!../data/posts/configurar-webpack-5.md ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"frontMatter":{"slug":"configurar-webpack-v5","fileName":"configurar-webpack-v5","readingTime":"☕️ 7 minutos de lectura","identifier":"blog-1","date":"09-04-2020","formattedDate":"Abril 2020","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","title":"Configurar webpack v5","description":"Configurar webpack v5.","tags":["webpack"]},"bodyHtml":"<p>Configurar webpack puede ser frustante...</p>\n<div class=\"tenor-gif-embed\" data-postid=\"5384575\" data-share-method=\"host\" data-width=\"100%\" data-aspect-ratio=\"1.7785714285714287\"><a href=\"https://tenor.com/view/fuck-work-gif-5384575\">Fuckwork Angry GIF</a> from <a href=\"https://tenor.com/search/fuckwork-gifs\">Fuckwork GIFs</a></div>\n<br>\n\n<p>Por ello en esta guia te enseñare como configurar <a href=\"https://webpack.js.org/concepts/\">webpack v5</a>, si deseas ver la configuracion final haz click <a href=\"#configuracion-final\">aqui</a> y <a href=\"https://github.com/wochap/setup-webpack-5\">aqui</a> para ir al repo.</p>\n<blockquote>\n<p>al dia de hoy (9 de abril del 2020) <a href=\"https://webpack.js.org/concepts/hot-module-replacement/\">HMR (hot module replacement)</a> no funciona con <strong>html-webpack-plugin</strong>, y tambien hay algunos plugins que no funcionaran (por el momento) ya que la API interna cambio bastante en la v5 de webpack</p>\n</blockquote>\n<h2 id=\"nuestra-meta\">Nuestra meta</h2>\n<p>Tener un solo archivo de configuracion <code>webpack.config.js</code> para <code>production</code> y <code>development</code>, configurar <a href=\"https://babeljs.io/\">babel</a> para que inserte <a href=\"https://developer.mozilla.org/es/docs/Glossary/Polyfill\">polyfills</a> y transforme nuestro codigo JS a JS que entiendan nuestros <code>target browsers</code>.</p>\n<h2 id=\"requerimientos\">Requerimientos</h2>\n<ul>\n<li>Saber lo basico de <a href=\"https://nodejs.org/\">NodeJS</a>.</li>\n</ul>\n<h2 id=\"empezemos\">Empezemos</h2>\n<h4 id=\"1-instalar-dependencias\">1. Instalar dependencias</h4>\n<p>Webpack</p>\n<ul>\n<li>webpack - v5.0.0-beta.13</li>\n<li>webpack-cli - v3.3.11 - <em>permite usar webpack en la terminal</em></li>\n<li>webpack-dev-server - v3.10.3 - <em>crea un servidor express para poder hacer uso de HMR</em></li>\n</ul>\n<p>Webpack loaders</p>\n<ul>\n<li>css-loader - v3.4.2 - <em>permite importar archivos CSS a nuestros JS</em></li>\n<li>postcss-loader - v3.0.0 - <em>permite aplicar plugins de <a href=\"https://postcss.org/\">postcss</a> a nuestros CSS</em></li>\n<li>style-loader - v1.1.3 - <em>agrega una etiqueta <code>style</code> en el DOM por cada CSS que importemos en nuestros JS</em></li>\n<li>babel-loader - v8.1.0 - <em>permite aplicar babel a todos nuestros JS</em></li>\n</ul>\n<p>Webpack plugins</p>\n<ul>\n<li>clean-webpack-plugin - v3.0.0 - <em>eliminara la carpeta dist en cada production build</em></li>\n<li>html-webpack-plugin - v4.0.4 - <em>inserta en el archivo html que le indiques todos tus imports (script, style, link, etc)</em></li>\n<li>mini-css-extract-plugin - v0.9.0 - <em>agrega una etiqueta <code>link</code> en el DOM por cada CSS que importemos en nuestros JS</em></li>\n</ul>\n<p>Babel</p>\n<ul>\n<li>@babel/core - v7.9.0</li>\n<li>@babel/plugin-transform-runtime - v7.9.0 - <em>encargado de agregar los polyfills</em></li>\n<li>@babel/preset-env - v7.9.0 - <em>encargado de transformar nuestro codigo JS a JS entendible por nuestros <code>target browsers</code></em></li>\n<li>@babel/runtime-corejs3 - v7.9.2 - <em>modulo que contiene los polyfills</em></li>\n</ul>\n<p>Postcss plugins</p>\n<ul>\n<li>autoprefixer - v9.7.5 - <em>insertara prefijos (-webkit-) segun lo requieran nuestros <code>target browsers</code></em></li>\n</ul>\n<h4 id=\"2-agregar-nuestros-tasks-en-packagejson\">2. Agregar nuestros tasks en package.json</h4>\n<p>En development, usaremos el comando <code>npm run dev</code> y para production <code>npm run build</code>.</p>\n<pre><code class=\"hljs json\">{\n  <span class=\"hljs-attr\">\"scripts\"</span>: {\n    <span class=\"hljs-attr\">\"build\"</span>: <span class=\"hljs-string\">\"webpack --mode production\"</span>, <span class=\"hljs-comment\">// corre webpack con la configuracion para production, con ello webpack sera capaz de analizar, comprimir, y quitar codigo innecesario.</span>\n    <span class=\"hljs-attr\">\"dev\"</span>: <span class=\"hljs-string\">\"webpack-dev-server --mode development\"</span> <span class=\"hljs-comment\">// para hacer uso del famoso HMR necesitamos un servidor en nodejs, webpack-dev-server lo creara por nosotros</span>\n  }\n}</code></pre>\n<h4 id=\"3-crear-nuestro-archivo-browserslistrc\">3. Crear nuestro archivo <a href=\"https://github.com/browserslist/browserslist#browserslist-\"><code>.browserslistrc</code></a></h4>\n<p>En este archivo indicamos nuestros <code>target browsers</code>, los navegadores que soportaremos. <a href=\"https://babeljs.io/docs/en/babel-preset-env\">Babel</a> y <a href=\"https://autoprefixer.github.io/\">Autoprefixer</a> usaran este archivo si lo encuentran en la raiz del proyecto.</p>\n<pre><code><span class=\"hljs-comment\"># .browserslistrc</span>\n\n<span class=\"hljs-meta\">&gt;</span> <span class=\"hljs-string\">1%</span>\n<span class=\"hljs-attr\">last</span> <span class=\"hljs-string\">2 versions</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">dead</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">IE 11</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">IE 10</span></code></pre><h4 id=\"4-crear-nuestro-archivo-babelrc\">4. Crear nuestro archivo <code>.babelrc</code></h4>\n<p>Con esto babel sera capaz de insertar polyfills y transformar JS donde se requiera segun nuestro <code>target browsers</code>.</p>\n<pre><code class=\"hljs json\">{\n  <span class=\"hljs-attr\">\"presets\"</span>: [[<span class=\"hljs-string\">\"@babel/preset-env\"</span>]],\n  <span class=\"hljs-attr\">\"plugins\"</span>: [\n    [\n      <span class=\"hljs-string\">\"@babel/plugin-transform-runtime\"</span>,\n      {\n        <span class=\"hljs-attr\">\"corejs\"</span>: <span class=\"hljs-number\">3</span>\n      }\n    ]\n  ]\n}</code></pre>\n<h4 id=\"5-crear-nuestro-archivo-postcssconfigjs\">5. Crear nuestro archivo <code>postcss.config.js</code></h4>\n<p><code>postcss-loader</code> usara esta configuracion, solo usaremos el plugin de autoprefixer.</p>\n<pre><code class=\"hljs json\">module.exports = {\n    plugins: {\n        &quot;autoprefixer&quot;: {},\n    },\n};</code></pre>\n<h4 id=\"6-crear-nuestro-archivo-webpackconfigjs\">6. Crear nuestro archivo <code>webpack.config.js</code></h4>\n<div class=\"tenor-gif-embed\" data-postid=\"10383696\" data-share-method=\"host\" data-width=\"100%\" data-aspect-ratio=\"1.7744360902255638\"><a href=\"https://tenor.com/view/ahora-si-viene-lo-chido-gif-10383696\">Ahora Si GIF</a> from <a href=\"https://tenor.com/search/ahora-gifs\">Ahora GIFs</a></div>\n<br>\n\n<p>Empezemos por importar algunos modulos, mas <a href=\"#1-instalar-dependencias\">arriba</a> explique que hace cada modulo.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> path = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'path'</span>)\n<span class=\"hljs-keyword\">const</span> webpack = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'webpack'</span>)\n<span class=\"hljs-keyword\">const</span> HtmlWebpackPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'html-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> {CleanWebpackPlugin} = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'clean-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> MiniCssExtractPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'mini-css-extract-plugin'</span>)</code></pre>\n<p>El archivo <code>webpack.config.js</code> debe exportar un objeto o una funcion devolviendo un objeto, usaremos la segunda, ya que de esta manera podremos saber si estamos en <code>development</code> o <code>production</code>.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> config = {}\n<span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> usar style-loader, es lo recomendado para usar HMR</span>\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> habilitar HMR plugin</span>\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> insertar `contenthash` en los archivos de salida, esto para tener `long term caching`</span>\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> usar MiniCssExtractPlugin, para extraer todo nuestro CSS a un archivo CSS, de lo contrario nuestro CSS quedaria en los archivos JS</span>\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<p>La configuracion en comun que tiene <code>production</code> y <code>development</code> estara en el objeto <code>config</code>.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> config = {\n  <span class=\"hljs-comment\">// el punto de entrada de nuestra APP, JS que se ejecutara en el BROWSER</span>\n  <span class=\"hljs-attr\">entry</span>: <span class=\"hljs-string\">'./src/index.js'</span>,\n  <span class=\"hljs-attr\">output</span>: {\n    <span class=\"hljs-comment\">// el nombre que le daremos al archivo de salida principal</span>\n    <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'main.js'</span>,\n\n    <span class=\"hljs-comment\">// donde se crearan los archivos de salida</span>\n    <span class=\"hljs-attr\">path</span>: path.resolve(__dirname, <span class=\"hljs-string\">'dist'</span>),\n  },\n\n  <span class=\"hljs-comment\">// configuracion para webpack-dev-server</span>\n  <span class=\"hljs-attr\">devServer</span>: {\n    <span class=\"hljs-comment\">// abrir la APP en el BROWSER</span>\n    <span class=\"hljs-attr\">open</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// HACK para permitir ver la APP desde otros dispositivos</span>\n    <span class=\"hljs-attr\">host</span>: <span class=\"hljs-string\">'0.0.0.0'</span>,\n\n    <span class=\"hljs-comment\">// ver el progreso de compilacion en la consola</span>\n    <span class=\"hljs-attr\">progress</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// esto para que todas las URLs que fallen (404) devuelvan nuestro index.html</span>\n    <span class=\"hljs-attr\">historyApiFallback</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// para que los errores en consola aparescan en un overlay en el BROWSER</span>\n    <span class=\"hljs-attr\">overlay</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// habilitar HMR</span>\n    <span class=\"hljs-attr\">hot</span>: <span class=\"hljs-literal\">true</span>,\n  },\n  <span class=\"hljs-attr\">resolve</span>: {\n    <span class=\"hljs-attr\">alias</span>: {\n      <span class=\"hljs-comment\">// un alias que apunta a la carpeta `src/components`</span>\n      <span class=\"hljs-string\">'@components'</span>: path.resolve(__dirname, <span class=\"hljs-string\">'src/components'</span>),\n    },\n  },\n  <span class=\"hljs-attr\">module</span>: {\n    <span class=\"hljs-attr\">rules</span>: [\n      {\n        <span class=\"hljs-comment\">// a que archivos afectara esta regla</span>\n        <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.js$/</span>,\n\n        <span class=\"hljs-comment\">// los loaders que apliquemos en la regla no afectaran</span>\n        <span class=\"hljs-comment\">// a archivos que coincidan con</span>\n        <span class=\"hljs-attr\">exclude</span>: <span class=\"hljs-regexp\">/(node_modules|bower_components)/</span>,\n\n        <span class=\"hljs-attr\">use</span>: {\n          <span class=\"hljs-comment\">// el nombre  del loader que usaremos</span>\n          <span class=\"hljs-attr\">loader</span>: <span class=\"hljs-string\">'babel-loader'</span>,\n          <span class=\"hljs-attr\">options</span>: {\n            <span class=\"hljs-comment\">// mejora la velocidad de compilacion</span>\n            <span class=\"hljs-comment\">// si en algun momento no se ven reflejados tus cambios</span>\n            <span class=\"hljs-comment\">// elimina la carpeta `node_modules/.cache`</span>\n            <span class=\"hljs-attr\">cacheDirectory</span>: <span class=\"hljs-literal\">true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=\"hljs-attr\">plugins</span>: [\n    <span class=\"hljs-keyword\">new</span> CleanWebpackPlugin(),\n    <span class=\"hljs-keyword\">new</span> HtmlWebpackPlugin({\n      <span class=\"hljs-comment\">// la ruta donde se encuentra nuestro index.html</span>\n      <span class=\"hljs-comment\">// para que HtmlWebpackPlugin lo use</span>\n      <span class=\"hljs-attr\">template</span>: <span class=\"hljs-string\">'src/index.html'</span>,\n    }),\n  ],\n}</code></pre>\n<p>Ahora solo falta completar nuestros TODOs</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    <span class=\"hljs-comment\">// nuestra regla para poder importar archivos CSS</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n\n      <span class=\"hljs-comment\">// el primer loader en aplicarse es el ultimo, en este caso `postcss-loader`</span>\n      <span class=\"hljs-attr\">use</span>: [<span class=\"hljs-string\">'style-loader'</span>, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-comment\">// con esto ya habilitamos HMR</span>\n      <span class=\"hljs-keyword\">new</span> webpack.HotModuleReplacementPlugin(),\n    )\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    <span class=\"hljs-comment\">// webpack reemplazara [name] con el nombre del archivo que importamos, ///</span>\n    <span class=\"hljs-comment\">// [contenthash:8] sera reemplazado por un hash de 8 digitos que cambia segun el contenido del archivo</span>\n    <span class=\"hljs-comment\">// aplicar long term caching a los archivos resultantes JS</span>\n    config.output.filename = <span class=\"hljs-string\">'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=\"hljs-string\">'static/js/chunk.[name].[contenthash:8].js'</span>\n\n    <span class=\"hljs-comment\">// nuestra regla para extraer los archivos CSSs en sus propios archivos</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [MiniCssExtractPlugin.loader, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-keyword\">new</span> MiniCssExtractPlugin({\n        <span class=\"hljs-comment\">// aplicar long term caching a los archivos resultantes CSS</span>\n        <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=\"hljs-attr\">chunkFilename</span>: <span class=\"hljs-string\">'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<p>Con esto ya tienes una configuracion bien estandar, si trabajas con vue puedes continuar <a href=\"https://vue-loader.vuejs.org/\">aqui</a>, o si trabajas con react agrega este preset <a href=\"https://babeljs.io/docs/en/babel-preset-react\">@babel/preset-react</a> a la configuracion de babel.</p>\n<h2 id=\"configuracion-final\">Configuracion final</h2>\n<pre><code class=\"hljs js\"><span class=\"hljs-comment\">// webpack.config.js</span>\n\n<span class=\"hljs-keyword\">const</span> path = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'path'</span>)\n<span class=\"hljs-keyword\">const</span> webpack = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'webpack'</span>)\n<span class=\"hljs-keyword\">const</span> HtmlWebpackPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'html-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> {CleanWebpackPlugin} = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'clean-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> MiniCssExtractPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'mini-css-extract-plugin'</span>)\n\n<span class=\"hljs-keyword\">const</span> config = {\n  <span class=\"hljs-attr\">entry</span>: <span class=\"hljs-string\">'./src/index.js'</span>,\n  <span class=\"hljs-attr\">output</span>: {\n    <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'main.js'</span>,\n    <span class=\"hljs-attr\">path</span>: path.resolve(__dirname, <span class=\"hljs-string\">'dist'</span>),\n  },\n  <span class=\"hljs-attr\">devServer</span>: {\n    <span class=\"hljs-attr\">open</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">host</span>: <span class=\"hljs-string\">'0.0.0.0'</span>,\n    <span class=\"hljs-attr\">progress</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">historyApiFallback</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">overlay</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">hot</span>: <span class=\"hljs-literal\">true</span>,\n  },\n  <span class=\"hljs-attr\">resolve</span>: {\n    <span class=\"hljs-attr\">alias</span>: {\n      <span class=\"hljs-string\">'@components'</span>: path.resolve(__dirname, <span class=\"hljs-string\">'src/components'</span>),\n    },\n  },\n  <span class=\"hljs-attr\">module</span>: {\n    <span class=\"hljs-attr\">rules</span>: [\n      {\n        <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.js$/</span>,\n        <span class=\"hljs-attr\">exclude</span>: <span class=\"hljs-regexp\">/(node_modules|bower_components)/</span>,\n        <span class=\"hljs-attr\">use</span>: {\n          <span class=\"hljs-attr\">loader</span>: <span class=\"hljs-string\">'babel-loader'</span>,\n          <span class=\"hljs-attr\">options</span>: {\n            <span class=\"hljs-attr\">cacheDirectory</span>: <span class=\"hljs-literal\">true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=\"hljs-attr\">plugins</span>: [\n    <span class=\"hljs-keyword\">new</span> CleanWebpackPlugin(),\n    <span class=\"hljs-keyword\">new</span> HtmlWebpackPlugin({\n      <span class=\"hljs-attr\">template</span>: <span class=\"hljs-string\">'src/index.html'</span>,\n    }),\n  ],\n}\n\n<span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [<span class=\"hljs-string\">'style-loader'</span>, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(<span class=\"hljs-keyword\">new</span> webpack.HotModuleReplacementPlugin())\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    config.output.filename = <span class=\"hljs-string\">'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=\"hljs-string\">'static/js/chunk.[name].[contenthash:8].js'</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [MiniCssExtractPlugin.loader, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-keyword\">new</span> MiniCssExtractPlugin({\n        <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=\"hljs-attr\">chunkFilename</span>: <span class=\"hljs-string\">'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<h2 id=\"referencias\">Referencias</h2>\n<ul>\n<li><a href=\"https://www.zzuu666.com/articles/9\">https://www.zzuu666.com/articles/9</a></li>\n<li><a href=\"https://webpack.js.org/configuration/mode/#root\">https://webpack.js.org/configuration/mode/#root</a></li>\n<li><a href=\"https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching\">https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching</a></li>\n</ul>\n"}
+module.exports = {"frontMatter":{"slug":"configurar-webpack-5","fileName":"configurar-webpack-5","readingTime":"☕️ 7 minutos de lectura","identifier":"blog-1","date":"09-04-2020","dateModified":"12-04-2020","formattedDate":"Abril 2020","imageCaption":"webpack","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","title":"Configurar webpack 5","description":"Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!","tags":["webpack","babel"]},"bodyHtml":"<p>Configurar webpack puede ser frustante...</p>\n<div class=\"tenor-gif-embed\" data-postid=\"5384575\" data-share-method=\"host\" data-width=\"100%\" data-aspect-ratio=\"1.7785714285714287\"><a href=\"https://tenor.com/view/fuck-work-gif-5384575\">Fuckwork Angry GIF</a> from <a href=\"https://tenor.com/search/fuckwork-gifs\">Fuckwork GIFs</a></div>\n<br>\n\n<p>Por ello en esta guia te enseñare como configurar <a href=\"https://webpack.js.org/concepts/\">webpack 5</a> con babel, si deseas ver la configuracion final haz click <a href=\"#configuracion-final\">aqui</a> y <a href=\"https://github.com/wochap/setup-webpack-5\">aqui</a> para ir al repo.</p>\n<blockquote>\n<p>al dia de hoy (9 de abril del 2020) <a href=\"https://webpack.js.org/concepts/hot-module-replacement/\">HMR (hot module replacement)</a> no funciona con <strong>html-webpack-plugin</strong>, y tambien hay algunos plugins que no funcionaran (por el momento) ya que la API interna cambio bastante en webpack 5</p>\n</blockquote>\n<h2 id=\"nuestra-meta\">Nuestra meta</h2>\n<p>Tener un solo archivo de configuracion <code>webpack.config.js</code> para <code>production</code> y <code>development</code>, configurar <a href=\"https://babeljs.io/\">babel</a> para que inserte <a href=\"https://developer.mozilla.org/es/docs/Glossary/Polyfill\">polyfills</a> y transforme nuestro codigo JS a JS que entiendan nuestros <code>target browsers</code>.</p>\n<h2 id=\"requerimientos\">Requerimientos</h2>\n<ul>\n<li>Saber lo basico de <a href=\"https://nodejs.org/\">NodeJS</a>.</li>\n</ul>\n<h2 id=\"empezemos\">Empezemos</h2>\n<h4 id=\"1-instalar-dependencias\">1. Instalar dependencias</h4>\n<p>Webpack</p>\n<ul>\n<li>webpack - v5.0.0-beta.13</li>\n<li>webpack-cli - v3.3.11 - <em>permite usar webpack en la terminal</em></li>\n<li>webpack-dev-server - v3.10.3 - <em>crea un servidor express para poder hacer uso de HMR</em></li>\n</ul>\n<p>Webpack loaders</p>\n<ul>\n<li>css-loader - v3.4.2 - <em>permite importar archivos CSS a nuestros JS</em></li>\n<li>postcss-loader - v3.0.0 - <em>permite aplicar plugins de <a href=\"https://postcss.org/\">postcss</a> a nuestros CSS</em></li>\n<li>style-loader - v1.1.3 - <em>agrega una etiqueta <code>style</code> en el DOM por cada CSS que importemos en nuestros JS</em></li>\n<li>babel-loader - v8.1.0 - <em>permite aplicar babel a todos nuestros JS</em></li>\n</ul>\n<p>Webpack plugins</p>\n<ul>\n<li>clean-webpack-plugin - v3.0.0 - <em>eliminara la carpeta dist en cada production build</em></li>\n<li>html-webpack-plugin - v4.0.4 - <em>inserta en el archivo html que le indiques todos tus imports (script, style, link, etc)</em></li>\n<li>mini-css-extract-plugin - v0.9.0 - <em>agrega una etiqueta <code>link</code> en el DOM por cada CSS que importemos en nuestros JS</em></li>\n</ul>\n<p>Babel</p>\n<ul>\n<li>@babel/core - v7.9.0</li>\n<li>@babel/plugin-transform-runtime - v7.9.0 - <em>encargado de agregar los polyfills</em></li>\n<li>@babel/preset-env - v7.9.0 - <em>encargado de transformar nuestro codigo JS a JS entendible por nuestros <code>target browsers</code></em></li>\n<li>@babel/runtime-corejs3 - v7.9.2 - <em>modulo que contiene los polyfills</em></li>\n</ul>\n<p>Postcss plugins</p>\n<ul>\n<li>autoprefixer - v9.7.5 - <em>insertara prefijos (-webkit-) segun lo requieran nuestros <code>target browsers</code></em></li>\n</ul>\n<h4 id=\"2-agregar-nuestros-tasks-en-packagejson\">2. Agregar nuestros tasks en package.json</h4>\n<p>En development, usaremos el comando <code>npm run dev</code> y para production <code>npm run build</code>.</p>\n<pre><code class=\"hljs json\">{\n  <span class=\"hljs-attr\">\"scripts\"</span>: {\n    <span class=\"hljs-attr\">\"build\"</span>: <span class=\"hljs-string\">\"webpack --mode production\"</span>, <span class=\"hljs-comment\">// corre webpack con la configuracion para production, con ello webpack sera capaz de analizar, comprimir, y quitar codigo innecesario.</span>\n    <span class=\"hljs-attr\">\"dev\"</span>: <span class=\"hljs-string\">\"webpack-dev-server --mode development\"</span> <span class=\"hljs-comment\">// para hacer uso del famoso HMR necesitamos un servidor en nodejs, webpack-dev-server lo creara por nosotros</span>\n  }\n}</code></pre>\n<h4 id=\"3-crear-nuestro-archivo-browserslistrc\">3. Crear nuestro archivo <a href=\"https://github.com/browserslist/browserslist#browserslist-\"><code>.browserslistrc</code></a></h4>\n<p>En este archivo indicamos nuestros <code>target browsers</code>, los navegadores que soportaremos. <a href=\"https://babeljs.io/docs/en/babel-preset-env\">Babel</a> y <a href=\"https://autoprefixer.github.io/\">Autoprefixer</a> usaran este archivo si lo encuentran en la raiz del proyecto.</p>\n<pre><code><span class=\"hljs-comment\"># .browserslistrc</span>\n\n<span class=\"hljs-meta\">&gt;</span> <span class=\"hljs-string\">1%</span>\n<span class=\"hljs-attr\">last</span> <span class=\"hljs-string\">2 versions</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">dead</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">IE 11</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">IE 10</span></code></pre><h4 id=\"4-crear-nuestro-archivo-babelrc\">4. Crear nuestro archivo <code>.babelrc</code></h4>\n<p>Con esto babel sera capaz de insertar polyfills y transformar JS donde se requiera segun nuestro <code>target browsers</code>.</p>\n<pre><code class=\"hljs json\">{\n  <span class=\"hljs-attr\">\"presets\"</span>: [[<span class=\"hljs-string\">\"@babel/preset-env\"</span>]],\n  <span class=\"hljs-attr\">\"plugins\"</span>: [\n    [\n      <span class=\"hljs-string\">\"@babel/plugin-transform-runtime\"</span>,\n      {\n        <span class=\"hljs-attr\">\"corejs\"</span>: <span class=\"hljs-number\">3</span>\n      }\n    ]\n  ]\n}</code></pre>\n<h4 id=\"5-crear-nuestro-archivo-postcssconfigjs\">5. Crear nuestro archivo <code>postcss.config.js</code></h4>\n<p><code>postcss-loader</code> usara esta configuracion, solo usaremos el plugin de autoprefixer.</p>\n<pre><code class=\"hljs json\">module.exports = {\n    plugins: {\n        &quot;autoprefixer&quot;: {},\n    },\n};</code></pre>\n<h4 id=\"6-crear-nuestro-archivo-webpackconfigjs\">6. Crear nuestro archivo <code>webpack.config.js</code></h4>\n<div class=\"tenor-gif-embed\" data-postid=\"10383696\" data-share-method=\"host\" data-width=\"100%\" data-aspect-ratio=\"1.7744360902255638\"><a href=\"https://tenor.com/view/ahora-si-viene-lo-chido-gif-10383696\">Ahora Si GIF</a> from <a href=\"https://tenor.com/search/ahora-gifs\">Ahora GIFs</a></div>\n<br>\n\n<p>Empezemos por importar algunos modulos, mas <a href=\"#1-instalar-dependencias\">arriba</a> explique que hace cada modulo.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> path = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'path'</span>)\n<span class=\"hljs-keyword\">const</span> webpack = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'webpack'</span>)\n<span class=\"hljs-keyword\">const</span> HtmlWebpackPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'html-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> {CleanWebpackPlugin} = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'clean-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> MiniCssExtractPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'mini-css-extract-plugin'</span>)</code></pre>\n<p>El archivo <code>webpack.config.js</code> debe exportar un objeto o una funcion devolviendo un objeto, usaremos la segunda, ya que de esta manera podremos saber si estamos en <code>development</code> o <code>production</code>.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> config = {}\n<span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> usar style-loader, es lo recomendado para usar HMR</span>\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> habilitar HMR plugin</span>\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> insertar `contenthash` en los archivos de salida, esto para tener `long term caching`</span>\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> usar MiniCssExtractPlugin, para extraer todo nuestro CSS a un archivo CSS, de lo contrario nuestro CSS quedaria en los archivos JS</span>\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<p>La configuracion en comun que tiene <code>production</code> y <code>development</code> estara en el objeto <code>config</code>.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> config = {\n  <span class=\"hljs-comment\">// el punto de entrada de nuestra APP, JS que se ejecutara en el BROWSER</span>\n  <span class=\"hljs-attr\">entry</span>: <span class=\"hljs-string\">'./src/index.js'</span>,\n  <span class=\"hljs-attr\">output</span>: {\n    <span class=\"hljs-comment\">// el nombre que le daremos al archivo de salida principal</span>\n    <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'main.js'</span>,\n\n    <span class=\"hljs-comment\">// donde se crearan los archivos de salida</span>\n    <span class=\"hljs-attr\">path</span>: path.resolve(__dirname, <span class=\"hljs-string\">'dist'</span>),\n  },\n\n  <span class=\"hljs-comment\">// configuracion para webpack-dev-server</span>\n  <span class=\"hljs-attr\">devServer</span>: {\n    <span class=\"hljs-comment\">// abrir la APP en el BROWSER</span>\n    <span class=\"hljs-attr\">open</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// HACK para permitir ver la APP desde otros dispositivos</span>\n    <span class=\"hljs-attr\">host</span>: <span class=\"hljs-string\">'0.0.0.0'</span>,\n\n    <span class=\"hljs-comment\">// ver el progreso de compilacion en la consola</span>\n    <span class=\"hljs-attr\">progress</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// esto para que todas las URLs que fallen (404) devuelvan nuestro index.html</span>\n    <span class=\"hljs-attr\">historyApiFallback</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// para que los errores en consola aparescan en un overlay en el BROWSER</span>\n    <span class=\"hljs-attr\">overlay</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// habilitar HMR</span>\n    <span class=\"hljs-attr\">hot</span>: <span class=\"hljs-literal\">true</span>,\n  },\n  <span class=\"hljs-attr\">resolve</span>: {\n    <span class=\"hljs-attr\">alias</span>: {\n      <span class=\"hljs-comment\">// un alias que apunta a la carpeta `src/components`</span>\n      <span class=\"hljs-string\">'@components'</span>: path.resolve(__dirname, <span class=\"hljs-string\">'src/components'</span>),\n    },\n  },\n  <span class=\"hljs-attr\">module</span>: {\n    <span class=\"hljs-attr\">rules</span>: [\n      {\n        <span class=\"hljs-comment\">// a que archivos afectara esta regla</span>\n        <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.js$/</span>,\n\n        <span class=\"hljs-comment\">// los loaders que apliquemos en la regla no afectaran</span>\n        <span class=\"hljs-comment\">// a archivos que coincidan con</span>\n        <span class=\"hljs-attr\">exclude</span>: <span class=\"hljs-regexp\">/(node_modules|bower_components)/</span>,\n\n        <span class=\"hljs-attr\">use</span>: {\n          <span class=\"hljs-comment\">// el nombre  del loader que usaremos</span>\n          <span class=\"hljs-attr\">loader</span>: <span class=\"hljs-string\">'babel-loader'</span>,\n          <span class=\"hljs-attr\">options</span>: {\n            <span class=\"hljs-comment\">// mejora la velocidad de compilacion</span>\n            <span class=\"hljs-comment\">// si en algun momento no se ven reflejados tus cambios</span>\n            <span class=\"hljs-comment\">// elimina la carpeta `node_modules/.cache`</span>\n            <span class=\"hljs-attr\">cacheDirectory</span>: <span class=\"hljs-literal\">true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=\"hljs-attr\">plugins</span>: [\n    <span class=\"hljs-keyword\">new</span> CleanWebpackPlugin(),\n    <span class=\"hljs-keyword\">new</span> HtmlWebpackPlugin({\n      <span class=\"hljs-comment\">// la ruta donde se encuentra nuestro index.html</span>\n      <span class=\"hljs-comment\">// para que HtmlWebpackPlugin lo use</span>\n      <span class=\"hljs-attr\">template</span>: <span class=\"hljs-string\">'src/index.html'</span>,\n    }),\n  ],\n}</code></pre>\n<p>Ahora solo falta completar nuestros TODOs</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    <span class=\"hljs-comment\">// nuestra regla para poder importar archivos CSS</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n\n      <span class=\"hljs-comment\">// el primer loader en aplicarse es el ultimo, en este caso `postcss-loader`</span>\n      <span class=\"hljs-attr\">use</span>: [<span class=\"hljs-string\">'style-loader'</span>, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-comment\">// con esto ya habilitamos HMR</span>\n      <span class=\"hljs-keyword\">new</span> webpack.HotModuleReplacementPlugin(),\n    )\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    <span class=\"hljs-comment\">// webpack reemplazara [name] con el nombre del archivo que importamos, ///</span>\n    <span class=\"hljs-comment\">// [contenthash:8] sera reemplazado por un hash de 8 digitos que cambia segun el contenido del archivo</span>\n    <span class=\"hljs-comment\">// aplicar long term caching a los archivos resultantes JS</span>\n    config.output.filename = <span class=\"hljs-string\">'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=\"hljs-string\">'static/js/chunk.[name].[contenthash:8].js'</span>\n\n    <span class=\"hljs-comment\">// nuestra regla para extraer los archivos CSSs en sus propios archivos</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [MiniCssExtractPlugin.loader, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-keyword\">new</span> MiniCssExtractPlugin({\n        <span class=\"hljs-comment\">// aplicar long term caching a los archivos resultantes CSS</span>\n        <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=\"hljs-attr\">chunkFilename</span>: <span class=\"hljs-string\">'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<p>Con esto ya tienes una configuracion bien estandar, si trabajas con vue puedes continuar <a href=\"https://vue-loader.vuejs.org/\">aqui</a>, o si trabajas con react agrega este preset <a href=\"https://babeljs.io/docs/en/babel-preset-react\">@babel/preset-react</a> a la configuracion de babel.</p>\n<h2 id=\"configuracion-final\">Configuracion final</h2>\n<pre><code class=\"hljs js\"><span class=\"hljs-comment\">// webpack.config.js</span>\n\n<span class=\"hljs-keyword\">const</span> path = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'path'</span>)\n<span class=\"hljs-keyword\">const</span> webpack = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'webpack'</span>)\n<span class=\"hljs-keyword\">const</span> HtmlWebpackPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'html-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> {CleanWebpackPlugin} = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'clean-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> MiniCssExtractPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'mini-css-extract-plugin'</span>)\n\n<span class=\"hljs-keyword\">const</span> config = {\n  <span class=\"hljs-attr\">entry</span>: <span class=\"hljs-string\">'./src/index.js'</span>,\n  <span class=\"hljs-attr\">output</span>: {\n    <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'main.js'</span>,\n    <span class=\"hljs-attr\">path</span>: path.resolve(__dirname, <span class=\"hljs-string\">'dist'</span>),\n  },\n  <span class=\"hljs-attr\">devServer</span>: {\n    <span class=\"hljs-attr\">open</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">host</span>: <span class=\"hljs-string\">'0.0.0.0'</span>,\n    <span class=\"hljs-attr\">progress</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">historyApiFallback</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">overlay</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">hot</span>: <span class=\"hljs-literal\">true</span>,\n  },\n  <span class=\"hljs-attr\">resolve</span>: {\n    <span class=\"hljs-attr\">alias</span>: {\n      <span class=\"hljs-string\">'@components'</span>: path.resolve(__dirname, <span class=\"hljs-string\">'src/components'</span>),\n    },\n  },\n  <span class=\"hljs-attr\">module</span>: {\n    <span class=\"hljs-attr\">rules</span>: [\n      {\n        <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.js$/</span>,\n        <span class=\"hljs-attr\">exclude</span>: <span class=\"hljs-regexp\">/(node_modules|bower_components)/</span>,\n        <span class=\"hljs-attr\">use</span>: {\n          <span class=\"hljs-attr\">loader</span>: <span class=\"hljs-string\">'babel-loader'</span>,\n          <span class=\"hljs-attr\">options</span>: {\n            <span class=\"hljs-attr\">cacheDirectory</span>: <span class=\"hljs-literal\">true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=\"hljs-attr\">plugins</span>: [\n    <span class=\"hljs-keyword\">new</span> CleanWebpackPlugin(),\n    <span class=\"hljs-keyword\">new</span> HtmlWebpackPlugin({\n      <span class=\"hljs-attr\">template</span>: <span class=\"hljs-string\">'src/index.html'</span>,\n    }),\n  ],\n}\n\n<span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [<span class=\"hljs-string\">'style-loader'</span>, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(<span class=\"hljs-keyword\">new</span> webpack.HotModuleReplacementPlugin())\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    config.output.filename = <span class=\"hljs-string\">'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=\"hljs-string\">'static/js/chunk.[name].[contenthash:8].js'</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [MiniCssExtractPlugin.loader, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-keyword\">new</span> MiniCssExtractPlugin({\n        <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=\"hljs-attr\">chunkFilename</span>: <span class=\"hljs-string\">'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<h2 id=\"referencias\">Referencias</h2>\n<ul>\n<li><a href=\"https://www.zzuu666.com/articles/9\">https://www.zzuu666.com/articles/9</a></li>\n<li><a href=\"https://webpack.js.org/configuration/mode/#root\">https://webpack.js.org/configuration/mode/#root</a></li>\n<li><a href=\"https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching\">https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching</a></li>\n</ul>\n"}
 
 /***/ }),
-/* 312 */
+/* 315 */
 /*!************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/works/fixbrand.md ***!
   \************************************************************/
@@ -10260,7 +10511,7 @@ module.exports = {"frontMatter":{"slug":"configurar-webpack-v5","fileName":"conf
 module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readingTime":"☕️ 1 minuto de lectura","date":"21-12-2015","formattedDate":"Diciembre 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/fixbrand.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070206/wochap/hero/fixbrand.jpg","title":"Fixbrand","tasks":"Desarrollo landing page y panel de administración","role":"Full-stack developer","siteLink":"http://fixbrand.com/","description":"Fixbrand es una agencia creativa de marcas que apuesta por el trabajo estratégico, creativo y sostenido en el tiempo.","tags":["Full-stack","Laravel","Jquery","Stylus","Gulp","Freelance"]},"bodyHtml":"<h2 id=\"reto\">Reto</h2>\n<p>Realizar un sitio web gestionable, con animaciones entre paginas.</p>\n<h2 id=\"solución\">Solución</h2>\n<p>Realize el panel de administracion con <a href=\"http://getbootstrap.com/\">Bootstrap</a> y  <a href=\"https://laravel.com/\">Laravel</a>, y el landing page con <a href=\"https://jquery.com\">Jquery</a>.</p>\n<h3 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h3>\n<ul>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n</ul>\n<h3 id=\"workflow\">Workflow:</h3>\n<ul>\n<li><strong>PHP:</strong> <a href=\"https://laravel.com/\">Laravel</a>.</li>\n<li><strong>HTML:</strong> <a href=\"https://laravel.com/docs/5.3/blade\">Blade</a>.</li>\n<li><strong>CSS:</strong> <a href=\"http://getbootstrap.com/\">Bootstrap</a>, <a href=\"http://stylus-lang.com/\">Stylus</a>, <a href=\"https://suitcss.github.io/\">SuitCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"https://jquery.com/\">Jquery</a>.</li>\n<li><strong>Build System:</strong> <a href=\"http://gulpjs.com/\">Gulp</a>, <a href=\"https://laravel.com/docs/5.3/elixir\">Laravel elixir</a>.</li>\n</ul>\n<h3 id=\"logros\">Logros:</h3>\n<ul>\n<li>Simular un <code>SPA</code> con <a href=\"https://jquery.com/\">Jquery</a>:</li>\n</ul>\n<div class=\"c-markdown-image-full\">\n  <img src=\"//res.cloudinary.com/wochap/image/upload/v1495070187/wochap/body/fixbrand-spa.gif\" alt=\"Portafolio del sitio web Fixbrand\">\n</div>\n\n<ul>\n<li>Desarrollar 3 <code>CRUD</code> (portafolio, contacto, clientes), tanto en el <code>Back-end</code> como en el <code>Front-end</code>.</li>\n<li>Subir una o varias imagenes al servidor haciendo uso de <code>AJAX</code>.</li>\n</ul>\n<h2 id=\"experiencia\">Experiencia</h2>\n<p>Como primer proyecto remoto, quede muy satisfecho, la experiencia de trabajar en pijamas es muy confortable aunque requiere de bastante <strong>disciplina</strong>.</p>\n"}
 
 /***/ }),
-/* 313 */
+/* 316 */
 /*!******************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/works/gean-marroquin.md ***!
   \******************************************************************/
@@ -10270,17 +10521,17 @@ module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readin
 module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroquin","readingTime":"☕️ 2 minutos de lectura","date":"12-01-2017","formattedDate":"Enero 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/gean-marroquin.png","title":"Gean Marroquin","source":"https://github.com/wochap/wochap.github.io","role":"Front-end developer","siteLink":"https://geanmarroquin.com/","description":"Mi sitio personal.","tags":["PWA","SPA","SSR","Unit testing","Offline first","Static web site","Javascript","SASS","Webpack","Personal"]},"bodyHtml":"<p>¿Cual es la mejor manera de aprender algo? poniendolo en practica, es por eso que me propuse a crear algo que me permitiera demostrar mis habilidades y a la vez practicar lo aprendido. Entre las cosas que queria demostrar:</p>\n<ul>\n<li><a href=\"https://www.youtube.com/watch?v=IIRj8DftkqE\">Offline first</a>.</li>\n<li><a href=\"https://www.youtube.com/watch?v=QH94CXVv3UE\">Code splitting</a>.</li>\n<li>TDD.</li>\n<li>Manejo asincrono en javascript.</li>\n</ul>\n<h2 id=\"reto\">Reto</h2>\n<p>Crear mi sitio personal, sin un servidor para poder subirlo a <a href=\"https://pages.github.com/\">GH Pages</a>, y permitirme tener contenido dinamico (portafolio, blog) .</p>\n<h2 id=\"solución\">Solución</h2>\n<p>Despues de investigar, y habiendome inspirado de proyectos que ya lograban lo que me proponia:</p>\n<ul>\n<li><a href=\"https://github.com/gatsbyjs/gatsby\">Gatsby</a></li>\n<li><a href=\"https://phenomic.io/\">Phenomic</a></li>\n</ul>\n<p>Llege a la conclusion que las mejores herramientas para este trabajo eran <a href=\"https://webpack.github.io/\">Webpack</a> con <a href=\"https://facebook.github.io/react/\">React</a> o <a href=\"https://vuejs.org/\">VueJS</a>, asi que realize demos con ambos frameworks para elegir cual era el mas conveniente:</p>\n<ul>\n<li><a href=\"https://github.com/wochap/vue-static-blog\">vue-static-blog</a></li>\n<li><a href=\"https://github.com/wochap/webpack-react-static-boilerplate/tree/redux\">webpack-react-static-boilerplate</a></li>\n</ul>\n<p>Me decidi por <a href=\"https://facebook.github.io/react/\">React</a> porque no tenia un proyecto que mostrar con el, el <a href=\"https://assets.materialup.com/uploads/d8f0a829-a3ff-4174-ac7e-d8021904463b/attachment.jpg\">diseño</a> lo encontre en <a href=\"https://site.uplabs.com/\">Up Labs</a>.</p>\n<p>Con todo en orden, comenze por maquetar el diseño, luego cree las pruebas y los componentes; añadí la configuracion necesaria para pre renderizar (con <a href=\"https://github.com/markdalgleish/static-site-generator-webpack-plugin\">static-site-generator-webpack-plugin</a>) las rutas de mi aplicacion, una vez que todo funcionaba añadi <a href=\"https://github.com/reactjs/redux\">redux</a> y refactorize, y refactorize y ...ahora me encuentro añadiendo trabajos a mi portafolio y pronto articulos.</p>\n<h2 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h2>\n<ul>\n<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API\">Service worker</a></li>\n<li><a href=\"https://es.wikipedia.org/wiki/JSONP\">JSONP</a></li>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n</ul>\n<h2 id=\"workflow\">Workflow:</h2>\n<ul>\n<li><strong>CSS:</strong> <a href=\"http://stylus-lang.com/\">SASS</a>, <a href=\"http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/\">BEMIT</a>, <a href=\"http://csswizardry.net/talks/2014/11/itcss-dafed.pdf\">ITCSS</a>, <a href=\"https://github.com/wocss\">WOCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"https://facebook.github.io/react/\">React</a> + <a href=\"https://github.com/ReactTraining/react-router\">React router v3</a> + <a href=\"http://redux.js.org/\">Redux</a>, <a href=\"http://www.2ality.com/2016/02/ecmascript-2017.html\">ES2017</a>, <a href=\"http://eslint.org/\">ESLint</a>, <a href=\"https://facebook.github.io/jest/\">Jest</a> + <a href=\"https://github.com/airbnb/enzyme\">Enzyme</a>, <a href=\"https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346\">by Route hierarchy</a>.</li>\n<li><strong>Build System:</strong> <a href=\"https://webpack.github.io/\">Webpack</a> + <a href=\"https://babeljs.io/\">Babel</a> + <a href=\"https://github.com/wochap/wochap.github.io/tree/dev/build/webpack/loaders\">custom-loaders</a> + <a href=\"https://github.com/GoogleChrome/sw-precache\">sw-precache</a>.</li>\n</ul>\n<h2 id=\"logros\">Logros:</h2>\n<ul>\n<li>Crear loaders propios en <a href=\"https://webpack.github.io/\">Webpack</a>.</li>\n<li><strong>Optimistic updates</strong>.</li>\n<li>El sitio no necesita cargar los scripts para que puedas navegar por el, gracias a que todas las paginas son generadas por <a href=\"https://webpack.github.io/\">Webpack</a> y <a href=\"https://facebook.github.io/react/\">React</a>.</li>\n</ul>\n"}
 
 /***/ }),
-/* 314 */
+/* 317 */
 /*!***************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/works/la-glorieta.md ***!
   \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","readingTime":"☕️ 2 minutos de lectura","date":"26-08-2015","formattedDate":"Agosto 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/la-glorieta.jpg","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070204/wochap/hero/la-glorieta.jpg","title":"La Glorieta","tasks":"Desarrollo de landing page","role":"Front-end developer","siteLink":"http://cmsreservas.noveltie.la","description":"La Glorieta es un restaurant representante de la culinaria tacneña en múltiples eventos y concursos.","tags":["Front-end","KnockoutJS","Jquery","Stylus","Laravel","Gulp","Noveltie"]},"bodyHtml":"<h2 id=\"reto\">Reto</h2>\n<p>Un sitio web que permitiera a sus clientes realizar reservas online, ademas de mostrar información de la misma, sus noticias y información de contacto.</p>\n<h2 id=\"solución\">Solución</h2>\n<p>Como el sitio requeria de mucha manipulacion del <code>DOM</code>, aprendí y desarrolle el sitio con  <a href=\"knockoutjs.com\">KnockoutJS</a> y <a href=\"http://sammyjs.org/\">SammyJS</a> para manejar las rutas del catalogo.</p>\n<h2 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h2>\n<ul>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage\">BROWSER LocalStorage</a></li>\n</ul>\n<h2 id=\"workflow\">Workflow:</h2>\n<ul>\n<li><strong>HTML:</strong> <a href=\"https://laravel.com/docs/5.3/blade\">Blade</a>.</li>\n<li><strong>CSS:</strong> <a href=\"http://stylus-lang.com/\">Stylus</a>, <a href=\"https://suitcss.github.io/\">SuitCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"http://knockoutjs.com/\">KnockoutJS</a> + <a href=\"https://jquery.com/\">Jquery</a>, <a href=\"https://babeljs.io/learn-es2015/\">ES2015</a>.</li>\n<li><strong>Build System:</strong> <a href=\"http://gulpjs.com/\">Gulp</a>, <a href=\"https://laravel.com/docs/5.3/elixir\">Laravel elixir</a>, <a href=\"http://browserify.org/\">Browserify</a>, <a href=\"https://babeljs.io/\">Babel</a>.</li>\n</ul>\n<h2 id=\"logros\">Logros:</h2>\n<ul>\n<li>Desarrollar un carrito de compras con persistencia de datos, .</li>\n</ul>\n<p><img src=\"//res.cloudinary.com/wochap/image/upload/v1495070180/wochap/body/glorieta-carrito.jpg\" alt=\"Carrito de compras del sitio web La Glorieta\"></p>\n<ul>\n<li>Desarrollar un catalogo de items, con categorias, sub categorias, ademas de <strong>paginación</strong>, y <strong>busqueda</strong>. Los datos son consumidos por <code>AJAX</code>.</li>\n</ul>\n<div class=\"c-markdown-image-full\">\n  <img src=\"//res.cloudinary.com/wochap/image/upload/v1495070190/wochap/body/glorieta-catalogo.jpg\" alt=\"Catalogo de item del sitio web La Glorieta\">\n</div>\n\n<ul>\n<li>Implementar calculos y actualizaciones del DOM complejas, un claro <strong>ejemplo</strong> es el formulario de proforma, en cada seccion la suma de cantidades debe ser igual al <code>numero de personas</code>.</li>\n</ul>\n<p><img src=\"//res.cloudinary.com/wochap/image/upload/v1495070186/wochap/body/glorieta-reserva.gif\" alt=\"Formulario de reserva del sitio web La Glorieta\"></p>\n<ul>\n<li>Aprender <a href=\"http://knockoutjs.com/\">KnockoutJS</a>.</li>\n</ul>\n<h2 id=\"experiencia\">Experiencia</h2>\n<p><strong>La Glorieta</strong> es el primer <strong>proyecto real</strong> (es decir ser usado por personas) que desarrollé, y no fue facil, cuando empeze el proyecto mis conocimientos llegaban a solo poder maquetar, pero al termino del mismo acabe aprendiendo <a href=\"http://knockoutjs.com/\">KnockoutJS</a>, aplique <code>POO</code> y entendi como funcionaba el <code>data-binding</code>.</p>\n<p>Una de las mejores cosas al desarrollar el sitio, fue que como primer <code>Front-end developer</code> en <a href=\"https://noveltie.la/\">Noveltie</a> me confiaron todo el desarrollo <code>Front-end</code>.</p>\n"}
+module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","readingTime":"☕️ 2 minutos de lectura","date":"26-08-2015","formattedDate":"Agosto 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/la-glorieta.jpg","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070204/wochap/hero/la-glorieta.jpg","title":"La Glorieta","tasks":"Desarrollo de landing page","role":"Front-end developer","siteLink":"http://cmsreservas.noveltie.la","description":"La Glorieta es un restaurant representante de la culinaria tacneña en múltiples eventos y concursos.","tags":["Front-end","KnockoutJS","Jquery","Stylus","Laravel","Gulp","Noveltie"]},"bodyHtml":"<h2 id=\"reto\">Reto</h2>\n<p>Un sitio web que permitiera a sus clientes realizar reservas online, ademas de mostrar información de la misma, sus noticias y información de contacto.</p>\n<h2 id=\"solución\">Solución</h2>\n<p>Como el sitio requeria de mucha manipulacion del <code>DOM</code>, aprendí y desarrolle el sitio con  <a href=\"https://knockoutjs.com/\">KnockoutJS</a> y <a href=\"http://sammyjs.org/\">SammyJS</a> para manejar las rutas del catalogo.</p>\n<h2 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h2>\n<ul>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage\">BROWSER LocalStorage</a></li>\n</ul>\n<h2 id=\"workflow\">Workflow:</h2>\n<ul>\n<li><strong>HTML:</strong> <a href=\"https://laravel.com/docs/5.3/blade\">Blade</a>.</li>\n<li><strong>CSS:</strong> <a href=\"http://stylus-lang.com/\">Stylus</a>, <a href=\"https://suitcss.github.io/\">SuitCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"http://knockoutjs.com/\">KnockoutJS</a> + <a href=\"https://jquery.com/\">Jquery</a>, <a href=\"https://babeljs.io/learn-es2015/\">ES2015</a>.</li>\n<li><strong>Build System:</strong> <a href=\"http://gulpjs.com/\">Gulp</a>, <a href=\"https://laravel.com/docs/5.3/elixir\">Laravel elixir</a>, <a href=\"http://browserify.org/\">Browserify</a>, <a href=\"https://babeljs.io/\">Babel</a>.</li>\n</ul>\n<h2 id=\"logros\">Logros:</h2>\n<ul>\n<li>Desarrollar un carrito de compras con persistencia de datos, .</li>\n</ul>\n<p><img src=\"//res.cloudinary.com/wochap/image/upload/v1495070180/wochap/body/glorieta-carrito.jpg\" alt=\"Carrito de compras del sitio web La Glorieta\"></p>\n<ul>\n<li>Desarrollar un catalogo de items, con categorias, sub categorias, ademas de <strong>paginación</strong>, y <strong>busqueda</strong>. Los datos son consumidos por <code>AJAX</code>.</li>\n</ul>\n<div class=\"c-markdown-image-full\">\n  <img src=\"//res.cloudinary.com/wochap/image/upload/v1495070190/wochap/body/glorieta-catalogo.jpg\" alt=\"Catalogo de item del sitio web La Glorieta\">\n</div>\n\n<ul>\n<li>Implementar calculos y actualizaciones del DOM complejas, un claro <strong>ejemplo</strong> es el formulario de proforma, en cada seccion la suma de cantidades debe ser igual al <code>numero de personas</code>.</li>\n</ul>\n<p><img src=\"//res.cloudinary.com/wochap/image/upload/v1495070186/wochap/body/glorieta-reserva.gif\" alt=\"Formulario de reserva del sitio web La Glorieta\"></p>\n<ul>\n<li>Aprender <a href=\"http://knockoutjs.com/\">KnockoutJS</a>.</li>\n</ul>\n<h2 id=\"experiencia\">Experiencia</h2>\n<p><strong>La Glorieta</strong> es el primer <strong>proyecto real</strong> (es decir ser usado por personas) que desarrollé, y no fue facil, cuando empeze el proyecto mis conocimientos llegaban a solo poder maquetar, pero al termino del mismo acabe aprendiendo <a href=\"http://knockoutjs.com/\">KnockoutJS</a>, aplique <code>POO</code> y entendi como funcionaba el <code>data-binding</code>.</p>\n<p>Una de las mejores cosas al desarrollar el sitio, fue que como primer <code>Front-end developer</code> en <a href=\"https://noveltie.la/\">Noveltie</a> me confiaron todo el desarrollo <code>Front-end</code>.</p>\n"}
 
 /***/ }),
-/* 315 */
+/* 318 */
 /*!*******************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/works/ricarica-travel.md ***!
   \*******************************************************************/
@@ -10290,7 +10541,7 @@ module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","
 module.exports = {"frontMatter":{"slug":"ricarica-travel","fileName":"ricarica-travel","readingTime":"☕️ 2 minutos de lectura","date":"19-05-2016","formattedDate":"Mayo 2016","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/ricarica-travel.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070205/wochap/hero/ricarica-travel.jpg","title":"RicaRica Travel","role":"Front-end developer","siteLink":"http://ricaricatravel.com/","description":"RicaRica Travel es una agencia de turismo.","tags":["SPA","i18n","Front-end","VueJS","Jquery","SASS","Laravel","Webpack","Noveltie"]},"bodyHtml":"<h2 id=\"reto\">Reto</h2>\n<p>Desarrollar un <strong>SPA</strong> con <strong>i18n</strong>, <strong>carrito de compras</strong> y <strong>pasarela de pago</strong>.</p>\n<h2 id=\"solución\">Solución</h2>\n<p><strong>RicaRica Travel</strong> (agencia de turismo) fue uno de los proyectos mas complejos (tanto el diseño como la funcionalidad) que me haya tocado realizar. El desarrollo se hizo bajo un marco de trabajo agil: <strong>Scrum</strong>.</p>\n<p>Ya que el sitio requeria de mucha manipulacion del <code>DOM</code>, trabaje con <a href=\"https://vuejs.org/\">VueJS</a>. Para manejar los datos del carrito y formularios añadí <a href=\"https://github.com/vuejs/vuex\">Vuex</a> y <a href=\"https://github.com/vuejs/vue-router\">vue-router</a> para manejar las rutas.</p>\n<h3 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h3>\n<ul>\n<li><a href=\"https://developer.mozilla.org/es/docs/Web/API/Fetch_API\">Fetch</a></li>\n<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage\">LocalStorage</a></li>\n<li><a href=\"https://developer.mozilla.org/es/docs/Web/CSS/Transiciones_de_CSS\">CSS Transitions</a></li>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n</ul>\n<h3 id=\"workflow\">Workflow:</h3>\n<ul>\n<li><strong>CSS:</strong> <a href=\"http://stylus-lang.com/\">SASS</a>, <a href=\"http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/\">BEMIT</a>, <a href=\"http://csswizardry.net/talks/2014/11/itcss-dafed.pdf\">ITCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"https://vuejs.org/\">VueJS</a> + <a href=\"https://github.com/vuejs/vue-router\">vue-router</a> + <a href=\"https://github.com/vuejs/vuex/\">vuex</a>, <a href=\"https://jquery.com/\">Jquery</a>, <a href=\"https://babeljs.io/learn-es2015/\">ES2015</a>, <a href=\"http://eslint.org/\">ESLint</a>, <a href=\"https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346\">by Route hierarchy</a>.</li>\n<li><strong>Build System:</strong> <a href=\"https://webpack.github.io/\">Webpack</a> + <a href=\"https://babeljs.io/\">Babel</a>.</li>\n</ul>\n<h3 id=\"logros\">Logros:</h3>\n<ul>\n<li>Implementar <code>I18n</code> (internacionalización), mi primer proyecto multi idioma, logrado con <a href=\"https://github.com/vuejs/vuex/\">vuex</a>.</li>\n</ul>\n<p><img src=\"//res.cloudinary.com/wochap/image/upload/v1495070196/wochap/body/ricarica-travel-i18n.gif\" alt=\"RicaRica Travel i18n demo\"></p>\n<ul>\n<li>Crear un <code>SPA</code> (Single Page Application), hecho con <a href=\"https://github.com/vuejs/vue-router\">vue-router</a>, las animaciones fueron hechas con <a href=\"http://v1.vuejs.org/guide/transitions.html#CSS-Transitions\">CSS-Transitions</a>.</li>\n</ul>\n<p><img src=\"//res.cloudinary.com/wochap/image/upload/v1495070194/wochap/body/ricarica-travel-spa.gif\" alt=\"RicaRica Travel spa demo\"></p>\n<ul>\n<li>Pasarela de pagos.</li>\n</ul>\n<div class=\"c-markdown-image-full\">\n  <img src=\"//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/ricarica-travel-payment.jpg\" alt=\"RicaRica Travel pasarela de pago\">\n</div>\n\n<ul>\n<li>Aprender <a href=\"https://vuejs.org/\">VueJS</a>.</li>\n</ul>\n<h2 id=\"experiencia\">Experiencia</h2>\n<p>Otro proyecto con grandes desafios, y una vez más... la complejidad de la aplicación me llevo a reemplazar <a href=\"http://knockoutjs.com/\">KnockoutJS</a> (framework actual que usaba), por uno mucho mas robusto: <a href=\"https://vuejs.org/\">VueJS</a> (luego de revisar <a href=\"https://facebook.github.io/react/\">React</a> y  <a href=\"http://aurelia.io/\">Aurelia</a>).</p>\n<p>Me decidi por <a href=\"https://vuejs.org/\">VueJS</a> ya que su curva de aprendizaje era bastante corta, llevaba todo lo que requeria, y ademas contaba con lo mejor de cada framework antes mencionados: <strong>componentes</strong>, <strong>directivas</strong>, <strong>data-binding</strong>.</p>\n"}
 
 /***/ }),
-/* 316 */
+/* 319 */
 /*!*************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/works/yilancorp.md ***!
   \*************************************************************/
@@ -10300,7 +10551,7 @@ module.exports = {"frontMatter":{"slug":"ricarica-travel","fileName":"ricarica-t
 module.exports = {"frontMatter":{"slug":"yilancorp","fileName":"yilancorp","readingTime":"☕️ 1 minuto de lectura","date":"10-01-2017","formattedDate":"Enero 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/yilancorp.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070203/wochap/hero/yilancorp.jpg","title":"Yilancorp","tasks":"Desarrollo de landing page.","role":"Front-end developer","siteLink":"http://yilancorp.com/","description":"Yilancorp es una empresa que ofrece productos y servicios: inpeccion de mercaderías, contizaciones y verificacion de fabricas.","tags":["Front-end","Jquery","SASS","Webpack","Freelance"]},"bodyHtml":"<h2 id=\"resumen\">Resumen</h2>\n<p>Gracias a la experiencia con anteriores proyectos, fue facil desarrollar el sitio, haciendo uso de mi framework personal <a href=\"https://github.com/wocss\">wocss</a> (inspirado en <a href=\"https://github.com/inuitcss\">InuitCSS</a>) y <a href=\"https://jquery.com/\">Jquery</a>, para las animaciones use <a href=\"http://velocityjs.org/\">VelocityJS</a>, tambien hize uso de <a href=\"http://materializecss.com/scrollspy.html\">Scrollspy</a> (modulo de <a href=\"http://materializecss.com/\">MaterializeCSS</a>), tuve que modificarlo para que funcionara con un diferente <code>scroll container</code>.</p>\n<h2 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h2>\n<ul>\n<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API\">Service worker</a></li>\n<li><a href=\"https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS\">CSS Animations</a></li>\n<li><a href=\"https://es.wikipedia.org/wiki/JSONP\">JSONP</a></li>\n</ul>\n<div class=\"c-markdown-image-full\">\n  <img src=\"//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/yilancorp-services.gif\" alt=\"JSONP demo\">\n</div>\n\n<ul>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n</ul>\n<h2 id=\"workflow\">Workflow:</h2>\n<ul>\n<li><strong>CSS:</strong> <a href=\"http://stylus-lang.com/\">SASS</a>, <a href=\"http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/\">BEMIT</a>, <a href=\"http://csswizardry.net/talks/2014/11/itcss-dafed.pdf\">ITCSS</a>, <a href=\"https://github.com/wocss\">WOCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"https://jquery.com/\">Jquery</a>, <a href=\"https://babeljs.io/learn-es2015/\">ES2015</a>, <a href=\"http://eslint.org/\">ESLint</a>.</li>\n<li><strong>Build System:</strong> <a href=\"https://webpack.github.io/\">Webpack</a> + <a href=\"https://babeljs.io/\">Babel</a> + <a href=\"https://github.com/wochap/wochap.github.io/tree/dev/build/webpack/loaders\">custom-loaders</a>.</li>\n</ul>\n<h2 id=\"logros\">Logros:</h2>\n<ul>\n<li>Personalizar el plugin <a href=\"http://materializecss.com/scrollspy.html\">Scrollspy</a> de <a href=\"http://materializecss.com/\">MaterializeCSS</a>, para que funcionase con un diferente <code>scroll container</code>.</li>\n<li><code>Fancy animations</code>.</li>\n</ul>\n"}
 
 /***/ }),
-/* 317 */
+/* 320 */
 /*!****************************************************************!*\
   !*** ../data/posts sync !../lib/loaders/front-matter.js \.md$ ***!
   \****************************************************************/
@@ -10308,7 +10559,7 @@ module.exports = {"frontMatter":{"slug":"yilancorp","fileName":"yilancorp","read
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./configurar-webpack-v5.md": 318
+	"./configurar-webpack-5.md": 321
 };
 
 
@@ -10329,20 +10580,20 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 317;
+webpackContext.id = 320;
 
 /***/ }),
-/* 318 */
-/*!*****************************************************************************!*\
-  !*** ../lib/loaders/front-matter.js!../data/posts/configurar-webpack-v5.md ***!
-  \*****************************************************************************/
+/* 321 */
+/*!****************************************************************************!*\
+  !*** ../lib/loaders/front-matter.js!../data/posts/configurar-webpack-5.md ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"frontMatter":{"slug":"configurar-webpack-v5","fileName":"configurar-webpack-v5","readingTime":"☕️ 7 minutos de lectura","identifier":"blog-1","date":"09-04-2020","formattedDate":"Abril 2020","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","title":"Configurar webpack v5","description":"Configurar webpack v5.","tags":["webpack"]}}
+module.exports = {"frontMatter":{"slug":"configurar-webpack-5","fileName":"configurar-webpack-5","readingTime":"☕️ 7 minutos de lectura","identifier":"blog-1","date":"09-04-2020","dateModified":"12-04-2020","formattedDate":"Abril 2020","imageCaption":"webpack","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","title":"Configurar webpack 5","description":"Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!","tags":["webpack","babel"]}}
 
 /***/ }),
-/* 319 */
+/* 322 */
 /*!****************************************************************!*\
   !*** ../data/works sync !../lib/loaders/front-matter.js \.md$ ***!
   \****************************************************************/
@@ -10350,11 +10601,11 @@ module.exports = {"frontMatter":{"slug":"configurar-webpack-v5","fileName":"conf
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./fixbrand.md": 320,
-	"./gean-marroquin.md": 321,
-	"./la-glorieta.md": 322,
-	"./ricarica-travel.md": 323,
-	"./yilancorp.md": 324
+	"./fixbrand.md": 323,
+	"./gean-marroquin.md": 324,
+	"./la-glorieta.md": 325,
+	"./ricarica-travel.md": 326,
+	"./yilancorp.md": 327
 };
 
 
@@ -10375,10 +10626,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 319;
+webpackContext.id = 322;
 
 /***/ }),
-/* 320 */
+/* 323 */
 /*!****************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/fixbrand.md ***!
   \****************************************************************/
@@ -10388,7 +10639,7 @@ webpackContext.id = 319;
 module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readingTime":"☕️ 1 minuto de lectura","date":"21-12-2015","formattedDate":"Diciembre 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/fixbrand.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070206/wochap/hero/fixbrand.jpg","title":"Fixbrand","tasks":"Desarrollo landing page y panel de administración","role":"Full-stack developer","siteLink":"http://fixbrand.com/","description":"Fixbrand es una agencia creativa de marcas que apuesta por el trabajo estratégico, creativo y sostenido en el tiempo.","tags":["Full-stack","Laravel","Jquery","Stylus","Gulp","Freelance"]}}
 
 /***/ }),
-/* 321 */
+/* 324 */
 /*!**********************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/gean-marroquin.md ***!
   \**********************************************************************/
@@ -10398,7 +10649,7 @@ module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readin
 module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroquin","readingTime":"☕️ 2 minutos de lectura","date":"12-01-2017","formattedDate":"Enero 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/gean-marroquin.png","title":"Gean Marroquin","source":"https://github.com/wochap/wochap.github.io","role":"Front-end developer","siteLink":"https://geanmarroquin.com/","description":"Mi sitio personal.","tags":["PWA","SPA","SSR","Unit testing","Offline first","Static web site","Javascript","SASS","Webpack","Personal"]}}
 
 /***/ }),
-/* 322 */
+/* 325 */
 /*!*******************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/la-glorieta.md ***!
   \*******************************************************************/
@@ -10408,7 +10659,7 @@ module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroq
 module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","readingTime":"☕️ 2 minutos de lectura","date":"26-08-2015","formattedDate":"Agosto 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/la-glorieta.jpg","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070204/wochap/hero/la-glorieta.jpg","title":"La Glorieta","tasks":"Desarrollo de landing page","role":"Front-end developer","siteLink":"http://cmsreservas.noveltie.la","description":"La Glorieta es un restaurant representante de la culinaria tacneña en múltiples eventos y concursos.","tags":["Front-end","KnockoutJS","Jquery","Stylus","Laravel","Gulp","Noveltie"]}}
 
 /***/ }),
-/* 323 */
+/* 326 */
 /*!***********************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/ricarica-travel.md ***!
   \***********************************************************************/
@@ -10418,7 +10669,7 @@ module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","
 module.exports = {"frontMatter":{"slug":"ricarica-travel","fileName":"ricarica-travel","readingTime":"☕️ 2 minutos de lectura","date":"19-05-2016","formattedDate":"Mayo 2016","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/ricarica-travel.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070205/wochap/hero/ricarica-travel.jpg","title":"RicaRica Travel","role":"Front-end developer","siteLink":"http://ricaricatravel.com/","description":"RicaRica Travel es una agencia de turismo.","tags":["SPA","i18n","Front-end","VueJS","Jquery","SASS","Laravel","Webpack","Noveltie"]}}
 
 /***/ }),
-/* 324 */
+/* 327 */
 /*!*****************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/yilancorp.md ***!
   \*****************************************************************/
