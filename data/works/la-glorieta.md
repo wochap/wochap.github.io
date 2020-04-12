@@ -24,7 +24,7 @@ Un sitio web que permitiera a sus clientes realizar reservas online, ademas de m
 
 ## Solución
 
-Como el sitio requeria de mucha manipulacion del `DOM`, aprendí y desarrolle el sitio con  [KnockoutJS](knockoutjs.com) y [SammyJS](http://sammyjs.org/) para manejar las rutas del catalogo.
+Como el sitio requeria de mucha manipulacion del `DOM`, aprendí y desarrolle el sitio con  [KnockoutJS](https://knockoutjs.com/) y [SammyJS](http://sammyjs.org/) para manejar las rutas del catalogo.
 
 ## Tecnologías destacadas:
 
