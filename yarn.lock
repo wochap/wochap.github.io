@@ -11486,7 +11486,7 @@ sisteransi@^1.0.4:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
-sitemap-static@^0.4.2:
+sitemap-static@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/sitemap-static/-/sitemap-static-0.4.4.tgz#23c85a61f8e8e8956cd35f261a8e90789a42fc9c"
   integrity sha512-RP3KAqEdlkK3Qd4oyIar4PX3aygZjln4ASRITCrmEFXpBJ0wQEiB0BRxaofDGVleQsZt35MnOd68nzVZMr3n8w==
