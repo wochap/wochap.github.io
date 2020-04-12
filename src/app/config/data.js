@@ -18,29 +18,34 @@ export default {
   twitterUser: 'geanmarroquin',
   screens: {
     about: {
+      breadCrumbName: 'Sobre mi',
       title: `JS Developer | ${TITLE}`,
       description: ABOUT,
       canonicalHref: `${BASE_URL}/about`,
     },
     blog: {
+      breadCrumbName: 'Blog',
       title: `Artículos y tutoriales | ${TITLE}`,
       description: `Tutoriales sobre desarrollo de aplicaciones web y mobile.`,
       canonicalHref: `${BASE_URL}/blog`,
     },
     contact: {
+      breadCrumbName: 'Contacto',
       title: `Contacto | ${TITLE}`,
       description: ABOUT,
       canonicalHref: `${BASE_URL}/contact`,
     },
     home: {
+      breadCrumbName: 'Inicio',
       title: `Inicio | ${TITLE}`,
       description: ABOUT,
       canonicalHref: BASE_URL,
     },
     notFound: {
-      title: `Página no encontrada | ${TITLE}`,
+      title: `Página no encontrada`,
     },
     works: {
+      breadCrumbName: 'Portafolio',
       title: `Portafolio | ${TITLE}`,
       description: `Portafolio de ${TITLE}, proyectos como freelance y experimentos personales.`,
       canonicalHref: `${BASE_URL}/works`,

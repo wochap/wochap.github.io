@@ -3,6 +3,7 @@ identifier: blog-1
 date: 09-04-2020
 dateModified: 12-04-2020
 formattedDate: Abril 2020
+imageCaption: webpack
 imageUrl: //res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png
 heroImageUrl: //res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png
 title: Configurar webpack 5
