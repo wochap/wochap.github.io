@@ -13,13 +13,13 @@
     "preserveConstEnums": true,
     "removeComments": false,
     "sourceMap": true,
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "app": ["src/app"],
-      "src": ["src"],
-      "styles": ["src/styles"],
-      "lib": ["lib"],
-      "data": ["data"]
+      "app": ["app"],
+      "src": ["./"],
+      "styles": ["styles"],
+      "lib": ["../lib"],
+      "data": ["../data"]
     }
   }
 }
