@@ -59,24 +59,6 @@ class SiteHeader extends React.Component {
             </li>
             <li>
               <SiteHeaderLink
-                title='Portafolio'
-                isHome={isHome}
-                props={
-                  isHome
-                    ? {
-                        href: '#works',
-                        onClick: this._closeNav,
-                      }
-                    : {
-                        to: '/works',
-                        onClick: this._closeNav,
-                        activeClassName: 'is-active',
-                      }
-                }
-              />
-            </li>
-            <li>
-              <SiteHeaderLink
                 title='Blog'
                 isHome={isHome}
                 props={
@@ -87,6 +69,24 @@ class SiteHeader extends React.Component {
                       }
                     : {
                         to: '/blog',
+                        onClick: this._closeNav,
+                        activeClassName: 'is-active',
+                      }
+                }
+              />
+            </li>
+            <li>
+              <SiteHeaderLink
+                title='Portafolio'
+                isHome={isHome}
+                props={
+                  isHome
+                    ? {
+                        href: '#works',
+                        onClick: this._closeNav,
+                      }
+                    : {
+                        to: '/works',
                         onClick: this._closeNav,
                         activeClassName: 'is-active',
                       }
