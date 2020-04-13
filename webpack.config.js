@@ -417,9 +417,11 @@ module.exports = {
 
     ifNotSsr(new InlineManifestWebpackPlugin('webpackManifest')),
 
-    new ForkTsCheckerWebpackPlugin({
-      tsconfig: resolve(__dirname, 'tsconfig.json'),
-    }),
+    ifDevelopment(
+      new ForkTsCheckerWebpackPlugin({
+        tsconfig: resolve(__dirname, 'tsconfig.json'),
+      }),
+    ),
 
     new ProgressBarPlugin(),
   ]),
