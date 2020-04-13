@@ -1,9 +1,8 @@
 // TODO: apply i18n
 import React from 'react'
-import {BlogPosting} from 'schema-dts'
 import {JsonLd} from 'react-schemaorg'
+// @ts-ignore
 import data from 'app/config/data'
-import {articleShape} from 'app/shared/PropTypes/article'
 import {
   logo,
   person,
@@ -14,9 +13,13 @@ import {
   getCollectionItemWebPage,
   getCollectionItemBlogPosting,
   getBreadCrumList,
-} from './schema'
+} from 'app/shared/schema'
+import {CollectionItem} from 'app/shared/hoc/collection/types'
 
-function PostSchema({item}) {
+interface PostSchemaProps {
+  item: CollectionItem
+}
+function PostSchema({item}: PostSchemaProps) {
   if (!item?.state?.isFulfilled || !!item?.state?.error) {
     return null
   }
@@ -67,10 +70,8 @@ function PostSchema({item}) {
   }
 
   // TODO: add 'articleBody' schema property
-  return <JsonLd<BlogPosting> item={jsonLd} />
-}
-PostSchema.propTypes = {
-  item: articleShape.isRequired,
+  // @ts-ignore
+  return <JsonLd item={jsonLd} />
 }
 
 export default PostSchema

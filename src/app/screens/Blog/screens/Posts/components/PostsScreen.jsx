@@ -2,6 +2,7 @@ import React from 'react'
 import data from 'app/config/data'
 import ScreenHelmet from 'components/ScreenHelmet'
 import Posts from 'components/Posts'
+import PostsSchema from './PostsSchema'
 
 function PostsScreen() {
   return (
@@ -23,6 +24,7 @@ function PostsScreen() {
           <Posts />
         </div>
       </div>
+      <PostsSchema />
     </main>
   )
 }
