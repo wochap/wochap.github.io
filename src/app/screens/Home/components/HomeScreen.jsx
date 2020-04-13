@@ -28,8 +28,8 @@ function HomeScreen() {
           </div>
         </div>
       </div>
-      <Works className='u-py5' id='works' />
       <Posts className='o-wrapper u-py5 u-center' id='blog' />
+      <Works className='u-py5' id='works' />
       <SiteContact className='u-py5' id='contact' />
       <HomeSchema />
     </main>
