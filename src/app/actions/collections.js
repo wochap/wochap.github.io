@@ -46,9 +46,6 @@ export function loadItem(collectionName, fileName) {
       '.md')
   } catch (error) {
     fileRequest = Promise.reject(error)
-    if (process.env.NODE_ENV !== 'development') {
-      throw error
-    }
   }
 
   return {
@@ -79,9 +76,6 @@ export function loadCollection(collectionName) {
     filesRequest = require('lazy-dir-loader?{"documentEventName":"lazyDirLoaderFilesChange"}!data/' + collectionName + '.config.js')
   } catch (error) {
     filesRequest = Promise.reject(error)
-    if (process.env.NODE_ENV !== 'development') {
-      throw error
-    }
   }
 
   return {
