@@ -3,12 +3,15 @@ import PropTypes from 'prop-types'
 import Post from './Post'
 
 function PostsList({posts}) {
-  return posts.length === 0 ? (
+  const filteredPosts = posts.filter(item => !item.state?.error)
+  const postsCount = filteredPosts.length
+
+  return postsCount === 0 ? (
     <p>No hay artículos que mostrar.</p>
   ) : (
     <ul className='u-list-reset'>
-      {posts.map((post, index) => (
-        <li className={index === posts.length - 1 ? '' : 'u-mb4'} key={post.frontMatter.fileName}>
+      {filteredPosts.map((post, index) => (
+        <li className={index === postsCount - 1 ? '' : 'u-mb4'} key={post.frontMatter.fileName}>
           <Post post={post.frontMatter} />
         </li>
       ))}

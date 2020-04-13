@@ -35,17 +35,19 @@ function PostsSchema({collectionState, collection}: PostsSchemaProps) {
       },
     ],
   })
-  const postsSchemas = collection.map(
-    (collectionItem: CollectionItem): BlogPosting => {
-      const {frontMatter} = collectionItem
-      const blogPosting = getCollectionItemBlogPosting({
-        screenKey: 'blog',
-        parentId: blogWebPageId,
-        frontMatter,
-      })
-      return blogPosting
-    },
-  )
+  const postsSchemas = collection
+    .filter(post => !post.state?.error)
+    .map(
+      (collectionItem: CollectionItem): BlogPosting => {
+        const {frontMatter} = collectionItem
+        const blogPosting = getCollectionItemBlogPosting({
+          screenKey: 'blog',
+          parentId: blogWebPageId,
+          frontMatter,
+        })
+        return blogPosting
+      },
+    )
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
