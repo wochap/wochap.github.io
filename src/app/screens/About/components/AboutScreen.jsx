@@ -3,6 +3,7 @@ import data from 'app/config/data'
 import ExternalLink from 'components/ExternalLink'
 import ScreenHelmet from 'components/ScreenHelmet'
 import aboutData from '../config/data'
+import AboutSchema from './AboutSchema'
 
 function AboutScreen() {
   return (
@@ -83,6 +84,7 @@ function AboutScreen() {
           </ul>
         </section>
       </div>
+      <AboutSchema />
     </section>
   )
 }

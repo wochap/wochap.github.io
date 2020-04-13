@@ -1,13 +1,25 @@
 {
   "compileOnSave": false,
+  "exclude": ["node_modules"],
   "compilerOptions": {
-    "noImplicitAny": false,
+    "lib": ["DOM", "ESNext"],
+    // "allowJs": true,
+    "target": "ESNext",
+    "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
-    "module": "es2015",
+    "module": "ESNext",
     "moduleResolution": "node",
     "preserveConstEnums": true,
     "removeComments": false,
-    "sourceMap": true
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "app": ["src/app"],
+      "src": ["src"],
+      "styles": ["src/styles"],
+      "lib": ["lib"],
+      "data": ["data"]
+    }
   }
 }

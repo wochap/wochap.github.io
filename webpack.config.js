@@ -12,6 +12,7 @@ const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const {getIfUtils, removeEmpty} = require('webpack-config-utils')
 const myLocalIp = require('my-local-ip')
 const moduleAlias = require('module-alias')
@@ -303,6 +304,40 @@ module.exports = {
           minifyCSS: true,
           minifyURLs: true,
         }),
+        gtmScript: ifProduction(
+          `
+            <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-W26VS3L');</script>
+            <!-- End Google Tag Manager -->
+          `,
+          `
+            <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=y3AVD4la6JeAR7pPwjn1Vg&gtm_preview=env-3&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-W26VS3L');</script>
+            <!-- End Google Tag Manager -->
+          `,
+        ),
+        gtmNoScript: ifProduction(
+          `
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W26VS3L"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+          `,
+          `
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W26VS3L&gtm_auth=y3AVD4la6JeAR7pPwjn1Vg&gtm_preview=env-3&gtm_cookies_win=x"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+          `,
+        ),
       }),
     ),
 
@@ -381,6 +416,10 @@ module.exports = {
       : undefined,
 
     ifNotSsr(new InlineManifestWebpackPlugin('webpackManifest')),
+
+    new ForkTsCheckerWebpackPlugin({
+      tsconfig: resolve(__dirname, 'tsconfig.json'),
+    }),
 
     new ProgressBarPlugin(),
   ]),

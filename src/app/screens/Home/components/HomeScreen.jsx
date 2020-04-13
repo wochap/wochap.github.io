@@ -4,6 +4,7 @@ import ScreenHelmet from 'components/ScreenHelmet'
 import SiteContact from 'components/SiteContact'
 import Works from 'components/Works'
 import Posts from 'components/Posts'
+import HomeSchema from './HomeSchema'
 
 function HomeScreen() {
   return (
@@ -13,7 +14,6 @@ function HomeScreen() {
         description={data.screens.home.description}
         canonicalHref={data.screens.home.canonicalHref}
       />
-
       <div className='c-home-screen__hero'>
         <div className='o-wrapper u-relative'>
           <div className='c-home-screen__hero-wrapper'>
@@ -31,6 +31,7 @@ function HomeScreen() {
       <Works className='u-py5' id='works' />
       <Posts className='o-wrapper u-py5 u-center' id='blog' />
       <SiteContact className='u-py5' id='contact' />
+      <HomeSchema />
     </main>
   )
 }
