@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import * as collectionPropTypes from 'hoc/collection/PropTypes'
 import {articleShape} from 'PropTypes/article'
 import NotFoundScreen from 'app/screens/NotFound/components/NotFoundScreen'
-import SiteError from 'components/SiteError'
 import Hero from 'components/Hero'
 import MarkdownBody from 'components/MarkdownBody'
 import ScreenHelmet from 'components/ScreenHelmet'
@@ -15,11 +14,7 @@ function SiteArticle({item, itemState, collectionState, head, children}) {
     initTennor()
   })
 
-  if (itemState.error) {
-    return <SiteError title='Error' message={itemState.error} />
-  }
-
-  if (itemState.isFulfilled) {
+  if (itemState.isFulfilled && !itemState.error) {
     return (
       <article className='u-mb5 u-overflow-hidden'>
         <ScreenHelmet
@@ -35,7 +30,7 @@ function SiteArticle({item, itemState, collectionState, head, children}) {
     )
   }
 
-  if (collectionState.isFulfilled) {
+  if (collectionState.isFulfilled && !collectionState.error && !itemState.error) {
     return (
       <article className='u-mb5'>
         <Hero data={item.frontMatter} />

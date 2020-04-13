@@ -11,7 +11,7 @@ describe('SiteArticle', () => {
     item: mocks.collectionItem,
     itemState: {
       error: 'An fake error',
-      isPending: true,
+      isPending: false,
       isFulfilled: true,
     },
     collectionState: {
@@ -26,8 +26,8 @@ describe('SiteArticle', () => {
     expect(wrapper.length).toBeTruthy()
   })
 
-  it('render error component', () => {
-    expect(wrapper.find('SiteError').length).toBeTruthy()
+  it('render NotFoundScreen when error', () => {
+    expect(wrapper.find('NotFoundScreen').length).toBeTruthy()
   })
 
   it('render NotFoundScreen on init', () => {
