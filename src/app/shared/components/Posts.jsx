@@ -31,7 +31,7 @@ export function PostsComponent({collectionState, collection, className, id}) {
 
   return (
     <section className={className} id={id}>
-      <h2 className='u-center u-mb4 u-caps'>Artículos</h2>
+      <h2 className='u-center u-mb4 u-caps'>Artículos y tutoriales</h2>
       {body}
     </section>
   )

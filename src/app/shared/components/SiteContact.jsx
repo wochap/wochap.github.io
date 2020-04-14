@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import data from 'app/config/data'
 import ExternalLink from 'components/ExternalLink'
 
-function SiteContact({className, id}) {
+function SiteContact({className, id, titleTag: TitleTag = 'h2'}) {
   return (
     <section className={`o-wrapper u-center ${className}`} id={id}>
-      <h2 className='u-mb3 u-caps'>Contáctame</h2>
+      <TitleTag className='u-mb3 u-caps u-fz-h2'>Contáctame</TitleTag>
       <p className='u-mb4 u-fz-sm u-muted'>Envíame un mensaje para trabajar juntos.</p>
       <p className='u-mb5'>
         <a className='o-btn c-btn c-btn--primary' href={`mailto:${data.email}`}>
@@ -48,6 +48,7 @@ function SiteContact({className, id}) {
 SiteContact.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
+  titleTag: PropTypes.string,
 }
 
 export default SiteContact
