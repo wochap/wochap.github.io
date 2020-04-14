@@ -12,7 +12,7 @@ function PostsScreen() {
         description={data.screens.blog.description}
         canonicalHref={data.screens.blog.canonicalHref}
       />
-      <h1 className='u-hide'>Blog</h1>
+      <h1 className='u-hide'>Blog de {data.title}</h1>
       <div className='o-grid o-grid--gutter-5 u-flex-row-reverse'>
         <div className='o-grid__item u-12/12 u-4/12@laptop'>
           {/* <img className="u-bg-primary" src="http://placehold.it/150x150" alt="Gean Carlos Bonifacio Marroquin" width="150" height="150" /> */}

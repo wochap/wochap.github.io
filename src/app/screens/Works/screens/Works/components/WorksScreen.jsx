@@ -11,7 +11,7 @@ function WorksScreen() {
         description={data.screens.works.description}
         canonicalHref={data.screens.works.canonicalHref}
       />
-      <Works className='u-mb5' />
+      <Works className='u-mb5' titleTag='h1' workTitleTag='h2' />
     </main>
   )
 }

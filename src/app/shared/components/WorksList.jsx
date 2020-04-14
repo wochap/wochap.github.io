@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Work from './Work'
 
-function WorksList({works}) {
+function WorksList({works, workTitleTag}) {
   const filteredWorks = works.filter(item => !item.state?.error)
   const worksCount = filteredWorks.length
 
@@ -14,7 +14,7 @@ function WorksList({works}) {
     <ul className='o-grid o-grid--gutter-3 u-list-reset'>
       {filteredWorks.map(work => (
         <li className='o-grid__item u-12/12 u-6/12@tablet u-4/12@laptop' key={work.frontMatter.fileName}>
-          <Work work={work.frontMatter} />
+          <Work work={work.frontMatter} titleTag={workTitleTag} />
         </li>
       ))}
     </ul>
@@ -27,6 +27,7 @@ WorksList.propTypes = {
       frontMatter: Work.propTypes.work,
     }),
   ).isRequired,
+  workTitleTag: PropTypes.string,
 }
 
 export default WorksList

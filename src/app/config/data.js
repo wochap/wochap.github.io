@@ -30,8 +30,8 @@ export default {
       canonicalHref: `${BASE_URL}/blog`,
     },
     contact: {
-      breadCrumbName: 'Contacto',
-      title: `Contacto | ${TITLE}`,
+      breadCrumbName: 'Contáctame',
+      title: `Contáctame | ${TITLE}`,
       description: ABOUT,
       canonicalHref: `${BASE_URL}/contact`,
     },

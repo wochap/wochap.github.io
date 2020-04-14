@@ -11,7 +11,7 @@ function ContactScreen() {
         description={data.screens.contact.description}
         canonicalHref={data.screens.contact.canonicalHref}
       />
-      <SiteContact className='u-mb5' />
+      <SiteContact className='u-mb5' titleTag='h1' />
     </main>
   )
 }

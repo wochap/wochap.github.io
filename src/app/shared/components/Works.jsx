@@ -7,7 +7,7 @@ import ShimmerText from 'components/ShimmerText'
 import SiteError from 'components/SiteError'
 import WorksList from './WorksList'
 
-export function WorksComponent({collectionState, collection, className, id}) {
+export function WorksComponent({collectionState, collection, className, id, titleTag: TitleTag = 'h2', workTitleTag}) {
   let body
   if (collectionState.error) {
     body = <SiteError title='Ups' message={collectionState.error} />
@@ -28,12 +28,12 @@ export function WorksComponent({collectionState, collection, className, id}) {
       </ShimmerText>
     )
   } else {
-    body = <WorksList works={collection} />
+    body = <WorksList works={collection} workTitleTag={workTitleTag} />
   }
 
   return (
     <section className={`o-wrapper ${className}`} id={id}>
-      <h2 className='u-mb3 u-caps u-center'>Portafolio</h2>
+      <TitleTag className='u-mb3 u-caps u-center u-fz-h2'>Portafolio</TitleTag>
       <p className='u-mb5 u-fz-sm u-center u-muted'>Proyectos personales, freelance y como colaborador.</p>
       {body}
     </section>
@@ -45,6 +45,8 @@ WorksComponent.propTypes = {
   collection: PropTypes.arrayOf(articleShape).isRequired,
   className: PropTypes.string,
   id: PropTypes.string,
+  titleTag: PropTypes.string,
+  workTitleTag: PropTypes.string,
 }
 
 const Works = withCollection(WorksComponent, 'works')

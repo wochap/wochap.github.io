@@ -95,7 +95,7 @@ class SiteHeader extends React.Component {
             </li>
             <li>
               <SiteHeaderLink
-                title='Contacto'
+                title='Contáctame'
                 isHome={isHome}
                 props={
                   isHome
