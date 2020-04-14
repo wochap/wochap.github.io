@@ -25,6 +25,8 @@
   var icons
   if (!supportsProperty('fontFeatureSettings')) {
     icons = {
+      'sun': '&#xe919;',
+      'moon': '&#xe918;',
       'freecodecamp': '&#xe901;',
       'arrow_drop_down_circle': '&#xe900;',
       'facebook': '&#xea91;',
