@@ -1,14 +1,10 @@
 // SETTINGS
-@import "settings.global";
-@import "~wocss-settings-global";
-@import "~wocss-settings-colors";
-@import "~wocss-settings-breakpoints";
-@import "~wocss-settings-typography";
-@import "~wocss-settings-spaces";
-
-
-
-
+@import 'settings.global';
+@import '~wocss-settings-global';
+@import '~wocss-settings-colors';
+@import '~wocss-settings-breakpoints';
+@import '~wocss-settings-typography';
+@import '~wocss-settings-spaces';
 
 // TOOLS
 @import '~wocss-tools-bem-constructor';
@@ -20,67 +16,42 @@
 @import 'tools.glitch';
 @import 'tools.helpers';
 
-
-
-
-
 // GENERIC
 @import '~wocss-generic-sanitize';
 @import '~src/fonts/icomoon/style.scss';
-@import '~highlight.js/styles/atom-one-light.css';
 @import 'generic.font-blokk';
 
-
-
-
-
 // ELEMENTS
-@import "elements.page";
-@import "elements.headings";
-@import "elements.links";
-@import "elements.typography";
-
-
-
-
+@import 'elements.page';
+@import 'elements.headings';
+@import 'elements.links';
+@import 'elements.typography';
 
 // OBJECTS
-@import "~wocss-objects-wrapper";
-@import "~wocss-objects-grid";
-@import "objects.buttons";
-@import "objects.dialog";
-
-
-
-
+@import '~wocss-objects-wrapper';
+@import '~wocss-objects-grid';
+@import 'objects.buttons';
+@import 'objects.dialog';
 
 // COMPONENTS
-@import "components.app-layout";
-@import "components.site-header";
-@import "components.site-nav";
-@import "components.site-error";
-@import "components.home-screen";
-@import "components.about-screen";
-@import "components.buttons";
-@import "components.hamburger";
-@import "components.work";
-@import "components.hero";
-@import "components.markdown-body";
-@import "components.shimmer-text";
-
-
-
-
+@import 'components.app-layout';
+@import 'components.site-header';
+@import 'components.site-nav';
+@import 'components.site-error';
+@import 'components.home-screen';
+@import 'components.about-screen';
+@import 'components.buttons';
+@import 'components.hamburger';
+@import 'components.work';
+@import 'components.hero';
+@import 'components.markdown-body';
+@import 'components.shimmer-text';
 
 // UTILITIES
-@import "~wocss-utilities-basscss";
-@import "~wocss-utilities-widths";
-@import "utilities.project";
-@import "utilities.animate";
-
-
-
-
+@import '~wocss-utilities-basscss';
+@import '~wocss-utilities-widths';
+@import 'utilities.project';
+@import 'utilities.animate';
 
 // TRUMPS
-@import "trumps.shame";
+@import 'trumps.shame';
