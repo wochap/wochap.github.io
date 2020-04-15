@@ -148,9 +148,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var app_config_generateRoutes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/config/generateRoutes */ 127);
 /* harmony import */ var app_config_routes__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/config/routes */ 202);
-/* harmony import */ var app_store_configureStore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/store/configureStore */ 298);
-/* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/actions/collections */ 232);
-/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./template */ 308);
+/* harmony import */ var app_store_configureStore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/store/configureStore */ 314);
+/* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/actions/collections */ 249);
+/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./template */ 324);
 
 
 
@@ -5635,12 +5635,12 @@ module.exports = require("prop-types");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_components_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/components/App */ 203);
-/* harmony import */ var app_screens_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/screens/Home */ 215);
-/* harmony import */ var app_screens_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/screens/About */ 263);
-/* harmony import */ var app_screens_Works__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/screens/Works */ 267);
-/* harmony import */ var app_screens_Blog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/screens/Blog */ 280);
-/* harmony import */ var app_screens_Contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/Contact */ 295);
-/* harmony import */ var app_screens_NotFound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/screens/NotFound */ 297);
+/* harmony import */ var app_screens_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/screens/Home */ 232);
+/* harmony import */ var app_screens_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/screens/About */ 280);
+/* harmony import */ var app_screens_Works__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/screens/Works */ 284);
+/* harmony import */ var app_screens_Blog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/screens/Blog */ 297);
+/* harmony import */ var app_screens_Contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/Contact */ 311);
+/* harmony import */ var app_screens_NotFound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/screens/NotFound */ 313);
 
 
 
@@ -5740,7 +5740,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _SiteHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SiteHeader */ 205);
-/* harmony import */ var _SiteFooter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SiteFooter */ 214);
+/* harmony import */ var _SiteFooter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SiteFooter */ 231);
 
 
 
@@ -5788,6 +5788,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var components_SiteHeaderLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/SiteHeaderLink */ 206);
 /* harmony import */ var _Hamburger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Hamburger */ 207);
+/* harmony import */ var _ThemeToggler__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ThemeToggler */ 214);
+
 
 
 
@@ -5847,7 +5849,9 @@ class SiteHeader extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component 
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
       className: "",
       to: "/"
-    }, "Gean ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), " Marroquin")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", {
+    }, "Gean ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), " Marroquin")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "u-flex u-items-center"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", {
       className: "o-dialog c-site-nav ".concat(isNavOpen ? 'is-open' : '')
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
       className: "o-dialog__wrapper"
@@ -5889,11 +5893,13 @@ class SiteHeader extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component 
         onClick: this._closeNav,
         activeClassName: 'is-active'
       }
-    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ThemeToggler__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      className: "u-ml4"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_5__["default"], {
       className: "c-site-header__btn-toggle ".concat(isNavOpen ? 'is-active' : '', " u-hide@laptop"),
       onClick: this._toggleNav,
       isOpen: isNavOpen
-    }));
+    })));
   }
 
 }
@@ -6174,6 +6180,2354 @@ module.exports = !nativeAssign || fails(function () {
 
 /***/ }),
 /* 214 */
+/*!************************************************!*\
+  !*** ./app/shared/components/ThemeToggler.tsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/styled-base */ 215);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var gatsby_plugin_dark_mode__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-dark-mode */ 230);
+/* harmony import */ var gatsby_plugin_dark_mode__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_dark_mode__WEBPACK_IMPORTED_MODULE_2__);
+
+ // @ts-ignore
+
+
+
+const Button = Object(_emotion_styled_base__WEBPACK_IMPORTED_MODULE_0__["default"])("button", {
+  target: "eegbprv0",
+  label: "Button"
+})("cursor:pointer;font-size:2em;color:", props => props.color, ";" + ( true ? "" : undefined));
+
+function ThemeToggler({
+  className
+}) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(gatsby_plugin_dark_mode__WEBPACK_IMPORTED_MODULE_2__["ThemeToggler"], null, ({
+    theme,
+    toggleTheme
+  }) => {
+    const isLightMode = theme !== 'dark';
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
+      type: "button",
+      className: className,
+      title: isLightMode ? 'Enable Dark mode' : 'Enable Light mode',
+      color: isLightMode ? '#9eb3c6' : '#f9d401',
+      onClick: () => toggleTheme(isLightMode ? 'dark' : 'light')
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+      className: "u-icon"
+    }, isLightMode ? 'moon' : 'sun'));
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ThemeToggler);
+
+/***/ }),
+/* 215 */
+/*!********************************************************************!*\
+  !*** ../node_modules/@emotion/styled-base/dist/styled-base.esm.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 216);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/is-prop-valid */ 217);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/core */ 219);
+/* harmony import */ var _emotion_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emotion/utils */ 225);
+/* harmony import */ var _emotion_serialize__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/serialize */ 226);
+
+
+
+
+
+
+
+var testOmitPropsOnStringTag = _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_2__["default"];
+
+var testOmitPropsOnComponent = function testOmitPropsOnComponent(key) {
+  return key !== 'theme' && key !== 'innerRef';
+};
+
+var getDefaultShouldForwardProp = function getDefaultShouldForwardProp(tag) {
+  return typeof tag === 'string' && // 96 is one less than the char code
+  // for "a" so this is checking that
+  // it's a lowercase character
+  tag.charCodeAt(0) > 96 ? testOmitPropsOnStringTag : testOmitPropsOnComponent;
+};
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+var ILLEGAL_ESCAPE_SEQUENCE_ERROR = "You have illegal escape sequence in your template literal, most likely inside content's property value.\nBecause you write your CSS inside a JavaScript string you actually have to do double escaping, so for example \"content: '\\00d7';\" should become \"content: '\\\\00d7';\".\nYou can read more about this here:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences";
+var isBrowser = typeof document !== 'undefined';
+
+var createStyled = function createStyled(tag, options) {
+  if (false) {}
+
+  var identifierName;
+  var shouldForwardProp;
+  var targetClassName;
+
+  if (options !== undefined) {
+    identifierName = options.label;
+    targetClassName = options.target;
+    shouldForwardProp = tag.__emotion_forwardProp && options.shouldForwardProp ? function (propName) {
+      return tag.__emotion_forwardProp(propName) && // $FlowFixMe
+      options.shouldForwardProp(propName);
+    } : options.shouldForwardProp;
+  }
+
+  var isReal = tag.__emotion_real === tag;
+  var baseTag = isReal && tag.__emotion_base || tag;
+
+  if (typeof shouldForwardProp !== 'function' && isReal) {
+    shouldForwardProp = tag.__emotion_forwardProp;
+  }
+
+  var defaultShouldForwardProp = shouldForwardProp || getDefaultShouldForwardProp(baseTag);
+  var shouldUseAs = !defaultShouldForwardProp('as');
+  return function () {
+    var args = arguments;
+    var styles = isReal && tag.__emotion_styles !== undefined ? tag.__emotion_styles.slice(0) : [];
+
+    if (identifierName !== undefined) {
+      styles.push("label:" + identifierName + ";");
+    }
+
+    if (args[0] == null || args[0].raw === undefined) {
+      styles.push.apply(styles, args);
+    } else {
+      if (false) {}
+
+      styles.push(args[0][0]);
+      var len = args.length;
+      var i = 1;
+
+      for (; i < len; i++) {
+        if (false) {}
+
+        styles.push(args[i], args[0][i]);
+      }
+    } // $FlowFixMe: we need to cast StatelessFunctionalComponent to our PrivateStyledComponent class
+
+
+    var Styled = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["withEmotionCache"])(function (props, context, ref) {
+      return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_emotion_core__WEBPACK_IMPORTED_MODULE_3__["ThemeContext"].Consumer, null, function (theme) {
+        var finalTag = shouldUseAs && props.as || baseTag;
+        var className = '';
+        var classInterpolations = [];
+        var mergedProps = props;
+
+        if (props.theme == null) {
+          mergedProps = {};
+
+          for (var key in props) {
+            mergedProps[key] = props[key];
+          }
+
+          mergedProps.theme = theme;
+        }
+
+        if (typeof props.className === 'string') {
+          className = Object(_emotion_utils__WEBPACK_IMPORTED_MODULE_4__["getRegisteredStyles"])(context.registered, classInterpolations, props.className);
+        } else if (props.className != null) {
+          className = props.className + " ";
+        }
+
+        var serialized = Object(_emotion_serialize__WEBPACK_IMPORTED_MODULE_5__["serializeStyles"])(styles.concat(classInterpolations), context.registered, mergedProps);
+        var rules = Object(_emotion_utils__WEBPACK_IMPORTED_MODULE_4__["insertStyles"])(context, serialized, typeof finalTag === 'string');
+        className += context.key + "-" + serialized.name;
+
+        if (targetClassName !== undefined) {
+          className += " " + targetClassName;
+        }
+
+        var finalShouldForwardProp = shouldUseAs && shouldForwardProp === undefined ? getDefaultShouldForwardProp(finalTag) : defaultShouldForwardProp;
+        var newProps = {};
+
+        for (var _key in props) {
+          if (shouldUseAs && _key === 'as') continue;
+
+          if ( // $FlowFixMe
+          finalShouldForwardProp(_key)) {
+            newProps[_key] = props[_key];
+          }
+        }
+
+        newProps.className = className;
+        newProps.ref = ref || props.innerRef;
+
+        if (false) {}
+
+        var ele = Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(finalTag, newProps);
+
+        if (!isBrowser && rules !== undefined) {
+          var _ref;
+
+          var serializedNames = serialized.name;
+          var next = serialized.next;
+
+          while (next !== undefined) {
+            serializedNames += ' ' + next.name;
+            next = next.next;
+          }
+
+          return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])("style", (_ref = {}, _ref["data-emotion-" + context.key] = serializedNames, _ref.dangerouslySetInnerHTML = {
+            __html: rules
+          }, _ref.nonce = context.sheet.nonce, _ref)), ele);
+        }
+
+        return ele;
+      });
+    });
+    Styled.displayName = identifierName !== undefined ? identifierName : "Styled(" + (typeof baseTag === 'string' ? baseTag : baseTag.displayName || baseTag.name || 'Component') + ")";
+    Styled.defaultProps = tag.defaultProps;
+    Styled.__emotion_real = Styled;
+    Styled.__emotion_base = baseTag;
+    Styled.__emotion_styles = styles;
+    Styled.__emotion_forwardProp = shouldForwardProp;
+    Object.defineProperty(Styled, 'toString', {
+      value: function value() {
+        if (targetClassName === undefined && "production" !== 'production') {
+          return 'NO_COMPONENT_SELECTOR';
+        } // $FlowFixMe: coerce undefined to string
+
+
+        return "." + targetClassName;
+      }
+    });
+
+    Styled.withComponent = function (nextTag, nextOptions) {
+      return createStyled(nextTag, nextOptions !== undefined ? _objectSpread({}, options || {}, {}, nextOptions) : options).apply(void 0, styles);
+    };
+
+    return Styled;
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (createStyled);
+
+
+/***/ }),
+/* 216 */
+/*!****************************************************************!*\
+  !*** ../node_modules/@babel/runtime/helpers/defineProperty.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+module.exports = _defineProperty;
+
+/***/ }),
+/* 217 */
+/*!************************************************************************!*\
+  !*** ../node_modules/@emotion/is-prop-valid/dist/is-prop-valid.esm.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/memoize */ 218);
+
+
+var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|decoding|default|defer|dir|disabled|disablePictureInPicture|download|draggable|encType|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loading|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|inert|itemProp|itemScope|itemType|itemID|itemRef|on|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/; // https://esbench.com/bench/5bfee68a4cd7e6009ef61d23
+
+var index = Object(_emotion_memoize__WEBPACK_IMPORTED_MODULE_0__["default"])(function (prop) {
+  return reactPropsRegex.test(prop) || prop.charCodeAt(0) === 111
+  /* o */
+  && prop.charCodeAt(1) === 110
+  /* n */
+  && prop.charCodeAt(2) < 91;
+}
+/* Z+1 */
+);
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+
+/***/ }),
+/* 218 */
+/*!************************************************************!*\
+  !*** ../node_modules/@emotion/memoize/dist/memoize.esm.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function memoize(fn) {
+  var cache = {};
+  return function (arg) {
+    if (cache[arg] === undefined) cache[arg] = fn(arg);
+    return cache[arg];
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (memoize);
+
+
+/***/ }),
+/* 219 */
+/*!******************************************************!*\
+  !*** ../node_modules/@emotion/core/dist/core.esm.js ***!
+  \******************************************************/
+/*! exports provided: css, CacheProvider, ClassNames, Global, ThemeContext, jsx, keyframes, withEmotionCache */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CacheProvider", function() { return CacheProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClassNames", function() { return ClassNames; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Global", function() { return Global; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThemeContext", function() { return ThemeContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "jsx", function() { return jsx; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframes", function() { return keyframes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withEmotionCache", function() { return withEmotionCache; });
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ 220);
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _emotion_cache__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/cache */ 221);
+/* harmony import */ var _emotion_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/utils */ 225);
+/* harmony import */ var _emotion_serialize__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emotion/serialize */ 226);
+/* harmony import */ var _emotion_sheet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/sheet */ 222);
+/* harmony import */ var _emotion_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/css */ 229);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "css", function() { return _emotion_css__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
+
+
+
+
+
+
+
+
+
+var isBrowser = typeof document !== 'undefined';
+
+var EmotionCacheContext = Object(react__WEBPACK_IMPORTED_MODULE_1__["createContext"])( // we're doing this to avoid preconstruct's dead code elimination in this one case
+// because this module is primarily intended for the browser and node
+// but it's also required in react native and similar environments sometimes
+// and we could have a special build just for that
+// but this is much easier and the native packages
+// might use a different theme context in the future anyway
+typeof HTMLElement !== 'undefined' ? Object(_emotion_cache__WEBPACK_IMPORTED_MODULE_2__["default"])() : null);
+var ThemeContext = Object(react__WEBPACK_IMPORTED_MODULE_1__["createContext"])({});
+var CacheProvider = EmotionCacheContext.Provider;
+
+var withEmotionCache = function withEmotionCache(func) {
+  var render = function render(props, ref) {
+    return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(EmotionCacheContext.Consumer, null, function (cache) {
+      return func(props, cache, ref);
+    });
+  }; // $FlowFixMe
+
+
+  return Object(react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(render);
+};
+
+if (!isBrowser) {
+  var BasicProvider =
+  /*#__PURE__*/
+  function (_React$Component) {
+    _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default()(BasicProvider, _React$Component);
+
+    function BasicProvider(props, context, updater) {
+      var _this;
+
+      _this = _React$Component.call(this, props, context, updater) || this;
+      _this.state = {
+        value: Object(_emotion_cache__WEBPACK_IMPORTED_MODULE_2__["default"])()
+      };
+      return _this;
+    }
+
+    var _proto = BasicProvider.prototype;
+
+    _proto.render = function render() {
+      return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(EmotionCacheContext.Provider, this.state, this.props.children(this.state.value));
+    };
+
+    return BasicProvider;
+  }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+  withEmotionCache = function withEmotionCache(func) {
+    return function (props) {
+      return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(EmotionCacheContext.Consumer, null, function (context) {
+        if (context === null) {
+          return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(BasicProvider, null, function (newContext) {
+            return func(props, newContext);
+          });
+        } else {
+          return func(props, context);
+        }
+      });
+    };
+  };
+}
+
+// thus we only need to replace what is a valid character for JS, but not for CSS
+
+var sanitizeIdentifier = function sanitizeIdentifier(identifier) {
+  return identifier.replace(/\$/g, '-');
+};
+
+var typePropName = '__EMOTION_TYPE_PLEASE_DO_NOT_USE__';
+var labelPropName = '__EMOTION_LABEL_PLEASE_DO_NOT_USE__';
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+var render = function render(cache, props, theme, ref) {
+  var cssProp = theme === null ? props.css : props.css(theme); // so that using `css` from `emotion` and passing the result to the css prop works
+  // not passing the registered cache to serializeStyles because it would
+  // make certain babel optimisations not possible
+
+  if (typeof cssProp === 'string' && cache.registered[cssProp] !== undefined) {
+    cssProp = cache.registered[cssProp];
+  }
+
+  var type = props[typePropName];
+  var registeredStyles = [cssProp];
+  var className = '';
+
+  if (typeof props.className === 'string') {
+    className = Object(_emotion_utils__WEBPACK_IMPORTED_MODULE_3__["getRegisteredStyles"])(cache.registered, registeredStyles, props.className);
+  } else if (props.className != null) {
+    className = props.className + " ";
+  }
+
+  var serialized = Object(_emotion_serialize__WEBPACK_IMPORTED_MODULE_4__["serializeStyles"])(registeredStyles);
+
+  if (false) { var labelFromStack; }
+
+  var rules = Object(_emotion_utils__WEBPACK_IMPORTED_MODULE_3__["insertStyles"])(cache, serialized, typeof type === 'string');
+  className += cache.key + "-" + serialized.name;
+  var newProps = {};
+
+  for (var key in props) {
+    if (hasOwnProperty.call(props, key) && key !== 'css' && key !== typePropName && ( true || false)) {
+      newProps[key] = props[key];
+    }
+  }
+
+  newProps.ref = ref;
+  newProps.className = className;
+  var ele = Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(type, newProps);
+
+  if (!isBrowser && rules !== undefined) {
+    var _ref;
+
+    var serializedNames = serialized.name;
+    var next = serialized.next;
+
+    while (next !== undefined) {
+      serializedNames += ' ' + next.name;
+      next = next.next;
+    }
+
+    return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])("style", (_ref = {}, _ref["data-emotion-" + cache.key] = serializedNames, _ref.dangerouslySetInnerHTML = {
+      __html: rules
+    }, _ref.nonce = cache.sheet.nonce, _ref)), ele);
+  }
+
+  return ele;
+};
+
+var Emotion =
+/* #__PURE__ */
+withEmotionCache(function (props, cache, ref) {
+  // use Context.read for the theme when it's stable
+  if (typeof props.css === 'function') {
+    return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(ThemeContext.Consumer, null, function (theme) {
+      return render(cache, props, theme, ref);
+    });
+  }
+
+  return render(cache, props, null, ref);
+});
+
+if (false) {} // $FlowFixMe
+
+
+var jsx = function jsx(type, props) {
+  var args = arguments;
+
+  if (props == null || !hasOwnProperty.call(props, 'css')) {
+    // $FlowFixMe
+    return react__WEBPACK_IMPORTED_MODULE_1__["createElement"].apply(undefined, args);
+  }
+
+  if (false) {}
+
+  var argsLength = args.length;
+  var createElementArgArray = new Array(argsLength);
+  createElementArgArray[0] = Emotion;
+  var newProps = {};
+
+  for (var key in props) {
+    if (hasOwnProperty.call(props, key)) {
+      newProps[key] = props[key];
+    }
+  }
+
+  newProps[typePropName] = type;
+
+  if (false) { var match, error; }
+
+  createElementArgArray[1] = newProps;
+
+  for (var i = 2; i < argsLength; i++) {
+    createElementArgArray[i] = args[i];
+  } // $FlowFixMe
+
+
+  return react__WEBPACK_IMPORTED_MODULE_1__["createElement"].apply(null, createElementArgArray);
+};
+
+var warnedAboutCssPropForGlobal = false;
+var Global =
+/* #__PURE__ */
+withEmotionCache(function (props, cache) {
+  if (false) {}
+
+  var styles = props.styles;
+
+  if (typeof styles === 'function') {
+    return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(ThemeContext.Consumer, null, function (theme) {
+      var serialized = Object(_emotion_serialize__WEBPACK_IMPORTED_MODULE_4__["serializeStyles"])([styles(theme)]);
+      return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(InnerGlobal, {
+        serialized: serialized,
+        cache: cache
+      });
+    });
+  }
+
+  var serialized = Object(_emotion_serialize__WEBPACK_IMPORTED_MODULE_4__["serializeStyles"])([styles]);
+  return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(InnerGlobal, {
+    serialized: serialized,
+    cache: cache
+  });
+});
+
+// maintain place over rerenders.
+// initial render from browser, insertBefore context.sheet.tags[0] or if a style hasn't been inserted there yet, appendChild
+// initial client-side render from SSR, use place of hydrating tag
+var InnerGlobal =
+/*#__PURE__*/
+function (_React$Component) {
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_0___default()(InnerGlobal, _React$Component);
+
+  function InnerGlobal(props, context, updater) {
+    return _React$Component.call(this, props, context, updater) || this;
+  }
+
+  var _proto = InnerGlobal.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    this.sheet = new _emotion_sheet__WEBPACK_IMPORTED_MODULE_5__["StyleSheet"]({
+      key: this.props.cache.key + "-global",
+      nonce: this.props.cache.sheet.nonce,
+      container: this.props.cache.sheet.container
+    }); // $FlowFixMe
+
+    var node = document.querySelector("style[data-emotion-" + this.props.cache.key + "=\"" + this.props.serialized.name + "\"]");
+
+    if (node !== null) {
+      this.sheet.tags.push(node);
+    }
+
+    if (this.props.cache.sheet.tags.length) {
+      this.sheet.before = this.props.cache.sheet.tags[0];
+    }
+
+    this.insertStyles();
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    if (prevProps.serialized.name !== this.props.serialized.name) {
+      this.insertStyles();
+    }
+  };
+
+  _proto.insertStyles = function insertStyles$1() {
+    if (this.props.serialized.next !== undefined) {
+      // insert keyframes
+      Object(_emotion_utils__WEBPACK_IMPORTED_MODULE_3__["insertStyles"])(this.props.cache, this.props.serialized.next, true);
+    }
+
+    if (this.sheet.tags.length) {
+      // if this doesn't exist then it will be null so the style element will be appended
+      var element = this.sheet.tags[this.sheet.tags.length - 1].nextElementSibling;
+      this.sheet.before = element;
+      this.sheet.flush();
+    }
+
+    this.props.cache.insert("", this.props.serialized, this.sheet, false);
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    this.sheet.flush();
+  };
+
+  _proto.render = function render() {
+    if (!isBrowser) {
+      var serialized = this.props.serialized;
+      var serializedNames = serialized.name;
+      var serializedStyles = serialized.styles;
+      var next = serialized.next;
+
+      while (next !== undefined) {
+        serializedNames += ' ' + next.name;
+        serializedStyles += next.styles;
+        next = next.next;
+      }
+
+      var shouldCache = this.props.cache.compat === true;
+      var rules = this.props.cache.insert("", {
+        name: serializedNames,
+        styles: serializedStyles
+      }, this.sheet, shouldCache);
+
+      if (!shouldCache) {
+        var _ref;
+
+        return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])("style", (_ref = {}, _ref["data-emotion-" + this.props.cache.key] = serializedNames, _ref.dangerouslySetInnerHTML = {
+          __html: rules
+        }, _ref.nonce = this.props.cache.sheet.nonce, _ref));
+      }
+    }
+
+    return null;
+  };
+
+  return InnerGlobal;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+var keyframes = function keyframes() {
+  var insertable = _emotion_css__WEBPACK_IMPORTED_MODULE_6__["default"].apply(void 0, arguments);
+  var name = "animation-" + insertable.name; // $FlowFixMe
+
+  return {
+    name: name,
+    styles: "@keyframes " + name + "{" + insertable.styles + "}",
+    anim: 1,
+    toString: function toString() {
+      return "_EMO_" + this.name + "_" + this.styles + "_EMO_";
+    }
+  };
+};
+
+var classnames = function classnames(args) {
+  var len = args.length;
+  var i = 0;
+  var cls = '';
+
+  for (; i < len; i++) {
+    var arg = args[i];
+    if (arg == null) continue;
+    var toAdd = void 0;
+
+    switch (typeof arg) {
+      case 'boolean':
+        break;
+
+      case 'object':
+        {
+          if (Array.isArray(arg)) {
+            toAdd = classnames(arg);
+          } else {
+            toAdd = '';
+
+            for (var k in arg) {
+              if (arg[k] && k) {
+                toAdd && (toAdd += ' ');
+                toAdd += k;
+              }
+            }
+          }
+
+          break;
+        }
+
+      default:
+        {
+          toAdd = arg;
+        }
+    }
+
+    if (toAdd) {
+      cls && (cls += ' ');
+      cls += toAdd;
+    }
+  }
+
+  return cls;
+};
+
+function merge(registered, css, className) {
+  var registeredStyles = [];
+  var rawClassName = Object(_emotion_utils__WEBPACK_IMPORTED_MODULE_3__["getRegisteredStyles"])(registered, registeredStyles, className);
+
+  if (registeredStyles.length < 2) {
+    return className;
+  }
+
+  return rawClassName + css(registeredStyles);
+}
+
+var ClassNames = withEmotionCache(function (props, context) {
+  return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(ThemeContext.Consumer, null, function (theme) {
+    var rules = '';
+    var serializedHashes = '';
+    var hasRendered = false;
+
+    var css = function css() {
+      if (hasRendered && "production" !== 'production') {
+        throw new Error('css can only be used during render');
+      }
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      var serialized = Object(_emotion_serialize__WEBPACK_IMPORTED_MODULE_4__["serializeStyles"])(args, context.registered);
+
+      if (isBrowser) {
+        Object(_emotion_utils__WEBPACK_IMPORTED_MODULE_3__["insertStyles"])(context, serialized, false);
+      } else {
+        var res = Object(_emotion_utils__WEBPACK_IMPORTED_MODULE_3__["insertStyles"])(context, serialized, false);
+
+        if (res !== undefined) {
+          rules += res;
+        }
+      }
+
+      if (!isBrowser) {
+        serializedHashes += " " + serialized.name;
+      }
+
+      return context.key + "-" + serialized.name;
+    };
+
+    var cx = function cx() {
+      if (hasRendered && "production" !== 'production') {
+        throw new Error('cx can only be used during render');
+      }
+
+      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      return merge(context.registered, css, classnames(args));
+    };
+
+    var content = {
+      css: css,
+      cx: cx,
+      theme: theme
+    };
+    var ele = props.children(content);
+    hasRendered = true;
+
+    if (!isBrowser && rules.length !== 0) {
+      var _ref;
+
+      return Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])("style", (_ref = {}, _ref["data-emotion-" + context.key] = serializedHashes.substring(1), _ref.dangerouslySetInnerHTML = {
+        __html: rules
+      }, _ref.nonce = context.sheet.nonce, _ref)), ele);
+    }
+
+    return ele;
+  });
+});
+
+
+
+
+/***/ }),
+/* 220 */
+/*!***************************************************************!*\
+  !*** ../node_modules/@babel/runtime/helpers/inheritsLoose.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+module.exports = _inheritsLoose;
+
+/***/ }),
+/* 221 */
+/*!********************************************************!*\
+  !*** ../node_modules/@emotion/cache/dist/cache.esm.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _emotion_sheet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/sheet */ 222);
+/* harmony import */ var _emotion_stylis__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/stylis */ 223);
+/* harmony import */ var _emotion_weak_memoize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/weak-memoize */ 224);
+
+
+
+
+// https://github.com/thysultan/stylis.js/tree/master/plugins/rule-sheet
+// inlined to avoid umd wrapper and peerDep warnings/installing stylis
+// since we use stylis after closure compiler
+var delimiter = '/*|*/';
+var needle = delimiter + '}';
+
+function toSheet(block) {
+  if (block) {
+    Sheet.current.insert(block + '}');
+  }
+}
+
+var Sheet = {
+  current: null
+};
+var ruleSheet = function ruleSheet(context, content, selectors, parents, line, column, length, ns, depth, at) {
+  switch (context) {
+    // property
+    case 1:
+      {
+        switch (content.charCodeAt(0)) {
+          case 64:
+            {
+              // @import
+              Sheet.current.insert(content + ';');
+              return '';
+            }
+          // charcode for l
+
+          case 108:
+            {
+              // charcode for b
+              // this ignores label
+              if (content.charCodeAt(2) === 98) {
+                return '';
+              }
+            }
+        }
+
+        break;
+      }
+    // selector
+
+    case 2:
+      {
+        if (ns === 0) return content + delimiter;
+        break;
+      }
+    // at-rule
+
+    case 3:
+      {
+        switch (ns) {
+          // @font-face, @page
+          case 102:
+          case 112:
+            {
+              Sheet.current.insert(selectors[0] + content);
+              return '';
+            }
+
+          default:
+            {
+              return content + (at === 0 ? delimiter : '');
+            }
+        }
+      }
+
+    case -2:
+      {
+        content.split(needle).forEach(toSheet);
+      }
+  }
+};
+var removeLabel = function removeLabel(context, content) {
+  if (context === 1 && // charcode for l
+  content.charCodeAt(0) === 108 && // charcode for b
+  content.charCodeAt(2) === 98 // this ignores label
+  ) {
+      return '';
+    }
+};
+
+var isBrowser = typeof document !== 'undefined';
+var rootServerStylisCache = {};
+var getServerStylisCache = isBrowser ? undefined : Object(_emotion_weak_memoize__WEBPACK_IMPORTED_MODULE_2__["default"])(function () {
+  var getCache = Object(_emotion_weak_memoize__WEBPACK_IMPORTED_MODULE_2__["default"])(function () {
+    return {};
+  });
+  var prefixTrueCache = {};
+  var prefixFalseCache = {};
+  return function (prefix) {
+    if (prefix === undefined || prefix === true) {
+      return prefixTrueCache;
+    }
+
+    if (prefix === false) {
+      return prefixFalseCache;
+    }
+
+    return getCache(prefix);
+  };
+});
+
+var createCache = function createCache(options) {
+  if (options === undefined) options = {};
+  var key = options.key || 'css';
+  var stylisOptions;
+
+  if (options.prefix !== undefined) {
+    stylisOptions = {
+      prefix: options.prefix
+    };
+  }
+
+  var stylis = new _emotion_stylis__WEBPACK_IMPORTED_MODULE_1__["default"](stylisOptions);
+
+  if (false) {}
+
+  var inserted = {}; // $FlowFixMe
+
+  var container;
+
+  if (isBrowser) {
+    container = options.container || document.head;
+    var nodes = document.querySelectorAll("style[data-emotion-" + key + "]");
+    Array.prototype.forEach.call(nodes, function (node) {
+      var attrib = node.getAttribute("data-emotion-" + key); // $FlowFixMe
+
+      attrib.split(' ').forEach(function (id) {
+        inserted[id] = true;
+      });
+
+      if (node.parentNode !== container) {
+        container.appendChild(node);
+      }
+    });
+  }
+
+  var _insert;
+
+  if (isBrowser) {
+    stylis.use(options.stylisPlugins)(ruleSheet);
+
+    _insert = function insert(selector, serialized, sheet, shouldCache) {
+      var name = serialized.name;
+      Sheet.current = sheet;
+
+      if (false) { var map; }
+
+      stylis(selector, serialized.styles);
+
+      if (shouldCache) {
+        cache.inserted[name] = true;
+      }
+    };
+  } else {
+    stylis.use(removeLabel);
+    var serverStylisCache = rootServerStylisCache;
+
+    if (options.stylisPlugins || options.prefix !== undefined) {
+      stylis.use(options.stylisPlugins); // $FlowFixMe
+
+      serverStylisCache = getServerStylisCache(options.stylisPlugins || rootServerStylisCache)(options.prefix);
+    }
+
+    var getRules = function getRules(selector, serialized) {
+      var name = serialized.name;
+
+      if (serverStylisCache[name] === undefined) {
+        serverStylisCache[name] = stylis(selector, serialized.styles);
+      }
+
+      return serverStylisCache[name];
+    };
+
+    _insert = function _insert(selector, serialized, sheet, shouldCache) {
+      var name = serialized.name;
+      var rules = getRules(selector, serialized);
+
+      if (cache.compat === undefined) {
+        // in regular mode, we don't set the styles on the inserted cache
+        // since we don't need to and that would be wasting memory
+        // we return them so that they are rendered in a style tag
+        if (shouldCache) {
+          cache.inserted[name] = true;
+        }
+
+        if ( // using === development instead of !== production
+        // because if people do ssr in tests, the source maps showing up would be annoying
+        false) {}
+
+        return rules;
+      } else {
+        // in compat mode, we put the styles on the inserted cache so
+        // that emotion-server can pull out the styles
+        // except when we don't want to cache it which was in Global but now
+        // is nowhere but we don't want to do a major right now
+        // and just in case we're going to leave the case here
+        // it's also not affecting client side bundle size
+        // so it's really not a big deal
+        if (shouldCache) {
+          cache.inserted[name] = rules;
+        } else {
+          return rules;
+        }
+      }
+    };
+  }
+
+  if (false) { var commentEnd, commentStart; }
+
+  var cache = {
+    key: key,
+    sheet: new _emotion_sheet__WEBPACK_IMPORTED_MODULE_0__["StyleSheet"]({
+      key: key,
+      container: container,
+      nonce: options.nonce,
+      speedy: options.speedy
+    }),
+    nonce: options.nonce,
+    inserted: inserted,
+    registered: {},
+    insert: _insert
+  };
+  return cache;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (createCache);
+
+
+/***/ }),
+/* 222 */
+/*!********************************************************!*\
+  !*** ../node_modules/@emotion/sheet/dist/sheet.esm.js ***!
+  \********************************************************/
+/*! exports provided: StyleSheet */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleSheet", function() { return StyleSheet; });
+/*
+
+Based off glamor's StyleSheet, thanks Sunil ❤️
+
+high performance StyleSheet for css-in-js systems
+
+- uses multiple style tags behind the scenes for millions of rules
+- uses `insertRule` for appending in production for *much* faster performance
+
+// usage
+
+import { StyleSheet } from '@emotion/sheet'
+
+let styleSheet = new StyleSheet({ key: '', container: document.head })
+
+styleSheet.insert('#box { border: 1px solid red; }')
+- appends a css rule into the stylesheet
+
+styleSheet.flush()
+- empties the stylesheet of all its contents
+
+*/
+// $FlowFixMe
+function sheetForTag(tag) {
+  if (tag.sheet) {
+    // $FlowFixMe
+    return tag.sheet;
+  } // this weirdness brought to you by firefox
+
+  /* istanbul ignore next */
+
+
+  for (var i = 0; i < document.styleSheets.length; i++) {
+    if (document.styleSheets[i].ownerNode === tag) {
+      // $FlowFixMe
+      return document.styleSheets[i];
+    }
+  }
+}
+
+function createStyleElement(options) {
+  var tag = document.createElement('style');
+  tag.setAttribute('data-emotion', options.key);
+
+  if (options.nonce !== undefined) {
+    tag.setAttribute('nonce', options.nonce);
+  }
+
+  tag.appendChild(document.createTextNode(''));
+  return tag;
+}
+
+var StyleSheet =
+/*#__PURE__*/
+function () {
+  function StyleSheet(options) {
+    this.isSpeedy = options.speedy === undefined ? "production" === 'production' : options.speedy;
+    this.tags = [];
+    this.ctr = 0;
+    this.nonce = options.nonce; // key is the value of the data-emotion attribute, it's used to identify different sheets
+
+    this.key = options.key;
+    this.container = options.container;
+    this.before = null;
+  }
+
+  var _proto = StyleSheet.prototype;
+
+  _proto.insert = function insert(rule) {
+    // the max length is how many rules we have per style tag, it's 65000 in speedy mode
+    // it's 1 in dev because we insert source maps that map a single rule to a location
+    // and you can only have one source map per style tag
+    if (this.ctr % (this.isSpeedy ? 65000 : 1) === 0) {
+      var _tag = createStyleElement(this);
+
+      var before;
+
+      if (this.tags.length === 0) {
+        before = this.before;
+      } else {
+        before = this.tags[this.tags.length - 1].nextSibling;
+      }
+
+      this.container.insertBefore(_tag, before);
+      this.tags.push(_tag);
+    }
+
+    var tag = this.tags[this.tags.length - 1];
+
+    if (this.isSpeedy) {
+      var sheet = sheetForTag(tag);
+
+      try {
+        // this is a really hot path
+        // we check the second character first because having "i"
+        // as the second character will happen less often than
+        // having "@" as the first character
+        var isImportRule = rule.charCodeAt(1) === 105 && rule.charCodeAt(0) === 64; // this is the ultrafast version, works across browsers
+        // the big drawback is that the css won't be editable in devtools
+
+        sheet.insertRule(rule, // we need to insert @import rules before anything else
+        // otherwise there will be an error
+        // technically this means that the @import rules will
+        // _usually_(not always since there could be multiple style tags)
+        // be the first ones in prod and generally later in dev
+        // this shouldn't really matter in the real world though
+        // @import is generally only used for font faces from google fonts and etc.
+        // so while this could be technically correct then it would be slower and larger
+        // for a tiny bit of correctness that won't matter in the real world
+        isImportRule ? 0 : sheet.cssRules.length);
+      } catch (e) {
+        if (false) {}
+      }
+    } else {
+      tag.appendChild(document.createTextNode(rule));
+    }
+
+    this.ctr++;
+  };
+
+  _proto.flush = function flush() {
+    // $FlowFixMe
+    this.tags.forEach(function (tag) {
+      return tag.parentNode.removeChild(tag);
+    });
+    this.tags = [];
+    this.ctr = 0;
+  };
+
+  return StyleSheet;
+}();
+
+
+
+
+/***/ }),
+/* 223 */
+/*!**********************************************************!*\
+  !*** ../node_modules/@emotion/stylis/dist/stylis.esm.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function stylis_min (W) {
+  function M(d, c, e, h, a) {
+    for (var m = 0, b = 0, v = 0, n = 0, q, g, x = 0, K = 0, k, u = k = q = 0, l = 0, r = 0, I = 0, t = 0, B = e.length, J = B - 1, y, f = '', p = '', F = '', G = '', C; l < B;) {
+      g = e.charCodeAt(l);
+      l === J && 0 !== b + n + v + m && (0 !== b && (g = 47 === b ? 10 : 47), n = v = m = 0, B++, J++);
+
+      if (0 === b + n + v + m) {
+        if (l === J && (0 < r && (f = f.replace(N, '')), 0 < f.trim().length)) {
+          switch (g) {
+            case 32:
+            case 9:
+            case 59:
+            case 13:
+            case 10:
+              break;
+
+            default:
+              f += e.charAt(l);
+          }
+
+          g = 59;
+        }
+
+        switch (g) {
+          case 123:
+            f = f.trim();
+            q = f.charCodeAt(0);
+            k = 1;
+
+            for (t = ++l; l < B;) {
+              switch (g = e.charCodeAt(l)) {
+                case 123:
+                  k++;
+                  break;
+
+                case 125:
+                  k--;
+                  break;
+
+                case 47:
+                  switch (g = e.charCodeAt(l + 1)) {
+                    case 42:
+                    case 47:
+                      a: {
+                        for (u = l + 1; u < J; ++u) {
+                          switch (e.charCodeAt(u)) {
+                            case 47:
+                              if (42 === g && 42 === e.charCodeAt(u - 1) && l + 2 !== u) {
+                                l = u + 1;
+                                break a;
+                              }
+
+                              break;
+
+                            case 10:
+                              if (47 === g) {
+                                l = u + 1;
+                                break a;
+                              }
+
+                          }
+                        }
+
+                        l = u;
+                      }
+
+                  }
+
+                  break;
+
+                case 91:
+                  g++;
+
+                case 40:
+                  g++;
+
+                case 34:
+                case 39:
+                  for (; l++ < J && e.charCodeAt(l) !== g;) {
+                  }
+
+              }
+
+              if (0 === k) break;
+              l++;
+            }
+
+            k = e.substring(t, l);
+            0 === q && (q = (f = f.replace(ca, '').trim()).charCodeAt(0));
+
+            switch (q) {
+              case 64:
+                0 < r && (f = f.replace(N, ''));
+                g = f.charCodeAt(1);
+
+                switch (g) {
+                  case 100:
+                  case 109:
+                  case 115:
+                  case 45:
+                    r = c;
+                    break;
+
+                  default:
+                    r = O;
+                }
+
+                k = M(c, r, k, g, a + 1);
+                t = k.length;
+                0 < A && (r = X(O, f, I), C = H(3, k, r, c, D, z, t, g, a, h), f = r.join(''), void 0 !== C && 0 === (t = (k = C.trim()).length) && (g = 0, k = ''));
+                if (0 < t) switch (g) {
+                  case 115:
+                    f = f.replace(da, ea);
+
+                  case 100:
+                  case 109:
+                  case 45:
+                    k = f + '{' + k + '}';
+                    break;
+
+                  case 107:
+                    f = f.replace(fa, '$1 $2');
+                    k = f + '{' + k + '}';
+                    k = 1 === w || 2 === w && L('@' + k, 3) ? '@-webkit-' + k + '@' + k : '@' + k;
+                    break;
+
+                  default:
+                    k = f + k, 112 === h && (k = (p += k, ''));
+                } else k = '';
+                break;
+
+              default:
+                k = M(c, X(c, f, I), k, h, a + 1);
+            }
+
+            F += k;
+            k = I = r = u = q = 0;
+            f = '';
+            g = e.charCodeAt(++l);
+            break;
+
+          case 125:
+          case 59:
+            f = (0 < r ? f.replace(N, '') : f).trim();
+            if (1 < (t = f.length)) switch (0 === u && (q = f.charCodeAt(0), 45 === q || 96 < q && 123 > q) && (t = (f = f.replace(' ', ':')).length), 0 < A && void 0 !== (C = H(1, f, c, d, D, z, p.length, h, a, h)) && 0 === (t = (f = C.trim()).length) && (f = '\x00\x00'), q = f.charCodeAt(0), g = f.charCodeAt(1), q) {
+              case 0:
+                break;
+
+              case 64:
+                if (105 === g || 99 === g) {
+                  G += f + e.charAt(l);
+                  break;
+                }
+
+              default:
+                58 !== f.charCodeAt(t - 1) && (p += P(f, q, g, f.charCodeAt(2)));
+            }
+            I = r = u = q = 0;
+            f = '';
+            g = e.charCodeAt(++l);
+        }
+      }
+
+      switch (g) {
+        case 13:
+        case 10:
+          47 === b ? b = 0 : 0 === 1 + q && 107 !== h && 0 < f.length && (r = 1, f += '\x00');
+          0 < A * Y && H(0, f, c, d, D, z, p.length, h, a, h);
+          z = 1;
+          D++;
+          break;
+
+        case 59:
+        case 125:
+          if (0 === b + n + v + m) {
+            z++;
+            break;
+          }
+
+        default:
+          z++;
+          y = e.charAt(l);
+
+          switch (g) {
+            case 9:
+            case 32:
+              if (0 === n + m + b) switch (x) {
+                case 44:
+                case 58:
+                case 9:
+                case 32:
+                  y = '';
+                  break;
+
+                default:
+                  32 !== g && (y = ' ');
+              }
+              break;
+
+            case 0:
+              y = '\\0';
+              break;
+
+            case 12:
+              y = '\\f';
+              break;
+
+            case 11:
+              y = '\\v';
+              break;
+
+            case 38:
+              0 === n + b + m && (r = I = 1, y = '\f' + y);
+              break;
+
+            case 108:
+              if (0 === n + b + m + E && 0 < u) switch (l - u) {
+                case 2:
+                  112 === x && 58 === e.charCodeAt(l - 3) && (E = x);
+
+                case 8:
+                  111 === K && (E = K);
+              }
+              break;
+
+            case 58:
+              0 === n + b + m && (u = l);
+              break;
+
+            case 44:
+              0 === b + v + n + m && (r = 1, y += '\r');
+              break;
+
+            case 34:
+            case 39:
+              0 === b && (n = n === g ? 0 : 0 === n ? g : n);
+              break;
+
+            case 91:
+              0 === n + b + v && m++;
+              break;
+
+            case 93:
+              0 === n + b + v && m--;
+              break;
+
+            case 41:
+              0 === n + b + m && v--;
+              break;
+
+            case 40:
+              if (0 === n + b + m) {
+                if (0 === q) switch (2 * x + 3 * K) {
+                  case 533:
+                    break;
+
+                  default:
+                    q = 1;
+                }
+                v++;
+              }
+
+              break;
+
+            case 64:
+              0 === b + v + n + m + u + k && (k = 1);
+              break;
+
+            case 42:
+            case 47:
+              if (!(0 < n + m + v)) switch (b) {
+                case 0:
+                  switch (2 * g + 3 * e.charCodeAt(l + 1)) {
+                    case 235:
+                      b = 47;
+                      break;
+
+                    case 220:
+                      t = l, b = 42;
+                  }
+
+                  break;
+
+                case 42:
+                  47 === g && 42 === x && t + 2 !== l && (33 === e.charCodeAt(t + 2) && (p += e.substring(t, l + 1)), y = '', b = 0);
+              }
+          }
+
+          0 === b && (f += y);
+      }
+
+      K = x;
+      x = g;
+      l++;
+    }
+
+    t = p.length;
+
+    if (0 < t) {
+      r = c;
+      if (0 < A && (C = H(2, p, r, d, D, z, t, h, a, h), void 0 !== C && 0 === (p = C).length)) return G + p + F;
+      p = r.join(',') + '{' + p + '}';
+
+      if (0 !== w * E) {
+        2 !== w || L(p, 2) || (E = 0);
+
+        switch (E) {
+          case 111:
+            p = p.replace(ha, ':-moz-$1') + p;
+            break;
+
+          case 112:
+            p = p.replace(Q, '::-webkit-input-$1') + p.replace(Q, '::-moz-$1') + p.replace(Q, ':-ms-input-$1') + p;
+        }
+
+        E = 0;
+      }
+    }
+
+    return G + p + F;
+  }
+
+  function X(d, c, e) {
+    var h = c.trim().split(ia);
+    c = h;
+    var a = h.length,
+        m = d.length;
+
+    switch (m) {
+      case 0:
+      case 1:
+        var b = 0;
+
+        for (d = 0 === m ? '' : d[0] + ' '; b < a; ++b) {
+          c[b] = Z(d, c[b], e).trim();
+        }
+
+        break;
+
+      default:
+        var v = b = 0;
+
+        for (c = []; b < a; ++b) {
+          for (var n = 0; n < m; ++n) {
+            c[v++] = Z(d[n] + ' ', h[b], e).trim();
+          }
+        }
+
+    }
+
+    return c;
+  }
+
+  function Z(d, c, e) {
+    var h = c.charCodeAt(0);
+    33 > h && (h = (c = c.trim()).charCodeAt(0));
+
+    switch (h) {
+      case 38:
+        return c.replace(F, '$1' + d.trim());
+
+      case 58:
+        return d.trim() + c.replace(F, '$1' + d.trim());
+
+      default:
+        if (0 < 1 * e && 0 < c.indexOf('\f')) return c.replace(F, (58 === d.charCodeAt(0) ? '' : '$1') + d.trim());
+    }
+
+    return d + c;
+  }
+
+  function P(d, c, e, h) {
+    var a = d + ';',
+        m = 2 * c + 3 * e + 4 * h;
+
+    if (944 === m) {
+      d = a.indexOf(':', 9) + 1;
+      var b = a.substring(d, a.length - 1).trim();
+      b = a.substring(0, d).trim() + b + ';';
+      return 1 === w || 2 === w && L(b, 1) ? '-webkit-' + b + b : b;
+    }
+
+    if (0 === w || 2 === w && !L(a, 1)) return a;
+
+    switch (m) {
+      case 1015:
+        return 97 === a.charCodeAt(10) ? '-webkit-' + a + a : a;
+
+      case 951:
+        return 116 === a.charCodeAt(3) ? '-webkit-' + a + a : a;
+
+      case 963:
+        return 110 === a.charCodeAt(5) ? '-webkit-' + a + a : a;
+
+      case 1009:
+        if (100 !== a.charCodeAt(4)) break;
+
+      case 969:
+      case 942:
+        return '-webkit-' + a + a;
+
+      case 978:
+        return '-webkit-' + a + '-moz-' + a + a;
+
+      case 1019:
+      case 983:
+        return '-webkit-' + a + '-moz-' + a + '-ms-' + a + a;
+
+      case 883:
+        if (45 === a.charCodeAt(8)) return '-webkit-' + a + a;
+        if (0 < a.indexOf('image-set(', 11)) return a.replace(ja, '$1-webkit-$2') + a;
+        break;
+
+      case 932:
+        if (45 === a.charCodeAt(4)) switch (a.charCodeAt(5)) {
+          case 103:
+            return '-webkit-box-' + a.replace('-grow', '') + '-webkit-' + a + '-ms-' + a.replace('grow', 'positive') + a;
+
+          case 115:
+            return '-webkit-' + a + '-ms-' + a.replace('shrink', 'negative') + a;
+
+          case 98:
+            return '-webkit-' + a + '-ms-' + a.replace('basis', 'preferred-size') + a;
+        }
+        return '-webkit-' + a + '-ms-' + a + a;
+
+      case 964:
+        return '-webkit-' + a + '-ms-flex-' + a + a;
+
+      case 1023:
+        if (99 !== a.charCodeAt(8)) break;
+        b = a.substring(a.indexOf(':', 15)).replace('flex-', '').replace('space-between', 'justify');
+        return '-webkit-box-pack' + b + '-webkit-' + a + '-ms-flex-pack' + b + a;
+
+      case 1005:
+        return ka.test(a) ? a.replace(aa, ':-webkit-') + a.replace(aa, ':-moz-') + a : a;
+
+      case 1e3:
+        b = a.substring(13).trim();
+        c = b.indexOf('-') + 1;
+
+        switch (b.charCodeAt(0) + b.charCodeAt(c)) {
+          case 226:
+            b = a.replace(G, 'tb');
+            break;
+
+          case 232:
+            b = a.replace(G, 'tb-rl');
+            break;
+
+          case 220:
+            b = a.replace(G, 'lr');
+            break;
+
+          default:
+            return a;
+        }
+
+        return '-webkit-' + a + '-ms-' + b + a;
+
+      case 1017:
+        if (-1 === a.indexOf('sticky', 9)) break;
+
+      case 975:
+        c = (a = d).length - 10;
+        b = (33 === a.charCodeAt(c) ? a.substring(0, c) : a).substring(d.indexOf(':', 7) + 1).trim();
+
+        switch (m = b.charCodeAt(0) + (b.charCodeAt(7) | 0)) {
+          case 203:
+            if (111 > b.charCodeAt(8)) break;
+
+          case 115:
+            a = a.replace(b, '-webkit-' + b) + ';' + a;
+            break;
+
+          case 207:
+          case 102:
+            a = a.replace(b, '-webkit-' + (102 < m ? 'inline-' : '') + 'box') + ';' + a.replace(b, '-webkit-' + b) + ';' + a.replace(b, '-ms-' + b + 'box') + ';' + a;
+        }
+
+        return a + ';';
+
+      case 938:
+        if (45 === a.charCodeAt(5)) switch (a.charCodeAt(6)) {
+          case 105:
+            return b = a.replace('-items', ''), '-webkit-' + a + '-webkit-box-' + b + '-ms-flex-' + b + a;
+
+          case 115:
+            return '-webkit-' + a + '-ms-flex-item-' + a.replace(ba, '') + a;
+
+          default:
+            return '-webkit-' + a + '-ms-flex-line-pack' + a.replace('align-content', '').replace(ba, '') + a;
+        }
+        break;
+
+      case 973:
+      case 989:
+        if (45 !== a.charCodeAt(3) || 122 === a.charCodeAt(4)) break;
+
+      case 931:
+      case 953:
+        if (!0 === la.test(d)) return 115 === (b = d.substring(d.indexOf(':') + 1)).charCodeAt(0) ? P(d.replace('stretch', 'fill-available'), c, e, h).replace(':fill-available', ':stretch') : a.replace(b, '-webkit-' + b) + a.replace(b, '-moz-' + b.replace('fill-', '')) + a;
+        break;
+
+      case 962:
+        if (a = '-webkit-' + a + (102 === a.charCodeAt(5) ? '-ms-' + a : '') + a, 211 === e + h && 105 === a.charCodeAt(13) && 0 < a.indexOf('transform', 10)) return a.substring(0, a.indexOf(';', 27) + 1).replace(ma, '$1-webkit-$2') + a;
+    }
+
+    return a;
+  }
+
+  function L(d, c) {
+    var e = d.indexOf(1 === c ? ':' : '{'),
+        h = d.substring(0, 3 !== c ? e : 10);
+    e = d.substring(e + 1, d.length - 1);
+    return R(2 !== c ? h : h.replace(na, '$1'), e, c);
+  }
+
+  function ea(d, c) {
+    var e = P(c, c.charCodeAt(0), c.charCodeAt(1), c.charCodeAt(2));
+    return e !== c + ';' ? e.replace(oa, ' or ($1)').substring(4) : '(' + c + ')';
+  }
+
+  function H(d, c, e, h, a, m, b, v, n, q) {
+    for (var g = 0, x = c, w; g < A; ++g) {
+      switch (w = S[g].call(B, d, x, e, h, a, m, b, v, n, q)) {
+        case void 0:
+        case !1:
+        case !0:
+        case null:
+          break;
+
+        default:
+          x = w;
+      }
+    }
+
+    if (x !== c) return x;
+  }
+
+  function T(d) {
+    switch (d) {
+      case void 0:
+      case null:
+        A = S.length = 0;
+        break;
+
+      default:
+        if ('function' === typeof d) S[A++] = d;else if ('object' === typeof d) for (var c = 0, e = d.length; c < e; ++c) {
+          T(d[c]);
+        } else Y = !!d | 0;
+    }
+
+    return T;
+  }
+
+  function U(d) {
+    d = d.prefix;
+    void 0 !== d && (R = null, d ? 'function' !== typeof d ? w = 1 : (w = 2, R = d) : w = 0);
+    return U;
+  }
+
+  function B(d, c) {
+    var e = d;
+    33 > e.charCodeAt(0) && (e = e.trim());
+    V = e;
+    e = [V];
+
+    if (0 < A) {
+      var h = H(-1, c, e, e, D, z, 0, 0, 0, 0);
+      void 0 !== h && 'string' === typeof h && (c = h);
+    }
+
+    var a = M(O, e, c, 0, 0);
+    0 < A && (h = H(-2, a, e, e, D, z, a.length, 0, 0, 0), void 0 !== h && (a = h));
+    V = '';
+    E = 0;
+    z = D = 1;
+    return a;
+  }
+
+  var ca = /^\0+/g,
+      N = /[\0\r\f]/g,
+      aa = /: */g,
+      ka = /zoo|gra/,
+      ma = /([,: ])(transform)/g,
+      ia = /,\r+?/g,
+      F = /([\t\r\n ])*\f?&/g,
+      fa = /@(k\w+)\s*(\S*)\s*/,
+      Q = /::(place)/g,
+      ha = /:(read-only)/g,
+      G = /[svh]\w+-[tblr]{2}/,
+      da = /\(\s*(.*)\s*\)/g,
+      oa = /([\s\S]*?);/g,
+      ba = /-self|flex-/g,
+      na = /[^]*?(:[rp][el]a[\w-]+)[^]*/,
+      la = /stretch|:\s*\w+\-(?:conte|avail)/,
+      ja = /([^-])(image-set\()/,
+      z = 1,
+      D = 1,
+      E = 0,
+      w = 1,
+      O = [],
+      S = [],
+      A = 0,
+      R = null,
+      Y = 0,
+      V = '';
+  B.use = T;
+  B.set = U;
+  void 0 !== W && U(W);
+  return B;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (stylis_min);
+
+
+/***/ }),
+/* 224 */
+/*!**********************************************************************!*\
+  !*** ../node_modules/@emotion/weak-memoize/dist/weak-memoize.esm.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var weakMemoize = function weakMemoize(func) {
+  // $FlowFixMe flow doesn't include all non-primitive types as allowed for weakmaps
+  var cache = new WeakMap();
+  return function (arg) {
+    if (cache.has(arg)) {
+      // $FlowFixMe
+      return cache.get(arg);
+    }
+
+    var ret = func(arg);
+    cache.set(arg, ret);
+    return ret;
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (weakMemoize);
+
+
+/***/ }),
+/* 225 */
+/*!********************************************************!*\
+  !*** ../node_modules/@emotion/utils/dist/utils.esm.js ***!
+  \********************************************************/
+/*! exports provided: getRegisteredStyles, insertStyles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRegisteredStyles", function() { return getRegisteredStyles; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "insertStyles", function() { return insertStyles; });
+var isBrowser = typeof document !== 'undefined';
+function getRegisteredStyles(registered, registeredStyles, classNames) {
+  var rawClassName = '';
+  classNames.split(' ').forEach(function (className) {
+    if (registered[className] !== undefined) {
+      registeredStyles.push(registered[className]);
+    } else {
+      rawClassName += className + " ";
+    }
+  });
+  return rawClassName;
+}
+var insertStyles = function insertStyles(cache, serialized, isStringTag) {
+  var className = cache.key + "-" + serialized.name;
+
+  if ( // we only need to add the styles to the registered cache if the
+  // class name could be used further down
+  // the tree but if it's a string tag, we know it won't
+  // so we don't have to add it to registered cache.
+  // this improves memory usage since we can avoid storing the whole style string
+  (isStringTag === false || // we need to always store it if we're in compat mode and
+  // in node since emotion-server relies on whether a style is in
+  // the registered cache to know whether a style is global or not
+  // also, note that this check will be dead code eliminated in the browser
+  isBrowser === false && cache.compat !== undefined) && cache.registered[className] === undefined) {
+    cache.registered[className] = serialized.styles;
+  }
+
+  if (cache.inserted[serialized.name] === undefined) {
+    var stylesForSSR = '';
+    var current = serialized;
+
+    do {
+      var maybeStyles = cache.insert("." + className, current, cache.sheet, true);
+
+      if (!isBrowser && maybeStyles !== undefined) {
+        stylesForSSR += maybeStyles;
+      }
+
+      current = current.next;
+    } while (current !== undefined);
+
+    if (!isBrowser && stylesForSSR.length !== 0) {
+      return stylesForSSR;
+    }
+  }
+};
+
+
+
+
+/***/ }),
+/* 226 */
+/*!****************************************************************!*\
+  !*** ../node_modules/@emotion/serialize/dist/serialize.esm.js ***!
+  \****************************************************************/
+/*! exports provided: serializeStyles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serializeStyles", function() { return serializeStyles; });
+/* harmony import */ var _emotion_hash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/hash */ 227);
+/* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/unitless */ 228);
+/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/memoize */ 218);
+
+
+
+
+var ILLEGAL_ESCAPE_SEQUENCE_ERROR = "You have illegal escape sequence in your template literal, most likely inside content's property value.\nBecause you write your CSS inside a JavaScript string you actually have to do double escaping, so for example \"content: '\\00d7';\" should become \"content: '\\\\00d7';\".\nYou can read more about this here:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences";
+var UNDEFINED_AS_OBJECT_KEY_ERROR = "You have passed in falsy value as style object's key (can happen when in example you pass unexported component as computed key).";
+var hyphenateRegex = /[A-Z]|^ms/g;
+var animationRegex = /_EMO_([^_]+?)_([^]*?)_EMO_/g;
+
+var isCustomProperty = function isCustomProperty(property) {
+  return property.charCodeAt(1) === 45;
+};
+
+var isProcessableValue = function isProcessableValue(value) {
+  return value != null && typeof value !== 'boolean';
+};
+
+var processStyleName = Object(_emotion_memoize__WEBPACK_IMPORTED_MODULE_2__["default"])(function (styleName) {
+  return isCustomProperty(styleName) ? styleName : styleName.replace(hyphenateRegex, '-$&').toLowerCase();
+});
+
+var processStyleValue = function processStyleValue(key, value) {
+  switch (key) {
+    case 'animation':
+    case 'animationName':
+      {
+        if (typeof value === 'string') {
+          return value.replace(animationRegex, function (match, p1, p2) {
+            cursor = {
+              name: p1,
+              styles: p2,
+              next: cursor
+            };
+            return p1;
+          });
+        }
+      }
+  }
+
+  if (_emotion_unitless__WEBPACK_IMPORTED_MODULE_1__["default"][key] !== 1 && !isCustomProperty(key) && typeof value === 'number' && value !== 0) {
+    return value + 'px';
+  }
+
+  return value;
+};
+
+if (false) { var hyphenatedCache, hyphenPattern, msPattern, oldProcessStyleValue, contentValues, contentValuePattern; }
+
+var shouldWarnAboutInterpolatingClassNameFromCss = true;
+
+function handleInterpolation(mergedProps, registered, interpolation, couldBeSelectorInterpolation) {
+  if (interpolation == null) {
+    return '';
+  }
+
+  if (interpolation.__emotion_styles !== undefined) {
+    if (false) {}
+
+    return interpolation;
+  }
+
+  switch (typeof interpolation) {
+    case 'boolean':
+      {
+        return '';
+      }
+
+    case 'object':
+      {
+        if (interpolation.anim === 1) {
+          cursor = {
+            name: interpolation.name,
+            styles: interpolation.styles,
+            next: cursor
+          };
+          return interpolation.name;
+        }
+
+        if (interpolation.styles !== undefined) {
+          var next = interpolation.next;
+
+          if (next !== undefined) {
+            // not the most efficient thing ever but this is a pretty rare case
+            // and there will be very few iterations of this generally
+            while (next !== undefined) {
+              cursor = {
+                name: next.name,
+                styles: next.styles,
+                next: cursor
+              };
+              next = next.next;
+            }
+          }
+
+          var styles = interpolation.styles + ";";
+
+          if (false) {}
+
+          return styles;
+        }
+
+        return createStringFromObject(mergedProps, registered, interpolation);
+      }
+
+    case 'function':
+      {
+        if (mergedProps !== undefined) {
+          var previousCursor = cursor;
+          var result = interpolation(mergedProps);
+          cursor = previousCursor;
+          return handleInterpolation(mergedProps, registered, result, couldBeSelectorInterpolation);
+        } else if (false) {}
+
+        break;
+      }
+
+    case 'string':
+      if (false) { var replaced, matched; }
+
+      break;
+  } // finalize string values (regular strings and functions interpolated into css calls)
+
+
+  if (registered == null) {
+    return interpolation;
+  }
+
+  var cached = registered[interpolation];
+
+  if (false) {}
+
+  return cached !== undefined && !couldBeSelectorInterpolation ? cached : interpolation;
+}
+
+function createStringFromObject(mergedProps, registered, obj) {
+  var string = '';
+
+  if (Array.isArray(obj)) {
+    for (var i = 0; i < obj.length; i++) {
+      string += handleInterpolation(mergedProps, registered, obj[i], false);
+    }
+  } else {
+    for (var _key in obj) {
+      var value = obj[_key];
+
+      if (typeof value !== 'object') {
+        if (registered != null && registered[value] !== undefined) {
+          string += _key + "{" + registered[value] + "}";
+        } else if (isProcessableValue(value)) {
+          string += processStyleName(_key) + ":" + processStyleValue(_key, value) + ";";
+        }
+      } else {
+        if (_key === 'NO_COMPONENT_SELECTOR' && "production" !== 'production') {
+          throw new Error('Component selectors can only be used in conjunction with babel-plugin-emotion.');
+        }
+
+        if (Array.isArray(value) && typeof value[0] === 'string' && (registered == null || registered[value[0]] === undefined)) {
+          for (var _i = 0; _i < value.length; _i++) {
+            if (isProcessableValue(value[_i])) {
+              string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
+            }
+          }
+        } else {
+          var interpolated = handleInterpolation(mergedProps, registered, value, false);
+
+          switch (_key) {
+            case 'animation':
+            case 'animationName':
+              {
+                string += processStyleName(_key) + ":" + interpolated + ";";
+                break;
+              }
+
+            default:
+              {
+                if (false) {}
+
+                string += _key + "{" + interpolated + "}";
+              }
+          }
+        }
+      }
+    }
+  }
+
+  return string;
+}
+
+var labelPattern = /label:\s*([^\s;\n{]+)\s*;/g;
+var sourceMapPattern;
+
+if (false) {} // this is the cursor for keyframes
+// keyframes are stored on the SerializedStyles object as a linked list
+
+
+var cursor;
+var serializeStyles = function serializeStyles(args, registered, mergedProps) {
+  if (args.length === 1 && typeof args[0] === 'object' && args[0] !== null && args[0].styles !== undefined) {
+    return args[0];
+  }
+
+  var stringMode = true;
+  var styles = '';
+  cursor = undefined;
+  var strings = args[0];
+
+  if (strings == null || strings.raw === undefined) {
+    stringMode = false;
+    styles += handleInterpolation(mergedProps, registered, strings, false);
+  } else {
+    if (false) {}
+
+    styles += strings[0];
+  } // we start at 1 since we've already handled the first arg
+
+
+  for (var i = 1; i < args.length; i++) {
+    styles += handleInterpolation(mergedProps, registered, args[i], styles.charCodeAt(styles.length - 1) === 46);
+
+    if (stringMode) {
+      if (false) {}
+
+      styles += strings[i];
+    }
+  }
+
+  var sourceMap;
+
+  if (false) {} // using a global regex with .exec is stateful so lastIndex has to be reset each time
+
+
+  labelPattern.lastIndex = 0;
+  var identifierName = '';
+  var match; // https://esbench.com/bench/5b809c2cf2949800a0f61fb5
+
+  while ((match = labelPattern.exec(styles)) !== null) {
+    identifierName += '-' + // $FlowFixMe we know it's not null
+    match[1];
+  }
+
+  var name = Object(_emotion_hash__WEBPACK_IMPORTED_MODULE_0__["default"])(styles) + identifierName;
+
+  if (false) {}
+
+  return {
+    name: name,
+    styles: styles,
+    next: cursor
+  };
+};
+
+
+
+
+/***/ }),
+/* 227 */
+/*!******************************************************!*\
+  !*** ../node_modules/@emotion/hash/dist/hash.esm.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* eslint-disable */
+// Inspired by https://github.com/garycourt/murmurhash-js
+// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
+function murmur2(str) {
+  // 'm' and 'r' are mixing constants generated offline.
+  // They're not really 'magic', they just happen to work well.
+  // const m = 0x5bd1e995;
+  // const r = 24;
+  // Initialize the hash
+  var h = 0; // Mix 4 bytes at a time into the hash
+
+  var k,
+      i = 0,
+      len = str.length;
+
+  for (; len >= 4; ++i, len -= 4) {
+    k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
+    k =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
+    k ^=
+    /* k >>> r: */
+    k >>> 24;
+    h =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
+    /* Math.imul(h, m): */
+    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Handle the last few bytes of the input array
+
+
+  switch (len) {
+    case 3:
+      h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
+
+    case 2:
+      h ^= (str.charCodeAt(i + 1) & 0xff) << 8;
+
+    case 1:
+      h ^= str.charCodeAt(i) & 0xff;
+      h =
+      /* Math.imul(h, m): */
+      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Do a few final mixes of the hash to ensure the last few
+  // bytes are well-incorporated.
+
+
+  h ^= h >>> 13;
+  h =
+  /* Math.imul(h, m): */
+  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  return ((h ^ h >>> 15) >>> 0).toString(36);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (murmur2);
+
+
+/***/ }),
+/* 228 */
+/*!**************************************************************!*\
+  !*** ../node_modules/@emotion/unitless/dist/unitless.esm.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var unitlessKeys = {
+  animationIterationCount: 1,
+  borderImageOutset: 1,
+  borderImageSlice: 1,
+  borderImageWidth: 1,
+  boxFlex: 1,
+  boxFlexGroup: 1,
+  boxOrdinalGroup: 1,
+  columnCount: 1,
+  columns: 1,
+  flex: 1,
+  flexGrow: 1,
+  flexPositive: 1,
+  flexShrink: 1,
+  flexNegative: 1,
+  flexOrder: 1,
+  gridRow: 1,
+  gridRowEnd: 1,
+  gridRowSpan: 1,
+  gridRowStart: 1,
+  gridColumn: 1,
+  gridColumnEnd: 1,
+  gridColumnSpan: 1,
+  gridColumnStart: 1,
+  msGridRow: 1,
+  msGridRowSpan: 1,
+  msGridColumn: 1,
+  msGridColumnSpan: 1,
+  fontWeight: 1,
+  lineHeight: 1,
+  opacity: 1,
+  order: 1,
+  orphans: 1,
+  tabSize: 1,
+  widows: 1,
+  zIndex: 1,
+  zoom: 1,
+  WebkitLineClamp: 1,
+  // SVG-related properties
+  fillOpacity: 1,
+  floodOpacity: 1,
+  stopOpacity: 1,
+  strokeDasharray: 1,
+  strokeDashoffset: 1,
+  strokeMiterlimit: 1,
+  strokeOpacity: 1,
+  strokeWidth: 1
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (unitlessKeys);
+
+
+/***/ }),
+/* 229 */
+/*!****************************************************!*\
+  !*** ../node_modules/@emotion/css/dist/css.esm.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _emotion_serialize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/serialize */ 226);
+
+
+function css() {
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return Object(_emotion_serialize__WEBPACK_IMPORTED_MODULE_0__["serializeStyles"])(args);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (css);
+
+
+/***/ }),
+/* 230 */
+/*!******************************************!*\
+  !*** external "gatsby-plugin-dark-mode" ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("gatsby-plugin-dark-mode");
+
+/***/ }),
+/* 231 */
 /*!**********************************************!*\
   !*** ./app/shared/components/SiteFooter.jsx ***!
   \**********************************************/
@@ -6203,7 +8557,7 @@ function SiteFooter() {
 /* harmony default export */ __webpack_exports__["default"] = (SiteFooter);
 
 /***/ }),
-/* 215 */
+/* 232 */
 /*!***********************************!*\
   !*** ./app/screens/Home/index.js ***!
   \***********************************/
@@ -6215,7 +8569,7 @@ __webpack_require__.r(__webpack_exports__);
 // import {lazy} from 'react'
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
-  component: __webpack_require__(/*! ./components/HomeScreen */ 216).default,
+  component: __webpack_require__(/*! ./components/HomeScreen */ 233).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/HomeScreen')
@@ -6237,7 +8591,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 216 */
+/* 233 */
 /*!****************************************************!*\
   !*** ./app/screens/Home/components/HomeScreen.jsx ***!
   \****************************************************/
@@ -6248,12 +8602,12 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ScreenHelmet */ 218);
-/* harmony import */ var components_SiteContact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteContact */ 219);
-/* harmony import */ var components_Works__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/Works */ 221);
-/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! components/Posts */ 256);
-/* harmony import */ var _HomeSchema__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./HomeSchema */ 260);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ScreenHelmet */ 235);
+/* harmony import */ var components_SiteContact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteContact */ 236);
+/* harmony import */ var components_Works__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/Works */ 238);
+/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! components/Posts */ 273);
+/* harmony import */ var _HomeSchema__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./HomeSchema */ 277);
 
 
 
@@ -6303,7 +8657,7 @@ function HomeScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (HomeScreen);
 
 /***/ }),
-/* 217 */
+/* 234 */
 /*!****************************!*\
   !*** ./app/config/data.js ***!
   \****************************/
@@ -6362,7 +8716,7 @@ const ABOUT = 'Establecido en Peru, soy Javascript Developer enfocado en la crea
 });
 
 /***/ }),
-/* 218 */
+/* 235 */
 /*!************************************************!*\
   !*** ./app/shared/components/ScreenHelmet.jsx ***!
   \************************************************/
@@ -6434,7 +8788,7 @@ ScreenHelmet.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (ScreenHelmet);
 
 /***/ }),
-/* 219 */
+/* 236 */
 /*!***********************************************!*\
   !*** ./app/shared/components/SiteContact.jsx ***!
   \***********************************************/
@@ -6447,8 +8801,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var components_ExternalLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/ExternalLink */ 220);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var components_ExternalLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/ExternalLink */ 237);
 
 
 
@@ -6526,7 +8880,7 @@ SiteContact.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (SiteContact);
 
 /***/ }),
-/* 220 */
+/* 237 */
 /*!************************************************!*\
   !*** ./app/shared/components/ExternalLink.jsx ***!
   \************************************************/
@@ -6566,7 +8920,7 @@ ExternalLink.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (ExternalLink);
 
 /***/ }),
-/* 221 */
+/* 238 */
 /*!*****************************************!*\
   !*** ./app/shared/components/Works.jsx ***!
   \*****************************************/
@@ -6582,12 +8936,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 222);
-/* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 223);
-/* harmony import */ var hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/withCollection */ 224);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 251);
-/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 253);
-/* harmony import */ var _WorksList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./WorksList */ 254);
+/* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 239);
+/* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 240);
+/* harmony import */ var hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/withCollection */ 241);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 268);
+/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 270);
+/* harmony import */ var _WorksList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./WorksList */ 271);
 
 
 
@@ -6616,14 +8970,15 @@ function WorksComponent({
     var _context;
 
     body = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      block: true
+      block: true,
+      themeable: true
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
       className: "o-grid o-grid--gutter-3 u-list-reset"
     }, _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_0___default()(_context = [...new Array(3)]).call(_context, (_, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
       className: "o-grid__item u-12/12 u-6/12@tablet u-4/12@laptop",
       key: index
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "c-work u-relative u-overflow-hidden"
+      className: "c-work c-work--is-loading u-relative u-overflow-hidden"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
       className: "u-absolute u-left-0 u-top-0",
       style: {
@@ -6659,7 +9014,7 @@ const Works = Object(hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__[
 /* harmony default export */ __webpack_exports__["default"] = (Works);
 
 /***/ }),
-/* 222 */
+/* 239 */
 /*!************************************************!*\
   !*** ./app/shared/hoc/collection/PropTypes.js ***!
   \************************************************/
@@ -6692,7 +9047,7 @@ const stateShape = prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.shape({
 }).isRequired;
 
 /***/ }),
-/* 223 */
+/* 240 */
 /*!*****************************************!*\
   !*** ./app/shared/PropTypes/article.js ***!
   \*****************************************/
@@ -6725,7 +9080,7 @@ const articleShape = prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.shape({
 });
 
 /***/ }),
-/* 224 */
+/* 241 */
 /*!*****************************************************!*\
   !*** ./app/shared/hoc/collection/withCollection.js ***!
   \*****************************************************/
@@ -6740,13 +9095,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var recompose_getDisplayName__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! recompose/getDisplayName */ 225);
+/* harmony import */ var recompose_getDisplayName__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! recompose/getDisplayName */ 242);
 /* harmony import */ var recompose_getDisplayName__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(recompose_getDisplayName__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ 125);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/PropTypes */ 222);
-/* harmony import */ var app_selectors_collections__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/selectors/collections */ 226);
-/* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! app/actions/collections */ 232);
+/* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/PropTypes */ 239);
+/* harmony import */ var app_selectors_collections__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/selectors/collections */ 243);
+/* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! app/actions/collections */ 249);
 
 
 
@@ -6805,7 +9160,7 @@ function withCollection(WrappedComponent, collectionName) {
 /* harmony default export */ __webpack_exports__["default"] = (withCollection);
 
 /***/ }),
-/* 225 */
+/* 242 */
 /*!***************************************************!*\
   !*** ../node_modules/recompose/getDisplayName.js ***!
   \***************************************************/
@@ -6831,7 +9186,7 @@ var getDisplayName = function getDisplayName(Component) {
 exports.default = getDisplayName;
 
 /***/ }),
-/* 226 */
+/* 243 */
 /*!**************************************!*\
   !*** ./app/selectors/collections.js ***!
   \**************************************/
@@ -6844,7 +9199,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getItemState", function() { return getItemState; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCollection", function() { return getCollection; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCollectionState", function() { return getCollectionState; });
-/* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_values__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/object/values */ 227);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_values__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/object/values */ 244);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_values__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_object_values__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/instance/map */ 171);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_1__);
@@ -6957,44 +9312,44 @@ function getCollectionState({
 }
 
 /***/ }),
-/* 227 */
+/* 244 */
 /*!******************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs3/core-js-stable/object/values.js ***!
   \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! core-js-pure/stable/object/values */ 228);
+module.exports = __webpack_require__(/*! core-js-pure/stable/object/values */ 245);
 
 /***/ }),
-/* 228 */
+/* 245 */
 /*!************************************************************!*\
   !*** ../node_modules/core-js-pure/stable/object/values.js ***!
   \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parent = __webpack_require__(/*! ../../es/object/values */ 229);
+var parent = __webpack_require__(/*! ../../es/object/values */ 246);
 
 module.exports = parent;
 
 
 /***/ }),
-/* 229 */
+/* 246 */
 /*!********************************************************!*\
   !*** ../node_modules/core-js-pure/es/object/values.js ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es.object.values */ 230);
+__webpack_require__(/*! ../../modules/es.object.values */ 247);
 var path = __webpack_require__(/*! ../../internals/path */ 24);
 
 module.exports = path.Object.values;
 
 
 /***/ }),
-/* 230 */
+/* 247 */
 /*!****************************************************************!*\
   !*** ../node_modules/core-js-pure/modules/es.object.values.js ***!
   \****************************************************************/
@@ -7002,7 +9357,7 @@ module.exports = path.Object.values;
 /***/ (function(module, exports, __webpack_require__) {
 
 var $ = __webpack_require__(/*! ../internals/export */ 7);
-var $values = __webpack_require__(/*! ../internals/object-to-array */ 231).values;
+var $values = __webpack_require__(/*! ../internals/object-to-array */ 248).values;
 
 // `Object.values` method
 // https://tc39.github.io/ecma262/#sec-object.values
@@ -7014,7 +9369,7 @@ $({ target: 'Object', stat: true }, {
 
 
 /***/ }),
-/* 231 */
+/* 248 */
 /*!*****************************************************************!*\
   !*** ../node_modules/core-js-pure/internals/object-to-array.js ***!
   \*****************************************************************/
@@ -7056,7 +9411,7 @@ module.exports = {
 
 
 /***/ }),
-/* 232 */
+/* 249 */
 /*!************************************!*\
   !*** ./app/actions/collections.js ***!
   \************************************/
@@ -7069,15 +9424,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_COLLECTION", function() { return FETCH_COLLECTION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadItem", function() { return loadItem; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadCollection", function() { return loadCollection; });
-/* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/instance/sort */ 233);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/instance/sort */ 250);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_sort__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/promise */ 63);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ 238);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ 255);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var normalizr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! normalizr */ 239);
+/* harmony import */ var normalizr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! normalizr */ 256);
 /* harmony import */ var normalizr__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(normalizr__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var app_config_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/config/constants */ 240);
+/* harmony import */ var app_config_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/config/constants */ 257);
 
 
 
@@ -7120,7 +9475,7 @@ function loadItem(collectionName, fileName) {
 
   try {
     // eslint-disable-next-line
-    fileRequest = __webpack_require__(241)("./" + collectionName + '/' + fileName + ".md");
+    fileRequest = __webpack_require__(258)("./" + collectionName + '/' + fileName + ".md");
   } catch (error) {
     fileRequest = _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default.a.reject(error);
   }
@@ -7151,7 +9506,7 @@ function loadCollection(collectionName) {
 
   try {
     // eslint-disable-next-line
-    filesRequest = __webpack_require__(248)("./" + collectionName + ".config.js");
+    filesRequest = __webpack_require__(265)("./" + collectionName + ".config.js");
   } catch (error) {
     filesRequest = _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default.a.reject(error);
   }
@@ -7186,37 +9541,37 @@ function orderByDate(a, b) {
 }
 
 /***/ }),
-/* 233 */
+/* 250 */
 /*!******************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs3/core-js-stable/instance/sort.js ***!
   \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! core-js-pure/stable/instance/sort */ 234);
+module.exports = __webpack_require__(/*! core-js-pure/stable/instance/sort */ 251);
 
 /***/ }),
-/* 234 */
+/* 251 */
 /*!************************************************************!*\
   !*** ../node_modules/core-js-pure/stable/instance/sort.js ***!
   \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parent = __webpack_require__(/*! ../../es/instance/sort */ 235);
+var parent = __webpack_require__(/*! ../../es/instance/sort */ 252);
 
 module.exports = parent;
 
 
 /***/ }),
-/* 235 */
+/* 252 */
 /*!********************************************************!*\
   !*** ../node_modules/core-js-pure/es/instance/sort.js ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var sort = __webpack_require__(/*! ../array/virtual/sort */ 236);
+var sort = __webpack_require__(/*! ../array/virtual/sort */ 253);
 
 var ArrayPrototype = Array.prototype;
 
@@ -7227,21 +9582,21 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 236 */
+/* 253 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js-pure/es/array/virtual/sort.js ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../../modules/es.array.sort */ 237);
+__webpack_require__(/*! ../../../modules/es.array.sort */ 254);
 var entryVirtual = __webpack_require__(/*! ../../../internals/entry-virtual */ 48);
 
 module.exports = entryVirtual('Array').sort;
 
 
 /***/ }),
-/* 237 */
+/* 254 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js-pure/modules/es.array.sort.js ***!
   \*************************************************************/
@@ -7284,7 +9639,7 @@ $({ target: 'Array', proto: true, forced: FORCED }, {
 
 
 /***/ }),
-/* 238 */
+/* 255 */
 /*!*************************!*\
   !*** external "moment" ***!
   \*************************/
@@ -7294,7 +9649,7 @@ $({ target: 'Array', proto: true, forced: FORCED }, {
 module.exports = require("moment");
 
 /***/ }),
-/* 239 */
+/* 256 */
 /*!****************************!*\
   !*** external "normalizr" ***!
   \****************************/
@@ -7304,7 +9659,7 @@ module.exports = require("moment");
 module.exports = require("normalizr");
 
 /***/ }),
-/* 240 */
+/* 257 */
 /*!*********************************!*\
   !*** ./app/config/constants.js ***!
   \*********************************/
@@ -7317,7 +9672,7 @@ __webpack_require__.r(__webpack_exports__);
 const COLLECTION_DATE_FORMAT = 'DD-MM-YYYY'; // eslint-disable-line
 
 /***/ }),
-/* 241 */
+/* 258 */
 /*!********************************************************************************************************************************!*\
   !*** ../data sync ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js ^\.\/.*\.md$ ***!
   \********************************************************************************************************************************/
@@ -7325,12 +9680,12 @@ const COLLECTION_DATE_FORMAT = 'DD-MM-YYYY'; // eslint-disable-line
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./posts/configurar-webpack-5.md": 242,
-	"./works/fixbrand.md": 243,
-	"./works/gean-marroquin.md": 244,
-	"./works/la-glorieta.md": 245,
-	"./works/ricarica-travel.md": 246,
-	"./works/yilancorp.md": 247
+	"./posts/configurar-webpack-5.md": 259,
+	"./works/fixbrand.md": 260,
+	"./works/gean-marroquin.md": 261,
+	"./works/la-glorieta.md": 262,
+	"./works/ricarica-travel.md": 263,
+	"./works/yilancorp.md": 264
 };
 
 
@@ -7351,10 +9706,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 241;
+webpackContext.id = 258;
 
 /***/ }),
-/* 242 */
+/* 259 */
 /*!********************************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/posts/configurar-webpack-5.md ***!
   \********************************************************************************************************************************************/
@@ -7364,7 +9719,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.configurar-webpack-5 */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/posts/configurar-webpack-5.md */ 315 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/posts/configurar-webpack-5.md */ 331 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7372,7 +9727,7 @@ webpackContext.id = 241;
   
 
 /***/ }),
-/* 243 */
+/* 260 */
 /*!********************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/works/fixbrand.md ***!
   \********************************************************************************************************************************/
@@ -7382,7 +9737,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.fixbrand */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/fixbrand.md */ 316 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/fixbrand.md */ 332 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7390,7 +9745,7 @@ webpackContext.id = 241;
   
 
 /***/ }),
-/* 244 */
+/* 261 */
 /*!**************************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/works/gean-marroquin.md ***!
   \**************************************************************************************************************************************/
@@ -7400,7 +9755,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.gean-marroquin */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/gean-marroquin.md */ 317 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/gean-marroquin.md */ 333 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7408,7 +9763,7 @@ webpackContext.id = 241;
   
 
 /***/ }),
-/* 245 */
+/* 262 */
 /*!***********************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/works/la-glorieta.md ***!
   \***********************************************************************************************************************************/
@@ -7418,7 +9773,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.la-glorieta */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/la-glorieta.md */ 318 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/la-glorieta.md */ 334 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7426,7 +9781,7 @@ webpackContext.id = 241;
   
 
 /***/ }),
-/* 246 */
+/* 263 */
 /*!***************************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/works/ricarica-travel.md ***!
   \***************************************************************************************************************************************/
@@ -7436,7 +9791,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.ricarica-travel */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/ricarica-travel.md */ 319 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/ricarica-travel.md */ 335 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7444,7 +9799,7 @@ webpackContext.id = 241;
   
 
 /***/ }),
-/* 247 */
+/* 264 */
 /*!*********************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown.js!../data/works/yilancorp.md ***!
   \*********************************************************************************************************************************/
@@ -7454,7 +9809,7 @@ webpackContext.id = 241;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.yilancorp */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/yilancorp.md */ 320 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown.js!../data/works/yilancorp.md */ 336 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -7462,7 +9817,7 @@ webpackContext.id = 241;
   
 
 /***/ }),
-/* 248 */
+/* 265 */
 /*!*********************************************************************************************************************!*\
   !*** ../data sync ../lib/loaders/lazy-dir.js?{"documentEventName":"lazyDirLoaderFilesChange"} ^\.\/.*\.config\.js$ ***!
   \*********************************************************************************************************************/
@@ -7470,8 +9825,8 @@ webpackContext.id = 241;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./posts.config.js": 249,
-	"./works.config.js": 250
+	"./posts.config.js": 266,
+	"./works.config.js": 267
 };
 
 
@@ -7492,10 +9847,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 248;
+webpackContext.id = 265;
 
 /***/ }),
-/* 249 */
+/* 266 */
 /*!***********************************************************************************************************!*\
   !*** ../lib/loaders/lazy-dir.js?{"documentEventName":"lazyDirLoaderFilesChange"}!../data/posts.config.js ***!
   \***********************************************************************************************************/
@@ -7507,7 +9862,7 @@ webpackContext.id = 248;
       try {
         /* lazy load group of files */
         Promise.resolve(/*! require.ensure | data.posts */).then((function (require) {
-          var requireContext = __webpack_require__(321);
+          var requireContext = __webpack_require__(337);
           var modules = requireContext.keys().map(function (fileFullName) {
             return requireContext(fileFullName);
           });
@@ -7523,7 +9878,7 @@ webpackContext.id = 248;
   
 
 /***/ }),
-/* 250 */
+/* 267 */
 /*!***********************************************************************************************************!*\
   !*** ../lib/loaders/lazy-dir.js?{"documentEventName":"lazyDirLoaderFilesChange"}!../data/works.config.js ***!
   \***********************************************************************************************************/
@@ -7535,7 +9890,7 @@ webpackContext.id = 248;
       try {
         /* lazy load group of files */
         Promise.resolve(/*! require.ensure | data.works */).then((function (require) {
-          var requireContext = __webpack_require__(323);
+          var requireContext = __webpack_require__(339);
           var modules = requireContext.keys().map(function (fileFullName) {
             return requireContext(fileFullName);
           });
@@ -7551,7 +9906,7 @@ webpackContext.id = 248;
   
 
 /***/ }),
-/* 251 */
+/* 268 */
 /*!***********************************************!*\
   !*** ./app/shared/components/ShimmerText.jsx ***!
   \***********************************************/
@@ -7564,7 +9919,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ 252);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ 269);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -7574,12 +9929,14 @@ function ShimmerText({
   darken = false,
   block = false,
   text,
-  children
+  children,
+  themeable = false
 }) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('c-shimmer-text', {
       'c-shimmer-text--darken': darken,
-      'c-shimmer-text--block': block
+      'c-shimmer-text--block': block,
+      'c-shimmer-text--themeable': themeable
     })
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "c-shimmer-text__text u-blokk-font"
@@ -7590,12 +9947,13 @@ ShimmerText.propTypes = {
   darken: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
   block: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
   text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node,
+  themeable: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (ShimmerText);
 
 /***/ }),
-/* 252 */
+/* 269 */
 /*!*****************************!*\
   !*** external "classnames" ***!
   \*****************************/
@@ -7605,7 +9963,7 @@ ShimmerText.propTypes = {
 module.exports = require("classnames");
 
 /***/ }),
-/* 253 */
+/* 270 */
 /*!*********************************************!*\
   !*** ./app/shared/components/SiteError.jsx ***!
   \*********************************************/
@@ -7652,7 +10010,7 @@ SiteError.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (SiteError);
 
 /***/ }),
-/* 254 */
+/* 271 */
 /*!*********************************************!*\
   !*** ./app/shared/components/WorksList.jsx ***!
   \*********************************************/
@@ -7669,7 +10027,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Work__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Work */ 255);
+/* harmony import */ var _Work__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Work */ 272);
 
 
 
@@ -7712,7 +10070,7 @@ WorksList.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (WorksList);
 
 /***/ }),
-/* 255 */
+/* 272 */
 /*!****************************************!*\
   !*** ./app/shared/components/Work.jsx ***!
   \****************************************/
@@ -7721,7 +10079,7 @@ WorksList.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! PropTypes/article */ 223);
+/* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! PropTypes/article */ 240);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ 122);
@@ -7757,7 +10115,7 @@ Work.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (Work);
 
 /***/ }),
-/* 256 */
+/* 273 */
 /*!*****************************************!*\
   !*** ./app/shared/components/Posts.jsx ***!
   \*****************************************/
@@ -7773,12 +10131,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 222);
-/* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 223);
-/* harmony import */ var hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/withCollection */ 224);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 251);
-/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 253);
-/* harmony import */ var _PostsList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./PostsList */ 257);
+/* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 239);
+/* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 240);
+/* harmony import */ var hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/withCollection */ 241);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 268);
+/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 270);
+/* harmony import */ var _PostsList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./PostsList */ 274);
 
 
 
@@ -7807,7 +10165,9 @@ function PostsComponent({
 
     body = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
       className: "u-list-reset u-m0"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__["default"], null, _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_0___default()(_context = [...new Array(3)]).call(_context, (_, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      themeable: true
+    }, _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_0___default()(_context = [...new Array(3)]).call(_context, (_, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
       className: index === 2 ? '' : 'u-pb4',
       key: index
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
@@ -7838,7 +10198,7 @@ const Posts = Object(hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__[
 /* harmony default export */ __webpack_exports__["default"] = (Posts);
 
 /***/ }),
-/* 257 */
+/* 274 */
 /*!*********************************************!*\
   !*** ./app/shared/components/PostsList.jsx ***!
   \*********************************************/
@@ -7855,7 +10215,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Post */ 258);
+/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Post */ 275);
 
 
 
@@ -7890,7 +10250,7 @@ PostsList.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (PostsList);
 
 /***/ }),
-/* 258 */
+/* 275 */
 /*!****************************************!*\
   !*** ./app/shared/components/Post.jsx ***!
   \****************************************/
@@ -7905,7 +10265,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ 122);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 259);
+/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 276);
 
 
 
@@ -7914,13 +10274,13 @@ __webpack_require__.r(__webpack_exports__);
 function Post({
   post
 }) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "u-fz-sm u-mb1 u-muted"
-  }, Object(utils_formatter__WEBPACK_IMPORTED_MODULE_3__["formatDate"])(post.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, post.readingTime)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "u-fz-h2 u-mb0 u-line-height-1"
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "u-fz-h2 u-mt0 u-mb2 u-line-height-1"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/blog/".concat(post.fileName)
-  }, post.title)));
+  }, post.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "u-fz-sm u-muted"
+  }, Object(utils_formatter__WEBPACK_IMPORTED_MODULE_3__["formatDate"])(post.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, post.readingTime)));
 }
 
 Post.propTypes = {
@@ -7935,7 +10295,7 @@ Post.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (Post);
 
 /***/ }),
-/* 259 */
+/* 276 */
 /*!***************************************!*\
   !*** ./app/shared/utils/formatter.js ***!
   \***************************************/
@@ -7945,9 +10305,9 @@ Post.propTypes = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return formatDate; });
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ 238);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ 255);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var app_config_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/constants */ 240);
+/* harmony import */ var app_config_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/constants */ 257);
 
 
 /**
@@ -7961,7 +10321,7 @@ function formatDate(date) {
 }
 
 /***/ }),
-/* 260 */
+/* 277 */
 /*!****************************************************!*\
   !*** ./app/screens/Home/components/HomeSchema.tsx ***!
   \****************************************************/
@@ -7972,9 +10332,9 @@ function formatDate(date) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-schemaorg */ 261);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-schemaorg */ 278);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/schema */ 262);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/schema */ 279);
 // TODO: apply i18n
 
 
@@ -7994,7 +10354,7 @@ function HomeSchema() {
 /* harmony default export */ __webpack_exports__["default"] = (HomeSchema);
 
 /***/ }),
-/* 261 */
+/* 278 */
 /*!**********************************!*\
   !*** external "react-schemaorg" ***!
   \**********************************/
@@ -8004,7 +10364,7 @@ function HomeSchema() {
 module.exports = require("react-schemaorg");
 
 /***/ }),
-/* 262 */
+/* 279 */
 /*!******************************!*\
   !*** ./app/shared/schema.ts ***!
   \******************************/
@@ -8052,10 +10412,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/instance/concat */ 2);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! moment */ 238);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! moment */ 255);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var app_config_constants__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/config/constants */ 240);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/config/data */ 217);
+/* harmony import */ var app_config_constants__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/config/constants */ 257);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/config/data */ 234);
 
 
 
@@ -8244,7 +10604,7 @@ const getBreadCrumList = ({
 // }
 
 /***/ }),
-/* 263 */
+/* 280 */
 /*!************************************!*\
   !*** ./app/screens/About/index.js ***!
   \************************************/
@@ -8257,7 +10617,7 @@ __webpack_require__.r(__webpack_exports__);
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'about',
-  component: __webpack_require__(/*! ./components/AboutScreen */ 264).default,
+  component: __webpack_require__(/*! ./components/AboutScreen */ 281).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/AboutScreen')
@@ -8279,7 +10639,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 264 */
+/* 281 */
 /*!******************************************************!*\
   !*** ./app/screens/About/components/AboutScreen.jsx ***!
   \******************************************************/
@@ -8292,11 +10652,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var components_ExternalLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/ExternalLink */ 220);
-/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/ScreenHelmet */ 218);
-/* harmony import */ var _config_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config/data */ 265);
-/* harmony import */ var _AboutSchema__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AboutSchema */ 266);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var components_ExternalLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/ExternalLink */ 237);
+/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/ScreenHelmet */ 235);
+/* harmony import */ var _config_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config/data */ 282);
+/* harmony import */ var _AboutSchema__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AboutSchema */ 283);
 
 
 
@@ -8400,7 +10760,7 @@ function AboutScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (AboutScreen);
 
 /***/ }),
-/* 265 */
+/* 282 */
 /*!******************************************!*\
   !*** ./app/screens/About/config/data.js ***!
   \******************************************/
@@ -8604,7 +10964,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 266 */
+/* 283 */
 /*!******************************************************!*\
   !*** ./app/screens/About/components/AboutSchema.tsx ***!
   \******************************************************/
@@ -8633,10 +10993,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-schemaorg */ 261);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-schemaorg */ 278);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/shared/schema */ 262);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/shared/schema */ 279);
 
 
 
@@ -8683,7 +11043,7 @@ function AboutSchema() {
 /* harmony default export */ __webpack_exports__["default"] = (AboutSchema);
 
 /***/ }),
-/* 267 */
+/* 284 */
 /*!************************************!*\
   !*** ./app/screens/Works/index.js ***!
   \************************************/
@@ -8692,15 +11052,15 @@ function AboutSchema() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _screens_Works__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Works */ 268);
-/* harmony import */ var _screens_Work__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Work */ 270);
+/* harmony import */ var _screens_Works__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Works */ 285);
+/* harmony import */ var _screens_Work__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Work */ 287);
 // import {lazy} from 'react'
 // import topBar from 'utils/topBar'
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'works',
-  component: __webpack_require__(/*! ./components/WorksScreen */ 279).default,
+  component: __webpack_require__(/*! ./components/WorksScreen */ 296).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/WorksScreen')
@@ -8724,7 +11084,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 268 */
+/* 285 */
 /*!**************************************************!*\
   !*** ./app/screens/Works/screens/Works/index.js ***!
   \**************************************************/
@@ -8733,7 +11093,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_WorksScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorksScreen */ 269);
+/* harmony import */ var _components_WorksScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorksScreen */ 286);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: '',
@@ -8742,7 +11102,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 269 */
+/* 286 */
 /*!********************************************************************!*\
   !*** ./app/screens/Works/screens/Works/components/WorksScreen.jsx ***!
   \********************************************************************/
@@ -8753,9 +11113,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ScreenHelmet */ 218);
-/* harmony import */ var components_Works__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/Works */ 221);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ScreenHelmet */ 235);
+/* harmony import */ var components_Works__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/Works */ 238);
 
 
 
@@ -8776,7 +11136,7 @@ function WorksScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (WorksScreen);
 
 /***/ }),
-/* 270 */
+/* 287 */
 /*!*************************************************!*\
   !*** ./app/screens/Works/screens/Work/index.js ***!
   \*************************************************/
@@ -8785,7 +11145,7 @@ function WorksScreen() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_WorkScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorkScreen */ 271);
+/* harmony import */ var _components_WorkScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorkScreen */ 288);
  // eslint-disable-line
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -8795,7 +11155,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 271 */
+/* 288 */
 /*!******************************************************************!*\
   !*** ./app/screens/Works/screens/Work/components/WorkScreen.jsx ***!
   \******************************************************************/
@@ -8809,9 +11169,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 272);
-/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/SiteArticle */ 273);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 289);
+/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/SiteArticle */ 290);
 
 
 
@@ -8827,7 +11187,7 @@ function WorkScreen(props) {
 /* harmony default export */ __webpack_exports__["default"] = (Object(hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__["default"])(WorkScreen, 'works'));
 
 /***/ }),
-/* 272 */
+/* 289 */
 /*!*********************************************************!*\
   !*** ./app/shared/hoc/collection/withCollectionItem.js ***!
   \*********************************************************/
@@ -8844,11 +11204,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ 125);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var recompose_getDisplayName__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recompose/getDisplayName */ 225);
+/* harmony import */ var recompose_getDisplayName__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recompose/getDisplayName */ 242);
 /* harmony import */ var recompose_getDisplayName__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(recompose_getDisplayName__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/PropTypes */ 222);
-/* harmony import */ var app_selectors_collections__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/selectors/collections */ 226);
-/* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! app/actions/collections */ 232);
+/* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/PropTypes */ 239);
+/* harmony import */ var app_selectors_collections__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/selectors/collections */ 243);
+/* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! app/actions/collections */ 249);
 
 
 
@@ -8939,7 +11299,7 @@ function withItem(WrappedComponent, collectionName) {
 /* harmony default export */ __webpack_exports__["default"] = (withItem);
 
 /***/ }),
-/* 273 */
+/* 290 */
 /*!***********************************************!*\
   !*** ./app/shared/components/SiteArticle.jsx ***!
   \***********************************************/
@@ -8954,14 +11314,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 222);
-/* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 223);
-/* harmony import */ var app_screens_NotFound_components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/NotFound/components/NotFoundScreen */ 274);
-/* harmony import */ var components_Hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/Hero */ 275);
-/* harmony import */ var components_MarkdownBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/MarkdownBody */ 276);
-/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! components/ScreenHelmet */ 218);
-/* harmony import */ var components_ArticleHelmet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! components/ArticleHelmet */ 277);
-/* harmony import */ var lib_init_tennor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lib/init-tennor */ 278);
+/* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 239);
+/* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 240);
+/* harmony import */ var app_screens_NotFound_components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/NotFound/components/NotFoundScreen */ 291);
+/* harmony import */ var components_Hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/Hero */ 292);
+/* harmony import */ var components_MarkdownBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/MarkdownBody */ 293);
+/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! components/ScreenHelmet */ 235);
+/* harmony import */ var components_ArticleHelmet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! components/ArticleHelmet */ 294);
+/* harmony import */ var lib_init_tennor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lib/init-tennor */ 295);
 
 
 
@@ -9042,7 +11402,7 @@ SiteArticle.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (SiteArticle);
 
 /***/ }),
-/* 274 */
+/* 291 */
 /*!************************************************************!*\
   !*** ./app/screens/NotFound/components/NotFoundScreen.jsx ***!
   \************************************************************/
@@ -9055,8 +11415,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteError */ 253);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteError */ 270);
 
 
 
@@ -9078,7 +11438,7 @@ NotFoundScreen.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (NotFoundScreen);
 
 /***/ }),
-/* 275 */
+/* 292 */
 /*!****************************************!*\
   !*** ./app/shared/components/Hero.jsx ***!
   \****************************************/
@@ -9091,9 +11451,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 251);
-/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 259);
-/* harmony import */ var components_ExternalLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/ExternalLink */ 220);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 268);
+/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 276);
+/* harmony import */ var components_ExternalLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/ExternalLink */ 237);
 
 
 
@@ -9154,7 +11514,7 @@ Hero.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (Hero);
 
 /***/ }),
-/* 276 */
+/* 293 */
 /*!************************************************!*\
   !*** ./app/shared/components/MarkdownBody.jsx ***!
   \************************************************/
@@ -9167,7 +11527,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 251);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 268);
 
 
 
@@ -9179,7 +11539,9 @@ function MarkdownBody({
   if (isLoading) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "o-wrapper o-wrapper--3 u-pb5"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      themeable: true
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "u-block u-pb3 u-fz-h00 u-line-height-1",
       "aria-label": "cargando"
     }, "Lorem"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -9205,7 +11567,7 @@ MarkdownBody.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (MarkdownBody);
 
 /***/ }),
-/* 277 */
+/* 294 */
 /*!*************************************************!*\
   !*** ./app/shared/components/ArticleHelmet.jsx ***!
   \*************************************************/
@@ -9222,7 +11584,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-helmet */ 126);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/config/data */ 217);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/config/data */ 234);
 
 
 
@@ -9267,7 +11629,7 @@ ArticleHelmet.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (ArticleHelmet);
 
 /***/ }),
-/* 278 */
+/* 295 */
 /*!*****************************!*\
   !*** ../lib/init-tennor.js ***!
   \*****************************/
@@ -9337,7 +11699,7 @@ const embedurl = 'https://tenor.com/embed/';
 });
 
 /***/ }),
-/* 279 */
+/* 296 */
 /*!******************************************************!*\
   !*** ./app/screens/Works/components/WorksScreen.jsx ***!
   \******************************************************/
@@ -9365,7 +11727,7 @@ WorksScreen.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (WorksScreen);
 
 /***/ }),
-/* 280 */
+/* 297 */
 /*!***********************************!*\
   !*** ./app/screens/Blog/index.js ***!
   \***********************************/
@@ -9374,15 +11736,15 @@ WorksScreen.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _screens_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Post */ 281);
-/* harmony import */ var _screens_Posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Posts */ 291);
+/* harmony import */ var _screens_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Post */ 298);
+/* harmony import */ var _screens_Posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Posts */ 307);
 // import {lazy} from 'react'
 // import topBar from 'utils/topBar'
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'blog',
-  component: __webpack_require__(/*! ./components/BlogScreen */ 294).default,
+  component: __webpack_require__(/*! ./components/BlogScreen */ 310).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/BlogScreen')
@@ -9406,7 +11768,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 281 */
+/* 298 */
 /*!************************************************!*\
   !*** ./app/screens/Blog/screens/Post/index.js ***!
   \************************************************/
@@ -9419,7 +11781,7 @@ __webpack_require__.r(__webpack_exports__);
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: ':fileName',
-  component: __webpack_require__(/*! ./components/PostScreen */ 282).default,
+  component: __webpack_require__(/*! ./components/PostScreen */ 299).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/PostScreen')
@@ -9441,7 +11803,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 282 */
+/* 299 */
 /*!*****************************************************************!*\
   !*** ./app/screens/Blog/screens/Post/components/PostScreen.jsx ***!
   \*****************************************************************/
@@ -9455,11 +11817,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 272);
-/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/SiteArticle */ 273);
-/* harmony import */ var _PostSchema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PostSchema */ 283);
-/* harmony import */ var _PostComments__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PostComments */ 284);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 289);
+/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/SiteArticle */ 290);
+/* harmony import */ var _PostSchema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PostSchema */ 300);
+/* harmony import */ var _PostComments__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PostComments */ 301);
 
 
 
@@ -9480,7 +11842,7 @@ function PostScreen(props) {
 /* harmony default export */ __webpack_exports__["default"] = (Object(hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__["default"])(PostScreen, 'posts'));
 
 /***/ }),
-/* 283 */
+/* 300 */
 /*!*****************************************************************!*\
   !*** ./app/screens/Blog/screens/Post/components/PostSchema.tsx ***!
   \*****************************************************************/
@@ -9511,10 +11873,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 261);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 278);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/shared/schema */ 262);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/shared/schema */ 279);
 
 
 
@@ -9591,7 +11953,7 @@ function PostSchema({
 /* harmony default export */ __webpack_exports__["default"] = (PostSchema);
 
 /***/ }),
-/* 284 */
+/* 301 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Post/components/PostComments.jsx ***!
   \*******************************************************************/
@@ -9604,10 +11966,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-disqus/components/Disqus */ 285);
+/* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-disqus/components/Disqus */ 302);
 /* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var app_shared_PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/PropTypes/article */ 223);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var app_shared_PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/PropTypes/article */ 240);
 
 
 
@@ -9647,7 +12009,7 @@ PostComments.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (PostComments);
 
 /***/ }),
-/* 285 */
+/* 302 */
 /*!*****************************************************************!*\
   !*** ../node_modules/gatsby-plugin-disqus/components/Disqus.js ***!
   \*****************************************************************/
@@ -9657,22 +12019,22 @@ PostComments.propTypes = {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 286);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 303);
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ 287));
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ 304));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ 288));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ 305));
 
-var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ 289));
+var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ 220));
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ 116));
 
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ 201));
 
-var _utils = __webpack_require__(/*! ../utils */ 290);
+var _utils = __webpack_require__(/*! ../utils */ 306);
 
 var _jsxFileName = "/Users/brettstevenson/Desktop/Folder/gatsby-plugin-workspace/gatsby-plugin-disqus/src/components/Disqus.jsx";
 
@@ -9804,7 +12166,7 @@ Disqus.propTypes = {
 };
 
 /***/ }),
-/* 286 */
+/* 303 */
 /*!***********************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
   \***********************************************************************/
@@ -9820,7 +12182,7 @@ function _interopRequireDefault(obj) {
 module.exports = _interopRequireDefault;
 
 /***/ }),
-/* 287 */
+/* 304 */
 /*!*********************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/extends.js ***!
   \*********************************************************/
@@ -9848,7 +12210,7 @@ function _extends() {
 module.exports = _extends;
 
 /***/ }),
-/* 288 */
+/* 305 */
 /*!******************************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
   \******************************************************************************/
@@ -9873,23 +12235,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 module.exports = _objectWithoutPropertiesLoose;
 
 /***/ }),
-/* 289 */
-/*!***************************************************************!*\
-  !*** ../node_modules/@babel/runtime/helpers/inheritsLoose.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  subClass.__proto__ = superClass;
-}
-
-module.exports = _inheritsLoose;
-
-/***/ }),
-/* 290 */
+/* 306 */
 /*!*****************************************************!*\
   !*** ../node_modules/gatsby-plugin-disqus/utils.js ***!
   \*****************************************************/
@@ -9899,7 +12245,7 @@ module.exports = _inheritsLoose;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 286);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 303);
 
 exports.__esModule = true;
 exports.insertScript = insertScript;
@@ -9987,7 +12333,7 @@ function shallowComparison(currentProps, nextProps) {
 }
 
 /***/ }),
-/* 291 */
+/* 307 */
 /*!*************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/index.js ***!
   \*************************************************/
@@ -9996,7 +12342,7 @@ function shallowComparison(currentProps, nextProps) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_PostsScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/PostsScreen */ 292);
+/* harmony import */ var _components_PostsScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/PostsScreen */ 308);
  // eslint-disable-line
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -10006,7 +12352,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 292 */
+/* 308 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/components/PostsScreen.jsx ***!
   \*******************************************************************/
@@ -10017,10 +12363,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ScreenHelmet */ 218);
-/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/Posts */ 256);
-/* harmony import */ var _PostsSchema__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PostsSchema */ 293);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ScreenHelmet */ 235);
+/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/Posts */ 273);
+/* harmony import */ var _PostsSchema__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PostsSchema */ 309);
 
 
 
@@ -10057,7 +12403,7 @@ function PostsScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (PostsScreen);
 
 /***/ }),
-/* 293 */
+/* 309 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/components/PostsSchema.tsx ***!
   \*******************************************************************/
@@ -10088,11 +12434,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 261);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 278);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var app_shared_hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/shared/hoc/collection/withCollection */ 224);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! app/shared/schema */ 262);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var app_shared_hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/shared/hoc/collection/withCollection */ 241);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! app/shared/schema */ 279);
 
 
 
@@ -10168,7 +12514,7 @@ function PostsSchema({
 /* harmony default export */ __webpack_exports__["default"] = (Object(app_shared_hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_13__["default"])(PostsSchema, 'posts'));
 
 /***/ }),
-/* 294 */
+/* 310 */
 /*!****************************************************!*\
   !*** ./app/screens/Blog/components/BlogScreen.jsx ***!
   \****************************************************/
@@ -10196,7 +12542,7 @@ BlogScreen.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (BlogScreen);
 
 /***/ }),
-/* 295 */
+/* 311 */
 /*!**************************************!*\
   !*** ./app/screens/Contact/index.js ***!
   \**************************************/
@@ -10209,7 +12555,7 @@ __webpack_require__.r(__webpack_exports__);
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'contact',
-  component: __webpack_require__(/*! ./components/ContactScreen */ 296).default,
+  component: __webpack_require__(/*! ./components/ContactScreen */ 312).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/ContactScreen')
@@ -10231,7 +12577,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 296 */
+/* 312 */
 /*!**********************************************************!*\
   !*** ./app/screens/Contact/components/ContactScreen.jsx ***!
   \**********************************************************/
@@ -10242,9 +12588,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/data */ 217);
-/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ScreenHelmet */ 218);
-/* harmony import */ var components_SiteContact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteContact */ 219);
+/* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/data */ 234);
+/* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ScreenHelmet */ 235);
+/* harmony import */ var components_SiteContact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteContact */ 236);
 
 
 
@@ -10264,7 +12610,7 @@ function ContactScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (ContactScreen);
 
 /***/ }),
-/* 297 */
+/* 313 */
 /*!***************************************!*\
   !*** ./app/screens/NotFound/index.js ***!
   \***************************************/
@@ -10273,7 +12619,7 @@ function ContactScreen() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/NotFoundScreen */ 274);
+/* harmony import */ var _components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/NotFoundScreen */ 291);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: '*',
@@ -10282,7 +12628,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 298 */
+/* 314 */
 /*!*************************************!*\
   !*** ./app/store/configureStore.js ***!
   \*************************************/
@@ -10291,10 +12637,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 299);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 315);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _rootReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rootReducer */ 300);
-/* harmony import */ var _middlewares__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middlewares */ 304);
+/* harmony import */ var _rootReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rootReducer */ 316);
+/* harmony import */ var _middlewares__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middlewares */ 320);
 
 
 
@@ -10311,7 +12657,7 @@ function configureStore(initialState, history) {
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
 
 /***/ }),
-/* 299 */
+/* 315 */
 /*!************************!*\
   !*** external "redux" ***!
   \************************/
@@ -10321,7 +12667,7 @@ function configureStore(initialState, history) {
 module.exports = require("redux");
 
 /***/ }),
-/* 300 */
+/* 316 */
 /*!**********************************!*\
   !*** ./app/store/rootReducer.js ***!
   \**********************************/
@@ -10348,11 +12694,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/defineProperty */ 176);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! redux */ 299);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! redux */ 315);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! connected-react-router */ 123);
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(connected_react_router__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var app_reducers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/reducers */ 301);
+/* harmony import */ var app_reducers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/reducers */ 317);
 
 
 
@@ -10378,7 +12724,7 @@ const createRootReducer = history => Object(redux__WEBPACK_IMPORTED_MODULE_9__["
 /* harmony default export */ __webpack_exports__["default"] = (createRootReducer);
 
 /***/ }),
-/* 301 */
+/* 317 */
 /*!*******************************!*\
   !*** ./app/reducers/index.js ***!
   \*******************************/
@@ -10387,14 +12733,14 @@ const createRootReducer = history => Object(redux__WEBPACK_IMPORTED_MODULE_9__["
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _collections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collections */ 302);
+/* harmony import */ var _collections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collections */ 318);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "collections", function() { return _collections__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 
 
 /***/ }),
-/* 302 */
+/* 318 */
 /*!*************************************!*\
   !*** ./app/reducers/collections.js ***!
   \*************************************/
@@ -10422,9 +12768,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/defineProperty */ 176);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! deepmerge */ 303);
+/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! deepmerge */ 319);
 /* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(deepmerge__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/actions/collections */ 232);
+/* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/actions/collections */ 249);
 
 
 
@@ -10573,7 +12919,7 @@ function collections(state = {}, {
 }
 
 /***/ }),
-/* 303 */
+/* 319 */
 /*!****************************!*\
   !*** external "deepmerge" ***!
   \****************************/
@@ -10583,7 +12929,7 @@ function collections(state = {}, {
 module.exports = require("deepmerge");
 
 /***/ }),
-/* 304 */
+/* 320 */
 /*!**********************************!*\
   !*** ./app/store/middlewares.js ***!
   \**********************************/
@@ -10592,13 +12938,13 @@ module.exports = require("deepmerge");
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 299);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 315);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ 305);
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ 321);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-promise-middleware */ 306);
+/* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-promise-middleware */ 322);
 /* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-immutable-state-invariant */ 307);
+/* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-immutable-state-invariant */ 323);
 /* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__);
 
 
@@ -10614,7 +12960,7 @@ window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__({
 /* harmony default export */ __webpack_exports__["default"] = (middlewares);
 
 /***/ }),
-/* 305 */
+/* 321 */
 /*!******************************!*\
   !*** external "redux-thunk" ***!
   \******************************/
@@ -10624,7 +12970,7 @@ window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__({
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 306 */
+/* 322 */
 /*!*******************************************!*\
   !*** external "redux-promise-middleware" ***!
   \*******************************************/
@@ -10634,7 +12980,7 @@ module.exports = require("redux-thunk");
 module.exports = require("redux-promise-middleware");
 
 /***/ }),
-/* 307 */
+/* 323 */
 /*!**************************************************!*\
   !*** external "redux-immutable-state-invariant" ***!
   \**************************************************/
@@ -10644,7 +12990,7 @@ module.exports = require("redux-promise-middleware");
 module.exports = require("redux-immutable-state-invariant");
 
 /***/ }),
-/* 308 */
+/* 324 */
 /*!**********************************!*\
   !*** ./static-build/template.js ***!
   \**********************************/
@@ -10654,11 +13000,11 @@ module.exports = require("redux-immutable-state-invariant");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return template; });
-/* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/json/stringify */ 309);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/json/stringify */ 325);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/promise */ 63);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cheerio */ 313);
+/* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cheerio */ 329);
 /* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cheerio__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -10671,7 +13017,7 @@ function template({
 }) {
   return new _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default.a((resolve, reject) => {
     try {
-      const markup = __webpack_require__(/*! !html-loader!../../dist/index.html */ 314); // eslint-disable-line
+      const markup = __webpack_require__(/*! !html-loader!../../dist/index.html */ 330); // eslint-disable-line
 
 
       const $ = cheerio__WEBPACK_IMPORTED_MODULE_2___default.a.load(markup);
@@ -10686,37 +13032,37 @@ function template({
 }
 
 /***/ }),
-/* 309 */
+/* 325 */
 /*!*******************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs3/core-js-stable/json/stringify.js ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! core-js-pure/stable/json/stringify */ 310);
+module.exports = __webpack_require__(/*! core-js-pure/stable/json/stringify */ 326);
 
 /***/ }),
-/* 310 */
+/* 326 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js-pure/stable/json/stringify.js ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parent = __webpack_require__(/*! ../../es/json/stringify */ 311);
+var parent = __webpack_require__(/*! ../../es/json/stringify */ 327);
 
 module.exports = parent;
 
 
 /***/ }),
-/* 311 */
+/* 327 */
 /*!*********************************************************!*\
   !*** ../node_modules/core-js-pure/es/json/stringify.js ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es.json.stringify */ 312);
+__webpack_require__(/*! ../../modules/es.json.stringify */ 328);
 var core = __webpack_require__(/*! ../../internals/path */ 24);
 
 if (!core.JSON) core.JSON = { stringify: JSON.stringify };
@@ -10728,7 +13074,7 @@ module.exports = function stringify(it, replacer, space) {
 
 
 /***/ }),
-/* 312 */
+/* 328 */
 /*!*****************************************************************!*\
   !*** ../node_modules/core-js-pure/modules/es.json.stringify.js ***!
   \*****************************************************************/
@@ -10770,7 +13116,7 @@ if ($stringify) {
 
 
 /***/ }),
-/* 313 */
+/* 329 */
 /*!**************************!*\
   !*** external "cheerio" ***!
   \**************************/
@@ -10780,7 +13126,7 @@ if ($stringify) {
 module.exports = require("cheerio");
 
 /***/ }),
-/* 314 */
+/* 330 */
 /*!******************************************************************!*\
   !*** ../node_modules/html-loader/dist/cjs.js!../dist/index.html ***!
   \******************************************************************/
@@ -10788,22 +13134,22 @@ module.exports = require("cheerio");
 /***/ (function(module, exports) {
 
 // Module
-var code = "<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"es_LA\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.b5bb82a5.css\" rel=\"stylesheet\"></head><body><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(c){function e(e){for(var r,t,n=e[0],o=e[1],a=e[2],i=0,u=[];i<n.length;i++)t=n[i],Object.prototype.hasOwnProperty.call(f,t)&&f[t]&&u.push(f[t][0]),f[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(c[r]=o[r]);for(d&&d(e);u.length;)u.shift()();return p.push.apply(p,a||[]),l()}function l(){for(var e,r=0;r<p.length;r++){for(var t=p[r],n=!0,o=1;o<t.length;o++){var a=t[o];0!==f[a]&&(n=!1)}n&&(p.splice(r--,1),e=s(s.s=t[0]))}return e}var t={},f={12:0},p=[];function s(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return c[e].call(r.exports,r,r.exports,s),r.l=!0,r.exports}s.e=function(o){var e=[],t=f[o];if(0!==t)if(t)e.push(t[2]);else{var r=new Promise(function(e,r){t=f[o]=[e,r]});e.push(t[2]=r);var n,a=document.createElement(\"script\");a.charset=\"utf-8\",a.timeout=120,s.nc&&a.setAttribute(\"nonce\",s.nc),a.src=s.p+\"static/js/chunk.\"+({1:\"data.configurar-webpack-5\",2:\"data.fixbrand\",3:\"data.gean-marroquin\",4:\"data.la-glorieta\",5:\"data.posts\",6:\"data.ricarica-travel\",7:\"data.works\",8:\"data.yilancorp\",11:\"vendors~platform\"}[o]||o)+\".\"+{1:\"a4de2a84\",2:\"3ae96365\",3:\"f1f4bda6\",4:\"64938ba7\",5:\"6390e7b9\",6:\"396cf7f4\",7:\"3a835260\",8:\"584b747b\",11:\"612dd858\"}[o]+\".js\";var i=new Error;n=function(e){a.onerror=a.onload=null,clearTimeout(u);var r=f[o];if(0!==r){if(r){var t=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;i.message=\"Loading chunk \"+o+\" failed.\\n(\"+t+\": \"+n+\")\",i.name=\"ChunkLoadError\",i.type=t,i.request=n,r[1](i)}f[o]=void 0}};var u=setTimeout(function(){n({type:\"timeout\",target:a})},12e4);a.onerror=a.onload=n,document.head.appendChild(a)}return Promise.all(e)},s.m=c,s.c=t,s.d=function(e,r,t){s.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},s.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},s.t=function(r,e){if(1&e&&(r=s(r)),8&e)return r;if(4&e&&\"object\"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(s.r(t),Object.defineProperty(t,\"default\",{enumerable:!0,value:r}),2&e&&\"string\"!=typeof r)for(var n in r)s.d(t,n,function(e){return r[e]}.bind(null,n));return t},s.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return s.d(r,\"a\",r),r},s.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},s.p=\"/\",s.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var d=n;l()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.a1f4ae55.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.8fe99795.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.9be129be.js\"></script></body></html>";
+var code = "<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"es_LA\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.1cfb4259.css\" rel=\"stylesheet\"></head><body><script>!function(){window.__onThemeChange=function(){},window.__themeChangeEvent=\"themeChange\";var t,n=new CustomEvent(__themeChangeEvent);try{t=localStorage.getItem(\"theme\")}catch(e){}function o(e){t&&document.body.classList.contains(t)?document.body.classList.replace(t,e):document.body.classList.add(e),window.__theme=e,t=e,window.__onThemeChange(e),document.dispatchEvent(n)}window.__setPreferredTheme=function(e){o(e);try{localStorage.setItem(\"theme\",e)}catch(e){}};var e=window.matchMedia(\"(prefers-color-scheme: dark)\");e.addListener(function(e){window.__setPreferredTheme(e.matches?\"dark\":\"light\")}),o(t||(e.matches?\"dark\":\"light\"))}()</script><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(u){function e(e){for(var r,t,n=e[0],o=e[1],a=e[2],c=0,i=[];c<n.length;c++)t=n[c],Object.prototype.hasOwnProperty.call(l,t)&&l[t]&&i.push(l[t][0]),l[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(u[r]=o[r]);for(s&&s(e);i.length;)i.shift()();return d.push.apply(d,a||[]),f()}function f(){for(var e,r=0;r<d.length;r++){for(var t=d[r],n=!0,o=1;o<t.length;o++){var a=t[o];0!==l[a]&&(n=!1)}n&&(d.splice(r--,1),e=p(p.s=t[0]))}return e}var t={},l={12:0},d=[];function p(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return u[e].call(r.exports,r,r.exports,p),r.l=!0,r.exports}p.e=function(o){var e=[],t=l[o];if(0!==t)if(t)e.push(t[2]);else{var r=new Promise(function(e,r){t=l[o]=[e,r]});e.push(t[2]=r);var n,a=document.createElement(\"script\");a.charset=\"utf-8\",a.timeout=120,p.nc&&a.setAttribute(\"nonce\",p.nc),a.src=p.p+\"static/js/chunk.\"+({1:\"data.configurar-webpack-5\",2:\"data.fixbrand\",3:\"data.gean-marroquin\",4:\"data.la-glorieta\",5:\"data.posts\",6:\"data.ricarica-travel\",7:\"data.works\",8:\"data.yilancorp\",11:\"vendors~platform\"}[o]||o)+\".\"+{1:\"164dbcb9\",2:\"ea28764c\",3:\"5fc477be\",4:\"d5ba1357\",5:\"4c2dc0d5\",6:\"c40814b6\",7:\"f5d8c651\",8:\"7af3b779\",11:\"f9437cd6\",13:\"0ae5d58d\",14:\"a6e504df\",15:\"bf5832c0\"}[o]+\".js\";var c=new Error;n=function(e){a.onerror=a.onload=null,clearTimeout(i);var r=l[o];if(0!==r){if(r){var t=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;c.message=\"Loading chunk \"+o+\" failed.\\n(\"+t+\": \"+n+\")\",c.name=\"ChunkLoadError\",c.type=t,c.request=n,r[1](c)}l[o]=void 0}};var i=setTimeout(function(){n({type:\"timeout\",target:a})},12e4);a.onerror=a.onload=n,document.head.appendChild(a)}return Promise.all(e)},p.m=u,p.c=t,p.d=function(e,r,t){p.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},p.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},p.t=function(r,e){if(1&e&&(r=p(r)),8&e)return r;if(4&e&&\"object\"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(p.r(t),Object.defineProperty(t,\"default\",{enumerable:!0,value:r}),2&e&&\"string\"!=typeof r)for(var n in r)p.d(t,n,function(e){return r[e]}.bind(null,n));return t},p.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return p.d(r,\"a\",r),r},p.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},p.p=\"/\",p.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var s=n;f()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.9bd7135d.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.4e7bb1b8.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.89b88a8e.js\"></script></body></html>";
 // Exports
 module.exports = code;
 
 /***/ }),
-/* 315 */
+/* 331 */
 /*!************************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/posts/configurar-webpack-5.md ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"frontMatter":{"slug":"configurar-webpack-5","fileName":"configurar-webpack-5","readingTime":"☕️ 7 minutos de lectura","identifier":"blog-1","date":"09-04-2020","dateModified":"12-04-2020","formattedDate":"Abril 2020","imageCaption":"webpack","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","title":"Configurar webpack 5","description":"Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!","tags":["webpack","babel"]},"bodyHtml":"<p>Configurar webpack puede ser frustante...</p>\n<div class=\"tenor-gif-embed\" data-postid=\"5384575\" data-share-method=\"host\" data-width=\"100%\" data-aspect-ratio=\"1.7785714285714287\"><a href=\"https://tenor.com/view/fuck-work-gif-5384575\">Fuckwork Angry GIF</a> from <a href=\"https://tenor.com/search/fuckwork-gifs\">Fuckwork GIFs</a></div>\n<br>\n\n<p>Por ello en esta guia te enseñare como configurar <a href=\"https://webpack.js.org/concepts/\">webpack 5</a> con babel, si deseas ver la configuracion final haz click <a href=\"#configuracion-final\">aqui</a> y <a href=\"https://github.com/wochap/setup-webpack-5\">aqui</a> para ir al repo.</p>\n<blockquote>\n<p>al dia de hoy (9 de abril del 2020) <a href=\"https://webpack.js.org/concepts/hot-module-replacement/\">HMR (hot module replacement)</a> no funciona con <strong>html-webpack-plugin</strong>, y tambien hay algunos plugins que no funcionaran (por el momento) ya que la API interna cambio bastante en webpack 5</p>\n</blockquote>\n<h2 id=\"nuestra-meta\">Nuestra meta</h2>\n<p>Tener un solo archivo de configuracion <code>webpack.config.js</code> para <code>production</code> y <code>development</code>, configurar <a href=\"https://babeljs.io/\">babel</a> para que inserte <a href=\"https://developer.mozilla.org/es/docs/Glossary/Polyfill\">polyfills</a> y transforme nuestro codigo JS a JS que entiendan nuestros <code>target browsers</code>.</p>\n<h2 id=\"requerimientos\">Requerimientos</h2>\n<ul>\n<li>Saber lo basico de <a href=\"https://nodejs.org/\">NodeJS</a>.</li>\n</ul>\n<h2 id=\"empezemos\">Empezemos</h2>\n<h4 id=\"1-instalar-dependencias\">1. Instalar dependencias</h4>\n<p>Webpack</p>\n<ul>\n<li>webpack - v5.0.0-beta.13</li>\n<li>webpack-cli - v3.3.11 - <em>permite usar webpack en la terminal</em></li>\n<li>webpack-dev-server - v3.10.3 - <em>crea un servidor express para poder hacer uso de HMR</em></li>\n</ul>\n<p>Webpack loaders</p>\n<ul>\n<li>css-loader - v3.4.2 - <em>permite importar archivos CSS a nuestros JS</em></li>\n<li>postcss-loader - v3.0.0 - <em>permite aplicar plugins de <a href=\"https://postcss.org/\">postcss</a> a nuestros CSS</em></li>\n<li>style-loader - v1.1.3 - <em>agrega una etiqueta <code>style</code> en el DOM por cada CSS que importemos en nuestros JS</em></li>\n<li>babel-loader - v8.1.0 - <em>permite aplicar babel a todos nuestros JS</em></li>\n</ul>\n<p>Webpack plugins</p>\n<ul>\n<li>clean-webpack-plugin - v3.0.0 - <em>eliminara la carpeta dist en cada production build</em></li>\n<li>html-webpack-plugin - v4.0.4 - <em>inserta en el archivo html que le indiques todos tus imports (script, style, link, etc)</em></li>\n<li>mini-css-extract-plugin - v0.9.0 - <em>agrega una etiqueta <code>link</code> en el DOM por cada CSS que importemos en nuestros JS</em></li>\n</ul>\n<p>Babel</p>\n<ul>\n<li>@babel/core - v7.9.0</li>\n<li>@babel/plugin-transform-runtime - v7.9.0 - <em>encargado de agregar los polyfills</em></li>\n<li>@babel/preset-env - v7.9.0 - <em>encargado de transformar nuestro codigo JS a JS entendible por nuestros <code>target browsers</code></em></li>\n<li>@babel/runtime-corejs3 - v7.9.2 - <em>modulo que contiene los polyfills</em></li>\n</ul>\n<p>Postcss plugins</p>\n<ul>\n<li>autoprefixer - v9.7.5 - <em>insertara prefijos (-webkit-) segun lo requieran nuestros <code>target browsers</code></em></li>\n</ul>\n<h4 id=\"2-agregar-nuestros-tasks-en-packagejson\">2. Agregar nuestros tasks en package.json</h4>\n<p>En development, usaremos el comando <code>npm run dev</code> y para production <code>npm run build</code>.</p>\n<pre><code class=\"hljs json\">{\n  <span class=\"hljs-attr\">\"scripts\"</span>: {\n    <span class=\"hljs-attr\">\"build\"</span>: <span class=\"hljs-string\">\"webpack --mode production\"</span>, <span class=\"hljs-comment\">// corre webpack con la configuracion para production, con ello webpack sera capaz de analizar, comprimir, y quitar codigo innecesario.</span>\n    <span class=\"hljs-attr\">\"dev\"</span>: <span class=\"hljs-string\">\"webpack-dev-server --mode development\"</span> <span class=\"hljs-comment\">// para hacer uso del famoso HMR necesitamos un servidor en nodejs, webpack-dev-server lo creara por nosotros</span>\n  }\n}</code></pre>\n<h4 id=\"3-crear-nuestro-archivo-browserslistrc\">3. Crear nuestro archivo <a href=\"https://github.com/browserslist/browserslist#browserslist-\"><code>.browserslistrc</code></a></h4>\n<p>En este archivo indicamos nuestros <code>target browsers</code>, los navegadores que soportaremos. <a href=\"https://babeljs.io/docs/en/babel-preset-env\">Babel</a> y <a href=\"https://autoprefixer.github.io/\">Autoprefixer</a> usaran este archivo si lo encuentran en la raiz del proyecto.</p>\n<pre><code><span class=\"hljs-comment\"># .browserslistrc</span>\n\n<span class=\"hljs-meta\">&gt;</span> <span class=\"hljs-string\">1%</span>\n<span class=\"hljs-attr\">last</span> <span class=\"hljs-string\">2 versions</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">dead</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">IE 11</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">IE 10</span></code></pre><h4 id=\"4-crear-nuestro-archivo-babelrc\">4. Crear nuestro archivo <code>.babelrc</code></h4>\n<p>Con esto babel sera capaz de insertar polyfills y transformar JS donde se requiera segun nuestro <code>target browsers</code>.</p>\n<pre><code class=\"hljs json\">{\n  <span class=\"hljs-attr\">\"presets\"</span>: [[<span class=\"hljs-string\">\"@babel/preset-env\"</span>]],\n  <span class=\"hljs-attr\">\"plugins\"</span>: [\n    [\n      <span class=\"hljs-string\">\"@babel/plugin-transform-runtime\"</span>,\n      {\n        <span class=\"hljs-attr\">\"corejs\"</span>: <span class=\"hljs-number\">3</span>\n      }\n    ]\n  ]\n}</code></pre>\n<h4 id=\"5-crear-nuestro-archivo-postcssconfigjs\">5. Crear nuestro archivo <code>postcss.config.js</code></h4>\n<p><code>postcss-loader</code> usara esta configuracion, solo usaremos el plugin de autoprefixer.</p>\n<pre><code class=\"hljs json\">module.exports = {\n    plugins: {\n        &quot;autoprefixer&quot;: {},\n    },\n};</code></pre>\n<h4 id=\"6-crear-nuestro-archivo-webpackconfigjs\">6. Crear nuestro archivo <code>webpack.config.js</code></h4>\n<div class=\"tenor-gif-embed\" data-postid=\"10383696\" data-share-method=\"host\" data-width=\"100%\" data-aspect-ratio=\"1.7744360902255638\"><a href=\"https://tenor.com/view/ahora-si-viene-lo-chido-gif-10383696\">Ahora Si GIF</a> from <a href=\"https://tenor.com/search/ahora-gifs\">Ahora GIFs</a></div>\n<br>\n\n<p>Empezemos por importar algunos modulos, mas <a href=\"#1-instalar-dependencias\">arriba</a> explique que hace cada modulo.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> path = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'path'</span>)\n<span class=\"hljs-keyword\">const</span> webpack = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'webpack'</span>)\n<span class=\"hljs-keyword\">const</span> HtmlWebpackPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'html-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> {CleanWebpackPlugin} = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'clean-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> MiniCssExtractPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'mini-css-extract-plugin'</span>)</code></pre>\n<p>El archivo <code>webpack.config.js</code> debe exportar un objeto o una funcion devolviendo un objeto, usaremos la segunda, ya que de esta manera podremos saber si estamos en <code>development</code> o <code>production</code>.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> config = {}\n<span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> usar style-loader, es lo recomendado para usar HMR</span>\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> habilitar HMR plugin</span>\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> insertar `contenthash` en los archivos de salida, esto para tener `long term caching`</span>\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> usar MiniCssExtractPlugin, para extraer todo nuestro CSS a un archivo CSS, de lo contrario nuestro CSS quedaria en los archivos JS</span>\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<p>La configuracion en comun que tiene <code>production</code> y <code>development</code> estara en el objeto <code>config</code>.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> config = {\n  <span class=\"hljs-comment\">// el punto de entrada de nuestra APP, JS que se ejecutara en el BROWSER</span>\n  <span class=\"hljs-attr\">entry</span>: <span class=\"hljs-string\">'./src/index.js'</span>,\n  <span class=\"hljs-attr\">output</span>: {\n    <span class=\"hljs-comment\">// el nombre que le daremos al archivo de salida principal</span>\n    <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'main.js'</span>,\n\n    <span class=\"hljs-comment\">// donde se crearan los archivos de salida</span>\n    <span class=\"hljs-attr\">path</span>: path.resolve(__dirname, <span class=\"hljs-string\">'dist'</span>),\n  },\n\n  <span class=\"hljs-comment\">// configuracion para webpack-dev-server</span>\n  <span class=\"hljs-attr\">devServer</span>: {\n    <span class=\"hljs-comment\">// abrir la APP en el BROWSER</span>\n    <span class=\"hljs-attr\">open</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// HACK para permitir ver la APP desde otros dispositivos</span>\n    <span class=\"hljs-attr\">host</span>: <span class=\"hljs-string\">'0.0.0.0'</span>,\n\n    <span class=\"hljs-comment\">// ver el progreso de compilacion en la consola</span>\n    <span class=\"hljs-attr\">progress</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// esto para que todas las URLs que fallen (404) devuelvan nuestro index.html</span>\n    <span class=\"hljs-attr\">historyApiFallback</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// para que los errores en consola aparescan en un overlay en el BROWSER</span>\n    <span class=\"hljs-attr\">overlay</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// habilitar HMR</span>\n    <span class=\"hljs-attr\">hot</span>: <span class=\"hljs-literal\">true</span>,\n  },\n  <span class=\"hljs-attr\">resolve</span>: {\n    <span class=\"hljs-attr\">alias</span>: {\n      <span class=\"hljs-comment\">// un alias que apunta a la carpeta `src/components`</span>\n      <span class=\"hljs-string\">'@components'</span>: path.resolve(__dirname, <span class=\"hljs-string\">'src/components'</span>),\n    },\n  },\n  <span class=\"hljs-attr\">module</span>: {\n    <span class=\"hljs-attr\">rules</span>: [\n      {\n        <span class=\"hljs-comment\">// a que archivos afectara esta regla</span>\n        <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.js$/</span>,\n\n        <span class=\"hljs-comment\">// los loaders que apliquemos en la regla no afectaran</span>\n        <span class=\"hljs-comment\">// a archivos que coincidan con</span>\n        <span class=\"hljs-attr\">exclude</span>: <span class=\"hljs-regexp\">/(node_modules|bower_components)/</span>,\n\n        <span class=\"hljs-attr\">use</span>: {\n          <span class=\"hljs-comment\">// el nombre  del loader que usaremos</span>\n          <span class=\"hljs-attr\">loader</span>: <span class=\"hljs-string\">'babel-loader'</span>,\n          <span class=\"hljs-attr\">options</span>: {\n            <span class=\"hljs-comment\">// mejora la velocidad de compilacion</span>\n            <span class=\"hljs-comment\">// si en algun momento no se ven reflejados tus cambios</span>\n            <span class=\"hljs-comment\">// elimina la carpeta `node_modules/.cache`</span>\n            <span class=\"hljs-attr\">cacheDirectory</span>: <span class=\"hljs-literal\">true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=\"hljs-attr\">plugins</span>: [\n    <span class=\"hljs-keyword\">new</span> CleanWebpackPlugin(),\n    <span class=\"hljs-keyword\">new</span> HtmlWebpackPlugin({\n      <span class=\"hljs-comment\">// la ruta donde se encuentra nuestro index.html</span>\n      <span class=\"hljs-comment\">// para que HtmlWebpackPlugin lo use</span>\n      <span class=\"hljs-attr\">template</span>: <span class=\"hljs-string\">'src/index.html'</span>,\n    }),\n  ],\n}</code></pre>\n<p>Ahora solo falta completar nuestros TODOs</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    <span class=\"hljs-comment\">// nuestra regla para poder importar archivos CSS</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n\n      <span class=\"hljs-comment\">// el primer loader en aplicarse es el ultimo, en este caso `postcss-loader`</span>\n      <span class=\"hljs-attr\">use</span>: [<span class=\"hljs-string\">'style-loader'</span>, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-comment\">// con esto ya habilitamos HMR</span>\n      <span class=\"hljs-keyword\">new</span> webpack.HotModuleReplacementPlugin(),\n    )\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    <span class=\"hljs-comment\">// webpack reemplazara [name] con el nombre del archivo que importamos, ///</span>\n    <span class=\"hljs-comment\">// [contenthash:8] sera reemplazado por un hash de 8 digitos que cambia segun el contenido del archivo</span>\n    <span class=\"hljs-comment\">// aplicar long term caching a los archivos resultantes JS</span>\n    config.output.filename = <span class=\"hljs-string\">'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=\"hljs-string\">'static/js/chunk.[name].[contenthash:8].js'</span>\n\n    <span class=\"hljs-comment\">// nuestra regla para extraer los archivos CSSs en sus propios archivos</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [MiniCssExtractPlugin.loader, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-keyword\">new</span> MiniCssExtractPlugin({\n        <span class=\"hljs-comment\">// aplicar long term caching a los archivos resultantes CSS</span>\n        <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=\"hljs-attr\">chunkFilename</span>: <span class=\"hljs-string\">'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<p>Con esto ya tienes una configuracion bien estandar, si trabajas con vue puedes continuar <a href=\"https://vue-loader.vuejs.org/\">aqui</a>, o si trabajas con react agrega este preset <a href=\"https://babeljs.io/docs/en/babel-preset-react\">@babel/preset-react</a> a la configuracion de babel.</p>\n<h2 id=\"configuracion-final\">Configuracion final</h2>\n<pre><code class=\"hljs js\"><span class=\"hljs-comment\">// webpack.config.js</span>\n\n<span class=\"hljs-keyword\">const</span> path = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'path'</span>)\n<span class=\"hljs-keyword\">const</span> webpack = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'webpack'</span>)\n<span class=\"hljs-keyword\">const</span> HtmlWebpackPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'html-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> {CleanWebpackPlugin} = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'clean-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> MiniCssExtractPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'mini-css-extract-plugin'</span>)\n\n<span class=\"hljs-keyword\">const</span> config = {\n  <span class=\"hljs-attr\">entry</span>: <span class=\"hljs-string\">'./src/index.js'</span>,\n  <span class=\"hljs-attr\">output</span>: {\n    <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'main.js'</span>,\n    <span class=\"hljs-attr\">path</span>: path.resolve(__dirname, <span class=\"hljs-string\">'dist'</span>),\n  },\n  <span class=\"hljs-attr\">devServer</span>: {\n    <span class=\"hljs-attr\">open</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">host</span>: <span class=\"hljs-string\">'0.0.0.0'</span>,\n    <span class=\"hljs-attr\">progress</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">historyApiFallback</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">overlay</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">hot</span>: <span class=\"hljs-literal\">true</span>,\n  },\n  <span class=\"hljs-attr\">resolve</span>: {\n    <span class=\"hljs-attr\">alias</span>: {\n      <span class=\"hljs-string\">'@components'</span>: path.resolve(__dirname, <span class=\"hljs-string\">'src/components'</span>),\n    },\n  },\n  <span class=\"hljs-attr\">module</span>: {\n    <span class=\"hljs-attr\">rules</span>: [\n      {\n        <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.js$/</span>,\n        <span class=\"hljs-attr\">exclude</span>: <span class=\"hljs-regexp\">/(node_modules|bower_components)/</span>,\n        <span class=\"hljs-attr\">use</span>: {\n          <span class=\"hljs-attr\">loader</span>: <span class=\"hljs-string\">'babel-loader'</span>,\n          <span class=\"hljs-attr\">options</span>: {\n            <span class=\"hljs-attr\">cacheDirectory</span>: <span class=\"hljs-literal\">true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=\"hljs-attr\">plugins</span>: [\n    <span class=\"hljs-keyword\">new</span> CleanWebpackPlugin(),\n    <span class=\"hljs-keyword\">new</span> HtmlWebpackPlugin({\n      <span class=\"hljs-attr\">template</span>: <span class=\"hljs-string\">'src/index.html'</span>,\n    }),\n  ],\n}\n\n<span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [<span class=\"hljs-string\">'style-loader'</span>, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(<span class=\"hljs-keyword\">new</span> webpack.HotModuleReplacementPlugin())\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    config.output.filename = <span class=\"hljs-string\">'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=\"hljs-string\">'static/js/chunk.[name].[contenthash:8].js'</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [MiniCssExtractPlugin.loader, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-keyword\">new</span> MiniCssExtractPlugin({\n        <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=\"hljs-attr\">chunkFilename</span>: <span class=\"hljs-string\">'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<h2 id=\"referencias\">Referencias</h2>\n<ul>\n<li><a href=\"https://www.zzuu666.com/articles/9\">https://www.zzuu666.com/articles/9</a></li>\n<li><a href=\"https://webpack.js.org/configuration/mode/#root\">https://webpack.js.org/configuration/mode/#root</a></li>\n<li><a href=\"https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching\">https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching</a></li>\n</ul>\n"}
+module.exports = {"frontMatter":{"slug":"configurar-webpack-5","fileName":"configurar-webpack-5","readingTime":"☕️ 7 minutos de lectura","identifier":"blog-1","date":"09-04-2020","dateModified":"12-04-2020","formattedDate":"Abril 2020","imageCaption":"webpack","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","title":"Configurar webpack 5","description":"Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!","tags":["webpack","babel"]},"bodyHtml":"<p>Configurar webpack puede ser frustante...</p>\n<div class=\"tenor-gif-embed\" data-postid=\"5384575\" data-share-method=\"host\" data-width=\"100%\" data-aspect-ratio=\"1.7785714285714287\"><a href=\"https://tenor.com/view/fuck-work-gif-5384575\">Fuckwork Angry GIF</a> from <a href=\"https://tenor.com/search/fuckwork-gifs\">Fuckwork GIFs</a></div>\n<br>\n\n<p>Por ello en esta guia te enseñare como configurar <a href=\"https://webpack.js.org/concepts/\">webpack 5</a> con babel, si deseas ver la configuracion final haz click <a href=\"#configuracion-final\">aqui</a> y <a href=\"https://github.com/wochap/setup-webpack-5\">aqui</a> para ir al repo.</p>\n<blockquote>\n<p>al dia de hoy (9 de abril del 2020) <a href=\"https://webpack.js.org/concepts/hot-module-replacement/\">HMR (hot module replacement)</a> no funciona con <strong>html-webpack-plugin</strong>, y tambien hay algunos plugins que no funcionaran (por el momento) ya que la API interna cambio bastante en webpack 5</p>\n</blockquote>\n<h2 id=\"nuestra-meta\">Nuestra meta</h2>\n<p>Tener un solo archivo de configuracion <code>webpack.config.js</code> para <code>production</code> y <code>development</code>, configurar <a href=\"https://babeljs.io/\">babel</a> para que inserte <a href=\"https://developer.mozilla.org/es/docs/Glossary/Polyfill\">polyfills</a> y transforme nuestro codigo JS a JS que entiendan nuestros <code>target browsers</code>.</p>\n<h2 id=\"requerimientos\">Requerimientos</h2>\n<ul>\n<li>Saber lo basico de <a href=\"https://nodejs.org/\">NodeJS</a>.</li>\n</ul>\n<h2 id=\"empezemos\">Empezemos</h2>\n<h4 id=\"1-instalar-dependencias\">1. Instalar dependencias</h4>\n<p>Webpack</p>\n<ul>\n<li>webpack - v5.0.0-beta.13</li>\n<li>webpack-cli - v3.3.11 - <em>permite usar webpack en la terminal</em></li>\n<li>webpack-dev-server - v3.10.3 - <em>crea un servidor express para poder hacer uso de HMR</em></li>\n</ul>\n<p>Webpack loaders</p>\n<ul>\n<li>css-loader - v3.4.2 - <em>permite importar archivos CSS a nuestros JS</em></li>\n<li>postcss-loader - v3.0.0 - <em>permite aplicar plugins de <a href=\"https://postcss.org/\">postcss</a> a nuestros CSS</em></li>\n<li>style-loader - v1.1.3 - <em>agrega una etiqueta <code>style</code> en el DOM por cada CSS que importemos en nuestros JS</em></li>\n<li>babel-loader - v8.1.0 - <em>permite aplicar babel a todos nuestros JS</em></li>\n</ul>\n<p>Webpack plugins</p>\n<ul>\n<li>clean-webpack-plugin - v3.0.0 - <em>eliminara la carpeta dist en cada production build</em></li>\n<li>html-webpack-plugin - v4.0.4 - <em>inserta en el archivo html que le indiques todos tus imports (script, style, link, etc)</em></li>\n<li>mini-css-extract-plugin - v0.9.0 - <em>agrega una etiqueta <code>link</code> en el DOM por cada CSS que importemos en nuestros JS</em></li>\n</ul>\n<p>Babel</p>\n<ul>\n<li>@babel/core - v7.9.0</li>\n<li>@babel/plugin-transform-runtime - v7.9.0 - <em>encargado de agregar los polyfills</em></li>\n<li>@babel/preset-env - v7.9.0 - <em>encargado de transformar nuestro codigo JS a JS entendible por nuestros <code>target browsers</code></em></li>\n<li>@babel/runtime-corejs3 - v7.9.2 - <em>modulo que contiene los polyfills</em></li>\n</ul>\n<p>Postcss plugins</p>\n<ul>\n<li>autoprefixer - v9.7.5 - <em>insertara prefijos (-webkit-) segun lo requieran nuestros <code>target browsers</code></em></li>\n</ul>\n<h4 id=\"2-agregar-nuestros-tasks-en-packagejson\">2. Agregar nuestros tasks en package.json</h4>\n<p>En development, usaremos el comando <code>npm run dev</code> y para production <code>npm run build</code>.</p>\n<pre><code class=\"hljs json\">{\n  <span class=\"hljs-attr\">\"scripts\"</span>: {\n    <span class=\"hljs-attr\">\"build\"</span>: <span class=\"hljs-string\">\"webpack --mode production\"</span>, <span class=\"hljs-comment\">// corre webpack con la configuracion para production, con ello webpack sera capaz de analizar, comprimir, y quitar codigo innecesario.</span>\n    <span class=\"hljs-attr\">\"dev\"</span>: <span class=\"hljs-string\">\"webpack-dev-server --mode development\"</span> <span class=\"hljs-comment\">// para hacer uso del famoso HMR necesitamos un servidor en nodejs, webpack-dev-server lo creara por nosotros</span>\n  }\n}</code></pre>\n<h4 id=\"3-crear-nuestro-archivo-browserslistrc\">3. Crear nuestro archivo <a href=\"https://github.com/browserslist/browserslist#browserslist-\"><code>.browserslistrc</code></a></h4>\n<p>En este archivo indicamos nuestros <code>target browsers</code>, los navegadores que soportaremos. <a href=\"https://babeljs.io/docs/en/babel-preset-env\">Babel</a> y <a href=\"https://autoprefixer.github.io/\">Autoprefixer</a> usaran este archivo si lo encuentran en la raiz del proyecto.</p>\n<pre><code><span class=\"hljs-comment\"># .browserslistrc</span>\n\n<span class=\"hljs-meta\">&gt;</span> <span class=\"hljs-string\">1%</span>\n<span class=\"hljs-attr\">last</span> <span class=\"hljs-string\">2 versions</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">dead</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">IE 11</span>\n<span class=\"hljs-attr\">not</span> <span class=\"hljs-string\">IE 10</span></code></pre><h4 id=\"4-crear-nuestro-archivo-babelrc\">4. Crear nuestro archivo <code>.babelrc</code></h4>\n<p>Con esto babel sera capaz de insertar polyfills y transformar JS donde se requiera segun nuestro <code>target browsers</code>.</p>\n<pre><code class=\"hljs json\">{\n  <span class=\"hljs-attr\">\"presets\"</span>: [[<span class=\"hljs-string\">\"@babel/preset-env\"</span>]],\n  <span class=\"hljs-attr\">\"plugins\"</span>: [\n    [\n      <span class=\"hljs-string\">\"@babel/plugin-transform-runtime\"</span>,\n      {\n        <span class=\"hljs-attr\">\"corejs\"</span>: <span class=\"hljs-number\">3</span>\n      }\n    ]\n  ]\n}</code></pre>\n<h4 id=\"5-crear-nuestro-archivo-postcssconfigjs\">5. Crear nuestro archivo <code>postcss.config.js</code></h4>\n<p><code>postcss-loader</code> usara esta configuracion, solo usaremos el plugin de autoprefixer.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-built_in\">module</span>.exports = {\n    <span class=\"hljs-attr\">plugins</span>: {\n        <span class=\"hljs-string\">\"autoprefixer\"</span>: {},\n    },\n};</code></pre>\n<h4 id=\"6-crear-nuestro-archivo-webpackconfigjs\">6. Crear nuestro archivo <code>webpack.config.js</code></h4>\n<div class=\"tenor-gif-embed\" data-postid=\"10383696\" data-share-method=\"host\" data-width=\"100%\" data-aspect-ratio=\"1.7744360902255638\"><a href=\"https://tenor.com/view/ahora-si-viene-lo-chido-gif-10383696\">Ahora Si GIF</a> from <a href=\"https://tenor.com/search/ahora-gifs\">Ahora GIFs</a></div>\n<br>\n\n<p>Empezemos por importar algunos modulos, mas <a href=\"#1-instalar-dependencias\">arriba</a> explique que hace cada modulo.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> path = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'path'</span>)\n<span class=\"hljs-keyword\">const</span> webpack = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'webpack'</span>)\n<span class=\"hljs-keyword\">const</span> HtmlWebpackPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'html-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> {CleanWebpackPlugin} = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'clean-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> MiniCssExtractPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'mini-css-extract-plugin'</span>)</code></pre>\n<p>El archivo <code>webpack.config.js</code> debe exportar un objeto o una funcion devolviendo un objeto, usaremos la segunda, ya que de esta manera podremos saber si estamos en <code>development</code> o <code>production</code>.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> config = {}\n<span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> usar style-loader, es lo recomendado para usar HMR</span>\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> habilitar HMR plugin</span>\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> insertar `contenthash` en los archivos de salida, esto para tener `long term caching`</span>\n    <span class=\"hljs-comment\">// <span class=\"hljs-doctag\">TODO:</span> usar MiniCssExtractPlugin, para extraer todo nuestro CSS a un archivo CSS, de lo contrario nuestro CSS quedaria en los archivos JS</span>\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<p>La configuracion en comun que tiene <code>production</code> y <code>development</code> estara en el objeto <code>config</code>.</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-keyword\">const</span> config = {\n  <span class=\"hljs-comment\">// el punto de entrada de nuestra APP, JS que se ejecutara en el BROWSER</span>\n  <span class=\"hljs-attr\">entry</span>: <span class=\"hljs-string\">'./src/index.js'</span>,\n  <span class=\"hljs-attr\">output</span>: {\n    <span class=\"hljs-comment\">// el nombre que le daremos al archivo de salida principal</span>\n    <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'main.js'</span>,\n\n    <span class=\"hljs-comment\">// donde se crearan los archivos de salida</span>\n    <span class=\"hljs-attr\">path</span>: path.resolve(__dirname, <span class=\"hljs-string\">'dist'</span>),\n  },\n\n  <span class=\"hljs-comment\">// configuracion para webpack-dev-server</span>\n  <span class=\"hljs-attr\">devServer</span>: {\n    <span class=\"hljs-comment\">// abrir la APP en el BROWSER</span>\n    <span class=\"hljs-attr\">open</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// HACK para permitir ver la APP desde otros dispositivos</span>\n    <span class=\"hljs-attr\">host</span>: <span class=\"hljs-string\">'0.0.0.0'</span>,\n\n    <span class=\"hljs-comment\">// ver el progreso de compilacion en la consola</span>\n    <span class=\"hljs-attr\">progress</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// esto para que todas las URLs que fallen (404) devuelvan nuestro index.html</span>\n    <span class=\"hljs-attr\">historyApiFallback</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// para que los errores en consola aparescan en un overlay en el BROWSER</span>\n    <span class=\"hljs-attr\">overlay</span>: <span class=\"hljs-literal\">true</span>,\n\n    <span class=\"hljs-comment\">// habilitar HMR</span>\n    <span class=\"hljs-attr\">hot</span>: <span class=\"hljs-literal\">true</span>,\n  },\n  <span class=\"hljs-attr\">resolve</span>: {\n    <span class=\"hljs-attr\">alias</span>: {\n      <span class=\"hljs-comment\">// un alias que apunta a la carpeta `src/components`</span>\n      <span class=\"hljs-string\">'@components'</span>: path.resolve(__dirname, <span class=\"hljs-string\">'src/components'</span>),\n    },\n  },\n  <span class=\"hljs-attr\">module</span>: {\n    <span class=\"hljs-attr\">rules</span>: [\n      {\n        <span class=\"hljs-comment\">// a que archivos afectara esta regla</span>\n        <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.js$/</span>,\n\n        <span class=\"hljs-comment\">// los loaders que apliquemos en la regla no afectaran</span>\n        <span class=\"hljs-comment\">// a archivos que coincidan con</span>\n        <span class=\"hljs-attr\">exclude</span>: <span class=\"hljs-regexp\">/(node_modules|bower_components)/</span>,\n\n        <span class=\"hljs-attr\">use</span>: {\n          <span class=\"hljs-comment\">// el nombre  del loader que usaremos</span>\n          <span class=\"hljs-attr\">loader</span>: <span class=\"hljs-string\">'babel-loader'</span>,\n          <span class=\"hljs-attr\">options</span>: {\n            <span class=\"hljs-comment\">// mejora la velocidad de compilacion</span>\n            <span class=\"hljs-comment\">// si en algun momento no se ven reflejados tus cambios</span>\n            <span class=\"hljs-comment\">// elimina la carpeta `node_modules/.cache`</span>\n            <span class=\"hljs-attr\">cacheDirectory</span>: <span class=\"hljs-literal\">true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=\"hljs-attr\">plugins</span>: [\n    <span class=\"hljs-keyword\">new</span> CleanWebpackPlugin(),\n    <span class=\"hljs-keyword\">new</span> HtmlWebpackPlugin({\n      <span class=\"hljs-comment\">// la ruta donde se encuentra nuestro index.html</span>\n      <span class=\"hljs-comment\">// para que HtmlWebpackPlugin lo use</span>\n      <span class=\"hljs-attr\">template</span>: <span class=\"hljs-string\">'src/index.html'</span>,\n    }),\n  ],\n}</code></pre>\n<p>Ahora solo falta completar nuestros TODOs</p>\n<pre><code class=\"hljs js\"><span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    <span class=\"hljs-comment\">// nuestra regla para poder importar archivos CSS</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n\n      <span class=\"hljs-comment\">// el primer loader en aplicarse es el ultimo, en este caso `postcss-loader`</span>\n      <span class=\"hljs-attr\">use</span>: [<span class=\"hljs-string\">'style-loader'</span>, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-comment\">// con esto ya habilitamos HMR</span>\n      <span class=\"hljs-keyword\">new</span> webpack.HotModuleReplacementPlugin(),\n    )\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    <span class=\"hljs-comment\">// webpack reemplazara [name] con el nombre del archivo que importamos, ///</span>\n    <span class=\"hljs-comment\">// [contenthash:8] sera reemplazado por un hash de 8 digitos que cambia segun el contenido del archivo</span>\n    <span class=\"hljs-comment\">// aplicar long term caching a los archivos resultantes JS</span>\n    config.output.filename = <span class=\"hljs-string\">'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=\"hljs-string\">'static/js/chunk.[name].[contenthash:8].js'</span>\n\n    <span class=\"hljs-comment\">// nuestra regla para extraer los archivos CSSs en sus propios archivos</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [MiniCssExtractPlugin.loader, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-keyword\">new</span> MiniCssExtractPlugin({\n        <span class=\"hljs-comment\">// aplicar long term caching a los archivos resultantes CSS</span>\n        <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=\"hljs-attr\">chunkFilename</span>: <span class=\"hljs-string\">'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<p>Con esto ya tienes una configuracion bien estandar, si trabajas con vue puedes continuar <a href=\"https://vue-loader.vuejs.org/\">aqui</a>, o si trabajas con react agrega este preset <a href=\"https://babeljs.io/docs/en/babel-preset-react\">@babel/preset-react</a> a la configuracion de babel.</p>\n<h2 id=\"configuracion-final\">Configuracion final</h2>\n<pre><code class=\"hljs js\"><span class=\"hljs-comment\">// webpack.config.js</span>\n\n<span class=\"hljs-keyword\">const</span> path = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'path'</span>)\n<span class=\"hljs-keyword\">const</span> webpack = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'webpack'</span>)\n<span class=\"hljs-keyword\">const</span> HtmlWebpackPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'html-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> {CleanWebpackPlugin} = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'clean-webpack-plugin'</span>)\n<span class=\"hljs-keyword\">const</span> MiniCssExtractPlugin = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'mini-css-extract-plugin'</span>)\n\n<span class=\"hljs-keyword\">const</span> config = {\n  <span class=\"hljs-attr\">entry</span>: <span class=\"hljs-string\">'./src/index.js'</span>,\n  <span class=\"hljs-attr\">output</span>: {\n    <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'main.js'</span>,\n    <span class=\"hljs-attr\">path</span>: path.resolve(__dirname, <span class=\"hljs-string\">'dist'</span>),\n  },\n  <span class=\"hljs-attr\">devServer</span>: {\n    <span class=\"hljs-attr\">open</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">host</span>: <span class=\"hljs-string\">'0.0.0.0'</span>,\n    <span class=\"hljs-attr\">progress</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">historyApiFallback</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">overlay</span>: <span class=\"hljs-literal\">true</span>,\n    <span class=\"hljs-attr\">hot</span>: <span class=\"hljs-literal\">true</span>,\n  },\n  <span class=\"hljs-attr\">resolve</span>: {\n    <span class=\"hljs-attr\">alias</span>: {\n      <span class=\"hljs-string\">'@components'</span>: path.resolve(__dirname, <span class=\"hljs-string\">'src/components'</span>),\n    },\n  },\n  <span class=\"hljs-attr\">module</span>: {\n    <span class=\"hljs-attr\">rules</span>: [\n      {\n        <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.js$/</span>,\n        <span class=\"hljs-attr\">exclude</span>: <span class=\"hljs-regexp\">/(node_modules|bower_components)/</span>,\n        <span class=\"hljs-attr\">use</span>: {\n          <span class=\"hljs-attr\">loader</span>: <span class=\"hljs-string\">'babel-loader'</span>,\n          <span class=\"hljs-attr\">options</span>: {\n            <span class=\"hljs-attr\">cacheDirectory</span>: <span class=\"hljs-literal\">true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=\"hljs-attr\">plugins</span>: [\n    <span class=\"hljs-keyword\">new</span> CleanWebpackPlugin(),\n    <span class=\"hljs-keyword\">new</span> HtmlWebpackPlugin({\n      <span class=\"hljs-attr\">template</span>: <span class=\"hljs-string\">'src/index.html'</span>,\n    }),\n  ],\n}\n\n<span class=\"hljs-built_in\">module</span>.exports = <span class=\"hljs-function\">(<span class=\"hljs-params\">env, argv</span>) =&gt;</span> {\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'development'</span>) {\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [<span class=\"hljs-string\">'style-loader'</span>, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(<span class=\"hljs-keyword\">new</span> webpack.HotModuleReplacementPlugin())\n  }\n\n  <span class=\"hljs-keyword\">if</span> (argv.mode === <span class=\"hljs-string\">'production'</span>) {\n    config.output.filename = <span class=\"hljs-string\">'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=\"hljs-string\">'static/js/chunk.[name].[contenthash:8].js'</span>\n    config.module.rules.push({\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/\\.css$/</span>,\n      <span class=\"hljs-attr\">use</span>: [MiniCssExtractPlugin.loader, <span class=\"hljs-string\">'css-loader'</span>, <span class=\"hljs-string\">'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=\"hljs-keyword\">new</span> MiniCssExtractPlugin({\n        <span class=\"hljs-attr\">filename</span>: <span class=\"hljs-string\">'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=\"hljs-attr\">chunkFilename</span>: <span class=\"hljs-string\">'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=\"hljs-keyword\">return</span> config\n}</code></pre>\n<h2 id=\"referencias\">Referencias</h2>\n<ul>\n<li><a href=\"https://www.zzuu666.com/articles/9\">https://www.zzuu666.com/articles/9</a></li>\n<li><a href=\"https://webpack.js.org/configuration/mode/#root\">https://webpack.js.org/configuration/mode/#root</a></li>\n<li><a href=\"https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching\">https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching</a></li>\n</ul>\n"}
 
 /***/ }),
-/* 316 */
+/* 332 */
 /*!************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/works/fixbrand.md ***!
   \************************************************************/
@@ -10813,7 +13159,7 @@ module.exports = {"frontMatter":{"slug":"configurar-webpack-5","fileName":"confi
 module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readingTime":"☕️ 1 minuto de lectura","date":"21-12-2015","formattedDate":"Diciembre 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/fixbrand.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070206/wochap/hero/fixbrand.jpg","title":"Fixbrand","tasks":"Desarrollo landing page y panel de administración","role":"Full-stack developer","siteLink":"http://fixbrand.com/","description":"Fixbrand es una agencia creativa de marcas que apuesta por el trabajo estratégico, creativo y sostenido en el tiempo.","tags":["Full-stack","Laravel","Jquery","Stylus","Gulp","Freelance"]},"bodyHtml":"<h2 id=\"reto\">Reto</h2>\n<p>Realizar un sitio web gestionable, con animaciones entre paginas.</p>\n<h2 id=\"solución\">Solución</h2>\n<p>Realize el panel de administracion con <a href=\"http://getbootstrap.com/\">Bootstrap</a> y  <a href=\"https://laravel.com/\">Laravel</a>, y el landing page con <a href=\"https://jquery.com\">Jquery</a>.</p>\n<h3 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h3>\n<ul>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n</ul>\n<h3 id=\"workflow\">Workflow:</h3>\n<ul>\n<li><strong>PHP:</strong> <a href=\"https://laravel.com/\">Laravel</a>.</li>\n<li><strong>HTML:</strong> <a href=\"https://laravel.com/docs/5.3/blade\">Blade</a>.</li>\n<li><strong>CSS:</strong> <a href=\"http://getbootstrap.com/\">Bootstrap</a>, <a href=\"http://stylus-lang.com/\">Stylus</a>, <a href=\"https://suitcss.github.io/\">SuitCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"https://jquery.com/\">Jquery</a>.</li>\n<li><strong>Build System:</strong> <a href=\"http://gulpjs.com/\">Gulp</a>, <a href=\"https://laravel.com/docs/5.3/elixir\">Laravel elixir</a>.</li>\n</ul>\n<h3 id=\"logros\">Logros:</h3>\n<ul>\n<li>Simular un <code>SPA</code> con <a href=\"https://jquery.com/\">Jquery</a>:</li>\n</ul>\n<div class=\"c-markdown-image-full\">\n  <img src=\"//res.cloudinary.com/wochap/image/upload/v1495070187/wochap/body/fixbrand-spa.gif\" alt=\"Portafolio del sitio web Fixbrand\">\n</div>\n\n<ul>\n<li>Desarrollar 3 <code>CRUD</code> (portafolio, contacto, clientes), tanto en el <code>Back-end</code> como en el <code>Front-end</code>.</li>\n<li>Subir una o varias imagenes al servidor haciendo uso de <code>AJAX</code>.</li>\n</ul>\n<h2 id=\"experiencia\">Experiencia</h2>\n<p>Como primer proyecto remoto, quede muy satisfecho, la experiencia de trabajar en pijamas es muy confortable aunque requiere de bastante <strong>disciplina</strong>.</p>\n"}
 
 /***/ }),
-/* 317 */
+/* 333 */
 /*!******************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/works/gean-marroquin.md ***!
   \******************************************************************/
@@ -10823,7 +13169,7 @@ module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readin
 module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroquin","readingTime":"☕️ 2 minutos de lectura","date":"12-01-2017","formattedDate":"Enero 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/gean-marroquin.png","title":"Gean Marroquin","source":"https://github.com/wochap/wochap.github.io","role":"Front-end developer","siteLink":"https://geanmarroquin.com/","description":"Mi sitio personal.","tags":["PWA","SPA","SSR","Unit testing","Offline first","Static web site","Javascript","SASS","Webpack","Personal"]},"bodyHtml":"<p>¿Cual es la mejor manera de aprender algo? poniendolo en practica, es por eso que me propuse a crear algo que me permitiera demostrar mis habilidades y a la vez practicar lo aprendido. Entre las cosas que queria demostrar:</p>\n<ul>\n<li><a href=\"https://www.youtube.com/watch?v=IIRj8DftkqE\">Offline first</a>.</li>\n<li><a href=\"https://www.youtube.com/watch?v=QH94CXVv3UE\">Code splitting</a>.</li>\n<li>TDD.</li>\n<li>Manejo asincrono en javascript.</li>\n</ul>\n<h2 id=\"reto\">Reto</h2>\n<p>Crear mi sitio personal, sin un servidor para poder subirlo a <a href=\"https://pages.github.com/\">GH Pages</a>, y permitirme tener contenido dinamico (portafolio, blog) .</p>\n<h2 id=\"solución\">Solución</h2>\n<p>Despues de investigar, y habiendome inspirado de proyectos que ya lograban lo que me proponia:</p>\n<ul>\n<li><a href=\"https://github.com/gatsbyjs/gatsby\">Gatsby</a></li>\n<li><a href=\"https://phenomic.io/\">Phenomic</a></li>\n</ul>\n<p>Llege a la conclusion que las mejores herramientas para este trabajo eran <a href=\"https://webpack.github.io/\">Webpack</a> con <a href=\"https://facebook.github.io/react/\">React</a> o <a href=\"https://vuejs.org/\">VueJS</a>, asi que realize demos con ambos frameworks para elegir cual era el mas conveniente:</p>\n<ul>\n<li><a href=\"https://github.com/wochap/vue-static-blog\">vue-static-blog</a></li>\n<li><a href=\"https://github.com/wochap/webpack-react-static-boilerplate/tree/redux\">webpack-react-static-boilerplate</a></li>\n</ul>\n<p>Me decidi por <a href=\"https://facebook.github.io/react/\">React</a> porque no tenia un proyecto que mostrar con el, el <a href=\"https://assets.materialup.com/uploads/d8f0a829-a3ff-4174-ac7e-d8021904463b/attachment.jpg\">diseño</a> lo encontre en <a href=\"https://site.uplabs.com/\">Up Labs</a>.</p>\n<p>Con todo en orden, comenze por maquetar el diseño, luego cree las pruebas y los componentes; añadí la configuracion necesaria para pre renderizar (con <a href=\"https://github.com/markdalgleish/static-site-generator-webpack-plugin\">static-site-generator-webpack-plugin</a>) las rutas de mi aplicacion, una vez que todo funcionaba añadi <a href=\"https://github.com/reactjs/redux\">redux</a> y refactorize, y refactorize y ...ahora me encuentro añadiendo trabajos a mi portafolio y pronto articulos.</p>\n<h2 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h2>\n<ul>\n<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API\">Service worker</a></li>\n<li><a href=\"https://es.wikipedia.org/wiki/JSONP\">JSONP</a></li>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n</ul>\n<h2 id=\"workflow\">Workflow:</h2>\n<ul>\n<li><strong>CSS:</strong> <a href=\"http://stylus-lang.com/\">SASS</a>, <a href=\"http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/\">BEMIT</a>, <a href=\"http://csswizardry.net/talks/2014/11/itcss-dafed.pdf\">ITCSS</a>, <a href=\"https://github.com/wocss\">WOCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"https://facebook.github.io/react/\">React</a> + <a href=\"https://github.com/ReactTraining/react-router\">React router v3</a> + <a href=\"http://redux.js.org/\">Redux</a>, <a href=\"http://www.2ality.com/2016/02/ecmascript-2017.html\">ES2017</a>, <a href=\"http://eslint.org/\">ESLint</a>, <a href=\"https://facebook.github.io/jest/\">Jest</a> + <a href=\"https://github.com/airbnb/enzyme\">Enzyme</a>, <a href=\"https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346\">by Route hierarchy</a>.</li>\n<li><strong>Build System:</strong> <a href=\"https://webpack.github.io/\">Webpack</a> + <a href=\"https://babeljs.io/\">Babel</a> + <a href=\"https://github.com/wochap/wochap.github.io/tree/dev/build/webpack/loaders\">custom-loaders</a> + <a href=\"https://github.com/GoogleChrome/sw-precache\">sw-precache</a>.</li>\n</ul>\n<h2 id=\"logros\">Logros:</h2>\n<ul>\n<li>Crear loaders propios en <a href=\"https://webpack.github.io/\">Webpack</a>.</li>\n<li><strong>Optimistic updates</strong>.</li>\n<li>El sitio no necesita cargar los scripts para que puedas navegar por el, gracias a que todas las paginas son generadas por <a href=\"https://webpack.github.io/\">Webpack</a> y <a href=\"https://facebook.github.io/react/\">React</a>.</li>\n</ul>\n"}
 
 /***/ }),
-/* 318 */
+/* 334 */
 /*!***************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/works/la-glorieta.md ***!
   \***************************************************************/
@@ -10833,7 +13179,7 @@ module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroq
 module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","readingTime":"☕️ 2 minutos de lectura","date":"26-08-2015","formattedDate":"Agosto 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/la-glorieta.jpg","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070204/wochap/hero/la-glorieta.jpg","title":"La Glorieta","tasks":"Desarrollo de landing page","role":"Front-end developer","siteLink":"http://cmsreservas.noveltie.la","description":"La Glorieta es un restaurant representante de la culinaria tacneña en múltiples eventos y concursos.","tags":["Front-end","KnockoutJS","Jquery","Stylus","Laravel","Gulp","Noveltie"]},"bodyHtml":"<h2 id=\"reto\">Reto</h2>\n<p>Un sitio web que permitiera a sus clientes realizar reservas online, ademas de mostrar información de la misma, sus noticias y información de contacto.</p>\n<h2 id=\"solución\">Solución</h2>\n<p>Como el sitio requeria de mucha manipulacion del <code>DOM</code>, aprendí y desarrolle el sitio con  <a href=\"https://knockoutjs.com/\">KnockoutJS</a> y <a href=\"http://sammyjs.org/\">SammyJS</a> para manejar las rutas del catalogo.</p>\n<h2 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h2>\n<ul>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage\">BROWSER LocalStorage</a></li>\n</ul>\n<h2 id=\"workflow\">Workflow:</h2>\n<ul>\n<li><strong>HTML:</strong> <a href=\"https://laravel.com/docs/5.3/blade\">Blade</a>.</li>\n<li><strong>CSS:</strong> <a href=\"http://stylus-lang.com/\">Stylus</a>, <a href=\"https://suitcss.github.io/\">SuitCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"http://knockoutjs.com/\">KnockoutJS</a> + <a href=\"https://jquery.com/\">Jquery</a>, <a href=\"https://babeljs.io/learn-es2015/\">ES2015</a>.</li>\n<li><strong>Build System:</strong> <a href=\"http://gulpjs.com/\">Gulp</a>, <a href=\"https://laravel.com/docs/5.3/elixir\">Laravel elixir</a>, <a href=\"http://browserify.org/\">Browserify</a>, <a href=\"https://babeljs.io/\">Babel</a>.</li>\n</ul>\n<h2 id=\"logros\">Logros:</h2>\n<ul>\n<li>Desarrollar un carrito de compras con persistencia de datos, .</li>\n</ul>\n<p><img src=\"//res.cloudinary.com/wochap/image/upload/v1495070180/wochap/body/glorieta-carrito.jpg\" alt=\"Carrito de compras del sitio web La Glorieta\"></p>\n<ul>\n<li>Desarrollar un catalogo de items, con categorias, sub categorias, ademas de <strong>paginación</strong>, y <strong>busqueda</strong>. Los datos son consumidos por <code>AJAX</code>.</li>\n</ul>\n<div class=\"c-markdown-image-full\">\n  <img src=\"//res.cloudinary.com/wochap/image/upload/v1495070190/wochap/body/glorieta-catalogo.jpg\" alt=\"Catalogo de item del sitio web La Glorieta\">\n</div>\n\n<ul>\n<li>Implementar calculos y actualizaciones del DOM complejas, un claro <strong>ejemplo</strong> es el formulario de proforma, en cada seccion la suma de cantidades debe ser igual al <code>numero de personas</code>.</li>\n</ul>\n<p><img src=\"//res.cloudinary.com/wochap/image/upload/v1495070186/wochap/body/glorieta-reserva.gif\" alt=\"Formulario de reserva del sitio web La Glorieta\"></p>\n<ul>\n<li>Aprender <a href=\"http://knockoutjs.com/\">KnockoutJS</a>.</li>\n</ul>\n<h2 id=\"experiencia\">Experiencia</h2>\n<p><strong>La Glorieta</strong> es el primer <strong>proyecto real</strong> (es decir ser usado por personas) que desarrollé, y no fue facil, cuando empeze el proyecto mis conocimientos llegaban a solo poder maquetar, pero al termino del mismo acabe aprendiendo <a href=\"http://knockoutjs.com/\">KnockoutJS</a>, aplique <code>POO</code> y entendi como funcionaba el <code>data-binding</code>.</p>\n<p>Una de las mejores cosas al desarrollar el sitio, fue que como primer <code>Front-end developer</code> en <a href=\"https://noveltie.la/\">Noveltie</a> me confiaron todo el desarrollo <code>Front-end</code>.</p>\n"}
 
 /***/ }),
-/* 319 */
+/* 335 */
 /*!*******************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/works/ricarica-travel.md ***!
   \*******************************************************************/
@@ -10843,7 +13189,7 @@ module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","
 module.exports = {"frontMatter":{"slug":"ricarica-travel","fileName":"ricarica-travel","readingTime":"☕️ 2 minutos de lectura","date":"19-05-2016","formattedDate":"Mayo 2016","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/ricarica-travel.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070205/wochap/hero/ricarica-travel.jpg","title":"RicaRica Travel","role":"Front-end developer","siteLink":"http://ricaricatravel.com/","description":"RicaRica Travel es una agencia de turismo.","tags":["SPA","i18n","Front-end","VueJS","Jquery","SASS","Laravel","Webpack","Noveltie"]},"bodyHtml":"<h2 id=\"reto\">Reto</h2>\n<p>Desarrollar un <strong>SPA</strong> con <strong>i18n</strong>, <strong>carrito de compras</strong> y <strong>pasarela de pago</strong>.</p>\n<h2 id=\"solución\">Solución</h2>\n<p><strong>RicaRica Travel</strong> (agencia de turismo) fue uno de los proyectos mas complejos (tanto el diseño como la funcionalidad) que me haya tocado realizar. El desarrollo se hizo bajo un marco de trabajo agil: <strong>Scrum</strong>.</p>\n<p>Ya que el sitio requeria de mucha manipulacion del <code>DOM</code>, trabaje con <a href=\"https://vuejs.org/\">VueJS</a>. Para manejar los datos del carrito y formularios añadí <a href=\"https://github.com/vuejs/vuex\">Vuex</a> y <a href=\"https://github.com/vuejs/vue-router\">vue-router</a> para manejar las rutas.</p>\n<h3 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h3>\n<ul>\n<li><a href=\"https://developer.mozilla.org/es/docs/Web/API/Fetch_API\">Fetch</a></li>\n<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage\">LocalStorage</a></li>\n<li><a href=\"https://developer.mozilla.org/es/docs/Web/CSS/Transiciones_de_CSS\">CSS Transitions</a></li>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n</ul>\n<h3 id=\"workflow\">Workflow:</h3>\n<ul>\n<li><strong>CSS:</strong> <a href=\"http://stylus-lang.com/\">SASS</a>, <a href=\"http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/\">BEMIT</a>, <a href=\"http://csswizardry.net/talks/2014/11/itcss-dafed.pdf\">ITCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"https://vuejs.org/\">VueJS</a> + <a href=\"https://github.com/vuejs/vue-router\">vue-router</a> + <a href=\"https://github.com/vuejs/vuex/\">vuex</a>, <a href=\"https://jquery.com/\">Jquery</a>, <a href=\"https://babeljs.io/learn-es2015/\">ES2015</a>, <a href=\"http://eslint.org/\">ESLint</a>, <a href=\"https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346\">by Route hierarchy</a>.</li>\n<li><strong>Build System:</strong> <a href=\"https://webpack.github.io/\">Webpack</a> + <a href=\"https://babeljs.io/\">Babel</a>.</li>\n</ul>\n<h3 id=\"logros\">Logros:</h3>\n<ul>\n<li>Implementar <code>I18n</code> (internacionalización), mi primer proyecto multi idioma, logrado con <a href=\"https://github.com/vuejs/vuex/\">vuex</a>.</li>\n</ul>\n<p><img src=\"//res.cloudinary.com/wochap/image/upload/v1495070196/wochap/body/ricarica-travel-i18n.gif\" alt=\"RicaRica Travel i18n demo\"></p>\n<ul>\n<li>Crear un <code>SPA</code> (Single Page Application), hecho con <a href=\"https://github.com/vuejs/vue-router\">vue-router</a>, las animaciones fueron hechas con <a href=\"http://v1.vuejs.org/guide/transitions.html#CSS-Transitions\">CSS-Transitions</a>.</li>\n</ul>\n<p><img src=\"//res.cloudinary.com/wochap/image/upload/v1495070194/wochap/body/ricarica-travel-spa.gif\" alt=\"RicaRica Travel spa demo\"></p>\n<ul>\n<li>Pasarela de pagos.</li>\n</ul>\n<div class=\"c-markdown-image-full\">\n  <img src=\"//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/ricarica-travel-payment.jpg\" alt=\"RicaRica Travel pasarela de pago\">\n</div>\n\n<ul>\n<li>Aprender <a href=\"https://vuejs.org/\">VueJS</a>.</li>\n</ul>\n<h2 id=\"experiencia\">Experiencia</h2>\n<p>Otro proyecto con grandes desafios, y una vez más... la complejidad de la aplicación me llevo a reemplazar <a href=\"http://knockoutjs.com/\">KnockoutJS</a> (framework actual que usaba), por uno mucho mas robusto: <a href=\"https://vuejs.org/\">VueJS</a> (luego de revisar <a href=\"https://facebook.github.io/react/\">React</a> y  <a href=\"http://aurelia.io/\">Aurelia</a>).</p>\n<p>Me decidi por <a href=\"https://vuejs.org/\">VueJS</a> ya que su curva de aprendizaje era bastante corta, llevaba todo lo que requeria, y ademas contaba con lo mejor de cada framework antes mencionados: <strong>componentes</strong>, <strong>directivas</strong>, <strong>data-binding</strong>.</p>\n"}
 
 /***/ }),
-/* 320 */
+/* 336 */
 /*!*************************************************************!*\
   !*** ../lib/loaders/markdown.js!../data/works/yilancorp.md ***!
   \*************************************************************/
@@ -10853,7 +13199,7 @@ module.exports = {"frontMatter":{"slug":"ricarica-travel","fileName":"ricarica-t
 module.exports = {"frontMatter":{"slug":"yilancorp","fileName":"yilancorp","readingTime":"☕️ 1 minuto de lectura","date":"10-01-2017","formattedDate":"Enero 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/yilancorp.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070203/wochap/hero/yilancorp.jpg","title":"Yilancorp","tasks":"Desarrollo de landing page.","role":"Front-end developer","siteLink":"http://yilancorp.com/","description":"Yilancorp es una empresa que ofrece productos y servicios: inpeccion de mercaderías, contizaciones y verificacion de fabricas.","tags":["Front-end","Jquery","SASS","Webpack","Freelance"]},"bodyHtml":"<h2 id=\"resumen\">Resumen</h2>\n<p>Gracias a la experiencia con anteriores proyectos, fue facil desarrollar el sitio, haciendo uso de mi framework personal <a href=\"https://github.com/wocss\">wocss</a> (inspirado en <a href=\"https://github.com/inuitcss\">InuitCSS</a>) y <a href=\"https://jquery.com/\">Jquery</a>, para las animaciones use <a href=\"http://velocityjs.org/\">VelocityJS</a>, tambien hize uso de <a href=\"http://materializecss.com/scrollspy.html\">Scrollspy</a> (modulo de <a href=\"http://materializecss.com/\">MaterializeCSS</a>), tuve que modificarlo para que funcionara con un diferente <code>scroll container</code>.</p>\n<h2 id=\"tecnologías-destacadas\">Tecnologías destacadas:</h2>\n<ul>\n<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API\">Service worker</a></li>\n<li><a href=\"https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS\">CSS Animations</a></li>\n<li><a href=\"https://es.wikipedia.org/wiki/JSONP\">JSONP</a></li>\n</ul>\n<div class=\"c-markdown-image-full\">\n  <img src=\"//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/yilancorp-services.gif\" alt=\"JSONP demo\">\n</div>\n\n<ul>\n<li><a href=\"https://css-tricks.com/snippets/css/a-guide-to-flexbox/\">CSS FlexBox</a></li>\n</ul>\n<h2 id=\"workflow\">Workflow:</h2>\n<ul>\n<li><strong>CSS:</strong> <a href=\"http://stylus-lang.com/\">SASS</a>, <a href=\"http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/\">BEMIT</a>, <a href=\"http://csswizardry.net/talks/2014/11/itcss-dafed.pdf\">ITCSS</a>, <a href=\"https://github.com/wocss\">WOCSS</a>.</li>\n<li><strong>JS:</strong> <a href=\"https://jquery.com/\">Jquery</a>, <a href=\"https://babeljs.io/learn-es2015/\">ES2015</a>, <a href=\"http://eslint.org/\">ESLint</a>.</li>\n<li><strong>Build System:</strong> <a href=\"https://webpack.github.io/\">Webpack</a> + <a href=\"https://babeljs.io/\">Babel</a> + <a href=\"https://github.com/wochap/wochap.github.io/tree/dev/build/webpack/loaders\">custom-loaders</a>.</li>\n</ul>\n<h2 id=\"logros\">Logros:</h2>\n<ul>\n<li>Personalizar el plugin <a href=\"http://materializecss.com/scrollspy.html\">Scrollspy</a> de <a href=\"http://materializecss.com/\">MaterializeCSS</a>, para que funcionase con un diferente <code>scroll container</code>.</li>\n<li><code>Fancy animations</code>.</li>\n</ul>\n"}
 
 /***/ }),
-/* 321 */
+/* 337 */
 /*!****************************************************************!*\
   !*** ../data/posts sync !../lib/loaders/front-matter.js \.md$ ***!
   \****************************************************************/
@@ -10861,7 +13207,7 @@ module.exports = {"frontMatter":{"slug":"yilancorp","fileName":"yilancorp","read
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./configurar-webpack-5.md": 322
+	"./configurar-webpack-5.md": 338
 };
 
 
@@ -10882,10 +13228,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 321;
+webpackContext.id = 337;
 
 /***/ }),
-/* 322 */
+/* 338 */
 /*!****************************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/posts/configurar-webpack-5.md ***!
   \****************************************************************************/
@@ -10895,7 +13241,7 @@ webpackContext.id = 321;
 module.exports = {"frontMatter":{"slug":"configurar-webpack-5","fileName":"configurar-webpack-5","readingTime":"☕️ 7 minutos de lectura","identifier":"blog-1","date":"09-04-2020","dateModified":"12-04-2020","formattedDate":"Abril 2020","imageCaption":"webpack","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","title":"Configurar webpack 5","description":"Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!","tags":["webpack","babel"]}}
 
 /***/ }),
-/* 323 */
+/* 339 */
 /*!****************************************************************!*\
   !*** ../data/works sync !../lib/loaders/front-matter.js \.md$ ***!
   \****************************************************************/
@@ -10903,11 +13249,11 @@ module.exports = {"frontMatter":{"slug":"configurar-webpack-5","fileName":"confi
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./fixbrand.md": 324,
-	"./gean-marroquin.md": 325,
-	"./la-glorieta.md": 326,
-	"./ricarica-travel.md": 327,
-	"./yilancorp.md": 328
+	"./fixbrand.md": 340,
+	"./gean-marroquin.md": 341,
+	"./la-glorieta.md": 342,
+	"./ricarica-travel.md": 343,
+	"./yilancorp.md": 344
 };
 
 
@@ -10928,10 +13274,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 323;
+webpackContext.id = 339;
 
 /***/ }),
-/* 324 */
+/* 340 */
 /*!****************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/fixbrand.md ***!
   \****************************************************************/
@@ -10941,7 +13287,7 @@ webpackContext.id = 323;
 module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readingTime":"☕️ 1 minuto de lectura","date":"21-12-2015","formattedDate":"Diciembre 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/fixbrand.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070206/wochap/hero/fixbrand.jpg","title":"Fixbrand","tasks":"Desarrollo landing page y panel de administración","role":"Full-stack developer","siteLink":"http://fixbrand.com/","description":"Fixbrand es una agencia creativa de marcas que apuesta por el trabajo estratégico, creativo y sostenido en el tiempo.","tags":["Full-stack","Laravel","Jquery","Stylus","Gulp","Freelance"]}}
 
 /***/ }),
-/* 325 */
+/* 341 */
 /*!**********************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/gean-marroquin.md ***!
   \**********************************************************************/
@@ -10951,7 +13297,7 @@ module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readin
 module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroquin","readingTime":"☕️ 2 minutos de lectura","date":"12-01-2017","formattedDate":"Enero 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/gean-marroquin.png","title":"Gean Marroquin","source":"https://github.com/wochap/wochap.github.io","role":"Front-end developer","siteLink":"https://geanmarroquin.com/","description":"Mi sitio personal.","tags":["PWA","SPA","SSR","Unit testing","Offline first","Static web site","Javascript","SASS","Webpack","Personal"]}}
 
 /***/ }),
-/* 326 */
+/* 342 */
 /*!*******************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/la-glorieta.md ***!
   \*******************************************************************/
@@ -10961,7 +13307,7 @@ module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroq
 module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","readingTime":"☕️ 2 minutos de lectura","date":"26-08-2015","formattedDate":"Agosto 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/la-glorieta.jpg","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070204/wochap/hero/la-glorieta.jpg","title":"La Glorieta","tasks":"Desarrollo de landing page","role":"Front-end developer","siteLink":"http://cmsreservas.noveltie.la","description":"La Glorieta es un restaurant representante de la culinaria tacneña en múltiples eventos y concursos.","tags":["Front-end","KnockoutJS","Jquery","Stylus","Laravel","Gulp","Noveltie"]}}
 
 /***/ }),
-/* 327 */
+/* 343 */
 /*!***********************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/ricarica-travel.md ***!
   \***********************************************************************/
@@ -10971,7 +13317,7 @@ module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","
 module.exports = {"frontMatter":{"slug":"ricarica-travel","fileName":"ricarica-travel","readingTime":"☕️ 2 minutos de lectura","date":"19-05-2016","formattedDate":"Mayo 2016","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/ricarica-travel.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070205/wochap/hero/ricarica-travel.jpg","title":"RicaRica Travel","role":"Front-end developer","siteLink":"http://ricaricatravel.com/","description":"RicaRica Travel es una agencia de turismo.","tags":["SPA","i18n","Front-end","VueJS","Jquery","SASS","Laravel","Webpack","Noveltie"]}}
 
 /***/ }),
-/* 328 */
+/* 344 */
 /*!*****************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/yilancorp.md ***!
   \*****************************************************************/
