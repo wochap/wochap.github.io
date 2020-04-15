@@ -28,7 +28,7 @@ function HomeScreen() {
           </div>
         </div>
       </div>
-      <Posts className='o-wrapper u-py5 u-center' id='blog' />
+      <Posts className='o-wrapper u-py5 u-center' id='blog' isMultiColumn />
       <Works className='u-py5' id='works' />
       <SiteContact className='u-py5' id='contact' />
       <HomeSchema />

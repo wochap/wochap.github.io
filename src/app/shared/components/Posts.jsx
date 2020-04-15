@@ -7,7 +7,7 @@ import ShimmerText from 'components/ShimmerText'
 import SiteError from 'components/SiteError'
 import PostsList from './PostsList'
 
-export function PostsComponent({collectionState, collection, className, id}) {
+export function PostsComponent({collectionState, collection, className, id, isMultiColumn}) {
   let body
 
   if (collectionState.error) {
@@ -26,7 +26,7 @@ export function PostsComponent({collectionState, collection, className, id}) {
       </ul>
     )
   } else {
-    body = <PostsList posts={collection} />
+    body = <PostsList posts={collection} isMultiColumn={isMultiColumn} />
   }
 
   return (
@@ -42,6 +42,7 @@ PostsComponent.propTypes = {
   collection: PropTypes.arrayOf(articleShape).isRequired,
   className: PropTypes.string,
   id: PropTypes.string,
+  isMultiColumn: PropTypes.bool,
 }
 
 const Posts = withCollection(PostsComponent, 'posts')

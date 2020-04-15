@@ -9,7 +9,7 @@ function Post({post}) {
       <h3 className='u-fz-h2 u-mt0 u-mb2 u-line-height-1'>
         <Link to={`/blog/${post.fileName}`}>{post.title}</Link>
       </h3>
-      <p className='u-fz-sm u-muted'>
+      <p className='u-fz-sm u-muted u-mb0'>
         {formatDate(post.date)}
         <br />
         <small>{post.readingTime}</small>

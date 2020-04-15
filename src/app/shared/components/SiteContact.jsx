@@ -7,7 +7,11 @@ function SiteContact({className, id, titleTag: TitleTag = 'h2'}) {
   return (
     <section className={`o-wrapper u-center ${className}`} id={id}>
       <TitleTag className='u-mb3 u-caps u-fz-h2'>Contáctame</TitleTag>
-      <p className='u-mb4 u-fz-sm u-muted'>Envíame un mensaje para trabajar juntos.</p>
+      <p className='u-mb4 u-fz-sm'>
+        <span className='u-muted'>Envíame un mensaje </span>
+        <strong>{data.email}</strong>
+        <span className='u-muted'> para trabajar juntos.</span>
+      </p>
       <p className='u-mb5'>
         <a className='o-btn c-btn c-btn--primary' href={`mailto:${data.email}`}>
           Enviar mensaje

@@ -39,7 +39,7 @@ module.exports = {
     },
     development: {
       presets,
-      plugins: clientPlugins,
+      plugins: [...clientPlugins, require.resolve('react-refresh/babel')],
     },
     production: {
       presets,

@@ -13,6 +13,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const {getIfUtils, removeEmpty} = require('webpack-config-utils')
 const myLocalIp = require('my-local-ip')
 const moduleAlias = require('module-alias')
@@ -282,6 +283,8 @@ module.exports = {
 
     // enable HMR globally
     ifDevelopment(new webpack.HotModuleReplacementPlugin()),
+
+    ifDevelopment(new ReactRefreshWebpackPlugin()),
 
     toBoolean(process.env.BUNDLE_ANALYZER_REPORT) ? ifProduction(new BundleAnalyzerPlugin()) : undefined,
 
