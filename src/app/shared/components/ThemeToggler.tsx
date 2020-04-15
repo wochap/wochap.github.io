@@ -4,9 +4,11 @@ import {ThemeToggler as ThemeTogglerRC} from 'gatsby-plugin-dark-mode'
 import styled from '@emotion/styled'
 
 const Button = styled.button`
+  color: ${props => props.color};
   cursor: pointer;
   font-size: 2em;
-  color: ${props => props.color};
+  text-align: center;
+  width: 46px;
 `
 
 interface ThemeTogglerRCProps {
@@ -29,7 +31,7 @@ function ThemeToggler({className}: ThemeTogglerProps) {
             color={isLightMode ? '#9eb3c6' : '#f9d401'}
             onClick={() => toggleTheme(isLightMode ? 'dark' : 'light')}
           >
-            <i className='u-icon'>{isLightMode ? 'moon' : 'sun'}</i>
+            <i className='u-icon u-block'>{isLightMode ? 'moon' : 'sun'}</i>
           </Button>
         )
       }}
