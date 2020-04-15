@@ -7,7 +7,7 @@ imageCaption: webpack
 imageUrl: //res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png
 heroImageUrl: //res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png
 title: Configurar webpack 5
-description: 'Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!'
+description: Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!
 tags:
   - webpack
   - babel
@@ -113,7 +113,7 @@ Con esto babel sera capaz de insertar polyfills y transformar JS donde se requie
 
 `postcss-loader` usara esta configuracion, solo usaremos el plugin de autoprefixer.
 
-```json
+```js
 module.exports = {
     plugins: {
         "autoprefixer": {},
