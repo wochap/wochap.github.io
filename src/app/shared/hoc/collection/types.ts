@@ -4,17 +4,20 @@ export interface State {
   error: boolean | Error
 }
 
+export interface FrontMatter {
+  slug: string
+  title: string
+  description: string
+  date: string
+  dateModified: string
+  imageUrl: string
+  imageCaption: string
+  tags: string[]
+  keywords?: string[]
+}
+
 export interface CollectionItem {
-  frontMatter: {
-    slug: string
-    title: string
-    description: string
-    date: string
-    dateModified: string
-    imageUrl: string
-    imageCaption: string
-    tags: string[]
-  }
+  frontMatter: FrontMatter
   bodyHtml: string
   state: State
 }
