@@ -13,7 +13,6 @@ function Work({work, titleTag: TitleTag = 'h3'}) {
     >
       <Link className='c-work__link' to={`/works/${work.fileName}`}>
         <TitleTag className='c-work__title'>{work.title}</TitleTag>
-        <p>Ver proyecto completo</p>
       </Link>
     </article>
   )
