@@ -8,7 +8,6 @@
 
 html {
   background-color: $global-color-secondary;
-  color: $global-color-primary;
   font-family: -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Lato", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -19,30 +18,55 @@ html {
   overflow: hidden; /* [1] */
 }
 
-@include mq($from: 'laptop') {
+:root {
+  --bg: #ffffff;
+  --codeBg: #fafafa;
+  --textNormal: #{$global-color-primary};
+  --textMuted: #A5A5A5;
+  --textMarkdown: #333333;
+  --textMarkdownLink: #4078c0;
+}
 
-  ::-webkit-scrollbar-track {
-    background-color: scale-color($black, $lightness: 90%);
+body {
+  background-color: var(--bg);
+  color: var(--textNormal);
+
+  &.dark {
+    -webkit-font-smoothing: antialiased;
+
+    --bg: #181818;
+    --codeBg: #282C34;
+    --textNormal: #{scale-color($global-color-secondary, $lightness: -5%)};
+    --textMuted: #aaaaaa;
+    --textMarkdown: initial;
+    --textMarkdownLink: #75abe8;
   }
+}
 
-  ::-webkit-scrollbar {
-  	width: 12px;
-    height: 12px;
-  }
+// @include mq($from: 'laptop') {
 
-  ::-webkit-scrollbar-thumb {
-  	background-color: $black;
+//   ::-webkit-scrollbar-track {
+//     background-color: scale-color($black, $lightness: 90%);
+//   }
 
-    &:hover {
-      background: scale-color($black, $lightness: 20%);
-    }
+//   ::-webkit-scrollbar {
+//   	width: 12px;
+//     height: 12px;
+//   }
 
-    &:active {
-      background: scale-color($black, $lightness: -20%);
-    }
+//   ::-webkit-scrollbar-thumb {
+//   	background-color: $black;
 
-    &:window-inactive {
-      background: scale-color($black, $lightness: 20%);
-    }
-  }
-};
+//     &:hover {
+//       background: scale-color($black, $lightness: 20%);
+//     }
+
+//     &:active {
+//       background: scale-color($black, $lightness: -20%);
+//     }
+
+//     &:window-inactive {
+//       background: scale-color($black, $lightness: 20%);
+//     }
+//   }
+// };
