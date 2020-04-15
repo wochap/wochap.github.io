@@ -13,11 +13,11 @@ export function WorksComponent({collectionState, collection, className, id, titl
     body = <SiteError title='Ups' message={collectionState.error} />
   } else if (collectionState.isPending) {
     body = (
-      <ShimmerText block>
+      <ShimmerText block themeable>
         <ul className='o-grid o-grid--gutter-3 u-list-reset'>
           {[...new Array(3)].map((_, index) => (
             <li className='o-grid__item u-12/12 u-6/12@tablet u-4/12@laptop' key={index}>
-              <div className='c-work u-relative u-overflow-hidden'>
+              <div className='c-work c-work--is-loading u-relative u-overflow-hidden'>
                 <span className='u-absolute u-left-0 u-top-0' style={{fontSize: '20rem'}} aria-label='Cargando'>
                   ██
                 </span>

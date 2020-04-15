@@ -6,7 +6,7 @@ function MarkdownBody({html, isLoading = false}) {
   if (isLoading) {
     return (
       <div className='o-wrapper o-wrapper--3 u-pb5'>
-        <ShimmerText>
+        <ShimmerText themeable>
           <span className='u-block u-pb3 u-fz-h00 u-line-height-1' aria-label='cargando'>
             Lorem
           </span>

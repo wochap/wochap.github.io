@@ -5,6 +5,7 @@
 /**
  * 1. Pull text to bottom.
  * 2. Create a new context, for performance.
+ * 3. Contrast ShimmerText linear gradient
  */
 
 .c-work {
@@ -63,4 +64,9 @@
   letter-spacing: $global-letter-spacing;
   margin-bottom: $global-space-3;
   text-transform: uppercase;
+}
+
+.c-work--is-loading {
+  color: inherit; // [3]
+  background: currentColor; // [3]
 }

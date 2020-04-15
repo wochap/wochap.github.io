@@ -8,10 +8,8 @@
 
 html {
   background-color: $global-color-secondary;
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Lato", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Lato', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   font-size: 1em;
   font-weight: $global-fw-regular;
   line-height: 1.5;
@@ -22,13 +20,17 @@ html {
   --bg: #ffffff;
   --codeBg: #fafafa;
   --textNormal: #{$global-color-primary};
-  --textMuted: #A5A5A5;
+  --textMuted: #a5a5a5;
   --textMarkdown: #333333;
   --textMarkdownLink: #4078c0;
 
   --buttonPrimaryBg: #{$global-color-primary};
   --buttonPrimaryBgHover: #{scale-color($global-color-primary, $lightness: 10%)};
   --buttonPrimaryText: #{$global-color-secondary};
+
+  --shimmerTextBg: #ffffff;
+  --shimmerTextColor: #000000;
+  --shimmerTextBlendMode: lighten;
 }
 
 body {
@@ -39,7 +41,7 @@ body {
     -webkit-font-smoothing: antialiased;
 
     --bg: #181818;
-    --codeBg: #282C34;
+    --codeBg: #282c34;
     --textNormal: #{scale-color($global-color-secondary, $lightness: -5%)};
     --textMuted: #aaaaaa;
     --textMarkdown: initial;
@@ -48,6 +50,10 @@ body {
     --buttonPrimaryBg: #{$global-color-secondary};
     --buttonPrimaryBgHover: #{scale-color($global-color-secondary, $lightness: -10%)};
     --buttonPrimaryText: #{$global-color-primary};
+
+    --shimmerTextBg: var(--bg);
+    --shimmerTextColor: #ffffff;
+    --shimmerTextBlendMode: darken;
   }
 }
 
