@@ -25,6 +25,10 @@ html {
   --textMuted: #A5A5A5;
   --textMarkdown: #333333;
   --textMarkdownLink: #4078c0;
+
+  --buttonPrimaryBg: #{$global-color-primary};
+  --buttonPrimaryBgHover: #{scale-color($global-color-primary, $lightness: 10%)};
+  --buttonPrimaryText: #{$global-color-secondary};
 }
 
 body {
@@ -40,6 +44,10 @@ body {
     --textMuted: #aaaaaa;
     --textMarkdown: initial;
     --textMarkdownLink: #75abe8;
+
+    --buttonPrimaryBg: #{$global-color-secondary};
+    --buttonPrimaryBgHover: #{scale-color($global-color-secondary, $lightness: -10%)};
+    --buttonPrimaryText: #{$global-color-primary};
   }
 }
 
