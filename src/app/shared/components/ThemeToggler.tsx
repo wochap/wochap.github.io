@@ -4,11 +4,12 @@ import {ThemeToggler as ThemeTogglerRC} from 'gatsby-plugin-dark-mode'
 import styled from '@emotion/styled'
 
 const Button = styled.button`
-  color: ${props => props.color};
+  label: ThemeToggler;
   cursor: pointer;
   font-size: 2em;
   text-align: center;
   width: 46px;
+  color: ${props => props.color};
 `
 
 interface ThemeTogglerRCProps {
