@@ -17,7 +17,7 @@ describe('Post', () => {
   it('render formatted date', () => {
     const formattedDate = formatDate(props.post.date)
 
-    expect(wrapper.childAt(0).text()).toEqual(formattedDate)
+    expect(wrapper.childAt(1).text()).toEqual(formattedDate)
   })
 
   it('render title', () => {
