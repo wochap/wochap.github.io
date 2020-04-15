@@ -9,6 +9,9 @@ const Button = styled.button`
   font-size: 2em;
   text-align: center;
   width: 46px;
+  &:hover {
+    outline: none;
+  }
   color: ${props => props.color};
 `
 
