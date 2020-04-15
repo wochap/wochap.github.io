@@ -6,14 +6,14 @@ import {formatDate} from 'utils/formatter'
 function Post({post}) {
   return (
     <article>
-      <p className='u-fz-sm u-mb1 u-muted'>
+      <h3 className='u-fz-h2 u-mt0 u-mb2 u-line-height-1'>
+        <Link to={`/blog/${post.fileName}`}>{post.title}</Link>
+      </h3>
+      <p className='u-fz-sm u-muted'>
         {formatDate(post.date)}
         <br />
         <small>{post.readingTime}</small>
       </p>
-      <h3 className='u-fz-h2 u-mb0 u-line-height-1'>
-        <Link to={`/blog/${post.fileName}`}>{post.title}</Link>
-      </h3>
     </article>
   )
 }

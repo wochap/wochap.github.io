@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {Link, NavLink} from 'react-router-dom'
 import SiteHeaderLink from 'components/SiteHeaderLink'
 import Hamburger from './Hamburger'
+import ThemeToggler from './ThemeToggler'
 
 class SiteHeader extends React.Component {
   static propTypes = {
@@ -50,74 +51,77 @@ class SiteHeader extends React.Component {
             Gean <br /> Marroquin
           </Link>
         </p>
-        <nav className={`o-dialog c-site-nav ${isNavOpen ? 'is-open' : ''}`}>
-          <ul className='o-dialog__wrapper'>
-            <li>
-              <NavLink className='o-btn c-site-nav__link' to='/about' onClick={this._closeNav} activeClassName='is-active'>
-                Sobre mi
-              </NavLink>
-            </li>
-            <li>
-              <SiteHeaderLink
-                title='Blog'
-                isHome={isHome}
-                props={
-                  isHome
-                    ? {
-                        href: '#blog',
-                        onClick: this._closeNav,
-                      }
-                    : {
-                        to: '/blog',
-                        onClick: this._closeNav,
-                        activeClassName: 'is-active',
-                      }
-                }
-              />
-            </li>
-            <li>
-              <SiteHeaderLink
-                title='Portafolio'
-                isHome={isHome}
-                props={
-                  isHome
-                    ? {
-                        href: '#works',
-                        onClick: this._closeNav,
-                      }
-                    : {
-                        to: '/works',
-                        onClick: this._closeNav,
-                        activeClassName: 'is-active',
-                      }
-                }
-              />
-            </li>
-            <li>
-              <SiteHeaderLink
-                title='Contáctame'
-                isHome={isHome}
-                props={
-                  isHome
-                    ? {
-                        href: '#contact',
-                        onClick: this._closeNav,
-                      }
-                    : {
-                        to: '/contact',
-                        onClick: this._closeNav,
-                        activeClassName: 'is-active',
-                      }
-                }
-              />
-            </li>
-          </ul>
-        </nav>
-        <Hamburger
-          className={`c-site-header__btn-toggle ${isNavOpen ? 'is-active' : ''} u-hide@laptop`}
-          onClick={this._toggleNav}
-          isOpen={isNavOpen}
-        />
+        <div className='u-flex u-items-center'>
+          <nav className={`o-dialog c-site-nav ${isNavOpen ? 'is-open' : ''}`}>
+            <ul className='o-dialog__wrapper'>
+              <li>
+                <NavLink className='o-btn c-site-nav__link' to='/about' onClick={this._closeNav} activeClassName='is-active'>
+                  Sobre mi
+                </NavLink>
+              </li>
+              <li>
+                <SiteHeaderLink
+                  title='Blog'
+                  isHome={isHome}
+                  props={
+                    isHome
+                      ? {
+                          href: '#blog',
+                          onClick: this._closeNav,
+                        }
+                      : {
+                          to: '/blog',
+                          onClick: this._closeNav,
+                          activeClassName: 'is-active',
+                        }
+                  }
+                />
+              </li>
+              <li>
+                <SiteHeaderLink
+                  title='Portafolio'
+                  isHome={isHome}
+                  props={
+                    isHome
+                      ? {
+                          href: '#works',
+                          onClick: this._closeNav,
+                        }
+                      : {
+                          to: '/works',
+                          onClick: this._closeNav,
+                          activeClassName: 'is-active',
+                        }
+                  }
+                />
+              </li>
+              <li>
+                <SiteHeaderLink
+                  title='Contáctame'
+                  isHome={isHome}
+                  props={
+                    isHome
+                      ? {
+                          href: '#contact',
+                          onClick: this._closeNav,
+                        }
+                      : {
+                          to: '/contact',
+                          onClick: this._closeNav,
+                          activeClassName: 'is-active',
+                        }
+                  }
+                />
+              </li>
+            </ul>
+          </nav>
+          <ThemeToggler className='u-ml4' />
+          <Hamburger
+            className={`c-site-header__btn-toggle ${isNavOpen ? 'is-active' : ''} u-hide@laptop`}
+            onClick={this._toggleNav}
+            isOpen={isNavOpen}
+          />
+        </div>
       </header>
     )
   }

@@ -31,15 +31,11 @@ a {
 
 a:not([class]) {
   border-bottom: 1px dotted currentColor;
-  color: $global-color-primary;
+  color: var(--textNormal);
 
   &:active,
   &:focus,
   &:hover {
     border-bottom-style: solid;
-  }
-
-  &:hover {
-    color: scale-color($global-color-primary, $lightness: -10%);
   }
 }

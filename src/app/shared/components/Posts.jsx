@@ -15,7 +15,7 @@ export function PostsComponent({collectionState, collection, className, id}) {
   } else if (collectionState.isPending) {
     body = (
       <ul className='u-list-reset u-m0'>
-        <ShimmerText>
+        <ShimmerText themeable>
           {[...new Array(3)].map((_, index) => (
             <li className={index === 2 ? '' : 'u-pb4'} key={index}>
               <span className='u-block u-fz-lg u-line-height-1'>Loremipsum</span>

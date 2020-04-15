@@ -5,12 +5,14 @@
 /**
  * 1. Pull text to bottom.
  * 2. Create a new context, for performance.
+ * 3. Contrast ShimmerText linear gradient
  */
 
 .c-work {
   @include layout-aspect-ratio(4, 3);
   @include card(1);
 
+  color: $global-color-primary;
   background-color: $global-color-primary;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,4 +64,9 @@
   letter-spacing: $global-letter-spacing;
   margin-bottom: $global-space-3;
   text-transform: uppercase;
+}
+
+.c-work--is-loading {
+  color: inherit; // [3]
+  background: currentColor; // [3]
 }

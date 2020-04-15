@@ -41,10 +41,13 @@ $wocss-settings-global: false !default;
 
 .c-btn--primary {
   background-color: $global-color-primary;
+  background-color: var(--buttonPrimaryBg);
   color: $global-color-secondary;
+  color: var(--buttonPrimaryText);
 
   &:hover {
     background-color: scale-color($global-color-primary, $lightness: 10%);
+    background-color: var(--buttonPrimaryBgHover);
   }
 }
 

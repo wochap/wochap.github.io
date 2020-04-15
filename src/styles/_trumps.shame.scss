@@ -2,9 +2,26 @@
   #MARKDOWN-BODY
 \*------------------------------------*/
 
+.c-markdown-body {
+  color: var(--textMarkdown);
+}
+
+.c-markdown-body img {
+  background-color: transparent;
+}
+
+.c-markdown-body blockquote {
+  color: var(--textMuted);
+}
+
+.c-markdown-body pre {
+  background-color: var(--codeBg);
+}
+
+.c-markdown-body a,
 .c-markdown-body a:hover,
 .c-markdown-body a:active {
-  color: #4078c0;
+  color: var(--textMarkdownLink);
   text-decoration: none;
 }
 

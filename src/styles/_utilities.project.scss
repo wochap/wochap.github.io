@@ -111,3 +111,7 @@
 @include utility('color-vue_js') {
   color: $global-color-vue_js;
 }
+
+.u-muted {
+  opacity: .7;
+}
