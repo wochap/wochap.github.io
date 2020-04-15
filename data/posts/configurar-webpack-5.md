@@ -11,6 +11,11 @@ description: Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora
 tags:
   - webpack
   - babel
+keywords:
+  - webpack
+  - webpack 5
+  - babel
+  - webpack-dev-server
 ---
 
 Configurar webpack puede ser frustante...
