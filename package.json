@@ -134,6 +134,7 @@
     "my-local-ip": "^1.0.0",
     "node-sass": "^4.13.1",
     "patch-package": "^6.2.1",
+    "postcss-custom-properties": "^9.1.1",
     "postcss-loader": "^3.0.0",
     "postcss-responsive-type": "^0.5.1",
     "postinstall-postinstall": "^2.1.0",
