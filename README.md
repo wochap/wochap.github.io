@@ -7,15 +7,13 @@ Personal website powered by [React](https://facebook.github.io/react/) and [Webp
 
 ## Quick start
 
-Rename `.env.example` to `.env`. Then:
+**IMPORTANT** Rename `.env.example` to `.env`. Then:
 
 ```sh
 # install dependencies
 $ yarn
 
 # serve with hot reload
-$ yarn build:watch
-# or
 $ yarn dev
 
 # serve with hot reload and inspect webpack dev server
@@ -34,10 +32,6 @@ $ yarn test:watch
 
 # run test coverage report
 $ yarn test:coverage
-
-# run after build
-# deploy with gh-pages
-$ yarn deploy
 ```
 
 **NOTE: For disable source map or bundle analyzer report (both on production only) and browser sync (on development), just remove it from `.env` file.**
@@ -51,13 +45,7 @@ $ yarn deploy
 * React
 * React router
 * Redux
-* wocss
-
-### Content
-
-#### Blog posts
-
-Write the dates in 'DD-MM-YYYY' format.
+* [wocss](https://github.com/wocss/wocss)
 
 ### Structure
 
@@ -92,3 +80,9 @@ To add a new `collection` dispatch the actions from `src/app/actions/collections
 
 * [Share propTypes between components](http://stackoverflow.com/questions/30265327/react-js-and-proptypes-repetition-across-shared-components)
 * [Complete intro to react](https://btholt.github.io/complete-intro-to-react/)
+
+### Content
+
+#### Writing blog posts
+
+Write the dates in 'DD-MM-YYYY' format.
