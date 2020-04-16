@@ -6,7 +6,7 @@ import {formatDate} from 'utils/formatter'
 function Post({post}) {
   return (
     <article>
-      <h3 className='u-fz-h2 u-mt0 u-mb2 u-line-height-1'>
+      <h3 className='u-fz-h2 u-mt0 u-mb1'>
         <Link to={`/blog/${post.fileName}`}>{post.title}</Link>
       </h3>
       <p className='u-fz-sm u-muted u-mb0'>
