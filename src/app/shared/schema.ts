@@ -140,6 +140,7 @@ export const getCollectionItemBlogPosting = ({screenKey, parentId, frontMatter}:
     'dateModified': dateModified,
     'name': frontMatter.title,
     'headline': frontMatter.title,
+    'wordCount': frontMatter.wordCount,
     'keywords': frontMatter.keywords.join(', '),
     // @ts-ignore
     'author': {

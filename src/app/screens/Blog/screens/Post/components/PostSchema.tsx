@@ -26,16 +26,16 @@ function PostSchema({item}: PostSchemaProps) {
 
   const {frontMatter} = item
   const postUrl = `${data.screens.blog.canonicalHref}/${frontMatter.slug}`
-  const blogPosting = getCollectionItemBlogPosting({
-    screenKey: 'blog',
-    parentId: blogWebPageId,
-    frontMatter,
-  })
   const itemWebPage = getCollectionItemWebPage({
     siteUrl: postUrl,
     parentId: blogWebPageId,
     title: frontMatter.title,
     description: frontMatter.description,
+  })
+  const blogPosting = getCollectionItemBlogPosting({
+    screenKey: 'blog',
+    parentId: itemWebPage['@id'],
+    frontMatter,
   })
   const breadCrumbList = getBreadCrumList({
     siteUrl: postUrl,

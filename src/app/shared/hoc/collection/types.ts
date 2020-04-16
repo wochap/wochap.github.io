@@ -14,6 +14,7 @@ export interface FrontMatter {
   imageCaption: string
   tags: string[]
   keywords?: string[]
+  wordCount?: number
 }
 
 export interface CollectionItem {
