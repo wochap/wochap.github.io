@@ -18,24 +18,24 @@ keywords:
   - webpack-dev-server
 ---
 
-Configurar webpack puede ser frustante...
+Configurar webpack puede ser frustrante...
 
 <div class="tenor-gif-embed" data-postid="5384575" data-share-method="host" data-width="100%" data-aspect-ratio="1.7785714285714287"><a href="https://tenor.com/view/fuck-work-gif-5384575">Fuckwork Angry GIF</a> from <a href="https://tenor.com/search/fuckwork-gifs">Fuckwork GIFs</a></div>
 <br>
 
-Por ello en esta guia te enseñare como configurar [webpack 5](https://webpack.js.org/concepts/) con babel, si deseas ver la configuracion final haz click [aqui](#configuracion-final) y [aqui](https://github.com/wochap/setup-webpack-5) para ir al repo.
+Por ello en esta guía te enseñare como configurar [webpack 5](https://webpack.js.org/concepts/) con babel, si deseas ver la configuración final haz click [aquí](#configuracion-final) y [aquí](https://github.com/wochap/setup-webpack-5) para ir al repo.
 
-> al dia de hoy (9 de abril del 2020) [HMR (hot module replacement)](https://webpack.js.org/concepts/hot-module-replacement/) no funciona con **html-webpack-plugin**, y tambien hay algunos plugins que no funcionaran (por el momento) ya que la API interna cambio bastante en webpack 5
+> al día de hoy (9 de abril del 2020) [HMR (hot module replacement)](https://webpack.js.org/concepts/hot-module-replacement/) no funciona con **html-webpack-plugin**, y tambien hay algunos plugins que no funcionaran (por el momento) ya que la API interna cambio bastante en webpack 5
 
 ## Nuestra meta
 
-Tener un solo archivo de configuracion `webpack.config.js` para `production` y `development`, configurar [babel](https://babeljs.io/) para que inserte [polyfills](https://developer.mozilla.org/es/docs/Glossary/Polyfill) y transforme nuestro codigo JS a JS que entiendan nuestros `target browsers`.
+Tener un solo archivo de configuración `webpack.config.js` para `production` y `development`, configurar [babel](https://babeljs.io/) para que inserte [polyfills](https://developer.mozilla.org/es/docs/Glossary/Polyfill) y transforme nuestro código JS a JS que entiendan nuestros `target browsers`.
 
 ## Requerimientos
 
 - Saber lo basico de [NodeJS](https://nodejs.org/).
 
-## Empezemos
+## Empecemos
 
 #### 1. Instalar dependencias
 
@@ -62,7 +62,7 @@ Babel
 
 - @babel/core - v7.9.0
 - @babel/plugin-transform-runtime - v7.9.0 - _encargado de agregar los polyfills_
-- @babel/preset-env - v7.9.0 - _encargado de transformar nuestro codigo JS a JS entendible por nuestros `target browsers`_
+- @babel/preset-env - v7.9.0 - _encargado de transformar nuestro código JS a JS entendible por nuestros `target browsers`_
 - @babel/runtime-corejs3 - v7.9.2 - _modulo que contiene los polyfills_
 
 Postcss plugins
@@ -76,7 +76,7 @@ En development, usaremos el comando `npm run dev` y para production `npm run bui
 ```json
 {
   "scripts": {
-    "build": "webpack --mode production", // corre webpack con la configuracion para production, con ello webpack sera capaz de analizar, comprimir, y quitar codigo innecesario.
+    "build": "webpack --mode production", // corre webpack con la configuracion para production, con ello webpack sera capaz de analizar, comprimir, y quitar código innecesario.
     "dev": "webpack-dev-server --mode development" // para hacer uso del famoso HMR necesitamos un servidor en nodejs, webpack-dev-server lo creara por nosotros
   }
 }
@@ -275,7 +275,7 @@ module.exports = (env, argv) => {
 }
 ```
 
-Con esto ya tienes una configuracion bien estandar, si trabajas con vue puedes continuar [aqui](https://vue-loader.vuejs.org/), o si trabajas con react agrega este preset [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react) a la configuracion de babel.
+Con esto ya tienes una configuracion bien estandar, si trabajas con vue puedes continuar [aquí](https://vue-loader.vuejs.org/), o si trabajas con react agrega este preset [@babel/preset-react](https://babeljs.io/docs/en/babel-preset-react) a la configuracion de babel.
 
 ## Configuracion final
 
