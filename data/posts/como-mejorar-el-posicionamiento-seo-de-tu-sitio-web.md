@@ -23,7 +23,7 @@ Esta guía esta enfocada para blogs sin embargo puedes usarlo como referencia pa
 
 ## Nuestra meta
 
-Mejorar el puesto|ranking de tu sitio web en las búsquedas realizadas por motores de búsqueda como Google.
+Mejorar el posicionamiento orgánico de tu sitio web en las búsquedas realizadas por motores de búsqueda como Google.
 
 ## Requerimientos
 
@@ -201,6 +201,7 @@ Mejorar el puesto|ranking de tu sitio web en las búsquedas realizadas por motor
 ## Glosario
 
 - **SEO**: De sus siglas en inglés Search Engine Optimization.
+- **Posicionamiento orgánico**: Es el posicionamiento natural que aplica cualquier Seach Engine, este mejorará aplicando las buenas practicas descritas más arriba.
 
 ## Herramientas
 
