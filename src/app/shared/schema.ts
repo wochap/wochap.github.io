@@ -4,6 +4,7 @@ import {COLLECTION_DATE_FORMAT} from 'app/config/constants'
 // @ts-ignore
 import data from 'app/config/data'
 import {BlogPosting, Person, ImageObject, Organization, WebSite, WebPage, BreadcrumbList, ListItem} from 'schema-dts'
+import {FrontMatter} from 'app/shared/hoc/collection/types'
 
 export const logoId = `${data.baseUrl}/#logo`
 export const logo: ImageObject = {
@@ -117,16 +118,7 @@ export const getCollectionItemWebPage = ({siteUrl, parentId, title, description}
 interface CIBlogPosting {
   screenKey: string
   parentId: string
-  frontMatter: {
-    slug: string
-    date: string
-    dateModified: string
-    imageUrl: string
-    imageCaption: string
-    description: string
-    title: string
-    tags: string[]
-  }
+  frontMatter: FrontMatter
 }
 export const getCollectionItemBlogPosting = ({screenKey, parentId, frontMatter}: CIBlogPosting): BlogPosting => {
   const datePublished = moment(frontMatter.date, COLLECTION_DATE_FORMAT).format()
@@ -148,7 +140,8 @@ export const getCollectionItemBlogPosting = ({screenKey, parentId, frontMatter}:
     'dateModified': dateModified,
     'name': frontMatter.title,
     'headline': frontMatter.title,
-    'keywords': frontMatter.tags.join(', '),
+    'wordCount': frontMatter.wordCount,
+    'keywords': frontMatter.keywords.join(', '),
     // @ts-ignore
     'author': {
       '@id': personId,
