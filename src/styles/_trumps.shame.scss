@@ -49,6 +49,18 @@
   width: calc(100vw); /* HACK: full width img */
 }
 
+.c-markdown-code-compare {
+  $gap: 1.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  column-gap: $gap;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  width: 100vw;
+}
+
 
 /**
  * Fix IE calc in transform bug.
