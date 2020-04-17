@@ -5,7 +5,7 @@ import Post from './Post'
 
 const Ul = styled.ul`
   label: PostList;
-  grid-column-gap: 1.5rem;
+  column-gap: 1.5rem;
   grid-row-gap: 1.5rem;
   list-style: none;
   margin-bottom: 0;
