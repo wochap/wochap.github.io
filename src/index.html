@@ -17,6 +17,9 @@
     <script>
       // source: https://github.com/insin/gatsby-plugin-dark-mode/blob/master/gatsby-ssr.js
       void (function () {
+        if (typeof window.CustomEvent !== "function") {
+          return;
+        }
         window.__onThemeChange = function () {}
         window.__themeChangeEvent = 'themeChange'
         var event = new CustomEvent(__themeChangeEvent)
