@@ -1,4 +1,4 @@
-import topBar from 'topbar'
+// import topBar from 'topbar'
 import moment from 'moment'
 
 /**
@@ -17,7 +17,7 @@ import moment from 'moment'
 
 moment.locale('es')
 
-topBar.config({
-  barThickness: 4,
-  shadowColor: 'rgba(255, 255, 255, .5)',
-})
+// topBar.config({
+//   barThickness: 4,
+//   shadowColor: 'rgba(255, 255, 255, .5)',
+// })
