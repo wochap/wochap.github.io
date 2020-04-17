@@ -1,4 +1,6 @@
-require('dotenv').config()
+require('dotenv-extended').load({
+  errorOnMissing: true,
+})
 
 const {readdirSync} = require('fs')
 const {resolve} = require('path')
@@ -14,7 +16,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
-const {getIfUtils, removeEmpty} = require('webpack-config-utils')
+const {getIfUtils} = require('webpack-config-utils')
 const myLocalIp = require('my-local-ip')
 const moduleAlias = require('module-alias')
 
@@ -84,13 +86,13 @@ module.exports = {
     publicPath: ifProduction('/', externalPath),
   },
   entry: {
-    app: removeEmpty([
+    app: [
       // bundle the client for webpack-dev-server
       // and connect to the provided endpoint
       ifDevelopment(`webpack-dev-server/client?${externalPath}`),
 
       ifSsr('./static-build/main.js', './app/main.js'),
-    ]),
+    ].filter(Boolean),
   },
   resolve: {
     alias: {
@@ -160,7 +162,7 @@ module.exports = {
     ),
   },
   module: {
-    rules: removeEmpty([
+    rules: [
       ifProduction({
         test: /\.js$/,
         enforce: 'pre',
@@ -267,9 +269,9 @@ module.exports = {
           name: ifProduction('static/fonts/[name].[contenthash:8].[ext]', '[name].[ext]'),
         },
       },
-    ]),
+    ].filter(Boolean),
   },
-  plugins: removeEmpty([
+  plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': ifDevelopment('"development"', '"production"'),
       'GATSBY_DISQUS_SHORTNAME': ifDevelopment('"staging-cevichan"', '"cevichan"'),
@@ -286,7 +288,7 @@ module.exports = {
 
     ifDevelopment(new ReactRefreshWebpackPlugin()),
 
-    toBoolean(process.env.BUNDLE_ANALYZER_REPORT) ? ifProduction(new BundleAnalyzerPlugin()) : undefined,
+    toBoolean(process.env.BUNDLE_ANALYZER_REPORT) && ifProduction(new BundleAnalyzerPlugin()),
 
     ifProduction(
       new MiniCssExtractPlugin({
@@ -401,22 +403,21 @@ module.exports = {
       }),
     ),
 
-    toBoolean(process.env.BROWSER_SYNC)
-      ? ifNotProduction(
-          new BrowserSyncPlugin(
-            {
-              open: false,
-              port: process.env.BROWSER_SYNC_PORT,
-              proxy: externalPath,
-            },
-            {
-              // prevent BrowserSync from reloading the page
-              // and let Webpack Dev Server take care of this
-              reload: false,
-            },
-          ),
-        )
-      : undefined,
+    toBoolean(process.env.BROWSER_SYNC) &&
+      ifNotProduction(
+        new BrowserSyncPlugin(
+          {
+            open: false,
+            port: process.env.BROWSER_SYNC_PORT,
+            proxy: externalPath,
+          },
+          {
+            // prevent BrowserSync from reloading the page
+            // and let Webpack Dev Server take care of this
+            reload: false,
+          },
+        ),
+      ),
 
     ifNotSsr(new InlineManifestWebpackPlugin('webpackManifest')),
 
@@ -427,5 +428,5 @@ module.exports = {
     ),
 
     new ProgressBarPlugin(),
-  ]),
+  ].filter(Boolean),
 }
