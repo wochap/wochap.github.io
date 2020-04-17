@@ -16,13 +16,18 @@ const history = createBrowserHistory()
 const store = configureStore(initialState, history)
 const renderStrategy = process.env.NODE_ENV === 'production' ? hydrate : render
 
+// setup GTM
+window.dataLayer = window.dataLayer || []
+
 // load markdown code theme css
 let removePrevTheme = () => {}
 async function onThemeChange() {
   const theme = window.__theme
   removePrevTheme()
   // eslint-disable-next-line
-  const {use, unuse} = await import('!!style-loader?{"injectType":"lazyStyleTag"}!css-loader!postcss-loader!highlight.js/styles/atom-one-' + theme + '.css')
+  const {use, unuse} = await import(
+    '!!style-loader?{"injectType":"lazyStyleTag"}!css-loader!postcss-loader!highlight.js/styles/atom-one-' + theme + '.css'
+  )
   use()
   removePrevTheme = unuse
 }
