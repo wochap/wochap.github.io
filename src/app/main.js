@@ -24,8 +24,8 @@ let removePrevTheme = () => {}
 async function onThemeChange() {
   const theme = window.__theme
   removePrevTheme()
-  // eslint-disable-next-line
   const {use, unuse} = await import(
+    // eslint-disable-next-line
     '!!style-loader?{"injectType":"lazyStyleTag"}!css-loader!postcss-loader!highlight.js/styles/atom-one-' + theme + '.css'
   )
   use()

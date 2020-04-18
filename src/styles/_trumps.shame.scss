@@ -1,3 +1,5 @@
+$markdown-full-max-width: 1440px;
+
 /*------------------------------------*\
   #MARKDOWN-BODY
 \*------------------------------------*/
@@ -34,19 +36,43 @@
   text-decoration: none;
 }
 
-.c-markdown-image-full {
-  transform: translateX(calc(-1 * ((100vw - 100%) / 2))); /* HACK: full width img */
-}
-
 .c-markdown-body img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.c-markdown-image-full > img {
-  max-width: none; /* HACK: full width img */
-  width: calc(100vw); /* HACK: full width img */
+.c-markdown-image-full {
+  // transform: translateX(calc(-1 * ((100vw - 100%) / 2))); /* HACK: full width img */
+  left: 50%;
+  max-width: $markdown-full-max-width;
+  position: relative;
+  transform: translateX(-50%);
+  width: 100vw;
+
+  > img {
+    // max-width: none; /* HACK: full width img */
+    // width: calc(100vw); /* HACK: full width img */
+    width: 100%;
+  }
+}
+
+.c-markdown-code-compare {
+  $gap: 1.5rem;
+
+  column-gap: $gap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  left: 50%;
+  max-width: $markdown-full-max-width;
+  position: relative;
+  row-gap: $gap;
+  transform: translateX(-50%);
+  width: 100vw;
+
+  > pre {
+    margin-bottom: 0;
+  }
 }
 
 

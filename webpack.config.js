@@ -174,6 +174,7 @@ module.exports = {
       }),
       {
         test: /\.tsx?$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
@@ -419,7 +420,7 @@ module.exports = {
         ),
       ),
 
-    ifNotSsr(new InlineManifestWebpackPlugin('webpackManifest')),
+    ifNotSsr() && ifProduction(new InlineManifestWebpackPlugin('webpackManifest')),
 
     ifDevelopment(
       new ForkTsCheckerWebpackPlugin({
