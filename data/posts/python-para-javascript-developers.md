@@ -1,7 +1,7 @@
 ---
 identifier: blog-3
-date: 18-04-2020
-dateModified: 18-04-2020
+date: 23-04-2020
+dateModified: 23-04-2020
 formattedDate: Abril 2020
 imageCaption: logo de python y javascript
 imageUrl: //res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp
@@ -28,7 +28,7 @@ A la izquierda codigo Javascript y a su derecha el codigo equivalente en Python 
 
 En python no necesitas ningun `keyword` (var, let, const) para declarar variables.
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 var name = 'Pepe'
@@ -46,7 +46,7 @@ name = 'Pepe'
 
 ### <div align="center">Boolean</div>
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 var isOpen = true
@@ -72,7 +72,7 @@ print(5 != is_open) # True
 
 ### <div align="center">String</div>
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 var name = 'Pepito'
@@ -94,7 +94,7 @@ print(len(name)) # 6
 
 ### <div align="center">Number</div>
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 var height = 5
@@ -116,7 +116,7 @@ print(type(height)) # <class 'int'>
 
 `List` en Python tiene algo llamado `comprehension`, `syntax sugar` para transformar valores de manera simple en una sola linea.
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 var numbers = [1, 2, 3, 4]
@@ -146,7 +146,7 @@ print(numbers) # [64]
 
 ### <div align="center">Set</div>
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 var animals = new Set(['cat', 'dog'])
@@ -160,7 +160,7 @@ animals = {'cat', 'dog'}
 
 ### <div align="center">Object - Dictionary</div>
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 var animals = {cat: 'nyan', dog: 'snuffles'}
@@ -186,7 +186,7 @@ print(foo) # {2: 4}
 
 ### <div align="center">Function</div>
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 function multiplyByTwo(a, b = 3, ...args) {
@@ -204,7 +204,7 @@ def multiply_by_two(a, b = 3, *args):
 
 ### <div align="center">Class</div>
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 class Greeter extends BaseGreeter {
@@ -249,7 +249,7 @@ g.greet(loud=True) # HELLO FRED!
 
 ### <div align="center">Control Flow</div>
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 if (x > 0) {
@@ -309,7 +309,7 @@ while a < 0:
 
 En Javascript tenemos `null` y `undefined`, en Python solo tenemos `None`.
 
-<div class="c-markdown-code-compare"">
+<div class="c-markdown-code-compare">
 
 ```js
 console.log(null)
@@ -319,6 +319,66 @@ console.log(undefined)
 ```py
 print(None)
 
+```
+
+</div>
+
+### <div align="center">Modules</div>
+
+<div class="c-markdown-code-compare">
+
+```js
+// project structure
+//
+// ├── project1
+// │   └── index.js
+// └── project2
+//     ├── main.js
+//     └── package1
+//         ├── index.js
+//         ├── module1.js
+//         └── subpackage1
+//             └── module2.js
+
+// project1/index.js
+
+export const somethingMore = '...'
+
+// project2/main.js
+
+import os from 'os' // standard library import
+import {Flask} from 'flask' // third party import
+import * as package1 from './package1' // local application import
+import {something} from './package1/subpackage1/module2.js' // absolute import
+import {somethingMore} from '../project1' // relative import
+import * as myModule from './package1/module1.js' // aliasing import
+```
+
+```py
+# project structure
+#
+# ├── project1
+# │   └── __init__.py
+# └── project2
+#     ├── main.py
+#     └── package1
+#         ├── __init__.py
+#         ├── module1.py
+#         └── subpackage1
+#             └── module2.py
+
+# project1/__init__.js
+
+something_more = '...'
+
+# project2/main.py
+
+import os # standard library import
+from flask import Flask # third party import
+import package1 # local application import
+from package1.subpackage1.module2 import something # absolute import
+from ..project1 import something_more # relative import
+import package1.module1 as my_module # aliasing import
 ```
 
 </div>
@@ -341,3 +401,5 @@ myTuple = (1, 2, 3)
 - https://realpython.com/lessons/python-naming-conventions/
 - https://dev.to/aveb/from-javascript-to-python-1b1m
 - https://pypi.org/project/javascripthon/
+- https://realpython.com/absolute-vs-relative-python-imports/
+- https://www.datacamp.com/community/data-science-cheatsheets
