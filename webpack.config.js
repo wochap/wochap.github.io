@@ -107,7 +107,7 @@ module.exports = {
   },
   resolveLoader: {
     alias: {
-      'markdown-loader': `${libPath}/loaders/markdown.js`,
+      'markdown-loader': `${libPath}/loaders/markdown/index.js`,
       'front-matter-loader': `${libPath}/loaders/front-matter.js`,
       'lazy-loader': `${libPath}/loaders/lazy.js`,
       'lazy-dir-loader': `${libPath}/loaders/lazy-dir.js`,
