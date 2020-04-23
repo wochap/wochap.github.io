@@ -58,7 +58,7 @@ Mejorar el posicionamiento orgánico de tu sitio web en las búsquedas realizada
   </urlset>
   ```
 
-  <div class="c-markdown-image-full">
+  <div class="c-markdown-image-full" style="left: calc(50% - 1em)">
     <img src="//res.cloudinary.com/wochap/image/upload/v1586985036/wochap/body/search-console-sitemap.webp" alt="Search Console sitemap">
   </div>
 
@@ -71,7 +71,7 @@ Mejorar el posicionamiento orgánico de tu sitio web en las búsquedas realizada
   Para ello debes agregar en cada página un `canonical link element`, por ejemplo en la página de un blog post, yo agregaría:
 
   ```html
-  <link rel="canonical" href="https://geanmarroquin.com/blog/configurar-webpack-5">
+  <link rel="canonical" href="https://geanmarroquin.com/blog/configurar-webpack-5" />
   ```
 
   De esta manera cuando Google indexe `https://geanmarroquin.com/blog/configurar-webpack-5/` **nótese** el `/` al final, Google sabrá que `https://geanmarroquin.com/blog/configurar-webpack-5` y `https://geanmarroquin.com/blog/configurar-webpack-5/` son lo mismo, `canonical link element` va dentro del `<head>` de tu página html.
@@ -84,18 +84,18 @@ Mejorar el posicionamiento orgánico de tu sitio web en las búsquedas realizada
 
   > Te recomiendo instalar esta extensión para chrome [meta-seo-inspector](https://www.omiod.com/meta-seo-inspector/), te ayudara a testear lo siguiente.
 
-  1. Asegura que todas tus páginas tengan un titulo y una descripción, por ejemplo:
+    1. Asegura que todas tus páginas tengan un titulo y una descripción, por ejemplo:
 
     ```html
     <title>Configurar webpack 5</title>
     <meta name="description" content="Aprende a configurar webpack 5 con babel.">
     ```
 
-  1. Asegura que en cada página solo exista un solo elemento `<h1>`.
+    1. Asegura que en cada página solo exista un solo elemento `<h1>`.
 
     **TIP:** Las "palabras clave" con las cuales encontraran tu sitio web en Google deben estar presente en `<title>`, `<h1>` y en el cuerpo de tu página 😉.
 
-  1. La url de tu página debe guardar relación con `<title>` o `<h1>`
+    1. La url de tu página debe guardar relación con `<title>` o `<h1>`
 
     Siguiendo los ejemplos más arriba, nuestra URL seria:
 
@@ -108,9 +108,9 @@ Mejorar el posicionamiento orgánico de tu sitio web en las búsquedas realizada
 
   `Structured Data` ayuda a Google a entender mejor el contenido de tu sitio web y a mostrarlo mejor 🌈🦄, existen 3 maneras de agregarlo:
 
-  - JSON-LD (recomendado por Google)
-  - Microdata
-  - RDF a
+    - JSON-LD (recomendado por Google)
+    - Microdata
+    - RDF a
 
   En este caso usaremos JSON-LD, para la página https://geanmarroquin.com/blog/configurar-webpack-5:
 
@@ -246,6 +246,7 @@ SEO auditoria de pago
 https://seositecheckup.com/
 
 -->
+
 ## Referencias
 
 - https://yoast.com/rel-canonical/

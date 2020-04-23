@@ -43,33 +43,33 @@ Tener un solo archivo de configuración `webpack.config.js` para `production` y 
 
   Webpack
 
-  - webpack - v5.0.0-beta.13
-  - webpack-cli - v3.3.11 - _permite usar webpack en la terminal_
-  - webpack-dev-server - v3.10.3 - _crea un servidor express para poder hacer uso de HMR_
+    - webpack - v5.0.0-beta.13
+    - webpack-cli - v3.3.11 - _permite usar webpack en la terminal_
+    - webpack-dev-server - v3.10.3 - _crea un servidor express para poder hacer uso de HMR_
 
   Webpack loaders
 
-  - css-loader - v3.4.2 - _permite importar archivos CSS a nuestros JS_
-  - postcss-loader - v3.0.0 - _permite aplicar plugins de [postcss](https://postcss.org/) a nuestros CSS_
-  - style-loader - v1.1.3 - _agrega una etiqueta `style` en el DOM por cada CSS que importemos en nuestros JS_
-  - babel-loader - v8.1.0 - _permite aplicar babel a todos nuestros JS_
+    - css-loader - v3.4.2 - _permite importar archivos CSS a nuestros JS_
+    - postcss-loader - v3.0.0 - _permite aplicar plugins de [postcss](https://postcss.org/) a nuestros CSS_
+    - style-loader - v1.1.3 - _agrega una etiqueta `style` en el DOM por cada CSS que importemos en nuestros JS_
+    - babel-loader - v8.1.0 - _permite aplicar babel a todos nuestros JS_
 
   Webpack plugins
 
-  - clean-webpack-plugin - v3.0.0 - _eliminara la carpeta dist en cada production build_
-  - html-webpack-plugin - v4.0.4 - _inserta en el archivo html que le indiques todos tus imports (script, style, link, etc)_
-  - mini-css-extract-plugin - v0.9.0 - _agrega una etiqueta `link` en el DOM por cada CSS que importemos en nuestros JS_
+    - clean-webpack-plugin - v3.0.0 - _eliminara la carpeta dist en cada production build_
+    - html-webpack-plugin - v4.0.4 - _inserta en el archivo html que le indiques todos tus imports (script, style, link, etc)_
+    - mini-css-extract-plugin - v0.9.0 - _agrega una etiqueta `link` en el DOM por cada CSS que importemos en nuestros JS_
 
   Babel
 
-  - @babel/core - v7.9.0
-  - @babel/plugin-transform-runtime - v7.9.0 - _encargado de agregar los polyfills_
-  - @babel/preset-env - v7.9.0 - _encargado de transformar nuestro código JS a JS entendible por nuestros `target browsers`_
-  - @babel/runtime-corejs3 - v7.9.2 - _modulo que contiene los polyfills_
+    - @babel/core - v7.9.0
+    - @babel/plugin-transform-runtime - v7.9.0 - _encargado de agregar los polyfills_
+    - @babel/preset-env - v7.9.0 - _encargado de transformar nuestro código JS a JS entendible por nuestros `target browsers`_
+    - @babel/runtime-corejs3 - v7.9.2 - _modulo que contiene los polyfills_
 
   Postcss plugins
 
-  - autoprefixer - v9.7.5 - _insertara prefijos (-webkit-) segun lo requieran nuestros `target browsers`_
+    - autoprefixer - v9.7.5 - _insertara prefijos (-webkit-) segun lo requieran nuestros `target browsers`_
 
 1. #### Agregar nuestros tasks en package.json
 
@@ -122,10 +122,10 @@ Tener un solo archivo de configuración `webpack.config.js` para `production` y 
 
   ```js
   module.exports = {
-      plugins: {
-          "autoprefixer": {},
-      },
-  };
+    plugins: {
+      autoprefixer: {},
+    },
+  }
   ```
 
 1. #### Crear nuestro archivo `webpack.config.js`
