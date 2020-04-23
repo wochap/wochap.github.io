@@ -4,7 +4,7 @@ const DOMAIN_NAME = 'geanmarroquin.com'
 const BASE_URL = `https://${DOMAIN_NAME}`
 const TITLE = 'Gean Marroquin'
 const ABOUT_HTML = prevalMarkdown`
-  Establecido en Perú, soy <i class="u-icon u-color-javascript u-fz-h2">javascript</i> Developer enfocado en la creación de componentes escalables y reusables con <i class="u-icon u-color-vue_js u-fz-h2">vue_js</i> y <i class="u-icon u-color-react u-fz-h2">react</i>, apasionado y autodidacta.
+  Establecido en Perú, soy <i class="u-icon u-color-javascript u-fz-h2 u-mx1">javascript</i> Developer enfocado en la creación de componentes escalables y reusables con <i class="u-icon u-color-vue_js u-fz-h2 u-mx1">vue_js</i> y <i class="u-icon u-color-react u-fz-h2 u-mx1">react</i>, apasionado y autodidacta.
 `
 const ABOUT =
   'Establecido en Peru, soy Javascript Developer enfocado en la creación de componentes escalables y reusables con vue y react, apasionado y autodidacta.'
