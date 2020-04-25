@@ -120,9 +120,10 @@ print(type(height)) # <class 'int'>
 
 ```js
 var numbers = [1, 2, 3, 4]
+numbers = [...numbers, 5]
 numbers = [...numbers.slice(0, 1), ...[8, 9], ...numbers.slice(4)]
 
-console.log(numbers) // [1, 8, 9]
+console.log(numbers) // [1, 8, 9, 5]
 console.log(numbers.slice(1, 3)) // [8, 9]
 
 // no hay algo como list comprehension en javascript
@@ -132,9 +133,10 @@ console.log(numbers) // [64]
 
 ```py
 numbers = [1, 2, 3, 4]
+numbers = [*numbers, 5]
 numbers[1:4] = [8, 9]
 
-print(numbers) # [1, 8, 9]
+print(numbers) # [1, 8, 9, 5]
 print(numbers[1:3]) # [8, 9]
 
 # list comprehension
@@ -348,10 +350,10 @@ export const somethingMore = '...'
 
 import os from 'os' // standard library import
 import {Flask} from 'flask' // third party import
-import * as package1 from './package1' // local application import
-import {something} from './package1/subpackage1/module2.js' // absolute import
+import * as package1 from './package1' // relative import with alias
+import {something} from './package1/subpackage1/module2.js' // relative import
 import {somethingMore} from '../project1' // relative import
-import * as myModule from './package1/module1.js' // aliasing import
+import * as myModule from './package1/module1.js' // relative import with alias
 ```
 
 ```py
@@ -367,7 +369,7 @@ import * as myModule from './package1/module1.js' // aliasing import
 #         └── subpackage1
 #             └── module2.py
 
-# project1/__init__.js
+# project1/__init__.py
 
 something_more = '...'
 
