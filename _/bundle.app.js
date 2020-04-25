@@ -148,9 +148,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var app_config_generateRoutes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/config/generateRoutes */ 127);
 /* harmony import */ var app_config_routes__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/config/routes */ 202);
-/* harmony import */ var app_store_configureStore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/store/configureStore */ 316);
+/* harmony import */ var app_store_configureStore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/store/configureStore */ 317);
 /* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/actions/collections */ 249);
-/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./template */ 326);
+/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./template */ 327);
 
 
 
@@ -5636,11 +5636,11 @@ module.exports = require("prop-types");
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_components_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/components/App */ 203);
 /* harmony import */ var app_screens_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/screens/Home */ 232);
-/* harmony import */ var app_screens_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/screens/About */ 282);
-/* harmony import */ var app_screens_Works__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/screens/Works */ 286);
-/* harmony import */ var app_screens_Blog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/screens/Blog */ 299);
-/* harmony import */ var app_screens_Contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/Contact */ 313);
-/* harmony import */ var app_screens_NotFound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/screens/NotFound */ 315);
+/* harmony import */ var app_screens_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/screens/About */ 283);
+/* harmony import */ var app_screens_Works__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/screens/Works */ 287);
+/* harmony import */ var app_screens_Blog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/screens/Blog */ 300);
+/* harmony import */ var app_screens_Contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/Contact */ 314);
+/* harmony import */ var app_screens_NotFound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/screens/NotFound */ 316);
 
 
 
@@ -8606,8 +8606,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ScreenHelmet */ 235);
 /* harmony import */ var components_SiteContact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteContact */ 236);
 /* harmony import */ var components_Works__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/Works */ 238);
-/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! components/Posts */ 275);
-/* harmony import */ var _HomeSchema__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./HomeSchema */ 279);
+/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! components/Posts */ 276);
+/* harmony import */ var _HomeSchema__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./HomeSchema */ 280);
 
 
 
@@ -8944,9 +8944,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 239);
 /* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 240);
 /* harmony import */ var hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/withCollection */ 241);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 270);
-/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 272);
-/* harmony import */ var _WorksList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./WorksList */ 273);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 271);
+/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 273);
+/* harmony import */ var _WorksList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./WorksList */ 274);
 
 
 
@@ -9511,7 +9511,7 @@ function loadCollection(collectionName) {
 
   try {
     // eslint-disable-next-line
-    filesRequest = __webpack_require__(267)("./" + collectionName + ".config.js");
+    filesRequest = __webpack_require__(268)("./" + collectionName + ".config.js");
   } catch (error) {
     filesRequest = _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default.a.reject(error);
   }
@@ -9687,12 +9687,13 @@ const COLLECTION_DATE_FORMAT = 'DD-MM-YYYY'; // eslint-disable-line
 var map = {
 	"./posts/como-mejorar-el-posicionamiento-seo-de-tu-sitio-web.md": 259,
 	"./posts/configurar-webpack-5.md": 260,
-	"./posts/python-para-javascript-developers.md": 261,
-	"./works/fixbrand.md": 262,
-	"./works/gean-marroquin.md": 263,
-	"./works/la-glorieta.md": 264,
-	"./works/ricarica-travel.md": 265,
-	"./works/yilancorp.md": 266
+	"./posts/dart-para-javascript-developers.md": 261,
+	"./posts/python-para-javascript-developers.md": 262,
+	"./works/fixbrand.md": 263,
+	"./works/gean-marroquin.md": 264,
+	"./works/la-glorieta.md": 265,
+	"./works/ricarica-travel.md": 266,
+	"./works/yilancorp.md": 267
 };
 
 
@@ -9726,7 +9727,7 @@ webpackContext.id = 258;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.como-mejorar-el-posicionamiento-seo-de-tu-sitio-web */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/posts/como-mejorar-el-posicionamiento-seo-de-tu-sitio-web.md */ 333 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/posts/como-mejorar-el-posicionamiento-seo-de-tu-sitio-web.md */ 334 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -9744,7 +9745,7 @@ webpackContext.id = 258;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.configurar-webpack-5 */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/posts/configurar-webpack-5.md */ 334 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/posts/configurar-webpack-5.md */ 335 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -9753,6 +9754,24 @@ webpackContext.id = 258;
 
 /***/ }),
 /* 261 */
+/*!****************************************************************************************************************************************************!*\
+  !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown!../data/posts/dart-para-javascript-developers.md ***!
+  \****************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    module.exports = new Promise(function (resolve) {
+      Promise.resolve(/*! require.ensure | data.dart-para-javascript-developers */).then((function (require) {
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/posts/dart-para-javascript-developers.md */ 336 ));
+      }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    });
+
+    if (false) { var event; }
+  
+
+/***/ }),
+/* 262 */
 /*!******************************************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown!../data/posts/python-para-javascript-developers.md ***!
   \******************************************************************************************************************************************************/
@@ -9762,7 +9781,7 @@ webpackContext.id = 258;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.python-para-javascript-developers */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/posts/python-para-javascript-developers.md */ 335 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/posts/python-para-javascript-developers.md */ 337 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -9770,7 +9789,7 @@ webpackContext.id = 258;
   
 
 /***/ }),
-/* 262 */
+/* 263 */
 /*!*****************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown!../data/works/fixbrand.md ***!
   \*****************************************************************************************************************************/
@@ -9780,7 +9799,7 @@ webpackContext.id = 258;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.fixbrand */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/fixbrand.md */ 336 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/fixbrand.md */ 338 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -9788,7 +9807,7 @@ webpackContext.id = 258;
   
 
 /***/ }),
-/* 263 */
+/* 264 */
 /*!***********************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown!../data/works/gean-marroquin.md ***!
   \***********************************************************************************************************************************/
@@ -9798,7 +9817,7 @@ webpackContext.id = 258;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.gean-marroquin */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/gean-marroquin.md */ 337 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/gean-marroquin.md */ 339 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -9806,7 +9825,7 @@ webpackContext.id = 258;
   
 
 /***/ }),
-/* 264 */
+/* 265 */
 /*!********************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown!../data/works/la-glorieta.md ***!
   \********************************************************************************************************************************/
@@ -9816,7 +9835,7 @@ webpackContext.id = 258;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.la-glorieta */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/la-glorieta.md */ 338 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/la-glorieta.md */ 340 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -9824,7 +9843,7 @@ webpackContext.id = 258;
   
 
 /***/ }),
-/* 265 */
+/* 266 */
 /*!************************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown!../data/works/ricarica-travel.md ***!
   \************************************************************************************************************************************/
@@ -9834,7 +9853,7 @@ webpackContext.id = 258;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.ricarica-travel */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/ricarica-travel.md */ 339 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/ricarica-travel.md */ 341 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -9842,7 +9861,7 @@ webpackContext.id = 258;
   
 
 /***/ }),
-/* 266 */
+/* 267 */
 /*!******************************************************************************************************************************!*\
   !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown!../data/works/yilancorp.md ***!
   \******************************************************************************************************************************/
@@ -9852,7 +9871,7 @@ webpackContext.id = 258;
 
     module.exports = new Promise(function (resolve) {
       Promise.resolve(/*! require.ensure | data.yilancorp */).then((function (require) {
-        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/yilancorp.md */ 340 ));
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/yilancorp.md */ 342 ));
       }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
     });
 
@@ -9860,7 +9879,7 @@ webpackContext.id = 258;
   
 
 /***/ }),
-/* 267 */
+/* 268 */
 /*!*********************************************************************************************************************!*\
   !*** ../data sync ../lib/loaders/lazy-dir.js?{"documentEventName":"lazyDirLoaderFilesChange"} ^\.\/.*\.config\.js$ ***!
   \*********************************************************************************************************************/
@@ -9868,8 +9887,8 @@ webpackContext.id = 258;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./posts.config.js": 268,
-	"./works.config.js": 269
+	"./posts.config.js": 269,
+	"./works.config.js": 270
 };
 
 
@@ -9890,10 +9909,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 267;
+webpackContext.id = 268;
 
 /***/ }),
-/* 268 */
+/* 269 */
 /*!***********************************************************************************************************!*\
   !*** ../lib/loaders/lazy-dir.js?{"documentEventName":"lazyDirLoaderFilesChange"}!../data/posts.config.js ***!
   \***********************************************************************************************************/
@@ -9905,35 +9924,7 @@ webpackContext.id = 267;
       try {
         /* lazy load group of files */
         Promise.resolve(/*! require.ensure | data.posts */).then((function (require) {
-          var requireContext = __webpack_require__(341);
-          var modules = requireContext.keys().map(function (fileFullName) {
-            return requireContext(fileFullName);
-          });
-
-          resolve(modules);
-        }).bind(null, __webpack_require__)).catch(__webpack_require__.oe)
-      } catch (error) {
-        reject(error);
-      }
-    });
-
-    if (false) { var event; }
-  
-
-/***/ }),
-/* 269 */
-/*!***********************************************************************************************************!*\
-  !*** ../lib/loaders/lazy-dir.js?{"documentEventName":"lazyDirLoaderFilesChange"}!../data/works.config.js ***!
-  \***********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-    module.exports = new Promise(function (resolve, reject) {
-      try {
-        /* lazy load group of files */
-        Promise.resolve(/*! require.ensure | data.works */).then((function (require) {
-          var requireContext = __webpack_require__(345);
+          var requireContext = __webpack_require__(343);
           var modules = requireContext.keys().map(function (fileFullName) {
             return requireContext(fileFullName);
           });
@@ -9950,6 +9941,34 @@ webpackContext.id = 267;
 
 /***/ }),
 /* 270 */
+/*!***********************************************************************************************************!*\
+  !*** ../lib/loaders/lazy-dir.js?{"documentEventName":"lazyDirLoaderFilesChange"}!../data/works.config.js ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    module.exports = new Promise(function (resolve, reject) {
+      try {
+        /* lazy load group of files */
+        Promise.resolve(/*! require.ensure | data.works */).then((function (require) {
+          var requireContext = __webpack_require__(348);
+          var modules = requireContext.keys().map(function (fileFullName) {
+            return requireContext(fileFullName);
+          });
+
+          resolve(modules);
+        }).bind(null, __webpack_require__)).catch(__webpack_require__.oe)
+      } catch (error) {
+        reject(error);
+      }
+    });
+
+    if (false) { var event; }
+  
+
+/***/ }),
+/* 271 */
 /*!***********************************************!*\
   !*** ./app/shared/components/ShimmerText.jsx ***!
   \***********************************************/
@@ -9962,7 +9981,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ 271);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ 272);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -9996,7 +10015,7 @@ ShimmerText.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (ShimmerText);
 
 /***/ }),
-/* 271 */
+/* 272 */
 /*!*****************************!*\
   !*** external "classnames" ***!
   \*****************************/
@@ -10006,7 +10025,7 @@ ShimmerText.propTypes = {
 module.exports = require("classnames");
 
 /***/ }),
-/* 272 */
+/* 273 */
 /*!*********************************************!*\
   !*** ./app/shared/components/SiteError.jsx ***!
   \*********************************************/
@@ -10053,7 +10072,7 @@ SiteError.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (SiteError);
 
 /***/ }),
-/* 273 */
+/* 274 */
 /*!*********************************************!*\
   !*** ./app/shared/components/WorksList.jsx ***!
   \*********************************************/
@@ -10070,7 +10089,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Work__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Work */ 274);
+/* harmony import */ var _Work__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Work */ 275);
 
 
 
@@ -10113,7 +10132,7 @@ WorksList.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (WorksList);
 
 /***/ }),
-/* 274 */
+/* 275 */
 /*!****************************************!*\
   !*** ./app/shared/components/Work.jsx ***!
   \****************************************/
@@ -10158,7 +10177,7 @@ Work.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (Work);
 
 /***/ }),
-/* 275 */
+/* 276 */
 /*!*****************************************!*\
   !*** ./app/shared/components/Posts.jsx ***!
   \*****************************************/
@@ -10177,9 +10196,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 239);
 /* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 240);
 /* harmony import */ var hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/withCollection */ 241);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 270);
-/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 272);
-/* harmony import */ var _PostsList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./PostsList */ 276);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 271);
+/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 273);
+/* harmony import */ var _PostsList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./PostsList */ 277);
 
 
 
@@ -10244,7 +10263,7 @@ const Posts = Object(hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__[
 /* harmony default export */ __webpack_exports__["default"] = (Posts);
 
 /***/ }),
-/* 276 */
+/* 277 */
 /*!*********************************************!*\
   !*** ./app/shared/components/PostsList.jsx ***!
   \*********************************************/
@@ -10262,7 +10281,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Post */ 277);
+/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Post */ 278);
 
 
 
@@ -10315,7 +10334,7 @@ PostsList.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (PostsList);
 
 /***/ }),
-/* 277 */
+/* 278 */
 /*!****************************************!*\
   !*** ./app/shared/components/Post.jsx ***!
   \****************************************/
@@ -10330,7 +10349,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ 122);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 278);
+/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 279);
 
 
 
@@ -10360,7 +10379,7 @@ Post.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (Post);
 
 /***/ }),
-/* 278 */
+/* 279 */
 /*!***************************************!*\
   !*** ./app/shared/utils/formatter.js ***!
   \***************************************/
@@ -10386,7 +10405,7 @@ function formatDate(date) {
 }
 
 /***/ }),
-/* 279 */
+/* 280 */
 /*!****************************************************!*\
   !*** ./app/screens/Home/components/HomeSchema.tsx ***!
   \****************************************************/
@@ -10397,9 +10416,9 @@ function formatDate(date) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-schemaorg */ 280);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-schemaorg */ 281);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/schema */ 281);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/schema */ 282);
 // TODO: apply i18n
 
 
@@ -10419,7 +10438,7 @@ function HomeSchema() {
 /* harmony default export */ __webpack_exports__["default"] = (HomeSchema);
 
 /***/ }),
-/* 280 */
+/* 281 */
 /*!**********************************!*\
   !*** external "react-schemaorg" ***!
   \**********************************/
@@ -10429,7 +10448,7 @@ function HomeSchema() {
 module.exports = require("react-schemaorg");
 
 /***/ }),
-/* 281 */
+/* 282 */
 /*!******************************!*\
   !*** ./app/shared/schema.ts ***!
   \******************************/
@@ -10670,7 +10689,7 @@ const getBreadCrumList = ({
 // }
 
 /***/ }),
-/* 282 */
+/* 283 */
 /*!************************************!*\
   !*** ./app/screens/About/index.js ***!
   \************************************/
@@ -10683,7 +10702,7 @@ __webpack_require__.r(__webpack_exports__);
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'about',
-  component: __webpack_require__(/*! ./components/AboutScreen */ 283).default,
+  component: __webpack_require__(/*! ./components/AboutScreen */ 284).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/AboutScreen')
@@ -10705,7 +10724,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 283 */
+/* 284 */
 /*!******************************************************!*\
   !*** ./app/screens/About/components/AboutScreen.jsx ***!
   \******************************************************/
@@ -10721,8 +10740,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 234);
 /* harmony import */ var components_ExternalLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/ExternalLink */ 237);
 /* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/ScreenHelmet */ 235);
-/* harmony import */ var _config_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config/data */ 284);
-/* harmony import */ var _AboutSchema__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AboutSchema */ 285);
+/* harmony import */ var _config_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../config/data */ 285);
+/* harmony import */ var _AboutSchema__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AboutSchema */ 286);
 
 
 
@@ -10826,7 +10845,7 @@ function AboutScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (AboutScreen);
 
 /***/ }),
-/* 284 */
+/* 285 */
 /*!******************************************!*\
   !*** ./app/screens/About/config/data.js ***!
   \******************************************/
@@ -11030,7 +11049,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 285 */
+/* 286 */
 /*!******************************************************!*\
   !*** ./app/screens/About/components/AboutSchema.tsx ***!
   \******************************************************/
@@ -11059,10 +11078,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-schemaorg */ 280);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-schemaorg */ 281);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/config/data */ 234);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/shared/schema */ 281);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/shared/schema */ 282);
 
 
 
@@ -11109,7 +11128,7 @@ function AboutSchema() {
 /* harmony default export */ __webpack_exports__["default"] = (AboutSchema);
 
 /***/ }),
-/* 286 */
+/* 287 */
 /*!************************************!*\
   !*** ./app/screens/Works/index.js ***!
   \************************************/
@@ -11118,15 +11137,15 @@ function AboutSchema() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _screens_Works__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Works */ 287);
-/* harmony import */ var _screens_Work__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Work */ 289);
+/* harmony import */ var _screens_Works__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Works */ 288);
+/* harmony import */ var _screens_Work__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Work */ 290);
 // import {lazy} from 'react'
 // import topBar from 'utils/topBar'
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'works',
-  component: __webpack_require__(/*! ./components/WorksScreen */ 298).default,
+  component: __webpack_require__(/*! ./components/WorksScreen */ 299).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/WorksScreen')
@@ -11150,7 +11169,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 287 */
+/* 288 */
 /*!**************************************************!*\
   !*** ./app/screens/Works/screens/Works/index.js ***!
   \**************************************************/
@@ -11159,7 +11178,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_WorksScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorksScreen */ 288);
+/* harmony import */ var _components_WorksScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorksScreen */ 289);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: '',
@@ -11168,7 +11187,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 288 */
+/* 289 */
 /*!********************************************************************!*\
   !*** ./app/screens/Works/screens/Works/components/WorksScreen.jsx ***!
   \********************************************************************/
@@ -11202,7 +11221,7 @@ function WorksScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (WorksScreen);
 
 /***/ }),
-/* 289 */
+/* 290 */
 /*!*************************************************!*\
   !*** ./app/screens/Works/screens/Work/index.js ***!
   \*************************************************/
@@ -11211,7 +11230,7 @@ function WorksScreen() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_WorkScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorkScreen */ 290);
+/* harmony import */ var _components_WorkScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorkScreen */ 291);
  // eslint-disable-line
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -11221,7 +11240,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 290 */
+/* 291 */
 /*!******************************************************************!*\
   !*** ./app/screens/Works/screens/Work/components/WorkScreen.jsx ***!
   \******************************************************************/
@@ -11236,8 +11255,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 234);
-/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 291);
-/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/SiteArticle */ 292);
+/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 292);
+/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/SiteArticle */ 293);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-helmet */ 126);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_5__);
 
@@ -11261,7 +11280,7 @@ function WorkScreen(props) {
 /* harmony default export */ __webpack_exports__["default"] = (Object(hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__["default"])(WorkScreen, 'works'));
 
 /***/ }),
-/* 291 */
+/* 292 */
 /*!*********************************************************!*\
   !*** ./app/shared/hoc/collection/withCollectionItem.js ***!
   \*********************************************************/
@@ -11373,7 +11392,7 @@ function withItem(WrappedComponent, collectionName) {
 /* harmony default export */ __webpack_exports__["default"] = (withItem);
 
 /***/ }),
-/* 292 */
+/* 293 */
 /*!***********************************************!*\
   !*** ./app/shared/components/SiteArticle.jsx ***!
   \***********************************************/
@@ -11390,12 +11409,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 239);
 /* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 240);
-/* harmony import */ var app_screens_NotFound_components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/NotFound/components/NotFoundScreen */ 293);
-/* harmony import */ var components_Hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/Hero */ 294);
-/* harmony import */ var components_MarkdownBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/MarkdownBody */ 295);
+/* harmony import */ var app_screens_NotFound_components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/NotFound/components/NotFoundScreen */ 294);
+/* harmony import */ var components_Hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/Hero */ 295);
+/* harmony import */ var components_MarkdownBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/MarkdownBody */ 296);
 /* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! components/ScreenHelmet */ 235);
-/* harmony import */ var components_ArticleHelmet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! components/ArticleHelmet */ 296);
-/* harmony import */ var lib_init_tennor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lib/init-tennor */ 297);
+/* harmony import */ var components_ArticleHelmet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! components/ArticleHelmet */ 297);
+/* harmony import */ var lib_init_tennor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lib/init-tennor */ 298);
 
 
 
@@ -11476,7 +11495,7 @@ SiteArticle.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (SiteArticle);
 
 /***/ }),
-/* 293 */
+/* 294 */
 /*!************************************************************!*\
   !*** ./app/screens/NotFound/components/NotFoundScreen.jsx ***!
   \************************************************************/
@@ -11490,7 +11509,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 234);
-/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteError */ 272);
+/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteError */ 273);
 
 
 
@@ -11512,7 +11531,7 @@ NotFoundScreen.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (NotFoundScreen);
 
 /***/ }),
-/* 294 */
+/* 295 */
 /*!****************************************!*\
   !*** ./app/shared/components/Hero.jsx ***!
   \****************************************/
@@ -11525,8 +11544,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 270);
-/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 278);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 271);
+/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 279);
 /* harmony import */ var components_ExternalLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/ExternalLink */ 237);
 
 
@@ -11588,7 +11607,7 @@ Hero.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (Hero);
 
 /***/ }),
-/* 295 */
+/* 296 */
 /*!************************************************!*\
   !*** ./app/shared/components/MarkdownBody.jsx ***!
   \************************************************/
@@ -11601,7 +11620,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 270);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 271);
 
 
 
@@ -11641,7 +11660,7 @@ MarkdownBody.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (MarkdownBody);
 
 /***/ }),
-/* 296 */
+/* 297 */
 /*!*************************************************!*\
   !*** ./app/shared/components/ArticleHelmet.jsx ***!
   \*************************************************/
@@ -11703,7 +11722,7 @@ ArticleHelmet.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (ArticleHelmet);
 
 /***/ }),
-/* 297 */
+/* 298 */
 /*!*****************************!*\
   !*** ../lib/init-tennor.js ***!
   \*****************************/
@@ -11773,7 +11792,7 @@ const embedurl = 'https://tenor.com/embed/';
 });
 
 /***/ }),
-/* 298 */
+/* 299 */
 /*!******************************************************!*\
   !*** ./app/screens/Works/components/WorksScreen.jsx ***!
   \******************************************************/
@@ -11801,7 +11820,7 @@ WorksScreen.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (WorksScreen);
 
 /***/ }),
-/* 299 */
+/* 300 */
 /*!***********************************!*\
   !*** ./app/screens/Blog/index.js ***!
   \***********************************/
@@ -11810,15 +11829,15 @@ WorksScreen.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _screens_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Post */ 300);
-/* harmony import */ var _screens_Posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Posts */ 309);
+/* harmony import */ var _screens_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Post */ 301);
+/* harmony import */ var _screens_Posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Posts */ 310);
 // import {lazy} from 'react'
 // import topBar from 'utils/topBar'
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'blog',
-  component: __webpack_require__(/*! ./components/BlogScreen */ 312).default,
+  component: __webpack_require__(/*! ./components/BlogScreen */ 313).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/BlogScreen')
@@ -11842,7 +11861,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 300 */
+/* 301 */
 /*!************************************************!*\
   !*** ./app/screens/Blog/screens/Post/index.js ***!
   \************************************************/
@@ -11855,7 +11874,7 @@ __webpack_require__.r(__webpack_exports__);
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: ':fileName',
-  component: __webpack_require__(/*! ./components/PostScreen */ 301).default,
+  component: __webpack_require__(/*! ./components/PostScreen */ 302).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/PostScreen')
@@ -11877,7 +11896,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 301 */
+/* 302 */
 /*!*****************************************************************!*\
   !*** ./app/screens/Blog/screens/Post/components/PostScreen.jsx ***!
   \*****************************************************************/
@@ -11892,10 +11911,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/config/data */ 234);
-/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 291);
-/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/SiteArticle */ 292);
-/* harmony import */ var _PostSchema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PostSchema */ 302);
-/* harmony import */ var _PostComments__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PostComments */ 303);
+/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 292);
+/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/SiteArticle */ 293);
+/* harmony import */ var _PostSchema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PostSchema */ 303);
+/* harmony import */ var _PostComments__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PostComments */ 304);
 
 
 
@@ -11916,7 +11935,7 @@ function PostScreen(props) {
 /* harmony default export */ __webpack_exports__["default"] = (Object(hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_3__["default"])(PostScreen, 'posts'));
 
 /***/ }),
-/* 302 */
+/* 303 */
 /*!*****************************************************************!*\
   !*** ./app/screens/Blog/screens/Post/components/PostSchema.tsx ***!
   \*****************************************************************/
@@ -11947,10 +11966,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 280);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 281);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/config/data */ 234);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/shared/schema */ 281);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/shared/schema */ 282);
 
 
 
@@ -12027,7 +12046,7 @@ function PostSchema({
 /* harmony default export */ __webpack_exports__["default"] = (PostSchema);
 
 /***/ }),
-/* 303 */
+/* 304 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Post/components/PostComments.jsx ***!
   \*******************************************************************/
@@ -12040,7 +12059,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-disqus/components/Disqus */ 304);
+/* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-disqus/components/Disqus */ 305);
 /* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/config/data */ 234);
 /* harmony import */ var app_shared_PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/PropTypes/article */ 240);
@@ -12083,7 +12102,7 @@ PostComments.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (PostComments);
 
 /***/ }),
-/* 304 */
+/* 305 */
 /*!*****************************************************************!*\
   !*** ../node_modules/gatsby-plugin-disqus/components/Disqus.js ***!
   \*****************************************************************/
@@ -12093,14 +12112,14 @@ PostComments.propTypes = {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 305);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 306);
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ 306));
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ 307));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ 307));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ 308));
 
 var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ 220));
 
@@ -12108,7 +12127,7 @@ var _react = _interopRequireDefault(__webpack_require__(/*! react */ 116));
 
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ 201));
 
-var _utils = __webpack_require__(/*! ../utils */ 308);
+var _utils = __webpack_require__(/*! ../utils */ 309);
 
 var _jsxFileName = "/Users/brettstevenson/Desktop/Folder/gatsby-plugin-workspace/gatsby-plugin-disqus/src/components/Disqus.jsx";
 
@@ -12240,7 +12259,7 @@ Disqus.propTypes = {
 };
 
 /***/ }),
-/* 305 */
+/* 306 */
 /*!***********************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
   \***********************************************************************/
@@ -12256,7 +12275,7 @@ function _interopRequireDefault(obj) {
 module.exports = _interopRequireDefault;
 
 /***/ }),
-/* 306 */
+/* 307 */
 /*!*********************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/extends.js ***!
   \*********************************************************/
@@ -12284,7 +12303,7 @@ function _extends() {
 module.exports = _extends;
 
 /***/ }),
-/* 307 */
+/* 308 */
 /*!******************************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
   \******************************************************************************/
@@ -12309,7 +12328,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 module.exports = _objectWithoutPropertiesLoose;
 
 /***/ }),
-/* 308 */
+/* 309 */
 /*!*****************************************************!*\
   !*** ../node_modules/gatsby-plugin-disqus/utils.js ***!
   \*****************************************************/
@@ -12319,7 +12338,7 @@ module.exports = _objectWithoutPropertiesLoose;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 305);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 306);
 
 exports.__esModule = true;
 exports.insertScript = insertScript;
@@ -12407,7 +12426,7 @@ function shallowComparison(currentProps, nextProps) {
 }
 
 /***/ }),
-/* 309 */
+/* 310 */
 /*!*************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/index.js ***!
   \*************************************************/
@@ -12416,7 +12435,7 @@ function shallowComparison(currentProps, nextProps) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_PostsScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/PostsScreen */ 310);
+/* harmony import */ var _components_PostsScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/PostsScreen */ 311);
  // eslint-disable-line
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -12426,7 +12445,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 310 */
+/* 311 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/components/PostsScreen.jsx ***!
   \*******************************************************************/
@@ -12439,8 +12458,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/config/data */ 234);
 /* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ScreenHelmet */ 235);
-/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/Posts */ 275);
-/* harmony import */ var _PostsSchema__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PostsSchema */ 311);
+/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/Posts */ 276);
+/* harmony import */ var _PostsSchema__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PostsSchema */ 312);
 
 
 
@@ -12477,7 +12496,7 @@ function PostsScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (PostsScreen);
 
 /***/ }),
-/* 311 */
+/* 312 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/components/PostsSchema.tsx ***!
   \*******************************************************************/
@@ -12508,11 +12527,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 280);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 281);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/config/data */ 234);
 /* harmony import */ var app_shared_hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/shared/hoc/collection/withCollection */ 241);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! app/shared/schema */ 281);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! app/shared/schema */ 282);
 
 
 
@@ -12588,7 +12607,7 @@ function PostsSchema({
 /* harmony default export */ __webpack_exports__["default"] = (Object(app_shared_hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_13__["default"])(PostsSchema, 'posts'));
 
 /***/ }),
-/* 312 */
+/* 313 */
 /*!****************************************************!*\
   !*** ./app/screens/Blog/components/BlogScreen.jsx ***!
   \****************************************************/
@@ -12616,7 +12635,7 @@ BlogScreen.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (BlogScreen);
 
 /***/ }),
-/* 313 */
+/* 314 */
 /*!**************************************!*\
   !*** ./app/screens/Contact/index.js ***!
   \**************************************/
@@ -12629,7 +12648,7 @@ __webpack_require__.r(__webpack_exports__);
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'contact',
-  component: __webpack_require__(/*! ./components/ContactScreen */ 314).default,
+  component: __webpack_require__(/*! ./components/ContactScreen */ 315).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/ContactScreen')
@@ -12651,7 +12670,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 314 */
+/* 315 */
 /*!**********************************************************!*\
   !*** ./app/screens/Contact/components/ContactScreen.jsx ***!
   \**********************************************************/
@@ -12684,7 +12703,7 @@ function ContactScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (ContactScreen);
 
 /***/ }),
-/* 315 */
+/* 316 */
 /*!***************************************!*\
   !*** ./app/screens/NotFound/index.js ***!
   \***************************************/
@@ -12693,7 +12712,7 @@ function ContactScreen() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/NotFoundScreen */ 293);
+/* harmony import */ var _components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/NotFoundScreen */ 294);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: '*',
@@ -12702,7 +12721,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 316 */
+/* 317 */
 /*!*************************************!*\
   !*** ./app/store/configureStore.js ***!
   \*************************************/
@@ -12711,10 +12730,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 317);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 318);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _rootReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rootReducer */ 318);
-/* harmony import */ var _middlewares__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middlewares */ 322);
+/* harmony import */ var _rootReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rootReducer */ 319);
+/* harmony import */ var _middlewares__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middlewares */ 323);
 
 
 
@@ -12731,7 +12750,7 @@ function configureStore(initialState, history) {
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
 
 /***/ }),
-/* 317 */
+/* 318 */
 /*!************************!*\
   !*** external "redux" ***!
   \************************/
@@ -12741,7 +12760,7 @@ function configureStore(initialState, history) {
 module.exports = require("redux");
 
 /***/ }),
-/* 318 */
+/* 319 */
 /*!**********************************!*\
   !*** ./app/store/rootReducer.js ***!
   \**********************************/
@@ -12768,11 +12787,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/defineProperty */ 176);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! redux */ 317);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! redux */ 318);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! connected-react-router */ 123);
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(connected_react_router__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var app_reducers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/reducers */ 319);
+/* harmony import */ var app_reducers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/reducers */ 320);
 
 
 
@@ -12798,7 +12817,7 @@ const createRootReducer = history => Object(redux__WEBPACK_IMPORTED_MODULE_9__["
 /* harmony default export */ __webpack_exports__["default"] = (createRootReducer);
 
 /***/ }),
-/* 319 */
+/* 320 */
 /*!*******************************!*\
   !*** ./app/reducers/index.js ***!
   \*******************************/
@@ -12807,14 +12826,14 @@ const createRootReducer = history => Object(redux__WEBPACK_IMPORTED_MODULE_9__["
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _collections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collections */ 320);
+/* harmony import */ var _collections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collections */ 321);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "collections", function() { return _collections__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 
 
 /***/ }),
-/* 320 */
+/* 321 */
 /*!*************************************!*\
   !*** ./app/reducers/collections.js ***!
   \*************************************/
@@ -12842,7 +12861,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/defineProperty */ 176);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! deepmerge */ 321);
+/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! deepmerge */ 322);
 /* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(deepmerge__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/actions/collections */ 249);
 
@@ -12993,7 +13012,7 @@ function collections(state = {}, {
 }
 
 /***/ }),
-/* 321 */
+/* 322 */
 /*!****************************!*\
   !*** external "deepmerge" ***!
   \****************************/
@@ -13003,7 +13022,7 @@ function collections(state = {}, {
 module.exports = require("deepmerge");
 
 /***/ }),
-/* 322 */
+/* 323 */
 /*!**********************************!*\
   !*** ./app/store/middlewares.js ***!
   \**********************************/
@@ -13012,13 +13031,13 @@ module.exports = require("deepmerge");
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 317);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 318);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ 323);
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ 324);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-promise-middleware */ 324);
+/* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-promise-middleware */ 325);
 /* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-immutable-state-invariant */ 325);
+/* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-immutable-state-invariant */ 326);
 /* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__);
 
 
@@ -13034,7 +13053,7 @@ window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__({
 /* harmony default export */ __webpack_exports__["default"] = (middlewares);
 
 /***/ }),
-/* 323 */
+/* 324 */
 /*!******************************!*\
   !*** external "redux-thunk" ***!
   \******************************/
@@ -13044,7 +13063,7 @@ window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__({
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 324 */
+/* 325 */
 /*!*******************************************!*\
   !*** external "redux-promise-middleware" ***!
   \*******************************************/
@@ -13054,7 +13073,7 @@ module.exports = require("redux-thunk");
 module.exports = require("redux-promise-middleware");
 
 /***/ }),
-/* 325 */
+/* 326 */
 /*!**************************************************!*\
   !*** external "redux-immutable-state-invariant" ***!
   \**************************************************/
@@ -13064,7 +13083,7 @@ module.exports = require("redux-promise-middleware");
 module.exports = require("redux-immutable-state-invariant");
 
 /***/ }),
-/* 326 */
+/* 327 */
 /*!**********************************!*\
   !*** ./static-build/template.js ***!
   \**********************************/
@@ -13074,11 +13093,11 @@ module.exports = require("redux-immutable-state-invariant");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return template; });
-/* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/json/stringify */ 327);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/json/stringify */ 328);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/promise */ 63);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cheerio */ 331);
+/* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cheerio */ 332);
 /* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cheerio__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -13091,7 +13110,7 @@ function template({
 }) {
   return new _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default.a((resolve, reject) => {
     try {
-      const markup = __webpack_require__(/*! !html-loader!../../dist/index.html */ 332); // eslint-disable-line
+      const markup = __webpack_require__(/*! !html-loader!../../dist/index.html */ 333); // eslint-disable-line
 
 
       const $ = cheerio__WEBPACK_IMPORTED_MODULE_2___default.a.load(markup);
@@ -13106,37 +13125,37 @@ function template({
 }
 
 /***/ }),
-/* 327 */
+/* 328 */
 /*!*******************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs3/core-js-stable/json/stringify.js ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! core-js-pure/stable/json/stringify */ 328);
+module.exports = __webpack_require__(/*! core-js-pure/stable/json/stringify */ 329);
 
 /***/ }),
-/* 328 */
+/* 329 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js-pure/stable/json/stringify.js ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parent = __webpack_require__(/*! ../../es/json/stringify */ 329);
+var parent = __webpack_require__(/*! ../../es/json/stringify */ 330);
 
 module.exports = parent;
 
 
 /***/ }),
-/* 329 */
+/* 330 */
 /*!*********************************************************!*\
   !*** ../node_modules/core-js-pure/es/json/stringify.js ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es.json.stringify */ 330);
+__webpack_require__(/*! ../../modules/es.json.stringify */ 331);
 var core = __webpack_require__(/*! ../../internals/path */ 24);
 
 if (!core.JSON) core.JSON = { stringify: JSON.stringify };
@@ -13148,7 +13167,7 @@ module.exports = function stringify(it, replacer, space) {
 
 
 /***/ }),
-/* 330 */
+/* 331 */
 /*!*****************************************************************!*\
   !*** ../node_modules/core-js-pure/modules/es.json.stringify.js ***!
   \*****************************************************************/
@@ -13190,7 +13209,7 @@ if ($stringify) {
 
 
 /***/ }),
-/* 331 */
+/* 332 */
 /*!**************************!*\
   !*** external "cheerio" ***!
   \**************************/
@@ -13200,7 +13219,7 @@ if ($stringify) {
 module.exports = require("cheerio");
 
 /***/ }),
-/* 332 */
+/* 333 */
 /*!******************************************************************!*\
   !*** ../node_modules/html-loader/dist/cjs.js!../dist/index.html ***!
   \******************************************************************/
@@ -13208,42 +13227,52 @@ module.exports = require("cheerio");
 /***/ (function(module, exports) {
 
 // Module
-var code = "<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"es_LA\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.e2e40783.css\" rel=\"stylesheet\"></head><body><script>!function(){if(\"function\"==typeof window.CustomEvent){window.__onThemeChange=function(){},window.__themeChangeEvent=\"themeChange\";var t,n=new CustomEvent(__themeChangeEvent);try{t=localStorage.getItem(\"theme\")}catch(e){}window.__setPreferredTheme=function(e){o(e);try{localStorage.setItem(\"theme\",e)}catch(e){}};var e=window.matchMedia(\"(prefers-color-scheme: dark)\");e.addListener(function(e){window.__setPreferredTheme(e.matches?\"dark\":\"light\")}),o(t||(e.matches?\"dark\":\"light\"))}function o(e){t&&document.body.classList.contains(t)?document.body.classList.replace(t,e):document.body.classList.add(e),window.__theme=e,t=e,window.__onThemeChange(e),document.dispatchEvent(n)}}()</script><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(u){function e(e){for(var r,t,n=e[0],o=e[1],a=e[2],i=0,c=[];i<n.length;i++)t=n[i],Object.prototype.hasOwnProperty.call(d,t)&&d[t]&&c.push(d[t][0]),d[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(u[r]=o[r]);for(s&&s(e);c.length;)c.shift()();return f.push.apply(f,a||[]),l()}function l(){for(var e,r=0;r<f.length;r++){for(var t=f[r],n=!0,o=1;o<t.length;o++){var a=t[o];0!==d[a]&&(n=!1)}n&&(f.splice(r--,1),e=p(p.s=t[0]))}return e}var t={},d={14:0},f=[];function p(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return u[e].call(r.exports,r,r.exports,p),r.l=!0,r.exports}p.e=function(o){var e=[],t=d[o];if(0!==t)if(t)e.push(t[2]);else{var r=new Promise(function(e,r){t=d[o]=[e,r]});e.push(t[2]=r);var n,a=document.createElement(\"script\");a.charset=\"utf-8\",a.timeout=120,p.nc&&a.setAttribute(\"nonce\",p.nc),a.src=p.p+\"static/js/chunk.\"+({1:\"data.como-mejorar-el-posicionamiento-seo-de-tu-sitio-web\",2:\"data.configurar-webpack-5\",3:\"data.fixbrand\",4:\"data.gean-marroquin\",5:\"data.la-glorieta\",6:\"data.posts\",7:\"data.python-para-javascript-developers\",8:\"data.ricarica-travel\",9:\"data.works\",10:\"data.yilancorp\",13:\"vendors~platform\"}[o]||o)+\".\"+{1:\"47986099\",2:\"9fdfe8e0\",3:\"16c3ea90\",4:\"15244744\",5:\"c6371953\",6:\"180ccbd2\",7:\"45bdea4e\",8:\"ea68a480\",9:\"4ed8b9d5\",10:\"e076641c\",13:\"c9067c7f\",15:\"1ed3c27b\",16:\"1d690ef7\",17:\"1296181d\"}[o]+\".js\";var i=new Error;n=function(e){a.onerror=a.onload=null,clearTimeout(c);var r=d[o];if(0!==r){if(r){var t=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;i.message=\"Loading chunk \"+o+\" failed.\\n(\"+t+\": \"+n+\")\",i.name=\"ChunkLoadError\",i.type=t,i.request=n,r[1](i)}d[o]=void 0}};var c=setTimeout(function(){n({type:\"timeout\",target:a})},12e4);a.onerror=a.onload=n,document.head.appendChild(a)}return Promise.all(e)},p.m=u,p.c=t,p.d=function(e,r,t){p.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},p.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},p.t=function(r,e){if(1&e&&(r=p(r)),8&e)return r;if(4&e&&\"object\"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(p.r(t),Object.defineProperty(t,\"default\",{enumerable:!0,value:r}),2&e&&\"string\"!=typeof r)for(var n in r)p.d(t,n,function(e){return r[e]}.bind(null,n));return t},p.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return p.d(r,\"a\",r),r},p.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},p.p=\"/\",p.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var s=n;l()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.09cc7d4b.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.f0bce277.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.23d9ae2a.js\"></script></body></html>";
+var code = "<!DOCTYPE html><html lang=\"es\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"es_LA\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.e2e40783.css\" rel=\"stylesheet\"></head><body><script>!function(){if(\"function\"==typeof window.CustomEvent){window.__onThemeChange=function(){},window.__themeChangeEvent=\"themeChange\";var t,n=new CustomEvent(__themeChangeEvent);try{t=localStorage.getItem(\"theme\")}catch(e){}window.__setPreferredTheme=function(e){o(e);try{localStorage.setItem(\"theme\",e)}catch(e){}};var e=window.matchMedia(\"(prefers-color-scheme: dark)\");e.addListener(function(e){window.__setPreferredTheme(e.matches?\"dark\":\"light\")}),o(t||(e.matches?\"dark\":\"light\"))}function o(e){t&&document.body.classList.contains(t)?document.body.classList.replace(t,e):document.body.classList.add(e),window.__theme=e,t=e,window.__onThemeChange(e),document.dispatchEvent(n)}}()</script><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(c){function e(e){for(var r,t,a=e[0],n=e[1],o=e[2],i=0,u=[];i<a.length;i++)t=a[i],Object.prototype.hasOwnProperty.call(d,t)&&d[t]&&u.push(d[t][0]),d[t]=0;for(r in n)Object.prototype.hasOwnProperty.call(n,r)&&(c[r]=n[r]);for(s&&s(e);u.length;)u.shift()();return f.push.apply(f,o||[]),l()}function l(){for(var e,r=0;r<f.length;r++){for(var t=f[r],a=!0,n=1;n<t.length;n++){var o=t[n];0!==d[o]&&(a=!1)}a&&(f.splice(r--,1),e=p(p.s=t[0]))}return e}var t={},d={15:0},f=[];function p(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return c[e].call(r.exports,r,r.exports,p),r.l=!0,r.exports}p.e=function(n){var e=[],t=d[n];if(0!==t)if(t)e.push(t[2]);else{var r=new Promise(function(e,r){t=d[n]=[e,r]});e.push(t[2]=r);var a,o=document.createElement(\"script\");o.charset=\"utf-8\",o.timeout=120,p.nc&&o.setAttribute(\"nonce\",p.nc),o.src=p.p+\"static/js/chunk.\"+({1:\"data.como-mejorar-el-posicionamiento-seo-de-tu-sitio-web\",2:\"data.configurar-webpack-5\",3:\"data.dart-para-javascript-developers\",4:\"data.fixbrand\",5:\"data.gean-marroquin\",6:\"data.la-glorieta\",7:\"data.posts\",8:\"data.python-para-javascript-developers\",9:\"data.ricarica-travel\",10:\"data.works\",11:\"data.yilancorp\",14:\"vendors~platform\"}[n]||n)+\".\"+{1:\"e78090e4\",2:\"61fd55f8\",3:\"c56e7775\",4:\"ad0defba\",5:\"b74eb5a3\",6:\"278b5bd5\",7:\"b79451a6\",8:\"44e83a42\",9:\"8bc39dfc\",10:\"0a09a717\",11:\"6a9bb991\",14:\"b4d61e54\",16:\"d3acfbb4\",17:\"191cf2f4\",18:\"1797741d\"}[n]+\".js\";var i=new Error;a=function(e){o.onerror=o.onload=null,clearTimeout(u);var r=d[n];if(0!==r){if(r){var t=e&&(\"load\"===e.type?\"missing\":e.type),a=e&&e.target&&e.target.src;i.message=\"Loading chunk \"+n+\" failed.\\n(\"+t+\": \"+a+\")\",i.name=\"ChunkLoadError\",i.type=t,i.request=a,r[1](i)}d[n]=void 0}};var u=setTimeout(function(){a({type:\"timeout\",target:o})},12e4);o.onerror=o.onload=a,document.head.appendChild(o)}return Promise.all(e)},p.m=c,p.c=t,p.d=function(e,r,t){p.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},p.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},p.t=function(r,e){if(1&e&&(r=p(r)),8&e)return r;if(4&e&&\"object\"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(p.r(t),Object.defineProperty(t,\"default\",{enumerable:!0,value:r}),2&e&&\"string\"!=typeof r)for(var a in r)p.d(t,a,function(e){return r[e]}.bind(null,a));return t},p.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return p.d(r,\"a\",r),r},p.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},p.p=\"/\",p.oe=function(e){throw console.error(e),e};var r=window.webpackJsonp=window.webpackJsonp||[],a=r.push.bind(r);r.push=e,r=r.slice();for(var n=0;n<r.length;n++)e(r[n]);var s=a;l()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.ec065de8.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.cd17c131.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.6efc06a2.js\"></script></body></html>";
 // Exports
 module.exports = code;
 
 /***/ }),
-/* 333 */
+/* 334 */
 /*!****************************************************************************************************!*\
   !*** ../lib/loaders/markdown!../data/posts/como-mejorar-el-posicionamiento-seo-de-tu-sitio-web.md ***!
   \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"frontMatter":{"slug":"como-mejorar-el-posicionamiento-seo-de-tu-sitio-web","fileName":"como-mejorar-el-posicionamiento-seo-de-tu-sitio-web","readingTime":"☕️ 5 minutos de lectura","wordCount":947,"identifier":"blog-2","date":"15-04-2020","dateModified":"15-04-2020","formattedDate":"Abril 2020","imageCaption":"SEO posicionamiento en buscadores","imageUrl":"https://res.cloudinary.com/wochap/image/upload/v1586982279/wochap/hero/seo.webp","heroImageUrl":"https://res.cloudinary.com/wochap/image/upload/v1586982279/wochap/hero/seo.webp","title":"¿Comó mejorar el posicionamiento SEO de tu sitio web?","description":"Aprende a mejorar el posicionamiento orgánico (SEO) de tu sitio web con las mejores practicas, ¡Hazlo ahora 😄!","tags":["seo"],"keywords":["seo","posicionamiento web","posicionamiento seo","posicionamiento organico"]},"bodyHtml":"<blockquote><p><strong>DISCLAIMER:</strong> Para no hacer largo el tema no voy a ahondar mucho en cada paso, sin embargo dejare enlaces para que tú puedas profundizar más 😛.</blockquote><p>Esta guía esta enfocada para blogs sin embargo puedes usarlo como referencia para \"e-Commerces\", nuestro motor de búsqueda objetivo es <strong>Google</strong>.<h2 id=nuestra-meta>Nuestra meta</h2><p>Mejorar el posicionamiento orgánico de tu sitio web en las búsquedas realizadas por motores de búsqueda como Google.<h2 id=requerimientos>Requerimientos</h2><ul><li>Saber HTML y JSON.</ul><h2 id=empecemos>Empecemos</h2><h3 id=pasos-para-mejorar-el-posicionamiento-seo-de-tu-sitio-web>Pasos para mejorar el posicionamiento seo de tu sitio web</h3><ol><li><h4 id=enviar-sitemapxml-de-tu-sitio-a-google>Enviar <code>sitemap.xml</code> de tu sitio a Google</h4><p>Para ello debes registrar tu sitio web en <a href=https://search.google.com/search-console/about rel=nofollow target=_blank>Search Console</a>, luego dirigirte a la sección de \"Sitemaps\" y poner la URL de tu <code>sitemap.xml</code>, por ejemplo <a href=https://geanmarroquin.com/sitemap.xml rel=nofollow target=_blank>https://geanmarroquin.com/sitemap.xml</a>.<pre><code class=language-xml><span class=hljs-meta>&#60?xml version=\"1.0\" encoding=\"UTF-8\"?></span>\n<span class=hljs-tag>&lt;<span class=hljs-name>urlset</span> <span class=hljs-attr>xmlns</span>=<span class=hljs-string>\"http://www.sitemaps.org/schemas/sitemap/0.9\"</span>></span>\n    <span class=hljs-tag>&lt;<span class=hljs-name>url</span>></span>\n        <span class=hljs-tag>&lt;<span class=hljs-name>loc</span>></span>https://geanmarroquin.com/<span class=hljs-tag>&#60/<span class=hljs-name>loc</span>></span>\n    <span class=hljs-tag>&#60/<span class=hljs-name>url</span>></span>\n    <span class=hljs-tag>&lt;<span class=hljs-name>url</span>></span>\n        <span class=hljs-tag>&lt;<span class=hljs-name>loc</span>></span>https://geanmarroquin.com/about<span class=hljs-tag>&#60/<span class=hljs-name>loc</span>></span>\n    <span class=hljs-tag>&#60/<span class=hljs-name>url</span>></span>\n    <span class=hljs-tag>&lt;<span class=hljs-name>url</span>></span>\n        <span class=hljs-tag>&lt;<span class=hljs-name>loc</span>></span>https://geanmarroquin.com/blog<span class=hljs-tag>&#60/<span class=hljs-name>loc</span>></span>\n    <span class=hljs-tag>&#60/<span class=hljs-name>url</span>></span>\n    <span class=hljs-tag>&lt;<span class=hljs-name>url</span>></span>\n        <span class=hljs-tag>&lt;<span class=hljs-name>loc</span>></span>https://geanmarroquin.com/contact<span class=hljs-tag>&#60/<span class=hljs-name>loc</span>></span>\n    <span class=hljs-tag>&#60/<span class=hljs-name>url</span>></span>\n    <span class=hljs-tag>&lt;<span class=hljs-name>url</span>></span>\n        <span class=hljs-tag>&lt;<span class=hljs-name>loc</span>></span>https://geanmarroquin.com/blog/configurar-webpack-5<span class=hljs-tag>&#60/<span class=hljs-name>loc</span>></span>\n    <span class=hljs-tag>&#60/<span class=hljs-name>url</span>></span>\n<span class=hljs-tag>&#60/<span class=hljs-name>urlset</span>></span>\n</code></pre><div class=c-markdown-image-full style=\"left:calc(50% - 1em)\"><img alt=\"Search Console sitemap\"src=//res.cloudinary.com/wochap/image/upload/v1586985036/wochap/body/search-console-sitemap.webp></div><p>Si no tienes un archivo <code>sitemap.xml</code>, esta aplicación web <a href=https://www.xml-sitemaps.com/ rel=nofollow target=_blank>https://www.xml-sitemaps.com/</a> lo genera por ti 😉.<p><strong>NOTA:</strong> otra manera de lograr que Google lea tu <code>sitemap.xml</code> es agregando su <code>URL</code> en un archivo <code>robots.txt</code>, este archivo debe ser de acceso publico y estar en la raíz de tu sitio web, por ejemplo: <a href=https://geanmarroquin.com/robots.txt rel=nofollow target=_blank>https://geanmarroquin.com/robots.txt</a><li><h4 id=solucionar-la-duplicidad-de-contenido>Solucionar la duplicidad de contenido</h4><p>Para ello debes agregar en cada página un <code>canonical link element</code>, por ejemplo en la página de un blog post, yo agregaría:<pre><code class=language-html><span class=hljs-tag>&lt;<span class=hljs-name>link</span> <span class=hljs-attr>rel</span>=<span class=hljs-string>\"canonical\"</span> <span class=hljs-attr>href</span>=<span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5\"</span> /></span>\n</code></pre><p>De esta manera cuando Google indexe <code>https://geanmarroquin.com/blog/configurar-webpack-5/</code> <strong>nótese</strong> el <code>/</code> al final, Google sabrá que <code>https://geanmarroquin.com/blog/configurar-webpack-5</code> y <code>https://geanmarroquin.com/blog/configurar-webpack-5/</code> son lo mismo, <code>canonical link element</code> va dentro del <code>&#60head></code> de tu página html.<li><h4 id=sacar-un-excelente-puntaje-en-lighthouse>Sacar un excelente puntaje en <a href=https://developers.google.com/web/tools/lighthouse/ rel=nofollow target=_blank>lighthouse</a></h4><p>Ello significa que tu sitio web funciona bajo <code>https</code>, es responsive (funciona bien en mobile devices), es una <a href=https://www.xataka.com/basics/que-es-una-aplicacion-web-progresiva-o-pwa rel=nofollow target=_blank>PWA</a>, etc.<li><h4 id=optimizar-el-contenido-de-tus-páginas>Optimizar el contenido de tus páginas</h4><blockquote><p>Te recomiendo instalar esta extensión para chrome <a href=https://www.omiod.com/meta-seo-inspector/ rel=nofollow target=_blank>meta-seo-inspector</a>, te ayudara a testear lo siguiente.</blockquote><ol><li><p>Asegura que todas tus páginas tengan un titulo y una descripción, por ejemplo:<pre><code class=language-html><span class=hljs-tag>&lt;<span class=hljs-name>title</span>></span>Configurar webpack 5<span class=hljs-tag>&#60/<span class=hljs-name>title</span>></span>\n<span class=hljs-tag>&lt;<span class=hljs-name>meta</span> <span class=hljs-attr>name</span>=<span class=hljs-string>\"description\"</span> <span class=hljs-attr>content</span>=<span class=hljs-string>\"Aprende a configurar webpack 5 con babel.\"</span>></span>\n</code></pre><li><p>Asegura que en cada página solo exista un solo elemento <code>&#60h1></code>.<p><strong>TIP:</strong> Las \"palabras clave\" con las cuales encontraran tu sitio web en Google deben estar presente en <code>&#60title></code>, <code>&#60h1></code> y en el cuerpo de tu página 😉.<li><p>La url de tu página debe guardar relación con <code>&#60title></code> o <code>&#60h1></code><p>Siguiendo los ejemplos más arriba, nuestra URL seria:<p>✅ <code>https://geanmarroquin.com/blog/configurar-webpack-5</code><br>❌ <code>https://geanmarroquin.com/blog/4208429152507995</code></ol><li><h4 id=agregar-structured-data-a-tus-páginas>Agregar <code>Structured Data</code> a tus páginas</h4><blockquote><p>Te recomiendo usar la herramienta <a href=https://www.google.com/webmasters/markup-helper/u/0/ rel=nofollow target=_blank>Structured Data Markup Helper</a> de Google.</blockquote><p><code>Structured Data</code> ayuda a Google a entender mejor el contenido de tu sitio web y a mostrarlo mejor 🌈🦄, existen 3 maneras de agregarlo:<ul><li>JSON-LD (recomendado por Google)<li>Microdata<li>RDF a</ul><p>En este caso usaremos JSON-LD, para la página <a href=https://geanmarroquin.com/blog/configurar-webpack-5 rel=nofollow target=_blank>https://geanmarroquin.com/blog/configurar-webpack-5</a>:<pre><code class=language-html><span class=hljs-tag>&lt;<span class=hljs-name>script</span> <span class=hljs-attr>type</span>=<span class=hljs-string>\"application/ld+json\"</span>></span><span class=actionscript>\n  {\n    <span class=hljs-string>\"@context\"</span>: <span class=hljs-string>\"https://schema.org\"</span>,\n    <span class=hljs-string>\"@graph\"</span>: [\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"ImageObject\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/#logo\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://res.cloudinary.com/wochap/image/upload/v1586724454/wochap/android-chrome-384x384.png\"</span>,\n        <span class=hljs-string>\"caption\"</span>: <span class=hljs-string>\"Gean Marroquin\"</span>,\n        <span class=hljs-string>\"width\"</span>: <span class=hljs-string>\"384px\"</span>,\n        <span class=hljs-string>\"height\"</span>: <span class=hljs-string>\"384px\"</span>\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"Person\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about/#person\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Gean Marroquin\"</span>,\n        <span class=hljs-string>\"jobTitle\"</span>: <span class=hljs-string>\"JS Developer\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about\"</span>\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"Organization\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about/#organization\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Gean Marroquin\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com\"</span>,\n        <span class=hljs-string>\"logo\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/#logo\"</span>}\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"WebSite\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/#website\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Inicio | Gean Marroquin\"</span>,\n        <span class=hljs-string>\"description\"</span>: <span class=hljs-string>\"Establecido en Peru, soy Javascript Developer enfocado en la creación de componentes escalables y reusables con vue y react, apasionado y autodidacta.\"</span>,\n        <span class=hljs-string>\"publisher\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about/#organization\"</span>}\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"WebPage\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/#webpage\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Artículos y tutoriales | Gean Marroquin\"</span>,\n        <span class=hljs-string>\"description\"</span>: <span class=hljs-string>\"Tutoriales sobre desarrollo de aplicaciones web y mobile.\"</span>,\n        <span class=hljs-string>\"isPartOf\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/#website\"</span>}\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"WebPage\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5/#webpage\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Configurar webpack 5\"</span>,\n        <span class=hljs-string>\"description\"</span>: <span class=hljs-string>\"Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!\"</span>,\n        <span class=hljs-string>\"isPartOf\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/#webpage\"</span>}\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"BlogPosting\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5/#post\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5\"</span>,\n        <span class=hljs-string>\"description\"</span>: <span class=hljs-string>\"Aprende a configurar webpack 5 con babel\"</span>,\n        <span class=hljs-string>\"datePublished\"</span>: <span class=hljs-string>\"2020-04-09T00:00:00-05:00\"</span>,\n        <span class=hljs-string>\"dateModified\"</span>: <span class=hljs-string>\"2020-04-12T00:00:00-05:00\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Configurar webpack 5\"</span>,\n        <span class=hljs-string>\"headline\"</span>: <span class=hljs-string>\"Configurar webpack 5\"</span>,\n        <span class=hljs-string>\"keywords\"</span>: <span class=hljs-string>\"webpack, babel\"</span>,\n        <span class=hljs-string>\"author\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about/#person\"</span>},\n        <span class=hljs-string>\"publisher\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about/#organization\"</span>},\n        <span class=hljs-string>\"image\"</span>: {\n          <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"ImageObject\"</span>,\n          <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5/#image\"</span>,\n          <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png\"</span>,\n          <span class=hljs-string>\"caption\"</span>: <span class=hljs-string>\"webpack\"</span>\n        },\n        <span class=hljs-string>\"mainEntityOfPage\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5/#webpage\"</span>}\n      }\n    ]\n  }\n</span><span class=hljs-tag>&#60/<span class=hljs-name>script</span>></span>\n</code></pre><p>Ya con agregar el <code>&#60script></code> de arriba al <code>&#60body></code> de nuestra página bastaria que nuestra pagian tenga <code>Structured Data</code>.<p>Para conocer más del esquema usado, haz click <a href=https://schema.org/docs/gs.html rel=nofollow target=_blank>aquí</a>, y sobre como afecta <code>Structured Data</code> a tu página <a href=https://developers.google.com/search/docs/guides/search-gallery rel=nofollow target=_blank>aquí</a>.</ol><h2 id=glosario>Glosario</h2><ul><li><strong>SEO</strong>: De sus siglas en inglés Search Engine Optimization.<li><strong>Posicionamiento orgánico</strong>: Es el posicionamiento natural que aplica cualquier Seach Engine, este mejorará aplicando las buenas practicas descritas más arriba.</ul><h2 id=herramientas>Herramientas</h2><ul><li><a href=https://www.xml-sitemaps.com/ rel=nofollow target=_blank>https://www.xml-sitemaps.com/</a> genera sitemap.xml a partir de tu URL.<li><a href=https://www.screamingfrog.co.uk/ rel=nofollow target=_blank>https://www.screamingfrog.co.uk/</a> sirve para inspeccionar todas tus URLs, muy bueno para encontrar links que no llevan a nada.<li><a href=https://www.omiod.com/meta-seo-inspector/ rel=nofollow target=_blank>https://www.omiod.com/meta-seo-inspector/</a> extensión de chrome para inspeccionar SEO</ul><h2 id=referencias>Referencias</h2><ul><li><a href=https://yoast.com/rel-canonical/ rel=nofollow target=_blank>https://yoast.com/rel-canonical/</a><li><a href=https://developers.google.com/search/docs/guides/search-gallery rel=nofollow target=_blank>https://developers.google.com/search/docs/guides/search-gallery</a></ul>"}
+module.exports = {"frontMatter":{"slug":"como-mejorar-el-posicionamiento-seo-de-tu-sitio-web","fileName":"como-mejorar-el-posicionamiento-seo-de-tu-sitio-web","readingTime":"☕️ 5 minutos de lectura","wordCount":947,"identifier":"blog-2","date":"15-04-2020","dateModified":"15-04-2020","formattedDate":"Abril 2020","imageCaption":"SEO posicionamiento en buscadores","imageUrl":"https://res.cloudinary.com/wochap/image/upload/v1586982279/wochap/hero/seo.webp","heroImageUrl":"https://res.cloudinary.com/wochap/image/upload/v1586982279/wochap/hero/seo.webp","title":"¿Comó mejorar el posicionamiento SEO de tu sitio web?","description":"Aprende a mejorar el posicionamiento orgánico (SEO) de tu sitio web con las mejores practicas, ¡Hazlo ahora 😄!","tags":["seo"],"keywords":["seo","posicionamiento web","posicionamiento seo","posicionamiento organico"]},"bodyHtml":"<blockquote><p><strong>DISCLAIMER:</strong> Para no hacer largo el tema no voy a ahondar mucho en cada paso, sin embargo dejare enlaces para que tú puedas profundizar más 😛.</blockquote><p>Esta guía esta enfocada para blogs sin embargo puedes usarlo como referencia para \"e-Commerces\", nuestro motor de búsqueda objetivo es <strong>Google</strong>.<h2 id=nuestra-meta>Nuestra meta</h2><p>Mejorar el posicionamiento orgánico de tu sitio web en las búsquedas realizadas por motores de búsqueda como Google.<h2 id=requerimientos>Requerimientos</h2><ul><li>Saber HTML y JSON.</ul><h2 id=empecemos>Empecemos</h2><h3 id=pasos-para-mejorar-el-posicionamiento-seo-de-tu-sitio-web>Pasos para mejorar el posicionamiento seo de tu sitio web</h3><ol><li><h4 id=enviar-sitemapxml-de-tu-sitio-a-google>Enviar <code>sitemap.xml</code> de tu sitio a Google</h4><p>Para ello debes registrar tu sitio web en <a href=https://search.google.com/search-console/about rel=nofollow target=_blank>Search Console</a>, luego dirigirte a la sección de \"Sitemaps\" y poner la URL de tu <code>sitemap.xml</code>, por ejemplo <a href=https://geanmarroquin.com/sitemap.xml rel=nofollow target=_blank>https://geanmarroquin.com/sitemap.xml</a>.<pre><code class=language-xml><span class=hljs-meta>&#60?xml version=\"1.0\" encoding=\"UTF-8\"?></span>\n<span class=hljs-tag>&lt;<span class=hljs-name>urlset</span> <span class=hljs-attr>xmlns</span>=<span class=hljs-string>\"http://www.sitemaps.org/schemas/sitemap/0.9\"</span>></span>\n    <span class=hljs-tag>&lt;<span class=hljs-name>url</span>></span>\n        <span class=hljs-tag>&lt;<span class=hljs-name>loc</span>></span>https://geanmarroquin.com/<span class=hljs-tag>&#60/<span class=hljs-name>loc</span>></span>\n    <span class=hljs-tag>&#60/<span class=hljs-name>url</span>></span>\n    <span class=hljs-tag>&lt;<span class=hljs-name>url</span>></span>\n        <span class=hljs-tag>&lt;<span class=hljs-name>loc</span>></span>https://geanmarroquin.com/about<span class=hljs-tag>&#60/<span class=hljs-name>loc</span>></span>\n    <span class=hljs-tag>&#60/<span class=hljs-name>url</span>></span>\n    <span class=hljs-tag>&lt;<span class=hljs-name>url</span>></span>\n        <span class=hljs-tag>&lt;<span class=hljs-name>loc</span>></span>https://geanmarroquin.com/blog<span class=hljs-tag>&#60/<span class=hljs-name>loc</span>></span>\n    <span class=hljs-tag>&#60/<span class=hljs-name>url</span>></span>\n    <span class=hljs-tag>&lt;<span class=hljs-name>url</span>></span>\n        <span class=hljs-tag>&lt;<span class=hljs-name>loc</span>></span>https://geanmarroquin.com/contact<span class=hljs-tag>&#60/<span class=hljs-name>loc</span>></span>\n    <span class=hljs-tag>&#60/<span class=hljs-name>url</span>></span>\n    <span class=hljs-tag>&lt;<span class=hljs-name>url</span>></span>\n        <span class=hljs-tag>&lt;<span class=hljs-name>loc</span>></span>https://geanmarroquin.com/blog/configurar-webpack-5<span class=hljs-tag>&#60/<span class=hljs-name>loc</span>></span>\n    <span class=hljs-tag>&#60/<span class=hljs-name>url</span>></span>\n<span class=hljs-tag>&#60/<span class=hljs-name>urlset</span>></span>\n</code></pre><div class=c-markdown-image-full style=\"left:calc(50% - 1em)\"><img alt=\"Search Console sitemap\"src=//res.cloudinary.com/wochap/image/upload/v1586985036/wochap/body/search-console-sitemap.webp></div><p>Si no tienes un archivo <code>sitemap.xml</code>, esta aplicación web <a href=https://www.xml-sitemaps.com/ rel=nofollow target=_blank>https://www.xml-sitemaps.com/</a> lo genera por ti 😉.<p><strong>NOTA:</strong> otra manera de lograr que Google lea tu <code>sitemap.xml</code> es agregando su <code>URL</code> en un archivo <code>robots.txt</code>, este archivo debe ser de acceso publico y estar en la raíz de tu sitio web, por ejemplo: <a href=https://geanmarroquin.com/robots.txt rel=nofollow target=_blank>https://geanmarroquin.com/robots.txt</a><li><h4 id=solucionar-la-duplicidad-de-contenido>Solucionar la duplicidad de contenido</h4><p>Para ello debes agregar en cada página un <code>canonical link element</code>, por ejemplo en la página de un blog post, yo agregaría:<pre><code class=language-html><span class=hljs-tag>&lt;<span class=hljs-name>link</span> <span class=hljs-attr>rel</span>=<span class=hljs-string>\"canonical\"</span> <span class=hljs-attr>href</span>=<span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5\"</span> /></span>\n</code></pre><p>De esta manera cuando Google indexe <code>https://geanmarroquin.com/blog/configurar-webpack-5/</code> <strong>nótese</strong> el <code>/</code> al final, Google sabrá que <code>https://geanmarroquin.com/blog/configurar-webpack-5</code> y <code>https://geanmarroquin.com/blog/configurar-webpack-5/</code> son lo mismo, <code>canonical link element</code> va dentro del <code>&#60head></code> de tu página html.<li><h4 id=sacar-un-excelente-puntaje-en-lighthouse>Sacar un excelente puntaje en <a href=https://developers.google.com/web/tools/lighthouse/ rel=nofollow target=_blank>lighthouse</a></h4><p>Ello significa que tu sitio web funciona bajo <code>https</code>, es responsive (funciona bien en mobile devices), es una <a href=https://www.xataka.com/basics/que-es-una-aplicacion-web-progresiva-o-pwa rel=nofollow target=_blank>PWA</a>, etc.<li><h4 id=optimizar-el-contenido-de-tus-páginas>Optimizar el contenido de tus páginas</h4><blockquote><p>Te recomiendo instalar esta extensión para chrome <a href=https://www.omiod.com/meta-seo-inspector/ rel=nofollow target=_blank>meta-seo-inspector</a>, te ayudara a testear lo siguiente.</blockquote><ol><li><p>Asegura que todas tus páginas tengan un titulo y una descripción, por ejemplo:<pre><code class=language-html><span class=hljs-tag>&lt;<span class=hljs-name>title</span>></span>Configurar webpack 5<span class=hljs-tag>&#60/<span class=hljs-name>title</span>></span>\n<span class=hljs-tag>&lt;<span class=hljs-name>meta</span> <span class=hljs-attr>name</span>=<span class=hljs-string>\"description\"</span> <span class=hljs-attr>content</span>=<span class=hljs-string>\"Aprende a configurar webpack 5 con babel.\"</span>></span>\n</code></pre><li><p>Asegura que en cada página solo exista un solo elemento <code>&#60h1></code>.<p><strong>TIP:</strong> Las \"palabras clave\" con las cuales encontraran tu sitio web en Google deben estar presente en <code>&#60title></code>, <code>&#60h1></code> y en el cuerpo de tu página 😉.<li><p>La url de tu página debe guardar relación con <code>&#60title></code> o <code>&#60h1></code><p>Siguiendo los ejemplos más arriba, nuestra URL seria:<p>✅ <code>https://geanmarroquin.com/blog/configurar-webpack-5</code><br>❌ <code>https://geanmarroquin.com/blog/4208429152507995</code></ol><li><h4 id=agregar-structured-data-a-tus-páginas>Agregar <code>Structured Data</code> a tus páginas</h4><blockquote><p>Te recomiendo usar la herramienta <a href=https://www.google.com/webmasters/markup-helper/u/0/ rel=nofollow target=_blank>Structured Data Markup Helper</a> de Google.</blockquote><p><code>Structured Data</code> ayuda a Google a entender mejor el contenido de tu sitio web y a mostrarlo mejor 🌈🦄, existen 3 maneras de agregarlo:<ul><li>JSON-LD (recomendado por Google)<li>Microdata<li>RDF a</ul><p>En este caso usaremos JSON-LD, para la página <a href=https://geanmarroquin.com/blog/configurar-webpack-5 rel=nofollow target=_blank>https://geanmarroquin.com/blog/configurar-webpack-5</a>:<pre><code class=language-html><span class=hljs-tag>&lt;<span class=hljs-name>script</span> <span class=hljs-attr>type</span>=<span class=hljs-string>\"application/ld+json\"</span>></span><span class=javascript>\n  {\n    <span class=hljs-string>\"@context\"</span>: <span class=hljs-string>\"https://schema.org\"</span>,\n    <span class=hljs-string>\"@graph\"</span>: [\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"ImageObject\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/#logo\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://res.cloudinary.com/wochap/image/upload/v1586724454/wochap/android-chrome-384x384.png\"</span>,\n        <span class=hljs-string>\"caption\"</span>: <span class=hljs-string>\"Gean Marroquin\"</span>,\n        <span class=hljs-string>\"width\"</span>: <span class=hljs-string>\"384px\"</span>,\n        <span class=hljs-string>\"height\"</span>: <span class=hljs-string>\"384px\"</span>\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"Person\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about/#person\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Gean Marroquin\"</span>,\n        <span class=hljs-string>\"jobTitle\"</span>: <span class=hljs-string>\"JS Developer\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about\"</span>\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"Organization\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about/#organization\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Gean Marroquin\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com\"</span>,\n        <span class=hljs-string>\"logo\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/#logo\"</span>}\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"WebSite\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/#website\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Inicio | Gean Marroquin\"</span>,\n        <span class=hljs-string>\"description\"</span>: <span class=hljs-string>\"Establecido en Peru, soy Javascript Developer enfocado en la creación de componentes escalables y reusables con vue y react, apasionado y autodidacta.\"</span>,\n        <span class=hljs-string>\"publisher\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about/#organization\"</span>}\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"WebPage\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/#webpage\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Artículos y tutoriales | Gean Marroquin\"</span>,\n        <span class=hljs-string>\"description\"</span>: <span class=hljs-string>\"Tutoriales sobre desarrollo de aplicaciones web y mobile.\"</span>,\n        <span class=hljs-string>\"isPartOf\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/#website\"</span>}\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"WebPage\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5/#webpage\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Configurar webpack 5\"</span>,\n        <span class=hljs-string>\"description\"</span>: <span class=hljs-string>\"Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!\"</span>,\n        <span class=hljs-string>\"isPartOf\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/#webpage\"</span>}\n      },\n      {\n        <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"BlogPosting\"</span>,\n        <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5/#post\"</span>,\n        <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5\"</span>,\n        <span class=hljs-string>\"description\"</span>: <span class=hljs-string>\"Aprende a configurar webpack 5 con babel\"</span>,\n        <span class=hljs-string>\"datePublished\"</span>: <span class=hljs-string>\"2020-04-09T00:00:00-05:00\"</span>,\n        <span class=hljs-string>\"dateModified\"</span>: <span class=hljs-string>\"2020-04-12T00:00:00-05:00\"</span>,\n        <span class=hljs-string>\"name\"</span>: <span class=hljs-string>\"Configurar webpack 5\"</span>,\n        <span class=hljs-string>\"headline\"</span>: <span class=hljs-string>\"Configurar webpack 5\"</span>,\n        <span class=hljs-string>\"keywords\"</span>: <span class=hljs-string>\"webpack, babel\"</span>,\n        <span class=hljs-string>\"author\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about/#person\"</span>},\n        <span class=hljs-string>\"publisher\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/about/#organization\"</span>},\n        <span class=hljs-string>\"image\"</span>: {\n          <span class=hljs-string>\"@type\"</span>: <span class=hljs-string>\"ImageObject\"</span>,\n          <span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5/#image\"</span>,\n          <span class=hljs-string>\"url\"</span>: <span class=hljs-string>\"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png\"</span>,\n          <span class=hljs-string>\"caption\"</span>: <span class=hljs-string>\"webpack\"</span>\n        },\n        <span class=hljs-string>\"mainEntityOfPage\"</span>: {<span class=hljs-string>\"@id\"</span>: <span class=hljs-string>\"https://geanmarroquin.com/blog/configurar-webpack-5/#webpage\"</span>}\n      }\n    ]\n  }\n</span><span class=hljs-tag>&#60/<span class=hljs-name>script</span>></span>\n</code></pre><p>Ya con agregar el <code>&#60script></code> de arriba al <code>&#60body></code> de nuestra página bastaria que nuestra pagian tenga <code>Structured Data</code>.<p>Para conocer más del esquema usado, haz click <a href=https://schema.org/docs/gs.html rel=nofollow target=_blank>aquí</a>, y sobre como afecta <code>Structured Data</code> a tu página <a href=https://developers.google.com/search/docs/guides/search-gallery rel=nofollow target=_blank>aquí</a>.</ol><h2 id=glosario>Glosario</h2><ul><li><strong>SEO</strong>: De sus siglas en inglés Search Engine Optimization.<li><strong>Posicionamiento orgánico</strong>: Es el posicionamiento natural que aplica cualquier Seach Engine, este mejorará aplicando las buenas practicas descritas más arriba.</ul><h2 id=herramientas>Herramientas</h2><ul><li><a href=https://www.xml-sitemaps.com/ rel=nofollow target=_blank>https://www.xml-sitemaps.com/</a> genera sitemap.xml a partir de tu URL.<li><a href=https://www.screamingfrog.co.uk/ rel=nofollow target=_blank>https://www.screamingfrog.co.uk/</a> sirve para inspeccionar todas tus URLs, muy bueno para encontrar links que no llevan a nada.<li><a href=https://www.omiod.com/meta-seo-inspector/ rel=nofollow target=_blank>https://www.omiod.com/meta-seo-inspector/</a> extensión de chrome para inspeccionar SEO</ul><h2 id=referencias>Referencias</h2><ul><li><a href=https://yoast.com/rel-canonical/ rel=nofollow target=_blank>https://yoast.com/rel-canonical/</a><li><a href=https://developers.google.com/search/docs/guides/search-gallery rel=nofollow target=_blank>https://developers.google.com/search/docs/guides/search-gallery</a></ul>"}
 
 /***/ }),
-/* 334 */
+/* 335 */
 /*!*********************************************************************!*\
   !*** ../lib/loaders/markdown!../data/posts/configurar-webpack-5.md ***!
   \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"frontMatter":{"slug":"configurar-webpack-5","fileName":"configurar-webpack-5","readingTime":"☕️ 7 minutos de lectura","wordCount":1337,"identifier":"blog-1","date":"09-04-2020","dateModified":"12-04-2020","formattedDate":"Abril 2020","imageCaption":"webpack","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","title":"Configurar webpack 5","description":"Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!","tags":["webpack","babel"],"keywords":["webpack","webpack 5","babel","webpack-dev-server"]},"bodyHtml":"<p>Configurar webpack puede ser frustrante...<div class=tenor-gif-embed data-aspect-ratio=1.7785714285714287 data-postid=5384575 data-share-method=host data-width=100%><a href=https://tenor.com/view/fuck-work-gif-5384575>Fuckwork Angry GIF</a> from <a href=https://tenor.com/search/fuckwork-gifs>Fuckwork GIFs</a></div><br><p>Por ello en esta guía te enseñare como configurar <a href=https://webpack.js.org/concepts/ rel=nofollow target=_blank>webpack 5</a> con babel, si deseas ver la configuración final haz click <a href=#configuracion-final>aquí</a> y <a href=https://github.com/wochap/setup-webpack-5 rel=nofollow target=_blank>aquí</a> para ir al repo.<blockquote><p>al día de hoy (9 de abril del 2020) <a href=https://webpack.js.org/concepts/hot-module-replacement/ rel=nofollow target=_blank>HMR (hot module replacement)</a> no funciona con <strong>html-webpack-plugin</strong>, y tambien hay algunos plugins que no funcionaran (por el momento) ya que la API interna cambio bastante en webpack 5</blockquote><h2 id=nuestra-meta>Nuestra meta</h2><p>Tener un solo archivo de configuración <code>webpack.config.js</code> para <code>production</code> y <code>development</code>, configurar <a href=https://babeljs.io/ rel=nofollow target=_blank>babel</a> para que inserte <a href=https://developer.mozilla.org/es/docs/Glossary/Polyfill rel=nofollow target=_blank>polyfills</a> y transforme nuestro código JS a JS que entiendan nuestros <code>target browsers</code>.<h2 id=requerimientos>Requerimientos</h2><ul><li>Saber lo basico de <a href=https://nodejs.org/ rel=nofollow target=_blank>NodeJS</a>.</ul><h2 id=empecemos>Empecemos</h2><h3 id=pasos-para-configurar-webpack-5>Pasos para configurar webpack 5</h3><ol><li><h4 id=instalar-dependencias>Instalar dependencias</h4><p>Webpack<ul><li>webpack - v5.0.0-beta.13<li>webpack-cli - v3.3.11 - <em>permite usar webpack en la terminal</em><li>webpack-dev-server - v3.10.3 - <em>crea un servidor express para poder hacer uso de HMR</em></ul><p>Webpack loaders<ul><li>css-loader - v3.4.2 - <em>permite importar archivos CSS a nuestros JS</em><li>postcss-loader - v3.0.0 - <em>permite aplicar plugins de <a href=https://postcss.org/ rel=nofollow target=_blank>postcss</a> a nuestros CSS</em><li>style-loader - v1.1.3 - <em>agrega una etiqueta <code>style</code> en el DOM por cada CSS que importemos en nuestros JS</em><li>babel-loader - v8.1.0 - <em>permite aplicar babel a todos nuestros JS</em></ul><p>Webpack plugins<ul><li>clean-webpack-plugin - v3.0.0 - <em>eliminara la carpeta dist en cada production build</em><li>html-webpack-plugin - v4.0.4 - <em>inserta en el archivo html que le indiques todos tus imports (script, style, link, etc)</em><li>mini-css-extract-plugin - v0.9.0 - <em>agrega una etiqueta <code>link</code> en el DOM por cada CSS que importemos en nuestros JS</em></ul><p>Babel<ul><li>@babel/core - v7.9.0<li>@babel/plugin-transform-runtime - v7.9.0 - <em>encargado de agregar los polyfills</em><li>@babel/preset-env - v7.9.0 - <em>encargado de transformar nuestro código JS a JS entendible por nuestros <code>target browsers</code></em><li>@babel/runtime-corejs3 - v7.9.2 - <em>modulo que contiene los polyfills</em></ul><p>Postcss plugins<ul><li>autoprefixer - v9.7.5 - <em>insertara prefijos (-webkit-) segun lo requieran nuestros <code>target browsers</code></em></ul><li><h4 id=agregar-nuestros-tasks-en-packagejson>Agregar nuestros tasks en package.json</h4><p>En development, usaremos el comando <code>npm run dev</code> y para production <code>npm run build</code>.<pre><code class=language-json>{\n  <span class=hljs-attr>\"scripts\"</span>: {\n    <span class=hljs-attr>\"build\"</span>: <span class=hljs-string>\"webpack --mode production\"</span>, <span class=hljs-comment>// corre webpack con la configuracion para production, con ello webpack sera capaz de analizar, comprimir, y quitar código innecesario.</span>\n    <span class=hljs-attr>\"dev\"</span>: <span class=hljs-string>\"webpack-dev-server --mode development\"</span> <span class=hljs-comment>// para hacer uso del famoso HMR necesitamos un servidor en nodejs, webpack-dev-server lo creara por nosotros</span>\n  }\n}\n</code></pre><li><h4 id=crear-nuestro-archivo-browserslistrc>Crear nuestro archivo <a href=https://github.com/browserslist/browserslist#browserslist- rel=nofollow target=_blank><code>.browserslistrc</code></a></h4><p>En este archivo indicamos nuestros <code>target browsers</code>, los navegadores que soportaremos. <a href=https://babeljs.io/docs/en/babel-preset-env rel=nofollow target=_blank>Babel</a> y <a href=https://autoprefixer.github.io/ rel=nofollow target=_blank>Autoprefixer</a> usaran este archivo si lo encuentran en la raiz del proyecto.<pre><code><span class=hljs-comment># .browserslistrc</span>\n\n<span class=hljs-meta>></span> <span class=hljs-string>1%</span>\n<span class=hljs-attr>last</span> <span class=hljs-string>2 versions</span>\n<span class=hljs-attr>not</span> <span class=hljs-string>dead</span>\n<span class=hljs-attr>not</span> <span class=hljs-string>IE 11</span>\n<span class=hljs-attr>not</span> <span class=hljs-string>IE 10</span>\n</code></pre><li><h4 id=crear-nuestro-archivo-babelrc>Crear nuestro archivo <code>.babelrc</code></h4><p>Con esto babel sera capaz de insertar polyfills y transformar JS donde se requiera segun nuestro <code>target browsers</code>.<pre><code class=language-json>{\n  <span class=hljs-attr>\"presets\"</span>: [[<span class=hljs-string>\"@babel/preset-env\"</span>]],\n  <span class=hljs-attr>\"plugins\"</span>: [\n    [\n      <span class=hljs-string>\"@babel/plugin-transform-runtime\"</span>,\n      {\n        <span class=hljs-attr>\"corejs\"</span>: <span class=hljs-number>3</span>\n      }\n    ]\n  ]\n}\n</code></pre><li><h4 id=crear-nuestro-archivo-postcssconfigjs>Crear nuestro archivo <code>postcss.config.js</code></h4><p><code>postcss-loader</code> usara esta configuracion, solo usaremos el plugin de autoprefixer.<pre><code class=language-js><span class=hljs-built_in>module</span>.exports = {\n  <span class=hljs-attr>plugins</span>: {\n    <span class=hljs-attr>autoprefixer</span>: {},\n  },\n}\n</code></pre><li><h4 id=crear-nuestro-archivo-webpackconfigjs>Crear nuestro archivo <code>webpack.config.js</code></h4><div class=tenor-gif-embed data-aspect-ratio=1.7744360902255638 data-postid=10383696 data-share-method=host data-width=100%><a href=https://tenor.com/view/ahora-si-viene-lo-chido-gif-10383696>Ahora Si GIF</a> from <a href=https://tenor.com/search/ahora-gifs>Ahora GIFs</a></div><br><p>Empezemos por importar algunos modulos, mas <a href=#1-instalar-dependencias>arriba</a> explique que hace cada modulo.<pre><code class=language-js><span class=hljs-keyword>const</span> path = <span class=hljs-built_in>require</span>(<span class=hljs-string>'path'</span>)\n<span class=hljs-keyword>const</span> webpack = <span class=hljs-built_in>require</span>(<span class=hljs-string>'webpack'</span>)\n<span class=hljs-keyword>const</span> HtmlWebpackPlugin = <span class=hljs-built_in>require</span>(<span class=hljs-string>'html-webpack-plugin'</span>)\n<span class=hljs-keyword>const</span> {CleanWebpackPlugin} = <span class=hljs-built_in>require</span>(<span class=hljs-string>'clean-webpack-plugin'</span>)\n<span class=hljs-keyword>const</span> MiniCssExtractPlugin = <span class=hljs-built_in>require</span>(<span class=hljs-string>'mini-css-extract-plugin'</span>)\n</code></pre><p>El archivo <code>webpack.config.js</code> debe exportar un objeto o una funcion devolviendo un objeto, usaremos la segunda, ya que de esta manera podremos saber si estamos en <code>development</code> o <code>production</code>.<pre><code class=language-js><span class=hljs-keyword>const</span> config = {}\n<span class=hljs-built_in>module</span>.exports = <span class=hljs-function>(<span class=hljs-params>env, argv</span>) =></span> {\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'development'</span>) {\n    <span class=hljs-comment>// <span class=hljs-doctag>TODO:</span> usar style-loader, es lo recomendado para usar HMR</span>\n    <span class=hljs-comment>// <span class=hljs-doctag>TODO:</span> habilitar HMR plugin</span>\n  }\n\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'production'</span>) {\n    <span class=hljs-comment>// <span class=hljs-doctag>TODO:</span> insertar `contenthash` en los archivos de salida, esto para tener `long term caching`</span>\n    <span class=hljs-comment>// <span class=hljs-doctag>TODO:</span> usar MiniCssExtractPlugin, para extraer todo nuestro CSS a un archivo CSS, de lo contrario nuestro CSS quedaria en los archivos JS</span>\n  }\n  <span class=hljs-keyword>return</span> config\n}\n</code></pre><p>La configuracion en comun que tiene <code>production</code> y <code>development</code> estara en el objeto <code>config</code>.<pre><code class=language-js><span class=hljs-keyword>const</span> config = {\n  <span class=hljs-comment>// el punto de entrada de nuestra APP, JS que se ejecutara en el BROWSER</span>\n  <span class=hljs-attr>entry</span>: <span class=hljs-string>'./src/index.js'</span>,\n  <span class=hljs-attr>output</span>: {\n    <span class=hljs-comment>// el nombre que le daremos al archivo de salida principal</span>\n    <span class=hljs-attr>filename</span>: <span class=hljs-string>'main.js'</span>,\n\n    <span class=hljs-comment>// donde se crearan los archivos de salida</span>\n    <span class=hljs-attr>path</span>: path.resolve(__dirname, <span class=hljs-string>'dist'</span>),\n  },\n\n  <span class=hljs-comment>// configuracion para webpack-dev-server</span>\n  <span class=hljs-attr>devServer</span>: {\n    <span class=hljs-comment>// abrir la APP en el BROWSER</span>\n    <span class=hljs-attr>open</span>: <span class=hljs-literal>true</span>,\n\n    <span class=hljs-comment>// HACK para permitir ver la APP desde otros dispositivos</span>\n    <span class=hljs-attr>host</span>: <span class=hljs-string>'0.0.0.0'</span>,\n\n    <span class=hljs-comment>// ver el progreso de compilacion en la consola</span>\n    <span class=hljs-attr>progress</span>: <span class=hljs-literal>true</span>,\n\n    <span class=hljs-comment>// esto para que todas las URLs que fallen (404) devuelvan nuestro index.html</span>\n    <span class=hljs-attr>historyApiFallback</span>: <span class=hljs-literal>true</span>,\n\n    <span class=hljs-comment>// para que los errores en consola aparescan en un overlay en el BROWSER</span>\n    <span class=hljs-attr>overlay</span>: <span class=hljs-literal>true</span>,\n\n    <span class=hljs-comment>// habilitar HMR</span>\n    <span class=hljs-attr>hot</span>: <span class=hljs-literal>true</span>,\n  },\n  <span class=hljs-attr>resolve</span>: {\n    <span class=hljs-attr>alias</span>: {\n      <span class=hljs-comment>// un alias que apunta a la carpeta `src/components`</span>\n      <span class=hljs-string>'@components'</span>: path.resolve(__dirname, <span class=hljs-string>'src/components'</span>),\n    },\n  },\n  <span class=hljs-attr>module</span>: {\n    <span class=hljs-attr>rules</span>: [\n      {\n        <span class=hljs-comment>// a que archivos afectara esta regla</span>\n        <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.js$/</span>,\n\n        <span class=hljs-comment>// los loaders que apliquemos en la regla no afectaran</span>\n        <span class=hljs-comment>// a archivos que coincidan con</span>\n        <span class=hljs-attr>exclude</span>: <span class=hljs-regexp>/(node_modules|bower_components)/</span>,\n\n        <span class=hljs-attr>use</span>: {\n          <span class=hljs-comment>// el nombre  del loader que usaremos</span>\n          <span class=hljs-attr>loader</span>: <span class=hljs-string>'babel-loader'</span>,\n          <span class=hljs-attr>options</span>: {\n            <span class=hljs-comment>// mejora la velocidad de compilacion</span>\n            <span class=hljs-comment>// si en algun momento no se ven reflejados tus cambios</span>\n            <span class=hljs-comment>// elimina la carpeta `node_modules/.cache`</span>\n            <span class=hljs-attr>cacheDirectory</span>: <span class=hljs-literal>true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=hljs-attr>plugins</span>: [\n    <span class=hljs-keyword>new</span> CleanWebpackPlugin(),\n    <span class=hljs-keyword>new</span> HtmlWebpackPlugin({\n      <span class=hljs-comment>// la ruta donde se encuentra nuestro index.html</span>\n      <span class=hljs-comment>// para que HtmlWebpackPlugin lo use</span>\n      <span class=hljs-attr>template</span>: <span class=hljs-string>'src/index.html'</span>,\n    }),\n  ],\n}\n</code></pre><p>Ahora solo falta completar nuestros TODOs<pre><code class=language-js><span class=hljs-built_in>module</span>.exports = <span class=hljs-function>(<span class=hljs-params>env, argv</span>) =></span> {\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'development'</span>) {\n    <span class=hljs-comment>// nuestra regla para poder importar archivos CSS</span>\n    config.module.rules.push({\n      <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.css$/</span>,\n\n      <span class=hljs-comment>// el primer loader en aplicarse es el ultimo, en este caso `postcss-loader`</span>\n      <span class=hljs-attr>use</span>: [<span class=hljs-string>'style-loader'</span>, <span class=hljs-string>'css-loader'</span>, <span class=hljs-string>'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=hljs-comment>// con esto ya habilitamos HMR</span>\n      <span class=hljs-keyword>new</span> webpack.HotModuleReplacementPlugin(),\n    )\n  }\n\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'production'</span>) {\n    <span class=hljs-comment>// webpack reemplazara [name] con el nombre del archivo que importamos, ///</span>\n    <span class=hljs-comment>// [contenthash:8] sera reemplazado por un hash de 8 digitos que cambia segun el contenido del archivo</span>\n    <span class=hljs-comment>// aplicar long term caching a los archivos resultantes JS</span>\n    config.output.filename = <span class=hljs-string>'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=hljs-string>'static/js/chunk.[name].[contenthash:8].js'</span>\n\n    <span class=hljs-comment>// nuestra regla para extraer los archivos CSSs en sus propios archivos</span>\n    config.module.rules.push({\n      <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.css$/</span>,\n      <span class=hljs-attr>use</span>: [MiniCssExtractPlugin.loader, <span class=hljs-string>'css-loader'</span>, <span class=hljs-string>'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=hljs-keyword>new</span> MiniCssExtractPlugin({\n        <span class=hljs-comment>// aplicar long term caching a los archivos resultantes CSS</span>\n        <span class=hljs-attr>filename</span>: <span class=hljs-string>'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=hljs-attr>chunkFilename</span>: <span class=hljs-string>'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=hljs-keyword>return</span> config\n}\n</code></pre></ol><p>Con esto ya tienes una configuracion bien estandar, si trabajas con vue puedes continuar <a href=https://vue-loader.vuejs.org/ rel=nofollow target=_blank>aquí</a>, o si trabajas con react agrega este preset <a href=https://babeljs.io/docs/en/babel-preset-react rel=nofollow target=_blank>@babel/preset-react</a> a la configuracion de babel.<h2 id=configuracion-final>Configuracion final</h2><pre><code class=language-js><span class=hljs-comment>// webpack.config.js</span>\n\n<span class=hljs-keyword>const</span> path = <span class=hljs-built_in>require</span>(<span class=hljs-string>'path'</span>)\n<span class=hljs-keyword>const</span> webpack = <span class=hljs-built_in>require</span>(<span class=hljs-string>'webpack'</span>)\n<span class=hljs-keyword>const</span> HtmlWebpackPlugin = <span class=hljs-built_in>require</span>(<span class=hljs-string>'html-webpack-plugin'</span>)\n<span class=hljs-keyword>const</span> {CleanWebpackPlugin} = <span class=hljs-built_in>require</span>(<span class=hljs-string>'clean-webpack-plugin'</span>)\n<span class=hljs-keyword>const</span> MiniCssExtractPlugin = <span class=hljs-built_in>require</span>(<span class=hljs-string>'mini-css-extract-plugin'</span>)\n\n<span class=hljs-keyword>const</span> config = {\n  <span class=hljs-attr>entry</span>: <span class=hljs-string>'./src/index.js'</span>,\n  <span class=hljs-attr>output</span>: {\n    <span class=hljs-attr>filename</span>: <span class=hljs-string>'main.js'</span>,\n    <span class=hljs-attr>path</span>: path.resolve(__dirname, <span class=hljs-string>'dist'</span>),\n  },\n  <span class=hljs-attr>devServer</span>: {\n    <span class=hljs-attr>open</span>: <span class=hljs-literal>true</span>,\n    <span class=hljs-attr>host</span>: <span class=hljs-string>'0.0.0.0'</span>,\n    <span class=hljs-attr>progress</span>: <span class=hljs-literal>true</span>,\n    <span class=hljs-attr>historyApiFallback</span>: <span class=hljs-literal>true</span>,\n    <span class=hljs-attr>overlay</span>: <span class=hljs-literal>true</span>,\n    <span class=hljs-attr>hot</span>: <span class=hljs-literal>true</span>,\n  },\n  <span class=hljs-attr>resolve</span>: {\n    <span class=hljs-attr>alias</span>: {\n      <span class=hljs-string>'@components'</span>: path.resolve(__dirname, <span class=hljs-string>'src/components'</span>),\n    },\n  },\n  <span class=hljs-attr>module</span>: {\n    <span class=hljs-attr>rules</span>: [\n      {\n        <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.js$/</span>,\n        <span class=hljs-attr>exclude</span>: <span class=hljs-regexp>/(node_modules|bower_components)/</span>,\n        <span class=hljs-attr>use</span>: {\n          <span class=hljs-attr>loader</span>: <span class=hljs-string>'babel-loader'</span>,\n          <span class=hljs-attr>options</span>: {\n            <span class=hljs-attr>cacheDirectory</span>: <span class=hljs-literal>true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=hljs-attr>plugins</span>: [\n    <span class=hljs-keyword>new</span> CleanWebpackPlugin(),\n    <span class=hljs-keyword>new</span> HtmlWebpackPlugin({\n      <span class=hljs-attr>template</span>: <span class=hljs-string>'src/index.html'</span>,\n    }),\n  ],\n}\n\n<span class=hljs-built_in>module</span>.exports = <span class=hljs-function>(<span class=hljs-params>env, argv</span>) =></span> {\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'development'</span>) {\n    config.module.rules.push({\n      <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.css$/</span>,\n      <span class=hljs-attr>use</span>: [<span class=hljs-string>'style-loader'</span>, <span class=hljs-string>'css-loader'</span>, <span class=hljs-string>'postcss-loader'</span>],\n    })\n    config.plugins.push(<span class=hljs-keyword>new</span> webpack.HotModuleReplacementPlugin())\n  }\n\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'production'</span>) {\n    config.output.filename = <span class=hljs-string>'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=hljs-string>'static/js/chunk.[name].[contenthash:8].js'</span>\n    config.module.rules.push({\n      <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.css$/</span>,\n      <span class=hljs-attr>use</span>: [MiniCssExtractPlugin.loader, <span class=hljs-string>'css-loader'</span>, <span class=hljs-string>'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=hljs-keyword>new</span> MiniCssExtractPlugin({\n        <span class=hljs-attr>filename</span>: <span class=hljs-string>'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=hljs-attr>chunkFilename</span>: <span class=hljs-string>'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=hljs-keyword>return</span> config\n}\n</code></pre><h2 id=referencias>Referencias</h2><ul><li><a href=https://www.zzuu666.com/articles/9 rel=nofollow target=_blank>https://www.zzuu666.com/articles/9</a><li><a href=https://webpack.js.org/configuration/mode/#root rel=nofollow target=_blank>https://webpack.js.org/configuration/mode/#root</a><li><a href=https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching rel=nofollow target=_blank>https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching</a></ul>"}
+module.exports = {"frontMatter":{"slug":"configurar-webpack-5","fileName":"configurar-webpack-5","readingTime":"☕️ 7 minutos de lectura","wordCount":1337,"identifier":"blog-1","date":"09-04-2020","dateModified":"12-04-2020","formattedDate":"Abril 2020","imageCaption":"webpack","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","title":"Configurar webpack 5","description":"Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!","tags":["webpack","babel"],"keywords":["webpack","webpack 5","babel","webpack-dev-server"]},"bodyHtml":"<p>Configurar webpack puede ser frustrante...<div class=tenor-gif-embed data-aspect-ratio=1.7785714285714287 data-postid=5384575 data-share-method=host data-width=100%><a href=https://tenor.com/view/fuck-work-gif-5384575>Fuckwork Angry GIF</a> from <a href=https://tenor.com/search/fuckwork-gifs>Fuckwork GIFs</a></div><br><p>Por ello en esta guía te enseñare como configurar <a href=https://webpack.js.org/concepts/ rel=nofollow target=_blank>webpack 5</a> con babel, si deseas ver la configuración final haz click <a href=#configuracion-final>aquí</a> y <a href=https://github.com/wochap/setup-webpack-5 rel=nofollow target=_blank>aquí</a> para ir al repo.<blockquote><p>al día de hoy (9 de abril del 2020) <a href=https://webpack.js.org/concepts/hot-module-replacement/ rel=nofollow target=_blank>HMR (hot module replacement)</a> no funciona con <strong>html-webpack-plugin</strong>, y tambien hay algunos plugins que no funcionaran (por el momento) ya que la API interna cambio bastante en webpack 5</blockquote><h2 id=nuestra-meta>Nuestra meta</h2><p>Tener un solo archivo de configuración <code>webpack.config.js</code> para <code>production</code> y <code>development</code>, configurar <a href=https://babeljs.io/ rel=nofollow target=_blank>babel</a> para que inserte <a href=https://developer.mozilla.org/es/docs/Glossary/Polyfill rel=nofollow target=_blank>polyfills</a> y transforme nuestro código JS a JS que entiendan nuestros <code>target browsers</code>.<h2 id=requerimientos>Requerimientos</h2><ul><li>Saber lo basico de <a href=https://nodejs.org/ rel=nofollow target=_blank>NodeJS</a>.</ul><h2 id=empecemos>Empecemos</h2><h3 id=pasos-para-configurar-webpack-5>Pasos para configurar webpack 5</h3><ol><li><h4 id=instalar-dependencias>Instalar dependencias</h4><p>Webpack<ul><li>webpack - v5.0.0-beta.13<li>webpack-cli - v3.3.11 - <em>permite usar webpack en la terminal</em><li>webpack-dev-server - v3.10.3 - <em>crea un servidor express para poder hacer uso de HMR</em></ul><p>Webpack loaders<ul><li>css-loader - v3.4.2 - <em>permite importar archivos CSS a nuestros JS</em><li>postcss-loader - v3.0.0 - <em>permite aplicar plugins de <a href=https://postcss.org/ rel=nofollow target=_blank>postcss</a> a nuestros CSS</em><li>style-loader - v1.1.3 - <em>agrega una etiqueta <code>style</code> en el DOM por cada CSS que importemos en nuestros JS</em><li>babel-loader - v8.1.0 - <em>permite aplicar babel a todos nuestros JS</em></ul><p>Webpack plugins<ul><li>clean-webpack-plugin - v3.0.0 - <em>eliminara la carpeta dist en cada production build</em><li>html-webpack-plugin - v4.0.4 - <em>inserta en el archivo html que le indiques todos tus imports (script, style, link, etc)</em><li>mini-css-extract-plugin - v0.9.0 - <em>agrega una etiqueta <code>link</code> en el DOM por cada CSS que importemos en nuestros JS</em></ul><p>Babel<ul><li>@babel/core - v7.9.0<li>@babel/plugin-transform-runtime - v7.9.0 - <em>encargado de agregar los polyfills</em><li>@babel/preset-env - v7.9.0 - <em>encargado de transformar nuestro código JS a JS entendible por nuestros <code>target browsers</code></em><li>@babel/runtime-corejs3 - v7.9.2 - <em>modulo que contiene los polyfills</em></ul><p>Postcss plugins<ul><li>autoprefixer - v9.7.5 - <em>insertara prefijos (-webkit-) segun lo requieran nuestros <code>target browsers</code></em></ul><li><h4 id=agregar-nuestros-tasks-en-packagejson>Agregar nuestros tasks en package.json</h4><p>En development, usaremos el comando <code>npm run dev</code> y para production <code>npm run build</code>.<pre><code class=language-json>{\n  <span class=hljs-attr>\"scripts\"</span>: {\n    <span class=hljs-attr>\"build\"</span>: <span class=hljs-string>\"webpack --mode production\"</span>, <span class=hljs-comment>// corre webpack con la configuracion para production, con ello webpack sera capaz de analizar, comprimir, y quitar código innecesario.</span>\n    <span class=hljs-attr>\"dev\"</span>: <span class=hljs-string>\"webpack-dev-server --mode development\"</span> <span class=hljs-comment>// para hacer uso del famoso HMR necesitamos un servidor en nodejs, webpack-dev-server lo creara por nosotros</span>\n  }\n}\n</code></pre><li><h4 id=crear-nuestro-archivo-browserslistrc>Crear nuestro archivo <a href=https://github.com/browserslist/browserslist#browserslist- rel=nofollow target=_blank><code>.browserslistrc</code></a></h4><p>En este archivo indicamos nuestros <code>target browsers</code>, los navegadores que soportaremos. <a href=https://babeljs.io/docs/en/babel-preset-env rel=nofollow target=_blank>Babel</a> y <a href=https://autoprefixer.github.io/ rel=nofollow target=_blank>Autoprefixer</a> usaran este archivo si lo encuentran en la raiz del proyecto.<pre><code><span class=hljs-comment># .browserslistrc</span>\n\n<span class=hljs-meta>></span> <span class=hljs-string>1%</span>\n<span class=hljs-attr>last</span> <span class=hljs-string>2 versions</span>\n<span class=hljs-attr>not</span> <span class=hljs-string>dead</span>\n<span class=hljs-attr>not</span> <span class=hljs-string>IE 11</span>\n<span class=hljs-attr>not</span> <span class=hljs-string>IE 10</span>\n</code></pre><li><h4 id=crear-nuestro-archivo-babelrc>Crear nuestro archivo <code>.babelrc</code></h4><p>Con esto babel sera capaz de insertar polyfills y transformar JS donde se requiera segun nuestro <code>target browsers</code>.<pre><code class=language-json>{\n  <span class=hljs-attr>\"presets\"</span>: [[<span class=hljs-string>\"@babel/preset-env\"</span>]],\n  <span class=hljs-attr>\"plugins\"</span>: [\n    [\n      <span class=hljs-string>\"@babel/plugin-transform-runtime\"</span>,\n      {\n        <span class=hljs-attr>\"corejs\"</span>: <span class=hljs-number>3</span>\n      }\n    ]\n  ]\n}\n</code></pre><li><h4 id=crear-nuestro-archivo-postcssconfigjs>Crear nuestro archivo <code>postcss.config.js</code></h4><p><code>postcss-loader</code> usara esta configuracion, solo usaremos el plugin de autoprefixer.<pre><code class=language-js><span class=hljs-built_in>module</span>.exports = {\n  <span class=hljs-attr>plugins</span>: {\n    <span class=hljs-attr>autoprefixer</span>: {},\n  },\n}\n</code></pre><li><h4 id=crear-nuestro-archivo-webpackconfigjs>Crear nuestro archivo <code>webpack.config.js</code></h4><div class=tenor-gif-embed data-aspect-ratio=1.7744360902255638 data-postid=10383696 data-share-method=host data-width=100%><a href=https://tenor.com/view/ahora-si-viene-lo-chido-gif-10383696>Ahora Si GIF</a> from <a href=https://tenor.com/search/ahora-gifs>Ahora GIFs</a></div><br><p>Empezemos por importar algunos modulos, mas <a href=#1-instalar-dependencias>arriba</a> explique que hace cada modulo.<pre><code class=language-js><span class=hljs-keyword>const</span> path = <span class=hljs-built_in>require</span>(<span class=hljs-string>'path'</span>)\n<span class=hljs-keyword>const</span> webpack = <span class=hljs-built_in>require</span>(<span class=hljs-string>'webpack'</span>)\n<span class=hljs-keyword>const</span> HtmlWebpackPlugin = <span class=hljs-built_in>require</span>(<span class=hljs-string>'html-webpack-plugin'</span>)\n<span class=hljs-keyword>const</span> {CleanWebpackPlugin} = <span class=hljs-built_in>require</span>(<span class=hljs-string>'clean-webpack-plugin'</span>)\n<span class=hljs-keyword>const</span> MiniCssExtractPlugin = <span class=hljs-built_in>require</span>(<span class=hljs-string>'mini-css-extract-plugin'</span>)\n</code></pre><p>El archivo <code>webpack.config.js</code> debe exportar un objeto o una funcion devolviendo un objeto, usaremos la segunda, ya que de esta manera podremos saber si estamos en <code>development</code> o <code>production</code>.<pre><code class=language-js><span class=hljs-keyword>const</span> config = {}\n<span class=hljs-built_in>module</span>.exports = <span class=hljs-function>(<span class=hljs-params>env, argv</span>) =></span> {\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'development'</span>) {\n    <span class=hljs-comment>// <span class=hljs-doctag>TODO:</span> usar style-loader, es lo recomendado para usar HMR</span>\n    <span class=hljs-comment>// <span class=hljs-doctag>TODO:</span> habilitar HMR plugin</span>\n  }\n\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'production'</span>) {\n    <span class=hljs-comment>// <span class=hljs-doctag>TODO:</span> insertar `contenthash` en los archivos de salida, esto para tener `long term caching`</span>\n    <span class=hljs-comment>// <span class=hljs-doctag>TODO:</span> usar MiniCssExtractPlugin, para extraer todo nuestro CSS a un archivo CSS, de lo contrario nuestro CSS quedaria en los archivos JS</span>\n  }\n  <span class=hljs-keyword>return</span> config\n}\n</code></pre><p>La configuracion en comun que tiene <code>production</code> y <code>development</code> estara en el objeto <code>config</code>.<pre><code class=language-js><span class=hljs-keyword>const</span> config = {\n  <span class=hljs-comment>// el punto de entrada de nuestra APP, JS que se ejecutara en el BROWSER</span>\n  <span class=hljs-attr>entry</span>: <span class=hljs-string>'./src/index.js'</span>,\n  <span class=hljs-attr>output</span>: {\n    <span class=hljs-comment>// el nombre que le daremos al archivo de salida principal</span>\n    <span class=hljs-attr>filename</span>: <span class=hljs-string>'main.js'</span>,\n\n    <span class=hljs-comment>// donde se crearan los archivos de salida</span>\n    <span class=hljs-attr>path</span>: path.resolve(__dirname, <span class=hljs-string>'dist'</span>),\n  },\n\n  <span class=hljs-comment>// configuracion para webpack-dev-server</span>\n  <span class=hljs-attr>devServer</span>: {\n    <span class=hljs-comment>// abrir la APP en el BROWSER</span>\n    <span class=hljs-attr>open</span>: <span class=hljs-literal>true</span>,\n\n    <span class=hljs-comment>// HACK para permitir ver la APP desde otros dispositivos</span>\n    <span class=hljs-attr>host</span>: <span class=hljs-string>'0.0.0.0'</span>,\n\n    <span class=hljs-comment>// ver el progreso de compilacion en la consola</span>\n    <span class=hljs-attr>progress</span>: <span class=hljs-literal>true</span>,\n\n    <span class=hljs-comment>// esto para que todas las URLs que fallen (404) devuelvan nuestro index.html</span>\n    <span class=hljs-attr>historyApiFallback</span>: <span class=hljs-literal>true</span>,\n\n    <span class=hljs-comment>// para que los errores en consola aparescan en un overlay en el BROWSER</span>\n    <span class=hljs-attr>overlay</span>: <span class=hljs-literal>true</span>,\n\n    <span class=hljs-comment>// habilitar HMR</span>\n    <span class=hljs-attr>hot</span>: <span class=hljs-literal>true</span>,\n  },\n  <span class=hljs-attr>resolve</span>: {\n    <span class=hljs-attr>alias</span>: {\n      <span class=hljs-comment>// un alias que apunta a la carpeta `src/components`</span>\n      <span class=hljs-string>'@components'</span>: path.resolve(__dirname, <span class=hljs-string>'src/components'</span>),\n    },\n  },\n  <span class=hljs-attr>module</span>: {\n    <span class=hljs-attr>rules</span>: [\n      {\n        <span class=hljs-comment>// a que archivos afectara esta regla</span>\n        <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.js$/</span>,\n\n        <span class=hljs-comment>// los loaders que apliquemos en la regla no afectaran</span>\n        <span class=hljs-comment>// a archivos que coincidan con</span>\n        exclude: <span class=hljs-regexp>/(node_modules|bower_components)/</span>,\n\n        use: {\n          <span class=hljs-comment>// el nombre  del loader que usaremos</span>\n          <span class=hljs-attr>loader</span>: <span class=hljs-string>'babel-loader'</span>,\n          <span class=hljs-attr>options</span>: {\n            <span class=hljs-comment>// mejora la velocidad de compilacion</span>\n            <span class=hljs-comment>// si en algun momento no se ven reflejados tus cambios</span>\n            <span class=hljs-comment>// elimina la carpeta `node_modules/.cache`</span>\n            <span class=hljs-attr>cacheDirectory</span>: <span class=hljs-literal>true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=hljs-attr>plugins</span>: [\n    <span class=hljs-keyword>new</span> CleanWebpackPlugin(),\n    <span class=hljs-keyword>new</span> HtmlWebpackPlugin({\n      <span class=hljs-comment>// la ruta donde se encuentra nuestro index.html</span>\n      <span class=hljs-comment>// para que HtmlWebpackPlugin lo use</span>\n      <span class=hljs-attr>template</span>: <span class=hljs-string>'src/index.html'</span>,\n    }),\n  ],\n}\n</code></pre><p>Ahora solo falta completar nuestros TODOs<pre><code class=language-js><span class=hljs-built_in>module</span>.exports = <span class=hljs-function>(<span class=hljs-params>env, argv</span>) =></span> {\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'development'</span>) {\n    <span class=hljs-comment>// nuestra regla para poder importar archivos CSS</span>\n    config.module.rules.push({\n      <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.css$/</span>,\n\n      <span class=hljs-comment>// el primer loader en aplicarse es el ultimo, en este caso `postcss-loader`</span>\n      use: [<span class=hljs-string>'style-loader'</span>, <span class=hljs-string>'css-loader'</span>, <span class=hljs-string>'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=hljs-comment>// con esto ya habilitamos HMR</span>\n      <span class=hljs-keyword>new</span> webpack.HotModuleReplacementPlugin(),\n    )\n  }\n\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'production'</span>) {\n    <span class=hljs-comment>// webpack reemplazara [name] con el nombre del archivo que importamos, ///</span>\n    <span class=hljs-comment>// [contenthash:8] sera reemplazado por un hash de 8 digitos que cambia segun el contenido del archivo</span>\n    <span class=hljs-comment>// aplicar long term caching a los archivos resultantes JS</span>\n    config.output.filename = <span class=hljs-string>'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=hljs-string>'static/js/chunk.[name].[contenthash:8].js'</span>\n\n    <span class=hljs-comment>// nuestra regla para extraer los archivos CSSs en sus propios archivos</span>\n    config.module.rules.push({\n      <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.css$/</span>,\n      use: [MiniCssExtractPlugin.loader, <span class=hljs-string>'css-loader'</span>, <span class=hljs-string>'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=hljs-keyword>new</span> MiniCssExtractPlugin({\n        <span class=hljs-comment>// aplicar long term caching a los archivos resultantes CSS</span>\n        <span class=hljs-attr>filename</span>: <span class=hljs-string>'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=hljs-attr>chunkFilename</span>: <span class=hljs-string>'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=hljs-keyword>return</span> config\n}\n</code></pre></ol><p>Con esto ya tienes una configuracion bien estandar, si trabajas con vue puedes continuar <a href=https://vue-loader.vuejs.org/ rel=nofollow target=_blank>aquí</a>, o si trabajas con react agrega este preset <a href=https://babeljs.io/docs/en/babel-preset-react rel=nofollow target=_blank>@babel/preset-react</a> a la configuracion de babel.<h2 id=configuracion-final>Configuracion final</h2><pre><code class=language-js><span class=hljs-comment>// webpack.config.js</span>\n\n<span class=hljs-keyword>const</span> path = <span class=hljs-built_in>require</span>(<span class=hljs-string>'path'</span>)\n<span class=hljs-keyword>const</span> webpack = <span class=hljs-built_in>require</span>(<span class=hljs-string>'webpack'</span>)\n<span class=hljs-keyword>const</span> HtmlWebpackPlugin = <span class=hljs-built_in>require</span>(<span class=hljs-string>'html-webpack-plugin'</span>)\n<span class=hljs-keyword>const</span> {CleanWebpackPlugin} = <span class=hljs-built_in>require</span>(<span class=hljs-string>'clean-webpack-plugin'</span>)\n<span class=hljs-keyword>const</span> MiniCssExtractPlugin = <span class=hljs-built_in>require</span>(<span class=hljs-string>'mini-css-extract-plugin'</span>)\n\n<span class=hljs-keyword>const</span> config = {\n  <span class=hljs-attr>entry</span>: <span class=hljs-string>'./src/index.js'</span>,\n  <span class=hljs-attr>output</span>: {\n    <span class=hljs-attr>filename</span>: <span class=hljs-string>'main.js'</span>,\n    <span class=hljs-attr>path</span>: path.resolve(__dirname, <span class=hljs-string>'dist'</span>),\n  },\n  <span class=hljs-attr>devServer</span>: {\n    <span class=hljs-attr>open</span>: <span class=hljs-literal>true</span>,\n    <span class=hljs-attr>host</span>: <span class=hljs-string>'0.0.0.0'</span>,\n    <span class=hljs-attr>progress</span>: <span class=hljs-literal>true</span>,\n    <span class=hljs-attr>historyApiFallback</span>: <span class=hljs-literal>true</span>,\n    <span class=hljs-attr>overlay</span>: <span class=hljs-literal>true</span>,\n    <span class=hljs-attr>hot</span>: <span class=hljs-literal>true</span>,\n  },\n  <span class=hljs-attr>resolve</span>: {\n    <span class=hljs-attr>alias</span>: {\n      <span class=hljs-string>'@components'</span>: path.resolve(__dirname, <span class=hljs-string>'src/components'</span>),\n    },\n  },\n  <span class=hljs-attr>module</span>: {\n    <span class=hljs-attr>rules</span>: [\n      {\n        <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.js$/</span>,\n        exclude: <span class=hljs-regexp>/(node_modules|bower_components)/</span>,\n        use: {\n          <span class=hljs-attr>loader</span>: <span class=hljs-string>'babel-loader'</span>,\n          <span class=hljs-attr>options</span>: {\n            <span class=hljs-attr>cacheDirectory</span>: <span class=hljs-literal>true</span>,\n          },\n        },\n      },\n    ],\n  },\n  <span class=hljs-attr>plugins</span>: [\n    <span class=hljs-keyword>new</span> CleanWebpackPlugin(),\n    <span class=hljs-keyword>new</span> HtmlWebpackPlugin({\n      <span class=hljs-attr>template</span>: <span class=hljs-string>'src/index.html'</span>,\n    }),\n  ],\n}\n\n<span class=hljs-built_in>module</span>.exports = <span class=hljs-function>(<span class=hljs-params>env, argv</span>) =></span> {\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'development'</span>) {\n    config.module.rules.push({\n      <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.css$/</span>,\n      use: [<span class=hljs-string>'style-loader'</span>, <span class=hljs-string>'css-loader'</span>, <span class=hljs-string>'postcss-loader'</span>],\n    })\n    config.plugins.push(<span class=hljs-keyword>new</span> webpack.HotModuleReplacementPlugin())\n  }\n\n  <span class=hljs-keyword>if</span> (argv.mode === <span class=hljs-string>'production'</span>) {\n    config.output.filename = <span class=hljs-string>'static/js/bundle.[name].[contenthash:8].js'</span>\n    config.output.chunkFilename = <span class=hljs-string>'static/js/chunk.[name].[contenthash:8].js'</span>\n    config.module.rules.push({\n      <span class=hljs-attr>test</span>: <span class=hljs-regexp>/\\.css$/</span>,\n      use: [MiniCssExtractPlugin.loader, <span class=hljs-string>'css-loader'</span>, <span class=hljs-string>'postcss-loader'</span>],\n    })\n    config.plugins.push(\n      <span class=hljs-keyword>new</span> MiniCssExtractPlugin({\n        <span class=hljs-attr>filename</span>: <span class=hljs-string>'static/css/bundle.[name].[contenthash:8].css'</span>,\n        <span class=hljs-attr>chunkFilename</span>: <span class=hljs-string>'static/css/chunk.[name].[contenthash:8].css'</span>,\n      }),\n    )\n  }\n  <span class=hljs-keyword>return</span> config\n}\n</code></pre><h2 id=referencias>Referencias</h2><ul><li><a href=https://www.zzuu666.com/articles/9 rel=nofollow target=_blank>https://www.zzuu666.com/articles/9</a><li><a href=https://webpack.js.org/configuration/mode/#root rel=nofollow target=_blank>https://webpack.js.org/configuration/mode/#root</a><li><a href=https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching rel=nofollow target=_blank>https://developers.google.com/web/fundamentals/performance/webpack/use-long-term-caching</a></ul>"}
 
 /***/ }),
-/* 335 */
+/* 336 */
+/*!********************************************************************************!*\
+  !*** ../lib/loaders/markdown!../data/posts/dart-para-javascript-developers.md ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {"frontMatter":{"slug":"dart-para-javascript-developers","fileName":"dart-para-javascript-developers","readingTime":"☕️ 7 minutos de lectura","wordCount":1334,"identifier":"blog-4","date":"24-04-2020","dateModified":"24-04-2020","formattedDate":"Abril 2020","imageCaption":"logo de dart y javascript","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1587759087/wochap/hero/js-dart.webp","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1587759087/wochap/hero/js-dart.webp","title":"Dart para Javascript developers","description":"Aprende Dart si ya sabes JavaScript en menos de 8 minutos!'","tags":["dart"],"keywords":["dart","aprender dart"]},"bodyHtml":"<p>Guía para aprender Dart si ya sabes Javascript.<p>A la izquierda codigo Javascript y a su derecha el codigo \"posiblemente\" equivalente en Dart.<h2 id=diferencias-y-similitudes-entre-javascript-y-dart>Diferencias y similitudes entre JavaScript y Dart</h2><p>Para empezar, Dart es tipado.<h3 id=asignacion-de-variables><div align=center>Asignacion de variables</div></h3><p>En este apartado javascript y Dart son diferentes, en Dart una vez asginas un valor a una variable, el tipo de valor no puede cambiar a menos que lo hayas declarado con el keyword <code>dynamic</code>.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> name = <span class=hljs-string>'Pepe'</span> <span class=hljs-comment>// puede ser reasignado con cualquier otro valor</span>\n<span class=hljs-keyword>let</span> name = <span class=hljs-string>'Pepe'</span> <span class=hljs-comment>// puede ser reasignado con cualquier otro valor</span>\n<span class=hljs-keyword>const</span> name = <span class=hljs-string>'Pepe'</span> <span class=hljs-comment>// no puede ser reasignado</span>\n\n\n\n\n</code></pre><pre><code class=language-dart>\n\n\n<span class=hljs-built_in>dynamic</span> name = <span class=hljs-string>'Pepe'</span>; <span class=hljs-comment>// puede ser reasignado con cualquier otro valor</span>\n<span class=hljs-keyword>var</span> name = <span class=hljs-string>'Pepe'</span>; <span class=hljs-comment>// puede ser reasignado con valores del mismo tipo, en este caso con otro String</span>\n<span class=hljs-keyword>final</span> <span class=hljs-built_in>String</span> name = <span class=hljs-string>'Pepe'</span>; <span class=hljs-comment>// no puede ser reasignado, su valor es resuelta en tiempo de ejecucion</span>\n<span class=hljs-keyword>const</span> <span class=hljs-built_in>String</span> name = <span class=hljs-string>'Pepe'</span>; <span class=hljs-comment>// no puede ser reasignado, su valor es resuelta en tiempo de compilacion</span>\n</code></pre></div><h3 id=boolean><div align=center>Boolean</div></h3><p><strong>NOTA:</strong> en Dart los operadores logicos <code>&#38&amp</code> <code>||</code> <code>!</code> solo pueden ser aplicados con valores <code>boolean</code> y las expresiones creadas con esos operadores logicos no devuelven el ultimo valor encontrado como sucede en JavaScript.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> isOpen = <span class=hljs-literal>true</span>\nisOpen = <span class=hljs-literal>false</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> || isOpen) <span class=hljs-comment>// 5</span>\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> &#38&#38 isOpen) <span class=hljs-comment>// false</span>\n<span class=hljs-built_in>console</span>.log(!isOpen) <span class=hljs-comment>// true</span>\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> !== isOpen) <span class=hljs-comment>// true</span>\n</code></pre><pre><code class=language-dart><span class=hljs-built_in>bool</span> isOpen = <span class=hljs-keyword>true</span>;\nisOpen = <span class=hljs-keyword>false</span>;\n\n<span class=hljs-built_in>print</span>(<span class=hljs-number>5</span> || isOpen); <span class=hljs-comment>// Error</span>\n<span class=hljs-built_in>print</span>(<span class=hljs-number>5</span> &#38&#38 isOpen); <span class=hljs-comment>// Error</span>\n<span class=hljs-built_in>print</span>(!isOpen) ; <span class=hljs-comment>// true</span>\n<span class=hljs-built_in>print</span>(<span class=hljs-number>5</span> != isOpen); <span class=hljs-comment>// true</span>\n</code></pre></div><h3 id=string><div align=center>String</div></h3><p>En Dart, usas <code>'</code> para strings de una sola linea, y <code>'''</code> para strings multilinea, tambien puedes escapar cualquier caracter en un string anteponiendo una <code>r</code>.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> name = <span class=hljs-string>'Pepito'</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-string>`i am <span class=hljs-subst>${name}</span> <span class=hljs-subst>${<span class=hljs-number>5</span>}</span> years old.`</span>) <span class=hljs-comment>// i am Pepito 5 years old.</span>\n\n<span class=hljs-built_in>console</span>.log(name.toUpperCase()) <span class=hljs-comment>// PEPITO</span>\n<span class=hljs-built_in>console</span>.log(name.length) <span class=hljs-comment>// 6</span>\n</code></pre><pre><code class=language-dart><span class=hljs-built_in>String</span> name = <span class=hljs-string>'Pepito'</span>;\n\n<span class=hljs-built_in>print</span>(<span class=hljs-string>'''i am <span class=hljs-subst>$name</span> <span class=hljs-subst>${<span class=hljs-number>5</span>}</span> years old.'''</span>); <span class=hljs-comment>// i am Pepito 5 years old.</span>\n<span class=hljs-built_in>print</span>(<span class=hljs-string>r'i am $name ${5} years old.'</span>); <span class=hljs-comment>// i am $name ${5} years old.</span>\n<span class=hljs-built_in>print</span>(name.toUpperCase()); <span class=hljs-comment>// PEPITO</span>\n<span class=hljs-built_in>print</span>(name.length); <span class=hljs-comment>// 6</span>\n</code></pre></div><h3 id=number><div align=center>Number</div></h3><p>En Dart existen 3 tipos para numeros: <code>num</code> <code>double</code> <code>int</code>, en mi experiencia puedes usar cualquiera y no notaras la diferencia.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> height = <span class=hljs-number>5</span>\n<span class=hljs-keyword>var</span> width = <span class=hljs-number>2.5</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-keyword>typeof</span> height) <span class=hljs-comment>// number</span>\n</code></pre><pre><code class=language-dart><span class=hljs-built_in>int</span> height = <span class=hljs-number>5</span>;\n<span class=hljs-built_in>double</span> width = <span class=hljs-number>2.5</span>;\n\n<span class=hljs-built_in>print</span>(height.runtimeType); <span class=hljs-comment>// int</span>\n</code></pre></div><h3 id=array---list><div align=center>Array - List</div></h3><div class=c-markdown-code-compare><pre><code class=language-js>\n\n<span class=hljs-keyword>var</span> numbers = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>, <span class=hljs-number>4</span>]\nnumbers = [...numbers, <span class=hljs-number>5</span>]\nnumbers = [...numbers.slice(<span class=hljs-number>0</span>, <span class=hljs-number>1</span>), ...[<span class=hljs-number>8</span>, <span class=hljs-number>9</span>], ...numbers.slice(<span class=hljs-number>4</span>)]\n\n<span class=hljs-built_in>console</span>.log(numbers) <span class=hljs-comment>// [1, 8, 9, 5]</span>\n<span class=hljs-built_in>console</span>.log(numbers.slice(<span class=hljs-number>1</span>, <span class=hljs-number>3</span>)) <span class=hljs-comment>// [8, 9]</span>\n\n<span class=hljs-comment>// no hay algo como list comprehension en javascript</span>\nnumbers = numbers.filter(<span class=hljs-function><span class=hljs-params>x</span> =></span> x % <span class=hljs-number>2</span> === <span class=hljs-number>0</span>).map(<span class=hljs-function><span class=hljs-params>x</span> =></span> x ** <span class=hljs-number>2</span>)\n<span class=hljs-built_in>console</span>.log(numbers) <span class=hljs-comment>// [64]</span>\n</code></pre><pre><code class=language-dart><span class=hljs-keyword>import</span> <span class=hljs-string>'dart:math'</span>; <span class=hljs-comment>// para hacer uso de pow</span>\n\n<span class=hljs-built_in>List</span>&lt;<span class=hljs-built_in>int</span>> numbers = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>, <span class=hljs-number>4</span>];\nnumbers = [...numbers, <span class=hljs-number>5</span>];\nnumbers = [...numbers.sublist(<span class=hljs-number>0</span>, <span class=hljs-number>1</span>), ...[<span class=hljs-number>8</span>, <span class=hljs-number>9</span>], ...numbers.sublist(<span class=hljs-number>4</span>)];\n\n<span class=hljs-built_in>print</span>(numbers); <span class=hljs-comment>// [1, 8, 9, 5]</span>\n<span class=hljs-built_in>print</span>(numbers.sublist(<span class=hljs-number>1</span>, <span class=hljs-number>3</span>)); <span class=hljs-comment>// [8, 9]</span>\n\n<span class=hljs-comment>// list comprehension</span>\nnumbers = [<span class=hljs-keyword>for</span> (<span class=hljs-keyword>var</span> x <span class=hljs-keyword>in</span> numbers) <span class=hljs-keyword>if</span> (x % <span class=hljs-number>2</span> == <span class=hljs-number>0</span>) pow(x, <span class=hljs-number>2</span>)];\n<span class=hljs-built_in>print</span>(numbers); <span class=hljs-comment>// [64]</span>\n</code></pre></div><h3 id=set><div align=center>Set</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> animals = <span class=hljs-keyword>new</span> <span class=hljs-built_in>Set</span>([<span class=hljs-string>'cat'</span>, <span class=hljs-string>'dog'</span>])\n\n</code></pre><pre><code class=language-dart><span class=hljs-built_in>Set</span> animals = <span class=hljs-built_in>Set</span>.from([<span class=hljs-string>'cat'</span>, <span class=hljs-string>'dog'</span>]);\n<span class=hljs-built_in>Set</span> animals = {<span class=hljs-string>'cat'</span>, <span class=hljs-string>'dog'</span>};\n</code></pre></div><h3 id=object---map><div align=center>Object - Map</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> animals = {<span class=hljs-attr>cat</span>: <span class=hljs-string>'nyan'</span>, <span class=hljs-attr>dog</span>: <span class=hljs-string>'snuffles'</span>}\n<span class=hljs-built_in>console</span>.log(animals.fish ?? <span class=hljs-string>'N/A'</span>) <span class=hljs-comment>// N/A</span>\n<span class=hljs-keyword>delete</span> animals.cat\n\n<span class=hljs-comment>// object comprehension</span>\n<span class=hljs-keyword>var</span> foo = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>].filter(<span class=hljs-function><span class=hljs-params>x</span> =></span> x % <span class=hljs-number>2</span> === <span class=hljs-number>0</span>).reduce(<span class=hljs-function>(<span class=hljs-params>result, x</span>) =></span> ({...result, [x]: x ** <span class=hljs-number>2</span>}), {})\n<span class=hljs-built_in>console</span>.log(foo) <span class=hljs-comment>// {2: 4}</span>\n</code></pre><pre><code class=language-dart><span class=hljs-built_in>Map</span>&lt;<span class=hljs-built_in>String</span>, <span class=hljs-built_in>String</span>> animals = {<span class=hljs-string>'cat'</span>: <span class=hljs-string>'nyan'</span>, <span class=hljs-string>'dog'</span>: <span class=hljs-string>'snuffles'</span>};\n<span class=hljs-built_in>print</span>(animals[<span class=hljs-string>'fish'</span>] ?? <span class=hljs-string>'N/A'</span>); <span class=hljs-comment>// N/A</span>\nanimals.remove(<span class=hljs-string>'cat'</span>);\n\n<span class=hljs-comment>// object comprehension</span>\n<span class=hljs-built_in>Map</span>&lt;<span class=hljs-built_in>num</span>, <span class=hljs-built_in>num</span>> foo = {<span class=hljs-keyword>for</span> (<span class=hljs-keyword>var</span> x <span class=hljs-keyword>in</span> [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>]) <span class=hljs-keyword>if</span> (x % <span class=hljs-number>2</span> == <span class=hljs-number>0</span>) x: pow(x, <span class=hljs-number>2</span>)};\n<span class=hljs-built_in>print</span>(foo); <span class=hljs-comment>// {2: 4}</span>\n</code></pre></div><h3 id=function><div align=center>Function</div></h3><p>En Dart los parametros de una funcion pueden ser <code>Non-optional</code>, <code>Optional Positional Parameters</code>, <code>Optional Named Parameters</code>.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>sum</span>(<span class=hljs-params>a, b = <span class=hljs-number>3</span>, c = <span class=hljs-number>1</span></span>) </span>{\n  <span class=hljs-built_in>console</span>.log(a + b + c)\n}\n\n<span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>sum2</span>(<span class=hljs-params>a, {b = <span class=hljs-number>3</span>, c = <span class=hljs-number>1</span>} = {}</span>) </span>{\n  <span class=hljs-built_in>console</span>.log(a + b + c)\n}\n\nsum(<span class=hljs-number>5</span>, <span class=hljs-number>3</span>) <span class=hljs-comment>// 9</span>\nsum2(<span class=hljs-number>5</span>, {<span class=hljs-attr>c</span>: <span class=hljs-number>2</span>, <span class=hljs-attr>b</span>: <span class=hljs-number>8</span>}) <span class=hljs-comment>// 15</span>\n</code></pre><pre><code class=language-dart><span class=hljs-built_in>int</span> sum(<span class=hljs-built_in>int</span> a, [<span class=hljs-built_in>int</span> b = <span class=hljs-number>3</span>, <span class=hljs-built_in>int</span> c = <span class=hljs-number>1</span>]) { <span class=hljs-comment>// parametros opcionales b y c</span>\n  <span class=hljs-built_in>print</span>(a + b + c);\n}\n\n<span class=hljs-built_in>int</span> sum2(<span class=hljs-built_in>int</span> a, {<span class=hljs-built_in>int</span> b = <span class=hljs-number>3</span>, <span class=hljs-built_in>int</span> c = <span class=hljs-number>1</span>}) { <span class=hljs-comment>// parametros opcionales nombrados b y c</span>\n  <span class=hljs-built_in>print</span>(a + b + c);\n}\n\nsum(<span class=hljs-number>5</span>, <span class=hljs-number>3</span>); <span class=hljs-comment>// 9</span>\nsum2(<span class=hljs-number>5</span>, c: <span class=hljs-number>2</span>, b: <span class=hljs-number>8</span>); <span class=hljs-comment>// 15</span>\n</code></pre></div><h3 id=class><div align=center>Class</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-class><span class=hljs-keyword>class</span> <span class=hljs-title>Greeter</span> <span class=hljs-keyword>extends</span> <span class=hljs-title>BaseGreeter</span> </span>{\n  <span class=hljs-keyword>constructor</span>(name) {\n    <span class=hljs-keyword>this</span>.name = name\n  }\n\n  greet({ loud = <span class=hljs-literal>false</span> } = {}) {\n    <span class=hljs-keyword>if</span> (loud) {\n      <span class=hljs-built_in>console</span>.log(<span class=hljs-string>`HELLO <span class=hljs-subst>${<span class=hljs-keyword>this</span>.name.toUpperCase()}</span>!`</span>)\n    } <span class=hljs-keyword>else</span> {\n      <span class=hljs-built_in>console</span>.log(<span class=hljs-string>`Hello <span class=hljs-subst>${<span class=hljs-keyword>this</span>.name}</span>`</span>)\n    }\n  }\n}\n<span class=hljs-keyword>var</span> g = <span class=hljs-keyword>new</span> Greeter(<span class=hljs-string>'Fred'</span>)\ng.greet() <span class=hljs-comment>// Hello Fred</span>\ng.greet({<span class=hljs-attr>loud</span>: <span class=hljs-literal>true</span>}) <span class=hljs-comment>// HELLO FRED!</span>\n</code></pre><pre><code class=language-dart><span class=hljs-class><span class=hljs-keyword>class</span> <span class=hljs-title>Greeter</span> <span class=hljs-keyword>extends</span> <span class=hljs-title>BaseGreeter</span> </span>{\n  <span class=hljs-built_in>String</span> name;\n\n  Greeter(<span class=hljs-keyword>this</span>.name); <span class=hljs-comment>// sugar syntax para `this.name = name`</span>\n\n  <span class=hljs-keyword>void</span> greet({ loud = <span class=hljs-keyword>false</span> }) {\n    <span class=hljs-keyword>if</span> (loud) {\n      <span class=hljs-built_in>print</span>(<span class=hljs-string>'HELLO <span class=hljs-subst>${name.toUpperCase()}</span>!'</span>);\n    } <span class=hljs-keyword>else</span> {\n      <span class=hljs-built_in>print</span>(<span class=hljs-string>'Hello <span class=hljs-subst>${name}</span>'</span>);\n    }\n  }\n}\nGreeter g = Greeter(<span class=hljs-string>'Fred'</span>);\ng.greet(); <span class=hljs-comment>// Hello Fred</span>\ng.greet(loud: <span class=hljs-keyword>true</span>); <span class=hljs-comment>// HELLO FRED!</span>\n</code></pre></div><h3 id=control-flow><div align=center>Control Flow</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>if</span> (x > <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n} <span class=hljs-keyword>else</span> <span class=hljs-keyword>if</span> (x &#60 <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n} <span class=hljs-keyword>else</span> {\n  <span class=hljs-keyword>return</span> <span class=hljs-string>'zero'</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> value <span class=hljs-keyword>of</span> [<span class=hljs-string>'a'</span>, <span class=hljs-string>'b'</span>]) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> [index, value] <span class=hljs-keyword>of</span> [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>].entries()) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> [key, value] <span class=hljs-keyword>of</span> <span class=hljs-built_in>Object</span>.entries({<span class=hljs-attr>foo</span>: <span class=hljs-string>'bar'</span>})) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>while</span> (a &#60 <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n}\n</code></pre><pre><code class=language-dart><span class=hljs-keyword>if</span> (x > <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n} <span class=hljs-keyword>else</span> <span class=hljs-keyword>if</span> (x &#60 <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n} <span class=hljs-keyword>else</span> {\n  <span class=hljs-keyword>return</span> <span class=hljs-string>'zero'</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-built_in>String</span> value <span class=hljs-keyword>in</span> [<span class=hljs-string>'a'</span>, <span class=hljs-string>'b'</span>]) {\n  <span class=hljs-comment>//</span>\n}\n\n[<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>].asMap().forEach((index, value) {\n  <span class=hljs-comment>//</span>\n});\n\n({<span class=hljs-string>'foo'</span>: <span class=hljs-string>'bar'</span>}).forEach((key, value) {\n  <span class=hljs-comment>//</span>\n});\n\n<span class=hljs-keyword>while</span> (a &#60 <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n}\n</code></pre></div><h3 id=null><div align=center>Null</div></h3><p>En Javascript tenemos <code>null</code> y <code>undefined</code>, en Dart solo tenemos <code>null</code>.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-built_in>console</span>.log(<span class=hljs-literal>null</span>)\n<span class=hljs-built_in>console</span>.log(<span class=hljs-literal>undefined</span>)\n</code></pre><pre><code class=language-dart><span class=hljs-built_in>print</span>(<span class=hljs-keyword>null</span>);\n\n</code></pre></div><h3 id=modules><div align=center>Modules</div></h3><p>En Dart, cuando importas un modulo, todos sus miembros (variables, classes, funciones, etc.) estaran disponibles en el ambito global, a menos que la libreria haya definido un <code>namespace</code> o tu crees un <code>namespace</code> con el keyword <code>as</code> al momento de importar.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-comment>// project structure</span>\n<span class=hljs-comment>//</span>\n<span class=hljs-comment>// ├── project1</span>\n<span class=hljs-comment>// │   └── index.js</span>\n<span class=hljs-comment>// └── project2</span>\n<span class=hljs-comment>//     ├── main.js</span>\n<span class=hljs-comment>//     └── package1</span>\n<span class=hljs-comment>//         ├── index.js</span>\n<span class=hljs-comment>//         ├── module1.js</span>\n<span class=hljs-comment>//         └── subpackage1</span>\n<span class=hljs-comment>//             └── module2.js</span>\n\n<span class=hljs-comment>// project1/index.js</span>\n\n\n<span class=hljs-keyword>export</span> <span class=hljs-keyword>const</span> somethingMore = <span class=hljs-string>'...'</span>\n\n<span class=hljs-comment>// project2/main.js</span>\n\n<span class=hljs-keyword>import</span> os <span class=hljs-keyword>from</span> <span class=hljs-string>'os'</span> <span class=hljs-comment>// standard library import</span>\n<span class=hljs-keyword>import</span> {Flask} <span class=hljs-keyword>from</span> <span class=hljs-string>'flask'</span> <span class=hljs-comment>// third party import</span>\n<span class=hljs-keyword>import</span> * <span class=hljs-keyword>as</span> package1 <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1'</span> <span class=hljs-comment>// relative import with alias</span>\n<span class=hljs-keyword>import</span> * <span class=hljs-keyword>as</span> myModule <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1/module1.js'</span> <span class=hljs-comment>// relative import with alias</span>\n</code></pre><pre><code class=language-dart><span class=hljs-comment>// project structure</span>\n<span class=hljs-comment>//</span>\n<span class=hljs-comment>// ├── project1</span>\n<span class=hljs-comment>// │   └── main.dart</span>\n<span class=hljs-comment>// └── project2</span>\n<span class=hljs-comment>//     ├── main.dart</span>\n<span class=hljs-comment>//     └── package1</span>\n<span class=hljs-comment>//         ├── main.dart</span>\n<span class=hljs-comment>//         ├── module1.dart</span>\n<span class=hljs-comment>//         └── subpackage1</span>\n<span class=hljs-comment>//             └── module2.dart</span>\n\n<span class=hljs-comment>// project1/main.dart</span>\n\n<span class=hljs-keyword>library</span> project1; <span class=hljs-comment>// namespace</span>\n<span class=hljs-keyword>var</span> something_more = <span class=hljs-string>'...'</span>;\n\n<span class=hljs-comment>// project2/main.dart</span>\n\n<span class=hljs-keyword>import</span> <span class=hljs-string>'dart:math'</span> <span class=hljs-keyword>as</span> math; <span class=hljs-comment>// standard library import with namespace</span>\n<span class=hljs-keyword>import</span> <span class=hljs-string>'package:get_it/get_it.dart'</span>; <span class=hljs-comment>// third party import</span>\n<span class=hljs-keyword>import</span> <span class=hljs-string>'./package1/main.dart'</span> <span class=hljs-keyword>as</span> package1; <span class=hljs-comment>// relative import with namespace</span>\n<span class=hljs-keyword>import</span> <span class=hljs-string>'../project1/main.dart'</span>; <span class=hljs-comment>// relative import without namespace</span>\n</code></pre></div><h2 id=solo-en-dart>Solo en Dart</h2><p>Algunos features que tiene Dart pero no Javascript.<h3 id=enum><div align=center>Enum</div></h3><pre><code class=language-dart><span class=hljs-keyword>enum</span> Color = { red, green };\n</code></pre><h2 id=referencias>Referencias</h2><ul><li><a href=https://medium.com/jay-tillu/operators-in-dart-5a774aff0788 rel=nofollow target=_blank>https://medium.com/jay-tillu/operators-in-dart-5a774aff0788</a><li><a href=http://blog.sethladd.com/2012/02/booleans-in-dart.html rel=nofollow target=_blank>http://blog.sethladd.com/2012/02/booleans-in-dart.html</a><li><a href=https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(list_comprehension)#Dart rel=nofollow target=_blank>https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(list_comprehension)#Dart</a><li><a href=https://bezkoder.com/dart-map/ rel=nofollow target=_blank>https://bezkoder.com/dart-map/</a><li><a href=https://subscription.packtpub.com/book/web_development/9781783989560/1/ch01lvl1sec08/modularity-and-a-namespace rel=nofollow target=_blank>https://subscription.packtpub.com/book/web_development/9781783989560/1/ch01lvl1sec08/modularity-and-a-namespace</a></ul>"}
+
+/***/ }),
+/* 337 */
 /*!**********************************************************************************!*\
   !*** ../lib/loaders/markdown!../data/posts/python-para-javascript-developers.md ***!
   \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"frontMatter":{"slug":"python-para-javascript-developers","fileName":"python-para-javascript-developers","readingTime":"☕️ 5 minutos de lectura","wordCount":983,"identifier":"blog-3","date":"23-04-2020","dateModified":"23-04-2020","formattedDate":"Abril 2020","imageCaption":"logo de python y javascript","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","title":"Python para Javascript developers","description":"Aprende Python si ya sabes JavaScript en menos de 5 minutos!'","tags":["python"],"keywords":["python","javascript","javascript developers","aprender python","aprender javascript"]},"bodyHtml":"<p>Guía para aprender Python si ya sabes Javascript, o si quieres aprender Javascript y sabes Python.<p>A la izquierda codigo Javascript y a su derecha el codigo equivalente en Python 🐍.<h2 id=diferencias-y-similitudes-entre-javascript-y-python>Diferencias y similitudes entre JavaScript y Python</h2><h3 id=asignacion-de-variables><div align=center>Asignacion de variables</div></h3><p>En python no necesitas ningun <code>keyword</code> (var, let, const) para declarar variables.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> name = <span class=hljs-string>'Pepe'</span>\n<span class=hljs-keyword>let</span> name = <span class=hljs-string>'Pepe'</span>\n<span class=hljs-keyword>const</span> name = <span class=hljs-string>'Pepe'</span>\n</code></pre><pre><code class=language-py>name = <span class=hljs-string>'Pepe'</span>\n\n\n</code></pre></div><h3 id=boolean><div align=center>Boolean</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> isOpen = <span class=hljs-literal>true</span>\nisOpen = <span class=hljs-literal>false</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> || isOpen) <span class=hljs-comment>// 5</span>\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> &#38&#38 isOpen) <span class=hljs-comment>// false</span>\n<span class=hljs-built_in>console</span>.log(!isOpen) <span class=hljs-comment>// true</span>\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> !== isOpen) <span class=hljs-comment>// true</span>\n</code></pre><pre><code class=language-py>is_open = <span class=hljs-literal>True</span>\nis_open = <span class=hljs-literal>False</span>\n\nprint(<span class=hljs-number>5</span> <span class=hljs-keyword>or</span> is_open) <span class=hljs-comment># 5</span>\nprint(<span class=hljs-number>5</span> <span class=hljs-keyword>and</span> is_open) <span class=hljs-comment># False</span>\nprint(<span class=hljs-keyword>not</span> is_open) <span class=hljs-comment># True</span>\nprint(<span class=hljs-number>5</span> != is_open) <span class=hljs-comment># True</span>\n</code></pre></div><h3 id=string><div align=center>String</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> name = <span class=hljs-string>'Pepito'</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-string>`i am <span class=hljs-subst>${<span class=hljs-number>5</span>}</span> years old.`</span>) <span class=hljs-comment>// i am 5 years old.</span>\n<span class=hljs-built_in>console</span>.log(name.toUpperCase()) <span class=hljs-comment>// PEPITO</span>\n<span class=hljs-built_in>console</span>.log(name.length) <span class=hljs-comment>// 6</span>\n</code></pre><pre><code class=language-py>name = <span class=hljs-string>'Pepito'</span>\n\nprint(<span class=hljs-string>'i am {age} years old.'</span>.format(age=<span class=hljs-number>5</span>)) <span class=hljs-comment># i am 5 years old.</span>\nprint(name.upper()) <span class=hljs-comment># PEPITO</span>\nprint(len(name)) <span class=hljs-comment># 6</span>\n</code></pre></div><h3 id=number><div align=center>Number</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> height = <span class=hljs-number>5</span>\n<span class=hljs-keyword>var</span> width = <span class=hljs-number>2.5</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-keyword>typeof</span> height) <span class=hljs-comment>// number</span>\n</code></pre><pre><code class=language-py>height = <span class=hljs-number>5</span>\nwidth = <span class=hljs-number>2.5</span>\n\nprint(type(height)) <span class=hljs-comment># &#60class 'int'></span>\n</code></pre></div><h3 id=array---list><div align=center>Array - List</div></h3><p><code>List</code> en Python tiene algo llamado <code>comprehension</code>, <code>syntax sugar</code> para transformar valores de manera simple en una sola linea.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> numbers = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>, <span class=hljs-number>4</span>]\nnumbers = [...numbers.slice(<span class=hljs-number>0</span>, <span class=hljs-number>1</span>), ...[<span class=hljs-number>8</span>, <span class=hljs-number>9</span>], ...numbers.slice(<span class=hljs-number>4</span>)]\n\n<span class=hljs-built_in>console</span>.log(numbers) <span class=hljs-comment>// [1, 8, 9]</span>\n<span class=hljs-built_in>console</span>.log(numbers.slice(<span class=hljs-number>1</span>, <span class=hljs-number>3</span>)) <span class=hljs-comment>// [8, 9]</span>\n\n<span class=hljs-comment>// no hay algo como list comprehension en javascript</span>\nnumbers = numbers.filter(<span class=hljs-function><span class=hljs-params>x</span> =></span> x % <span class=hljs-number>2</span> === <span class=hljs-number>0</span>).map(<span class=hljs-function><span class=hljs-params>x</span> =></span> x ** <span class=hljs-number>2</span>)\n<span class=hljs-built_in>console</span>.log(numbers) <span class=hljs-comment>// [64]</span>\n</code></pre><pre><code class=language-py>numbers = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>, <span class=hljs-number>4</span>]\nnumbers[<span class=hljs-number>1</span>:<span class=hljs-number>4</span>] = [<span class=hljs-number>8</span>, <span class=hljs-number>9</span>]\n\nprint(numbers) <span class=hljs-comment># [1, 8, 9]</span>\nprint(numbers[<span class=hljs-number>1</span>:<span class=hljs-number>3</span>]) <span class=hljs-comment># [8, 9]</span>\n\n<span class=hljs-comment># list comprehension</span>\nnumbers = [x ** <span class=hljs-number>2</span> <span class=hljs-keyword>for</span> x <span class=hljs-keyword>in</span> numbers <span class=hljs-keyword>if</span> x % <span class=hljs-number>2</span> == <span class=hljs-number>0</span>]\nprint(numbers) <span class=hljs-comment># [64]</span>\n</code></pre></div><h3 id=set><div align=center>Set</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> animals = <span class=hljs-keyword>new</span> <span class=hljs-built_in>Set</span>([<span class=hljs-string>'cat'</span>, <span class=hljs-string>'dog'</span>])\n</code></pre><pre><code class=language-py>animals = {<span class=hljs-string>'cat'</span>, <span class=hljs-string>'dog'</span>}\n</code></pre></div><h3 id=object---dictionary><div align=center>Object - Dictionary</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> animals = {<span class=hljs-attr>cat</span>: <span class=hljs-string>'nyan'</span>, <span class=hljs-attr>dog</span>: <span class=hljs-string>'snuffles'</span>}\n<span class=hljs-built_in>console</span>.log(animals.fish ?? <span class=hljs-string>'N/A'</span>) <span class=hljs-comment>// N/A</span>\n<span class=hljs-keyword>delete</span> animals.cat\n\n<span class=hljs-comment>// object comprehension</span>\n<span class=hljs-keyword>var</span> foo = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>].filter(<span class=hljs-function><span class=hljs-params>x</span> =></span> x % <span class=hljs-number>2</span> === <span class=hljs-number>0</span>).reduce(<span class=hljs-function>(<span class=hljs-params>result, x</span>) =></span> ({...result, [x]: x ** <span class=hljs-number>2</span>}), {})\n<span class=hljs-built_in>console</span>.log(foo) <span class=hljs-comment>// {2: 4}</span>\n</code></pre><pre><code class=language-py>animals = {<span class=hljs-string>'cat'</span>: <span class=hljs-string>'nyan'</span>, <span class=hljs-string>'dog'</span>: <span class=hljs-string>'snuffles'</span>}\nprint(animals.get(<span class=hljs-string>'fish'</span>, <span class=hljs-string>'N/A'</span>)) <span class=hljs-comment># N/A</span>\n<span class=hljs-keyword>del</span> animals[<span class=hljs-string>'cat'</span>]\n\n<span class=hljs-comment># object comprehension</span>\nfoo = {x: x ** <span class=hljs-number>2</span> <span class=hljs-keyword>for</span> x <span class=hljs-keyword>in</span> [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>] <span class=hljs-keyword>if</span> x % <span class=hljs-number>2</span> == <span class=hljs-number>0</span>}\nprint(foo) <span class=hljs-comment># {2: 4}</span>\n</code></pre></div><h3 id=function><div align=center>Function</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>multiplyByTwo</span>(<span class=hljs-params>a, b = <span class=hljs-number>3</span>, ...args</span>) </span>{\n  <span class=hljs-comment>//</span>\n}\n</code></pre><pre><code class=language-py><span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>multiply_by_two</span><span class=hljs-params>(a, b = <span class=hljs-number>3</span>, *args)</span>:</span>\n  <span class=hljs-comment>#</span>\n\n</code></pre></div><h3 id=class><div align=center>Class</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-class><span class=hljs-keyword>class</span> <span class=hljs-title>Greeter</span> <span class=hljs-keyword>extends</span> <span class=hljs-title>BaseGreeter</span> </span>{\n  <span class=hljs-keyword>constructor</span>(name) {\n    <span class=hljs-keyword>this</span>.name = name\n  }\n  greet({ loud = <span class=hljs-literal>false</span> } = {}) {\n    <span class=hljs-keyword>if</span> (loud) {\n      <span class=hljs-built_in>console</span>.log(<span class=hljs-string>`HELLO <span class=hljs-subst>${<span class=hljs-keyword>this</span>.name.toUpperCase()}</span>!`</span>)\n    } <span class=hljs-keyword>else</span> {\n      <span class=hljs-built_in>console</span>.log(<span class=hljs-string>`Hello <span class=hljs-subst>${<span class=hljs-keyword>this</span>.name}</span>`</span>)\n    }\n  }\n}\n<span class=hljs-keyword>var</span> g = <span class=hljs-keyword>new</span> Greeter(<span class=hljs-string>'Fred'</span>)\ng.greet() <span class=hljs-comment>// Hello Fred</span>\ng.greet({<span class=hljs-attr>loud</span>: <span class=hljs-literal>true</span>}) <span class=hljs-comment>// HELLO FRED!</span>\n</code></pre><pre><code class=language-py><span class=hljs-class><span class=hljs-keyword>class</span> <span class=hljs-title>Greeter</span><span class=hljs-params>(BaseGreeter)</span>:</span>\n  greetCount = <span class=hljs-number>0</span>\n\n  <span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>__init__</span><span class=hljs-params>(self, name)</span>:</span>\n    self.name = name\n\n  <span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>greet</span><span class=hljs-params>(self, loud = False)</span>:</span>\n    self.greetCount += <span class=hljs-number>1</span>\n    <span class=hljs-keyword>if</span> loud:\n        print(<span class=hljs-string>'HELLO, %s!'</span> % self.name.upper())\n    <span class=hljs-keyword>else</span>:\n        print(<span class=hljs-string>'Hello, %s'</span> % self.name)\n\n\n\ng = Greeter(<span class=hljs-string>'Fred'</span>)\ng.greet() <span class=hljs-comment># Hello Fred</span>\ng.greet(loud=<span class=hljs-literal>True</span>) <span class=hljs-comment># HELLO FRED!</span>\n</code></pre></div><h3 id=control-flow><div align=center>Control Flow</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>if</span> (x > <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n} <span class=hljs-keyword>else</span> <span class=hljs-keyword>if</span> (x &#60 <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n} <span class=hljs-keyword>else</span> {\n  <span class=hljs-keyword>return</span> <span class=hljs-string>'zero'</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> value <span class=hljs-keyword>of</span> [<span class=hljs-string>'a'</span>, <span class=hljs-string>'b'</span>]) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> [index, value] <span class=hljs-keyword>of</span> [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>].entries()) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> [key, value] <span class=hljs-keyword>of</span> <span class=hljs-built_in>Object</span>.entries({<span class=hljs-attr>foo</span>: <span class=hljs-string>'bar'</span>})) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>while</span> (a &#60 <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n}\n</code></pre><pre><code class=language-py><span class=hljs-keyword>if</span> x > <span class=hljs-number>0</span>:\n  <span class=hljs-comment>#</span>\n<span class=hljs-keyword>elif</span> x &#60 <span class=hljs-number>0</span>:\n  <span class=hljs-comment>#</span>\n<span class=hljs-keyword>else</span>:\n  <span class=hljs-keyword>return</span> <span class=hljs-string>'zero'</span>\n\n\n<span class=hljs-keyword>for</span> value <span class=hljs-keyword>in</span> [<span class=hljs-string>'a'</span>, <span class=hljs-string>'b'</span>]:\n  <span class=hljs-comment>#</span>\n\n\n<span class=hljs-keyword>for</span> index, value <span class=hljs-keyword>in</span> enumerate([<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>]):\n  <span class=hljs-comment>#</span>\n\n\n<span class=hljs-keyword>for</span> key, value <span class=hljs-keyword>in</span> {<span class=hljs-string>'foo'</span>: <span class=hljs-string>'bar'</span>}.items():\n  <span class=hljs-comment>#</span>\n\n\n<span class=hljs-keyword>while</span> a &#60 <span class=hljs-number>0</span>:\n  <span class=hljs-comment>#</span>\n\n</code></pre></div><h3 id=null---none><div align=center>Null - None</div></h3><p>En Javascript tenemos <code>null</code> y <code>undefined</code>, en Python solo tenemos <code>None</code>.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-built_in>console</span>.log(<span class=hljs-literal>null</span>)\n<span class=hljs-built_in>console</span>.log(<span class=hljs-literal>undefined</span>)\n</code></pre><pre><code class=language-py>print(<span class=hljs-literal>None</span>)\n\n</code></pre></div><h3 id=modules><div align=center>Modules</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-comment>// project structure</span>\n<span class=hljs-comment>//</span>\n<span class=hljs-comment>// ├── project1</span>\n<span class=hljs-comment>// │   └── index.js</span>\n<span class=hljs-comment>// └── project2</span>\n<span class=hljs-comment>//     ├── main.js</span>\n<span class=hljs-comment>//     └── package1</span>\n<span class=hljs-comment>//         ├── index.js</span>\n<span class=hljs-comment>//         ├── module1.js</span>\n<span class=hljs-comment>//         └── subpackage1</span>\n<span class=hljs-comment>//             └── module2.js</span>\n\n<span class=hljs-comment>// project1/index.js</span>\n\n<span class=hljs-keyword>export</span> <span class=hljs-keyword>const</span> somethingMore = <span class=hljs-string>'...'</span>\n\n<span class=hljs-comment>// project2/main.js</span>\n\n<span class=hljs-keyword>import</span> os <span class=hljs-keyword>from</span> <span class=hljs-string>'os'</span> <span class=hljs-comment>// standard library import</span>\n<span class=hljs-keyword>import</span> {Flask} <span class=hljs-keyword>from</span> <span class=hljs-string>'flask'</span> <span class=hljs-comment>// third party import</span>\n<span class=hljs-keyword>import</span> * <span class=hljs-keyword>as</span> package1 <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1'</span> <span class=hljs-comment>// local application import</span>\n<span class=hljs-keyword>import</span> {something} <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1/subpackage1/module2.js'</span> <span class=hljs-comment>// absolute import</span>\n<span class=hljs-keyword>import</span> {somethingMore} <span class=hljs-keyword>from</span> <span class=hljs-string>'../project1'</span> <span class=hljs-comment>// relative import</span>\n<span class=hljs-keyword>import</span> * <span class=hljs-keyword>as</span> myModule <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1/module1.js'</span> <span class=hljs-comment>// aliasing import</span>\n</code></pre><pre><code class=language-py><span class=hljs-comment># project structure</span>\n<span class=hljs-comment>#</span>\n<span class=hljs-comment># ├── project1</span>\n<span class=hljs-comment># │   └── __init__.py</span>\n<span class=hljs-comment># └── project2</span>\n<span class=hljs-comment>#     ├── main.py</span>\n<span class=hljs-comment>#     └── package1</span>\n<span class=hljs-comment>#         ├── __init__.py</span>\n<span class=hljs-comment>#         ├── module1.py</span>\n<span class=hljs-comment>#         └── subpackage1</span>\n<span class=hljs-comment>#             └── module2.py</span>\n\n<span class=hljs-comment># project1/__init__.js</span>\n\nsomething_more = <span class=hljs-string>'...'</span>\n\n<span class=hljs-comment># project2/main.py</span>\n\n<span class=hljs-keyword>import</span> os <span class=hljs-comment># standard library import</span>\n<span class=hljs-keyword>from</span> flask <span class=hljs-keyword>import</span> Flask <span class=hljs-comment># third party import</span>\n<span class=hljs-keyword>import</span> package1 <span class=hljs-comment># local application import</span>\n<span class=hljs-keyword>from</span> package1.subpackage1.module2 <span class=hljs-keyword>import</span> something <span class=hljs-comment># absolute import</span>\n<span class=hljs-keyword>from</span> ..project1 <span class=hljs-keyword>import</span> something_more <span class=hljs-comment># relative import</span>\n<span class=hljs-keyword>import</span> package1.module1 <span class=hljs-keyword>as</span> my_module <span class=hljs-comment># aliasing import</span>\n</code></pre></div><h2 id=solo-en-python>Solo en Python</h2><p>Algunos features que tiene Python pero no Javascript.<h3 id=tuplas><div align=center>Tuplas</div></h3><p>Las tuplas son listas inmutables.<pre><code class=language-py>myTuple = (1, 2, 3)\n</code></pre><h2 id=referencias>Referencias</h2><ul><li><a href=https://cs231n.github.io/python-numpy-tutorial/ rel=nofollow target=_blank>https://cs231n.github.io/python-numpy-tutorial/</a><li><a href=https://realpython.com/lessons/python-naming-conventions/ rel=nofollow target=_blank>https://realpython.com/lessons/python-naming-conventions/</a><li><a href=https://dev.to/aveb/from-javascript-to-python-1b1m rel=nofollow target=_blank>https://dev.to/aveb/from-javascript-to-python-1b1m</a><li><a href=https://pypi.org/project/javascripthon/ rel=nofollow target=_blank>https://pypi.org/project/javascripthon/</a><li><a href=https://realpython.com/absolute-vs-relative-python-imports/ rel=nofollow target=_blank>https://realpython.com/absolute-vs-relative-python-imports/</a><li><a href=https://www.datacamp.com/community/data-science-cheatsheets rel=nofollow target=_blank>https://www.datacamp.com/community/data-science-cheatsheets</a></ul>"}
+module.exports = {"frontMatter":{"slug":"python-para-javascript-developers","fileName":"python-para-javascript-developers","readingTime":"☕️ 5 minutos de lectura","wordCount":996,"identifier":"blog-3","date":"23-04-2020","dateModified":"23-04-2020","formattedDate":"Abril 2020","imageCaption":"logo de python y javascript","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","title":"Python para Javascript developers","description":"Aprende Python si ya sabes JavaScript en menos de 5 minutos!'","tags":["python"],"keywords":["python","javascript","javascript developers","aprender python","aprender javascript"]},"bodyHtml":"<p>Guía para aprender Python si ya sabes Javascript, o si quieres aprender Javascript y sabes Python.<p>A la izquierda codigo Javascript y a su derecha el codigo equivalente en Python 🐍.<h2 id=diferencias-y-similitudes-entre-javascript-y-python>Diferencias y similitudes entre JavaScript y Python</h2><h3 id=asignacion-de-variables><div align=center>Asignacion de variables</div></h3><p>En python no necesitas ningun <code>keyword</code> (var, let, const) para declarar variables.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> name = <span class=hljs-string>'Pepe'</span>\n<span class=hljs-keyword>let</span> name = <span class=hljs-string>'Pepe'</span>\n<span class=hljs-keyword>const</span> name = <span class=hljs-string>'Pepe'</span>\n</code></pre><pre><code class=language-py>name = <span class=hljs-string>'Pepe'</span>\n\n\n</code></pre></div><h3 id=boolean><div align=center>Boolean</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> isOpen = <span class=hljs-literal>true</span>\nisOpen = <span class=hljs-literal>false</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> || isOpen) <span class=hljs-comment>// 5</span>\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> &#38&#38 isOpen) <span class=hljs-comment>// false</span>\n<span class=hljs-built_in>console</span>.log(!isOpen) <span class=hljs-comment>// true</span>\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> !== isOpen) <span class=hljs-comment>// true</span>\n</code></pre><pre><code class=language-py>is_open = <span class=hljs-literal>True</span>\nis_open = <span class=hljs-literal>False</span>\n\nprint(<span class=hljs-number>5</span> <span class=hljs-keyword>or</span> is_open) <span class=hljs-comment># 5</span>\nprint(<span class=hljs-number>5</span> <span class=hljs-keyword>and</span> is_open) <span class=hljs-comment># False</span>\nprint(<span class=hljs-keyword>not</span> is_open) <span class=hljs-comment># True</span>\nprint(<span class=hljs-number>5</span> != is_open) <span class=hljs-comment># True</span>\n</code></pre></div><h3 id=string><div align=center>String</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> name = <span class=hljs-string>'Pepito'</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-string>`i am <span class=hljs-subst>${<span class=hljs-number>5</span>}</span> years old.`</span>) <span class=hljs-comment>// i am 5 years old.</span>\n<span class=hljs-built_in>console</span>.log(name.toUpperCase()) <span class=hljs-comment>// PEPITO</span>\n<span class=hljs-built_in>console</span>.log(name.length) <span class=hljs-comment>// 6</span>\n</code></pre><pre><code class=language-py>name = <span class=hljs-string>'Pepito'</span>\n\nprint(<span class=hljs-string>'i am {age} years old.'</span>.format(age=<span class=hljs-number>5</span>)) <span class=hljs-comment># i am 5 years old.</span>\nprint(name.upper()) <span class=hljs-comment># PEPITO</span>\nprint(len(name)) <span class=hljs-comment># 6</span>\n</code></pre></div><h3 id=number><div align=center>Number</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> height = <span class=hljs-number>5</span>\n<span class=hljs-keyword>var</span> width = <span class=hljs-number>2.5</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-keyword>typeof</span> height) <span class=hljs-comment>// number</span>\n</code></pre><pre><code class=language-py>height = <span class=hljs-number>5</span>\nwidth = <span class=hljs-number>2.5</span>\n\nprint(type(height)) <span class=hljs-comment># &#60class 'int'></span>\n</code></pre></div><h3 id=array---list><div align=center>Array - List</div></h3><p><code>List</code> en Python tiene algo llamado <code>comprehension</code>, <code>syntax sugar</code> para transformar valores de manera simple en una sola linea.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> numbers = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>, <span class=hljs-number>4</span>]\nnumbers = [...numbers, <span class=hljs-number>5</span>]\nnumbers = [...numbers.slice(<span class=hljs-number>0</span>, <span class=hljs-number>1</span>), ...[<span class=hljs-number>8</span>, <span class=hljs-number>9</span>], ...numbers.slice(<span class=hljs-number>4</span>)]\n\n<span class=hljs-built_in>console</span>.log(numbers) <span class=hljs-comment>// [1, 8, 9, 5]</span>\n<span class=hljs-built_in>console</span>.log(numbers.slice(<span class=hljs-number>1</span>, <span class=hljs-number>3</span>)) <span class=hljs-comment>// [8, 9]</span>\n\n<span class=hljs-comment>// no hay algo como list comprehension en javascript</span>\nnumbers = numbers.filter(<span class=hljs-function><span class=hljs-params>x</span> =></span> x % <span class=hljs-number>2</span> === <span class=hljs-number>0</span>).map(<span class=hljs-function><span class=hljs-params>x</span> =></span> x ** <span class=hljs-number>2</span>)\n<span class=hljs-built_in>console</span>.log(numbers) <span class=hljs-comment>// [64]</span>\n</code></pre><pre><code class=language-py>numbers = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>, <span class=hljs-number>4</span>]\nnumbers = [*numbers, <span class=hljs-number>5</span>]\nnumbers[<span class=hljs-number>1</span>:<span class=hljs-number>4</span>] = [<span class=hljs-number>8</span>, <span class=hljs-number>9</span>]\n\nprint(numbers) <span class=hljs-comment># [1, 8, 9, 5]</span>\nprint(numbers[<span class=hljs-number>1</span>:<span class=hljs-number>3</span>]) <span class=hljs-comment># [8, 9]</span>\n\n<span class=hljs-comment># list comprehension</span>\nnumbers = [x ** <span class=hljs-number>2</span> <span class=hljs-keyword>for</span> x <span class=hljs-keyword>in</span> numbers <span class=hljs-keyword>if</span> x % <span class=hljs-number>2</span> == <span class=hljs-number>0</span>]\nprint(numbers) <span class=hljs-comment># [64]</span>\n</code></pre></div><h3 id=set><div align=center>Set</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> animals = <span class=hljs-keyword>new</span> <span class=hljs-built_in>Set</span>([<span class=hljs-string>'cat'</span>, <span class=hljs-string>'dog'</span>])\n</code></pre><pre><code class=language-py>animals = {<span class=hljs-string>'cat'</span>, <span class=hljs-string>'dog'</span>}\n</code></pre></div><h3 id=object---dictionary><div align=center>Object - Dictionary</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> animals = {<span class=hljs-attr>cat</span>: <span class=hljs-string>'nyan'</span>, <span class=hljs-attr>dog</span>: <span class=hljs-string>'snuffles'</span>}\n<span class=hljs-built_in>console</span>.log(animals.fish ?? <span class=hljs-string>'N/A'</span>) <span class=hljs-comment>// N/A</span>\n<span class=hljs-keyword>delete</span> animals.cat\n\n<span class=hljs-comment>// object comprehension</span>\n<span class=hljs-keyword>var</span> foo = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>].filter(<span class=hljs-function><span class=hljs-params>x</span> =></span> x % <span class=hljs-number>2</span> === <span class=hljs-number>0</span>).reduce(<span class=hljs-function>(<span class=hljs-params>result, x</span>) =></span> ({...result, [x]: x ** <span class=hljs-number>2</span>}), {})\n<span class=hljs-built_in>console</span>.log(foo) <span class=hljs-comment>// {2: 4}</span>\n</code></pre><pre><code class=language-py>animals = {<span class=hljs-string>'cat'</span>: <span class=hljs-string>'nyan'</span>, <span class=hljs-string>'dog'</span>: <span class=hljs-string>'snuffles'</span>}\nprint(animals.get(<span class=hljs-string>'fish'</span>, <span class=hljs-string>'N/A'</span>)) <span class=hljs-comment># N/A</span>\n<span class=hljs-keyword>del</span> animals[<span class=hljs-string>'cat'</span>]\n\n<span class=hljs-comment># object comprehension</span>\nfoo = {x: x ** <span class=hljs-number>2</span> <span class=hljs-keyword>for</span> x <span class=hljs-keyword>in</span> [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>] <span class=hljs-keyword>if</span> x % <span class=hljs-number>2</span> == <span class=hljs-number>0</span>}\nprint(foo) <span class=hljs-comment># {2: 4}</span>\n</code></pre></div><h3 id=function><div align=center>Function</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>multiplyByTwo</span>(<span class=hljs-params>a, b = <span class=hljs-number>3</span>, ...args</span>) </span>{\n  <span class=hljs-comment>//</span>\n}\n</code></pre><pre><code class=language-py><span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>multiply_by_two</span>(<span class=hljs-params>a, b = <span class=hljs-number>3</span>, *args</span>):</span>\n  <span class=hljs-comment>#</span>\n\n</code></pre></div><h3 id=class><div align=center>Class</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-class><span class=hljs-keyword>class</span> <span class=hljs-title>Greeter</span> <span class=hljs-keyword>extends</span> <span class=hljs-title>BaseGreeter</span> </span>{\n  <span class=hljs-keyword>constructor</span>(name) {\n    <span class=hljs-keyword>this</span>.name = name\n  }\n  greet({ loud = <span class=hljs-literal>false</span> } = {}) {\n    <span class=hljs-keyword>if</span> (loud) {\n      <span class=hljs-built_in>console</span>.log(<span class=hljs-string>`HELLO <span class=hljs-subst>${<span class=hljs-keyword>this</span>.name.toUpperCase()}</span>!`</span>)\n    } <span class=hljs-keyword>else</span> {\n      <span class=hljs-built_in>console</span>.log(<span class=hljs-string>`Hello <span class=hljs-subst>${<span class=hljs-keyword>this</span>.name}</span>`</span>)\n    }\n  }\n}\n<span class=hljs-keyword>var</span> g = <span class=hljs-keyword>new</span> Greeter(<span class=hljs-string>'Fred'</span>)\ng.greet() <span class=hljs-comment>// Hello Fred</span>\ng.greet({<span class=hljs-attr>loud</span>: <span class=hljs-literal>true</span>}) <span class=hljs-comment>// HELLO FRED!</span>\n</code></pre><pre><code class=language-py><span class=hljs-class><span class=hljs-keyword>class</span> <span class=hljs-title>Greeter</span>(<span class=hljs-params>BaseGreeter</span>):</span>\n  greetCount = <span class=hljs-number>0</span>\n\n  <span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>__init__</span>(<span class=hljs-params>self, name</span>):</span>\n    self.name = name\n\n  <span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>greet</span>(<span class=hljs-params>self, loud = False</span>):</span>\n    self.greetCount += <span class=hljs-number>1</span>\n    <span class=hljs-keyword>if</span> loud:\n        print(<span class=hljs-string>'HELLO, %s!'</span> % self.name.upper())\n    <span class=hljs-keyword>else</span>:\n        print(<span class=hljs-string>'Hello, %s'</span> % self.name)\n\n\n\ng = Greeter(<span class=hljs-string>'Fred'</span>)\ng.greet() <span class=hljs-comment># Hello Fred</span>\ng.greet(loud=<span class=hljs-literal>True</span>) <span class=hljs-comment># HELLO FRED!</span>\n</code></pre></div><h3 id=control-flow><div align=center>Control Flow</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>if</span> (x > <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n} <span class=hljs-keyword>else</span> <span class=hljs-keyword>if</span> (x &#60 <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n} <span class=hljs-keyword>else</span> {\n  <span class=hljs-keyword>return</span> <span class=hljs-string>'zero'</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> value <span class=hljs-keyword>of</span> [<span class=hljs-string>'a'</span>, <span class=hljs-string>'b'</span>]) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> [index, value] <span class=hljs-keyword>of</span> [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>].entries()) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> [key, value] <span class=hljs-keyword>of</span> <span class=hljs-built_in>Object</span>.entries({<span class=hljs-attr>foo</span>: <span class=hljs-string>'bar'</span>})) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>while</span> (a &#60 <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n}\n</code></pre><pre><code class=language-py><span class=hljs-keyword>if</span> x > <span class=hljs-number>0</span>:\n  <span class=hljs-comment>#</span>\n<span class=hljs-keyword>elif</span> x &#60 <span class=hljs-number>0</span>:\n  <span class=hljs-comment>#</span>\n<span class=hljs-keyword>else</span>:\n  <span class=hljs-keyword>return</span> <span class=hljs-string>'zero'</span>\n\n\n<span class=hljs-keyword>for</span> value <span class=hljs-keyword>in</span> [<span class=hljs-string>'a'</span>, <span class=hljs-string>'b'</span>]:\n  <span class=hljs-comment>#</span>\n\n\n<span class=hljs-keyword>for</span> index, value <span class=hljs-keyword>in</span> enumerate([<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>]):\n  <span class=hljs-comment>#</span>\n\n\n<span class=hljs-keyword>for</span> key, value <span class=hljs-keyword>in</span> {<span class=hljs-string>'foo'</span>: <span class=hljs-string>'bar'</span>}.items():\n  <span class=hljs-comment>#</span>\n\n\n<span class=hljs-keyword>while</span> a &#60 <span class=hljs-number>0</span>:\n  <span class=hljs-comment>#</span>\n\n</code></pre></div><h3 id=null---none><div align=center>Null - None</div></h3><p>En Javascript tenemos <code>null</code> y <code>undefined</code>, en Python solo tenemos <code>None</code>.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-built_in>console</span>.log(<span class=hljs-literal>null</span>)\n<span class=hljs-built_in>console</span>.log(<span class=hljs-literal>undefined</span>)\n</code></pre><pre><code class=language-py>print(<span class=hljs-literal>None</span>)\n\n</code></pre></div><h3 id=modules><div align=center>Modules</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-comment>// project structure</span>\n<span class=hljs-comment>//</span>\n<span class=hljs-comment>// ├── project1</span>\n<span class=hljs-comment>// │   └── index.js</span>\n<span class=hljs-comment>// └── project2</span>\n<span class=hljs-comment>//     ├── main.js</span>\n<span class=hljs-comment>//     └── package1</span>\n<span class=hljs-comment>//         ├── index.js</span>\n<span class=hljs-comment>//         ├── module1.js</span>\n<span class=hljs-comment>//         └── subpackage1</span>\n<span class=hljs-comment>//             └── module2.js</span>\n\n<span class=hljs-comment>// project1/index.js</span>\n\n<span class=hljs-keyword>export</span> <span class=hljs-keyword>const</span> somethingMore = <span class=hljs-string>'...'</span>\n\n<span class=hljs-comment>// project2/main.js</span>\n\n<span class=hljs-keyword>import</span> os <span class=hljs-keyword>from</span> <span class=hljs-string>'os'</span> <span class=hljs-comment>// standard library import</span>\n<span class=hljs-keyword>import</span> {Flask} <span class=hljs-keyword>from</span> <span class=hljs-string>'flask'</span> <span class=hljs-comment>// third party import</span>\n<span class=hljs-keyword>import</span> * <span class=hljs-keyword>as</span> package1 <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1'</span> <span class=hljs-comment>// relative import with alias</span>\n<span class=hljs-keyword>import</span> {something} <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1/subpackage1/module2.js'</span> <span class=hljs-comment>// relative import</span>\n<span class=hljs-keyword>import</span> {somethingMore} <span class=hljs-keyword>from</span> <span class=hljs-string>'../project1'</span> <span class=hljs-comment>// relative import</span>\n<span class=hljs-keyword>import</span> * <span class=hljs-keyword>as</span> myModule <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1/module1.js'</span> <span class=hljs-comment>// relative import with alias</span>\n</code></pre><pre><code class=language-py><span class=hljs-comment># project structure</span>\n<span class=hljs-comment>#</span>\n<span class=hljs-comment># ├── project1</span>\n<span class=hljs-comment># │   └── __init__.py</span>\n<span class=hljs-comment># └── project2</span>\n<span class=hljs-comment>#     ├── main.py</span>\n<span class=hljs-comment>#     └── package1</span>\n<span class=hljs-comment>#         ├── __init__.py</span>\n<span class=hljs-comment>#         ├── module1.py</span>\n<span class=hljs-comment>#         └── subpackage1</span>\n<span class=hljs-comment>#             └── module2.py</span>\n\n<span class=hljs-comment># project1/__init__.py</span>\n\nsomething_more = <span class=hljs-string>'...'</span>\n\n<span class=hljs-comment># project2/main.py</span>\n\n<span class=hljs-keyword>import</span> os <span class=hljs-comment># standard library import</span>\n<span class=hljs-keyword>from</span> flask <span class=hljs-keyword>import</span> Flask <span class=hljs-comment># third party import</span>\n<span class=hljs-keyword>import</span> package1 <span class=hljs-comment># local application import</span>\n<span class=hljs-keyword>from</span> package1.subpackage1.module2 <span class=hljs-keyword>import</span> something <span class=hljs-comment># absolute import</span>\n<span class=hljs-keyword>from</span> ..project1 <span class=hljs-keyword>import</span> something_more <span class=hljs-comment># relative import</span>\n<span class=hljs-keyword>import</span> package1.module1 <span class=hljs-keyword>as</span> my_module <span class=hljs-comment># aliasing import</span>\n</code></pre></div><h2 id=solo-en-python>Solo en Python</h2><p>Algunos features que tiene Python pero no Javascript.<h3 id=tuplas><div align=center>Tuplas</div></h3><p>Las tuplas son listas inmutables.<pre><code class=language-py>myTuple = (<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>)\n</code></pre><h2 id=referencias>Referencias</h2><ul><li><a href=https://cs231n.github.io/python-numpy-tutorial/ rel=nofollow target=_blank>https://cs231n.github.io/python-numpy-tutorial/</a><li><a href=https://realpython.com/lessons/python-naming-conventions/ rel=nofollow target=_blank>https://realpython.com/lessons/python-naming-conventions/</a><li><a href=https://dev.to/aveb/from-javascript-to-python-1b1m rel=nofollow target=_blank>https://dev.to/aveb/from-javascript-to-python-1b1m</a><li><a href=https://pypi.org/project/javascripthon/ rel=nofollow target=_blank>https://pypi.org/project/javascripthon/</a><li><a href=https://realpython.com/absolute-vs-relative-python-imports/ rel=nofollow target=_blank>https://realpython.com/absolute-vs-relative-python-imports/</a><li><a href=https://www.datacamp.com/community/data-science-cheatsheets rel=nofollow target=_blank>https://www.datacamp.com/community/data-science-cheatsheets</a></ul>"}
 
 /***/ }),
-/* 336 */
+/* 338 */
 /*!*********************************************************!*\
   !*** ../lib/loaders/markdown!../data/works/fixbrand.md ***!
   \*********************************************************/
@@ -13253,7 +13282,7 @@ module.exports = {"frontMatter":{"slug":"python-para-javascript-developers","fil
 module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readingTime":"☕️ 1 minuto de lectura","wordCount":183,"date":"21-12-2015","formattedDate":"Diciembre 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/fixbrand.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070206/wochap/hero/fixbrand.jpg","title":"Fixbrand","tasks":"Desarrollo landing page y panel de administración","role":"Full-stack developer","siteLink":"http://fixbrand.com/","description":"Fixbrand es una agencia creativa de marcas que apuesta por el trabajo estratégico, creativo y sostenido en el tiempo.","tags":["Full-stack","Laravel","Jquery","Stylus","Gulp","Freelance"]},"bodyHtml":"<h2 id=reto>Reto</h2><p>Realizar un sitio web gestionable, con animaciones entre paginas.<h2 id=solución>Solución</h2><p>Realize el panel de administracion con <a href=http://getbootstrap.com/ rel=nofollow target=_blank>Bootstrap</a> y <a href=https://laravel.com/ rel=nofollow target=_blank>Laravel</a>, y el landing page con <a href=https://jquery.com rel=nofollow target=_blank>Jquery</a>.<h3 id=tecnologías-destacadas>Tecnologías destacadas:</h3><ul><li><a href=https://css-tricks.com/snippets/css/a-guide-to-flexbox/ rel=nofollow target=_blank>CSS FlexBox</a></ul><h3 id=workflow>Workflow:</h3><ul><li><strong>PHP:</strong> <a href=https://laravel.com/ rel=nofollow target=_blank>Laravel</a>.<li><strong>HTML:</strong> <a href=https://laravel.com/docs/5.3/blade rel=nofollow target=_blank>Blade</a>.<li><strong>CSS:</strong> <a href=http://getbootstrap.com/ rel=nofollow target=_blank>Bootstrap</a>, <a href=http://stylus-lang.com/ rel=nofollow target=_blank>Stylus</a>, <a href=https://suitcss.github.io/ rel=nofollow target=_blank>SuitCSS</a>.<li><strong>JS:</strong> <a href=https://jquery.com/ rel=nofollow target=_blank>Jquery</a>.<li><strong>Build System:</strong> <a href=http://gulpjs.com/ rel=nofollow target=_blank>Gulp</a>, <a href=https://laravel.com/docs/5.3/elixir rel=nofollow target=_blank>Laravel elixir</a>.</ul><h3 id=logros>Logros:</h3><ul><li>Simular un <code>SPA</code> con <a href=https://jquery.com/ rel=nofollow target=_blank>Jquery</a>:</ul><div class=c-markdown-image-full><img alt=\"Portafolio del sitio web Fixbrand\"src=//res.cloudinary.com/wochap/image/upload/v1495070187/wochap/body/fixbrand-spa.gif></div><ul><li>Desarrollar 3 <code>CRUD</code> (portafolio, contacto, clientes), tanto en el <code>Back-end</code> como en el <code>Front-end</code>.<li>Subir una o varias imagenes al servidor haciendo uso de <code>AJAX</code>.</ul><h2 id=experiencia>Experiencia</h2><p>Como primer proyecto remoto, quede muy satisfecho, la experiencia de trabajar en pijamas es muy confortable aunque requiere de bastante <strong>disciplina</strong>."}
 
 /***/ }),
-/* 337 */
+/* 339 */
 /*!***************************************************************!*\
   !*** ../lib/loaders/markdown!../data/works/gean-marroquin.md ***!
   \***************************************************************/
@@ -13263,7 +13292,7 @@ module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readin
 module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroquin","readingTime":"☕️ 2 minutos de lectura","wordCount":335,"date":"12-01-2017","formattedDate":"Enero 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/gean-marroquin.png","title":"Gean Marroquin","source":"https://github.com/wochap/wochap.github.io","role":"Front-end developer","siteLink":"https://geanmarroquin.com/","description":"Mi sitio personal.","tags":["PWA","SPA","SSR","Unit testing","Offline first","Static web site","Javascript","SASS","Webpack","Personal"]},"bodyHtml":"<p>¿Cual es la mejor manera de aprender algo? poniendolo en practica, es por eso que me propuse a crear algo que me permitiera demostrar mis habilidades y a la vez practicar lo aprendido. Entre las cosas que queria demostrar:<ul><li><a href=\"https://www.youtube.com/watch?v=IIRj8DftkqE\"rel=nofollow target=_blank>Offline first</a>.<li><a href=\"https://www.youtube.com/watch?v=QH94CXVv3UE\"rel=nofollow target=_blank>Code splitting</a>.<li>TDD.<li>Manejo asincrono en javascript.</ul><h2 id=reto>Reto</h2><p>Crear mi sitio personal, sin un servidor para poder subirlo a <a href=https://pages.github.com/ rel=nofollow target=_blank>GH Pages</a>, y permitirme tener contenido dinamico (portafolio, blog) .<h2 id=solución>Solución</h2><p>Despues de investigar, y habiendome inspirado de proyectos que ya lograban lo que me proponia:<ul><li><a href=https://github.com/gatsbyjs/gatsby rel=nofollow target=_blank>Gatsby</a><li><a href=https://phenomic.io/ rel=nofollow target=_blank>Phenomic</a></ul><p>Llege a la conclusion que las mejores herramientas para este trabajo eran <a href=https://webpack.github.io/ rel=nofollow target=_blank>Webpack</a> con <a href=https://facebook.github.io/react/ rel=nofollow target=_blank>React</a> o <a href=https://vuejs.org/ rel=nofollow target=_blank>VueJS</a>, asi que realize demos con ambos frameworks para elegir cual era el mas conveniente:<ul><li><a href=https://github.com/wochap/vue-static-blog rel=nofollow target=_blank>vue-static-blog</a><li><a href=https://github.com/wochap/webpack-react-static-boilerplate/tree/redux rel=nofollow target=_blank>webpack-react-static-boilerplate</a></ul><p>Me decidi por <a href=https://facebook.github.io/react/ rel=nofollow target=_blank>React</a> porque no tenia un proyecto que mostrar con el, el <a href=https://assets.materialup.com/uploads/d8f0a829-a3ff-4174-ac7e-d8021904463b/attachment.jpg rel=nofollow target=_blank>diseño</a> lo encontre en <a href=https://site.uplabs.com/ rel=nofollow target=_blank>Up Labs</a>.<p>Con todo en orden, comenze por maquetar el diseño, luego cree las pruebas y los componentes; añadí la configuracion necesaria para pre renderizar (con <a href=https://github.com/markdalgleish/static-site-generator-webpack-plugin rel=nofollow target=_blank>static-site-generator-webpack-plugin</a>) las rutas de mi aplicacion, una vez que todo funcionaba añadi <a href=https://github.com/reactjs/redux rel=nofollow target=_blank>redux</a> y refactorize, y refactorize y ...ahora me encuentro añadiendo trabajos a mi portafolio y pronto articulos.<h2 id=tecnologías-destacadas>Tecnologías destacadas:</h2><ul><li><a href=https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API rel=nofollow target=_blank>Service worker</a><li><a href=https://es.wikipedia.org/wiki/JSONP rel=nofollow target=_blank>JSONP</a><li><a href=https://css-tricks.com/snippets/css/a-guide-to-flexbox/ rel=nofollow target=_blank>CSS FlexBox</a></ul><h2 id=workflow>Workflow:</h2><ul><li><strong>CSS:</strong> <a href=http://stylus-lang.com/ rel=nofollow target=_blank>SASS</a>, <a href=http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/ rel=nofollow target=_blank>BEMIT</a>, <a href=http://csswizardry.net/talks/2014/11/itcss-dafed.pdf rel=nofollow target=_blank>ITCSS</a>, <a href=https://github.com/wocss rel=nofollow target=_blank>WOCSS</a>.<li><strong>JS:</strong> <a href=https://facebook.github.io/react/ rel=nofollow target=_blank>React</a> + <a href=https://github.com/ReactTraining/react-router rel=nofollow target=_blank>React router v3</a> + <a href=http://redux.js.org/ rel=nofollow target=_blank>Redux</a>, <a href=http://www.2ality.com/2016/02/ecmascript-2017.html rel=nofollow target=_blank>ES2017</a>, <a href=http://eslint.org/ rel=nofollow target=_blank>ESLint</a>, <a href=https://facebook.github.io/jest/ rel=nofollow target=_blank>Jest</a> + <a href=https://github.com/airbnb/enzyme rel=nofollow target=_blank>Enzyme</a>, <a href=https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346 rel=nofollow target=_blank>by Route hierarchy</a>.<li><strong>Build System:</strong> <a href=https://webpack.github.io/ rel=nofollow target=_blank>Webpack</a> + <a href=https://babeljs.io/ rel=nofollow target=_blank>Babel</a> + <a href=https://github.com/wochap/wochap.github.io/tree/dev/build/webpack/loaders rel=nofollow target=_blank>custom-loaders</a> + <a href=https://github.com/GoogleChrome/sw-precache rel=nofollow target=_blank>sw-precache</a>.</ul><h2 id=logros>Logros:</h2><ul><li>Crear loaders propios en <a href=https://webpack.github.io/ rel=nofollow target=_blank>Webpack</a>.<li><strong>Optimistic updates</strong>.<li>El sitio no necesita cargar los scripts para que puedas navegar por el, gracias a que todas las paginas son generadas por <a href=https://webpack.github.io/ rel=nofollow target=_blank>Webpack</a> y <a href=https://facebook.github.io/react/ rel=nofollow target=_blank>React</a>.</ul>"}
 
 /***/ }),
-/* 338 */
+/* 340 */
 /*!************************************************************!*\
   !*** ../lib/loaders/markdown!../data/works/la-glorieta.md ***!
   \************************************************************/
@@ -13273,7 +13302,7 @@ module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroq
 module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","readingTime":"☕️ 2 minutos de lectura","wordCount":306,"date":"26-08-2015","formattedDate":"Agosto 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/la-glorieta.jpg","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070204/wochap/hero/la-glorieta.jpg","title":"La Glorieta","tasks":"Desarrollo de landing page","role":"Front-end developer","siteLink":"http://cmsreservas.noveltie.la","description":"La Glorieta es un restaurant representante de la culinaria tacneña en múltiples eventos y concursos.","tags":["Front-end","KnockoutJS","Jquery","Stylus","Laravel","Gulp","Noveltie"]},"bodyHtml":"<h2 id=reto>Reto</h2><p>Un sitio web que permitiera a sus clientes realizar reservas online, ademas de mostrar información de la misma, sus noticias y información de contacto.<h2 id=solución>Solución</h2><p>Como el sitio requeria de mucha manipulacion del <code>DOM</code>, aprendí y desarrolle el sitio con <a href=https://knockoutjs.com/ rel=nofollow target=_blank>KnockoutJS</a> y <a href=http://sammyjs.org/ rel=nofollow target=_blank>SammyJS</a> para manejar las rutas del catalogo.<h2 id=tecnologías-destacadas>Tecnologías destacadas:</h2><ul><li><a href=https://css-tricks.com/snippets/css/a-guide-to-flexbox/ rel=nofollow target=_blank>CSS FlexBox</a><li><a href=https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage rel=nofollow target=_blank>BROWSER LocalStorage</a></ul><h2 id=workflow>Workflow:</h2><ul><li><strong>HTML:</strong> <a href=https://laravel.com/docs/5.3/blade rel=nofollow target=_blank>Blade</a>.<li><strong>CSS:</strong> <a href=http://stylus-lang.com/ rel=nofollow target=_blank>Stylus</a>, <a href=https://suitcss.github.io/ rel=nofollow target=_blank>SuitCSS</a>.<li><strong>JS:</strong> <a href=http://knockoutjs.com/ rel=nofollow target=_blank>KnockoutJS</a> + <a href=https://jquery.com/ rel=nofollow target=_blank>Jquery</a>, <a href=https://babeljs.io/learn-es2015/ rel=nofollow target=_blank>ES2015</a>.<li><strong>Build System:</strong> <a href=http://gulpjs.com/ rel=nofollow target=_blank>Gulp</a>, <a href=https://laravel.com/docs/5.3/elixir rel=nofollow target=_blank>Laravel elixir</a>, <a href=http://browserify.org/ rel=nofollow target=_blank>Browserify</a>, <a href=https://babeljs.io/ rel=nofollow target=_blank>Babel</a>.</ul><h2 id=logros>Logros:</h2><ul><li>Desarrollar un carrito de compras con persistencia de datos, .</ul><p><img alt=\"Carrito de compras del sitio web La Glorieta\"src=//res.cloudinary.com/wochap/image/upload/v1495070180/wochap/body/glorieta-carrito.jpg><ul><li>Desarrollar un catalogo de items, con categorias, sub categorias, ademas de <strong>paginación</strong>, y <strong>busqueda</strong>. Los datos son consumidos por <code>AJAX</code>.</ul><div class=c-markdown-image-full><img alt=\"Catalogo de item del sitio web La Glorieta\"src=//res.cloudinary.com/wochap/image/upload/v1495070190/wochap/body/glorieta-catalogo.jpg></div><ul><li>Implementar calculos y actualizaciones del DOM complejas, un claro <strong>ejemplo</strong> es el formulario de proforma, en cada seccion la suma de cantidades debe ser igual al <code>numero de personas</code>.</ul><p><img alt=\"Formulario de reserva del sitio web La Glorieta\"src=//res.cloudinary.com/wochap/image/upload/v1495070186/wochap/body/glorieta-reserva.gif><ul><li>Aprender <a href=http://knockoutjs.com/ rel=nofollow target=_blank>KnockoutJS</a>.</ul><h2 id=experiencia>Experiencia</h2><p><strong>La Glorieta</strong> es el primer <strong>proyecto real</strong> (es decir ser usado por personas) que desarrollé, y no fue facil, cuando empeze el proyecto mis conocimientos llegaban a solo poder maquetar, pero al termino del mismo acabe aprendiendo <a href=http://knockoutjs.com/ rel=nofollow target=_blank>KnockoutJS</a>, aplique <code>POO</code> y entendi como funcionaba el <code>data-binding</code>.<p>Una de las mejores cosas al desarrollar el sitio, fue que como primer <code>Front-end developer</code> en <a href=https://noveltie.la/ rel=nofollow target=_blank>Noveltie</a> me confiaron todo el desarrollo <code>Front-end</code>."}
 
 /***/ }),
-/* 339 */
+/* 341 */
 /*!****************************************************************!*\
   !*** ../lib/loaders/markdown!../data/works/ricarica-travel.md ***!
   \****************************************************************/
@@ -13283,7 +13312,7 @@ module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","
 module.exports = {"frontMatter":{"slug":"ricarica-travel","fileName":"ricarica-travel","readingTime":"☕️ 2 minutos de lectura","wordCount":288,"date":"19-05-2016","formattedDate":"Mayo 2016","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/ricarica-travel.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070205/wochap/hero/ricarica-travel.jpg","title":"RicaRica Travel","role":"Front-end developer","siteLink":"http://ricaricatravel.com/","description":"RicaRica Travel es una agencia de turismo.","tags":["SPA","i18n","Front-end","VueJS","Jquery","SASS","Laravel","Webpack","Noveltie"]},"bodyHtml":"<h2 id=reto>Reto</h2><p>Desarrollar un <strong>SPA</strong> con <strong>i18n</strong>, <strong>carrito de compras</strong> y <strong>pasarela de pago</strong>.<h2 id=solución>Solución</h2><p><strong>RicaRica Travel</strong> (agencia de turismo) fue uno de los proyectos mas complejos (tanto el diseño como la funcionalidad) que me haya tocado realizar. El desarrollo se hizo bajo un marco de trabajo agil: <strong>Scrum</strong>.<p>Ya que el sitio requeria de mucha manipulacion del <code>DOM</code>, trabaje con <a href=https://vuejs.org/ rel=nofollow target=_blank>VueJS</a>. Para manejar los datos del carrito y formularios añadí <a href=https://github.com/vuejs/vuex rel=nofollow target=_blank>Vuex</a> y <a href=https://github.com/vuejs/vue-router rel=nofollow target=_blank>vue-router</a> para manejar las rutas.<h3 id=tecnologías-destacadas>Tecnologías destacadas:</h3><ul><li><a href=https://developer.mozilla.org/es/docs/Web/API/Fetch_API rel=nofollow target=_blank>Fetch</a><li><a href=https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage rel=nofollow target=_blank>LocalStorage</a><li><a href=https://developer.mozilla.org/es/docs/Web/CSS/Transiciones_de_CSS rel=nofollow target=_blank>CSS Transitions</a><li><a href=https://css-tricks.com/snippets/css/a-guide-to-flexbox/ rel=nofollow target=_blank>CSS FlexBox</a></ul><h3 id=workflow>Workflow:</h3><ul><li><strong>CSS:</strong> <a href=http://stylus-lang.com/ rel=nofollow target=_blank>SASS</a>, <a href=http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/ rel=nofollow target=_blank>BEMIT</a>, <a href=http://csswizardry.net/talks/2014/11/itcss-dafed.pdf rel=nofollow target=_blank>ITCSS</a>.<li><strong>JS:</strong> <a href=https://vuejs.org/ rel=nofollow target=_blank>VueJS</a> + <a href=https://github.com/vuejs/vue-router rel=nofollow target=_blank>vue-router</a> + <a href=https://github.com/vuejs/vuex/ rel=nofollow target=_blank>vuex</a>, <a href=https://jquery.com/ rel=nofollow target=_blank>Jquery</a>, <a href=https://babeljs.io/learn-es2015/ rel=nofollow target=_blank>ES2015</a>, <a href=http://eslint.org/ rel=nofollow target=_blank>ESLint</a>, <a href=https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346 rel=nofollow target=_blank>by Route hierarchy</a>.<li><strong>Build System:</strong> <a href=https://webpack.github.io/ rel=nofollow target=_blank>Webpack</a> + <a href=https://babeljs.io/ rel=nofollow target=_blank>Babel</a>.</ul><h3 id=logros>Logros:</h3><ul><li>Implementar <code>I18n</code> (internacionalización), mi primer proyecto multi idioma, logrado con <a href=https://github.com/vuejs/vuex/ rel=nofollow target=_blank>vuex</a>.</ul><p><img alt=\"RicaRica Travel i18n demo\"src=//res.cloudinary.com/wochap/image/upload/v1495070196/wochap/body/ricarica-travel-i18n.gif><ul><li>Crear un <code>SPA</code> (Single Page Application), hecho con <a href=https://github.com/vuejs/vue-router rel=nofollow target=_blank>vue-router</a>, las animaciones fueron hechas con <a href=http://v1.vuejs.org/guide/transitions.html#CSS-Transitions rel=nofollow target=_blank>CSS-Transitions</a>.</ul><p><img alt=\"RicaRica Travel spa demo\"src=//res.cloudinary.com/wochap/image/upload/v1495070194/wochap/body/ricarica-travel-spa.gif><ul><li>Pasarela de pagos.</ul><div class=c-markdown-image-full><img alt=\"RicaRica Travel pasarela de pago\"src=//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/ricarica-travel-payment.jpg></div><ul><li>Aprender <a href=https://vuejs.org/ rel=nofollow target=_blank>VueJS</a>.</ul><h2 id=experiencia>Experiencia</h2><p>Otro proyecto con grandes desafios, y una vez más... la complejidad de la aplicación me llevo a reemplazar <a href=http://knockoutjs.com/ rel=nofollow target=_blank>KnockoutJS</a> (framework actual que usaba), por uno mucho mas robusto: <a href=https://vuejs.org/ rel=nofollow target=_blank>VueJS</a> (luego de revisar <a href=https://facebook.github.io/react/ rel=nofollow target=_blank>React</a> y <a href=http://aurelia.io/ rel=nofollow target=_blank>Aurelia</a>).<p>Me decidi por <a href=https://vuejs.org/ rel=nofollow target=_blank>VueJS</a> ya que su curva de aprendizaje era bastante corta, llevaba todo lo que requeria, y ademas contaba con lo mejor de cada framework antes mencionados: <strong>componentes</strong>, <strong>directivas</strong>, <strong>data-binding</strong>."}
 
 /***/ }),
-/* 340 */
+/* 342 */
 /*!**********************************************************!*\
   !*** ../lib/loaders/markdown!../data/works/yilancorp.md ***!
   \**********************************************************/
@@ -13293,7 +13322,7 @@ module.exports = {"frontMatter":{"slug":"ricarica-travel","fileName":"ricarica-t
 module.exports = {"frontMatter":{"slug":"yilancorp","fileName":"yilancorp","readingTime":"☕️ 1 minuto de lectura","wordCount":164,"date":"10-01-2017","formattedDate":"Enero 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/yilancorp.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070203/wochap/hero/yilancorp.jpg","title":"Yilancorp","tasks":"Desarrollo de landing page.","role":"Front-end developer","siteLink":"http://yilancorp.com/","description":"Yilancorp es una empresa que ofrece productos y servicios: inpeccion de mercaderías, contizaciones y verificacion de fabricas.","tags":["Front-end","Jquery","SASS","Webpack","Freelance"]},"bodyHtml":"<h2 id=resumen>Resumen</h2><p>Gracias a la experiencia con anteriores proyectos, fue facil desarrollar el sitio, haciendo uso de mi framework personal <a href=https://github.com/wocss rel=nofollow target=_blank>wocss</a> (inspirado en <a href=https://github.com/inuitcss rel=nofollow target=_blank>InuitCSS</a>) y <a href=https://jquery.com/ rel=nofollow target=_blank>Jquery</a>, para las animaciones use <a href=http://velocityjs.org/ rel=nofollow target=_blank>VelocityJS</a>, tambien hize uso de <a href=http://materializecss.com/scrollspy.html rel=nofollow target=_blank>Scrollspy</a> (modulo de <a href=http://materializecss.com/ rel=nofollow target=_blank>MaterializeCSS</a>), tuve que modificarlo para que funcionara con un diferente <code>scroll container</code>.<h2 id=tecnologías-destacadas>Tecnologías destacadas:</h2><ul><li><a href=https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API rel=nofollow target=_blank>Service worker</a><li><a href=https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS rel=nofollow target=_blank>CSS Animations</a><li><a href=https://es.wikipedia.org/wiki/JSONP rel=nofollow target=_blank>JSONP</a></ul><div class=c-markdown-image-full><img alt=\"JSONP demo\"src=//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/yilancorp-services.gif></div><ul><li><a href=https://css-tricks.com/snippets/css/a-guide-to-flexbox/ rel=nofollow target=_blank>CSS FlexBox</a></ul><h2 id=workflow>Workflow:</h2><ul><li><strong>CSS:</strong> <a href=http://stylus-lang.com/ rel=nofollow target=_blank>SASS</a>, <a href=http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/ rel=nofollow target=_blank>BEMIT</a>, <a href=http://csswizardry.net/talks/2014/11/itcss-dafed.pdf rel=nofollow target=_blank>ITCSS</a>, <a href=https://github.com/wocss rel=nofollow target=_blank>WOCSS</a>.<li><strong>JS:</strong> <a href=https://jquery.com/ rel=nofollow target=_blank>Jquery</a>, <a href=https://babeljs.io/learn-es2015/ rel=nofollow target=_blank>ES2015</a>, <a href=http://eslint.org/ rel=nofollow target=_blank>ESLint</a>.<li><strong>Build System:</strong> <a href=https://webpack.github.io/ rel=nofollow target=_blank>Webpack</a> + <a href=https://babeljs.io/ rel=nofollow target=_blank>Babel</a> + <a href=https://github.com/wochap/wochap.github.io/tree/dev/build/webpack/loaders rel=nofollow target=_blank>custom-loaders</a>.</ul><h2 id=logros>Logros:</h2><ul><li>Personalizar el plugin <a href=http://materializecss.com/scrollspy.html rel=nofollow target=_blank>Scrollspy</a> de <a href=http://materializecss.com/ rel=nofollow target=_blank>MaterializeCSS</a>, para que funcionase con un diferente <code>scroll container</code>.<li><code>Fancy animations</code>.</ul>"}
 
 /***/ }),
-/* 341 */
+/* 343 */
 /*!****************************************************************!*\
   !*** ../data/posts sync !../lib/loaders/front-matter.js \.md$ ***!
   \****************************************************************/
@@ -13301,9 +13330,10 @@ module.exports = {"frontMatter":{"slug":"yilancorp","fileName":"yilancorp","read
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./como-mejorar-el-posicionamiento-seo-de-tu-sitio-web.md": 342,
-	"./configurar-webpack-5.md": 343,
-	"./python-para-javascript-developers.md": 344
+	"./como-mejorar-el-posicionamiento-seo-de-tu-sitio-web.md": 344,
+	"./configurar-webpack-5.md": 345,
+	"./dart-para-javascript-developers.md": 346,
+	"./python-para-javascript-developers.md": 347
 };
 
 
@@ -13324,10 +13354,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 341;
+webpackContext.id = 343;
 
 /***/ }),
-/* 342 */
+/* 344 */
 /*!***********************************************************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/posts/como-mejorar-el-posicionamiento-seo-de-tu-sitio-web.md ***!
   \***********************************************************************************************************/
@@ -13337,7 +13367,7 @@ webpackContext.id = 341;
 module.exports = {"frontMatter":{"slug":"como-mejorar-el-posicionamiento-seo-de-tu-sitio-web","fileName":"como-mejorar-el-posicionamiento-seo-de-tu-sitio-web","readingTime":"☕️ 5 minutos de lectura","wordCount":947,"identifier":"blog-2","date":"15-04-2020","dateModified":"15-04-2020","formattedDate":"Abril 2020","imageCaption":"SEO posicionamiento en buscadores","imageUrl":"https://res.cloudinary.com/wochap/image/upload/v1586982279/wochap/hero/seo.webp","heroImageUrl":"https://res.cloudinary.com/wochap/image/upload/v1586982279/wochap/hero/seo.webp","title":"¿Comó mejorar el posicionamiento SEO de tu sitio web?","description":"Aprende a mejorar el posicionamiento orgánico (SEO) de tu sitio web con las mejores practicas, ¡Hazlo ahora 😄!","tags":["seo"],"keywords":["seo","posicionamiento web","posicionamiento seo","posicionamiento organico"]}}
 
 /***/ }),
-/* 343 */
+/* 345 */
 /*!****************************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/posts/configurar-webpack-5.md ***!
   \****************************************************************************/
@@ -13347,17 +13377,27 @@ module.exports = {"frontMatter":{"slug":"como-mejorar-el-posicionamiento-seo-de-
 module.exports = {"frontMatter":{"slug":"configurar-webpack-5","fileName":"configurar-webpack-5","readingTime":"☕️ 7 minutos de lectura","wordCount":1337,"identifier":"blog-1","date":"09-04-2020","dateModified":"12-04-2020","formattedDate":"Abril 2020","imageCaption":"webpack","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1586536747/wochap/hero/configurando_webpack.png","title":"Configurar webpack 5","description":"Aprende a configurar webpack 5 con babel, ¡Actualizate Aquí Ahora!","tags":["webpack","babel"],"keywords":["webpack","webpack 5","babel","webpack-dev-server"]}}
 
 /***/ }),
-/* 344 */
+/* 346 */
+/*!***************************************************************************************!*\
+  !*** ../lib/loaders/front-matter.js!../data/posts/dart-para-javascript-developers.md ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {"frontMatter":{"slug":"dart-para-javascript-developers","fileName":"dart-para-javascript-developers","readingTime":"☕️ 7 minutos de lectura","wordCount":1334,"identifier":"blog-4","date":"24-04-2020","dateModified":"24-04-2020","formattedDate":"Abril 2020","imageCaption":"logo de dart y javascript","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1587759087/wochap/hero/js-dart.webp","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1587759087/wochap/hero/js-dart.webp","title":"Dart para Javascript developers","description":"Aprende Dart si ya sabes JavaScript en menos de 8 minutos!'","tags":["dart"],"keywords":["dart","aprender dart"]}}
+
+/***/ }),
+/* 347 */
 /*!*****************************************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/posts/python-para-javascript-developers.md ***!
   \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"frontMatter":{"slug":"python-para-javascript-developers","fileName":"python-para-javascript-developers","readingTime":"☕️ 5 minutos de lectura","wordCount":983,"identifier":"blog-3","date":"23-04-2020","dateModified":"23-04-2020","formattedDate":"Abril 2020","imageCaption":"logo de python y javascript","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","title":"Python para Javascript developers","description":"Aprende Python si ya sabes JavaScript en menos de 5 minutos!'","tags":["python"],"keywords":["python","javascript","javascript developers","aprender python","aprender javascript"]}}
+module.exports = {"frontMatter":{"slug":"python-para-javascript-developers","fileName":"python-para-javascript-developers","readingTime":"☕️ 5 minutos de lectura","wordCount":996,"identifier":"blog-3","date":"23-04-2020","dateModified":"23-04-2020","formattedDate":"Abril 2020","imageCaption":"logo de python y javascript","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","title":"Python para Javascript developers","description":"Aprende Python si ya sabes JavaScript en menos de 5 minutos!'","tags":["python"],"keywords":["python","javascript","javascript developers","aprender python","aprender javascript"]}}
 
 /***/ }),
-/* 345 */
+/* 348 */
 /*!****************************************************************!*\
   !*** ../data/works sync !../lib/loaders/front-matter.js \.md$ ***!
   \****************************************************************/
@@ -13365,11 +13405,11 @@ module.exports = {"frontMatter":{"slug":"python-para-javascript-developers","fil
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./fixbrand.md": 346,
-	"./gean-marroquin.md": 347,
-	"./la-glorieta.md": 348,
-	"./ricarica-travel.md": 349,
-	"./yilancorp.md": 350
+	"./fixbrand.md": 349,
+	"./gean-marroquin.md": 350,
+	"./la-glorieta.md": 351,
+	"./ricarica-travel.md": 352,
+	"./yilancorp.md": 353
 };
 
 
@@ -13390,10 +13430,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 345;
+webpackContext.id = 348;
 
 /***/ }),
-/* 346 */
+/* 349 */
 /*!****************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/fixbrand.md ***!
   \****************************************************************/
@@ -13403,7 +13443,7 @@ webpackContext.id = 345;
 module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readingTime":"☕️ 1 minuto de lectura","wordCount":183,"date":"21-12-2015","formattedDate":"Diciembre 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/fixbrand.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070206/wochap/hero/fixbrand.jpg","title":"Fixbrand","tasks":"Desarrollo landing page y panel de administración","role":"Full-stack developer","siteLink":"http://fixbrand.com/","description":"Fixbrand es una agencia creativa de marcas que apuesta por el trabajo estratégico, creativo y sostenido en el tiempo.","tags":["Full-stack","Laravel","Jquery","Stylus","Gulp","Freelance"]}}
 
 /***/ }),
-/* 347 */
+/* 350 */
 /*!**********************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/gean-marroquin.md ***!
   \**********************************************************************/
@@ -13413,7 +13453,7 @@ module.exports = {"frontMatter":{"slug":"fixbrand","fileName":"fixbrand","readin
 module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroquin","readingTime":"☕️ 2 minutos de lectura","wordCount":335,"date":"12-01-2017","formattedDate":"Enero 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/gean-marroquin.png","title":"Gean Marroquin","source":"https://github.com/wochap/wochap.github.io","role":"Front-end developer","siteLink":"https://geanmarroquin.com/","description":"Mi sitio personal.","tags":["PWA","SPA","SSR","Unit testing","Offline first","Static web site","Javascript","SASS","Webpack","Personal"]}}
 
 /***/ }),
-/* 348 */
+/* 351 */
 /*!*******************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/la-glorieta.md ***!
   \*******************************************************************/
@@ -13423,7 +13463,7 @@ module.exports = {"frontMatter":{"slug":"gean-marroquin","fileName":"gean-marroq
 module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","readingTime":"☕️ 2 minutos de lectura","wordCount":306,"date":"26-08-2015","formattedDate":"Agosto 2015","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070100/works/la-glorieta.jpg","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070204/wochap/hero/la-glorieta.jpg","title":"La Glorieta","tasks":"Desarrollo de landing page","role":"Front-end developer","siteLink":"http://cmsreservas.noveltie.la","description":"La Glorieta es un restaurant representante de la culinaria tacneña en múltiples eventos y concursos.","tags":["Front-end","KnockoutJS","Jquery","Stylus","Laravel","Gulp","Noveltie"]}}
 
 /***/ }),
-/* 349 */
+/* 352 */
 /*!***********************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/ricarica-travel.md ***!
   \***********************************************************************/
@@ -13433,7 +13473,7 @@ module.exports = {"frontMatter":{"slug":"la-glorieta","fileName":"la-glorieta","
 module.exports = {"frontMatter":{"slug":"ricarica-travel","fileName":"ricarica-travel","readingTime":"☕️ 2 minutos de lectura","wordCount":288,"date":"19-05-2016","formattedDate":"Mayo 2016","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/ricarica-travel.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070205/wochap/hero/ricarica-travel.jpg","title":"RicaRica Travel","role":"Front-end developer","siteLink":"http://ricaricatravel.com/","description":"RicaRica Travel es una agencia de turismo.","tags":["SPA","i18n","Front-end","VueJS","Jquery","SASS","Laravel","Webpack","Noveltie"]}}
 
 /***/ }),
-/* 350 */
+/* 353 */
 /*!*****************************************************************!*\
   !*** ../lib/loaders/front-matter.js!../data/works/yilancorp.md ***!
   \*****************************************************************/
