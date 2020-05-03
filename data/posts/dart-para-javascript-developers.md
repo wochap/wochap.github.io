@@ -21,7 +21,15 @@ A la izquierda codigo Javascript y a su derecha el codigo "posiblemente" equival
 
 ## Diferencias y similitudes entre JavaScript y Dart
 
-Para empezar, Dart es tipado.
+Para empezar, Dart es tipado y tu codigo de arranque debe encontrarse dentro de una funcion `main`.
+
+```dart
+main() {
+  print('hello world');
+}
+```
+
+En los siguientes ejemplos voy a obviar poner codigo dentro de la funcion `main`.
 
 ### <div align="center">Asignacion de variables</div>
 
@@ -53,7 +61,7 @@ const String name = 'Pepe'; // no puede ser reasignado, su valor es resuelta en 
 
 ### <div align="center">Boolean</div>
 
-**NOTA:** en Dart los operadores logicos `&&` `||` `!` solo pueden ser aplicados con valores `boolean` y las expresiones creadas con esos operadores logicos no devuelven el ultimo valor encontrado como sucede en JavaScript.
+**IMPORTANTE:** en Dart los operadores logicos `&&` `||` `!` solo pueden ser aplicados con valores `boolean` y las expresiones creadas con esos operadores logicos no devuelven el ultimo valor encontrado como sucede en JavaScript.
 
 <div class="c-markdown-code-compare">
 
@@ -144,6 +152,10 @@ console.log(numbers.slice(1, 3)) // [8, 9]
 // no hay algo como list comprehension en javascript
 numbers = numbers.filter(x => x % 2 === 0).map(x => x ** 2)
 console.log(numbers) // [64]
+
+// destructuring assignment
+const [n] = numbers
+console.log(n)
 ```
 
 ```dart
@@ -159,11 +171,17 @@ print(numbers.sublist(1, 3)); // [8, 9]
 // list comprehension
 numbers = [for (var x in numbers) if (x % 2 == 0) pow(x, 2)];
 print(numbers); // [64]
+
+
+
+
 ```
 
 </div>
 
 ### <div align="center">Set</div>
+
+Es como `List` pero desordenada y no tiene elementos duplicados.
 
 <div class="c-markdown-code-compare">
 
@@ -188,7 +206,7 @@ var animals = {cat: 'nyan', dog: 'snuffles'}
 console.log(animals.fish ?? 'N/A') // N/A
 delete animals.cat
 
-// object comprehension
+// no hay algo como object comprehension en javascript
 var foo = [1, 2, 3].filter(x => x % 2 === 0).reduce((result, x) => ({...result, [x]: x ** 2}), {})
 console.log(foo) // {2: 4}
 ```
@@ -235,50 +253,6 @@ int sum2(int a, {int b = 3, int c = 1}) { // parametros opcionales nombrados b y
 
 sum(5, 3); // 9
 sum2(5, c: 2, b: 8); // 15
-```
-
-</div>
-
-### <div align="center">Class</div>
-
-<div class="c-markdown-code-compare">
-
-```js
-class Greeter extends BaseGreeter {
-  constructor(name) {
-    this.name = name
-  }
-
-  greet({ loud = false } = {}) {
-    if (loud) {
-      console.log(`HELLO ${this.name.toUpperCase()}!`)
-    } else {
-      console.log(`Hello ${this.name}`)
-    }
-  }
-}
-var g = new Greeter('Fred')
-g.greet() // Hello Fred
-g.greet({loud: true}) // HELLO FRED!
-```
-
-```dart
-class Greeter extends BaseGreeter {
-  String name;
-
-  Greeter(this.name); // sugar syntax para `this.name = name`
-
-  void greet({ loud = false }) {
-    if (loud) {
-      print('HELLO ${name.toUpperCase()}!');
-    } else {
-      print('Hello ${name}');
-    }
-  }
-}
-Greeter g = Greeter('Fred');
-g.greet(); // Hello Fred
-g.greet(loud: true); // HELLO FRED!
 ```
 
 </div>
@@ -337,6 +311,56 @@ for (String value in ['a', 'b']) {
 while (a < 0) {
   //
 }
+```
+
+</div>
+
+### <div align="center">Class</div>
+
+<div class="c-markdown-code-compare">
+
+```js
+class Greeter extends BaseGreeter {
+  greetCount = 0
+
+  constructor(name) {
+    this.name = name
+  }
+  greet({ loud = false } = {}) {
+    this.greetCount += 1
+    if (loud) {
+      console.log(`HELLO ${this.name.toUpperCase()}!`)
+    } else {
+      console.log(`Hello ${this.name}`)
+    }
+  }
+}
+var g = new Greeter('Fred')
+g.greet() // Hello Fred
+g.greet({loud: true}) // HELLO FRED!
+console.log(g.greetCount) // 2
+```
+
+```dart
+class Greeter extends BaseGreeter {
+  int greetCount = 0;
+  String name;
+
+  Greeter(this.name); // sugar syntax para `this.name = name`
+
+  void greet({ loud = false }) {
+    greetCount += 1;
+    if (loud) {
+      print('HELLO ${name.toUpperCase()}!');
+    } else {
+      print('Hello ${name}');
+    }
+  }
+}
+Greeter g = Greeter('Fred');
+g.greet(); // Hello Fred
+g.greet(loud: true); // HELLO FRED!
+print(g.greetCount); // 2
 ```
 
 </div>
