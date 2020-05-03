@@ -20,9 +20,11 @@ keywords:
 
 Guía para aprender Python si ya sabes Javascript, o si quieres aprender Javascript y sabes Python.
 
-A la izquierda codigo Javascript y a su derecha el codigo equivalente en Python 🐍.
+A la izquierda codigo Javascript y a su derecha el codigo "equivalente" en Python 🐍.
 
 ## Diferencias y similitudes entre JavaScript y Python
+
+Una de las primeras diferencias es que los nombres de variables y funciones en Python se escriben en `snake_case`, en Javascript usamos `camelCase`.
 
 ### <div align="center">Asignacion de variables</div>
 
@@ -78,6 +80,7 @@ print(5 != is_open) # True
 var name = 'Pepito'
 
 console.log(`i am ${5} years old.`) // i am 5 years old.
+
 console.log(name.toUpperCase()) // PEPITO
 console.log(name.length) // 6
 ```
@@ -85,6 +88,7 @@ console.log(name.length) // 6
 ```py
 name = 'Pepito'
 
+print(f'i am {5} years old.') # i am 5 years old.
 print('i am {age} years old.'.format(age=5)) # i am 5 years old.
 print(name.upper()) # PEPITO
 print(len(name)) # 6
@@ -101,6 +105,7 @@ var height = 5
 var width = 2.5
 
 console.log(typeof height) // number
+console.log(typeof height === 'number') // true
 ```
 
 ```py
@@ -108,13 +113,14 @@ height = 5
 width = 2.5
 
 print(type(height)) # <class 'int'>
+print(type(height) is int) # True
 ```
 
 </div>
 
 ### <div align="center">Array - List</div>
 
-`List` en Python tiene algo llamado `comprehension`, `syntax sugar` para transformar valores de manera simple en una sola linea.
+`List` en Python tiene algo llamado `comprehension`, `syntax sugar` para transformar valores de manera simple en una sola linea, Javascript no cuenta con `comprehension`.
 
 <div class="c-markdown-code-compare">
 
@@ -129,6 +135,10 @@ console.log(numbers.slice(1, 3)) // [8, 9]
 // no hay algo como list comprehension en javascript
 numbers = numbers.filter(x => x % 2 === 0).map(x => x ** 2)
 console.log(numbers) // [64]
+
+// destructuring assignment
+const [n] = numbers
+console.log(n)
 ```
 
 ```py
@@ -142,19 +152,27 @@ print(numbers[1:3]) # [8, 9]
 # list comprehension
 numbers = [x ** 2 for x in numbers if x % 2 == 0]
 print(numbers) # [64]
+
+# destructuring assignment
+[n] = numbers
+print(n)
 ```
 
 </div>
 
 ### <div align="center">Set</div>
 
+Es como `List` pero desordenada y no tiene elementos duplicados.
+
 <div class="c-markdown-code-compare">
 
 ```js
 var animals = new Set(['cat', 'dog'])
+
 ```
 
 ```py
+animals = set(['cat', 'dog'])
 animals = {'cat', 'dog'}
 ```
 
@@ -169,7 +187,7 @@ var animals = {cat: 'nyan', dog: 'snuffles'}
 console.log(animals.fish ?? 'N/A') // N/A
 delete animals.cat
 
-// object comprehension
+// no hay algo como object comprehension en javascript
 var foo = [1, 2, 3].filter(x => x % 2 === 0).reduce((result, x) => ({...result, [x]: x ** 2}), {})
 console.log(foo) // {2: 4}
 ```
@@ -194,57 +212,26 @@ print(foo) # {2: 4}
 function multiplyByTwo(a, b = 3, ...args) {
   //
 }
+
+function sum(a, {b = 3, c = 1} = {}) {
+  console.log(a + b + c)
+}
+
+sum(5, 3) // 9
+sum2(5, {c: 2, b: 8}) // 15
 ```
 
 ```py
 def multiply_by_two(a, b = 3, *args):
   #
 
-```
 
-</div>
-
-### <div align="center">Class</div>
-
-<div class="c-markdown-code-compare">
-
-```js
-class Greeter extends BaseGreeter {
-  constructor(name) {
-    this.name = name
-  }
-  greet({ loud = false } = {}) {
-    if (loud) {
-      console.log(`HELLO ${this.name.toUpperCase()}!`)
-    } else {
-      console.log(`Hello ${this.name}`)
-    }
-  }
-}
-var g = new Greeter('Fred')
-g.greet() // Hello Fred
-g.greet({loud: true}) // HELLO FRED!
-```
-
-```py
-class Greeter(BaseGreeter):
-  greetCount = 0
-
-  def __init__(self, name):
-    self.name = name
-
-  def greet(self, loud = False):
-    self.greetCount += 1
-    if loud:
-        print('HELLO, %s!' % self.name.upper())
-    else:
-        print('Hello, %s' % self.name)
+def sum(a, b = 3, c = 1):
+  print(a + b + c)
 
 
-
-g = Greeter('Fred')
-g.greet() # Hello Fred
-g.greet(loud=True) # HELLO FRED!
+sum(5, 3) # 9
+sum(5, c = 2, b = 8) # 15
 ```
 
 </div>
@@ -307,6 +294,56 @@ while a < 0:
 
 </div>
 
+### <div align="center">Class</div>
+
+<div class="c-markdown-code-compare">
+
+```js
+class Greeter extends BaseGreeter {
+  greetCount = 0
+
+  constructor(name) {
+    this.name = name
+  }
+  greet({ loud = false } = {}) {
+    this.greetCount += 1
+    if (loud) {
+      console.log(`HELLO ${this.name.toUpperCase()}!`)
+    } else {
+      console.log(`Hello ${this.name}`)
+    }
+  }
+}
+var g = new Greeter('Fred')
+g.greet() // Hello Fred
+g.greet({loud: true}) // HELLO FRED!
+console.log(g.greetCount) // 2
+```
+
+```py
+class Greeter(BaseGreeter):
+  greetCount = 0
+
+  def __init__(self, name):
+    self.name = name
+
+  def greet(self, loud = False):
+    self.greetCount += 1
+    if loud:
+        print('HELLO, %s!' % self.name.upper())
+    else:
+        print('Hello, %s' % self.name)
+
+
+
+g = Greeter('Fred')
+g.greet() # Hello Fred
+g.greet(loud=True) # HELLO FRED!
+print(g.greetCount) # 2
+```
+
+</div>
+
 ### <div align="center">Null - None</div>
 
 En Javascript tenemos `null` y `undefined`, en Python solo tenemos `None`.
@@ -326,6 +363,8 @@ print(None)
 </div>
 
 ### <div align="center">Modules</div>
+
+En Javascript para exportar algo de un modulo, lo haces usando el keyword `export` o `export default`, en Python no necesitas hacer nada.
 
 <div class="c-markdown-code-compare">
 
@@ -380,7 +419,7 @@ from flask import Flask # third party import
 import package1 # local application import
 from package1.subpackage1.module2 import something # absolute import
 from ..project1 import something_more # relative import
-import package1.module1 as my_module # aliasing import
+import package1.module1 as my_module # relative import with alias
 ```
 
 </div>
@@ -389,9 +428,9 @@ import package1.module1 as my_module # aliasing import
 
 Algunos features que tiene Python pero no Javascript.
 
-### <div align="center">Tuplas</div>
+### <div align="center">Tuple</div>
 
-Las tuplas son listas inmutables.
+Es como `List` pero inmutable.
 
 ```py
 myTuple = (1, 2, 3)
