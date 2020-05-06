@@ -7,8 +7,6 @@ Personal website powered by [React](https://facebook.github.io/react/) and [Webp
 
 ## Quick start
 
-**IMPORTANT** Rename `.env.example` to `.env`. Then:
-
 ```sh
 # install dependencies
 $ yarn
