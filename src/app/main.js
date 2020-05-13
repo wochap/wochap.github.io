@@ -16,6 +16,10 @@ const history = createBrowserHistory()
 const store = configureStore(initialState, history)
 const renderStrategy = process.env.NODE_ENV === 'production' ? hydrate : render
 
+// async load katex css
+// eslint-disable-next-line
+import(/* webpackChunkName: 'katex' */ 'katex/dist/katex.css')
+
 // setup GTM
 window.dataLayer = window.dataLayer || []
 
