@@ -436,6 +436,16 @@ Es como `List` pero inmutable.
 myTuple = (1, 2, 3)
 ```
 
+### <div align="center">_</div>
+
+Cuando una funcion termina en `_`, esta funcion no retorna el resultado si no que reemplaza
+
+```py
+x = [-2, -1, 0, 1, 2, 3]
+x[:,0].uniform_(-1., 1)
+print(x)
+```
+
 ## Referencias
 
 - https://cs231n.github.io/python-numpy-tutorial/
