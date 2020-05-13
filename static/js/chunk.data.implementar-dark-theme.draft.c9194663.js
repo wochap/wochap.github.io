@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{420:function(e,t){e.exports={frontMatter:{slug:"implementar-dark-theme.draft",fileName:"implementar-dark-theme.draft",readingTime:"☕️ 1 minuto de lectura",wordCount:35,identifier:"blog-4",date:"16-04-2020",dateModified:"16-04-2020",formattedDate:"Abril 2020",imageCaption:"",imageUrl:"",heroImageUrl:"",title:"dark theme",description:"",tags:["seo"],keywords:["webpack","webpack 5","babel","webpack-dev-server"]},bodyHtml:""}}}]);
+//# sourceMappingURL=chunk.data.implementar-dark-theme.draft.c9194663.js.map
