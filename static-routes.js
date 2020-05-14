@@ -24,10 +24,13 @@ function getFileNamesArrayFrom(folderPath) {
   const files = fs.readdirSync(folderPath)
 
   // create all possible works routes
-  return files
-    .filter(path => new RegExp(/^(?!.*\.draft\.md$).*\.md$/, 'i').test(path))
-    .map(path => {
-      // extract file name from path of file
-      return path.split('/').pop().split('.')[0]
-    })
+  return (
+    files
+      // eslint-disable-next-line
+      .filter(path => new RegExp('^(?!.*\.draft\.' + process.env.SSG_LANG + '\.md$).*\.' + process.env.SSG_LANG + '\.md$', 'i').test(path))
+      .map(path => {
+        // extract file name from path of file
+        return path.split('/').pop().split('.')[0]
+      })
+  )
 }
