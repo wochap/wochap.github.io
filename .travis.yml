@@ -8,6 +8,9 @@ install:
 after_success:
   # send coverage data to coveralls.
   - yarn run test:coverage-travis
+env:
+  global:
+    - SSG_LANG=en
 before_deploy:
   - yarn build
 branches:

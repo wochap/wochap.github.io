@@ -16,6 +16,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const {getIfUtils} = require('webpack-config-utils')
 const myLocalIp = require('my-local-ip')
 const moduleAlias = require('module-alias')
@@ -55,7 +56,7 @@ if (ifSsr()) {
   })
 }
 
-module.exports = {
+const config = {
   // http://jlongster.com/Backend-Apps-with-Webpack--Part-I#p14
   externals: ifSsr(nodeModules, []),
   target: ifSsr('node', 'web'),
@@ -430,4 +431,27 @@ module.exports = {
 
     new ProgressBarPlugin(),
   ].filter(Boolean),
+}
+
+module.exports = (env, argv) => {
+  const {SSG_LANG} = process.env
+  // eslint-disable-next-line
+  const prodMode = argv.mode === 'production'
+  // eslint-disable-next-line
+  const devMode = argv.mode === 'production'
+  // eslint-disable-next-line
+  const ssrMode = toBoolean(process.env.SSR)
+  if (prodMode && !ssrMode) {
+    config.plugins.concat([
+      new CopyPlugin([
+        {
+          from: resolve(__dirname, 'public'),
+        },
+        {
+          from: resolve(__dirname, `public-${SSG_LANG}`),
+        },
+      ]),
+    ])
+  }
+  return config
 }
