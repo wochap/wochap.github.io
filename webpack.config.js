@@ -438,11 +438,9 @@ module.exports = {
       new CopyPlugin([
         {
           from: resolve(__dirname, 'public'),
-          to: distPath,
         },
         {
           from: resolve(__dirname, `public-${SSG_LANG}`),
-          to: distPath,
         },
       ]),
 
