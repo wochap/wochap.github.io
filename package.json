@@ -176,11 +176,12 @@
     "unified": "^9.0.0",
     "url-loader": "^4.0.0",
     "vfile-reporter": "^6.0.1",
-    "webpack": "^4.42.1",
+    "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.6.1",
     "webpack-cli": "^3.3.11",
     "webpack-config-utils": "^2.3.0",
     "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "webpack-mode": "^1.0.2"
   }
 }

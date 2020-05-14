@@ -36,6 +36,10 @@ const srcPath = resolve(__dirname, 'src')
 // eslint-disable-next-line
 const routes = require('./static-routes')
 const toBoolean = bool => bool === 'true' || bool === true
+// eslint-disable-next-line
+const {isProduction: prodMode, isDevelopment: devMode} = require('webpack-mode')
+const {SSG_LANG} = process.env
+const ssrMode = toBoolean(process.env.SSR)
 
 let nodeModules = {} // eslint-disable-line
 readdirSync('node_modules')
@@ -56,7 +60,7 @@ if (ifSsr()) {
   })
 }
 
-const config = {
+module.exports = {
   // http://jlongster.com/Backend-Apps-with-Webpack--Part-I#p14
   externals: ifSsr(nodeModules, []),
   target: ifSsr('node', 'web'),
@@ -429,20 +433,8 @@ const config = {
       }),
     ),
 
-    new ProgressBarPlugin(),
-  ].filter(Boolean),
-}
-
-module.exports = (env, argv) => {
-  const {SSG_LANG} = process.env
-  // eslint-disable-next-line
-  const prodMode = argv.mode === 'production'
-  // eslint-disable-next-line
-  const devMode = argv.mode === 'production'
-  // eslint-disable-next-line
-  const ssrMode = toBoolean(process.env.SSR)
-  if (prodMode && !ssrMode) {
-    config.plugins.concat([
+    prodMode &&
+      !ssrMode &&
       new CopyPlugin([
         {
           from: resolve(__dirname, 'public'),
@@ -451,7 +443,7 @@ module.exports = (env, argv) => {
           from: resolve(__dirname, `public-${SSG_LANG}`),
         },
       ]),
-    ])
-  }
-  return config
+
+    new ProgressBarPlugin(),
+  ].filter(Boolean),
 }
