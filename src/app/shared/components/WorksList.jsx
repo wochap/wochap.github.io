@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import t from 'app/shared/utils/t'
 import Work from './Work'
 
 function WorksList({works, workTitleTag}) {
@@ -7,7 +8,7 @@ function WorksList({works, workTitleTag}) {
   const worksCount = filteredWorks.length
 
   if (worksCount === 0) {
-    return <p>No hay trabajos que mostrar.</p>
+    return <p>{t('No works yet.', 'No hay trabajos que mostrar.')}</p>
   }
 
   return (

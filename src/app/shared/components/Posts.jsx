@@ -5,6 +5,7 @@ import {articleShape} from 'PropTypes/article'
 import withCollection from 'hoc/collection/withCollection'
 import ShimmerText from 'components/ShimmerText'
 import SiteError from 'components/SiteError'
+import t from 'app/shared/utils/t'
 import PostsList from './PostsList'
 
 export function PostsComponent({collectionState, collection, className, id, isMultiColumn}) {
@@ -31,7 +32,7 @@ export function PostsComponent({collectionState, collection, className, id, isMu
 
   return (
     <section className={className} id={id}>
-      <h2 className='u-center u-mb4 u-caps'>Artículos y tutoriales</h2>
+      <h2 className='u-center u-mb4 u-caps'>{t('Blog articles and tutorials', 'Artículos y tutoriales')}</h2>
       {body}
     </section>
   )

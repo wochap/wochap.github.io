@@ -1,7 +1,8 @@
 import React from 'react'
-import data from 'app/config/data'
 import ScreenHelmet from 'components/ScreenHelmet'
 import SiteContact from 'components/SiteContact'
+
+import data from 'app/config/data'
 
 function ContactScreen() {
   return (

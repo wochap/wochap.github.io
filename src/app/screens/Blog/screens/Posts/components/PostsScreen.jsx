@@ -1,7 +1,7 @@
 import React from 'react'
-import data from 'app/config/data'
 import ScreenHelmet from 'components/ScreenHelmet'
 import Posts from 'components/Posts'
+import data from 'app/config/data'
 import PostsSchema from './PostsSchema'
 
 function PostsScreen() {

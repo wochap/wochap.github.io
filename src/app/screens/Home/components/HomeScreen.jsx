@@ -1,9 +1,10 @@
 import React from 'react'
-import data from 'app/config/data'
 import ScreenHelmet from 'components/ScreenHelmet'
 import SiteContact from 'components/SiteContact'
 import Works from 'components/Works'
 import Posts from 'components/Posts'
+import data from 'app/config/data'
+import t from 'app/shared/utils/t'
 import HomeSchema from './HomeSchema'
 
 function HomeScreen() {
@@ -17,19 +18,19 @@ function HomeScreen() {
       <div className='c-home-screen__hero'>
         <div className='o-wrapper u-relative'>
           <div className='c-home-screen__hero-wrapper'>
-            <h1 className='u-caps'>Hola!, soy Gean Marroquin</h1>
+            <h1 className='u-caps'>{t("Hi!, i'm Gean Marroquin", 'Hola!, soy Gean Marroquin')}</h1>
             <div className='c-home-screen__hero-about' dangerouslySetInnerHTML={{__html: data.about}} />
             <a className='o-btn c-btn c-btn--secondary u-mr3 u-my2' href='#contact'>
-              Contáctame
+              {t('Contact', 'Contáctame')}
             </a>
             <a className='o-btn c-btn c-btn--secondary c-btn--ghost u-white u-my2' href='#works'>
-              Ver portafolio
+              {t('Works', 'Ver portafolio')}
             </a>
           </div>
         </div>
       </div>
       <Posts className='o-wrapper u-py5 u-center' id='blog' isMultiColumn />
-      <Works className='u-py5' id='works' />
+      <Works className='u-py5 u-center' id='works' />
       <SiteContact className='u-py5' id='contact' />
       <HomeSchema />
     </main>

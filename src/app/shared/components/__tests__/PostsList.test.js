@@ -22,6 +22,6 @@ describe('PostsList', () => {
       posts: [],
     })
 
-    expect(wrapper.text()).toEqual('No hay artículos que mostrar.')
+    expect(wrapper.text()).toEqual('No blog articles yet.')
   })
 })

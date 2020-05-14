@@ -279,6 +279,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
+      'process.env.SSG_LANG': JSON.stringify(process.env.SSG_LANG),
       'process.env.NODE_ENV': ifDevelopment('"development"', '"production"'),
       'GATSBY_DISQUS_SHORTNAME': ifDevelopment('"staging-cevichan"', '"cevichan"'),
     }),

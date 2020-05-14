@@ -5,6 +5,7 @@ import {articleShape} from 'PropTypes/article'
 import withCollection from 'hoc/collection/withCollection'
 import ShimmerText from 'components/ShimmerText'
 import SiteError from 'components/SiteError'
+import t from 'app/shared/utils/t'
 import WorksList from './WorksList'
 
 export function WorksComponent({collectionState, collection, className, id, titleTag: TitleTag = 'h2', workTitleTag}) {
@@ -33,8 +34,10 @@ export function WorksComponent({collectionState, collection, className, id, titl
 
   return (
     <section className={`o-wrapper ${className}`} id={id}>
-      <TitleTag className='u-mb3 u-caps u-center u-fz-h2'>Portafolio</TitleTag>
-      <p className='u-mb5 u-fz-sm u-center u-muted'>Proyectos personales, freelance y como colaborador.</p>
+      <TitleTag className='u-mb3 u-caps u-center u-fz-h2'>{t('Works', 'Portafolio')}</TitleTag>
+      <p className='u-mb5 u-fz-sm u-center u-muted'>
+        {t("My latest works, projects i've been working on.", 'Proyectos personales, freelance y como colaborador.')}
+      </p>
       {body}
     </section>
   )

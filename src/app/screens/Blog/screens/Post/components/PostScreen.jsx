@@ -1,7 +1,7 @@
 import React from 'react'
-import data from 'app/config/data'
 import withCollectionItem from 'hoc/collection/withCollectionItem'
 import SiteArticle from 'components/SiteArticle'
+import data from 'app/config/data'
 import PostSchema from './PostSchema'
 import PostComments from './PostComments'
 
