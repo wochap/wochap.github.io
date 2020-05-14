@@ -25,6 +25,19 @@ deploy:
   commit_message: 'feat: travis ci deploy #%{TRAVIS_BUILD_NUMBER}'
   on:
     branch: dev
+deploy:
+  provider: pages
+  # prevent CI from resetting working directory
+  skip_cleanup: true
+  # do not use git push --force
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  target_branch: gh-pages
+  commit_message: 'feat: travis ci deploy #%{TRAVIS_BUILD_NUMBER}'
+  repo: 'wochap/es.wochap.github.io'
+  on:
+    branch: dev
 notifications:
   email:
     recipients:
