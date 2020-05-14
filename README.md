@@ -36,6 +36,12 @@ $ yarn test:coverage
 
 ## Documentation
 
+### Deployment
+
+Add a secret `ACTIONS_DEPLOY_KEY` (https://developer.github.com/v3/guides/managing-deploy-keys/).
+
+Travis deploys wochap/wochap.github.io, and the `gh action` deploys wochap/es.wochap.github.io.
+
 ### [Boilerplate](https://github.com/wochap/webpack-boilerplate#webpack-boilerplate)
 
 ### Stack
