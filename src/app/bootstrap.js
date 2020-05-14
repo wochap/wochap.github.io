@@ -1,5 +1,6 @@
 // import topBar from 'topbar'
 import moment from 'moment'
+import {SSG_LANG} from 'app/config/constants'
 
 /**
  * POLYFILLS
@@ -14,8 +15,7 @@ import moment from 'moment'
 /**
  * MODULES GLOBAL CONFIG
  */
-
-moment.locale('es')
+moment.locale(SSG_LANG)
 
 // topBar.config({
 //   barThickness: 4,

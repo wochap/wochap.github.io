@@ -279,7 +279,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.SSG_LANG': JSON.stringify(process.env.SSG_LANG),
+      'process.env.SSG_LANG': JSON.stringify(SSG_LANG),
       'process.env.NODE_ENV': ifDevelopment('"development"', '"production"'),
       'GATSBY_DISQUS_SHORTNAME': ifDevelopment('"staging-cevichan"', '"cevichan"'),
     }),
@@ -287,7 +287,7 @@ module.exports = {
     ifProduction(
       // decrease moment module size
       // http://stackoverflow.com/questions/25384360/how-to-prevent-moment-js-from-loading-locales-with-webpack
-      new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /es/), // eslint-disable-line
+      new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, new RegExp(SSG_LANG, 'i')), // eslint-disable-line
     ),
 
     // enable HMR globally
