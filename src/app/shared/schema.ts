@@ -2,6 +2,8 @@ import moment from 'moment'
 // @ts-ignore
 import {COLLECTION_DATE_FORMAT} from 'app/config/constants'
 // @ts-ignore
+import t from 'app/shared/utils/t'
+// @ts-ignore
 import data from 'app/config/data'
 import {BlogPosting, Person, ImageObject, Organization, WebSite, WebPage, BreadcrumbList, ListItem} from 'schema-dts'
 import {FrontMatter} from 'app/shared/hoc/collection/types'
@@ -161,8 +163,8 @@ export const getCollectionItemBlogPosting = ({screenKey, parentId, frontMatter}:
     },
     'inLanguage': {
       '@type': 'Language',
-      'name': 'Spanish',
-      'alternateName': 'es',
+      'name': t('English', 'Spanish'),
+      'alternateName': t('en', 'es'),
     },
   }
 }
