@@ -31,7 +31,7 @@ jobs:
       - run: yarn install
       - run: yarn build
         env:
-          SSG_LANG: ES
+          SSG_LANG: es
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

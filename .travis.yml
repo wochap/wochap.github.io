@@ -10,7 +10,7 @@ after_success:
   - yarn run test:coverage-travis
 env:
   global:
-    - SSG_LANG=EN
+    - SSG_LANG=en
 before_deploy:
   - yarn build
 branches:

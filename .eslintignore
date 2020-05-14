@@ -2,4 +2,6 @@ node_modules/
 coverage/
 dist/
 public/
+public-en/
+public-es/
 src/fonts/
