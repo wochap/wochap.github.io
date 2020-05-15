@@ -20,6 +20,8 @@ const CopyPlugin = require('copy-webpack-plugin')
 const {getIfUtils} = require('webpack-config-utils')
 const myLocalIp = require('my-local-ip')
 const moduleAlias = require('module-alias')
+const StaticPageRedirectGeneratorWebpackPlugin = require('./lib/plugins/static-page-redirect-generator-webpack-plugin')
+const StaticIgnoreJsonGeneratorWebpackPlugin = require('./lib/plugins/static-ignore-json-generator-webpack-plugin')
 
 const CURRENT_IP = myLocalIp()
 const externalPath = `http://${CURRENT_IP}:${process.env.WEBPACK_SERVER_PORT}/`
@@ -38,7 +40,8 @@ const routes = require('./static-routes')
 const toBoolean = bool => bool === 'true' || bool === true
 // eslint-disable-next-line
 const {isProduction: prodMode, isDevelopment: devMode} = require('webpack-mode')
-const {SSG_LANG} = process.env
+// eslint-disable-next-line
+const SSG_LANG = process.env.SSG_LANG
 const ssrMode = toBoolean(process.env.SSR)
 
 let nodeModules = {} // eslint-disable-line
@@ -433,6 +436,38 @@ module.exports = {
         tsconfig: resolve(__dirname, 'tsconfig.json'),
       }),
     ),
+
+    SSG_LANG === 'en' &&
+      prodMode &&
+      !ssrMode &&
+      new StaticPageRedirectGeneratorWebpackPlugin({
+        output: distPath,
+        paths: {
+          'blog/dart-para-javascript-developers': 'https://es.geanmarroquin.com/dart-para-javascript-developers',
+          'blog/python-para-javascript-developers': 'https://es.geanmarroquin.com/blog/python-para-javascript-developers',
+          'blog/como-mejorar-el-posicionamiento-seo-de-tu-sitio-web':
+            'https://es.geanmarroquin.com/blog/como-mejorar-el-posicionamiento-seo-de-tu-sitio-web',
+          'blog/configurar-webpack-5': 'https://es.geanmarroquin.com/blog/configurar-webpack-5',
+        },
+      }),
+
+    prodMode &&
+      !ssrMode &&
+      new StaticIgnoreJsonGeneratorWebpackPlugin({
+        output: distPath,
+        paths: [
+          '404.html',
+          'works/',
+          ...(SSG_LANG === 'en'
+            ? [
+                'blog/dart-para-javascript-developers/index.html',
+                'blog/python-para-javascript-developers/index.html',
+                'blog/como-mejorar-el-posicionamiento-seo-de-tu-sitio-web/index.html',
+                'blog/configurar-webpack-5/index.html',
+              ]
+            : []),
+        ],
+      }),
 
     prodMode &&
       !ssrMode &&
