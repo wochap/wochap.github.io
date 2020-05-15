@@ -39,11 +39,7 @@ export function loadItem(collectionName, fileName) {
   let fileRequest
   try {
     // eslint-disable-next-line
-    fileRequest = require('lazy-loader?{"documentEventName":"lazyLoaderFileChange"}!markdown-loader!data/' +
-      collectionName +
-      '/' +
-      fileName +
-      '.md')
+    fileRequest = generateFileRequest({collectionName, fileName, withDraftExt: false})
   } catch (error) {
     fileRequest = Promise.reject(error)
   }
@@ -104,4 +100,23 @@ function orderByDate(a, b) {
   }
 
   return 0
+}
+
+function generateFileRequest({collectionName, fileName, withDraftExt = false}) {
+  try {
+    // eslint-disable-next-line
+    return require('lazy-loader?{"documentEventName":"lazyLoaderFileChange"}!markdown-loader!data/' +
+      collectionName +
+      '/' +
+      fileName +
+      // eslint-disable-next-line
+      `${withDraftExt ? '.draft' : ''}` +
+      `.${process.env.SSG_LANG}` +
+      '.md')
+  } catch (error) {
+    if (withDraftExt === true) {
+      throw error
+    }
+    return generateFileRequest({collectionName, fileName, withDraftExt: true})
+  }
 }

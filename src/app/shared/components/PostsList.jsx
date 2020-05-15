@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
+import t from 'app/shared/utils/t'
 import Post from './Post'
 
 const Ul = styled.ul`
@@ -36,7 +37,7 @@ function PostsList({posts, isMultiColumn = false}) {
   const postsCount = filteredPosts.length
 
   return postsCount === 0 ? (
-    <p>No hay artículos que mostrar.</p>
+    <p>{t('No blog articles yet.', 'No hay artículos que mostrar.')}</p>
   ) : (
     <Ul isMultiColumn={isMultiColumn}>
       {filteredPosts.map(post => (

@@ -1,7 +1,8 @@
 import React from 'react'
-import data from 'app/config/data'
 import ScreenHelmet from 'components/ScreenHelmet'
+import AlternateHelmet from 'components/AlternateHelmet'
 import Posts from 'components/Posts'
+import data from 'app/config/data'
 import PostsSchema from './PostsSchema'
 
 function PostsScreen() {
@@ -12,6 +13,7 @@ function PostsScreen() {
         description={data.screens.blog.description}
         canonicalHref={data.screens.blog.canonicalHref}
       />
+      <AlternateHelmet canonicalHref={data.screens.blog.canonicalHref} />
       <h1 className='u-hide'>Blog de {data.title}</h1>
       <div className='o-grid o-grid--gutter-5 u-flex-row-reverse'>
         <div className='o-grid__item u-12/12 u-4/12@laptop'>

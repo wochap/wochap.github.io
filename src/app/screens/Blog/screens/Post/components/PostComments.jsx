@@ -1,7 +1,8 @@
 import React from 'react'
 import Disqus from 'gatsby-plugin-disqus/components/Disqus'
-import data from 'app/config/data'
 import {articleShape} from 'app/shared/PropTypes/article'
+
+import data from 'app/config/data'
 
 function PostComments({item}) {
   if (!item?.state?.isFulfilled || !!item?.state?.error) {

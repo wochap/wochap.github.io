@@ -1,4 +1,3 @@
-// TODO: apply i18n
 import React from 'react'
 import {JsonLd} from 'react-schemaorg'
 import {logo, organization, webSite} from 'app/shared/schema'

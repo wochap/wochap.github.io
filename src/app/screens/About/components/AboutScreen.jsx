@@ -1,7 +1,9 @@
 import React from 'react'
-import data from 'app/config/data'
 import ExternalLink from 'components/ExternalLink'
 import ScreenHelmet from 'components/ScreenHelmet'
+import AlternateHelmet from 'components/AlternateHelmet'
+import data from 'app/config/data'
+import t from 'app/shared/utils/t'
 import aboutData from '../config/data'
 import AboutSchema from './AboutSchema'
 
@@ -13,6 +15,7 @@ function AboutScreen() {
         description={data.screens.about.description}
         canonicalHref={data.screens.about.canonicalHref}
       />
+      <AlternateHelmet canonicalHref={data.screens.about.canonicalHref} />
 
       <header className='c-about-screen__profile'>
         {/* <div className="c-about-screen__profile-image">
@@ -26,17 +29,27 @@ function AboutScreen() {
 
       <div className='c-about-screen__info'>
         <section className='u-mb5'>
-          <h2 className='u-caps u-mb3'>Sobre mi</h2>
+          <h2 className='u-caps u-mb3'>{t('About me', 'Sobre mi')}</h2>
           <div className='o-grid o-grid--gutter-x-5 o-grid--gutter-y-3'>
             <div className='o-grid__item u-12/12 u-6/12@tablet' dangerouslySetInnerHTML={{__html: data.about}} />
             <div className='o-grid__item u-12/12 u-6/12@tablet'>
-              <p>¿Desea contratarme para trabajar en su empresa por tiempo completo o parcial?</p>
+              <p>
+                {t(
+                  'Wanna hire me for working on your company for full time or part time?',
+                  '¿Desea contratarme para trabajar en su empresa por tiempo completo o parcial?',
+                )}
+              </p>
               {/* <p>¿Formamos equipo? .</p> */}
               {/* <p className="u-mb0"><a href={`mailto:${data.email}`}>Enviame un mensaje</a></p> */}
               <p className='u-mb0 u-flex u-items-center'>
                 <i className='u-icon u-fz-h2 u-mr2'>arrow_drop_down_circle</i>
-                <a href='//res.cloudinary.com/wochap/image/upload/v1495421654/wochap/cv_es.pdf'>
-                  <strong>Descarga mi CV</strong>
+                <a
+                  href={t(
+                    '//docs.google.com/document/d/1hhrCg2oq53MBQDQdDCgqfM6O0WxN9A8AarQY1Q6sx9k/export?format=pdf',
+                    '//docs.google.com/document/d/15zdGtys7pS0--X_MzwUQKH5-WNZcEqbaxRZxxSyoIR0/export?format=pdf',
+                  )}
+                >
+                  <strong>{t('Download my CV', 'Descarga mi CV')}</strong>
                 </a>
               </p>
             </div>
@@ -64,7 +77,7 @@ function AboutScreen() {
           </ul>
         </section>
         <section>
-          <h2 className='u-caps u-mb3'>Cursos que realize</h2>
+          <h2 className='u-caps u-mb3'>{t('Courses i took', 'Cursos que realize')}</h2>
           <ul className='o-grid o-grid--gutter-x-5 o-grid--gutter-y-3 u-list-reset'>
             {aboutData.moocs.map((mooc, index) => (
               <li className='o-grid__item u-12/12 u-6/12@tablet' key={index}>

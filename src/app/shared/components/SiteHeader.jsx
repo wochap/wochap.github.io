@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {Link, NavLink} from 'react-router-dom'
 import SiteHeaderLink from 'components/SiteHeaderLink'
+import t from 'app/shared/utils/t'
 import Hamburger from './Hamburger'
 import ThemeToggler from './ThemeToggler'
+import LangToggler from './LangToggler'
 
 class SiteHeader extends React.Component {
   static propTypes = {
@@ -56,7 +58,7 @@ class SiteHeader extends React.Component {
             <ul className='o-dialog__wrapper'>
               <li>
                 <NavLink className='o-btn c-site-nav__link' to='/about' onClick={this._closeNav} activeClassName='is-active'>
-                  Sobre mi
+                  {t('About', 'Sobre mi')}
                 </NavLink>
               </li>
               <li>
@@ -97,7 +99,7 @@ class SiteHeader extends React.Component {
               </li>
               <li>
                 <SiteHeaderLink
-                  title='Contáctame'
+                  title={t('Contact', 'Contáctame')}
                   isHome={isHome}
                   props={
                     isHome
@@ -115,7 +117,9 @@ class SiteHeader extends React.Component {
               </li>
             </ul>
           </nav>
-          <ThemeToggler className='u-ml4' />
+
+          <LangToggler className='u-ml4' />
+          <ThemeToggler className='u-ml1' />
           <Hamburger
             className={`c-site-header__btn-toggle ${isNavOpen ? 'is-active' : ''} u-hide@laptop`}
             onClick={this._toggleNav}
