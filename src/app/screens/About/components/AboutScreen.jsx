@@ -45,8 +45,8 @@ function AboutScreen() {
                 <i className='u-icon u-fz-h2 u-mr2'>arrow_drop_down_circle</i>
                 <a
                   href={t(
-                    '//res.cloudinary.com/wochap/image/upload/v1495421654/wochap/cv_en.pdf',
-                    '//res.cloudinary.com/wochap/image/upload/v1495421654/wochap/cv_es.pdf',
+                    '//docs.google.com/document/d/1hhrCg2oq53MBQDQdDCgqfM6O0WxN9A8AarQY1Q6sx9k/export?format=pdf',
+                    '//docs.google.com/document/d/15zdGtys7pS0--X_MzwUQKH5-WNZcEqbaxRZxxSyoIR0/export?format=pdf',
                   )}
                 >
                   <strong>{t('Download my CV', 'Descarga mi CV')}</strong>
