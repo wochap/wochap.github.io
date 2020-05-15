@@ -1,6 +1,8 @@
 import React from 'react'
 // import styled from '@emotion/styled'
+// @ts-ignore
 import t from 'app/shared/utils/t'
+// @ts-ignore
 import {BASE_URL_EN, BASE_URL_ES} from 'app/config/data'
 
 // const Button = styled.button`
