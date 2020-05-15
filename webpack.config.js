@@ -443,7 +443,7 @@ module.exports = {
       new StaticPageRedirectGeneratorWebpackPlugin({
         output: distPath,
         paths: {
-          'blog/dart-para-javascript-developers': 'https://es.geanmarroquin.com/dart-para-javascript-developers',
+          'blog/dart-para-javascript-developers': 'https://es.geanmarroquin.com/blog/dart-para-javascript-developers',
           'blog/python-para-javascript-developers': 'https://es.geanmarroquin.com/blog/python-para-javascript-developers',
           'blog/como-mejorar-el-posicionamiento-seo-de-tu-sitio-web':
             'https://es.geanmarroquin.com/blog/como-mejorar-el-posicionamiento-seo-de-tu-sitio-web',
