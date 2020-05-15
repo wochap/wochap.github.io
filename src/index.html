@@ -5,7 +5,12 @@
     <meta name="theme-color" content="#000000" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_LA" />
+    <meta property="og:locale" content="<%= process.env.SSG_LANG === 'es' ? 'es_LA' : 'en_US' %>" />
+    <% if (process.env.SSG_LANG === 'es') { %>
+    <meta property="og:locale:alternate" content="en_US" />
+    <% } else { %>
+    <meta property="og:locale:alternate" content="es_LA" />
+    <% } %>
     <!-- put title tag in Helmet component -->
     <!-- put description meta tag in Helmet component -->
     <!-- put og meta tags in Helmet component -->

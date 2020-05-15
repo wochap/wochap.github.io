@@ -22,6 +22,7 @@ function SiteArticle({item, itemState, collectionState, head, children}) {
           description={item.frontMatter.description}
           canonicalHref={`${head.canonicalHref}/${item.frontMatter.fileName}`}
         />
+        {/* TODO: add AlternateHelmet */}
         <ArticleHelmet imageUrl={item.frontMatter.imageUrl} publishedTime={item.frontMatter.date} tags={item.frontMatter.tags} />
         <Hero data={item.frontMatter} />
         <MarkdownBody html={item.bodyHtml} />

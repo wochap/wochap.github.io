@@ -1,6 +1,7 @@
 import React from 'react'
 import ExternalLink from 'components/ExternalLink'
 import ScreenHelmet from 'components/ScreenHelmet'
+import AlternateHelmet from 'components/AlternateHelmet'
 import data from 'app/config/data'
 import t from 'app/shared/utils/t'
 import aboutData from '../config/data'
@@ -14,6 +15,7 @@ function AboutScreen() {
         description={data.screens.about.description}
         canonicalHref={data.screens.about.canonicalHref}
       />
+      <AlternateHelmet canonicalHref={data.screens.about.canonicalHref} />
 
       <header className='c-about-screen__profile'>
         {/* <div className="c-about-screen__profile-image">

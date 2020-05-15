@@ -1,5 +1,6 @@
 import React from 'react'
 import ScreenHelmet from 'components/ScreenHelmet'
+import AlternateHelmet from 'components/AlternateHelmet'
 import SiteContact from 'components/SiteContact'
 import Works from 'components/Works'
 import Posts from 'components/Posts'
@@ -15,6 +16,7 @@ function HomeScreen() {
         description={data.screens.home.description}
         canonicalHref={data.screens.home.canonicalHref}
       />
+      <AlternateHelmet canonicalHref={data.screens.home.canonicalHref} />
       <div className='c-home-screen__hero'>
         <div className='o-wrapper u-relative'>
           <div className='c-home-screen__hero-wrapper'>

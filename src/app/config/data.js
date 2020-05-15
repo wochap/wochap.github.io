@@ -2,8 +2,8 @@ import prevalMarkdown from 'markdown.macro'
 import t from 'app/shared/utils/t'
 
 const DOMAIN_NAME = 'geanmarroquin.com'
-const BASE_URL_EN = `https://${DOMAIN_NAME}`
-const BASE_URL_ES = `https://es.${DOMAIN_NAME}`
+export const BASE_URL_EN = `https://${DOMAIN_NAME}`
+export const BASE_URL_ES = `https://es.${DOMAIN_NAME}`
 const TITLE = 'Gean Marroquin'
 const ABOUT_ES =
   'Establecido en Peru, soy Javascript Developer enfocado en la creación de componentes escalables y reusables con Vue y React, apasionado y autodidacta.'
@@ -12,7 +12,7 @@ const ABOUT_EN = "Based in Peru, i'm Javascript Developer with a focus on creati
 // export default data
 export default {
   domainName: t(DOMAIN_NAME, `es.${DOMAIN_NAME}`),
-  baseUrl: t(BASE_URL_EN, `https://es.${DOMAIN_NAME}`),
+  baseUrl: t(BASE_URL_EN, BASE_URL_ES),
   title: TITLE,
   email: 'gean.marroquin@gmail.com',
   about: t(
