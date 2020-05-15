@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import t from 'app/shared/utils/t'
 import data, {BASE_URL_EN, BASE_URL_ES} from 'app/config/data'
 
 function AlternateHelmet({canonicalHref}) {
@@ -8,6 +9,12 @@ function AlternateHelmet({canonicalHref}) {
   const linkCleaned = canonicalHref.replace(new RegExp(`${data.baseUrl}/?`, 'i'), '')
   return (
     <Helmet
+      meta={[
+        {
+          property: 'og:locale:alternate',
+          content: t('es_LA', 'en_US'),
+        },
+      ]}
       link={[
         {
           rel: 'alternate',

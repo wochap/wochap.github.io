@@ -5,6 +5,7 @@ import SiteHeaderLink from 'components/SiteHeaderLink'
 import t from 'app/shared/utils/t'
 import Hamburger from './Hamburger'
 import ThemeToggler from './ThemeToggler'
+import LangToggler from './LangToggler'
 
 class SiteHeader extends React.Component {
   static propTypes = {
@@ -116,7 +117,9 @@ class SiteHeader extends React.Component {
               </li>
             </ul>
           </nav>
-          <ThemeToggler className='u-ml4' />
+
+          <LangToggler className='u-ml4' />
+          <ThemeToggler className='u-ml1' />
           <Hamburger
             className={`c-site-header__btn-toggle ${isNavOpen ? 'is-active' : ''} u-hide@laptop`}
             onClick={this._toggleNav}
