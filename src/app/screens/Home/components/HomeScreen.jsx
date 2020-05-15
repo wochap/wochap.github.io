@@ -23,7 +23,7 @@ function HomeScreen() {
             <h1 className='u-caps'>{t("Hi!, i'm Gean Marroquin", 'Hola!, soy Gean Marroquin')}</h1>
             <div className='c-home-screen__hero-about' dangerouslySetInnerHTML={{__html: data.about}} />
             <a className='o-btn c-btn c-btn--secondary u-mr3 u-my2' href='#contact'>
-              {t('Contact', 'Contáctame')}
+              {t('Contact me', 'Contáctame')}
             </a>
             <a className='o-btn c-btn c-btn--secondary c-btn--ghost u-white u-my2' href='#works'>
               {t('Works', 'Ver portafolio')}
