@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import ShimmerText from 'components/ShimmerText'
 import {formatDate} from 'utils/formatter'
 import ExternalLink from 'components/ExternalLink'
+import t from 'app/shared/utils/t'
 
 function Hero({
   data = {
-    title: 'Cargando artículo ...',
+    title: t('Blog article loading...', 'Cargando artículo ...'),
     date: '18-06-1994',
   },
   isLoading = false,
@@ -18,13 +19,13 @@ function Hero({
       <ul className='c-hero__footer'>
         {data.role && (
           <li>
-            <strong>Rol: </strong>
+            <strong>{t('Role', 'Rol')}: </strong>
             {data.role}
           </li>
         )}
         {data.tasks && (
           <li>
-            <strong>Tareas: </strong>
+            <strong>{t('Tasks', 'Tareas')}: </strong>
             {data.tasks}
           </li>
         )}
@@ -36,7 +37,7 @@ function Hero({
         )}
         {data.siteLink && (
           <li>
-            <strong>Sitio: </strong>
+            <strong>{t('URL', 'Sitio')}: </strong>
             <ExternalLink href={data.siteLink} title={data.siteLink} />
           </li>
         )}
