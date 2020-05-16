@@ -148,9 +148,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var app_config_generateRoutes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/config/generateRoutes */ 127);
 /* harmony import */ var app_config_routes__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/config/routes */ 202);
-/* harmony import */ var app_store_configureStore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/store/configureStore */ 311);
+/* harmony import */ var app_store_configureStore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/store/configureStore */ 313);
 /* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/actions/collections */ 253);
-/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./template */ 321);
+/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./template */ 323);
 
 
 
@@ -5636,11 +5636,11 @@ module.exports = require("prop-types");
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_components_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! app/components/App */ 203);
 /* harmony import */ var app_screens_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/screens/Home */ 236);
-/* harmony import */ var app_screens_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/screens/About */ 277);
-/* harmony import */ var app_screens_Works__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/screens/Works */ 281);
-/* harmony import */ var app_screens_Blog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/screens/Blog */ 294);
-/* harmony import */ var app_screens_Contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/Contact */ 308);
-/* harmony import */ var app_screens_NotFound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/screens/NotFound */ 310);
+/* harmony import */ var app_screens_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/screens/About */ 279);
+/* harmony import */ var app_screens_Works__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/screens/Works */ 283);
+/* harmony import */ var app_screens_Blog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/screens/Blog */ 296);
+/* harmony import */ var app_screens_Contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/Contact */ 310);
+/* harmony import */ var app_screens_NotFound__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/screens/NotFound */ 312);
 
 
 
@@ -8620,14 +8620,14 @@ const BASE_URL_EN = "https://".concat(DOMAIN_NAME);
 const BASE_URL_ES = "https://es.".concat(DOMAIN_NAME);
 const TITLE = 'Gean Marroquin';
 const ABOUT_ES = 'Establecido en Peru, soy Javascript Developer enfocado en la creación de componentes escalables y reusables con Vue y React, apasionado y autodidacta.';
-const ABOUT_EN = "Based in Peru, i'm Javascript Developer with a focus on creating scalable and reusable components with Vue and React."; // export default data
+const ABOUT_EN = "Based in Peru, i'm a Javascript Developer with a focus on creating scalable and reusable components with Vue and React."; // export default data
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   domainName: Object(app_shared_utils_t__WEBPACK_IMPORTED_MODULE_0__["default"])(DOMAIN_NAME, "es.".concat(DOMAIN_NAME)),
   baseUrl: Object(app_shared_utils_t__WEBPACK_IMPORTED_MODULE_0__["default"])(BASE_URL_EN, BASE_URL_ES),
   title: TITLE,
   email: 'gean.marroquin@gmail.com',
-  about: Object(app_shared_utils_t__WEBPACK_IMPORTED_MODULE_0__["default"])("<p>Based in Peru, i'm<i class=\"u-fz-h2 u-icon u-mx1 u-color-javascript\">javascript</i>Developer with a focus on creating scalable and reusable components with<i class=\"u-fz-h2 u-icon u-mx1 u-color-vue_js\">vue_js</i>and<i class=\"u-fz-h2 u-icon u-mx1 u-color-react\">react</i>.", "<p>Establecido en Perú, soy<i class=\"u-fz-h2 u-icon u-mx1 u-color-javascript\">javascript</i>Developer enfocado en la creación de componentes escalables y reusables con<i class=\"u-fz-h2 u-icon u-mx1 u-color-vue_js\">vue_js</i>y<i class=\"u-fz-h2 u-icon u-mx1 u-color-react\">react</i>, apasionado y autodidacta."),
+  about: Object(app_shared_utils_t__WEBPACK_IMPORTED_MODULE_0__["default"])("<p>Based in Peru, i'm a<i class=\"u-fz-h2 u-icon u-mx1 u-color-javascript\">javascript</i>Developer with a focus on creating scalable and reusable components with<i class=\"u-fz-h2 u-icon u-mx1 u-color-vue_js\">vue_js</i>and<i class=\"u-fz-h2 u-icon u-mx1 u-color-react\">react</i>.", "<p>Establecido en Perú, soy<i class=\"u-fz-h2 u-icon u-mx1 u-color-javascript\">javascript</i>Developer enfocado en la creación de componentes escalables y reusables con<i class=\"u-fz-h2 u-icon u-mx1 u-color-vue_js\">vue_js</i>y<i class=\"u-fz-h2 u-icon u-mx1 u-color-react\">react</i>, apasionado y autodidacta."),
   twitterUser: 'geanmarroquin',
   screens: {
     home: {
@@ -8748,10 +8748,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var components_AlternateHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/AlternateHelmet */ 239);
 /* harmony import */ var components_SiteContact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteContact */ 240);
 /* harmony import */ var components_Works__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/Works */ 242);
-/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! components/Posts */ 270);
+/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! components/Posts */ 272);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/config/data */ 234);
 /* harmony import */ var app_shared_utils_t__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! app/shared/utils/t */ 207);
-/* harmony import */ var _HomeSchema__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./HomeSchema */ 274);
+/* harmony import */ var _HomeSchema__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./HomeSchema */ 276);
 
 
 
@@ -9091,10 +9091,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 243);
 /* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 244);
 /* harmony import */ var hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/withCollection */ 245);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 265);
-/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 267);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 267);
+/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 269);
 /* harmony import */ var app_shared_utils_t__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! app/shared/utils/t */ 207);
-/* harmony import */ var _WorksList__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./WorksList */ 268);
+/* harmony import */ var _WorksList__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./WorksList */ 270);
 
 
 
@@ -9884,7 +9884,7 @@ webpackContext.id = 261;
       try {
         /* lazy load group of files */
         Promise.resolve(/*! require.ensure | data.posts */).then((function (require) {
-          var requireContext = __webpack_require__(328);
+          var requireContext = __webpack_require__(330);
           var modules = requireContext.keys().map(function (fileFullName) {
             return requireContext(fileFullName);
           });
@@ -9912,7 +9912,7 @@ webpackContext.id = 261;
       try {
         /* lazy load group of files */
         Promise.resolve(/*! require.ensure | data.works */).then((function (require) {
-          var requireContext = __webpack_require__(329);
+          var requireContext = __webpack_require__(332);
           var modules = requireContext.keys().map(function (fileFullName) {
             return requireContext(fileFullName);
           });
@@ -9933,20 +9933,71 @@ webpackContext.id = 261;
   !*** ../data sync ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown ^\.\/.*\.en\.md$ ***!
   \*********************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function webpackEmptyContext(req) {
-	var e = new Error("Cannot find module '" + req + "'");
-	e.code = 'MODULE_NOT_FOUND';
-	throw e;
+var map = {
+	"./posts/python-for-javascript-developers.en.md": 265,
+	"./works/yilancorp.en.md": 266
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
 }
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 264;
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 264;
 
 /***/ }),
 /* 265 */
+/*!********************************************************************************************************************************************************!*\
+  !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown!../data/posts/python-for-javascript-developers.en.md ***!
+  \********************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    module.exports = new Promise(function (resolve) {
+      Promise.resolve(/*! require.ensure | data.python-for-javascript-developers */).then((function (require) {
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/posts/python-for-javascript-developers.en.md */ 334 ));
+      }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    });
+
+    if (false) { var event; }
+  
+
+/***/ }),
+/* 266 */
+/*!*********************************************************************************************************************************!*\
+  !*** ../lib/loaders/lazy.js?{"documentEventName":"lazyLoaderFileChange"}!../lib/loaders/markdown!../data/works/yilancorp.en.md ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    module.exports = new Promise(function (resolve) {
+      Promise.resolve(/*! require.ensure | data.yilancorp */).then((function (require) {
+        resolve(__webpack_require__( /*! !../lib/loaders/markdown!../data/works/yilancorp.en.md */ 335 ));
+      }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    });
+
+    if (false) { var event; }
+  
+
+/***/ }),
+/* 267 */
 /*!***********************************************!*\
   !*** ./app/shared/components/ShimmerText.jsx ***!
   \***********************************************/
@@ -9959,7 +10010,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ 266);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ 268);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -9993,7 +10044,7 @@ ShimmerText.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (ShimmerText);
 
 /***/ }),
-/* 266 */
+/* 268 */
 /*!*****************************!*\
   !*** external "classnames" ***!
   \*****************************/
@@ -10003,7 +10054,7 @@ ShimmerText.propTypes = {
 module.exports = require("classnames");
 
 /***/ }),
-/* 267 */
+/* 269 */
 /*!*********************************************!*\
   !*** ./app/shared/components/SiteError.jsx ***!
   \*********************************************/
@@ -10050,7 +10101,7 @@ SiteError.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (SiteError);
 
 /***/ }),
-/* 268 */
+/* 270 */
 /*!*********************************************!*\
   !*** ./app/shared/components/WorksList.jsx ***!
   \*********************************************/
@@ -10068,7 +10119,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var app_shared_utils_t__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/shared/utils/t */ 207);
-/* harmony import */ var _Work__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Work */ 269);
+/* harmony import */ var _Work__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Work */ 271);
 
 
 
@@ -10112,7 +10163,7 @@ WorksList.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (WorksList);
 
 /***/ }),
-/* 269 */
+/* 271 */
 /*!****************************************!*\
   !*** ./app/shared/components/Work.jsx ***!
   \****************************************/
@@ -10157,7 +10208,7 @@ Work.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (Work);
 
 /***/ }),
-/* 270 */
+/* 272 */
 /*!*****************************************!*\
   !*** ./app/shared/components/Posts.jsx ***!
   \*****************************************/
@@ -10176,10 +10227,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 243);
 /* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 244);
 /* harmony import */ var hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! hoc/collection/withCollection */ 245);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 265);
-/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 267);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/ShimmerText */ 267);
+/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/SiteError */ 269);
 /* harmony import */ var app_shared_utils_t__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! app/shared/utils/t */ 207);
-/* harmony import */ var _PostsList__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./PostsList */ 271);
+/* harmony import */ var _PostsList__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./PostsList */ 273);
 
 
 
@@ -10245,7 +10296,7 @@ const Posts = Object(hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_5__[
 /* harmony default export */ __webpack_exports__["default"] = (Posts);
 
 /***/ }),
-/* 271 */
+/* 273 */
 /*!*********************************************!*\
   !*** ./app/shared/components/PostsList.jsx ***!
   \*********************************************/
@@ -10264,7 +10315,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var app_shared_utils_t__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/shared/utils/t */ 207);
-/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Post */ 272);
+/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Post */ 274);
 
 
 
@@ -10318,7 +10369,7 @@ PostsList.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (PostsList);
 
 /***/ }),
-/* 272 */
+/* 274 */
 /*!****************************************!*\
   !*** ./app/shared/components/Post.jsx ***!
   \****************************************/
@@ -10333,7 +10384,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ 122);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 273);
+/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 275);
 
 
 
@@ -10363,7 +10414,7 @@ Post.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (Post);
 
 /***/ }),
-/* 273 */
+/* 275 */
 /*!***************************************!*\
   !*** ./app/shared/utils/formatter.js ***!
   \***************************************/
@@ -10389,7 +10440,7 @@ function formatDate(date) {
 }
 
 /***/ }),
-/* 274 */
+/* 276 */
 /*!****************************************************!*\
   !*** ./app/screens/Home/components/HomeSchema.tsx ***!
   \****************************************************/
@@ -10400,9 +10451,9 @@ function formatDate(date) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-schemaorg */ 275);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-schemaorg */ 277);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/schema */ 276);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/shared/schema */ 278);
 
 
 
@@ -10421,7 +10472,7 @@ function HomeSchema() {
 /* harmony default export */ __webpack_exports__["default"] = (HomeSchema);
 
 /***/ }),
-/* 275 */
+/* 277 */
 /*!**********************************!*\
   !*** external "react-schemaorg" ***!
   \**********************************/
@@ -10431,7 +10482,7 @@ function HomeSchema() {
 module.exports = require("react-schemaorg");
 
 /***/ }),
-/* 276 */
+/* 278 */
 /*!******************************!*\
   !*** ./app/shared/schema.ts ***!
   \******************************/
@@ -10675,7 +10726,7 @@ const getBreadCrumList = ({
 // }
 
 /***/ }),
-/* 277 */
+/* 279 */
 /*!************************************!*\
   !*** ./app/screens/About/index.js ***!
   \************************************/
@@ -10688,7 +10739,7 @@ __webpack_require__.r(__webpack_exports__);
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'about',
-  component: __webpack_require__(/*! ./components/AboutScreen */ 278).default,
+  component: __webpack_require__(/*! ./components/AboutScreen */ 280).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/AboutScreen')
@@ -10710,7 +10761,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 278 */
+/* 280 */
 /*!******************************************************!*\
   !*** ./app/screens/About/components/AboutScreen.jsx ***!
   \******************************************************/
@@ -10728,8 +10779,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var components_AlternateHelmet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/AlternateHelmet */ 239);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/config/data */ 234);
 /* harmony import */ var app_shared_utils_t__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/shared/utils/t */ 207);
-/* harmony import */ var _config_data__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../config/data */ 279);
-/* harmony import */ var _AboutSchema__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AboutSchema */ 280);
+/* harmony import */ var _config_data__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../config/data */ 281);
+/* harmony import */ var _AboutSchema__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AboutSchema */ 282);
 
 
 
@@ -10837,7 +10888,7 @@ function AboutScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (AboutScreen);
 
 /***/ }),
-/* 279 */
+/* 281 */
 /*!******************************************!*\
   !*** ./app/screens/About/config/data.js ***!
   \******************************************/
@@ -11041,7 +11092,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 280 */
+/* 282 */
 /*!******************************************************!*\
   !*** ./app/screens/About/components/AboutSchema.tsx ***!
   \******************************************************/
@@ -11070,10 +11121,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-schemaorg */ 275);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-schemaorg */ 277);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/config/data */ 234);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/shared/schema */ 276);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/shared/schema */ 278);
 
 
 
@@ -11119,7 +11170,7 @@ function AboutSchema() {
 /* harmony default export */ __webpack_exports__["default"] = (AboutSchema);
 
 /***/ }),
-/* 281 */
+/* 283 */
 /*!************************************!*\
   !*** ./app/screens/Works/index.js ***!
   \************************************/
@@ -11128,15 +11179,15 @@ function AboutSchema() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _screens_Works__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Works */ 282);
-/* harmony import */ var _screens_Work__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Work */ 284);
+/* harmony import */ var _screens_Works__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Works */ 284);
+/* harmony import */ var _screens_Work__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Work */ 286);
 // import {lazy} from 'react'
 // import topBar from 'utils/topBar'
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'works',
-  component: __webpack_require__(/*! ./components/WorksScreen */ 293).default,
+  component: __webpack_require__(/*! ./components/WorksScreen */ 295).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/WorksScreen')
@@ -11160,7 +11211,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 282 */
+/* 284 */
 /*!**************************************************!*\
   !*** ./app/screens/Works/screens/Works/index.js ***!
   \**************************************************/
@@ -11169,7 +11220,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_WorksScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorksScreen */ 283);
+/* harmony import */ var _components_WorksScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorksScreen */ 285);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: '',
@@ -11178,7 +11229,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 283 */
+/* 285 */
 /*!********************************************************************!*\
   !*** ./app/screens/Works/screens/Works/components/WorksScreen.jsx ***!
   \********************************************************************/
@@ -11216,7 +11267,7 @@ function WorksScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (WorksScreen);
 
 /***/ }),
-/* 284 */
+/* 286 */
 /*!*************************************************!*\
   !*** ./app/screens/Works/screens/Work/index.js ***!
   \*************************************************/
@@ -11225,7 +11276,7 @@ function WorksScreen() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_WorkScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorkScreen */ 285);
+/* harmony import */ var _components_WorkScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/WorkScreen */ 287);
  // eslint-disable-line
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -11235,7 +11286,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 285 */
+/* 287 */
 /*!******************************************************************!*\
   !*** ./app/screens/Works/screens/Work/components/WorkScreen.jsx ***!
   \******************************************************************/
@@ -11249,8 +11300,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 286);
-/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteArticle */ 287);
+/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 288);
+/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteArticle */ 289);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-helmet */ 126);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/config/data */ 234);
@@ -11275,7 +11326,7 @@ function WorkScreen(props) {
 /* harmony default export */ __webpack_exports__["default"] = (Object(hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_2__["default"])(WorkScreen, 'works'));
 
 /***/ }),
-/* 286 */
+/* 288 */
 /*!*********************************************************!*\
   !*** ./app/shared/hoc/collection/withCollectionItem.js ***!
   \*********************************************************/
@@ -11387,7 +11438,7 @@ function withItem(WrappedComponent, collectionName) {
 /* harmony default export */ __webpack_exports__["default"] = (withItem);
 
 /***/ }),
-/* 287 */
+/* 289 */
 /*!***********************************************!*\
   !*** ./app/shared/components/SiteArticle.jsx ***!
   \***********************************************/
@@ -11404,12 +11455,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var hoc_collection_PropTypes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! hoc/collection/PropTypes */ 243);
 /* harmony import */ var PropTypes_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! PropTypes/article */ 244);
-/* harmony import */ var app_screens_NotFound_components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/NotFound/components/NotFoundScreen */ 288);
-/* harmony import */ var components_Hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/Hero */ 289);
-/* harmony import */ var components_MarkdownBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/MarkdownBody */ 290);
+/* harmony import */ var app_screens_NotFound_components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/screens/NotFound/components/NotFoundScreen */ 290);
+/* harmony import */ var components_Hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/Hero */ 291);
+/* harmony import */ var components_MarkdownBody__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! components/MarkdownBody */ 292);
 /* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! components/ScreenHelmet */ 238);
-/* harmony import */ var components_ArticleHelmet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! components/ArticleHelmet */ 291);
-/* harmony import */ var lib_init_tennor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lib/init-tennor */ 292);
+/* harmony import */ var components_ArticleHelmet__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! components/ArticleHelmet */ 293);
+/* harmony import */ var lib_init_tennor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lib/init-tennor */ 294);
 
 
 
@@ -11490,7 +11541,7 @@ SiteArticle.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (SiteArticle);
 
 /***/ }),
-/* 288 */
+/* 290 */
 /*!************************************************************!*\
   !*** ./app/screens/NotFound/components/NotFoundScreen.jsx ***!
   \************************************************************/
@@ -11503,7 +11554,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/SiteError */ 267);
+/* harmony import */ var components_SiteError__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/SiteError */ 269);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/config/data */ 234);
 
 
@@ -11526,7 +11577,7 @@ NotFoundScreen.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (NotFoundScreen);
 
 /***/ }),
-/* 289 */
+/* 291 */
 /*!****************************************!*\
   !*** ./app/shared/components/Hero.jsx ***!
   \****************************************/
@@ -11539,9 +11590,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 265);
-/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 273);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 267);
+/* harmony import */ var utils_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! utils/formatter */ 275);
 /* harmony import */ var components_ExternalLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/ExternalLink */ 241);
+/* harmony import */ var app_shared_utils_t__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! app/shared/utils/t */ 207);
+
 
 
 
@@ -11550,7 +11603,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Hero({
   data = {
-    title: 'Cargando artículo ...',
+    title: Object(app_shared_utils_t__WEBPACK_IMPORTED_MODULE_5__["default"])('Blog article loading...', 'Cargando artículo ...'),
     date: '18-06-1994'
   },
   isLoading = false
@@ -11559,10 +11612,10 @@ function Hero({
   const formattedDate = data.formattedDate || Object(utils_formatter__WEBPACK_IMPORTED_MODULE_3__["formatDate"])(data.date);
   const footer = data.role || data.tasks || data.siteLink || data.source ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "c-hero__footer"
-  }, data.role && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Rol: "), data.role), data.tasks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Tareas: "), data.tasks), data.source && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Source: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_ExternalLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, data.role && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, Object(app_shared_utils_t__WEBPACK_IMPORTED_MODULE_5__["default"])('Role', 'Rol'), ": "), data.role), data.tasks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, Object(app_shared_utils_t__WEBPACK_IMPORTED_MODULE_5__["default"])('Tasks', 'Tareas'), ": "), data.tasks), data.source && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Source: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_ExternalLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
     href: data.source,
     title: data.source
-  })), data.siteLink && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Sitio: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_ExternalLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), data.siteLink && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, Object(app_shared_utils_t__WEBPACK_IMPORTED_MODULE_5__["default"])('URL', 'Sitio'), ": "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_ExternalLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
     href: data.siteLink,
     title: data.siteLink
   }))) : null;
@@ -11602,7 +11655,7 @@ Hero.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (Hero);
 
 /***/ }),
-/* 290 */
+/* 292 */
 /*!************************************************!*\
   !*** ./app/shared/components/MarkdownBody.jsx ***!
   \************************************************/
@@ -11615,7 +11668,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ 201);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 265);
+/* harmony import */ var components_ShimmerText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/ShimmerText */ 267);
 
 
 
@@ -11655,7 +11708,7 @@ MarkdownBody.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (MarkdownBody);
 
 /***/ }),
-/* 291 */
+/* 293 */
 /*!*************************************************!*\
   !*** ./app/shared/components/ArticleHelmet.jsx ***!
   \*************************************************/
@@ -11717,7 +11770,7 @@ ArticleHelmet.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (ArticleHelmet);
 
 /***/ }),
-/* 292 */
+/* 294 */
 /*!*****************************!*\
   !*** ../lib/init-tennor.js ***!
   \*****************************/
@@ -11787,7 +11840,7 @@ const embedurl = 'https://tenor.com/embed/';
 });
 
 /***/ }),
-/* 293 */
+/* 295 */
 /*!******************************************************!*\
   !*** ./app/screens/Works/components/WorksScreen.jsx ***!
   \******************************************************/
@@ -11815,7 +11868,7 @@ WorksScreen.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (WorksScreen);
 
 /***/ }),
-/* 294 */
+/* 296 */
 /*!***********************************!*\
   !*** ./app/screens/Blog/index.js ***!
   \***********************************/
@@ -11824,15 +11877,15 @@ WorksScreen.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _screens_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Post */ 295);
-/* harmony import */ var _screens_Posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Posts */ 304);
+/* harmony import */ var _screens_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/Post */ 297);
+/* harmony import */ var _screens_Posts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/Posts */ 306);
 // import {lazy} from 'react'
 // import topBar from 'utils/topBar'
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'blog',
-  component: __webpack_require__(/*! ./components/BlogScreen */ 307).default,
+  component: __webpack_require__(/*! ./components/BlogScreen */ 309).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/BlogScreen')
@@ -11856,7 +11909,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 295 */
+/* 297 */
 /*!************************************************!*\
   !*** ./app/screens/Blog/screens/Post/index.js ***!
   \************************************************/
@@ -11869,7 +11922,7 @@ __webpack_require__.r(__webpack_exports__);
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: ':fileName',
-  component: __webpack_require__(/*! ./components/PostScreen */ 296).default,
+  component: __webpack_require__(/*! ./components/PostScreen */ 298).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/PostScreen')
@@ -11891,7 +11944,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 296 */
+/* 298 */
 /*!*****************************************************************!*\
   !*** ./app/screens/Blog/screens/Post/components/PostScreen.jsx ***!
   \*****************************************************************/
@@ -11905,11 +11958,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 286);
-/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteArticle */ 287);
+/* harmony import */ var hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! hoc/collection/withCollectionItem */ 288);
+/* harmony import */ var components_SiteArticle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/SiteArticle */ 289);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/config/data */ 234);
-/* harmony import */ var _PostSchema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PostSchema */ 297);
-/* harmony import */ var _PostComments__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PostComments */ 298);
+/* harmony import */ var _PostSchema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PostSchema */ 299);
+/* harmony import */ var _PostComments__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PostComments */ 300);
 
 
 
@@ -11930,7 +11983,7 @@ function PostScreen(props) {
 /* harmony default export */ __webpack_exports__["default"] = (Object(hoc_collection_withCollectionItem__WEBPACK_IMPORTED_MODULE_2__["default"])(PostScreen, 'posts'));
 
 /***/ }),
-/* 297 */
+/* 299 */
 /*!*****************************************************************!*\
   !*** ./app/screens/Blog/screens/Post/components/PostSchema.tsx ***!
   \*****************************************************************/
@@ -11961,10 +12014,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 275);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 277);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/config/data */ 234);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/shared/schema */ 276);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/shared/schema */ 278);
 
 
 
@@ -12040,7 +12093,7 @@ function PostSchema({
 /* harmony default export */ __webpack_exports__["default"] = (PostSchema);
 
 /***/ }),
-/* 298 */
+/* 300 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Post/components/PostComments.jsx ***!
   \*******************************************************************/
@@ -12053,7 +12106,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_concat__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-disqus/components/Disqus */ 299);
+/* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-disqus/components/Disqus */ 301);
 /* harmony import */ var gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_disqus_components_Disqus__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var app_shared_PropTypes_article__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! app/shared/PropTypes/article */ 244);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/config/data */ 234);
@@ -12096,7 +12149,7 @@ PostComments.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (PostComments);
 
 /***/ }),
-/* 299 */
+/* 301 */
 /*!*****************************************************************!*\
   !*** ../node_modules/gatsby-plugin-disqus/components/Disqus.js ***!
   \*****************************************************************/
@@ -12106,14 +12159,14 @@ PostComments.propTypes = {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 300);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 302);
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ 301));
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ 303));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ 302));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ 304));
 
 var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ 222));
 
@@ -12121,7 +12174,7 @@ var _react = _interopRequireDefault(__webpack_require__(/*! react */ 116));
 
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ 201));
 
-var _utils = __webpack_require__(/*! ../utils */ 303);
+var _utils = __webpack_require__(/*! ../utils */ 305);
 
 var _jsxFileName = "/Users/brettstevenson/Desktop/Folder/gatsby-plugin-workspace/gatsby-plugin-disqus/src/components/Disqus.jsx";
 
@@ -12134,7 +12187,7 @@ function (_React$Component) {
     var _this;
 
     _this = _React$Component.call(this, props) || this;
-    _this.shortname =  true ? "cevichan" : undefined;
+    _this.shortname =  true ? "cevichan-en" : undefined;
 
     if (props.config) {
       _this.config = props.config;
@@ -12253,7 +12306,7 @@ Disqus.propTypes = {
 };
 
 /***/ }),
-/* 300 */
+/* 302 */
 /*!***********************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
   \***********************************************************************/
@@ -12269,7 +12322,7 @@ function _interopRequireDefault(obj) {
 module.exports = _interopRequireDefault;
 
 /***/ }),
-/* 301 */
+/* 303 */
 /*!*********************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/extends.js ***!
   \*********************************************************/
@@ -12297,7 +12350,7 @@ function _extends() {
 module.exports = _extends;
 
 /***/ }),
-/* 302 */
+/* 304 */
 /*!******************************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
   \******************************************************************************/
@@ -12322,7 +12375,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 module.exports = _objectWithoutPropertiesLoose;
 
 /***/ }),
-/* 303 */
+/* 305 */
 /*!*****************************************************!*\
   !*** ../node_modules/gatsby-plugin-disqus/utils.js ***!
   \*****************************************************/
@@ -12332,7 +12385,7 @@ module.exports = _objectWithoutPropertiesLoose;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 300);
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 302);
 
 exports.__esModule = true;
 exports.insertScript = insertScript;
@@ -12420,7 +12473,7 @@ function shallowComparison(currentProps, nextProps) {
 }
 
 /***/ }),
-/* 304 */
+/* 306 */
 /*!*************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/index.js ***!
   \*************************************************/
@@ -12429,7 +12482,7 @@ function shallowComparison(currentProps, nextProps) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_PostsScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/PostsScreen */ 305);
+/* harmony import */ var _components_PostsScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/PostsScreen */ 307);
  // eslint-disable-line
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -12439,7 +12492,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 305 */
+/* 307 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/components/PostsScreen.jsx ***!
   \*******************************************************************/
@@ -12452,9 +12505,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var components_ScreenHelmet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! components/ScreenHelmet */ 238);
 /* harmony import */ var components_AlternateHelmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/AlternateHelmet */ 239);
-/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/Posts */ 270);
+/* harmony import */ var components_Posts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! components/Posts */ 272);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! app/config/data */ 234);
-/* harmony import */ var _PostsSchema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PostsSchema */ 306);
+/* harmony import */ var _PostsSchema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PostsSchema */ 308);
 
 
 
@@ -12494,7 +12547,7 @@ function PostsScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (PostsScreen);
 
 /***/ }),
-/* 306 */
+/* 308 */
 /*!*******************************************************************!*\
   !*** ./app/screens/Blog/screens/Posts/components/PostsSchema.tsx ***!
   \*******************************************************************/
@@ -12525,11 +12578,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_instance_map__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ 116);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 275);
+/* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-schemaorg */ 277);
 /* harmony import */ var react_schemaorg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_schemaorg__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var app_config_data__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! app/config/data */ 234);
 /* harmony import */ var app_shared_hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! app/shared/hoc/collection/withCollection */ 245);
-/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! app/shared/schema */ 276);
+/* harmony import */ var app_shared_schema__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! app/shared/schema */ 278);
 
 
 
@@ -12604,7 +12657,7 @@ function PostsSchema({
 /* harmony default export */ __webpack_exports__["default"] = (Object(app_shared_hoc_collection_withCollection__WEBPACK_IMPORTED_MODULE_13__["default"])(PostsSchema, 'posts'));
 
 /***/ }),
-/* 307 */
+/* 309 */
 /*!****************************************************!*\
   !*** ./app/screens/Blog/components/BlogScreen.jsx ***!
   \****************************************************/
@@ -12632,7 +12685,7 @@ BlogScreen.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (BlogScreen);
 
 /***/ }),
-/* 308 */
+/* 310 */
 /*!**************************************!*\
   !*** ./app/screens/Contact/index.js ***!
   \**************************************/
@@ -12645,7 +12698,7 @@ __webpack_require__.r(__webpack_exports__);
 // import topBar from 'utils/topBar'
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: 'contact',
-  component: __webpack_require__(/*! ./components/ContactScreen */ 309).default,
+  component: __webpack_require__(/*! ./components/ContactScreen */ 311).default,
   // component: lazy(async () => {
   //   topBar.show()
   //   const component = await import('./components/ContactScreen')
@@ -12667,7 +12720,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 309 */
+/* 311 */
 /*!**********************************************************!*\
   !*** ./app/screens/Contact/components/ContactScreen.jsx ***!
   \**********************************************************/
@@ -12704,7 +12757,7 @@ function ContactScreen() {
 /* harmony default export */ __webpack_exports__["default"] = (ContactScreen);
 
 /***/ }),
-/* 310 */
+/* 312 */
 /*!***************************************!*\
   !*** ./app/screens/NotFound/index.js ***!
   \***************************************/
@@ -12713,7 +12766,7 @@ function ContactScreen() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/NotFoundScreen */ 288);
+/* harmony import */ var _components_NotFoundScreen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/NotFoundScreen */ 290);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   path: '*',
@@ -12722,7 +12775,7 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /***/ }),
-/* 311 */
+/* 313 */
 /*!*************************************!*\
   !*** ./app/store/configureStore.js ***!
   \*************************************/
@@ -12731,10 +12784,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 312);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 314);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _rootReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rootReducer */ 313);
-/* harmony import */ var _middlewares__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middlewares */ 317);
+/* harmony import */ var _rootReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rootReducer */ 315);
+/* harmony import */ var _middlewares__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middlewares */ 319);
 
 
 
@@ -12751,7 +12804,7 @@ function configureStore(initialState, history) {
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
 
 /***/ }),
-/* 312 */
+/* 314 */
 /*!************************!*\
   !*** external "redux" ***!
   \************************/
@@ -12761,7 +12814,7 @@ function configureStore(initialState, history) {
 module.exports = require("redux");
 
 /***/ }),
-/* 313 */
+/* 315 */
 /*!**********************************!*\
   !*** ./app/store/rootReducer.js ***!
   \**********************************/
@@ -12788,11 +12841,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/defineProperty */ 176);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! redux */ 312);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! redux */ 314);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! connected-react-router */ 123);
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(connected_react_router__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var app_reducers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/reducers */ 314);
+/* harmony import */ var app_reducers__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! app/reducers */ 316);
 
 
 
@@ -12818,7 +12871,7 @@ const createRootReducer = history => Object(redux__WEBPACK_IMPORTED_MODULE_9__["
 /* harmony default export */ __webpack_exports__["default"] = (createRootReducer);
 
 /***/ }),
-/* 314 */
+/* 316 */
 /*!*******************************!*\
   !*** ./app/reducers/index.js ***!
   \*******************************/
@@ -12827,14 +12880,14 @@ const createRootReducer = history => Object(redux__WEBPACK_IMPORTED_MODULE_9__["
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _collections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collections */ 315);
+/* harmony import */ var _collections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collections */ 317);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "collections", function() { return _collections__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 
 
 /***/ }),
-/* 315 */
+/* 317 */
 /*!*************************************!*\
   !*** ./app/reducers/collections.js ***!
   \*************************************/
@@ -12862,7 +12915,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_object_keys__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/defineProperty */ 176);
 /* harmony import */ var _babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! deepmerge */ 316);
+/* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! deepmerge */ 318);
 /* harmony import */ var deepmerge__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(deepmerge__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var app_actions_collections__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/actions/collections */ 253);
 
@@ -13013,7 +13066,7 @@ function collections(state = {}, {
 }
 
 /***/ }),
-/* 316 */
+/* 318 */
 /*!****************************!*\
   !*** external "deepmerge" ***!
   \****************************/
@@ -13023,7 +13076,7 @@ function collections(state = {}, {
 module.exports = require("deepmerge");
 
 /***/ }),
-/* 317 */
+/* 319 */
 /*!**********************************!*\
   !*** ./app/store/middlewares.js ***!
   \**********************************/
@@ -13032,13 +13085,13 @@ module.exports = require("deepmerge");
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 312);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ 314);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ 318);
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ 320);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-promise-middleware */ 319);
+/* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-promise-middleware */ 321);
 /* harmony import */ var redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_promise_middleware__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-immutable-state-invariant */ 320);
+/* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-immutable-state-invariant */ 322);
 /* harmony import */ var redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_immutable_state_invariant__WEBPACK_IMPORTED_MODULE_3__);
 
 
@@ -13054,7 +13107,7 @@ window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__({
 /* harmony default export */ __webpack_exports__["default"] = (middlewares);
 
 /***/ }),
-/* 318 */
+/* 320 */
 /*!******************************!*\
   !*** external "redux-thunk" ***!
   \******************************/
@@ -13064,7 +13117,7 @@ window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__({
 module.exports = require("redux-thunk");
 
 /***/ }),
-/* 319 */
+/* 321 */
 /*!*******************************************!*\
   !*** external "redux-promise-middleware" ***!
   \*******************************************/
@@ -13074,7 +13127,7 @@ module.exports = require("redux-thunk");
 module.exports = require("redux-promise-middleware");
 
 /***/ }),
-/* 320 */
+/* 322 */
 /*!**************************************************!*\
   !*** external "redux-immutable-state-invariant" ***!
   \**************************************************/
@@ -13084,7 +13137,7 @@ module.exports = require("redux-promise-middleware");
 module.exports = require("redux-immutable-state-invariant");
 
 /***/ }),
-/* 321 */
+/* 323 */
 /*!**********************************!*\
   !*** ./static-build/template.js ***!
   \**********************************/
@@ -13094,11 +13147,11 @@ module.exports = require("redux-immutable-state-invariant");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return template; });
-/* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/json/stringify */ 322);
+/* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/json/stringify */ 324);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/promise */ 63);
 /* harmony import */ var _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cheerio */ 326);
+/* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cheerio */ 328);
 /* harmony import */ var cheerio__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cheerio__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -13111,7 +13164,7 @@ function template({
 }) {
   return new _babel_runtime_corejs3_core_js_stable_promise__WEBPACK_IMPORTED_MODULE_1___default.a((resolve, reject) => {
     try {
-      const markup = __webpack_require__(/*! !html-loader!../../dist/index.html */ 327); // eslint-disable-line
+      const markup = __webpack_require__(/*! !html-loader!../../dist/index.html */ 329); // eslint-disable-line
 
 
       const $ = cheerio__WEBPACK_IMPORTED_MODULE_2___default.a.load(markup);
@@ -13126,37 +13179,37 @@ function template({
 }
 
 /***/ }),
-/* 322 */
+/* 324 */
 /*!*******************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs3/core-js-stable/json/stringify.js ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! core-js-pure/stable/json/stringify */ 323);
+module.exports = __webpack_require__(/*! core-js-pure/stable/json/stringify */ 325);
 
 /***/ }),
-/* 323 */
+/* 325 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js-pure/stable/json/stringify.js ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parent = __webpack_require__(/*! ../../es/json/stringify */ 324);
+var parent = __webpack_require__(/*! ../../es/json/stringify */ 326);
 
 module.exports = parent;
 
 
 /***/ }),
-/* 324 */
+/* 326 */
 /*!*********************************************************!*\
   !*** ../node_modules/core-js-pure/es/json/stringify.js ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es.json.stringify */ 325);
+__webpack_require__(/*! ../../modules/es.json.stringify */ 327);
 var core = __webpack_require__(/*! ../../internals/path */ 24);
 
 if (!core.JSON) core.JSON = { stringify: JSON.stringify };
@@ -13168,7 +13221,7 @@ module.exports = function stringify(it, replacer, space) {
 
 
 /***/ }),
-/* 325 */
+/* 327 */
 /*!*****************************************************************!*\
   !*** ../node_modules/core-js-pure/modules/es.json.stringify.js ***!
   \*****************************************************************/
@@ -13210,7 +13263,7 @@ if ($stringify) {
 
 
 /***/ }),
-/* 326 */
+/* 328 */
 /*!**************************!*\
   !*** external "cheerio" ***!
   \**************************/
@@ -13220,7 +13273,7 @@ if ($stringify) {
 module.exports = require("cheerio");
 
 /***/ }),
-/* 327 */
+/* 329 */
 /*!******************************************************************!*\
   !*** ../node_modules/html-loader/dist/cjs.js!../dist/index.html ***!
   \******************************************************************/
@@ -13228,45 +13281,113 @@ module.exports = require("cheerio");
 /***/ (function(module, exports) {
 
 // Module
-var code = "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"en_US\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.e2e40783.css\" rel=\"stylesheet\"></head><body><script>!function(){if(\"function\"==typeof window.CustomEvent){window.__onThemeChange=function(){},window.__themeChangeEvent=\"themeChange\";var t,n=new CustomEvent(__themeChangeEvent);try{t=localStorage.getItem(\"theme\")}catch(e){}window.__setPreferredTheme=function(e){o(e);try{localStorage.setItem(\"theme\",e)}catch(e){}};var e=window.matchMedia(\"(prefers-color-scheme: dark)\");e.addListener(function(e){window.__setPreferredTheme(e.matches?\"dark\":\"light\")}),o(t||(e.matches?\"dark\":\"light\"))}function o(e){t&&document.body.classList.contains(t)?document.body.classList.replace(t,e):document.body.classList.add(e),window.__theme=e,t=e,window.__onThemeChange(e),document.dispatchEvent(n)}}()</script><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(i){function e(e){for(var t,r,n=e[0],o=e[1],a=e[2],u=0,c=[];u<n.length;u++)r=n[u],Object.prototype.hasOwnProperty.call(d,r)&&d[r]&&c.push(d[r][0]),d[r]=0;for(t in o)Object.prototype.hasOwnProperty.call(o,t)&&(i[t]=o[t]);for(h&&h(e);c.length;)c.shift()();return f.push.apply(f,a||[]),s()}function s(){for(var e,t=0;t<f.length;t++){for(var r=f[t],n=!0,o=1;o<r.length;o++){var a=r[o];0!==d[a]&&(n=!1)}n&&(f.splice(t--,1),e=p(p.s=r[0]))}return e}var r={},l={7:0},d={7:0},f=[];function p(e){if(r[e])return r[e].exports;var t=r[e]={i:e,l:!1,exports:{}};return i[e].call(t.exports,t,t.exports,p),t.l=!0,t.exports}p.e=function(f){var e=[];l[f]?e.push(l[f]):0!==l[f]&&{5:1}[f]&&e.push(l[f]=new Promise(function(e,n){for(var t=\"static/css/chunk.\"+({1:\"data.posts\",2:\"data.works\",5:\"vendors~katex\",6:\"vendors~platform\"}[f]||f)+\".\"+{1:\"31d6cfe0\",2:\"31d6cfe0\",5:\"56f90a90\",6:\"31d6cfe0\",8:\"31d6cfe0\",9:\"31d6cfe0\",10:\"31d6cfe0\"}[f]+\".css\",o=p.p+t,r=document.getElementsByTagName(\"link\"),a=0;a<r.length;a++){var u=(i=r[a]).getAttribute(\"data-href\")||i.getAttribute(\"href\");if(\"stylesheet\"===i.rel&&(u===t||u===o))return e()}var c=document.getElementsByTagName(\"style\");for(a=0;a<c.length;a++){var i;if((u=(i=c[a]).getAttribute(\"data-href\"))===t||u===o)return e()}var s=document.createElement(\"link\");s.rel=\"stylesheet\",s.type=\"text/css\",s.onload=e,s.onerror=function(e){var t=e&&e.target&&e.target.src||o,r=new Error(\"Loading CSS chunk \"+f+\" failed.\\n(\"+t+\")\");r.code=\"CSS_CHUNK_LOAD_FAILED\",r.request=t,delete l[f],s.parentNode.removeChild(s),n(r)},s.href=o,document.getElementsByTagName(\"head\")[0].appendChild(s)}).then(function(){l[f]=0}));var r=d[f];if(0!==r)if(r)e.push(r[2]);else{var t=new Promise(function(e,t){r=d[f]=[e,t]});e.push(r[2]=t);var n,o=document.createElement(\"script\");o.charset=\"utf-8\",o.timeout=120,p.nc&&o.setAttribute(\"nonce\",p.nc),o.src=p.p+\"static/js/chunk.\"+({1:\"data.posts\",2:\"data.works\",5:\"vendors~katex\",6:\"vendors~platform\"}[f]||f)+\".\"+{1:\"0e22d934\",2:\"4908d22a\",5:\"eb44f772\",6:\"2fa1808c\",8:\"8f82e05d\",9:\"407c3339\",10:\"5db30ff5\"}[f]+\".js\";var a=new Error;n=function(e){o.onerror=o.onload=null,clearTimeout(u);var t=d[f];if(0!==t){if(t){var r=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;a.message=\"Loading chunk \"+f+\" failed.\\n(\"+r+\": \"+n+\")\",a.name=\"ChunkLoadError\",a.type=r,a.request=n,t[1](a)}d[f]=void 0}};var u=setTimeout(function(){n({type:\"timeout\",target:o})},12e4);o.onerror=o.onload=n,document.head.appendChild(o)}return Promise.all(e)},p.m=i,p.c=r,p.d=function(e,t,r){p.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},p.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},p.t=function(t,e){if(1&e&&(t=p(t)),8&e)return t;if(4&e&&\"object\"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(p.r(r),Object.defineProperty(r,\"default\",{enumerable:!0,value:t}),2&e&&\"string\"!=typeof t)for(var n in t)p.d(r,n,function(e){return t[e]}.bind(null,n));return r},p.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return p.d(t,\"a\",t),t},p.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},p.p=\"/\",p.oe=function(e){throw console.error(e),e};var t=window.webpackJsonp=window.webpackJsonp||[],n=t.push.bind(t);t.push=e,t=t.slice();for(var o=0;o<t.length;o++)e(t[o]);var h=n;s()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.fadbd769.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.910b3d04.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.3ca837c3.js\"></script></body></html>";
+var code = "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"/><meta name=\"theme-color\" content=\"#000000\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta property=\"og:type\" content=\"website\"/><meta property=\"og:locale\" content=\"en_US\"/><link rel=\"manifest\" href=\"/app-manifest.json\"/><link rel=\"shortcut icon\" href=\"/static/icons-ab289d55/favicon.ico\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/icons-ab289d55/favicon-16x16.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/icons-ab289d55/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/static/icons-ab289d55/favicon-48x48.png\"><link rel=\"manifest\" href=\"/static/icons-ab289d55/manifest.json\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"theme-color\" content=\"#fff\"><meta name=\"application-name\" content=\"wochap\"><link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/static/icons-ab289d55/apple-touch-icon-57x57.png\"><link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/static/icons-ab289d55/apple-touch-icon-60x60.png\"><link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/static/icons-ab289d55/apple-touch-icon-72x72.png\"><link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/static/icons-ab289d55/apple-touch-icon-76x76.png\"><link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/static/icons-ab289d55/apple-touch-icon-114x114.png\"><link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/static/icons-ab289d55/apple-touch-icon-120x120.png\"><link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/static/icons-ab289d55/apple-touch-icon-144x144.png\"><link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/static/icons-ab289d55/apple-touch-icon-152x152.png\"><link rel=\"apple-touch-icon\" sizes=\"167x167\" href=\"/static/icons-ab289d55/apple-touch-icon-167x167.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/icons-ab289d55/apple-touch-icon-180x180.png\"><link rel=\"apple-touch-icon\" sizes=\"1024x1024\" href=\"/static/icons-ab289d55/apple-touch-icon-1024x1024.png\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\"><meta name=\"apple-mobile-web-app-title\" content=\"wochap\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-640x1136.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-750x1334.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-828x1792.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1125x2436.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2208.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1242x2688.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1536x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2224.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1668x2388.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x2732.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1620x2160.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1136x640.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1334x750.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-1792x828.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2436x1125.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2208x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2688x1242.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2048x1536.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2224x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2388x1668.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2732x2048.png\"><link rel=\"apple-touch-startup-image\" media=\"(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)\" href=\"/static/icons-ab289d55/apple-touch-startup-image-2160x1620.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"228x228\" href=\"/static/icons-ab289d55/coast-228x228.png\"><meta name=\"msapplication-TileColor\" content=\"#fff\"><meta name=\"msapplication-TileImage\" content=\"/static/icons-ab289d55/mstile-144x144.png\"><meta name=\"msapplication-config\" content=\"/static/icons-ab289d55/browserconfig.xml\"><link rel=\"yandex-tableau-widget\" href=\"/static/icons-ab289d55/yandex-browser-manifest.json\"><link href=\"/static/css/chunk.app.e2e40783.css\" rel=\"stylesheet\"></head><body><script>!function(){if(\"function\"==typeof window.CustomEvent){window.__onThemeChange=function(){},window.__themeChangeEvent=\"themeChange\";var t,n=new CustomEvent(__themeChangeEvent);try{t=localStorage.getItem(\"theme\")}catch(e){}window.__setPreferredTheme=function(e){o(e);try{localStorage.setItem(\"theme\",e)}catch(e){}};var e=window.matchMedia(\"(prefers-color-scheme: dark)\");e.addListener(function(e){window.__setPreferredTheme(e.matches?\"dark\":\"light\")}),o(t||(e.matches?\"dark\":\"light\"))}function o(e){t&&document.body.classList.contains(t)?document.body.classList.replace(t,e):document.body.classList.add(e),window.__theme=e,t=e,window.__onThemeChange(e),document.dispatchEvent(n)}}()</script><div id=\"root\"></div><script>\"serviceWorker\"in navigator&&navigator.serviceWorker.register(\"/service-worker.js\").catch(function(r){console.warn(r)})</script><script type=\"text/javascript\">!function(i){function e(e){for(var t,r,n=e[0],o=e[1],a=e[2],c=0,u=[];c<n.length;c++)r=n[c],Object.prototype.hasOwnProperty.call(f,r)&&f[r]&&u.push(f[r][0]),f[r]=0;for(t in o)Object.prototype.hasOwnProperty.call(o,t)&&(i[t]=o[t]);for(h&&h(e);u.length;)u.shift()();return l.push.apply(l,a||[]),s()}function s(){for(var e,t=0;t<l.length;t++){for(var r=l[t],n=!0,o=1;o<r.length;o++){var a=r[o];0!==f[a]&&(n=!1)}n&&(l.splice(t--,1),e=p(p.s=r[0]))}return e}var r={},d={9:0},f={9:0},l=[];function p(e){if(r[e])return r[e].exports;var t=r[e]={i:e,l:!1,exports:{}};return i[e].call(t.exports,t,t.exports,p),t.l=!0,t.exports}p.e=function(l){var e=[];d[l]?e.push(d[l]):0!==d[l]&&{7:1}[l]&&e.push(d[l]=new Promise(function(e,n){for(var t=\"static/css/chunk.\"+({1:\"data.posts\",2:\"data.python-for-javascript-developers\",3:\"data.works\",4:\"data.yilancorp\",7:\"vendors~katex\",8:\"vendors~platform\"}[l]||l)+\".\"+{1:\"31d6cfe0\",2:\"31d6cfe0\",3:\"31d6cfe0\",4:\"31d6cfe0\",7:\"56f90a90\",8:\"31d6cfe0\",10:\"31d6cfe0\",11:\"31d6cfe0\",12:\"31d6cfe0\"}[l]+\".css\",o=p.p+t,r=document.getElementsByTagName(\"link\"),a=0;a<r.length;a++){var c=(i=r[a]).getAttribute(\"data-href\")||i.getAttribute(\"href\");if(\"stylesheet\"===i.rel&&(c===t||c===o))return e()}var u=document.getElementsByTagName(\"style\");for(a=0;a<u.length;a++){var i;if((c=(i=u[a]).getAttribute(\"data-href\"))===t||c===o)return e()}var s=document.createElement(\"link\");s.rel=\"stylesheet\",s.type=\"text/css\",s.onload=e,s.onerror=function(e){var t=e&&e.target&&e.target.src||o,r=new Error(\"Loading CSS chunk \"+l+\" failed.\\n(\"+t+\")\");r.code=\"CSS_CHUNK_LOAD_FAILED\",r.request=t,delete d[l],s.parentNode.removeChild(s),n(r)},s.href=o,document.getElementsByTagName(\"head\")[0].appendChild(s)}).then(function(){d[l]=0}));var r=f[l];if(0!==r)if(r)e.push(r[2]);else{var t=new Promise(function(e,t){r=f[l]=[e,t]});e.push(r[2]=t);var n,o=document.createElement(\"script\");o.charset=\"utf-8\",o.timeout=120,p.nc&&o.setAttribute(\"nonce\",p.nc),o.src=p.p+\"static/js/chunk.\"+({1:\"data.posts\",2:\"data.python-for-javascript-developers\",3:\"data.works\",4:\"data.yilancorp\",7:\"vendors~katex\",8:\"vendors~platform\"}[l]||l)+\".\"+{1:\"03eadf24\",2:\"2aad1c23\",3:\"964ae0e7\",4:\"6e617eb9\",7:\"3f376d92\",8:\"2066b361\",10:\"2020a3e5\",11:\"22640774\",12:\"3c1a46a0\"}[l]+\".js\";var a=new Error;n=function(e){o.onerror=o.onload=null,clearTimeout(c);var t=f[l];if(0!==t){if(t){var r=e&&(\"load\"===e.type?\"missing\":e.type),n=e&&e.target&&e.target.src;a.message=\"Loading chunk \"+l+\" failed.\\n(\"+r+\": \"+n+\")\",a.name=\"ChunkLoadError\",a.type=r,a.request=n,t[1](a)}f[l]=void 0}};var c=setTimeout(function(){n({type:\"timeout\",target:o})},12e4);o.onerror=o.onload=n,document.head.appendChild(o)}return Promise.all(e)},p.m=i,p.c=r,p.d=function(e,t,r){p.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},p.r=function(e){\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},p.t=function(t,e){if(1&e&&(t=p(t)),8&e)return t;if(4&e&&\"object\"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(p.r(r),Object.defineProperty(r,\"default\",{enumerable:!0,value:t}),2&e&&\"string\"!=typeof t)for(var n in t)p.d(r,n,function(e){return t[e]}.bind(null,n));return r},p.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return p.d(t,\"a\",t),t},p.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},p.p=\"/\",p.oe=function(e){throw console.error(e),e};var t=window.webpackJsonp=window.webpackJsonp||[],n=t.push.bind(t);t.push=e,t=t.slice();for(var o=0;o<t.length;o++)e(t[o]);var h=n;s()}([])</script><script type=\"text/javascript\" src=\"/static/js/chunk.react.b258db49.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.vendor.d7e7d9ef.js\"></script><script type=\"text/javascript\" src=\"/static/js/chunk.app.342940b0.js\"></script></body></html>";
 // Exports
 module.exports = code;
 
 /***/ }),
-/* 328 */
+/* 330 */
 /*!*****************************************************************************************!*\
   !*** ../data/posts sync !../lib/loaders/front-matter.js ^(?!.*.draft.en.md$).*.en.md$/ ***!
   \*****************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function webpackEmptyContext(req) {
-	var e = new Error("Cannot find module '" + req + "'");
-	e.code = 'MODULE_NOT_FOUND';
-	throw e;
+var map = {
+	"./python-for-javascript-developers.en.md": 331
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
 }
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 328;
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 330;
 
 /***/ }),
-/* 329 */
+/* 331 */
+/*!*******************************************************************************************!*\
+  !*** ../lib/loaders/front-matter.js!../data/posts/python-for-javascript-developers.en.md ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {"frontMatter":{"slug":"python-for-javascript-developers","fileName":"python-for-javascript-developers","readingTime":"☕️ 7 min read","wordCount":1207,"identifier":"blog-en-3","date":"23-04-2020","dateModified":"23-04-2020","formattedDate":"Abril 2020","imageCaption":"python and javascript logo","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","title":"Python for Javascript developers","description":"Learn the basics of Python ASAP if you already know JavaScript in less than 5 min!'","tags":["python"],"keywords":["python","javascript","javascript developers","learn python"]}}
+
+/***/ }),
+/* 332 */
 /*!*****************************************************************************************!*\
   !*** ../data/works sync !../lib/loaders/front-matter.js ^(?!.*.draft.en.md$).*.en.md$/ ***!
   \*****************************************************************************************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./yilancorp.en.md": 333
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 332;
+
+/***/ }),
+/* 333 */
+/*!********************************************************************!*\
+  !*** ../lib/loaders/front-matter.js!../data/works/yilancorp.en.md ***!
+  \********************************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-function webpackEmptyContext(req) {
-	var e = new Error("Cannot find module '" + req + "'");
-	e.code = 'MODULE_NOT_FOUND';
-	throw e;
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 329;
+module.exports = {"frontMatter":{"slug":"yilancorp","fileName":"yilancorp","readingTime":"☕️ 1 min read","wordCount":162,"date":"10-01-2017","formattedDate":"January 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/yilancorp.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070203/wochap/hero/yilancorp.jpg","title":"Yilancorp","tasks":"Development of lading page.","role":"Front-end developer","siteLink":"http://yilancorp.com/","description":"Yilancorp is a company that offers products and services: merchandise inspection, contisations and factory verification.","tags":["Front-end","Jquery","SASS","Webpack","Freelance"]}}
+
+/***/ }),
+/* 334 */
+/*!************************************************************************************!*\
+  !*** ../lib/loaders/markdown!../data/posts/python-for-javascript-developers.en.md ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {"frontMatter":{"slug":"python-for-javascript-developers","fileName":"python-for-javascript-developers","readingTime":"☕️ 7 min read","wordCount":1207,"identifier":"blog-en-3","date":"23-04-2020","dateModified":"23-04-2020","formattedDate":"Abril 2020","imageCaption":"python and javascript logo","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp","title":"Python for Javascript developers","description":"Learn the basics of Python ASAP if you already know JavaScript in less than 5 min!'","tags":["python"],"keywords":["python","javascript","javascript developers","learn python"]},"bodyHtml":"<p>Guide to learn Python if you already know to code javascript.<p>To the left Javascript code and to the right \"equivalent\" Python 🐍 code.<h2 id=differences-and-similarities-between-javascript-and-python>Differences and similarities between JavaScript and Python</h2><p>The first difference is that the names of variables and functions in Python are written in <code>snake_case</code>, in Javascript we use<code>camelCase</code>.<h3 id=variable-assignment><div align=center>Variable assignment</div></h3><p>In python you don't need any <code>keyword</code> (var, let, const) to declare variables.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> name = <span class=hljs-string>'Pepe'</span>\n<span class=hljs-keyword>let</span> name = <span class=hljs-string>'Pepe'</span>\n<span class=hljs-keyword>const</span> name = <span class=hljs-string>'Pepe'</span>\n</code></pre><pre><code class=language-py>name = <span class=hljs-string>'Pepe'</span>\n\n\n</code></pre></div><h3 id=boolean><div align=center>Boolean</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> isOpen = <span class=hljs-literal>true</span>\nisOpen = <span class=hljs-literal>false</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> || isOpen) <span class=hljs-comment>// 5</span>\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> &#38&#38 isOpen) <span class=hljs-comment>// false</span>\n<span class=hljs-built_in>console</span>.log(!isOpen) <span class=hljs-comment>// true</span>\n<span class=hljs-built_in>console</span>.log(<span class=hljs-number>5</span> !== isOpen) <span class=hljs-comment>// true</span>\n</code></pre><pre><code class=language-py>is_open = <span class=hljs-literal>True</span>\nis_open = <span class=hljs-literal>False</span>\n\nprint(<span class=hljs-number>5</span> <span class=hljs-keyword>or</span> is_open) <span class=hljs-comment># 5</span>\nprint(<span class=hljs-number>5</span> <span class=hljs-keyword>and</span> is_open) <span class=hljs-comment># False</span>\nprint(<span class=hljs-keyword>not</span> is_open) <span class=hljs-comment># True</span>\nprint(<span class=hljs-number>5</span> != is_open) <span class=hljs-comment># True</span>\n</code></pre></div><h3 id=string><div align=center>String</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> name = <span class=hljs-string>'Pepito'</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-string>`i am <span class=hljs-subst>${<span class=hljs-number>5</span>}</span> years old.`</span>) <span class=hljs-comment>// i am 5 years old.</span>\n\n<span class=hljs-built_in>console</span>.log(name.toUpperCase()) <span class=hljs-comment>// PEPITO</span>\n<span class=hljs-built_in>console</span>.log(name.length) <span class=hljs-comment>// 6</span>\n</code></pre><pre><code class=language-py>name = <span class=hljs-string>'Pepito'</span>\n\nprint(<span class=hljs-string>f'i am <span class=hljs-subst>{<span class=hljs-number>5</span>}</span> years old.'</span>) <span class=hljs-comment># i am 5 years old.</span>\nprint(<span class=hljs-string>'i am {age} years old.'</span>.format(age=<span class=hljs-number>5</span>)) <span class=hljs-comment># i am 5 years old.</span>\nprint(name.upper()) <span class=hljs-comment># PEPITO</span>\nprint(len(name)) <span class=hljs-comment># 6</span>\n</code></pre></div><h3 id=number><div align=center>Number</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> height = <span class=hljs-number>5</span>\n<span class=hljs-keyword>var</span> width = <span class=hljs-number>2.5</span>\n\n<span class=hljs-built_in>console</span>.log(<span class=hljs-keyword>typeof</span> height) <span class=hljs-comment>// number</span>\n<span class=hljs-built_in>console</span>.log(<span class=hljs-keyword>typeof</span> height === <span class=hljs-string>'number'</span>) <span class=hljs-comment>// true</span>\n</code></pre><pre><code class=language-py>height = <span class=hljs-number>5</span>\nwidth = <span class=hljs-number>2.5</span>\n\nprint(type(height)) <span class=hljs-comment># &#60class 'int'></span>\nprint(type(height) <span class=hljs-keyword>is</span> int) <span class=hljs-comment># True</span>\n</code></pre></div><h3 id=array---list><div align=center>Array - List</div></h3><p><code>List</code> in Python has something called <code>comprehension</code>, <code>syntax sugar</code> to transform values in a simple way (using a single line), Javascript does not have something like <code>comprehension</code>.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> numbers = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>, <span class=hljs-number>4</span>]\nnumbers = [...numbers, <span class=hljs-number>5</span>]\nnumbers = [...numbers.slice(<span class=hljs-number>0</span>, <span class=hljs-number>1</span>), ...[<span class=hljs-number>8</span>, <span class=hljs-number>9</span>], ...numbers.slice(<span class=hljs-number>4</span>)]\n\n<span class=hljs-built_in>console</span>.log(numbers) <span class=hljs-comment>// [1, 8, 9, 5]</span>\n<span class=hljs-built_in>console</span>.log(numbers.slice(<span class=hljs-number>1</span>, <span class=hljs-number>3</span>)) <span class=hljs-comment>// [8, 9]</span>\n\n<span class=hljs-comment>// <span class=hljs-doctag>NOTE:</span> theresn't something like `list comprehension` in Javascript</span>\nnumbers = numbers.filter(<span class=hljs-function><span class=hljs-params>x</span> =></span> x % <span class=hljs-number>2</span> === <span class=hljs-number>0</span>).map(<span class=hljs-function><span class=hljs-params>x</span> =></span> x ** <span class=hljs-number>2</span>)\n<span class=hljs-built_in>console</span>.log(numbers) <span class=hljs-comment>// [64]</span>\n\n<span class=hljs-comment>// destructuring assignment</span>\n<span class=hljs-keyword>const</span> [n] = numbers\n<span class=hljs-built_in>console</span>.log(n)\n</code></pre><pre><code class=language-py>numbers = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>, <span class=hljs-number>4</span>]\nnumbers = [*numbers, <span class=hljs-number>5</span>]\nnumbers[<span class=hljs-number>1</span>:<span class=hljs-number>4</span>] = [<span class=hljs-number>8</span>, <span class=hljs-number>9</span>]\n\nprint(numbers) <span class=hljs-comment># [1, 8, 9, 5]</span>\nprint(numbers[<span class=hljs-number>1</span>:<span class=hljs-number>3</span>]) <span class=hljs-comment># [8, 9]</span>\n\n<span class=hljs-comment># list comprehension</span>\nnumbers = [x ** <span class=hljs-number>2</span> <span class=hljs-keyword>for</span> x <span class=hljs-keyword>in</span> numbers <span class=hljs-keyword>if</span> x % <span class=hljs-number>2</span> == <span class=hljs-number>0</span>]\nprint(numbers) <span class=hljs-comment># [64]</span>\n\n<span class=hljs-comment># destructuring assignment</span>\n[n] = numbers\nprint(n)\n</code></pre></div><h3 id=set><div align=center>Set</div></h3><p>It's like <code>List</code> but it is unordered and it hasn't duplicate elements.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> animals = <span class=hljs-keyword>new</span> <span class=hljs-built_in>Set</span>([<span class=hljs-string>'cat'</span>, <span class=hljs-string>'dog'</span>])\n\n</code></pre><pre><code class=language-py>animals = set([<span class=hljs-string>'cat'</span>, <span class=hljs-string>'dog'</span>])\nanimals = {<span class=hljs-string>'cat'</span>, <span class=hljs-string>'dog'</span>}\n</code></pre></div><h3 id=object---dictionary><div align=center>Object - Dictionary</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>var</span> animals = {<span class=hljs-attr>cat</span>: <span class=hljs-string>'nyan'</span>, <span class=hljs-attr>dog</span>: <span class=hljs-string>'snuffles'</span>}\n<span class=hljs-built_in>console</span>.log(animals.fish ?? <span class=hljs-string>'N/A'</span>) <span class=hljs-comment>// N/A</span>\n<span class=hljs-keyword>delete</span> animals.cat\n\n<span class=hljs-comment>// <span class=hljs-doctag>NOTE:</span> theresn't something like `object comprehension` in Javascript</span>\n<span class=hljs-keyword>var</span> foo = [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>].filter(<span class=hljs-function><span class=hljs-params>x</span> =></span> x % <span class=hljs-number>2</span> === <span class=hljs-number>0</span>).reduce(<span class=hljs-function>(<span class=hljs-params>result, x</span>) =></span> ({...result, [x]: x ** <span class=hljs-number>2</span>}), {})\n<span class=hljs-built_in>console</span>.log(foo) <span class=hljs-comment>// {2: 4}</span>\n</code></pre><pre><code class=language-py>animals = {<span class=hljs-string>'cat'</span>: <span class=hljs-string>'nyan'</span>, <span class=hljs-string>'dog'</span>: <span class=hljs-string>'snuffles'</span>}\nprint(animals.get(<span class=hljs-string>'fish'</span>, <span class=hljs-string>'N/A'</span>)) <span class=hljs-comment># N/A</span>\n<span class=hljs-keyword>del</span> animals[<span class=hljs-string>'cat'</span>]\n\n<span class=hljs-comment># object comprehension</span>\nfoo = {x: x ** <span class=hljs-number>2</span> <span class=hljs-keyword>for</span> x <span class=hljs-keyword>in</span> [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>] <span class=hljs-keyword>if</span> x % <span class=hljs-number>2</span> == <span class=hljs-number>0</span>}\nprint(foo) <span class=hljs-comment># {2: 4}</span>\n</code></pre></div><h3 id=function><div align=center>Function</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>multiplyByTwo</span>(<span class=hljs-params>a, b = <span class=hljs-number>3</span>, ...args</span>) </span>{\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-function><span class=hljs-keyword>function</span> <span class=hljs-title>sum</span>(<span class=hljs-params>a, {b = <span class=hljs-number>3</span>, c = <span class=hljs-number>1</span>} = {}</span>) </span>{\n  <span class=hljs-built_in>console</span>.log(a + b + c)\n}\n\nsum(<span class=hljs-number>5</span>, <span class=hljs-number>3</span>) <span class=hljs-comment>// 9</span>\nsum2(<span class=hljs-number>5</span>, {<span class=hljs-attr>c</span>: <span class=hljs-number>2</span>, <span class=hljs-attr>b</span>: <span class=hljs-number>8</span>}) <span class=hljs-comment>// 15</span>\n</code></pre><pre><code class=language-py><span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>multiply_by_two</span>(<span class=hljs-params>a, b = <span class=hljs-number>3</span>, *args</span>):</span>\n  <span class=hljs-comment>#</span>\n\n\n<span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>sum</span>(<span class=hljs-params>a, b = <span class=hljs-number>3</span>, c = <span class=hljs-number>1</span></span>):</span>\n  print(a + b + c)\n\n\nsum(<span class=hljs-number>5</span>, <span class=hljs-number>3</span>) <span class=hljs-comment># 9</span>\nsum(<span class=hljs-number>5</span>, c = <span class=hljs-number>2</span>, b = <span class=hljs-number>8</span>) <span class=hljs-comment># 15</span>\n</code></pre></div><h3 id=control-flow><div align=center>Control Flow</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-keyword>if</span> (x > <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n} <span class=hljs-keyword>else</span> <span class=hljs-keyword>if</span> (x &#60 <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n} <span class=hljs-keyword>else</span> {\n  <span class=hljs-keyword>return</span> <span class=hljs-string>'zero'</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> value <span class=hljs-keyword>of</span> [<span class=hljs-string>'a'</span>, <span class=hljs-string>'b'</span>]) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> [index, value] <span class=hljs-keyword>of</span> [<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>].entries()) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>for</span> (<span class=hljs-keyword>const</span> [key, value] <span class=hljs-keyword>of</span> <span class=hljs-built_in>Object</span>.entries({<span class=hljs-attr>foo</span>: <span class=hljs-string>'bar'</span>})) {\n  <span class=hljs-comment>//</span>\n}\n\n<span class=hljs-keyword>while</span> (a &#60 <span class=hljs-number>0</span>) {\n  <span class=hljs-comment>//</span>\n}\n</code></pre><pre><code class=language-py><span class=hljs-keyword>if</span> x > <span class=hljs-number>0</span>:\n  <span class=hljs-comment>#</span>\n<span class=hljs-keyword>elif</span> x &#60 <span class=hljs-number>0</span>:\n  <span class=hljs-comment>#</span>\n<span class=hljs-keyword>else</span>:\n  <span class=hljs-keyword>return</span> <span class=hljs-string>'zero'</span>\n\n\n<span class=hljs-keyword>for</span> value <span class=hljs-keyword>in</span> [<span class=hljs-string>'a'</span>, <span class=hljs-string>'b'</span>]:\n  <span class=hljs-comment>#</span>\n\n\n<span class=hljs-keyword>for</span> index, value <span class=hljs-keyword>in</span> enumerate([<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>]):\n  <span class=hljs-comment>#</span>\n\n\n<span class=hljs-keyword>for</span> key, value <span class=hljs-keyword>in</span> {<span class=hljs-string>'foo'</span>: <span class=hljs-string>'bar'</span>}.items():\n  <span class=hljs-comment>#</span>\n\n\n<span class=hljs-keyword>while</span> a &#60 <span class=hljs-number>0</span>:\n  <span class=hljs-comment>#</span>\n\n</code></pre></div><h3 id=class><div align=center>Class</div></h3><div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-class><span class=hljs-keyword>class</span> <span class=hljs-title>Greeter</span> <span class=hljs-keyword>extends</span> <span class=hljs-title>BaseGreeter</span> </span>{\n  greetCount = <span class=hljs-number>0</span>\n\n  <span class=hljs-keyword>constructor</span>(name) {\n    <span class=hljs-keyword>this</span>.name = name\n  }\n  greet({ loud = <span class=hljs-literal>false</span> } = {}) {\n    <span class=hljs-keyword>this</span>.greetCount += <span class=hljs-number>1</span>\n    <span class=hljs-keyword>if</span> (loud) {\n      <span class=hljs-built_in>console</span>.log(<span class=hljs-string>`HELLO <span class=hljs-subst>${<span class=hljs-keyword>this</span>.name.toUpperCase()}</span>!`</span>)\n    } <span class=hljs-keyword>else</span> {\n      <span class=hljs-built_in>console</span>.log(<span class=hljs-string>`Hello <span class=hljs-subst>${<span class=hljs-keyword>this</span>.name}</span>`</span>)\n    }\n  }\n}\n<span class=hljs-keyword>var</span> g = <span class=hljs-keyword>new</span> Greeter(<span class=hljs-string>'Fred'</span>)\ng.greet() <span class=hljs-comment>// Hello Fred</span>\ng.greet({<span class=hljs-attr>loud</span>: <span class=hljs-literal>true</span>}) <span class=hljs-comment>// HELLO FRED!</span>\n<span class=hljs-built_in>console</span>.log(g.greetCount) <span class=hljs-comment>// 2</span>\n</code></pre><pre><code class=language-py><span class=hljs-class><span class=hljs-keyword>class</span> <span class=hljs-title>Greeter</span>(<span class=hljs-params>BaseGreeter</span>):</span>\n  greetCount = <span class=hljs-number>0</span>\n\n  <span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>__init__</span>(<span class=hljs-params>self, name</span>):</span>\n    self.name = name\n\n  <span class=hljs-function><span class=hljs-keyword>def</span> <span class=hljs-title>greet</span>(<span class=hljs-params>self, loud = False</span>):</span>\n    self.greetCount += <span class=hljs-number>1</span>\n    <span class=hljs-keyword>if</span> loud:\n        print(<span class=hljs-string>'HELLO, %s!'</span> % self.name.upper())\n    <span class=hljs-keyword>else</span>:\n        print(<span class=hljs-string>'Hello, %s'</span> % self.name)\n\n\n\ng = Greeter(<span class=hljs-string>'Fred'</span>)\ng.greet() <span class=hljs-comment># Hello Fred</span>\ng.greet(loud=<span class=hljs-literal>True</span>) <span class=hljs-comment># HELLO FRED!</span>\nprint(g.greetCount) <span class=hljs-comment># 2</span>\n</code></pre></div><h3 id=null---none><div align=center>Null - None</div></h3><p>In Javascript there are <code>null</code> and<code>undefined</code>, in Python there is only <code>None</code>.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-built_in>console</span>.log(<span class=hljs-literal>null</span>)\n<span class=hljs-built_in>console</span>.log(<span class=hljs-literal>undefined</span>)\n</code></pre><pre><code class=language-py>print(<span class=hljs-literal>None</span>)\n\n</code></pre></div><h3 id=modules><div align=center>Modules</div></h3><p>In Javascript to export something from a module, you use the keyword <code>export</code> or<code>export default</code>, in Python you don't need to do anything to export.<div class=c-markdown-code-compare><pre><code class=language-js><span class=hljs-comment>// project structure</span>\n<span class=hljs-comment>//</span>\n<span class=hljs-comment>// ├── project1</span>\n<span class=hljs-comment>// │   └── index.js</span>\n<span class=hljs-comment>// └── project2</span>\n<span class=hljs-comment>//     ├── main.js</span>\n<span class=hljs-comment>//     └── package1</span>\n<span class=hljs-comment>//         ├── index.js</span>\n<span class=hljs-comment>//         ├── module1.js</span>\n<span class=hljs-comment>//         └── subpackage1</span>\n<span class=hljs-comment>//             └── module2.js</span>\n\n<span class=hljs-comment>// project1/index.js</span>\n\n<span class=hljs-keyword>export</span> <span class=hljs-keyword>const</span> somethingMore = <span class=hljs-string>'...'</span>\n\n<span class=hljs-comment>// project2/main.js</span>\n\n<span class=hljs-keyword>import</span> os <span class=hljs-keyword>from</span> <span class=hljs-string>'os'</span> <span class=hljs-comment>// standard library import</span>\n<span class=hljs-keyword>import</span> {Flask} <span class=hljs-keyword>from</span> <span class=hljs-string>'flask'</span> <span class=hljs-comment>// third party import</span>\n<span class=hljs-keyword>import</span> * <span class=hljs-keyword>as</span> package1 <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1'</span> <span class=hljs-comment>// relative import with alias</span>\n<span class=hljs-keyword>import</span> {something} <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1/subpackage1/module2.js'</span> <span class=hljs-comment>// relative import</span>\n<span class=hljs-keyword>import</span> {somethingMore} <span class=hljs-keyword>from</span> <span class=hljs-string>'../project1'</span> <span class=hljs-comment>// relative import</span>\n<span class=hljs-keyword>import</span> * <span class=hljs-keyword>as</span> myModule <span class=hljs-keyword>from</span> <span class=hljs-string>'./package1/module1.js'</span> <span class=hljs-comment>// relative import with alias</span>\n</code></pre><pre><code class=language-py><span class=hljs-comment># project structure</span>\n<span class=hljs-comment>#</span>\n<span class=hljs-comment># ├── project1</span>\n<span class=hljs-comment># │   └── __init__.py</span>\n<span class=hljs-comment># └── project2</span>\n<span class=hljs-comment>#     ├── main.py</span>\n<span class=hljs-comment>#     └── package1</span>\n<span class=hljs-comment>#         ├── __init__.py</span>\n<span class=hljs-comment>#         ├── module1.py</span>\n<span class=hljs-comment>#         └── subpackage1</span>\n<span class=hljs-comment>#             └── module2.py</span>\n\n<span class=hljs-comment># project1/__init__.py</span>\n\nsomething_more = <span class=hljs-string>'...'</span>\n\n<span class=hljs-comment># project2/main.py</span>\n\n<span class=hljs-keyword>import</span> os <span class=hljs-comment># standard library import</span>\n<span class=hljs-keyword>from</span> flask <span class=hljs-keyword>import</span> Flask <span class=hljs-comment># third party import</span>\n<span class=hljs-keyword>import</span> package1 <span class=hljs-comment># local application import</span>\n<span class=hljs-keyword>from</span> package1.subpackage1.module2 <span class=hljs-keyword>import</span> something <span class=hljs-comment># absolute import</span>\n<span class=hljs-keyword>from</span> ..project1 <span class=hljs-keyword>import</span> something_more <span class=hljs-comment># relative import</span>\n<span class=hljs-keyword>import</span> package1.module1 <span class=hljs-keyword>as</span> my_module <span class=hljs-comment># relative import with alias</span>\n</code></pre></div><h2 id=only-for-python>Only for Python</h2><p>Some features that Python has but not Javascript.<h3 id=tuple><div align=center>Tuple</div></h3><p>It's like <code>List</code> but immutable.<pre><code class=language-py>myTuple = (<span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>)\n</code></pre><h3 id=_><div align=center>_</div></h3><p>When a function ends with <code>_</code>, this function does not return the result but replaces it.<pre><code class=language-py>x = [<span class=hljs-number>-2</span>, <span class=hljs-number>-1</span>, <span class=hljs-number>0</span>, <span class=hljs-number>1</span>, <span class=hljs-number>2</span>, <span class=hljs-number>3</span>]\nx[:,<span class=hljs-number>0</span>].uniform_(<span class=hljs-number>-1.</span>, <span class=hljs-number>1</span>)\nprint(x)\n</code></pre><h2 id=references>References</h2><ul><li><a href=https://cs231n.github.io/python-numpy-tutorial/ rel=nofollow target=_blank>https://cs231n.github.io/python-numpy-tutorial/</a><li><a href=https://realpython.com/lessons/python-naming-conventions/ rel=nofollow target=_blank>https://realpython.com/lessons/python-naming-conventions/</a><li><a href=https://dev.to/aveb/from-javascript-to-python-1b1m rel=nofollow target=_blank>https://dev.to/aveb/from-javascript-to-python-1b1m</a><li><a href=https://pypi.org/project/javascripthon/ rel=nofollow target=_blank>https://pypi.org/project/javascripthon/</a><li><a href=https://realpython.com/absolute-vs-relative-python-imports/ rel=nofollow target=_blank>https://realpython.com/absolute-vs-relative-python-imports/</a><li><a href=https://www.datacamp.com/community/data-science-cheatsheets rel=nofollow target=_blank>https://www.datacamp.com/community/data-science-cheatsheets</a></ul>"}
+
+/***/ }),
+/* 335 */
+/*!*************************************************************!*\
+  !*** ../lib/loaders/markdown!../data/works/yilancorp.en.md ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {"frontMatter":{"slug":"yilancorp","fileName":"yilancorp","readingTime":"☕️ 1 min read","wordCount":162,"date":"10-01-2017","formattedDate":"January 2017","imageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070101/works/yilancorp.png","heroImageUrl":"//res.cloudinary.com/wochap/image/upload/v1495070203/wochap/hero/yilancorp.jpg","title":"Yilancorp","tasks":"Development of lading page.","role":"Front-end developer","siteLink":"http://yilancorp.com/","description":"Yilancorp is a company that offers products and services: merchandise inspection, contisations and factory verification.","tags":["Front-end","Jquery","SASS","Webpack","Freelance"]},"bodyHtml":"<h2 id=summary>Summary</h2><p>Thanks to the experience gained with previous projects, it was easy to develop the site, using my personal framework <a href=https://github.com/wocss rel=nofollow target=_blank>wocss</a> (inspired by <a href=https://github.com/inuitcss rel=nofollow target=_blank>InuitCSS</a>) and <a href=https://jquery.com/ rel=nofollow target=_blank>Jquery</a>. For animations i used <a href=http://velocityjs.org/ rel=nofollow target=_blank>VelocityJS</a>, i also used <a href=http://materializecss.com/scrollspy.html rel=nofollow target=_blank>Scrollspy</a> (<a href=http://materializecss.com/ rel=nofollow target=_blank>MaterializeCSS</a> module), i had to modify it to work with a different <code>scroll container</code>.<h2 id=featured-tech>Featured tech:</h2><ul><li><a href=https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API rel=nofollow target=_blank>Service worker</a><li><a href=https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS rel=nofollow target=_blank>CSS Animations</a><li><a href=https://es.wikipedia.org/wiki/JSONP rel=nofollow target=_blank>JSONP</a></ul><div class=c-markdown-image-full><img alt=\"JSONP demo\"src=//res.cloudinary.com/wochap/image/upload/v1495070174/wochap/body/yilancorp-services.gif></div><ul><li><a href=https://css-tricks.com/snippets/css/a-guide-to-flexbox/ rel=nofollow target=_blank>CSS FlexBox</a></ul><h2 id=workflow>Workflow:</h2><ul><li><strong>CSS:</strong> <a href=http://stylus-lang.com/ rel=nofollow target=_blank>SASS</a>, <a href=http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/ rel=nofollow target=_blank>BEMIT</a>, <a href=http://csswizardry.net/talks/2014/11/itcss-dafed.pdf rel=nofollow target=_blank>ITCSS</a>, <a href=https://github.com/wocss rel=nofollow target=_blank>WOCSS</a>.<li><strong>JS:</strong> <a href=https://jquery.com/ rel=nofollow target=_blank>Jquery</a>, <a href=https://babeljs.io/learn-es2015/ rel=nofollow target=_blank>ES2015</a>, <a href=http://eslint.org/ rel=nofollow target=_blank>ESLint</a>.<li><strong>Build System:</strong> <a href=https://webpack.github.io/ rel=nofollow target=_blank>Webpack</a> + <a href=https://babeljs.io/ rel=nofollow target=_blank>Babel</a> + <a href=https://github.com/wochap/wochap.github.io/tree/dev/build/webpack/loaders rel=nofollow target=_blank>custom-loaders</a>.</ul><h2 id=achievements>Achievements:</h2><ul><li>Customize the <a href=http://materializecss.com/scrollspy.html rel=nofollow target=_blank>Scrollspy</a> plugin of <a href=http://materializecss.com/ rel=nofollow target=_blank>MaterializeCSS</a>, to work with a different <code>scroll container</code>.<li><code>Fancy animations</code>.</ul>"}
 
 /***/ })
 /******/ ]);
