@@ -1,7 +1,7 @@
 ---
 identifier: blog-3
 date: 23-04-2020
-dateModified: 23-04-2020
+dateModified: 14-06-2020
 formattedDate: Abril 2020
 imageCaption: logo de python y javascript
 imageUrl: //res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp
