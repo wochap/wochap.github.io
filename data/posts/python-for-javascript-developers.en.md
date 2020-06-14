@@ -235,6 +235,43 @@ sum(5, c = 2, b = 8) # 15
 
 </div>
 
+### <div align="center">Async/Await</div>
+
+In Javascript `async function` returns a `Promise`, in Python it returns a `Future`.
+In Python to execute a `async function` you need to use the module: `asyncio`, in Javascript it works just like any regular function.
+
+<div class="c-markdown-code-compare">
+
+```js
+
+
+async function asyncFunction1 () {
+  const result = await fetchSomething()
+  // Run some `async function` at the same time
+  const [result1, result2] = await Promise.all([asyncFunction2, asyncFunction3])
+  return result
+}
+
+asyncFunction1()
+
+```
+
+```py
+import asyncio
+
+async def async_function1():
+  result = await fetchSomething()
+  # Run some `async function` at the same time
+  [result1, result2] = await asyncio.gather(asyncFunction2(), asyncFunction3())
+  return result
+
+event_loop = asyncio.get_event_loop()
+event_loop.run_until_complete(async_function1())
+event_loop.close()
+```
+
+</div>
+
 ### <div align="center">Control Flow</div>
 
 <div class="c-markdown-code-compare">
