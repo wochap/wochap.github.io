@@ -23,7 +23,7 @@ export const person: Person = {
   '@type': 'Person',
   '@id': personId,
   'name': data.title,
-  'jobTitle': 'JS Developer',
+  'jobTitle': 'Software Engineer',
   'url': data.screens.about.canonicalHref,
 }
 

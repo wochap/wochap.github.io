@@ -1,7 +1,7 @@
 ---
 identifier: blog-3
 date: 23-04-2020
-dateModified: 23-04-2020
+dateModified: 14-06-2020
 formattedDate: Abril 2020
 imageCaption: logo de python y javascript
 imageUrl: //res.cloudinary.com/wochap/image/upload/v1587051750/wochap/hero/js-python.webp
@@ -232,6 +232,43 @@ def sum(a, b = 3, c = 1):
 
 sum(5, 3) # 9
 sum(5, c = 2, b = 8) # 15
+```
+
+</div>
+
+### <div align="center">Async/Await</div>
+
+En Javascript las `async function` devuelven `Promise`, en Python estas devuelven `Future`.
+En Python para ejecutar una `async function` debes importar `asyncio` y ejecutar la `async function` con ello, en Javascript solo ejecutas `async function` como cualquier otra funcion.
+
+<div class="c-markdown-code-compare">
+
+```js
+
+
+async function asyncFunction1 () {
+  const result = await fetchSomething()
+  // Ejecutar varios `async function` al mismo tiempo
+  const [result1, result2] = await Promise.all([asyncFunction2, asyncFunction3])
+  return result
+}
+
+asyncFunction1()
+
+```
+
+```py
+import asyncio
+
+async def async_function1():
+  result = await fetchSomething()
+  # Ejecutar varios `async function` al mismo tiempo
+  [result1, result2] = await asyncio.gather(asyncFunction2(), asyncFunction3())
+  return result
+
+event_loop = asyncio.get_event_loop()
+event_loop.run_until_complete(async_function1())
+event_loop.close()
 ```
 
 </div>

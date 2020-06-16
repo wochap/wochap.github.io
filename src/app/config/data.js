@@ -6,8 +6,9 @@ export const BASE_URL_EN = `https://${DOMAIN_NAME}`
 export const BASE_URL_ES = `https://es.${DOMAIN_NAME}`
 const TITLE = 'Gean Marroquin'
 const ABOUT_ES =
-  'Establecido en Peru, soy Javascript Developer enfocado en la creación de componentes escalables y reusables con Vue y React, apasionado y autodidacta.'
-const ABOUT_EN = "Based in Peru, i'm a Javascript Developer with a focus on creating scalable and reusable components with Vue and React."
+  'Establecido en Peru, soy un Software Engineer con un conocimiento fuerte en Javascript, enfocado en la creación de componentes escalables y reusables con Vue y React.'
+const ABOUT_EN =
+  "Based in Peru, i'm a Software Engineer with strong knowledge in Javascript, focused on creating scalable and reusable components with Vue and React."
 
 // export default data
 export default {
@@ -16,8 +17,8 @@ export default {
   title: TITLE,
   email: 'gean.marroquin@gmail.com',
   about: t(
-    prevalMarkdown`Based in Peru, i'm a <i class="u-icon u-color-javascript u-fz-h2 u-mx1">javascript</i> Developer with a focus on creating scalable and reusable components with <i class="u-icon u-color-vue_js u-fz-h2 u-mx1">vue_js</i> and <i class="u-icon u-color-react u-fz-h2 u-mx1">react</i>.`,
-    prevalMarkdown`Establecido en Perú, soy <i class="u-icon u-color-javascript u-fz-h2 u-mx1">javascript</i> Developer enfocado en la creación de componentes escalables y reusables con <i class="u-icon u-color-vue_js u-fz-h2 u-mx1">vue_js</i> y <i class="u-icon u-color-react u-fz-h2 u-mx1">react</i>, apasionado y autodidacta.`,
+    prevalMarkdown`Based in Peru, i'm a Software Engineer with strong knowledge in <i class="u-icon u-color-javascript u-fz-h2 u-mx1">javascript</i>, focused on creating scalable and reusable components with <i class="u-icon u-color-vue_js u-fz-h2 u-mx1">vue_js</i> and <i class="u-icon u-color-react u-fz-h2 u-mx1">react</i>.`,
+    prevalMarkdown`Establecido en Perú, soy un Software Engineer con un conocimiento fuerte en <i class="u-icon u-color-javascript u-fz-h2 u-mx1">javascript</i>, enfocado en la creación de componentes escalables y reusables con <i class="u-icon u-color-vue_js u-fz-h2 u-mx1">vue_js</i> y <i class="u-icon u-color-react u-fz-h2 u-mx1">react</i>.`,
   ),
   twitterUser: 'geanmarroquin',
   screens: {
@@ -31,7 +32,7 @@ export default {
       breadCrumbName: t('About', 'Sobre mi'),
       canonicalHref: t(`${BASE_URL_EN}/about`, `${BASE_URL_ES}/about`),
       description: t(ABOUT_EN, ABOUT_ES),
-      title: `JS Developer | ${TITLE}`,
+      title: `Software Engineer | ${TITLE}`,
     },
     blog: {
       breadCrumbName: 'Blog',
