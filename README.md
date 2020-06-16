@@ -1,6 +1,6 @@
 # wochap
 
-[![Build Status](https://travis-ci.org/wochap/wochap.github.io.svg?branch=dev)](https://travis-ci.org/wochap/wochap.github.io)
+[![Build Status](https://travis-ci.com/wochap/wochap.github.io.svg?branch=dev)](https://travis-ci.com/wochap/wochap.github.io)
 [![Coverage Status](https://coveralls.io/repos/github/wochap/wochap.github.io/badge.svg?branch=dev)](https://coveralls.io/github/wochap/wochap.github.io?branch=dev)
 
 Personal website powered by [React](https://facebook.github.io/react/) and [Webpack](https://webpack.github.io/)
