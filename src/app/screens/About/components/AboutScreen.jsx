@@ -23,7 +23,7 @@ function AboutScreen() {
         </div> */}
         <h1 className='u-fz-h4 u-m0'>
           <span className='u-caps u-fz-h2 u-mb2 u-block'>Gean Marroquin, </span>
-          <span className='u-fz-sm u-fw-s-bold u-m0 u-block'>JS Developer</span>
+          <span className='u-fz-sm u-fw-s-bold u-m0 u-block'>Software Engineer</span>
         </h1>
       </header>
 
