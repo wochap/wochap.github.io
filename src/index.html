@@ -12,8 +12,10 @@
     <% if (process.env.NODE_ENV !== 'development') { %>
     <link rel="manifest" href="/app-manifest.json" />
     <% } %>
+    <%= htmlWebpackPlugin.options.gtmScript %>
   </head>
   <body>
+    <%= htmlWebpackPlugin.options.gtmNoScript %>
     <script>
       // source: https://github.com/insin/gatsby-plugin-dark-mode/blob/master/gatsby-ssr.js
       void (function () {
