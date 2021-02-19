@@ -8,6 +8,9 @@ Personal website powered by [React](https://facebook.github.io/react/) and [Webp
 ## Quick start
 
 ```sh
+# for nix users
+$ nix-shell
+
 # install dependencies
 $ yarn
 
